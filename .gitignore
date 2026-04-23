@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution
+build/
+dist/
+*.whl
+*.tar.gz
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code local settings
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Scenario databases (too large for version control; use Git LFS or .dvc)
+*.sqlite
+*.sqlite3
+*.db
+
+# Scaffolded project output (if you scaffold into subdirectories)
+/scaffolded/
+
+# Parquet / temp exports
+*.parquet
+exports/

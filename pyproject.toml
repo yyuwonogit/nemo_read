@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nemo_read"
+version = "0.5.0"
+description = "Read, decode, and analyse LEAP/NEMO scenario SQLite databases."
+authors = [
+    {name = "Y. Yuwono", email = "yudiandra.y@gmail.com"},
+    {name = "T. Yuwono", email = "yudiandra.y@gmail.com"},
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+keywords = ["LEAP", "NEMO", "energy-modelling", "sqlite", "sei"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "xarray>=2023.1",
+]
+
+[project.optional-dependencies]
+parquet = ["pyarrow>=14"]
+dev = [
+    "pytest>=7",
+    "pyarrow>=14",
+    "build",
+    "twine",
+]
+
+[project.scripts]
+nemo_read-scaffold = "nemo_read.scaffold:cli_main"
+
+[project.urls]
+# TODO: replace with your GitHub URLs once the repo is hosted
+Homepage = "https://github.com/yyuwono/nemo_read"
+Source = "https://github.com/yyuwono/nemo_read"
+Issues = "https://github.com/yyuwono/nemo_read/issues"
+Changelog = "https://github.com/yyuwono/nemo_read/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nemo_read*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
