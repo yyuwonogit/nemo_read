@@ -46,10 +46,10 @@ nemo_read-leap-export = "nemo_read.leap_export:cli_main"
 
 [project.urls]
 # TODO: replace with your GitHub URLs once the repo is hosted
-Homepage = "https://github.com/yyuwono/nemo_read"
-Source = "https://github.com/yyuwono/nemo_read"
-Issues = "https://github.com/yyuwono/nemo_read/issues"
-Changelog = "https://github.com/yyuwono/nemo_read/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/yyuwonogit/nemo_read"
+Source = "https://github.com/yyuwonogit/nemo_read"
+Issues = "https://github.com/yyuwonogit/nemo_read/issues"
+Changelog = "https://github.com/yyuwonogit/nemo_read/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 where = ["."]
