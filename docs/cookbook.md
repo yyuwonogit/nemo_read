@@ -20,6 +20,7 @@ Idiomatic recipes for common tasks against LEAP/NEMO scenario databases. Every r
 14. [Finding dormant technologies and candidate transmission](#finding-dormant-and-candidate-assets)
 15. [Exporting the whole scenario for external tools](#exporting-the-whole-scenario)
 16. [Working across multiple solves](#working-across-multiple-solves)
+17. [Demand by sector — pairing with a LEAP-area export](#demand-by-sector)
 
 ---
 
@@ -390,3 +391,46 @@ cap_v2 = get_result(db, "vtotalcapacityannual", solvedtm="2026-02-20 14:05:00")
 ```
 
 When a scenario has been recalculated and the older rows are no longer useful, `NemoMod.dropresulttables(db)` in Julia clears everything `v*`-prefixed, or use `NemoDB(path, read_only=False).query("DELETE FROM vtotalcapacityannual WHERE solvedtm < ?", [cutoff])` from Python. Be careful: this modifies the database LEAP shares with the UI.
+
+## Demand by sector
+
+NEMO's `SpecifiedAnnualDemand(r, f, y)` and `AccumulatedAnnualDemand(r, f, y)` carry only fuel × region × year totals — sector breakdown (Industry / Residential / Transport / etc.) is collapsed during LEAP's NEMO export. To recover sectors, pair the SQLite with a one-time LEAP-area export captured by `nemo_read-leap-export`.
+
+### One-time setup (Windows + LEAP, ~15–20 minutes)
+
+```bash
+# In a venv with the [leap] extra:
+pip install 'nemo_read[leap]'
+
+# With LEAP open and the target area loaded:
+nemo_read-leap-export --scenario "Regional Aspiration Scenario"
+```
+
+This writes (defaults) to `<scenario_db_stem>.leap_export/` next to the SQLite. The directory contains `branches.csv`, `branch_variable_values.csv` (Final Energy Demand + Activity Level for every demand-tree leaf, all years × all regions), and the dimension catalogues. You only need to re-run this when the LEAP area changes structurally.
+
+### Reading sector-level demand (any platform, no LEAP needed)
+
+```python
+from nemo_read import NemoDB, LeapAreaContext, read_demand
+
+db  = NemoDB("NEMO_25.sqlite")
+ctx = LeapAreaContext.discover(db)        # auto-finds the adjacent .leap_export/
+
+# Sector × subsector × region × year
+df = read_demand(db, by="sector", context=ctx)
+
+# Indonesia 2030 sectoral mix
+indo = df[(df["region_name"] == "Indonesia") & (df["year"] == 2030)]
+sector_totals = indo.groupby("sector")["val"].sum().sort_values(ascending=False)
+```
+
+`val` is in the LEAP variable's own unit (typically GJ for per-tech demand). Cross-check one number against LEAP's Results pane to confirm scale.
+
+### Falling back to fuel-only when no LEAP context is available
+
+```python
+df = read_demand(db)                       # by="fuel" default; SQLite-only, decoded
+# columns: region_name, r, fuel_name, f, y, val, source
+```
+
+This works on any machine — no LEAP, no pywin32 — but the sector dimension is gone (NEMO never had it).

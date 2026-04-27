@@ -33,7 +33,7 @@ from .db import NemoDB
 from .inspect import inspect_scenario, print_overview
 
 from .dimensions import (
-    emissions, fuels, get_dimension, list_unused_technologies,
+    decode_dims, emissions, fuels, get_dimension, list_unused_technologies,
     modes_of_operation, nodes, regions, region_groups, storages,
     technologies, timeslices, timeslice_groups,
     transmission_candidates, transmission_lines, years,
@@ -63,9 +63,14 @@ from .custom import (
 )
 
 from .leap_conventions import (
-    LEAP_NEMO_UNITS, PJ_TO_J, GW_TO_W, T_TO_KG, MILLION,
+    LEAP_BRANCH_TYPES, LEAP_NEMO_UNITS, PJ_TO_J, GW_TO_W, T_TO_KG, MILLION,
     classify_technology_id, extract_leap_ids, fuels_with_leap_ids,
-    technology_kinds, units_for,
+    resolve_leap_ids, technology_kinds, units_for,
+)
+
+from .leap_area import (
+    CustomConstraintsDoc, LeapAreaContext,
+    read_custom_constraints, read_demand, read_nemo_cfg, where_in_leap,
 )
 
 from .validate import validate_scenario, ValidationIssue, ValidationReport
@@ -78,8 +83,15 @@ from .timeslice import (
 )
 
 from .schema import (
-    DIMENSION_ABBREVIATIONS, DIMENSIONS, PARAMETERS,
-    RESULT_VARIABLES, TARGET_DB_VERSION,
+    DIMENSION_ABBREVIATIONS, DIMENSIONS, LEAP_SOURCE_MAP, LeapSource,
+    PARAMETERS, RESULT_DEPENDENCIES, RESULT_VARIABLES, ResultDependency,
+    TARGET_DB_VERSION, leap_source, result_dependency,
+)
+
+from .trace import (
+    BOUND_ABSENT, BOUND_FREE, BOUND_HIT_LOWER, BOUND_HIT_UPPER, BOUND_UNKNOWN,
+    BoundCheck, CostBreakdown, InputTrace, ResultTrace,
+    trace_cost, trace_result,
 )
 
 from .scaffold import scaffold_package
@@ -87,6 +99,7 @@ from .scaffold import scaffold_package
 __all__ = [
     "NemoDB",
     "inspect_scenario", "print_overview",
+    "decode_dims",
     "emissions", "fuels", "get_dimension", "list_unused_technologies",
     "modes_of_operation", "nodes",
     "regions", "region_groups", "storages", "technologies", "timeslices",
@@ -100,14 +113,22 @@ __all__ = [
     "detect_slack_technologies", "get_custom_constraint",
     "list_custom_constraints", "slack_technology_ids",
     "SLACK_CAPITAL_COST_THRESHOLD", "SLACK_RESIDUAL_CAPACITY_THRESHOLD",
-    "LEAP_NEMO_UNITS", "PJ_TO_J", "GW_TO_W", "T_TO_KG", "MILLION",
+    "LEAP_BRANCH_TYPES", "LEAP_NEMO_UNITS",
+    "PJ_TO_J", "GW_TO_W", "T_TO_KG", "MILLION",
     "classify_technology_id", "extract_leap_ids", "fuels_with_leap_ids",
-    "technology_kinds", "units_for",
+    "resolve_leap_ids", "technology_kinds", "units_for",
+    "CustomConstraintsDoc", "LeapAreaContext",
+    "read_custom_constraints", "read_demand", "read_nemo_cfg", "where_in_leap",
     "validate_scenario", "ValidationIssue", "ValidationReport",
     "check_scenario", "find_infeasibilities",
-    "DIMENSION_ABBREVIATIONS", "DIMENSIONS", "PARAMETERS",
-    "RESULT_VARIABLES", "TARGET_DB_VERSION",
+    "DIMENSION_ABBREVIATIONS", "DIMENSIONS", "LEAP_SOURCE_MAP", "LeapSource",
+    "PARAMETERS", "RESULT_DEPENDENCIES", "RESULT_VARIABLES", "ResultDependency",
+    "TARGET_DB_VERSION", "leap_source", "result_dependency",
+    "BOUND_ABSENT", "BOUND_FREE", "BOUND_HIT_LOWER", "BOUND_HIT_UPPER",
+    "BOUND_UNKNOWN",
+    "BoundCheck", "CostBreakdown", "InputTrace", "ResultTrace",
+    "trace_cost", "trace_result",
     "scaffold_package",
 ]
 
-__version__ = "0.1.0"
+__version__ = "0.6.2"

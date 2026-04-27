@@ -1,0 +1,2 @@
+table_name,branch_id,branch_full_name,expression_head
+ASEANRenewableCapacityTarget__NEMOcc,1201,Transformation\Centralized Electricity Generation,"InterpFSY(2025, 35, 2040, 63, 2050, 71)"

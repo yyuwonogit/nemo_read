@@ -8,12 +8,74 @@ year labels as TEXT even though they are used numerically throughout.
 """
 
 from __future__ import annotations
-from typing import List, Optional
+from typing import List, Optional, Sequence
 
 import pandas as pd
 
 from .db import NemoDB
-from .schema import DIMENSIONS
+from .schema import DIMENSION_ABBREVIATIONS, DIMENSIONS
+
+
+# Dimension code (column name) → which decoded column to attach.
+# Maps the short abbreviations NEMO uses (r, t, f, ...) to their decoded
+# DataFrame column names that get appended by decode_dims().
+_DECODED_COLUMNS = {
+    "r":  ("REGION",            "region_name"),
+    "rr": ("REGION",            "destination_region_name"),
+    "t":  ("TECHNOLOGY",        "tech_name"),
+    "f":  ("FUEL",              "fuel_name"),
+    "e":  ("EMISSION",          "emission_name"),
+    "s":  ("STORAGE",           "storage_name"),
+    "l":  ("TIMESLICE",         "timeslice_name"),
+    "n":  ("NODE",              "node_name"),
+    "n1": ("NODE",              "from_node_name"),
+    "n2": ("NODE",              "to_node_name"),
+}
+
+
+def decode_dims(
+    df: pd.DataFrame,
+    db: NemoDB,
+    dims: Optional[Sequence[str]] = None,
+) -> pd.DataFrame:
+    """Attach human-readable ``<dim>_name`` columns to ``df``.
+
+    For every NEMO dimension code present in ``df`` (``r``, ``f``, ``t``,
+    ``e``, ``s``, ``l``, ``n``, ``n1``, ``n2``, ``rr``), left-join the
+    corresponding dimension table's ``desc`` column onto ``df`` and append
+    it as ``<dim>_name``.
+
+    The package convention since 0.6.2: any reader producing data for
+    human consumption should call this so output is readable without
+    manual joins.
+
+    Parameters
+    ----------
+    df : DataFrame returned by a parameter or result-variable reader.
+    db : NemoDB the rows came from.
+    dims : optional explicit list of dim codes to decode. If None,
+        auto-detects from columns matching ``_DECODED_COLUMNS``.
+    """
+    if df.empty:
+        return df.copy()
+    out = df.copy()
+    target_dims = list(dims) if dims else [d for d in _DECODED_COLUMNS if d in out.columns]
+    if not target_dims:
+        return out
+    present_tables = set(db.list_tables())
+    for code in target_dims:
+        if code not in _DECODED_COLUMNS:
+            continue
+        table_name, out_col = _DECODED_COLUMNS[code]
+        if table_name not in present_tables:
+            continue
+        try:
+            dim_df = db.query(f"SELECT val, desc FROM {table_name}")
+        except Exception:
+            continue
+        lookup = dict(zip(dim_df["val"].astype(str), dim_df["desc"].astype(str)))
+        out[out_col] = out[code].astype(str).map(lookup)
+    return out
 
 
 def get_dimension(db: NemoDB, name: str) -> pd.DataFrame:

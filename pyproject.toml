@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nemo_read"
-version = "0.5.0"
+version = "0.6.2"
 description = "Read, decode, and analyse LEAP/NEMO scenario SQLite databases."
 authors = [
-    {name = "Y. Yuwono", email = "yudiandra.y@gmail.com"},
-    {name = "T. Yuwono", email = "yudiandra.y@gmail.com"},
+    {name = "Y. Yuwono", email = "yuwono.yudiandra@gmail.com"},
+    {name = "T. Yuwono", email = "yuwono.yudiandra@gmail.com"},
 ]
 requires-python = ">=3.11"
 readme = "README.md"
@@ -32,6 +32,7 @@ dependencies = [
 
 [project.optional-dependencies]
 parquet = ["pyarrow>=14"]
+leap = ["pywin32>=305"]
 dev = [
     "pytest>=7",
     "pyarrow>=14",
@@ -41,6 +42,7 @@ dev = [
 
 [project.scripts]
 nemo_read-scaffold = "nemo_read.scaffold:cli_main"
+nemo_read-leap-export = "nemo_read.leap_export:cli_main"
 
 [project.urls]
 # TODO: replace with your GitHub URLs once the repo is hosted

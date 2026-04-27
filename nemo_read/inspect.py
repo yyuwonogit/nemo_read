@@ -22,7 +22,11 @@ from .validate import validate_scenario
 from .infeasibility import find_infeasibilities
 
 
-def inspect_scenario(db: NemoDB, run_validation: bool = True) -> Dict[str, Any]:
+def inspect_scenario(
+    db: NemoDB,
+    run_validation: bool = True,
+    context: "LeapAreaContext | None" = None,  # type: ignore[name-defined]
+) -> Dict[str, Any]:
     """Return a structured overview of a NEMO scenario database.
 
     Keys:
@@ -40,6 +44,7 @@ def inspect_scenario(db: NemoDB, run_validation: bool = True) -> Dict[str, Any]:
                               or None if run_validation=False
         infeasibilities     : ValidationReport from find_infeasibilities,
                               or None if run_validation=False
+        leap_context        : the supplied LeapAreaContext, or None
     """
     overview: Dict[str, Any] = {
         "path": str(db.path),
@@ -98,7 +103,7 @@ def inspect_scenario(db: NemoDB, run_validation: bool = True) -> Dict[str, Any]:
     # Validation and infeasibility checks.
     if run_validation:
         try:
-            overview["validation"] = validate_scenario(db)
+            overview["validation"] = validate_scenario(db, context=context)
         except Exception as e:
             overview["validation"] = None
             overview["validation_error"] = repr(e)
@@ -111,13 +116,49 @@ def inspect_scenario(db: NemoDB, run_validation: bool = True) -> Dict[str, Any]:
         overview["validation"] = None
         overview["infeasibilities"] = None
 
+    overview["leap_context"] = context
+
     return overview
 
 
-def print_overview(db: NemoDB) -> None:
+def print_overview(
+    db: NemoDB,
+    context: "LeapAreaContext | None" = None,  # type: ignore[name-defined]
+) -> None:
     """Human-readable summary to stdout. Intentionally simple; for richer
-    reporting, consume `inspect_scenario()` directly and format as needed."""
-    ov = inspect_scenario(db)
+    reporting, consume `inspect_scenario()` directly and format as needed.
+
+    When ``context`` is supplied, prepends a "LEAP area" section summarising
+    the paired export and enables varstosave coverage reporting in the
+    validation block.
+    """
+    ov = inspect_scenario(db, context=context)
+
+    if context is not None:
+        print(f"LEAP area: {context.area!r}")
+        print(f"  branches={len(context.branches)}, "
+              f"fuels={len(context.fuels)}, regions={len(context.regions)}, "
+              f"timeslices={len(context.timeslices)}, "
+              f"scenarios={len(context.scenarios)}")
+        if context.nemo_cfg:
+            varstosave = context.varstosave
+            solver = (context.nemo_cfg.get("solver") or {}).get("parameters", "")
+            print(f"  varstosave ({len(varstosave)}): {varstosave[:3]}"
+                  f"{'...' if len(varstosave) > 3 else ''}")
+            if solver:
+                print(f"  solver: {solver[:80]}{'...' if len(solver) > 80 else ''}")
+        if context.custom_constraints:
+            cc = context.custom_constraints
+            print(f"  custom_constraint functions: {cc.functions}")
+            print(f"  NEMOcc tables: {cc.nemocc_tables}")
+            if cc.pollutant_to_eid:
+                print(f"  pollutant -> eid: {cc.pollutant_to_eid}")
+        if not context.nemocc_sources.empty:
+            print(f"  NEMOcc source branches ({len(context.nemocc_sources)}):")
+            for _, r in context.nemocc_sources.head(5).iterrows():
+                print(f"    {r['table_name']} <- {r['branch_full_name']}")
+        print()
+
     print(f"NEMO scenario DB: {ov['path']}")
     print(f"  DB version: {ov['version']} "
           f"(library targets v{TARGET_DB_VERSION}"

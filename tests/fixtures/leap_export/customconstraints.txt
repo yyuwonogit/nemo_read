@@ -1,0 +1,11 @@
+#= Minimal test fixture for customconstraints parser. =#
+
+using SQLite, JuMP
+
+function build_test_constraint(db::SQLite.DB, jumpmodel::JuMP.Model, quiet::Bool)
+    for row in SQLite.DBInterface.execute(db, "select r, y, val from TestTarget__NEMOcc")
+        # CO2 mapping for eid=2
+        add_to_expression!(sum, 1 * variable_by_name(jumpmodel, "vannualemissions[$r,E2,$y]")) # CO2
+        add_to_expression!(sum, 30 * variable_by_name(jumpmodel, "vannualemissions[$r,E4,$y]")) # CH4 using AR5 100-yr GWP
+    end
+end

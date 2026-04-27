@@ -1,0 +1,4 @@
+branch_id,variable_name,scenario_name,expression
+11942,Capital Cost,Regional Aspiration Scenario,"Interp(2022, 1200) ? 2024 Technology Data"
+11942,Lifetime,Regional Aspiration Scenario,50
+1201,Planning Reserve Margin,Regional Aspiration Scenario,PRM for Simulated Scenarios[percent]

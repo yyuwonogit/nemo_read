@@ -1,0 +1,7 @@
+branch_id,variable_name,scenario_id,scenario_name,region_id,year,value
+30001,Final Energy Demand,25,Regional Aspiration Scenario,2,2025,12.5
+30001,Final Energy Demand,25,Regional Aspiration Scenario,2,2030,15.2
+30002,Final Energy Demand,25,Regional Aspiration Scenario,2,2025,8.0
+30002,Final Energy Demand,25,Regional Aspiration Scenario,2,2030,9.5
+30003,Final Energy Demand,25,Regional Aspiration Scenario,2,2025,3.2
+30003,Final Energy Demand,25,Regional Aspiration Scenario,2,2030,3.8

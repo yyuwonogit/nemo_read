@@ -1,6 +1,8 @@
 # nemo_read
 
-Read, decode, and analyse LEAP-generated NEMO scenario SQLite databases. Targets NEMO data-dictionary v11 (LEAP 2024+, NemoMod 2.0+); reads older v9 / v10 databases with graceful degradation. Hoisted in tyuwono PyPI template structure.
+Read, decode, and analyse LEAP-generated NEMO scenario SQLite databases. Targets NEMO data-dictionary v11 (LEAP 2024+, NemoMod 2.0+); reads older v9 / v10 databases with graceful degradation.
+
+> **Project conventions.** The build method and repository layout follow the **tyuwono PyPI template** that is reused across similar scientific-data reader packages — flat src layout with `pyproject.toml` at the root, `tests/` and `docs/` as siblings, Apache-2.0 licensing, and tag-driven PyPI releases via GitHub Actions trusted publishing.
 
 ## Install
 

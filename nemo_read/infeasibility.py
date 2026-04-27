@@ -495,16 +495,23 @@ def _check_ccs_unbounded(
 # ---------------------------------------------------------------------------
 # Combined report
 # ---------------------------------------------------------------------------
-def check_scenario(db: NemoDB, sample_rows: int = 5) -> ValidationReport:
+def check_scenario(
+    db: NemoDB,
+    sample_rows: int = 5,
+    context: "LeapAreaContext | None" = None,  # type: ignore[name-defined]
+) -> ValidationReport:
     """One-stop check that runs both :func:`validate_scenario` and
     :func:`find_infeasibilities`, merges their findings, and de-duplicates
     identical issues. This is the recommended default for handing a
     freshly-built scenario database to an analyst.
+
+    When ``context`` is supplied, validate_scenario additionally compares
+    the nemo.cfg ``varstosave`` list against the populated v* tables.
     """
     from .validate import validate_scenario
 
     report = ValidationReport()
-    v = validate_scenario(db, sample_rows=sample_rows)
+    v = validate_scenario(db, sample_rows=sample_rows, context=context)
     f = find_infeasibilities(db, sample_rows=sample_rows)
 
     seen: set = set()

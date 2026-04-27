@@ -1,0 +1,14 @@
+{
+  "format_version": 1,
+  "nemo_read_version": "0.6.0-test",
+  "exported_at": "2026-04-23T12:00:00",
+  "area": "test_area",
+  "area_directory": "/fake/path",
+  "working_directory": "/fake/path",
+  "active_scenario": "Regional Aspiration Scenario",
+  "base_year": 2005,
+  "first_scenario_year": 2025,
+  "end_year": 2060,
+  "scenario_database": null,
+  "include_expressions": false
+}

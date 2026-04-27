@@ -478,3 +478,519 @@ def parameter_has_value_col(param_name: str) -> bool:
     where the scalar column is not literally named `val`."""
     p = PARAMETERS.get(param_name)                          # look up parameter
     return p is not None and p.value_col == "val"           # simple check
+
+
+# ---------------------------------------------------------------------------
+# LEAP source map — which LEAP UI Variable + BranchType feeds each NEMO table.
+# Used by nemo_read.leap_area.where_in_leap() for input-side traceback.
+# ---------------------------------------------------------------------------
+
+@dataclass(frozen=True)
+class LeapSource:
+    """How to locate a NEMO parameter's input in the LEAP UI.
+
+    - ``variable``: the LEAP Variable Name as it appears in the Analysis view.
+    - ``branch_type``: the integer BranchType code that owns this variable.
+    - ``branch_type_name``: human-readable branch-type label (for UI hints).
+    - ``branch_dim``: which dim column in a parameter row picks the specific
+      branch. Common values: ``"t"``, ``"s"``, ``"tr"``, ``"module"`` (row
+      carries ``_module_branch_id``), ``"n_within_t"`` (Process Node under a
+      tech's Transmission Nodes folder).
+    - ``confidence``: ``"confirmed"`` (seen in probes), ``"inferred"`` (from
+      LEAP/NEMO conventions), or ``"unknown"``.
+    """
+    variable: str
+    branch_type: int
+    branch_type_name: str
+    branch_dim: str
+    confidence: str = "inferred"
+
+
+# Process-scoped parameters (BranchType=3 Transformation Process, or BT=4 Demand Technology).
+_PROCESS = 3
+_PROCESS_NAME = "Transformation Process"
+
+# Transformation Module (BT=2) — aggregate decision variables.
+_MODULE = 2
+_MODULE_NAME = "Transformation Module"
+
+# Process Node (BT=57) — per-process spatial node children.
+_PROCESS_NODE = 57
+_PROCESS_NODE_NAME = "Process Node"
+
+# Transmission Line (BT=55).
+_TRANSMISSION_LINE = 55
+_TRANSMISSION_LINE_NAME = "Transmission Line"
+
+# Environmental Effect (BT=34) — per-pollutant children of processes.
+_ENV_EFFECT = 34
+_ENV_EFFECT_NAME = "Environmental Effect"
+
+# Demand Fuel (BT=36).
+_DEMAND_FUEL = 36
+_DEMAND_FUEL_NAME = "Demand Fuel"
+
+
+LEAP_SOURCE_MAP: Dict[str, LeapSource] = {
+    # --- Transformation Process -----------------------------------------
+    "CapitalCost":            LeapSource("Capital Cost",                    _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "FixedCost":              LeapSource("Fixed OM Cost",                    _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "VariableCost":           LeapSource("Variable OM Cost",                 _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "OperationalLife":        LeapSource("Lifetime",                         _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "AvailabilityFactor":     LeapSource("Maximum Availability",             _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "MinimumUtilization":     LeapSource("Minimum Utilization",              _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "ResidualCapacity":       LeapSource("Exogenous Capacity",               _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "TotalAnnualMaxCapacity": LeapSource("Maximum Capacity",                 _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "TotalAnnualMinCapacity": LeapSource("Minimum Capacity",                 _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "TotalAnnualMaxCapacityInvestment":
+                              LeapSource("Maximum Capacity Addition",        _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "TotalAnnualMinCapacityInvestment":
+                              LeapSource("Minimum Capacity Addition",        _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "TotalTechnologyAnnualActivityUpperLimit":
+                              LeapSource("Maximum Production",               _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "TotalTechnologyAnnualActivityLowerLimit":
+                              LeapSource("Minimum Production",               _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "MinShareProduction":     LeapSource("Minimum Share of Production",      _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "RETagTechnology":        LeapSource("Renewable Qualified",              _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "ReserveMarginTagTechnology":
+                              LeapSource("Capacity Credit",                  _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "InterestRateTechnology": LeapSource("Interest Rate",                    _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    "CapacityToActivityUnit": LeapSource("Full Load Hours",                  _PROCESS, _PROCESS_NAME, "t", "inferred"),
+    "CapacityOfOneTechnologyUnit":
+                              LeapSource("Use Addition Size",                _MODULE, _MODULE_NAME, "module", "inferred"),
+    "InputActivityRatio":     LeapSource("Feedstock Fuel + Process Efficiency",
+                                         _PROCESS, _PROCESS_NAME, "t", "inferred"),
+    "OutputActivityRatio":    LeapSource("Output Fuel + Process Efficiency",
+                                         _PROCESS, _PROCESS_NAME, "t", "inferred"),
+    "TotalTechnologyModelPeriodActivityUpperLimit":
+                              LeapSource("Model Period Max Activity",        _PROCESS, _PROCESS_NAME, "t", "inferred"),
+    "TotalTechnologyModelPeriodActivityLowerLimit":
+                              LeapSource("Model Period Min Activity",        _PROCESS, _PROCESS_NAME, "t", "inferred"),
+
+    # --- Process Node (nodal distribution) -------------------------------
+    "NodalDistributionTechnologyCapacity":
+                              LeapSource("Nodal Distribution",               _PROCESS_NODE, _PROCESS_NODE_NAME, "n_within_t", "confirmed"),
+    "NodalDistributionStorageCapacity":
+                              LeapSource("Nodal Distribution",               _PROCESS_NODE, _PROCESS_NODE_NAME, "n_within_t", "confirmed"),
+
+    # --- Environmental Effect --------------------------------------------
+    "EmissionActivityRatio":  LeapSource("Emission Factor",                  _ENV_EFFECT, _ENV_EFFECT_NAME, "t", "inferred"),
+
+    # --- Demand Fuel ------------------------------------------------------
+    "SpecifiedAnnualDemand":  LeapSource("Final Energy Demand",              _DEMAND_FUEL, _DEMAND_FUEL_NAME, "t", "inferred"),
+    "AccumulatedAnnualDemand":LeapSource("Final Energy Demand",              _DEMAND_FUEL, _DEMAND_FUEL_NAME, "t", "inferred"),
+    "SpecifiedDemandProfile": LeapSource("Demand Profile",                   _DEMAND_FUEL, _DEMAND_FUEL_NAME, "t", "inferred"),
+
+    # --- Transformation Module -------------------------------------------
+    "ReserveMargin":          LeapSource("Planning Reserve Margin",          _MODULE, _MODULE_NAME, "module", "confirmed"),
+    "REMinProductionTarget":  LeapSource("Renewable Target",                 _MODULE, _MODULE_NAME, "module", "confirmed"),
+    "REMinProductionTargetRG":LeapSource("Renewable Target (region group)",  _MODULE, _MODULE_NAME, "module", "inferred"),
+    "DepreciationMethod":     LeapSource("Depreciation Method",              _MODULE, _MODULE_NAME, "module", "inferred"),
+    "DiscountRate":           LeapSource("Discount Rate",                    8, "Key Assumption", "module", "inferred"),
+
+    # --- Transmission Line / Key\Transmission ----------------------------
+    "TransmissionAvailabilityFactor":
+                              LeapSource("Availability Factor",              _TRANSMISSION_LINE, _TRANSMISSION_LINE_NAME, "tr", "inferred"),
+    "TransmissionCapacityToActivityUnit":
+                              LeapSource("Capacity to Activity Conversion",  _TRANSMISSION_LINE, _TRANSMISSION_LINE_NAME, "tr", "inferred"),
+    "MinAnnualTransmissionNodes":
+                              LeapSource("Minimum Flow",                     _TRANSMISSION_LINE, _TRANSMISSION_LINE_NAME, "tr", "inferred"),
+    "MaxAnnualTransmissionNodes":
+                              LeapSource("Maximum Flow",                     _TRANSMISSION_LINE, _TRANSMISSION_LINE_NAME, "tr", "inferred"),
+    "TransmissionModelingEnabled":
+                              LeapSource("Activity Level",                   10, "Key Assumption (Key\\Transmission\\Transmission Enabled)", "module", "confirmed"),
+    "NodalDistributionDemand":LeapSource("Activity Level",                   10, "Key Assumption (Key\\Transmission\\Demand Distribution)", "module", "confirmed"),
+
+    # --- Storage-scoped (applied to a Process branch flagged as storage) -
+    "CapitalCostStorage":     LeapSource("Capital Cost",                     _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "MinStorageCharge":       LeapSource("Minimum Charge",                   _PROCESS, _PROCESS_NAME, "s", "confirmed"),
+    "StorageLevelStart":      LeapSource("Storage Level Start",              _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "StorageMaxChargeRate":   LeapSource("Maximum Charge Rate",              _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "StorageMaxDischargeRate":LeapSource("Maximum Discharge Rate",           _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "StorageFullLoadHours":   LeapSource("Full Load Hours",                  _PROCESS, _PROCESS_NAME, "s", "confirmed"),
+    "OperationalLifeStorage": LeapSource("Lifetime",                         _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "ResidualStorageCapacity":LeapSource("Exogenous Capacity (storage)",     _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "TotalAnnualMaxCapacityStorage":
+                              LeapSource("Maximum Capacity",                 _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "TotalAnnualMinCapacityStorage":
+                              LeapSource("Minimum Capacity",                 _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "TotalAnnualMaxCapacityInvestmentStorage":
+                              LeapSource("Maximum Capacity Addition",        _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "TotalAnnualMinCapacityInvestmentStorage":
+                              LeapSource("Minimum Capacity Addition",        _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "InterestRateStorage":    LeapSource("Interest Rate",                    _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "TechnologyFromStorage":  LeapSource("(auto-generated storage link)",    _PROCESS, _PROCESS_NAME, "s", "inferred"),
+    "TechnologyToStorage":    LeapSource("(auto-generated storage link)",    _PROCESS, _PROCESS_NAME, "s", "inferred"),
+
+    # --- Emission-scoped --------------------------------------------------
+    "EmissionsPenalty":       LeapSource("Penalty",                          _ENV_EFFECT, _ENV_EFFECT_NAME, "t", "inferred"),
+    "AnnualEmissionLimit":    LeapSource("Emissions Limit",                  _MODULE, _MODULE_NAME, "module", "inferred"),
+    "AnnualExogenousEmission":LeapSource("Exogenous Emissions",              _ENV_EFFECT, _ENV_EFFECT_NAME, "t", "inferred"),
+    "ModelPeriodEmissionLimit":
+                              LeapSource("Model Period Emissions Limit",     _MODULE, _MODULE_NAME, "module", "inferred"),
+    "ModelPeriodExogenousEmission":
+                              LeapSource("Model Period Exogenous Emissions", _ENV_EFFECT, _ENV_EFFECT_NAME, "t", "inferred"),
+
+    # --- Ramping ---------------------------------------------------------
+    "RampingReset":           LeapSource("Ramping Reset",                    10, "Key Assumption", "module", "inferred"),
+
+    # --- Time-slicing ----------------------------------------------------
+    "YearSplit":              LeapSource("(derived from TimeSlice.Hours / 8760)",
+                                         0, "(auto)", "module", "inferred"),
+}
+
+
+def leap_source(table: str) -> "LeapSource | None":
+    """Return the :class:`LeapSource` for a NEMO parameter table, or None."""
+    return LEAP_SOURCE_MAP.get(table)
+
+
+# ---------------------------------------------------------------------------
+# Result → dependency map (0.6.1)
+#
+# For each v* result variable, list which input parameters and upstream
+# result variables mathematically determine it, plus the parameter tables
+# that upper/lower-bound it.
+#
+# Sourced from NemoMod.jl's constraint and objective definitions (NEMO v11).
+# Used by :func:`nemo_read.trace.trace_result` to explain why a computed
+# number is what it is.
+# ---------------------------------------------------------------------------
+
+@dataclass(frozen=True)
+class ResultDependency:
+    """Mathematical ancestry of a NEMO result variable.
+
+    - ``inputs``            : parameter tables that appear in the defining
+      JuMP constraint/objective term.
+    - ``upstream_results``  : other v* tables this one is composed from.
+    - ``upper_bounds``      : parameter tables that set an upper bound.
+      Binding against any of these means the optimizer would choose higher
+      if the bound were relaxed.
+    - ``lower_bounds``      : parameter tables that set a lower bound.
+    - ``formula_hint``      : short human description of the defining equation.
+    """
+    inputs: Tuple[str, ...] = ()
+    upstream_results: Tuple[str, ...] = ()
+    upper_bounds: Tuple[str, ...] = ()
+    lower_bounds: Tuple[str, ...] = ()
+    formula_hint: str = ""
+
+
+RESULT_DEPENDENCIES: Dict[str, ResultDependency] = {
+    # --- Capacity --------------------------------------------------------
+    "vnewcapacity": ResultDependency(
+        inputs=("CapacityOfOneTechnologyUnit",),
+        upper_bounds=("TotalAnnualMaxCapacityInvestment",),
+        lower_bounds=("TotalAnnualMinCapacityInvestment",),
+        formula_hint="Endogenous capacity added in year y; integer if CapacityOfOneTechnologyUnit is set.",
+    ),
+    "vaccumulatednewcapacity": ResultDependency(
+        inputs=("OperationalLife",),
+        upstream_results=("vnewcapacity",),
+        formula_hint="Sum of vnewcapacity still within OperationalLife window at year y.",
+    ),
+    "vtotalcapacityannual": ResultDependency(
+        inputs=("ResidualCapacity",),
+        upstream_results=("vaccumulatednewcapacity",),
+        upper_bounds=("TotalAnnualMaxCapacity",),
+        lower_bounds=("TotalAnnualMinCapacity",),
+        formula_hint="ResidualCapacity + vaccumulatednewcapacity.",
+    ),
+    "vnewstoragecapacity": ResultDependency(
+        upper_bounds=("TotalAnnualMaxCapacityInvestmentStorage",),
+        lower_bounds=("TotalAnnualMinCapacityInvestmentStorage",),
+        formula_hint="Endogenous storage energy capacity added in year y.",
+    ),
+    "vaccumulatednewstoragecapacity": ResultDependency(
+        inputs=("OperationalLifeStorage",),
+        upstream_results=("vnewstoragecapacity",),
+        formula_hint="Sum of vnewstoragecapacity still within OperationalLifeStorage window.",
+    ),
+    "vtotalcapacityinreservemargin": ResultDependency(
+        inputs=("ReserveMarginTagTechnology",),
+        upstream_results=("vtotalcapacityannual",),
+        lower_bounds=("ReserveMargin",),
+        formula_hint="sum_t vtotalcapacityannual × ReserveMarginTagTechnology; ≥ ReserveMargin × peak.",
+    ),
+
+    # --- Activity / production ------------------------------------------
+    "vrateofactivity": ResultDependency(
+        inputs=("AvailabilityFactor", "CapacityToActivityUnit"),
+        upstream_results=("vtotalcapacityannual",),
+        upper_bounds=("AvailabilityFactor",),
+        lower_bounds=("MinimumUtilization",),
+        formula_hint="Bounded by vtotalcapacityannual × AvailabilityFactor × CapacityToActivityUnit.",
+    ),
+    "vrateoftotalactivity": ResultDependency(
+        upstream_results=("vrateofactivity",),
+        formula_hint="Sum over modes of vrateofactivity.",
+    ),
+    "vtotaltechnologyannualactivity": ResultDependency(
+        inputs=("YearSplit",),
+        upstream_results=("vrateoftotalactivity",),
+        upper_bounds=("TotalTechnologyAnnualActivityUpperLimit",),
+        lower_bounds=("TotalTechnologyAnnualActivityLowerLimit",),
+        formula_hint="Sum over l of vrateoftotalactivity × YearSplit.",
+    ),
+    "vtotaltechnologymodelperiodactivity": ResultDependency(
+        upstream_results=("vtotaltechnologyannualactivity",),
+        upper_bounds=("TotalTechnologyModelPeriodActivityUpperLimit",),
+        lower_bounds=("TotalTechnologyModelPeriodActivityLowerLimit",),
+        formula_hint="Sum over y of vtotaltechnologyannualactivity.",
+    ),
+    "vtotalannualtechnologyactivitybymode": ResultDependency(
+        inputs=("YearSplit",),
+        upstream_results=("vrateofactivity",),
+        formula_hint="Sum over l of vrateofactivity × YearSplit for a given mode m.",
+    ),
+    "vproductionbytechnologyannual": ResultDependency(
+        inputs=("OutputActivityRatio", "YearSplit"),
+        upstream_results=("vrateofactivity",),
+        formula_hint="Sum over (l,m) of vrateofactivity × OutputActivityRatio × YearSplit.",
+    ),
+    "vusebytechnologyannual": ResultDependency(
+        inputs=("InputActivityRatio", "YearSplit"),
+        upstream_results=("vrateofactivity",),
+        formula_hint="Sum over (l,m) of vrateofactivity × InputActivityRatio × YearSplit.",
+    ),
+    "vrateofproduction": ResultDependency(
+        inputs=("OutputActivityRatio",),
+        upstream_results=("vrateofactivity",),
+        formula_hint="Sum over (t,m) of vrateofactivity × OutputActivityRatio.",
+    ),
+    "vrateofuse": ResultDependency(
+        inputs=("InputActivityRatio",),
+        upstream_results=("vrateofactivity",),
+        formula_hint="Sum over (t,m) of vrateofactivity × InputActivityRatio.",
+    ),
+    "vproductionannualnn": ResultDependency(
+        inputs=("YearSplit",),
+        upstream_results=("vrateofproduction",),
+        formula_hint="Sum over l of vrateofproduction × YearSplit (non-nodal).",
+    ),
+    "vuseannualnn": ResultDependency(
+        inputs=("YearSplit",),
+        upstream_results=("vrateofuse",),
+        formula_hint="Sum over l of vrateofuse × YearSplit (non-nodal).",
+    ),
+    "vgenerationannualnn": ResultDependency(
+        upstream_results=("vproductionannualnn", "vstoragelevelts"),
+        formula_hint="Production excluding storage discharge.",
+    ),
+    "vregenerationannualnn": ResultDependency(
+        inputs=("RETagTechnology",),
+        upstream_results=("vproductionbytechnologyannual",),
+        formula_hint="Renewable share of production (RETagTechnology-weighted).",
+    ),
+    "vdemandnn": ResultDependency(
+        inputs=("SpecifiedAnnualDemand", "SpecifiedDemandProfile",
+                "AccumulatedAnnualDemand", "YearSplit"),
+        formula_hint="Time-sliced demand = SpecifiedAnnualDemand × SpecifiedDemandProfile + allocated AccumulatedAnnualDemand.",
+    ),
+
+    # --- Emissions -------------------------------------------------------
+    "vannualtechnologyemissionbymode": ResultDependency(
+        inputs=("EmissionActivityRatio",),
+        upstream_results=("vtotalannualtechnologyactivitybymode",),
+        formula_hint="vtotalannualtechnologyactivitybymode × EmissionActivityRatio.",
+    ),
+    "vannualtechnologyemission": ResultDependency(
+        upstream_results=("vannualtechnologyemissionbymode",),
+        formula_hint="Sum over m of vannualtechnologyemissionbymode.",
+    ),
+    "vannualemissions": ResultDependency(
+        inputs=("AnnualExogenousEmission",),
+        upstream_results=("vannualtechnologyemission",),
+        upper_bounds=("AnnualEmissionLimit",),
+        formula_hint="Sum over t of vannualtechnologyemission + AnnualExogenousEmission.",
+    ),
+    "vmodelperiodemissions": ResultDependency(
+        inputs=("ModelPeriodExogenousEmission",),
+        upstream_results=("vannualemissions",),
+        upper_bounds=("ModelPeriodEmissionLimit",),
+        formula_hint="Sum over y of vannualemissions + ModelPeriodExogenousEmission.",
+    ),
+    "vannualtechnologyemissionpenaltybyemission": ResultDependency(
+        inputs=("EmissionsPenalty",),
+        upstream_results=("vannualtechnologyemission",),
+        formula_hint="vannualtechnologyemission × EmissionsPenalty.",
+    ),
+    "vannualtechnologyemissionspenalty": ResultDependency(
+        upstream_results=("vannualtechnologyemissionpenaltybyemission",),
+        formula_hint="Sum over e of vannualtechnologyemissionpenaltybyemission.",
+    ),
+    "vdiscountedtechnologyemissionspenalty": ResultDependency(
+        inputs=("DiscountRate",),
+        upstream_results=("vannualtechnologyemissionspenalty",),
+        formula_hint="vannualtechnologyemissionspenalty discounted by DiscountRate.",
+    ),
+
+    # --- Costs -----------------------------------------------------------
+    "vcapitalinvestment": ResultDependency(
+        inputs=("CapitalCost",),
+        upstream_results=("vnewcapacity",),
+        formula_hint="vnewcapacity × CapitalCost.",
+    ),
+    "vdiscountedcapitalinvestment": ResultDependency(
+        inputs=("DiscountRate",),
+        upstream_results=("vcapitalinvestment",),
+        formula_hint="vcapitalinvestment discounted to base year.",
+    ),
+    "vcapitalinvestmentstorage": ResultDependency(
+        inputs=("CapitalCostStorage",),
+        upstream_results=("vnewstoragecapacity",),
+        formula_hint="vnewstoragecapacity × CapitalCostStorage.",
+    ),
+    "vdiscountedcapitalinvestmentstorage": ResultDependency(
+        inputs=("DiscountRate",),
+        upstream_results=("vcapitalinvestmentstorage",),
+    ),
+    "vfinancecost": ResultDependency(
+        inputs=("InterestRateTechnology", "OperationalLife"),
+        upstream_results=("vcapitalinvestment",),
+        formula_hint="Financing charge on vcapitalinvestment over OperationalLife.",
+    ),
+    "vfinancecoststorage": ResultDependency(
+        inputs=("InterestRateStorage", "OperationalLifeStorage"),
+        upstream_results=("vcapitalinvestmentstorage",),
+    ),
+    "vannualfixedoperatingcost": ResultDependency(
+        inputs=("FixedCost",),
+        upstream_results=("vtotalcapacityannual",),
+        formula_hint="vtotalcapacityannual × FixedCost.",
+    ),
+    "vannualvariableoperatingcost": ResultDependency(
+        inputs=("VariableCost",),
+        upstream_results=("vtotalannualtechnologyactivitybymode",),
+        formula_hint="Sum over m of vtotalannualtechnologyactivitybymode × VariableCost.",
+    ),
+    "voperatingcost": ResultDependency(
+        upstream_results=("vannualfixedoperatingcost", "vannualvariableoperatingcost"),
+        formula_hint="Annual fixed + variable O&M.",
+    ),
+    "vdiscountedoperatingcost": ResultDependency(
+        inputs=("DiscountRate",),
+        upstream_results=("voperatingcost",),
+    ),
+    "vsalvagevalue": ResultDependency(
+        inputs=("DepreciationMethod", "OperationalLife"),
+        upstream_results=("vcapitalinvestment",),
+        formula_hint="Residual value of vcapitalinvestment at end of model period.",
+    ),
+    "vdiscountedsalvagevalue": ResultDependency(
+        inputs=("DiscountRate",),
+        upstream_results=("vsalvagevalue",),
+    ),
+    "vsalvagevaluestorage": ResultDependency(
+        inputs=("DepreciationMethod", "OperationalLifeStorage"),
+        upstream_results=("vcapitalinvestmentstorage",),
+    ),
+    "vdiscountedsalvagevaluestorage": ResultDependency(
+        inputs=("DiscountRate",),
+        upstream_results=("vsalvagevaluestorage",),
+    ),
+    "vtotaldiscountedcost": ResultDependency(
+        upstream_results=(
+            "vdiscountedcapitalinvestment",
+            "vdiscountedcapitalinvestmentstorage",
+            "vdiscountedcapitalinvestmenttransmission",
+            "vdiscountedoperatingcost",
+            "vdiscountedoperatingcosttransmission",
+            "vdiscountedtechnologyemissionspenalty",
+            "vdiscountedsalvagevalue",
+            "vdiscountedsalvagevaluestorage",
+            "vdiscountedsalvagevaluetransmission",
+            "vfinancecost",
+            "vfinancecoststorage",
+            "vfinancecosttransmission",
+        ),
+        formula_hint="Objective-function component per (region, year): sum of all discounted cost streams minus salvage.",
+    ),
+    "vmodelperiodcostbyregion": ResultDependency(
+        upstream_results=("vtotaldiscountedcost",),
+        formula_hint="Sum over y of vtotaldiscountedcost.",
+    ),
+
+    # --- Trade -----------------------------------------------------------
+    "vtrade": ResultDependency(
+        inputs=("TradeRoute",),
+        formula_hint="Inter-regional fuel flow; 0 when TradeRoute=0.",
+    ),
+    "vtradeannual": ResultDependency(
+        inputs=("YearSplit",),
+        upstream_results=("vtrade",),
+        formula_hint="Sum over l of vtrade × YearSplit.",
+    ),
+
+    # --- Transmission ----------------------------------------------------
+    "vtransmissionbuilt": ResultDependency(
+        formula_hint="Endogenous decision: 1 if line built in year y.",
+    ),
+    "vtransmissionexists": ResultDependency(
+        upstream_results=("vtransmissionbuilt",),
+        formula_hint="1 if line exists (previously built or exogenous).",
+    ),
+    "vtransmissionbyline": ResultDependency(
+        inputs=("TransmissionAvailabilityFactor", "TransmissionCapacityToActivityUnit"),
+        upstream_results=("vtransmissionexists",),
+        upper_bounds=("MaxAnnualTransmissionNodes",),
+        lower_bounds=("MinAnnualTransmissionNodes",),
+        formula_hint="Flow on line tr per time slice, bounded by capacity × availability.",
+    ),
+    "vtransmissionannual": ResultDependency(
+        inputs=("YearSplit",),
+        upstream_results=("vtransmissionbyline",),
+        formula_hint="Net annual inflow at node n.",
+    ),
+
+    # --- Capital investment — transmission -------------------------------
+    "vcapitalinvestmenttransmission": ResultDependency(
+        upstream_results=("vtransmissionbuilt",),
+        formula_hint="Transmission line construction cost when built.",
+    ),
+    "vdiscountedcapitalinvestmenttransmission": ResultDependency(
+        inputs=("DiscountRate",),
+        upstream_results=("vcapitalinvestmenttransmission",),
+    ),
+    "voperatingcosttransmission": ResultDependency(
+        upstream_results=("vtransmissionbyline", "vtransmissionexists"),
+        formula_hint="Variable + fixed transmission O&M.",
+    ),
+    "vdiscountedoperatingcosttransmission": ResultDependency(
+        inputs=("DiscountRate",),
+        upstream_results=("voperatingcosttransmission",),
+    ),
+    "vfinancecosttransmission": ResultDependency(
+        upstream_results=("vcapitalinvestmenttransmission",),
+    ),
+    "vsalvagevaluetransmission": ResultDependency(
+        upstream_results=("vcapitalinvestmenttransmission",),
+    ),
+    "vdiscountedsalvagevaluetransmission": ResultDependency(
+        inputs=("DiscountRate",),
+        upstream_results=("vsalvagevaluetransmission",),
+    ),
+
+    # --- Storage ---------------------------------------------------------
+    "vstoragelevelyearstart": ResultDependency(
+        inputs=("StorageLevelStart",),
+        formula_hint="Storage level at start of year y.",
+    ),
+    "vstoragelevelyearfinish": ResultDependency(
+        upstream_results=("vstoragelevelyearstart", "vstoragelevelts"),
+        formula_hint="Storage level at end of year y.",
+    ),
+    "vstoragelevelts": ResultDependency(
+        inputs=("StorageMaxChargeRate", "StorageMaxDischargeRate",
+                "TechnologyFromStorage", "TechnologyToStorage"),
+        upstream_results=("vrateofactivity",),
+        lower_bounds=("MinStorageCharge",),
+        formula_hint="Storage level per time slice; dynamic balance with charge/discharge.",
+    ),
+}
+
+
+def result_dependency(table: str) -> "ResultDependency | None":
+    """Return the :class:`ResultDependency` for a result table, or None."""
+    return RESULT_DEPENDENCIES.get(table)

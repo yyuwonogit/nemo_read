@@ -103,6 +103,7 @@ def validate_scenario(
     db: NemoDB,
     strict: bool = False,
     sample_rows: int = 5,
+    context: "LeapAreaContext | None" = None,  # type: ignore[name-defined]
 ) -> ValidationReport:
     """Run the full validation suite against ``db``.
 
@@ -116,6 +117,9 @@ def validate_scenario(
     sample_rows : int, default 5
         Number of example rows to attach to each issue via
         ``ValidationIssue.sample``.
+    context : LeapAreaContext | None, optional
+        When provided, adds LEAP-area-aware checks (currently: ``varstosave``
+        coverage).
     """
     report = ValidationReport()
     all_tables = set(db.list_tables())
@@ -301,7 +305,59 @@ def validate_scenario(
                 ),
             ))
 
+    # 10. LEAP-area-aware checks (when context is supplied).
+    if context is not None:
+        _check_varstosave_coverage(db, context, report)
+
     return report
+
+
+def _check_varstosave_coverage(db: NemoDB, context, report: ValidationReport) -> None:
+    """Compare nemo.cfg's varstosave list against the v* tables actually
+    populated in the database.
+
+    Emits:
+    - warning for each var in varstosave that has no populated v* table
+    - info when all requested vars are populated
+    """
+    varstosave = list(context.varstosave)
+    if not varstosave:
+        return
+    from .variables import list_present_results
+    present = list_present_results(db)
+    present_names = set(present["variable"]) if not present.empty else set()
+    populated = set(present[present["rows"] > 0]["variable"]) if not present.empty else set()
+
+    missing = [v for v in varstosave if v not in present_names]
+    empty = [v for v in varstosave if v in present_names and v not in populated]
+
+    if missing:
+        report.issues.append(ValidationIssue(
+            severity="warning", category="varstosave",
+            table="nemo.cfg",
+            message=(
+                f"{len(missing)} variable(s) in nemo.cfg varstosave have no "
+                f"table in the SQLite: {missing[:5]}{'...' if len(missing) > 5 else ''}. "
+                f"Calculation may not have run, or the cfg key did not apply."
+            ),
+        ))
+    if empty:
+        report.issues.append(ValidationIssue(
+            severity="warning", category="varstosave",
+            table="nemo.cfg",
+            message=(
+                f"{len(empty)} variable(s) in varstosave have empty tables: "
+                f"{empty[:5]}{'...' if len(empty) > 5 else ''}."
+            ),
+        ))
+    if not missing and not empty:
+        report.issues.append(ValidationIssue(
+            severity="info", category="varstosave",
+            table="nemo.cfg",
+            message=(
+                f"All {len(varstosave)} varstosave variables are populated."
+            ),
+        ))
 
 
 def _check_negative_emission_bounds(

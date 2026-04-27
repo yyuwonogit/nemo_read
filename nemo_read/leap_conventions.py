@@ -224,3 +224,88 @@ def fuels_with_leap_ids(db: NemoDB) -> pd.DataFrame:
     """
     df = db.query("SELECT val, desc FROM FUEL")
     return extract_leap_ids(df)
+
+
+# ---------------------------------------------------------------------------
+# LEAP BranchType code → human name. Enumerated during probe against AEO9
+# (5194 branches) and Freedonia. Codes not yet seen can be added as discovered.
+# ---------------------------------------------------------------------------
+LEAP_BRANCH_TYPES: Dict[int, str] = {
+    0:  "Unknown Branch Type",
+    1:  "Demand Category",
+    2:  "Transformation Module",
+    3:  "Transformation Process",
+    4:  "Demand Technology",
+    5:  "Transformation Process Category",
+    6:  "Transformation Output Category",
+    7:  "Transformation Output Fuel",
+    8:  "Key Assumptions Branch",
+    9:  "Key Assumption Category",
+    10: "Key Assumption",
+    11: "Resource Category",
+    12: "Resource Category",
+    13: "Resource Category",
+    14: "Demand Branch",
+    15: "Resource",
+    26: "Non Energy Category",
+    27: "Non Energy",
+    28: "Non Energy Branch",
+    30: "Transformation Auxiliary Fuel Category",
+    31: "Transformation Auxiliary Fuel",
+    32: "Transformation Feedstock Fuel Category",
+    33: "Transformation Feedstock Fuel",
+    34: "Environmental Effect",
+    35: "Environmental Effect",
+    36: "Demand Fuel",
+    39: "Effects",
+    48: "Load Shapes Category",
+    49: "Load Shape",
+    50: "Transformation Branch",
+    51: "Effect Category",
+    52: "Transmission Nodes",
+    53: "Requirement Node",
+    54: "Transmission Lines",
+    55: "Transmission Line",
+    56: "Transmission Nodes",
+    57: "Process Node",
+}
+
+
+def resolve_leap_ids(
+    df: pd.DataFrame,
+    context,
+    *,
+    branch_id_col: str = "bid",
+    tech_col: str | None = "t",
+    fuel_leap_id_col: str | None = "leap_id",
+) -> pd.DataFrame:
+    """Enrich a DataFrame with LEAP branch/fuel names using a LeapAreaContext.
+
+    Adds columns:
+
+    - ``branch_full_name``  — if ``branch_id_col`` is present
+    - ``tech_branch_full_name`` — if ``tech_col`` is present and values
+      match the ``P<id>`` / ``D<id>`` / ``S<id>`` convention
+    - ``fuel_name``         — if ``fuel_leap_id_col`` is present
+
+    ``context`` must be a :class:`nemo_read.leap_area.LeapAreaContext`.
+    Columns that aren't present in ``df`` are silently skipped.
+    """
+    out = df.copy()
+    if branch_id_col and branch_id_col in out.columns:
+        out["branch_full_name"] = out[branch_id_col].map(
+            lambda bid: context.branch_full_name(int(bid)) if pd.notna(bid) else None
+        )
+    if tech_col and tech_col in out.columns:
+        def _lookup_tech(val):
+            if not isinstance(val, str) or len(val) < 2:
+                return None
+            if val[0] in "PDS" and val[1:].isdigit():
+                return context.branch_full_name(int(val[1:]))
+            return None
+        out["tech_branch_full_name"] = out[tech_col].map(_lookup_tech)
+    if fuel_leap_id_col and fuel_leap_id_col in out.columns:
+        out["fuel_name"] = out[fuel_leap_id_col].map(
+            lambda fid: context.fuel_name(int(fid)) if pd.notna(fid) else None
+        )
+    return out

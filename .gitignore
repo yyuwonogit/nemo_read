@@ -40,6 +40,15 @@ Thumbs.db
 # Scaffolded project output (if you scaffold into subdirectories)
 /scaffolded/
 
+# Throwaway probing / experimentation
+/scratch/
+
+# LEAP area exports (binary, large)
+*.leap
+
+# Per-area working artifacts kept out of the package repo
+/residual_files/
+
 # Parquet / temp exports
 *.parquet
 exports/
