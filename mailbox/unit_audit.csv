@@ -1,0 +1,28 @@
+branch,variable,your_unit,leap_unit,status,proposed_factor,confidence_stars,conversion_source,conversion_caveat
+Resources\Primary\Crude Oil,Additions to Reserves,Gbbl,Billion Barrel of Oil Equivalent,match,,0,,
+Resources\Primary\Coal Bituminous,Import Cost,USD/GJ real 2020 USD,2020 USD/Metric Tonne,mismatch,25.8,3,IPCC 2019 Refinement Vol.2 Ch.1 Table 1.2 — bituminous coal default NCV 25.8 GJ/tonne. Newcastle 6000 kcal grade ≈ 25.12 GJ/tonne (IEA Coal Information).,"Regional variance ±10% (Indonesian Tarahan slightly lower, Australian export grades higher). Pin per AMS if domestic LHV is known."
+Resources\Primary\Coal Bituminous,Production Cost,USD/GJ real 2020 USD,U.S. Dollar/Metric Tonne,mismatch,25.8,3,IPCC 2019 Refinement Vol.2 Ch.1 Table 1.2 — bituminous coal default NCV 25.8 GJ/tonne. Newcastle 6000 kcal grade ≈ 25.12 GJ/tonne (IEA Coal Information).,"Regional variance ±10% (Indonesian Tarahan slightly lower, Australian export grades higher). Pin per AMS if domestic LHV is known."
+Resources\Primary\Coal Sub bituminous,Import Cost,USD/GJ real 2020 USD,2020 USD/Metric Tonne,mismatch,18.9,3,IPCC 2019 Refinement Vol.2 Ch.1 Table 1.2 — sub-bituminous coal default NCV 18.9 GJ/tonne. Indonesian HBA grade typical.,±10% across HBA reference quality bands.
+Resources\Primary\Coal Sub bituminous,Production Cost,USD/GJ real 2020 USD,2020 USD/Metric Tonne,mismatch,18.9,3,IPCC 2019 Refinement Vol.2 Ch.1 Table 1.2 — sub-bituminous coal default NCV 18.9 GJ/tonne. Indonesian HBA grade typical.,±10% across HBA reference quality bands.
+Resources\Primary\Coal Lignite,Import Cost,USD/GJ real 2020 USD,2020 USD/Metric Tonne,mismatch,11.9,2,IPCC 2019 Refinement Vol.2 Ch.1 Table 1.2 — lignite default NCV 11.9 GJ/tonne.,"High regional variance (7–15 GJ/tonne): Mae Moh ≈ 9.7, Sumatran ≈ 11.5, Vietnamese ≈ 13+. Strongly recommend per-AMS override."
+Resources\Primary\Coal Lignite,Production Cost,USD/GJ real 2020 USD,U.S. Dollar/Metric Tonne,mismatch,11.9,2,IPCC 2019 Refinement Vol.2 Ch.1 Table 1.2 — lignite default NCV 11.9 GJ/tonne.,"High regional variance (7–15 GJ/tonne): Mae Moh ≈ 9.7, Sumatran ≈ 11.5, Vietnamese ≈ 13+. Strongly recommend per-AMS override."
+Resources\Primary\Natural Gas,Import Cost,USD/GJ real 2020 USD,2020 USD/Million BTU,mismatch,1.05506,5,"ISO 31-4: 1 BTU = 1055.06 J → 1 GJ = 0.94782 MMBtu, so 1 USD/GJ = 1.05506 USD/MMBtu.",
+Resources\Primary\Natural Gas,Production Cost,USD/GJ real 2020 USD,U.S. Dollar/Million BTU,mismatch,1.05506,5,"ISO 31-4: 1 BTU = 1055.06 J → 1 GJ = 0.94782 MMBtu, so 1 USD/GJ = 1.05506 USD/MMBtu.",
+Resources\Primary\Crude Oil,Import Cost,USD/bbl real 2020 USD,2020 USD/Barrel,match,,0,,
+Resources\Secondary\Gasoline,Import Cost,USD/100L real 2020 USD,2020 USD/Barrel,mismatch,1.5899,5,NIST Handbook 44: 1 US bbl = 158.987 L.,
+Resources\Secondary\Diesel,Import Cost,USD/100L real 2020 USD,2020 USD/Barrel,mismatch,1.5899,5,NIST Handbook 44: 1 US bbl = 158.987 L.,
+Resources\Secondary\Kerosene,Import Cost,USD/100L real 2020 USD,2020 USD/Barrel,mismatch,1.5899,5,NIST Handbook 44: 1 US bbl = 158.987 L.,
+Resources\Secondary\Residual Fuel Oil,Import Cost,USD/100L real 2020 USD,2020 USD/Barrel,mismatch,1.5899,5,NIST Handbook 44: 1 US bbl = 158.987 L.,
+Resources\Primary\Crude Oil,Export Benefit,(formula refers to Import Cost; unit inherited),2020 USD/Metric Tonne,formula_reference,,0,,
+Resources\Secondary\Gasoline,Export Benefit,(formula refers to Import Cost; unit inherited),2020 USD/Metric Tonne,formula_reference,,0,,
+Resources\Secondary\Diesel,Export Benefit,(formula refers to Import Cost; unit inherited),2020 USD/Metric Tonne,formula_reference,,0,,
+Resources\Secondary\Kerosene,Export Benefit,(formula refers to Import Cost; unit inherited),2020 USD/Metric Tonne,formula_reference,,0,,
+Resources\Secondary\Residual Fuel Oil,Export Benefit,(formula refers to Import Cost; unit inherited),2020 USD/Metric Tonne,formula_reference,,0,,
+Resources\Secondary\Gasoline,Maximum Production,PJ/year,Gigajoule,mismatch,1000000.0,5,SI: 1 PJ = 1e6 GJ. (Maximum Production for Secondary fuels in LEAP is annual energy in GJ.),
+Resources\Secondary\Diesel,Maximum Production,PJ/year,Gigajoule,mismatch,1000000.0,5,SI: 1 PJ = 1e6 GJ. (Maximum Production for Secondary fuels in LEAP is annual energy in GJ.),
+Resources\Secondary\Kerosene,Maximum Production,PJ/year,Gigajoule,mismatch,1000000.0,5,SI: 1 PJ = 1e6 GJ. (Maximum Production for Secondary fuels in LEAP is annual energy in GJ.),
+Resources\Secondary\LPG,Maximum Production,PJ/year,Gigajoule,mismatch,1000000.0,5,SI: 1 PJ = 1e6 GJ. (Maximum Production for Secondary fuels in LEAP is annual energy in GJ.),
+Resources\Secondary\Residual Fuel Oil,Maximum Production,PJ/year,Gigajoule,mismatch,1000000.0,5,SI: 1 PJ = 1e6 GJ. (Maximum Production for Secondary fuels in LEAP is annual energy in GJ.),
+Resources\Primary\Crude Oil,Maximum Production,PJ/year,Petajoule,match,,0,,
+Resources\Primary\Crude Oil,Production Cost,USD/bbl real 2020 USD,2020 USD/Barrel,match,,0,,
+Transformation\Oil Refining\Processes\All Refineries,Exogenous Capacity,PJ/year,Thousand Gigajoules/Year,mismatch,1000.0,5,SI: 1 PJ = 1e6 GJ; LEAP 'Thousand Gigajoules' = 1e3 GJ → 1 PJ = 1000 thousand-GJ.,

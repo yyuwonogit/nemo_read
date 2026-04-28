@@ -70,7 +70,12 @@ from .leap_conventions import (
 
 from .leap_area import (
     CustomConstraintsDoc, LeapAreaContext,
+    apply_audit_conversions, audit_canonical_units,
     read_custom_constraints, read_demand, read_nemo_cfg, where_in_leap,
+)
+
+from .unit_conversions import (
+    ConversionProposal, list_known_conversions, propose_conversion,
 )
 
 from .validate import validate_scenario, ValidationIssue, ValidationReport
@@ -118,7 +123,9 @@ __all__ = [
     "classify_technology_id", "extract_leap_ids", "fuels_with_leap_ids",
     "resolve_leap_ids", "technology_kinds", "units_for",
     "CustomConstraintsDoc", "LeapAreaContext",
+    "apply_audit_conversions", "audit_canonical_units",
     "read_custom_constraints", "read_demand", "read_nemo_cfg", "where_in_leap",
+    "ConversionProposal", "list_known_conversions", "propose_conversion",
     "validate_scenario", "ValidationIssue", "ValidationReport",
     "check_scenario", "find_infeasibilities",
     "DIMENSION_ABBREVIATIONS", "DIMENSIONS", "LEAP_SOURCE_MAP", "LeapSource",
@@ -131,4 +138,4 @@ __all__ = [
     "scaffold_package",
 ]
 
-__version__ = "0.6.2"
+__version__ = "0.6.3"

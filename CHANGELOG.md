@@ -1,5 +1,52 @@
 # Changelog
 
+## [0.6.3] — LEAP-side unit audit + defensible conversion proposals
+
+### Added
+- **`nemo_read/leap_units.py`** + **`nemo_read-leap-units` CLI** —
+  separate probe that captures `Variable.DataUnitText` per (branch,
+  variable) pair via LEAP COM and writes `branch_variable_units.csv`
+  into the export directory. Two scopes:
+  - `--canonical FILE` — only the pairs in the supplied CSV (fast, seconds)
+  - `--all` (default) — every input variable on every branch (~20–40 min)
+  Discovered via early-binding introspection: LEAP exposes the unit
+  string via `DataUnitText` (the more obvious `Unit` is AttributeError).
+- **`LeapAreaContext.branch_units`** field — auto-loads
+  `branch_variable_units.csv` when `LeapAreaContext.from_export()` runs.
+- **`audit_canonical_units(canonical_df, ctx, propose=True)`** — extended
+  to add `proposed_factor`, `confidence_stars`, `conversion_source`,
+  `conversion_caveat` columns when status is `mismatch`. Also detects
+  `[unit]`-specifier formula expressions (e.g.
+  `Import Cost[2020 USD/bbl] * 0.97`) and marks them
+  `formula_reference` rather than mismatch.
+- **`nemo_read/unit_conversions.py`** — defensible conversion registry
+  (`UNIT_CONVERSIONS`) with citations and 5★ confidence ratings.
+  Covers SI/NIST/ISO conversions (PJ↔GJ, BTU↔J, bbl↔L), IPCC default
+  coal LHVs (bituminous 25.8, sub-bit 18.9, lignite 11.9 GJ/t), and
+  crude oil API gravity. New `propose_conversion(from, to, fuel)` and
+  `list_known_conversions()` public functions.
+- **`apply_audit_conversions(canonical_df, audit_df, overrides=None)`** —
+  produces a sibling DataFrame with values rewritten in LEAP-native
+  units. Accepts per-row overrides keyed by `(branch, variable)` or
+  `(branch, variable, ams)`. Unresolved mismatches (no proposal AND no
+  override) are flagged in a new `unit_audit` column.
+- **`mailbox/run_workflow.py`** — fixed 4-step pipeline (build canonical
+  → probe units → audit → apply conversions). `--skip-probe` reuses
+  the latest cached units file.
+- **`mailbox/inject_to_leap.py`** — refuses to push `canonical_leap_inputs.csv`
+  (source units) when `canonical_leap_native.csv` (LEAP units) exists.
+  Override with `--ignore-units` or `--already-converted`.
+- **`docs/unit_conversions.md`** — full reference table with citations,
+  rubric, and override syntax.
+- 11 new tests in `test_unit_conversions.py`. Full suite: 77 passing.
+
+### Validated end-to-end
+Against AEO9 RAS (`aeo9_v0.32 4` area) with 9 mailbox source CSVs:
+- 27 unique (branch, variable) pairs probed for units
+- 4 match, 5 formula_reference, 18 mismatch — all 18 with auto-proposals
+- 229 canonical rows → 180 converted to LEAP-native units, 0 unresolved
+- Injector accepts the LEAP-native CSV in dry-run mode
+
 ## [0.6.2] — Comprehensive single-shot LEAP probe + readability rule
 
 ### Added

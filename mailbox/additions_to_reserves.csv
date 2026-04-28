@@ -1,0 +1,11 @@
+ams,branch,variable,year_anchor,expression,source,note
+Brunei,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 1.1),EI Statistical Review 2024 / Ministry of Energy Brunei,Updated from 2022 temp 1.0 Gbbl
+Cambodia,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 0),No commercial production,
+Indonesia,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 2.25),EI Statistical Review 2024 / SKK Migas,Updated from 2019 value 4.17 Gbbl (over-stated); reserves have declined with steady production and limited discoveries
+Laos,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 0),Landlocked no upstream,
+Malaysia,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 2.7),EI Statistical Review 2024 / PETRONAS Activity Outlook,Revised from 2019 value 2.7 — retained same order of magnitude
+Myanmar,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 0.07),EI Statistical Review 2024 (low confidence post-2021),Updated from 2022 temp 1.0 Gbbl (over-stated); lower confidence due to MOGE disclosure degradation
+Philippines,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 0.1),DOE Philippines / EI Statistical Review 2024,Updated from 0; Malampaya condensate + small onshore
+Singapore,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 0),Trading/refining hub no upstream,
+Thailand,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 0.3),EI Statistical Review 2024 / DMF Thailand,Retained from 2019 value — consistent
+Vietnam,Resources\Primary\Crude Oil,Additions to Reserves,2024,Data(2024; 4.4),EI Statistical Review 2024 / OPEC ASB 2024 nominal,Retained nominal 4.4 Gbbl; industry analyst consensus (Wood Mac / Rystad) suggests 2.5-3.5 Gbbl more realistic — flagged for expert review

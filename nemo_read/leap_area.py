@@ -121,6 +121,7 @@ class LeapAreaContext:
     nemocc_sources: pd.DataFrame  # table_name, branch_id, branch_full_name, expression_head
     branch_expressions: pd.DataFrame  # branch_id, variable_name, scenario_name, expression
     branch_values: pd.DataFrame   # branch_id, variable_name, scenario_id, scenario_name, region_id, year, value
+    branch_units: pd.DataFrame    # branch_id, branch_full_name, variable_name, data_unit_text, data_unit_id
     nemo_cfg: dict[str, Any] | None
     custom_constraints: CustomConstraintsDoc | None
     manifest: dict[str, Any]
@@ -177,6 +178,10 @@ class LeapAreaContext:
             branch_values=_load_csv("branch_variable_values.csv", [
                 "branch_id", "variable_name", "scenario_id", "scenario_name",
                 "region_id", "year", "value",
+            ]),
+            branch_units=_load_csv("branch_variable_units.csv", [
+                "branch_id", "branch_full_name", "variable_name",
+                "data_unit_text", "data_unit_id",
             ]),
             nemo_cfg=nemo_cfg,
             custom_constraints=cc,
@@ -361,6 +366,288 @@ def _find_process_node(
     if node_row.empty:
         return None
     return int(node_row.iloc[0]["id"])
+
+
+def audit_canonical_units(
+    canonical_df: pd.DataFrame,
+    context: LeapAreaContext,
+    *,
+    propose: bool = True,
+) -> pd.DataFrame:
+    """Compare a canonical injection CSV's documented units against LEAP's
+    actual variable units (from ``context.branch_units``).
+
+    The canonical CSV must have ``branch``, ``variable``, ``unit`` columns
+    (the format produced by mailbox/build_canonical.py). When ``propose=True``
+    (default), a fuel column is also looked at for fuel-specific conversion
+    proposals from :mod:`nemo_read.unit_conversions`.
+
+    Returns a DataFrame with one row per unique (branch, variable[, fuel])
+    triple. Always includes ``status``:
+
+    - ``"match"``       — unit families align; no conversion needed
+    - ``"likely_match"`` — close keywords; visual review recommended
+    - ``"mismatch"``    — different unit families; values need conversion
+    - ``"no_leap_unit"`` — branch_units doesn't carry this pair
+
+    When ``propose=True`` and status is ``"mismatch"``, also adds:
+
+    - ``proposed_factor`` (float or NaN if no proposal exists)
+    - ``confidence_stars`` (1–5 integer or 0 if no proposal)
+    - ``conversion_source`` (citation string)
+    - ``conversion_caveat`` (optional warning)
+    """
+    if context.branch_units.empty:
+        raise ValueError(
+            "context.branch_units is empty — run nemo_read-leap-units first "
+            "(it writes branch_variable_units.csv into the export dir)"
+        )
+
+    pairs = (canonical_df[["branch", "variable", "unit"]]
+             .drop_duplicates(["branch", "variable"]))
+    units_idx = {
+        (row["branch_full_name"], row["variable_name"]): row["data_unit_text"]
+        for _, row in context.branch_units.iterrows()
+    }
+
+    def _normalise(s: str) -> str:
+        s = str(s or "").lower()
+        return (s.replace("u.s. dollar", "usd")
+                  .replace("united states dollar", "usd")
+                  .replace("2020 usd", "usd")
+                  .replace("billion barrel of oil equivalent", "gbbl")
+                  .replace("barrel", "bbl")
+                  .replace("metric tonne", "tonne")
+                  .replace("million btu", "mmbtu")
+                  .replace("petajoule", "pj")
+                  .replace("thousand gigajoules", "tgj")
+                  .replace("thousand gigajoule", "tgj")
+                  .replace("gigajoules", "gj")
+                  .replace("gigajoule", "gj")
+                  .replace("megawatt", "mw")
+                  .replace("100l", "hundredliter"))
+
+    def _denominator(s: str) -> str:
+        return s.split("/", 1)[1].strip().split()[0] if "/" in s else ""
+
+    def _numerator(s: str) -> str:
+        head = s.split("/", 1)[0]
+        return head.strip().split()[-1] if head.strip() else ""
+
+    # Known unit-family equivalents (no conversion needed)
+    _SAME_FAMILY = {
+        "bbl": {"bbl"},
+        "tonne": {"tonne"},
+        "gj": {"gj"},
+        "mmbtu": {"mmbtu"},
+        "pj": {"pj"},
+        "year": {"year", "yr"},
+        "gbbl": {"gbbl"},
+        "tgj": {"tgj"},
+        "mw": {"mw"},
+        "kw": {"kw"},
+        "hundredliter": {"hundredliter"},
+    }
+
+    def _families_match(a: str, b: str) -> bool:
+        for fam in _SAME_FAMILY.values():
+            if a in fam and b in fam:
+                return True
+        return False
+
+    def _classify(your_unit: str, leap_unit: str) -> str:
+        if not leap_unit or leap_unit.startswith("<"):
+            return "no_leap_unit"
+        y, l = _normalise(your_unit), _normalise(leap_unit)
+        y_num, y_den = _numerator(y), _denominator(y)
+        l_num, l_den = _numerator(l), _denominator(l)
+
+        # Reserves-style (no slash on either side)
+        if "/" not in y and "/" not in l:
+            if _families_match(y.split()[-1] if y.split() else "",
+                               l.split()[-1] if l.split() else ""):
+                return "match"
+            # Petajoule alone vs PJ/year: LEAP shows Petajoule for annual flows
+            if "pj" in y and "pj" in l:
+                return "match"
+        if "/" not in l and ("pj" in y and "pj" in l):
+            return "match"  # "PJ/year" vs "Petajoule" — LEAP convention
+
+        # Both have / — compare numerator AND denominator family
+        if y_num and l_num and y_den and l_den:
+            num_ok = _families_match(y_num, l_num) or (y_num == "usd" and l_num == "usd")
+            den_ok = _families_match(y_den, l_den)
+            if num_ok and den_ok:
+                return "match"
+            if num_ok and not den_ok:
+                return "mismatch"          # same numerator, different denominator → conversion needed
+            if not num_ok and den_ok:
+                return "mismatch"
+            return "mismatch"
+
+        # Token overlap as last resort — but only call it likely_match
+        ytok = set(y.replace("/", " ").split())
+        ltok = set(l.replace("/", " ").split())
+        if ytok & ltok:
+            return "likely_match"
+        return "mismatch"
+
+    # When proposing conversions we also need the fuel column from canonical.
+    fuel_lookup = {}
+    if propose and "fuel" in canonical_df.columns:
+        for _, r in canonical_df.iterrows():
+            fuel_lookup[(r["branch"], r["variable"])] = r.get("fuel", "")
+
+    from .unit_conversions import propose_conversion
+
+    # If the canonical row's expression already uses LEAP's `[unit]` specifier
+    # (formula reference like `Import Cost[2020 USD/bbl] * 0.97`), LEAP
+    # converts internally and we should not flag it as a unit mismatch.
+    formula_pairs = set()
+    if "expression" in canonical_df.columns:
+        for _, cr in canonical_df.iterrows():
+            expr = str(cr.get("expression", ""))
+            if "[" in expr and "]" in expr:
+                formula_pairs.add((cr["branch"], cr["variable"]))
+
+    out_rows = []
+    for _, r in pairs.iterrows():
+        leap_unit = units_idx.get((r["branch"], r["variable"]), "")
+        if (r["branch"], r["variable"]) in formula_pairs:
+            status = "formula_reference"
+        else:
+            status = _classify(r["unit"], leap_unit)
+        row = {
+            "branch": r["branch"],
+            "variable": r["variable"],
+            "your_unit": r["unit"],
+            "leap_unit": leap_unit,
+            "status": status,
+        }
+        if propose and status == "mismatch":
+            fuel = fuel_lookup.get((r["branch"], r["variable"]), None)
+            prop = propose_conversion(r["unit"], leap_unit, fuel=fuel)
+            if prop is not None:
+                row["proposed_factor"] = prop.factor
+                row["confidence_stars"] = prop.confidence_stars
+                row["conversion_source"] = prop.source
+                row["conversion_caveat"] = prop.caveat
+            else:
+                row["proposed_factor"] = float("nan")
+                row["confidence_stars"] = 0
+                row["conversion_source"] = "(no proposal in registry — add to nemo_read.unit_conversions or supply manual override)"
+                row["conversion_caveat"] = ""
+        else:
+            row["proposed_factor"] = float("nan")
+            row["confidence_stars"] = 0
+            row["conversion_source"] = ""
+            row["conversion_caveat"] = ""
+        out_rows.append(row)
+    return pd.DataFrame(out_rows)
+
+
+def _rewrite_expression_value(expr: str, factor: float) -> str:
+    """Multiply every numeric literal in an Interp(...) / Data(...) / scalar
+    expression by ``factor``. Formula-style expressions (containing variable
+    references) are returned unchanged with no rewrite — caller should warn.
+    """
+    import re
+    expr = (expr or "").strip()
+    # Pure scalar?
+    try:
+        return f"{float(expr) * factor:g}"
+    except ValueError:
+        pass
+    # Interp / Data call
+    m = re.match(r"^(Interp|Data)\s*\((.*)\)\s*$", expr, flags=re.DOTALL)
+    if m:
+        funcname = m.group(1)
+        body = m.group(2)
+        parts = [p.strip() for p in body.split(";")]
+        out = []
+        for i, tok in enumerate(parts):
+            # alternating year; value
+            if i % 2 == 1:
+                try:
+                    out.append(f"{float(tok) * factor:g}")
+                except ValueError:
+                    out.append(tok)
+            else:
+                out.append(tok)
+        return f"{funcname}({'; '.join(out)})"
+    # Formula or unknown — leave as-is
+    return expr
+
+
+def apply_audit_conversions(
+    canonical_df: pd.DataFrame,
+    audit_df: pd.DataFrame,
+    overrides: dict | None = None,
+) -> pd.DataFrame:
+    """Produce a copy of ``canonical_df`` with mismatched-unit values
+    converted to LEAP-native units, using the proposed factors from
+    ``audit_df`` (and any per-row ``overrides`` the caller supplies).
+
+    ``overrides`` keys are tuples accepted in two shapes:
+
+    - ``(branch, variable)`` — applies regardless of fuel/AMS
+    - ``(branch, variable, ams)`` — applies only when the canonical row's
+      ``ams`` matches; falls back to the (branch, variable) entry if no
+      AMS-specific override is found
+
+    Override values are dicts with at least ``factor``; optional ``source``
+    and ``confidence_stars`` are propagated into the new ``unit_audit``
+    column for traceability.
+
+    The output DataFrame has the same columns as ``canonical_df`` plus:
+
+    - ``unit`` is updated to the LEAP-native unit string for converted rows
+    - ``unit_audit`` records ``"factor=X (source=...) [stars=N]"`` for
+      converted rows or ``""`` for matched / unchanged rows
+    """
+    overrides = overrides or {}
+    audit_idx = {(r["branch"], r["variable"]): r
+                 for _, r in audit_df.iterrows()}
+    out = canonical_df.copy()
+    out["unit_audit"] = ""
+
+    def _override(branch: str, variable: str, ams: str) -> dict | None:
+        return (overrides.get((branch, variable, ams))
+                or overrides.get((branch, variable)))
+
+    for i, row in out.iterrows():
+        branch = row["branch"]
+        variable = row["variable"]
+        ams = row.get("ams", "")
+        audit_row = audit_idx.get((branch, variable))
+        if audit_row is None:
+            continue
+        if audit_row["status"] != "mismatch":
+            continue
+
+        ovr = _override(branch, variable, ams)
+        if ovr is not None:
+            factor = float(ovr["factor"])
+            source = ovr.get("source", "(user override)")
+            stars = ovr.get("confidence_stars", "?")
+        else:
+            factor = audit_row.get("proposed_factor")
+            if factor is None or (isinstance(factor, float) and factor != factor):  # NaN
+                # No proposal and no override — leave row alone, mark for attention
+                out.at[i, "unit_audit"] = (
+                    "MISMATCH unresolved — supply override in apply_audit_conversions"
+                )
+                continue
+            source = audit_row.get("conversion_source", "")
+            stars = audit_row.get("confidence_stars", "?")
+
+        new_expr = _rewrite_expression_value(row["expression"], factor)
+        out.at[i, "expression"] = new_expr
+        out.at[i, "unit"] = audit_row["leap_unit"]
+        out.at[i, "unit_audit"] = (
+            f"factor={factor:g} stars={stars} source={source[:80]}"
+        )
+    return out
 
 
 def read_demand(
