@@ -106,9 +106,17 @@ The `nemo_read-leap-export` CLI walks the entire LEAP area through the COM API a
 - Repository: https://github.com/yyuwonogit/nemo_read
 - Wheel + sdist built; PyPI publication pending
 
+## Gotchas (real-session learnings)
+
+- **Multi-area open**: when LEAP has more than one area open, setting `leap.ActiveScenario` over COM can jump to a different open area if it has a scenario with the same name. The injector auto-locks to the ActiveArea at start (since 0.6.4) and aborts if it shifts. **Best practice: keep only the target area open during a push.**
+- **Cosmetic LEAP popups**: setting an Expression on a branch where the variable isn't visible for a particular region (e.g. Cambodia → Refinery Capacity) triggers an informational LEAP popup. The COM call still succeeds; just dismiss the dialog. The script reports `[OK]` either way.
+- **Branch count fluctuates by ±1**: LEAP's `Branches.Count` can vary between calls. The tree-cache (since 0.6.4) tolerates ±5 to avoid unnecessary 3-minute rebuilds.
+- **Result-variable Expression access fires modals**: reading `Variable.Expression` on a *result* variable triggers a "Expressions are not used for result variables" dialog. The package uses a names-first iteration pattern to avoid touching `.Expression` on result variables. If you see one, the script's still alive — dismiss it.
+
 ## More
 
 - **Cookbook**: `docs/cookbook.md` — 17 recipes, from first-look inventory to demand-by-sector
 - **LEAP export reference**: `docs/leap_export.md` — the export directory format + pairing convention
+- **Unit conversions**: `docs/unit_conversions.md` — defensible conversion factors with citations + 5★ confidence rubric
 - **Schema**: `nemo_read.PARAMETERS`, `nemo_read.RESULT_VARIABLES`, `nemo_read.LEAP_SOURCE_MAP`
 - **Wishlist + open work**: `docs/leap_area_wishlist.md`

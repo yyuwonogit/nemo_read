@@ -64,8 +64,15 @@ class LeapTreeCache:
         if self.cache_file and self.cache_file.exists():
             try:
                 data = json.loads(self.cache_file.read_text(encoding="utf-8"))
-                if data.get("area") == self.leap.ActiveArea.Name and \
-                   data.get("count") == self.branches.Count:
+                # Cache keyed on area name only (since 0.6.4). LEAP's
+                # Branches.Count occasionally fluctuates by 1 between calls
+                # — exact-equality on count caused unnecessary 3-minute
+                # rebuilds. Tolerate ±5 as a sanity bound.
+                cached_area = data.get("area")
+                cached_count = int(data.get("count", 0))
+                live_area = self.leap.ActiveArea.Name
+                live_count = self.branches.Count
+                if cached_area == live_area and abs(cached_count - live_count) <= 5:
                     self._id_to_idx = {int(k): int(v) for k, v in data["id_to_idx"].items()}
                     self._fullname_to_idx = dict(data["fullname_to_idx"])
                     return

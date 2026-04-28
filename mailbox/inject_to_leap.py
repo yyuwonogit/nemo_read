@@ -64,6 +64,19 @@ def parse_args(argv=None):
     p.add_argument("--already-converted", action="store_true",
                    help="Mark the CSV as already converted to LEAP-native units. "
                         "Bypasses the 'use canonical_leap_native.csv' check.")
+    p.add_argument("--expect-area",
+                   help="Abort if leap.ActiveArea.Name doesn't match this. "
+                        "Default behaviour (since 0.6.4) auto-locks to whatever "
+                        "ActiveArea is at script start; pass this only to "
+                        "require a specific name.")
+    p.add_argument("--no-area-lock", action="store_true",
+                   help="Disable the auto-lock to ActiveArea at script start. "
+                        "Use only when you explicitly intend to allow LEAP to "
+                        "switch areas during the run.")
+    p.add_argument("--no-scenario-switch", action="store_true",
+                   help="Don't set leap.ActiveScenario. Use when you've already "
+                        "set it manually in the LEAP UI (avoids cross-area "
+                        "switch when LEAP has multiple areas open).")
     return p.parse_args(argv)
 
 
@@ -127,13 +140,44 @@ def main(argv=None) -> int:
         print("[inject] DRY RUN — LEAP state will not be modified")
 
     leap = dispatch_leap()
-    print(f"[inject] Active area:     {leap.ActiveArea.Name!r}")
+    initial_area = leap.ActiveArea.Name
+    print(f"[inject] Active area:     {initial_area!r}")
     print(f"[inject] Active scenario: {leap.ActiveScenario.Name!r}")
 
-    if args.scenario and leap.ActiveScenario.Name != args.scenario:
+    # Auto-lock to whatever ActiveArea is at start (since 0.6.4).
+    # Aborts if anything later flips ActiveArea (e.g. cross-area
+    # ActiveScenario switch). User can disable via --no-area-lock or
+    # override the lock target via --expect-area.
+    expected_area = args.expect_area or initial_area
+    if not args.no_area_lock and expected_area and initial_area != expected_area:
+        print(f"ERROR: ActiveArea is {initial_area!r}, expected "
+              f"{expected_area!r}. Open the right area in LEAP UI first.",
+              file=sys.stderr)
+        return 2
+    if args.no_area_lock:
+        print(f"[inject] --no-area-lock set; ActiveArea changes will not abort the run")
+    elif expected_area:
+        print(f"[inject] area-locked to {expected_area!r}")
+
+    if args.scenario and not args.no_scenario_switch and \
+       leap.ActiveScenario.Name != args.scenario:
         if not args.dry_run:
             try:
                 leap.ActiveScenario = args.scenario
+                # CRITICAL CHECK: setting ActiveScenario by name can cause LEAP
+                # to switch to a different open area if multiple areas have a
+                # scenario with the same name. Catch that before any push.
+                after_area = leap.ActiveArea.Name
+                if not args.no_area_lock and expected_area \
+                        and after_area != expected_area:
+                    print(f"ERROR: setting ActiveScenario={args.scenario!r} "
+                          f"caused LEAP to switch areas: was {expected_area!r}, "
+                          f"now {after_area!r}. Close the other open areas in "
+                          f"LEAP UI (keep only the target area), set the "
+                          f"scenario manually in the UI, and re-run with "
+                          f"--no-scenario-switch.",
+                          file=sys.stderr)
+                    return 3
                 print(f"[inject] switched ActiveScenario -> "
                       f"{leap.ActiveScenario.Name!r}")
             except Exception as exc:
@@ -143,6 +187,9 @@ def main(argv=None) -> int:
         else:
             print(f"[inject] (dry-run) would switch ActiveScenario -> "
                   f"{args.scenario!r}")
+    elif args.no_scenario_switch:
+        print(f"[inject] --no-scenario-switch set; using current scenario "
+              f"{leap.ActiveScenario.Name!r}")
 
     # Build branch index. Reuses any cache file the export wrote earlier.
     cache_file = (Path(leap.ActiveArea.Directory)

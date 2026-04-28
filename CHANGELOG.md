@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.6.4] — Defensive defaults from real-session learnings
+
+After validating the audit→inject pipeline end-to-end against `aeo9_v0.32`
+(458 successful pushes across Current Accounts + RAS), this release folds
+the lessons into safer defaults.
+
+### Changed (behaviour)
+- **Injector now auto-locks to ActiveArea at script start.** When LEAP has
+  multiple areas open and a cross-area scenario-name collision occurs
+  (e.g. setting `ActiveScenario = "Current Accounts"` flips LEAP to a
+  different area that also has that scenario), the injector aborts before
+  any push. Previously this required passing `--expect-area NAME`
+  explicitly. Disable via `--no-area-lock` if you really intend to allow
+  area shifts during a run.
+- **Tree-cache now keyed on area name only** with ±5 tolerance on
+  `Branches.Count`. LEAP's count occasionally fluctuates by 1 between
+  calls; the prior exact-equality check forced an unnecessary 3-minute
+  rebuild on every reconnect.
+- **`mailbox/run_workflow.py`** now emits the recommended inject command
+  with `--no-scenario-switch` and `--expect-area "<ActiveArea>"`
+  pre-populated, nudging users toward the safe pattern.
+
+### Added
+- `--no-area-lock` flag on `inject_to_leap.py` for the rare case where
+  area-switching is intentional.
+- `BROCHURE.md` "Gotchas (real-session learnings)" section covering the
+  multi-area-open issue, cosmetic popups, branch count fluctuation, and
+  result-variable Expression modals.
+
+### Notes
+- All 0.6.3 functionality is preserved; only default behaviour and UX
+  changed. No new dependencies, no public API breakage.
+
 ## [0.6.3] — LEAP-side unit audit + defensible conversion proposals
 
 ### Added

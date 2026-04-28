@@ -94,14 +94,18 @@ def step2_probe_units(canonical_csv: Path, log, skip: bool = False) -> Path:
     if not skip:
         try:
             leap = dispatch_leap()
-            export_dir = (Path(leap.ActiveArea.Directory)
-                          / "NEMO_25.leap_export")
+            area_name = leap.ActiveArea.Name
+            if not area_name:
+                raise RuntimeError(
+                    "LEAP has no ActiveArea loaded — open the target area "
+                    "(File → Open Area) before running the workflow"
+                )
+            log(f"   ActiveArea = {area_name!r}")
         except Exception as exc:
             log(f"   could not connect to LEAP ({exc}); skipping probe")
             skip = True
 
     if skip:
-        # Look in known places for the latest units CSV
         candidates = list(Path.home().glob(
             "Documents/LEAP Areas/*/NEMO_25.leap_export/branch_variable_units.csv"
         ))
@@ -123,9 +127,22 @@ def step2_probe_units(canonical_csv: Path, log, skip: bool = False) -> Path:
     if res.returncode != 0:
         log(res.stderr)
         raise RuntimeError("nemo_read-leap-units failed")
-    units_csv = export_dir / "branch_variable_units.csv"
-    if not units_csv.exists():
-        raise RuntimeError(f"step 2 didn't produce {units_csv}")
+    # Parse the actual output path from stdout — more reliable than
+    # re-computing it (the parent's dispatch state may differ from the
+    # subprocess's at the moment of writing).
+    units_csv = None
+    for line in res.stdout.splitlines():
+        line = line.strip()
+        if "wrote" in line and "branch_variable_units.csv" in line:
+            # Pattern: "[leap-units] wrote <path>  (N unit rows)"
+            after = line.split("wrote", 1)[1].strip()
+            path_str = after.rsplit("(", 1)[0].strip()
+            units_csv = Path(path_str)
+            break
+    if units_csv is None or not units_csv.exists():
+        raise RuntimeError(
+            "could not locate branch_variable_units.csv from subprocess output"
+        )
     log(f"   wrote {units_csv}")
     return units_csv
 
@@ -180,14 +197,30 @@ def main(argv=None) -> int:
     _, audit = step3_audit(canonical_csv, units_csv, log)
     native_csv = step4_apply(canonical_csv, audit, log)
 
+    # Snapshot ActiveArea so we can recommend the safe inject command.
+    try:
+        from nemo_read._leap_com import dispatch_leap
+        leap_now = dispatch_leap()
+        active_area = leap_now.ActiveArea.Name or ""
+    except Exception:
+        active_area = ""
+
     print()
     print(f"WORKFLOW DONE")
     print(f"  source-unit CSV:   {canonical_csv.relative_to(REPO_ROOT)}")
     print(f"  audit:             {(MAILBOX/'unit_audit.csv').relative_to(REPO_ROOT)}")
     print(f"  LEAP-native CSV:   {native_csv.relative_to(REPO_ROOT)}")
     print()
-    print(f"Next: python mailbox/inject_to_leap.py "
-          f"--csv {native_csv.relative_to(REPO_ROOT)} --dry-run")
+    print(f"Recommended inject command (set scenario manually in LEAP UI first):")
+    cmd = (f"  python mailbox/inject_to_leap.py "
+           f"--csv {native_csv.relative_to(REPO_ROOT)} "
+           f"--no-scenario-switch")
+    if active_area:
+        cmd += f" --expect-area \"{active_area}\""
+    cmd += " --dry-run"
+    print(cmd)
+    print()
+    print(f"Drop --dry-run when you're satisfied with the dry-run output.")
     return 0
 
 
