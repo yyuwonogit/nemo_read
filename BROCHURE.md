@@ -96,13 +96,15 @@ The `nemo_read-leap-export` CLI walks the entire LEAP area through the COM API a
 
 ### Other utilities
 - `nemo_read-scaffold` CLI — generates a `src`-layout project package wrapping the reader for a research repo (registry, loaders, Parquet cache, CLI, tests)
+- `nemo_read-list-branch-vars` CLI (since 0.6.5) — single-branch variable enumeration via COM (names-only, no result-var modal popups). Targeted alternative to `nemo_read-leap-units --all` when you want to see what variables one specific branch type exposes.
 - `slack_technology_ids()` — auto-detects "Unserved" / "Unmet Load" pseudo-processes
 - `units_for(variable_name)` — labels every parameter and result with its LEAP-NEMO unit (PJ / GW / M$ / t)
 
-## Status — v0.6.2
+## Status — v0.6.5
 
 - 66 unit tests passing
-- End-to-end validated against a real 86 MB AEO9 RAS scenario (5066 branches, 12 regions)
+- End-to-end validated against multiple AEO9 scenarios — `aeo9_v0.32` (458 rows, 0.6.4) and `aeo9_v0.33_bak` (809 rows across bioenergy + fossil mailboxes, 0.6.5) — with 0 unresolved unit mismatches at injection time
+- Documented author-iteration workflow + build-adapter filter pattern in [docs/leap_export.md](docs/leap_export.md) for recurring per-domain CSV authoring cycles
 - Repository: https://github.com/yyuwonogit/nemo_read
 - Wheel + sdist built; PyPI publication pending
 

@@ -1,5 +1,71 @@
 # Changelog
 
+## [0.6.5] — Bioenergy single-cap design + author-iteration workflow
+
+End-to-end mailbox cycle validated against `aeo9_v0.33_bak` — bioenergy
+(580 rows) and fossil (229 rows) injected clean, **0 unresolved + 0
+no_leap_unit** in the audit. Folds the recurring-cycle patterns into
+the package and records the bioenergy domain's single-cap migration.
+
+### Added
+- **`nemo_read-list-branch-vars` CLI** ([nemo_read/leap_branch_inspect.py](nemo_read/leap_branch_inspect.py)) —
+  on-demand single-branch variable enumeration via existing
+  `dispatch_leap` + `LeapTreeCache` + `iterate_variables_safe(fetch_expression=False)`.
+  Names-only probe (no `.Expression` or `.DataUnitText` touch), so no
+  result-variable modal popups can fire. Targeted alternative to
+  `--all` for "what variables does this specific branch expose?"
+  questions; ~15 sec on AEO9-sized trees vs 20–40 min for a full walk.
+  Fallback hints when the requested FullName isn't found.
+- **POME-oil LHV registry entry** in
+  [nemo_read/unit_conversions.py](nemo_read/unit_conversions.py) —
+  `(USD/t POME oil → USD/Tonnes of Oil Equivalent)` factor 0.8718, ★★
+  confidence (LHV ≈ 36.5 GJ/t per Lam et al. 2009 / Sukiran et al.
+  2017 mid-range; empirically confirmed by the AEO9 bioenergy author
+  2026-04-29). Distinct from the existing `usd/t pome wet → usd/tonne`
+  entry — POME-oil is the recovered oil fraction, ~36 GJ/t; POME-wet
+  is the dilute effluent stream, ~1 GJ/t.
+
+### Documented (new sections in [docs/leap_export.md](docs/leap_export.md))
+- **Author-iteration workflow** — the recurring
+  build_canonical → audit → unresolved → fix-at-source → re-audit →
+  inject loop, with the `[YYYY-MM-DD §section author-action applied]`
+  note-marker convention for cross-iteration traceability and the
+  spec-vs-reference doc split (operational `*_SPEC.md` for the
+  per-cycle truth, deep `*_GUIDE.md` for the technical reference).
+- **Build-adapter filter pattern** — `LEAP_MISSING_BRANCHES` +
+  `_is_deferred()` idiom for keeping rows in source CSV when the
+  LEAP-side branch is pending or the (branch, variable) placement is
+  deferred. Lets data be preserved for forward compatibility while
+  unblocking the audit/inject pipeline. Worked example in
+  [mailbox/bioenergy/build_canonical.py](mailbox/bioenergy/build_canonical.py).
+- **Single-branch variable enumeration** — `nemo_read-list-branch-vars`
+  reference, with positioning vs `nemo_read-leap-units --all`.
+
+### Bioenergy domain — single-cap migration (mailbox-side, but worth recording)
+- Two-tier (Cultivation Processes + `Resources\Primary\Arable|Perennial`
+  land caps) shelved in favour of single-cap design — only
+  `Resources\Primary\<Crop>:Maximum Production` caps the chain. Removed
+  the entire 145-row land tier; relocated 50 `Cultivation\Maximum
+  Capacity` values → `Resources\Primary\<Crop>:Maximum Production` and
+  50 `Cultivation\Variable OM Cost` → `Resources\Primary\<Crop>:Production
+  Cost`. 7 cycle-1 unit fixes applied (5 main-crop MaxProd × 1e6 to
+  Metric Tonne; Corn ProdCost to USD/Metric Tonne after a mid-cycle
+  LEAP-side unit shift; POME ProdCost converted via the new POME-oil
+  LHV entry). Captured in
+  [mailbox/bioenergy/BIOENERGY_CSV_SPEC.md](mailbox/bioenergy/BIOENERGY_CSV_SPEC.md)
+  as the operational spec.
+
+### Recurring gotchas (re-confirmed; both already covered in BROCHURE.md)
+- **`Variable.DataUnitText` on result variables fires a modal LEAP
+  dialog.** New `leap_branch_inspect` avoids this by walking
+  names-only. Don't paper over it with `is_result_variable` or
+  similar guards — the existing `safe_expression`/`safe_value`
+  pattern is the documented fallback.
+- **ActiveArea drifts between subprocess invocations.** Hit twice this
+  session (LEAP closed the area; LEAP UI refocused away from the
+  target). The injector's `--expect-area` check correctly aborts; the
+  fix is a click in the LEAP UI to refocus, then retry.
+
 ## [0.6.4] — Defensive defaults from real-session learnings
 
 After validating the audit→inject pipeline end-to-end against `aeo9_v0.32`

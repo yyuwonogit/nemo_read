@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nemo_read"
-version = "0.6.4"
+version = "0.6.5"
 description = "Read, decode, and analyse LEAP/NEMO scenario SQLite databases."
 authors = [
     {name = "Y. Yuwono", email = "yuwono.yudiandra@gmail.com"},
@@ -44,6 +44,7 @@ dev = [
 nemo_read-scaffold = "nemo_read.scaffold:cli_main"
 nemo_read-leap-export = "nemo_read.leap_export:cli_main"
 nemo_read-leap-units = "nemo_read.leap_units:cli_main"
+nemo_read-list-branch-vars = "nemo_read.leap_branch_inspect:cli_main"
 
 [project.urls]
 # TODO: replace with your GitHub URLs once the repo is hosted

@@ -267,6 +267,24 @@ _REGISTRY: dict[tuple[str, str, str | None], ConversionProposal] = {
         caveat="±25% with moisture; dry chips ≈ 14 GJ/t.",
     ),
 
+    # --- USD/t POME oil → USD/TOE: recovered POME-oil LHV / TOE definition --
+    # Note: distinct from `usd/t pome wet` (dilute effluent stream, ~1 GJ/t).
+    # POME-oil here is the recovered oil fraction extracted from palm-oil mill
+    # effluent — used as a feedstock for POME-Biodiesel.
+    ("usd/t pome oil", "usd/tonnes of oil equivalent", None): ConversionProposal(
+        factor=36.5 / 41.868,   # ≈ 0.8718
+        confidence_stars=2,
+        source="POME-oil LHV ≈ 36.5 GJ/t (mid-range across Lam et al. "
+               "2009 Renewable Energy; Sukiran et al. 2017 Bioresource "
+               "Technology — palm-oil mill effluent recovered oil "
+               "fraction); TOE = 41.868 GJ (IEA convention) → "
+               "36.5/41.868 ≈ 0.8718. Confirmed empirically by AEO9 "
+               "bioenergy CSV author 2026-04-29 (225 USD/t POME oil → "
+               "196.16 USD/TOE, effective factor 0.8718).",
+        caveat="±10% with mill oil-recovery efficiency and POME oil/water "
+               "ratio. Do NOT confuse with `usd/t pome wet` (~1 GJ/t).",
+    ),
+
     # --- Capacity: Million Tonnes/yr × LHV → annual energy capacity -----
     # Output-fuel LHV converts mass throughput to LEAP's energy-based
     # capacity unit. Fuel context required to disambiguate.

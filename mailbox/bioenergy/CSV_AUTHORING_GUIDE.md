@@ -19,6 +19,57 @@ column names and conventions in §1 exactly.
 
 ---
 
+## 0. Scope — single-cap design (current truth, dated 2026-04-29)
+
+The bioenergy model uses a **single-cap design**:
+`Resources\Primary\<Crop>:Maximum Production` is the sole crop-supply cap.
+This is the current truth and what every CSV authored against this guide
+should produce.
+
+**Out of scope (not authored, not injected):**
+- `Resources\Primary\Arable` and `Resources\Primary\Perennial` (land caps)
+- `Transformation\<Crop> Cultivation\Processes\<Crop> Cultivation` and any
+  `\Feedstock Fuels\<Perennial|Arable>` sub-branches under them
+- `Maximum Capacity` and `Variable OM Cost` rows on Cultivation processes
+  (these have been relocated to `Resources\Primary\<Crop>:Maximum Production`
+  and `Resources\Primary\<Crop>:Production Cost` respectively)
+- `Co-product Credit (audit)` rows — not a real LEAP variable
+
+The land-cap tier was previously explored as a complementary second cap
+but is shelved indefinitely. Future revisions of this guide may
+reintroduce it; until then, treat anything in §11 referencing
+Arable / Perennial / Cultivation as **historical audit record**, not
+authoring spec.
+
+> **Note on LEAP-side land branches:** The LEAP area
+> (`aeo9_v0.33_bak` at the time of writing) may still contain residual
+> Cultivation / Arable / Perennial branches as orphans. That's fine —
+> the canonical CSV doesn't reference them, so injection ignores them
+> and model behaviour is unaffected. They can be deleted in LEAP for
+> visual cleanliness whenever convenient; doing so is not required for
+> correctness.
+
+**What every new CSV should include** (per the guide below):
+- `Transformation\Biodiesel Production\Processes\<X>` rows
+- `Transformation\Bioethanol Production\Processes\<X>` rows
+- `Resources\Primary\<feedstock>` rows for all 9 bioenergy feedstocks
+  (Palm Oil, Coconut Oil, Sugarcane, Cassava, Corn, Molasses, Palm Oil
+  Mill Effluent, Rice Straw, Used Cooking Oil) — each carrying
+  `Maximum Production`, `Production Cost`, plus the per-feedstock
+  variables from §5
+- `Resources\Secondary\<output fuel>` rows (Biodiesel, Ethanol, Methanol)
+
+> **LEAP-side gap (build-time filter, dated 2026-04-29):**
+> `Resources\Primary\Rice Straw` and `Resources\Primary\Used Cooking Oil`
+> branches do not yet exist in LEAP (`aeo9_v0.33_bak`). Until they're
+> added (per §11.B.4 / §11.B.5), `build_canonical.py` filters their
+> rows out of `canonical_leap_inputs.csv` and reports the skip count.
+> The source `bioenergy_leap_input.csv` keeps these rows as-is — once
+> the LEAP branches exist, drop the `LEAP_MISSING_BRANCHES` constant in
+> the adapter and re-run.
+
+---
+
 ## 1. Current "owner format" — what the CSV looks like today
 
 The current bioenergy CSV uses these 9 columns (header row exact case):
@@ -143,32 +194,47 @@ already-per-AMS rows like `Variable OM Cost`.
 
 ## 5. Variables in the bioenergy CSV (and where they go in LEAP)
 
-The current CSV covers 19 distinct LEAP variables. Counts are
-post-fan-out (canonical rows), grouped by the kind of LEAP branch they
-target:
+Updated 2026-04-29 to match LEAP-side reality (verified by per-branch
+COM probes against `aeo9_v0.33_bak`). Counts are post-fan-out (canonical
+rows), grouped by the kind of LEAP branch they target.
+
+> **Where this section was wrong before 2026-04-29:** earlier wording put
+> `Area Harvested` / `Crop Yield` / `Production Cost` under a "Crop
+> cultivation" group and `Maximum Capacity` under "Resources". LEAP
+> probes show the opposite — see the *(probe-confirmed)* annotations
+> below. The canonical CSV has always placed them on the LEAP-correct
+> branches; only this section was misaligned.
 
 **Transformation processes** (`Transformation\Biodiesel Production\...`,
 `Transformation\Bioethanol Production\...`):
 
-- `Capital Cost` — USD/GJ
-- `Variable OM Cost` — USD/GJ (already per-AMS in source; no fan-out)
-- `Process Auxiliary Fuel Use` — fractional or unitless
-- `Co-product Credit` — USD/GJ (audit-critical: sign convention)
+- `Capital Cost` — `USD/GJ`
+- `Variable OM Cost` — `USD/GJ` (already per-AMS in source; no fan-out)
+- `Maximum Capacity` — `Million Tonnes/yr` (probe-confirmed: lives on the
+  Process branch, not on Resources)
+- 7 emission factor variables (see *Emission factors* block below)
 
-**Crop cultivation** (`Transformation\Crop Cultivation\...`):
+**Resources\Primary\\<Feedstock\>** — one branch per feedstock; the spec
+applies uniformly to all 9 (Palm Oil, Coconut Oil, Sugarcane, Cassava,
+Corn, Molasses, Palm Oil Mill Effluent, Rice Straw, Used Cooking Oil):
 
-- `Area Harvested` — `Thousand ha`
-- `Crop Yield` — `t/ha`
-- `Production Cost` — `USD/t grain`, `USD/t cane`, `USD/t POME wet`,
-  `USD/t molasses`, `USD/t fresh root`, `USD/t nuts-in-shell`,
-  `USD/t FFB`, `USD/t rice straw dry`, `USD/t UCO`
+- `Maximum Production` — `Million Tonnes/yr` (sole crop-supply cap;
+  probe-confirmed input variable)
+- `Production Cost` — `USD/t <feedstock-specific>` (`USD/t grain`,
+  `USD/t cane`, `USD/t POME wet`, `USD/t molasses`, `USD/t fresh root`,
+  `USD/t nuts-in-shell`, `USD/t FFB`, `USD/t rice straw dry`, `USD/t UCO`)
+- `Import Cost` — `USD/t <feedstock-specific>`
+- `Area Harvested` — `Thousand ha` (probe-confirmed: input variable on
+  the Resource branch; only meaningful for the 5 main crops, optional
+  for byproducts)
+- `Crop Yield` — `t/ha` (same — 5 main crops)
 
-**Resources** (`Resources\Primary\...`, `Resources\Secondary\...`):
+**Resources\Secondary\\<Output\>** (Biodiesel, Ethanol, Methanol):
 
-- `Maximum Capacity` — `Tonne`
-- `Maximum Production` — `Million Tonnes/yr`
-- `Import Cost` — `USD/t ...` (variant by feedstock)
-- `Fuel Cost` — author-side cost unit
+- `Import Cost` — `2020 USD/Liter` for Ethanol/Biodiesel,
+  `2020 USD/Metric Tonne` for Methanol
+- `Fuel Cost` — author-side cost unit (with feedstock-specific LHV
+  conversion at audit time per §11.2)
 
 **Emission factors** (per-process, 7 species):
 
@@ -319,6 +385,16 @@ the `OVERRIDES` dict at the top of `run_workflow.py`.
 ---
 
 ## 11. Unit-audit outcomes against `aeo9_v0.33_bak`
+
+> **Historical note (2026-04-29):** §11 records audit findings from a
+> canonical state that still included the land-cap tier (Cultivation
+> Processes, Arable, Perennial). Under the current single-cap design
+> (§0), all bucket-A rows below referencing `Bioenergy Land\`,
+> `Crop Cultivation\`, or per-crop `Cultivation\Auxiliary Fuels\` are
+> **out of scope** — they no longer appear in the canonical and the
+> path-rebase actions for them no longer apply. Bucket-B items (B.1–B.5)
+> and §11.2 unit conversions remain authoritative for the remaining
+> Resource + Process tier.
 
 Running `nemo_read-leap-units --canonical` followed by
 `audit_canonical_units` against `aeo9_v0.33_bak` produced 95 distinct
@@ -727,6 +803,101 @@ intervention by following these rules:
 
 After step 1–5, re-running `python mailbox/bioenergy/run_workflow.py`
 should show every row in `match` or auto-resolved `mismatch` status.
+
+---
+
+## 12. Unit reconciliation — what LEAP expects (authoritative, dated 2026-04-29)
+
+LEAP is the single source of truth for units. Every (branch, variable)
+combination in canonical has a `Variable.DataUnitText` exposed via
+COM — that's what the row's value gets stored as at injection time.
+The `audit_canonical_units` step reads that text per pair and compares
+against your authored unit. Anything that doesn't match LEAP needs to
+be either (a) auto-converted by `nemo_read.unit_conversions._REGISTRY`,
+(b) fixed by the author at the source, or (c) excluded.
+
+This section organises the audit's findings by **author action**.
+Re-run `python mailbox/bioenergy/run_workflow.py` after authoring to
+regenerate [unit_audit.csv](unit_audit.csv) — that file is the
+up-to-the-minute snapshot; this section is the human-facing summary.
+
+### 12.1 Author-action required (0 remaining — all 7 applied)
+
+> **Status (final, 2026-04-29):** All 7 originally-flagged mismatches
+> have been applied directly to [bioenergy_leap_input.csv](bioenergy_leap_input.csv).
+> Each affected row carries a `[2026-04-29 §12.1 author-action applied]`
+> marker in its `note` column for traceability (70 rows total — 7
+> distinct (branch, variable) pairs × 10 AMS each).
+
+| # | Branch | Variable | Final unit | Conversion applied |
+|---|---|---|---|---|
+| 1 | `Resources\Primary\Palm Oil` | Maximum Production | `Metric Tonne` | × 1e6 (was `Million Tonnes/yr`) |
+| 2 | `Resources\Primary\Coconut Oil` | Maximum Production | `Metric Tonne` | × 1e6 |
+| 3 | `Resources\Primary\Sugarcane` | Maximum Production | `Metric Tonne` | × 1e6 |
+| 4 | `Resources\Primary\Cassava` | Maximum Production | `Metric Tonne` | × 1e6 |
+| 5 | `Resources\Primary\Corn` | Maximum Production | `Metric Tonne` | × 1e6 (after LEAP-side unit corrected from `Gigajoule` to `Metric Tonne` to eliminate the Corn anomaly) |
+| 6 | `Resources\Primary\Corn` | Production Cost | `2020 USD/Metric Tonne` | LEAP-side unit shifted Kilogramme → Metric Tonne mid-cycle; final values in USD/t magnitudes |
+| 7 | `Resources\Primary\Palm Oil Mill Effluent` | Production Cost | `2020 USD/Tonnes of Oil Equivalent` | × `(POME-oil LHV / 41.868)` ≈ × 0.872 (POME-oil LHV ≈ 36.5 GJ/t per author derivation) |
+
+§12.1 is closed. Future unit-mismatch flags from `audit_canonical_units`
+that don't have a registered conversion factor list themselves here for
+the next author-action cycle.
+
+### 12.2 Auto-handled mismatches (29 distinct, ~290 rows after AMS expansion)
+
+These mismatches **don't need author action** — the audit pipeline
+applies the conversion factor automatically at inject time via
+[nemo_read/unit_conversions.py](../../nemo_read/unit_conversions.py)
+`_REGISTRY`. But if you want a `match`-only canonical (zero conversions
+applied), update the source to use LEAP-native units directly.
+
+Reference table (full list in §11.2; key entries reproduced here):
+
+| Variable | Author unit | LEAP unit | Auto-factor | Notes |
+|---|---|---|---|---|
+| Capital Cost (Biodiesel) | `USD/GJ` | `2020 USD/Gigajoules/Year` | 1.0 | LEAP `/Year` = annual capacity, not duration |
+| Capital Cost (Bioethanol) | `USD/GJ` | `2020 USD/Tonne Coal Equiv/Year` | 29.3076 | TCE = 29.3076 GJ |
+| Maximum Capacity (Biodiesel) | `Million Tonnes/yr` | `Million Gigajoules/Year` | 37.0 | Biodiesel LHV 37 GJ/t |
+| Maximum Capacity (Bioethanol) | `Million Tonnes/yr` | `Million Tonne Coal Equiv/Year` | 0.9144 | Ethanol LHV 26.8 / TCE 29.3076 |
+| Production Cost (5 crops) | `USD/t <feedstock>` | `2020 USD/Metric Tonne` | 1.0 | Same physical tonne; commodity tag is descriptive only |
+| Import Cost (4 crops) | `USD/t <feedstock>` | `2020 USD/Metric Tonne` | 1.0 | Same |
+| Import Cost (Corn) | `USD/t grain` | `2020 USD/Tonnes of Coal Equivalent` | 2.0074 | Corn LHV 14.6 GJ/t / TCE 29.3076 |
+| Fuel Cost (per crop) | `USD/t <feedstock>` | `U.S. Dollar/Gigajoule` | crop-specific (LHV) | Per-crop LHV — see §11.2 |
+
+### 12.3 Branches to exclude from authoring (LEAP-missing, build-time skipped)
+
+These branches don't exist in LEAP (`aeo9_v0.33_bak` as of 2026-04-29).
+Until they're created (per §11.B templates), the author should **not
+include them in the next CSV** — and `build_canonical.py` filters them
+defensively via the `LEAP_MISSING_BRANCHES` constant.
+
+| Branch | Where to create in LEAP | Filter section |
+|---|---|---|
+| `Resources\Primary\Rice Straw` | §11.B.4 — Primary Resource template | `LEAP_MISSING_BRANCHES` |
+| `Resources\Primary\Used Cooking Oil` | §11.B.5 — Primary Resource template | `LEAP_MISSING_BRANCHES` |
+| `Transformation\Bioethanol Production\Processes\Cellulosic Rice Straw` | §11.B.1 — Process template | `LEAP_MISSING_BRANCHES` |
+
+When the LEAP branches are created, drop the corresponding entries from
+`LEAP_MISSING_BRANCHES` in [build_canonical.py](build_canonical.py)
+and re-run.
+
+### 12.4 Variables deferred — out of scope this cycle (cluster 3)
+
+These (branch, variable) patterns appear in the source CSV but LEAP
+doesn't expose the variable on that branch. They're filtered at build
+time via `_is_deferred()` in [build_canonical.py](build_canonical.py)
+and held until the placement is corrected. **Don't include these in the
+next CSV** without first deciding where they should live in LEAP.
+
+| Pattern | Distinct rows × 10 AMS | Issue | Suggested resolution (deferred) |
+|---|---|---|---|
+| Emission factors (`CO2 (process)`, `CH4 (process)`, `N2O (process)`, `NH3 (process)`, `NOx (process)`, `SO2 (process)`, `NMVOC (process)`) on `\Feedstock Fuels\<crop>` sub-branches | 20 × 10 = 200 | LEAP doesn't expose emission-factor variables on `Feedstock Fuels` sub-branches | Move to parent Process branch (`…\<X> Biodiesel` or `…\<X> Ethanol`) where LEAP exposes per-process emission factors |
+| `CO2 biogenic` on `Resources\Secondary\Biodiesel` | 1 × 10 = 10 | LEAP doesn't expose `CO2 biogenic` on a Secondary Resource | Likely belongs on the producing Process branch (FAME / CME / POME Biodiesel); confirm with LEAP UI inspection before relocating |
+
+When the cluster is reopened: probe the candidate target branches first
+(via `python mailbox/bioenergy/_list_branch_vars.py "<target branch>"`)
+to confirm they expose the emission-factor variables, then relocate the
+authoring and remove the deferred filter.
 
 ---
 

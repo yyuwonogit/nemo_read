@@ -52,6 +52,43 @@ ALL_10_AMS = [
     "Myanmar", "Philippines", "Singapore", "Thailand", "Vietnam",
 ]
 
+# Branches that exist in the source CSV but are missing in LEAP
+# (`aeo9_v0.33_bak` as of 2026-04-29). Rows on these branches are filtered
+# out of `canonical_leap_inputs.csv` so the audit / injection pipeline
+# doesn't trip on a `branch not in tree` mismatch. Once the LEAP-side
+# branches are added (per CSV_AUTHORING_GUIDE §11.B), drop the
+# corresponding entries from this set and re-run.
+LEAP_MISSING_BRANCHES = {
+    "Resources\\Primary\\Rice Straw",                                            # §11.B.4
+    "Resources\\Primary\\Used Cooking Oil",                                      # §11.B.5
+    "Transformation\\Bioethanol Production\\Processes\\Cellulosic Rice Straw",   # §11.B.1
+}
+
+# Deferred (branch, variable) patterns — variables that LEAP doesn't expose
+# on the branch as currently authored. Out of scope for the current single-
+# cap design (see CSV_AUTHORING_GUIDE §12.4). Filtered at build time so
+# injection isn't blocked. Revisit once placement is resolved (likely move
+# emission factors from Feedstock Fuels sub-branches onto parent Process
+# branches, and move CO2 biogenic off Resources\Secondary\Biodiesel).
+EMISSION_FACTOR_VARIABLES = {
+    "CO2 (process)", "CH4 (process)", "N2O (process)",
+    "NH3 (process)", "NOx (process)", "SO2 (process)",
+    "NMVOC (process)", "CO2 biogenic",
+}
+
+
+def _is_deferred(branch: str, variable: str) -> bool:
+    """Return True if this (branch, variable) pair is deferred per §12.4."""
+    if variable in EMISSION_FACTOR_VARIABLES:
+        # Emission factors authored on Feedstock Fuels sub-branches:
+        # LEAP doesn't expose them there.
+        if "\\Feedstock Fuels\\" in branch:
+            return True
+        # CO2 biogenic on the Biodiesel output-fuel resource: not exposed.
+        if branch == "Resources\\Secondary\\Biodiesel" and variable == "CO2 biogenic":
+            return True
+    return False
+
 # Long-form -> LEAP short-form region names.
 REGION_NORMALISE = {
     "Brunei Darussalam": "Brunei",
@@ -136,10 +173,22 @@ def build():
     region_key = "ams" if (in_rows and "ams" in in_rows[0]) else "Region"
 
     out_rows = []
+    skipped_leap_missing: dict[str, int] = {}
+    skipped_deferred: dict[tuple[str, str], int] = {}
     for row in in_rows:
         for r in _expand_region(row, region_key):
             branch = _pick(r, "branch")
+            variable = _pick(r, "variable")
             note   = _pick(r, "note")
+            # Skip branches LEAP doesn't have yet (LEAP_MISSING_BRANCHES set).
+            if branch in LEAP_MISSING_BRANCHES:
+                skipped_leap_missing[branch] = skipped_leap_missing.get(branch, 0) + 1
+                continue
+            # Skip deferred (branch, variable) patterns (§12.4).
+            if _is_deferred(branch, variable):
+                key = (branch, variable)
+                skipped_deferred[key] = skipped_deferred.get(key, 0) + 1
+                continue
             # If the canonical 'fuel' column is empty (or absent), fall
             # back to extracting from Note / branch-path heuristic.
             fuel = _pick(r, "fuel") or _extract_fuel(note, branch)
@@ -182,6 +231,25 @@ def build():
     print()
     fuel_count = sum(1 for r in out_rows if r["fuel"])
     print(f"Rows with extracted fuel context: {fuel_count} / {len(out_rows)}")
+
+    if skipped_leap_missing:
+        total_skipped = sum(skipped_leap_missing.values())
+        print()
+        print(f"WARNING: filtered {total_skipped} rows on LEAP-missing branches "
+              f"(see LEAP_MISSING_BRANCHES in {Path(__file__).name}):")
+        for branch, n in sorted(skipped_leap_missing.items()):
+            print(f"  {n:>4}  {branch}")
+        print("Re-add these once the LEAP-side branches exist (guide §11.B).")
+
+    if skipped_deferred:
+        total_def = sum(skipped_deferred.values())
+        print()
+        print(f"WARNING: filtered {total_def} deferred rows "
+              f"(see _is_deferred / §12.4 in CSV_AUTHORING_GUIDE.md):")
+        for (branch, variable), n in sorted(skipped_deferred.items()):
+            print(f"  {n:>4}  {branch}:{variable}")
+        print("These are emission-factor / structural placement issues; "
+              "deferred until §12.4 cluster is reopened.")
 
 
 if __name__ == "__main__":
