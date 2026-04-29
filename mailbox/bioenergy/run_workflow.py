@@ -42,8 +42,13 @@ from nemo_read import (
 )
 
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-MAILBOX = REPO_ROOT / "mailbox"
+# Topic-folder pattern: this script lives in mailbox/<topic>/run_workflow.py.
+# Source CSVs + outputs all sit alongside it. The topic name is the parent
+# folder (e.g. "fossil"). Repo root is the grandparent of mailbox/.
+TOPIC_DIR = Path(__file__).resolve().parent
+MAILBOX = TOPIC_DIR.parent
+REPO_ROOT = MAILBOX.parent
+TOPIC = TOPIC_DIR.name
 
 # Per-row conversion overrides. Use this to pin a specific factor when the
 # package's default proposal doesn't fit your data (e.g. Sumatran lignite
@@ -63,13 +68,13 @@ OVERRIDES: dict = {
 def step1_build_canonical(log) -> Path:
     log("[step 1] build canonical from mailbox source CSVs")
     res = subprocess.run(
-        [sys.executable, str(MAILBOX / "build_canonical.py")],
+        [sys.executable, str(TOPIC_DIR / "build_canonical.py")],
         capture_output=True, text=True,
     )
     if res.returncode != 0:
         log(res.stdout); log(res.stderr)
         raise RuntimeError("build_canonical.py failed")
-    out = MAILBOX / "canonical_leap_inputs.csv"
+    out = TOPIC_DIR / "canonical_leap_inputs.csv"
     if not out.exists():
         raise RuntimeError(f"step 1 didn't produce {out}")
     log(f"   wrote {out.relative_to(REPO_ROOT)}")
@@ -152,7 +157,7 @@ def step3_audit(canonical_csv: Path, units_csv: Path, log) -> tuple[Path, pd.Dat
     canonical = pd.read_csv(canonical_csv)
     ctx = LeapAreaContext.from_export(units_csv.parent)
     audit = audit_canonical_units(canonical, ctx)
-    out = MAILBOX / "unit_audit.csv"
+    out = TOPIC_DIR / "unit_audit.csv"
     audit.to_csv(out, index=False)
     counts = audit["status"].value_counts().to_dict()
     log(f"   wrote {out.relative_to(REPO_ROOT)}  ({len(audit)} rows; {counts})")
@@ -168,7 +173,7 @@ def step4_apply(canonical_csv: Path, audit_df: pd.DataFrame, log) -> Path:
     log("[step 4] apply conversions -> canonical_leap_native.csv")
     canonical = pd.read_csv(canonical_csv)
     converted = apply_audit_conversions(canonical, audit_df, overrides=OVERRIDES)
-    out = MAILBOX / "canonical_leap_native.csv"
+    out = TOPIC_DIR / "canonical_leap_native.csv"
     converted.to_csv(out, index=False)
     n_converted = (converted["unit_audit"].str.startswith("factor=", na=False)).sum()
     n_unresolved = (converted["unit_audit"]
@@ -208,11 +213,12 @@ def main(argv=None) -> int:
     print()
     print(f"WORKFLOW DONE")
     print(f"  source-unit CSV:   {canonical_csv.relative_to(REPO_ROOT)}")
-    print(f"  audit:             {(MAILBOX/'unit_audit.csv').relative_to(REPO_ROOT)}")
+    print(f"  audit:             {(TOPIC_DIR/'unit_audit.csv').relative_to(REPO_ROOT)}")
     print(f"  LEAP-native CSV:   {native_csv.relative_to(REPO_ROOT)}")
     print()
+    inject_script = TOPIC_DIR / "inject_to_leap.py"
     print(f"Recommended inject command (set scenario manually in LEAP UI first):")
-    cmd = (f"  python mailbox/inject_to_leap.py "
+    cmd = (f"  python {inject_script.relative_to(REPO_ROOT)} "
            f"--csv {native_csv.relative_to(REPO_ROOT)} "
            f"--no-scenario-switch")
     if active_area:

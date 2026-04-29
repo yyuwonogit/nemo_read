@@ -172,6 +172,23 @@ def write_units_csv(rows: list[dict], out_path: Path) -> None:
             writer.writerow(r)
 
 
+def write_tree_paths_csv(cache: LeapTreeCache, out_path: Path) -> int:
+    """Write every branch FullName known to the cache to a single-column CSV.
+
+    Used by :func:`nemo_read.leap_area.audit_canonical_units` to suggest
+    closest-match branches for canonical rows whose ``branch`` doesn't
+    exist in the LEAP tree. Cheap (~one second after the cache is built).
+    """
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    fullnames = sorted(cache.fullname_to_idx.keys())
+    with out_path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["branch_full_name"])
+        for fn in fullnames:
+            writer.writerow([fn])
+    return len(fullnames)
+
+
 def _load_canonical_pairs(canon_csv: Path) -> list[tuple[int, str]]:
     """Read mailbox canonical CSV; return unique (branch_id, variable) pairs.
 
@@ -273,6 +290,12 @@ def cli_main(argv: list[str] | None = None) -> int:
 
     write_units_csv(rows, out_path)
     print(f"\n[leap-units] wrote {out_path}  ({len(rows)} unit rows)")
+
+    # Also persist the full tree-path list so offline audit/fuzzy-match
+    # can suggest closest branches without needing a live LEAP session.
+    tree_path_csv = out_path.parent / "tree_paths.csv"
+    n = write_tree_paths_csv(cache, tree_path_csv)
+    print(f"[leap-units] wrote {tree_path_csv}  ({n} branch paths)")
     return 0
 
 

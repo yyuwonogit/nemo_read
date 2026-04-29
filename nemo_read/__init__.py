@@ -71,11 +71,14 @@ from .leap_conventions import (
 from .leap_area import (
     CustomConstraintsDoc, LeapAreaContext,
     apply_audit_conversions, audit_canonical_units,
-    read_custom_constraints, read_demand, read_nemo_cfg, where_in_leap,
+    infer_fuel_from_consumers,
+    read_custom_constraints, read_demand, read_nemo_cfg,
+    suggest_closest_branches, where_in_leap,
 )
 
 from .unit_conversions import (
-    ConversionProposal, list_known_conversions, propose_conversion,
+    ConversionProposal, fuel_specific_alternatives,
+    list_known_conversions, propose_conversion,
 )
 
 from .validate import validate_scenario, ValidationIssue, ValidationReport
@@ -124,8 +127,11 @@ __all__ = [
     "resolve_leap_ids", "technology_kinds", "units_for",
     "CustomConstraintsDoc", "LeapAreaContext",
     "apply_audit_conversions", "audit_canonical_units",
-    "read_custom_constraints", "read_demand", "read_nemo_cfg", "where_in_leap",
-    "ConversionProposal", "list_known_conversions", "propose_conversion",
+    "infer_fuel_from_consumers",
+    "read_custom_constraints", "read_demand", "read_nemo_cfg",
+    "suggest_closest_branches", "where_in_leap",
+    "ConversionProposal", "fuel_specific_alternatives",
+    "list_known_conversions", "propose_conversion",
     "validate_scenario", "ValidationIssue", "ValidationReport",
     "check_scenario", "find_infeasibilities",
     "DIMENSION_ABBREVIATIONS", "DIMENSIONS", "LEAP_SOURCE_MAP", "LeapSource",

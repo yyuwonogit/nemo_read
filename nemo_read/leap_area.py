@@ -45,6 +45,245 @@ def read_nemo_cfg(path: str | Path) -> dict[str, Any]:
         return tomllib.load(f)
 
 
+def _load_tree_paths(path: Path) -> list[str]:
+    """Read a tree_paths.csv (single-column 'branch_full_name'). Returns
+    [] when the file doesn't exist, so existing exports stay backwards-
+    compatible."""
+    if not path.exists():
+        return []
+    try:
+        df = pd.read_csv(path)
+    except Exception:
+        return []
+    if "branch_full_name" not in df.columns:
+        return []
+    return [str(s) for s in df["branch_full_name"].dropna().tolist()]
+
+
+def _is_acronym_of(short_leaf: str, long_leaf: str) -> bool:
+    """True if ``short_leaf`` is plausibly an initial-letter acronym of
+    the words in ``long_leaf``.
+
+    Examples:
+      "POME" matches "Palm Oil Mill Effluent"
+      "UCO"  matches "Used Cooking Oil"
+      "FFB"  matches "Fresh Fruit Bunches"
+    Requires the short leaf to be 2–6 chars and the long leaf to have
+    a matching word count whose initials line up. Hyphens, slashes and
+    parentheses in the long leaf are treated as word separators.
+    """
+    s = short_leaf.strip()
+    if len(s) < 2 or len(s) > 6 or " " in s:
+        return False
+    if not s.isalpha():
+        return False
+    import re
+    words = [w for w in re.split(r"[\s\-/().,]+", long_leaf.strip()) if w]
+    if len(words) != len(s):
+        return False
+    return all(w[:1].lower() == c.lower() for w, c in zip(words, s))
+
+
+def suggest_closest_branches(
+    missing_path: str,
+    known_paths: list[str],
+    *,
+    n: int = 3,
+) -> list[tuple[str, str]]:
+    """Return up to ``n`` closest matches for a missing branch path.
+
+    Each result is a ``(suggested_path, reason)`` pair. Reasons explain
+    why the match was offered, in priority order:
+
+    - ``"sibling"`` — same parent path, leaf-name fuzzy match
+    - ``"same_leaf"`` — different parent, identical leaf name
+    - ``"restructured"`` — same root segment + same leaf, different
+      intermediate path (e.g. ``A\\B\\C\\Leaf`` exists at ``A\\Leaf``)
+    - ``"acronym_expansion"`` — leaf appears to be an initial-letter
+      acronym of an existing branch's leaf (e.g. ``POME`` →
+      ``Palm Oil Mill Effluent``)
+    - ``"path_fuzzy"`` — full-path fuzzy match (last resort)
+
+    Returns ``[]`` if ``known_paths`` is empty (e.g. tree_paths.csv was
+    not written by an older `nemo_read-leap-units` build).
+    """
+    import difflib
+
+    if not known_paths or not missing_path:
+        return []
+
+    missing_clean = missing_path.strip()
+    segments = missing_clean.split("\\")
+    parent = "\\".join(segments[:-1])
+    root = segments[0] if segments else ""
+    leaf = segments[-1].lower()
+
+    # Always exclude the missing path itself — it may legitimately appear
+    # in known_paths (e.g. when the branch exists but its specific variable
+    # was never probed) yet self-suggesting it is unhelpful.
+    seen: set[str] = {missing_clean}
+    out: list[tuple[str, str]] = []
+
+    # 1) Siblings — same parent, fuzzy leaf-name match
+    if parent:
+        siblings = [p for p in known_paths
+                    if p.startswith(parent + "\\") and p != missing_clean]
+        sibling_leaves = {p.split("\\")[-1].lower(): p for p in siblings}
+        for cand_leaf in difflib.get_close_matches(
+            leaf, list(sibling_leaves.keys()), n=n, cutoff=0.5,
+        ):
+            full = sibling_leaves[cand_leaf]
+            if full not in seen:
+                out.append((full, "sibling"))
+                seen.add(full)
+            if len(out) >= n:
+                return out
+
+    # 2) Same leaf, different parent
+    same_leaf_matches = [
+        p for p in known_paths
+        if p.split("\\")[-1].lower() == leaf and p not in seen
+    ]
+    for full in same_leaf_matches[: n - len(out)]:
+        out.append((full, "same_leaf"))
+        seen.add(full)
+        if len(out) >= n:
+            return out
+
+    # 3) Restructured — same root segment + same leaf, intermediate path
+    #    differs. E.g. canonical asks for `Resources\Primary\Bioenergy
+    #    Land\Arable` but LEAP has `Resources\Primary\Arable` directly.
+    if root and len(out) < n:
+        restructured = [
+            p for p in known_paths
+            if p not in seen
+            and p.split("\\")[0] == root
+            and p.split("\\")[-1].lower() == leaf
+        ]
+        for full in restructured[: n - len(out)]:
+            out.append((full, "restructured"))
+            seen.add(full)
+            if len(out) >= n:
+                return out
+
+    # 4) Acronym expansion — leaf could be an initial-letter abbreviation
+    #    of an existing branch's leaf. Prefer same root subtree.
+    if leaf and len(out) < n:
+        # Same root first
+        acronym_in_root = [
+            p for p in known_paths
+            if p not in seen
+            and (not root or p.split("\\")[0] == root)
+            and _is_acronym_of(leaf, p.split("\\")[-1])
+        ]
+        for full in acronym_in_root[: n - len(out)]:
+            out.append((full, "acronym_expansion"))
+            seen.add(full)
+            if len(out) >= n:
+                return out
+        # Then anywhere
+        if len(out) < n:
+            acronym_anywhere = [
+                p for p in known_paths
+                if p not in seen
+                and _is_acronym_of(leaf, p.split("\\")[-1])
+            ]
+            for full in acronym_anywhere[: n - len(out)]:
+                out.append((full, "acronym_expansion"))
+                seen.add(full)
+                if len(out) >= n:
+                    return out
+
+    # 5) Full-path fuzzy match (case-insensitive)
+    if len(out) < n:
+        lower_to_full = {p.lower(): p for p in known_paths if p not in seen}
+        for cand_lower in difflib.get_close_matches(
+            missing_clean.lower(), list(lower_to_full.keys()),
+            n=n - len(out), cutoff=0.5,
+        ):
+            full = lower_to_full[cand_lower]
+            if full not in seen:
+                out.append((full, "path_fuzzy"))
+                seen.add(full)
+
+    return out[:n]
+
+
+def infer_fuel_from_consumers(
+    missing_resource_path: str,
+    known_paths: list[str],
+    *,
+    n: int = 5,
+) -> list[str]:
+    """For a missing primary/secondary fuel, return the actual leaf names
+    that LEAP-side consumer processes use as their feedstocks.
+
+    Rationale: when canonical references e.g. ``Resources\\Primary\\POME``
+    but LEAP has the fuel under a different name (e.g. ``Palm Oil Mill
+    Effluent``), the consumer process — typically named after the
+    feedstock (e.g. ``POME Biodiesel``) — IS in the LEAP tree, and ITS
+    ``Feedstock Fuels\\<X>`` child names the actual fuel.
+
+    Algorithm:
+      1. Identify the missing leaf (``POME``, ``Used Cooking Oil``, …).
+      2. Find any LEAP path matching ``Transformation\\...\\Processes\\
+         <X>\\Feedstock Fuels\\<Y>`` whose ``<X>`` contains the leaf
+         (case-insensitive substring) or whose ``<X>`` is an acronym
+         expansion candidate.
+      3. Return up to ``n`` distinct ``<Y>`` values — those are the
+         LEAP-side names the canonical row should use.
+
+    Returns ``[]`` when no consumer process pattern is recognised.
+    """
+    if not known_paths or not missing_resource_path:
+        return []
+    segments = missing_resource_path.strip().split("\\")
+    if len(segments) < 2:
+        return []
+    # Only handle Resources\Primary\* and Resources\Secondary\* missing fuels.
+    if not (segments[0].lower() == "resources"
+            and segments[1].lower() in {"primary", "secondary"}):
+        return []
+    missing_leaf = segments[-1]
+    leaf_lower = missing_leaf.lower()
+
+    # Walk known paths for "...\Processes\<X>\Feedstock Fuels\<Y>" matches.
+    out: list[str] = []
+    seen: set[str] = set()
+    for p in known_paths:
+        parts = p.split("\\")
+        if len(parts) < 5:
+            continue
+        # Shape: ...\Processes\<process_leaf>\Feedstock Fuels\<fuel_leaf>
+        try:
+            processes_idx = parts.index("Processes")
+        except ValueError:
+            continue
+        if processes_idx + 3 >= len(parts):
+            continue
+        if parts[processes_idx + 2] != "Feedstock Fuels":
+            continue
+        process_leaf = parts[processes_idx + 1]
+        fuel_leaf = parts[processes_idx + 3]
+        # Match if missing-leaf appears in process_leaf, or process_leaf is
+        # an acronym expansion of missing-leaf, or fuel_leaf already names
+        # something that looks like an expansion of missing-leaf.
+        match = (
+            leaf_lower in process_leaf.lower()
+            or _is_acronym_of(missing_leaf, process_leaf)
+            or _is_acronym_of(missing_leaf, fuel_leaf)
+            or leaf_lower in fuel_leaf.lower()
+        )
+        if not match:
+            continue
+        if fuel_leaf not in seen:
+            out.append(fuel_leaf)
+            seen.add(fuel_leaf)
+        if len(out) >= n:
+            break
+    return out
+
+
 @dataclass
 class CustomConstraintsDoc:
     """Parsed summary of ``customconstraints.txt``."""
@@ -122,6 +361,7 @@ class LeapAreaContext:
     branch_expressions: pd.DataFrame  # branch_id, variable_name, scenario_name, expression
     branch_values: pd.DataFrame   # branch_id, variable_name, scenario_id, scenario_name, region_id, year, value
     branch_units: pd.DataFrame    # branch_id, branch_full_name, variable_name, data_unit_text, data_unit_id
+    tree_paths: list[str]         # every branch FullName (lightweight; written by nemo_read-leap-units)
     nemo_cfg: dict[str, Any] | None
     custom_constraints: CustomConstraintsDoc | None
     manifest: dict[str, Any]
@@ -183,6 +423,7 @@ class LeapAreaContext:
                 "branch_id", "branch_full_name", "variable_name",
                 "data_unit_text", "data_unit_id",
             ]),
+            tree_paths=_load_tree_paths(export_dir / "tree_paths.csv"),
             nemo_cfg=nemo_cfg,
             custom_constraints=cc,
             manifest=manifest,
@@ -459,6 +700,11 @@ def audit_canonical_units(
         if not leap_unit or leap_unit.startswith("<"):
             return "no_leap_unit"
         y, l = _normalise(your_unit), _normalise(leap_unit)
+        # Short-circuit: identical normalised strings always match. Avoids
+        # false-positive mismatches for units (like "t/ha") whose tokens
+        # are not in the _SAME_FAMILY registry.
+        if y.strip() == l.strip() and y.strip():
+            return "match"
         y_num, y_den = _numerator(y), _denominator(y)
         l_num, l_den = _numerator(l), _denominator(l)
 
@@ -493,12 +739,17 @@ def audit_canonical_units(
         return "mismatch"
 
     # When proposing conversions we also need the fuel column from canonical.
+    # Coerce to str — pandas turns empty cells into float NaN, which would
+    # crash propose_conversion's fuel.strip() call.
     fuel_lookup = {}
     if propose and "fuel" in canonical_df.columns:
         for _, r in canonical_df.iterrows():
-            fuel_lookup[(r["branch"], r["variable"])] = r.get("fuel", "")
+            fuel_val = r.get("fuel", "")
+            if fuel_val is None or (isinstance(fuel_val, float) and pd.isna(fuel_val)):
+                fuel_val = ""
+            fuel_lookup[(r["branch"], r["variable"])] = str(fuel_val)
 
-    from .unit_conversions import propose_conversion
+    from .unit_conversions import propose_conversion, fuel_specific_alternatives
 
     # If the canonical row's expression already uses LEAP's `[unit]` specifier
     # (formula reference like `Import Cost[2020 USD/bbl] * 0.97`), LEAP
@@ -509,6 +760,15 @@ def audit_canonical_units(
             expr = str(cr.get("expression", ""))
             if "[" in expr and "]" in expr:
                 formula_pairs.add((cr["branch"], cr["variable"]))
+
+    # Tree-path universe for fuzzy branch suggestions on no_leap_unit rows.
+    # Prefer the dedicated tree_paths.csv (full LEAP tree, ~3k paths) when
+    # present; fall back to branch_units' branch_full_name column so older
+    # exports without tree_paths.csv still get usable suggestions.
+    known_paths = list(getattr(context, "tree_paths", []) or [])
+    if not known_paths and not context.branch_units.empty:
+        bf = context.branch_units["branch_full_name"].dropna().unique().tolist()
+        known_paths = [str(p) for p in bf if p]
 
     out_rows = []
     for _, r in pairs.iterrows():
@@ -524,6 +784,26 @@ def audit_canonical_units(
             "leap_unit": leap_unit,
             "status": status,
         }
+        # Branch suggestion + consumer-process hint for missing branches.
+        row["branch_suggestion"] = ""
+        row["consumer_fuel_hint"] = ""
+        if status == "no_leap_unit" and known_paths:
+            sugg = suggest_closest_branches(r["branch"], known_paths, n=3)
+            if sugg:
+                # Compact: "<path> (sibling); <path> (same_leaf); ..."
+                row["branch_suggestion"] = "; ".join(
+                    f"{p} ({reason})" for p, reason in sugg
+                )
+            # If the missing branch is a Resources\Primary or \Secondary
+            # fuel, also try consumer-process inference — finds the
+            # actual LEAP-side fuel name from the relevant process's
+            # Feedstock Fuels children.
+            consumer = infer_fuel_from_consumers(r["branch"], known_paths, n=5)
+            if consumer:
+                row["consumer_fuel_hint"] = "; ".join(consumer)
+
+        # Fuel advice — flag rows that could lift confidence by adding fuel.
+        row["fuel_advice"] = ""
         if propose and status == "mismatch":
             fuel = fuel_lookup.get((r["branch"], r["variable"]), None)
             prop = propose_conversion(r["unit"], leap_unit, fuel=fuel)
@@ -537,6 +817,23 @@ def audit_canonical_units(
                 row["confidence_stars"] = 0
                 row["conversion_source"] = "(no proposal in registry — add to nemo_read.unit_conversions or supply manual override)"
                 row["conversion_caveat"] = ""
+            # If we resolved (or fell back), check whether a fuel-keyed
+            # alternative exists for this unit pair. If yes AND the row's
+            # current `fuel` doesn't match any of them, surface the advice.
+            alts = fuel_specific_alternatives(r["unit"], leap_unit)
+            if alts:
+                fuel_norm = (fuel or "").strip().lower()
+                if not fuel_norm:
+                    row["fuel_advice"] = (
+                        f"add output_fuel context to lift confidence "
+                        f"(known: {', '.join(alts)})"
+                    )
+                elif fuel_norm not in alts:
+                    row["fuel_advice"] = (
+                        f"row's fuel={fuel!r} not registered for this unit "
+                        f"pair (known: {', '.join(alts)}) — verify or "
+                        f"extend nemo_read.unit_conversions"
+                    )
         else:
             row["proposed_factor"] = float("nan")
             row["confidence_stars"] = 0
