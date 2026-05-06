@@ -1,5 +1,224 @@
 # Changelog
 
+## [Unreleased] — Cross-team Power-sector inject cycle (mailbox/20260505)
+
+End-to-end cycle handing off non-ID/MY power-sector input fixes to a
+team that doesn't run our tooling (LEAP UI only, no COM, no SQLite).
+Validated against `aeo9_v0.36`. Two-round inject (1 + 1.5) totaling
+**302 expressions** pushed across Current Accounts + BAS + ATS for 8
+non-ID/MY AMS, all aligned to authoritative xlsx truth
+(`mailbox/existing_cap_historical_prod.xlsx`).
+
+### Mailbox artifacts ([mailbox/20260505/](mailbox/20260505/))
+- `probe_leap_results.py` / `probe_leap_units.py` — Probe A + B
+  (results-harvest SOP); `join_results_with_units.py` Step C
+- `RESULTS_HARVEST_SOP.md` — full A→B→C SOP with 9-pitfall postmortem
+- `diagnostic_anomalies.md` — 7 anomalies catalogued from joined CSVs
+  (5 real bugs + 2 structural concerns), each tagged with concrete
+  "Where to act" (LEAP UI edit / authoring / structural / auto-resolve)
+- `build_existing_cap_inject.py` + `build_round1p5_inject.py` —
+  generators that translate xlsx truth → canonical inject CSVs
+- Round 1: `inject_existing_capacity_round1_other_AMS.csv` (78 rows,
+  EC for 8 non-ID/MY AMS in CA — verified via read-back-one)
+- Round 1.5: 3 CSVs (CA 114 + ATS 55 + BAS 55) anchoring HP and
+  re-anchoring EC with `, FirstScenarioYear, 0` per LEAP convention
+
+### Documented (CLAUDE.md)
+- **§4.1 verification checklist** gained `Read-back-one verify`
+  bullet — lightweight sub-second COM read of one branch's expression
+  diffed against the inject CSV row, runs between push and re-calc.
+  Catches injector misroutes (wrong scenario / wrong path resolution)
+  before the 30-min calc round-trip wastes time.
+- **§11.1 Multi-area recovery recipe** — the
+  manual-UI + `--no-scenario-switch` workflow for sessions where
+  `--scenario` flips area repeatedly.
+- **§11.2b FirstScenarioYear anchor trap** —
+  `Interp(..., 2024, V, FirstScenarioYear, 0)` linearly interpolates
+  between last named year and FirstScenarioYear, creating phantom
+  HP-with-no-capacity errors when First Simulation Year > 2025.
+  Canonical fix order documented.
+
+### Memory updates
+- `feedback_cross_team_handover.md` — when downstream team (Power)
+  can't operate our tooling, we do all diagnosis + COM-inject what we
+  can, then hand them plain-text FIXSPEC with concrete current→change
+  expressions. Distinct from bioenergy/fossil where we own the chain.
+- `reference_first_scenario_year_trap.md` — the LEAP-side anchor trap
+  for future infeasibility chases.
+
+## [0.6.7] — 11-stage infeasibility methodology with placeholder loop
+
+Closes the loop between "the solver said something broke" and "real fix
+landed in LEAP" without rabbit-chase trial-and-error. Adds Stages 4 and
+5 (pattern forensics + ranked diagnostic placeholders) plus Stage 7
+(minimum LEAP COM probe brief) on top of the Stage 3 LP-column decoder
+shipped in 0.6.6, and gates the existing inject pipeline so diagnostic
+placeholders can never be mistaken for real fixes.
+
+The principle: exhaust the SQLite + solver report first; reduce the
+residual question to the smallest possible LEAP probe; propose a
+testable placeholder before any real fix is committed. Three
+mechanically distinct outcomes per placeholder run (solves / same column
+infeasible / new column infeasible) turn each iteration into a binary
+hypothesis test.
+
+### Added
+- **`nemo_read.parameter_forensics`** ([nemo_read/parameter_forensics.py](nemo_read/parameter_forensics.py))
+  — Stages 4 + 5.
+  - `classify_parameter(db, parameter, related=("AvailabilityFactor",))`
+    runs a five-detector battery on every `(r, t)` cluster of the
+    parameter:
+    - `algebraic_of(other)` — fits `MU = AF`, `MU = AF²`,
+      `MU = 1 − AF`; ≥80% match fires.
+    - `broadcast_across_regions` — same value-set across 3+ regions ⇒
+      tech-template scope.
+    - `year_split` — clean year boundary with monotonic late-year
+      sequence; *ignores* AF-driven year variation (computes ratio
+      against companion to avoid false positives).
+    - `small_denom_fraction` — values cleanly fit `N/D` for
+      `D ∈ {7, 10, 12, 13, 14, 24, 30, 52, 365}`.
+    - `varies_per_timeslice_only` — load-shape-driven values.
+  - Verdict per cluster: `bug` / `intent` / `unknown` / `empty`. A
+    high-confidence (≥0.85) bug detector trumps intent flags so the
+    squared-bug signal isn't buried by year_split firing on the same
+    rows.
+  - `forensics_for_pinned_variable(db, column_identity)` bridges Stage
+    3 → Stage 4: looks up the candidate parameters that constrain the
+    pinned variable (via `VARIABLE_TO_CANDIDATE_PARAMS`) and runs
+    `classify_parameter` on each.
+  - `propose_placeholders(report, max_per_report=25)` — Stage 5.
+    Generates one CSV-row override per `bug` (and optionally `unknown`)
+    cluster, ranked **lexicographically by `(blast_radius, -confidence,
+    reverse_difficulty)`** so the smallest, most-confident,
+    most-reversible test is first. Each row is tagged
+    `data_confidence=PLACEHOLDER` and carries a real-fix prompt
+    derived from the detected pattern.
+- **`nemo_read.probe_brief`** ([nemo_read/probe_brief.py](nemo_read/probe_brief.py))
+  — Stage 7. `emit_probe_brief(*reports)` compresses any residual
+  `unknown` clusters (and optionally `bug` clusters when the user wants
+  ground-truth before writing the real fix) into a minimum
+  `(branch, variable)` LEAP COM read list, each annotated with
+  hypothesis + on_confirm + on_refute. Typical brief is 3–5 reads;
+  total COM time < 30s.
+- **Stage-6 placeholder gate in `inject_to_leap.py`** — the existing
+  injector now refuses to push rows tagged with the PLACEHOLDER
+  sentinel unless `--placeholder-mode` is set. Auto-detects placeholder
+  rows (via `data_confidence` column or the `PLACEHOLDER (Stage 5...)`
+  note prefix), prints a clear refusal message with the offending rows
+  on stderr, exits 4. Both auto-detection and the explicit flag are
+  required — belt-and-braces against accidentally injecting diagnostic
+  values as real fixes.
+- **Stage-1 placeholder leakage check** in `validate_scenario` —
+  warns if the scenario name carries a `_placeholder` suffix, catching
+  cases where a placeholder run's DB is mistakenly fed to a production
+  analysis.
+- **Tests** ([tests/test_parameter_forensics.py](tests/test_parameter_forensics.py))
+  — 11 tests covering each detector firing on the right pattern, the
+  intent-vs-bug verdict logic, placeholder generation skipping intent
+  clusters, lex sorting of proposals, the Stage 3 → 4 bridge, probe
+  brief emission, and the inject-side placeholder split helper.
+
+### Documented
+- **[docs/infeasibility_methodology.md](docs/infeasibility_methodology.md)**
+  — full 11-stage pipeline diagram, stage-by-stage tool table, the
+  placeholder-loop three-outcome semantics, the worked x435004 →
+  R19/Sugarcane/2025 example showing the methodology in action, when to
+  skip stages, and the anti-patterns this methodology eliminates.
+- **README** + **BROCHURE** — added the 11-stage pipeline diagram and
+  the philosophical statement: "exhaust SQLite + solver report first;
+  reduce the residual question to the smallest possible LEAP probe;
+  propose a testable placeholder before any real fix is committed".
+  Quick-tour code snippet shows Stages 3 → 4 → 5 → 7 in five lines.
+- **[CLAUDE.md](CLAUDE.md)** — operator brief at the repo root, auto-loaded
+  into every Claude Code session in this project. Captures the five
+  hard rules (never patch SQLite directly; LEAP names not NEMO IDs;
+  dual NEMO+LEAP terminology; bioenergy land-resource pattern; confirm
+  target before reading or writing), the three workflow lanes (mailbox
+  authoring → §4, results harvest → §7, 11-stage infeasibility → §8),
+  the LEAP COM gotchas hoisted from session-level discoveries (§11),
+  and — the linchpin — the §15 improvement loop with end-of-task
+  checklist + routing table for where each kind of learning lives
+  (CLAUDE.md / docs / authoring guides / per-cycle SOPs / memory /
+  tests / CHANGELOG). Per §15.4: *the next session should never
+  re-discover something this session already learned.*
+Ran the full pipeline against the same `infeas/NEMO_25 10.sqlite` that
+surfaced the original `Infeasible column 'x435004'` from 0.6.6:
+- Stage 3 decoded x435004 → `vaccumulatednewcapacity[R19, P16166, 2025]`
+  (Philippines / Sugarcane / 2025) ✓
+- Stage 4 classified MinimumUtilization's 179 clusters as
+  121 bug / 53 intent / 5 unknown — caught the squared-bug pattern
+  across renewables (Tidal, Wave, Wind Offshore, Solar CSP, etc.)
+  while preserving the year-split phase-out ramps and bioenergy
+  harvest fractions ✓
+- Stage 5 ranked placeholders top-down by smallest blast first; all
+  high-confidence squared-bug clusters surfaced ahead of weaker
+  signals ✓
+- The R19 Sugarcane cluster came back as **intent** (small_denom_fraction
+  matched 6.05/7), so MU is correctly *not* placeholdered there;
+  the real-fix prompt redirects to the companion `ResidualCapacity`
+  audit (units off — likely tonnes not GW) ✓
+
+## [0.6.6] — Offline LP-column decoder for solver infeasibilities
+
+Records the technique that resolved CPLEX `Infeasible column 'x435004'`
+on AEO9/RAS without rerunning Julia: walk NemoMod's variable-creation
+order from `scenario_calculation.jl`, apply Julia's column-major
+(leftmost-fastest) iteration, and translate `xN` back to
+`(variable_family, r, t, ..., y)` from the scenario SQLite alone.
+
+Now part of the package's standing toolkit alongside `validate_scenario`
+and `find_infeasibilities` — the static checks tell you what's wrong in
+a single row, the LP-column decoder tells you which corner of the data
+the solver is choking on when the contradiction is multi-constraint.
+
+### Added
+- **`nemo_read.lp_column_decode`** ([nemo_read/lp_column_decode.py](nemo_read/lp_column_decode.py)) —
+  new module with the post-mortem decoder.
+  - `decode_lp_column(db, column, *, varstosave=..., calcyears=...,
+    forcemip=...)` → `ColumnIdentity` mapping a 1-indexed `xN` to its
+    JuMP variable identity. Decodes the **dense prefix**:
+    `vrateofdemandnn` (optional), `vdemandnn`, `vdemandannualnn`, the 18
+    storage variables, `vnumberofnewtechnologyunits` (optional),
+    `vnewcapacity`, `vaccumulatednewcapacity`, `vtotalcapacityannual`.
+    Past `vtotalcapacityannual` the variables become sparse
+    (`keydicts_threaded`-restricted) and aren't decodable from SQLite
+    alone — the decoder reports `dense=False` with the residual offset
+    rather than guessing.
+  - `enumerate_dense_blocks(db, ...)` → DataFrame layout (variable, axes,
+    size, start, end columns). Useful for sanity-checking the offsets
+    against an LP-file dump or for spotting which family contains a
+    given column range.
+  - Conditional gates honoured: `vrateofdemandnn` ⇐ `varstosave`;
+    `vnumberofnewtechnologyunits` ⇐ `varstosave`, nonzero
+    `CapacityOfOneTechnologyUnit`, or `forcemip=True`. `calcyears`
+    filters the YEAR axis when the cfg restricted years.
+  - Best-effort axis descriptions: REGION/TECHNOLOGY/FUEL/EMISSION/STORAGE
+    `desc` columns are joined in so output is human-readable
+    (`R19`→`Philippines`, `P16166`→`Sugarcane`).
+- **Tests** ([tests/test_lp_column_decode.py](tests/test_lp_column_decode.py)) —
+  layout sizes; first/last/interior column decode; conditional gates
+  (vrateofdemandnn, vnumberofnewtechnologyunits); past-the-prefix safety;
+  invalid-column ValueError; calcyears filter.
+
+### Documented
+- **[nemo_read/infeasibility.py](nemo_read/infeasibility.py) module
+  docstring** now points at `decode_lp_column` for the post-mortem case
+  (when static checks are clean but the solver still reports a column
+  index). Static = "what's wrong in one row"; decoder = "which row the
+  multi-constraint chain pinned the contradiction on".
+
+### Worked example (AEO9 RAS, 2026-04-30)
+CPLEX presolve aborted with `Infeasible column 'x435004'`. Static
+`find_infeasibilities` came up clean. Running the decoder against the
+scenario SQLite returned
+`vaccumulatednewcapacity[r=R19, t=P16166, y=2025]` —
+**Philippines / Sugarcane / 2025**. Inspecting the surrounding data
+revealed the chain: `MinimumUtilization=1.0` from 2030+ on a 1.34 GW
+ResidualCapacity Sugarcane plant, output fuel `F15` (Ethanol) with zero
+demand and only one downstream consumer — forced production exceeds
+absorbable use, presolve walks back through the energy balance into
+`vaccumulatednewcapacity ≥ 0` and reports the column.
+
 ## [0.6.5] — Bioenergy single-cap design + author-iteration workflow
 
 End-to-end mailbox cycle validated against `aeo9_v0.33_bak` — bioenergy

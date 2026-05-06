@@ -1,0 +1,97 @@
+process,feedstock,region,current_share,branch_path
+FAME Biodiesel,Methanol,Base Template,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Brunei,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Cambodia,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Indonesia,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Laos,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Malaysia,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Myanmar,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Philippines,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Singapore,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Thailand,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Vietnam,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Methanol,Timor Leste,Remainder(100),Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol
+FAME Biodiesel,Palm Oil,Base Template,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Brunei,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Cambodia,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Indonesia,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Laos,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Malaysia,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Myanmar,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Philippines,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Singapore,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Thailand,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Vietnam,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+FAME Biodiesel,Palm Oil,Timor Leste,95.99,Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil
+CME Biodiesel,Coconut Oil,Base Template,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Brunei,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Cambodia,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Indonesia,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Laos,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Malaysia,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Myanmar,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Philippines,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Singapore,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Thailand,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Vietnam,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+CME Biodiesel,Coconut Oil,Timor Leste,100,Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil
+POME Biodiesel,Palm Oil Mill Effluent,Base Template,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Brunei,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Cambodia,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Indonesia,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Laos,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Malaysia,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Myanmar,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Philippines,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Singapore,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Thailand,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Vietnam,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+POME Biodiesel,Palm Oil Mill Effluent,Timor Leste,100,Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent
+Corn Ethanol,Corn,Base Template,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Brunei,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Cambodia,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Indonesia,100,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Laos,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Malaysia,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Myanmar,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Philippines,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Singapore,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Thailand,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Vietnam,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Corn Ethanol,Corn,Timor Leste,0,Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn
+Cassava,Cassava,Base Template,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Brunei,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Cambodia,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Indonesia,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Laos,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Malaysia,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Myanmar,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Philippines,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Singapore,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Thailand,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Vietnam,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Cassava,Cassava,Timor Leste,100,Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava
+Sugarcane,Sugarcane,Base Template,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Brunei,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Cambodia,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Indonesia,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Laos,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Malaysia,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Myanmar,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Philippines,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Singapore,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Thailand,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Vietnam,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Sugarcane,Sugarcane,Timor Leste,100,Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane
+Molasses,Molasses,Base Template,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Brunei,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Cambodia,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Indonesia,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Laos,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Malaysia,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Myanmar,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Philippines,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Singapore,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Thailand,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Vietnam,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses
+Molasses,Molasses,Timor Leste,100,Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses

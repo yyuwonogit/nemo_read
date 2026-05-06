@@ -14,7 +14,7 @@ unit-conversion registry), see [CSV_AUTHORING_GUIDE.md](CSV_AUTHORING_GUIDE.md).
 | | Value |
 |---|---|
 | File you author | [bioenergy_leap_input.csv](bioenergy_leap_input.csv) |
-| LEAP target area | `aeo9_v0.33_bak` |
+| LEAP target area | `aeo9_v0.36` (was `aeo9_v0.33_bak` for the cycle-1 audit) |
 | Design | **Single-cap** — `Resources\Primary\<X>:Maximum Production` is the only crop-supply cap. No land tier. |
 | Distinct (branch, variable) pairs in source | **86 exactly** |
 | → that inject to LEAP | **58** (the INJECT column in §6) |
@@ -76,29 +76,41 @@ and the marker.** You may update the numeric `expression` if the data
 itself revises, but don't revert the unit.
 
 The 70 rows that carry this marker (7 distinct (branch, variable) pairs
-× 10 AMS each):
+× 10 AMS each), with the **physical basis** the value must be in
+(amended 2026-05-05 — see [CSV_AUTHORING_GUIDE.md §12.5](CSV_AUTHORING_GUIDE.md)):
 
-| Branch | Variable | Locked unit |
-|---|---|---|
-| `Resources\Primary\Palm Oil` | Maximum Production | `Metric Tonne` |
-| `Resources\Primary\Coconut Oil` | Maximum Production | `Metric Tonne` |
-| `Resources\Primary\Sugarcane` | Maximum Production | `Metric Tonne` |
-| `Resources\Primary\Cassava` | Maximum Production | `Metric Tonne` |
-| `Resources\Primary\Corn` | Maximum Production | `Metric Tonne` |
-| `Resources\Primary\Corn` | Production Cost | `2020 USD/Metric Tonne` |
-| `Resources\Primary\Palm Oil Mill Effluent` | Production Cost | `2020 USD/Tonnes of Oil Equivalent` |
+| Branch | Variable | Locked unit | Locked physical basis |
+|---|---|---|---|
+| `Resources\Primary\Palm Oil` | Maximum Production | `Metric Tonne` | tonnes of **FFB** (raw crop), not extracted palm oil |
+| `Resources\Primary\Coconut Oil` | Maximum Production | `Metric Tonne` | tonnes of **nuts-in-shell** (raw crop) |
+| `Resources\Primary\Sugarcane` | Maximum Production | `Metric Tonne` | tonnes of **cane** (raw crop), not raw sugar |
+| `Resources\Primary\Cassava` | Maximum Production | `Metric Tonne` | tonnes of **fresh root** (raw crop) |
+| `Resources\Primary\Corn` | Maximum Production | `Metric Tonne` | tonnes of **grain** (raw crop) |
+| `Resources\Primary\Corn` | Production Cost | `2020 USD/Metric Tonne` | per-tonne of grain |
+| `Resources\Primary\Palm Oil Mill Effluent` | Production Cost | `2020 USD/Tonnes of Oil Equivalent` | per-TOE of POME oil (LHV-converted from USD/t POME oil) |
 
 (LEAP-side: `Resources\Primary\Corn:Maximum Production` was also changed
 in LEAP UI from `Gigajoule` → `Metric Tonne` in this cycle, so the unit
 is now uniform across the 5 main crops.)
+
+> **Why the basis matters even though the unit string is identical:**
+> the cap and the cost row on the same branch must refer to the same
+> physical quantity. `Production Cost` is `USD/t FFB` so the cap must
+> be tonnes of FFB. Authoring the cap in tonnes of *extracted* palm oil
+> (which is what LEAP rolls into ~5× of FFB tonnage) silently
+> under-states the cap by the oil-extraction-rate factor. This is the
+> defect the 2026-05-05 author iteration corrected — see §9 entry.
 
 ---
 
 ## 4. Unit policy — LEAP is authoritative
 
 LEAP's `Variable.DataUnitText` per (branch, variable) is the single
-source of truth. Every unit listed in §6 has been probe-confirmed
-against `aeo9_v0.33_bak`.
+source of truth. Every unit listed in §6 was probe-confirmed against
+`aeo9_v0.33_bak` in cycle 1, and re-verified against the current
+inject target `aeo9_v0.36` in cycle 2 — all 58 inject (branch, variable)
+unit strings are byte-identical between the two areas, so the canonical
+file works against either without rebuild.
 
 **Three things you might be tempted to do — don't:**
 
@@ -155,6 +167,17 @@ back until the placement question is resolved.
 
 These rows stay in the source CSV — when the placement is resolved,
 move them to the correct branches and remove from `_is_deferred`.
+
+### 5.3 `PROCESS_MAX_CAPACITY_HANDOFF_BRANCHES` — closed (kept as empty set, see §9 Cycle 3)
+
+Briefly active 2026-05-05 when v0.36 returned `Variable("Maximum Capacity") = None`
+on the 7 bioenergy process branches. Turned out to be transient — `Maximum
+Capacity` only appears under the RAS scenario in v0.36, not when the active
+scenario is something else. With RAS active the variable is exposed normally,
+and the 70 rows pushed clean. The set in `build_canonical.py` is now empty;
+the filter machinery is left in place so it can be re-armed if a similar
+v-version-bump issue recurs. See [§9 Cycle 3](#9-open-author-action-items)
+and [CSV_AUTHORING_GUIDE.md §13.2](CSV_AUTHORING_GUIDE.md).
 
 ---
 
@@ -368,15 +391,105 @@ This will:
 
 ---
 
-## 9. Open author-action items
+## 9. Open author-action items / cycle log
 
-**0 remaining** as of 2026-04-29 (post Corn LEAP-side unit harmonization).
+**0 remaining** as of 2026-05-05 (post supply-cap basis correction).
 
-All 7 author-action unit fixes are applied to source and locked via §3
-preserved markers. The audit should report 0 unresolved + 0 no_leap_unit
-once the LEAP-side `Resources\Primary\Corn:Maximum Production` UI change
-to `Metric Tonne` lands (sibling-harmonization with the other 4 main
-crops).
+Each row below records a closed author-action cycle. New cycles get
+appended; nothing is rewritten in place.
+
+### Cycle 1 — 2026-04-29: §12.1 unit-string fixes (closed)
+
+7 distinct (branch, variable) pairs × 10 AMS = 70 rows had their
+**unit string** corrected (e.g. `Million Tonnes/yr` → `Metric Tonne`
+for the 5 main crops' `Maximum Production`; `2020 USD/Kilogramme` →
+`2020 USD/Metric Tonne` for Corn `Production Cost`; POME `Production
+Cost` LHV-converted to `2020 USD/Tonnes of Oil Equivalent`). Locked via
+§3 preserved markers. Closed once the LEAP-side
+`Resources\Primary\Corn:Maximum Production` UI change to `Metric Tonne`
+landed (sibling-harmonization with the other 4 main crops).
+
+### Cycle 2 — 2026-05-05: §12.5 supply-cap basis correction + inject target migration to `aeo9_v0.36` (closed)
+
+LEAP target area for inject moved from `aeo9_v0.33_bak` → `aeo9_v0.36`.
+Verified: all 58 inject (branch, variable) unit strings match between
+v0.33_yy_rev1 and v0.36 cached probes; the 3 `LEAP_MISSING_BRANCHES`
+(Rice Straw, Used Cooking Oil, Cellulosic Rice Straw) are still missing
+in v0.36. The canonical_leap_native.csv built in this cycle works
+against v0.36 without rebuild.
+
+
+
+Six LEAP v0.34 RAS infeasibilities (Indonesia / Malaysia / Thailand
+palm, Philippines / Thailand sugarcane, Thailand cassava, all years
+2030–2060) were caused by `Maximum Production` rows authored in
+**extracted-product tonnes** (palm oil, raw sugar) when the
+`Production Cost` / `Import Cost` rows on the same branch are in
+**raw-crop tonnes** (FFB, cane). LEAP read both as `Metric Tonne` and
+the cap landed ~5× too small for palm and ~9× too small for sugarcane.
+
+Closed by:
+1. Re-emitting the `Maximum Production` Interp expressions in raw-crop
+   tonnes from the upstream `Geospatial Bioenergy pipeline 01-10`
+   panel. Indonesia palm 2025 lifts from ~19 Mt → ~248 Mt (above
+   B40's ~92 Mt requirement).
+2. Treating extra-ASEAN crop exports as redirectable to biofuel
+   (closes Malaysia palm and Thailand cassava 2030 residual
+   tightness).
+3. Annotating §3 of this spec with the **locked physical basis** per
+   branch so a future author can't fall into the same trap.
+
+Net effect on source CSV: same 554-row schema, same 86 (branch,
+variable) pairs, same units on the LEAP side. Only `Maximum
+Production` numeric values changed (36 rows = 6 crops × ~6 AMS with
+non-zero production). `Maximum Capacity` rows were also re-emitted in
+`Interp(cumulative)` form rather than `Add(delta)` form (same
+milestone-year schedule, different inter-milestone behaviour — see
+[CSV_AUTHORING_GUIDE.md §13.2](CSV_AUTHORING_GUIDE.md)). `Production
+Cost` numeric values unchanged; only the per-row note text was rewritten
+to remove a stale `/1000 to convert USD/t grain → USD/Kilogramme`
+comment that no longer applies after the LEAP-side unit shift back to
+`USD/Metric Tonne`.
+
+> **Stale note marker on Maximum Production rows (acknowledged):** all
+> 70 `Resources\Primary\<Crop>:Maximum Production` rows still carry
+> the legacy note text `Maximum Production filtered out — moved to
+> Cultivation Process Maximum Capacity (refactor 2026-04-21)` from
+> Cycle 0. Under the current single-cap design (§0) and after the
+> Cycle 2 raw-crop-basis fix this text is **historically incorrect**:
+> Maximum Production is the *primary* cap, not a "filtered out"
+> redundancy. The note will be rewritten by the upstream emitter on
+> the next regen; until then, treat it as historical noise — what
+> matters now is the locked basis in §3.
+
+### Cycle 3 — 2026-05-05: Maximum Capacity inject (closed same-day)
+
+Live COM probe of `aeo9_v0.36` initially returned `Variable("Maximum Capacity") = None`
+on all 7 bioenergy process branches, looking like the variable had been
+retired in favour of the Exogenous / Endogenous Capacity split. Acted
+defensively: added `PROCESS_MAX_CAPACITY_HANDOFF_BRANCHES` +
+`_is_process_max_capacity_handoff()` to [build_canonical.py](build_canonical.py),
+routed the 70 rows (7 branches × 10 AMS) to
+[bioenergy_maximum_capacity_handoff.csv](bioenergy_maximum_capacity_handoff.csv)
+with the migration-context note prefix, and pushed the remaining 510 rows
+clean against v0.36 RAS.
+
+Bioenergy team then clarified: in v0.36 `Maximum Capacity` only appears
+under the RAS scenario, not under any other active scenario — the probe
+had run with a non-RAS scenario active so the variable looked retired.
+With RAS active the variable was exposed normally. Removed the handoff
+filter (the set is now empty in `build_canonical.py`; machinery kept for
+re-arm), regenerated → 580 rows in [canonical_leap_native.csv](canonical_leap_native.csv),
+re-injected with `--filter-variable "Maximum Capacity"` → 70/70 pushed
+clean to RAS the same day.
+
+[bioenergy_maximum_capacity_handoff.csv](bioenergy_maximum_capacity_handoff.csv)
+is left in place as the cycle artefact (historical reference, not
+actionable). Lesson preserved in [CSV_AUTHORING_GUIDE.md §13.2](CSV_AUTHORING_GUIDE.md):
+LEAP variables can be scenario-scoped, so a `Variable() = None` on one
+scenario doesn't prove retirement — confirm against RAS (or whatever
+scenario the variable is meant to live in) before treating it as a
+schema change.
 
 When the next item arises, it gets listed here with an explicit
 conversion specification.

@@ -26,6 +26,22 @@ Export:
 Schema metadata:
     DIMENSIONS, PARAMETERS, RESULT_VARIABLES, DIMENSION_ABBREVIATIONS,
     TARGET_DB_VERSION
+
+Infeasibility resolution pipeline (11 stages, see docs/infeasibility_methodology.md):
+    Stage 1  validate_scenario, find_infeasibilities, check_scenario
+        — pre-flight static checks (run before calculatescenario).
+    Stage 3  decode_lp_column, enumerate_dense_blocks
+        — post-mortem offline decoding of CPLEX/LP `xN` column indices
+          back to (variable, region, tech, year) tuples.
+    Stages 4-5  classify_parameter, forensics_for_pinned_variable,
+                propose_placeholders
+        — pattern forensics on the data clusters around the pinned
+          variable; ranked placeholder patches for diagnostic testing.
+    Stage 7  emit_probe_brief
+        — minimum LEAP COM read list when placeholders don't converge.
+    Stage 10 mailbox/.../inject_to_leap.py (existing)
+        — pushes patches via LEAP COM; refuses placeholder rows without
+          --placeholder-mode flag.
 """
 
 from .db import NemoDB
@@ -85,6 +101,22 @@ from .validate import validate_scenario, ValidationIssue, ValidationReport
 
 from .infeasibility import check_scenario, find_infeasibilities
 
+from .lp_column_decode import (
+    ColumnIdentity, NEMO_DEFAULT_VARSTOSAVE,
+    decode_lp_column, enumerate_dense_blocks,
+)
+
+from .parameter_forensics import (
+    Cluster, DetectionResult, ForensicReport, PlaceholderProposal,
+    PLACEHOLDER_SENTINEL, PLACEHOLDER_NOTE_PREFIX,
+    VARIABLE_TO_CANDIDATE_PARAMS,
+    classify_parameter, forensics_for_pinned_variable, propose_placeholders,
+)
+
+from .probe_brief import (
+    ProbeBrief, ProbeBriefItem, emit_probe_brief, format_brief_text,
+)
+
 from .timeslice import (
     HOURS_PER_YEAR, HOURS_PER_WEEK, aggregate_to_group,
     tsgroup_hours, weighted_by_yearsplit, year_split,
@@ -134,6 +166,14 @@ __all__ = [
     "list_known_conversions", "propose_conversion",
     "validate_scenario", "ValidationIssue", "ValidationReport",
     "check_scenario", "find_infeasibilities",
+    "ColumnIdentity", "NEMO_DEFAULT_VARSTOSAVE",
+    "decode_lp_column", "enumerate_dense_blocks",
+    "Cluster", "DetectionResult", "ForensicReport", "PlaceholderProposal",
+    "PLACEHOLDER_SENTINEL", "PLACEHOLDER_NOTE_PREFIX",
+    "VARIABLE_TO_CANDIDATE_PARAMS",
+    "classify_parameter", "forensics_for_pinned_variable",
+    "propose_placeholders",
+    "ProbeBrief", "ProbeBriefItem", "emit_probe_brief", "format_brief_text",
     "DIMENSION_ABBREVIATIONS", "DIMENSIONS", "LEAP_SOURCE_MAP", "LeapSource",
     "PARAMETERS", "RESULT_DEPENDENCIES", "RESULT_VARIABLES", "ResultDependency",
     "TARGET_DB_VERSION", "leap_source", "result_dependency",
@@ -144,4 +184,4 @@ __all__ = [
     "scaffold_package",
 ]
 
-__version__ = "0.6.4"
+__version__ = "0.6.7"

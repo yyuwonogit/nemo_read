@@ -77,7 +77,35 @@ def parse_args(argv=None):
                    help="Don't set leap.ActiveScenario. Use when you've already "
                         "set it manually in the LEAP UI (avoids cross-area "
                         "switch when LEAP has multiple areas open).")
+    p.add_argument("--placeholder-mode", action="store_true",
+                   help="Allow injection of rows tagged data_confidence="
+                        "PLACEHOLDER (Stage-5 diagnostic placeholders from "
+                        "nemo_read.parameter_forensics). Without this flag "
+                        "the script REFUSES to inject placeholder rows so "
+                        "diagnostic values can never be mistaken for real "
+                        "fixes. Use only during the diagnostic test cycle "
+                        "(Stage 6 of the infeasibility-resolution pipeline).")
     return p.parse_args(argv)
+
+
+_PLACEHOLDER_TAG = "PLACEHOLDER"
+_PLACEHOLDER_NOTE_PREFIX = "PLACEHOLDER (Stage 5"
+
+
+def _is_placeholder(row: dict) -> bool:
+    """A row is a placeholder if either the tag column or note marks it."""
+    return (
+        row.get("data_confidence", "").strip().upper() == _PLACEHOLDER_TAG
+        or row.get("note", "").startswith(_PLACEHOLDER_NOTE_PREFIX)
+    )
+
+
+def _split_placeholder_rows(rows: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Partition into (real, placeholder) using :func:`_is_placeholder`."""
+    real, placeholder = [], []
+    for r in rows:
+        (placeholder if _is_placeholder(r) else real).append(r)
+    return real, placeholder
 
 
 def _check_csv_is_native(csv_path: Path, args) -> None:
@@ -134,6 +162,36 @@ def main(argv=None) -> int:
     if not rows:
         print("No rows match filters; nothing to do.")
         return 0
+
+    real_rows, placeholder_rows = _split_placeholder_rows(rows)
+    if placeholder_rows and not args.placeholder_mode:
+        print(f"REFUSED: CSV contains {len(placeholder_rows)} placeholder "
+              f"row(s) (tagged data_confidence=PLACEHOLDER) but "
+              f"--placeholder-mode is not set. Placeholder rows are Stage-5 "
+              f"diagnostic patches and must NEVER be injected as real fixes. "
+              f"Either:",
+              file=sys.stderr)
+        print(f"  (a) re-run with --placeholder-mode if you are running the "
+              f"diagnostic test cycle (Stage 6),", file=sys.stderr)
+        print(f"  (b) split the CSV into real and placeholder files and "
+              f"inject only the real rows.", file=sys.stderr)
+        print(f"\nFirst 5 placeholder rows in {csv_path.name}:", file=sys.stderr)
+        for r in placeholder_rows[:5]:
+            print(f"  {r.get('ams','?'):<12} {r.get('branch','?'):<55} "
+                  f"{r.get('variable','?'):<25} = {r.get('expression','?')}",
+                  file=sys.stderr)
+        return 4
+    if args.placeholder_mode:
+        if not placeholder_rows:
+            print(f"[inject] --placeholder-mode set but no placeholder rows "
+                  f"in CSV; proceeding with {len(real_rows)} real rows.")
+        else:
+            print(f"[inject] PLACEHOLDER MODE: pushing {len(placeholder_rows)} "
+                  f"diagnostic placeholder row(s). Remember to run "
+                  f"`restore_from_leap.py` after the test cycle to undo.")
+            if real_rows:
+                print(f"[inject] (also pushing {len(real_rows)} non-placeholder "
+                      f"row(s) in the same CSV)")
 
     print(f"[inject] {len(rows)} rows queued from {csv_path.name}")
     if args.dry_run:

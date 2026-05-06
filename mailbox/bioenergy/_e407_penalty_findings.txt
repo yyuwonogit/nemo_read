@@ -1,0 +1,138 @@
+=== ENV ===
+Area:     'aeo9_v0.33_yy_rev1'
+Scenario: 'Regional Aspiration Scenario'
+
+=== STEP 1: LEAP Effects (emissions) — looking for Sequestered ===
+  leap.Effects.Count = 0
+
+=== STEP 2: tree paths matching 'Sequestered' or carbon-penalty patterns ===
+  tree_paths.csv: 5298 branches
+  -- containing 'sequester' (29 hits) --
+    Effects\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS\Feedstock Fuels\Biomass\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS\Feedstock Fuels\Coal Anthracite\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS\Feedstock Fuels\Coal Bituminous\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS\Feedstock Fuels\Coal Lignite\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS\Feedstock Fuels\Coal Sub bituminous\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS\Feedstock Fuels\Coal Unspecified\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Coal Anthracite\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Coal Bituminous\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Coal Lignite\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Coal Sub bituminous\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Coal Unspecified\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS\Feedstock Fuels\Biomass\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS\Feedstock Fuels\Coal Anthracite\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS\Feedstock Fuels\Coal Bituminous\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS\Feedstock Fuels\Coal Lignite\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS\Feedstock Fuels\Coal Sub bituminous\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS\Feedstock Fuels\Coal Unspecified\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Direct Air Capture\Feedstock Fuels\Non Energy\Sequestered Carbon Dioxide
+    Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS\Feedstock Fuels\Natural Gas\Sequestered Carbon Dioxide
+    Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Sequestered Carbon Dioxide
+    Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Sequestered Carbon Dioxide
+    Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous\Sequestered Carbon Dioxide
+    Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite\Sequestered Carbon Dioxide
+    Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous\Sequestered Carbon Dioxide
+    Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified\Sequestered Carbon Dioxide
+    Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Sequestered Carbon Dioxide
+    Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen\Feedstock Fuels\Hydrogen\Sequestered Carbon Dioxide
+  -- containing 'carbon': 907 hits (too many to list) --
+  -- containing 'co2' (8 hits) --
+    Key\Net Zero Measures\Industry\Iron and Steel\Implementation of CO2 Utilization for MeOH
+    Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel
+    Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Auxiliary Fuels
+    Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Auxiliary Fuels\Electricity
+    Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Feedstock Fuels
+    Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Feedstock Fuels\Blast Furnace Gas
+    Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Feedstock Fuels\Coke Oven Gas
+    Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Feedstock Fuels\Coke Oven Gas\Carbon Dioxide
+  -- containing 'emission' (13 hits) --
+    Key\Emission Externality Costs
+    Key\Emission Externality Costs\Ammonia
+    Key\Emission Externality Costs\Black Carbon
+    Key\Emission Externality Costs\Carbon Dioxide
+    Key\Emission Externality Costs\Carbon Monoxide
+    Key\Emission Externality Costs\Methane
+    Key\Emission Externality Costs\Nitrogen Oxides
+    Key\Emission Externality Costs\Nitrous Oxide
+    Key\Emission Externality Costs\Organic Carbon
+    Key\Emission Externality Costs\Sulfur Dioxide
+    Non Energy\Agriculture Forestry and Other Land Use\NDC Targets\Reduced Emissions from Forests
+    Non Energy\Agriculture Forestry and Other Land Use\NDC Targets\Reduced Emissions from Rice Cultivation
+    Non Energy\Waste\NDC Targets\Reduced Emissions from Sustainable MSW
+  -- containing 'effects' (11 hits) --
+    Effects
+    Effects\Ammonia
+    Effects\Black Carbon
+    Effects\Carbon Dioxide
+    Effects\Carbon Monoxide
+    Effects\Methane
+    Effects\Nitrogen Oxides
+    Effects\Nitrous Oxide
+    Effects\Organic Carbon
+    Effects\Sequestered Carbon Dioxide
+    Effects\Sulfur Dioxide
+
+=== STEP 3: probing common LEAP branches for E407 penalty ===
+  Key Assumptions\Carbon Penalty  -> Branches inaccessible: 'NoneType' object has no attribute 'Branches'
+  Key Assumptions\Emissions Penalty  -> Branches inaccessible: 'NoneType' object has no attribute 'Branches'
+  Key Assumptions  -> Branches inaccessible: <unknown>.Branches
+  Demand\Effects  -> Branches inaccessible: 'NoneType' object has no attribute 'Branches'
+  Transformation\Effects  -> Branches inaccessible: 'NoneType' object has no attribute 'Branches'
+
+=== STEP 4: top-level branches under root ===
+  top-level: 'AEO9'
+
+========================================================================
+STEP 5 — focused probe of candidate branches
+========================================================================
+Area:     'aeo9_v0.33_yy_rev1'
+Scenario: 'Regional Aspiration Scenario'
+
+--- Effects\Sequestered Carbon Dioxide ---
+  ID: 16740
+  FullName: 'Effects\\Sequestered Carbon Dioxide'
+  variables (4):
+    - Annual Emission Constraint
+    - Externality Cost
+    - AllRegionsGHGLimit__NEMOcc
+    - SingleRegionGHGLimit__NEMOcc
+  -- cost/penalty-like variables: ['Externality Cost'] --
+  Externality Cost per region:
+    [Base Template ] '-13.59 * ConvUnits(2023 usd, 2020 usd) ? Chmielniak et al. (2024)'
+    [Brunei        ] '-13.59 * ConvUnits(2023 usd, 2020 usd) ? Chmielniak et al. (2024)'
+    [Cambodia      ] '-13.59 * ConvUnits(2023 usd, 2020 usd) ? Chmielniak et al. (2024)'
+    [Indonesia     ] '-13.59 * ConvUnits(2023 usd, 2020 usd) ? Chmielniak et al. (2024)'
+    [Laos          ] '-13.59 * ConvUnits(2023 usd, 2020 usd) ? Chmielniak et al. (2024)'
+    [Malaysia      ] '-13.59 * ConvUnits(2023 usd, 2020 usd) ? Chmielniak et al. (2024)'
+
+--- Effects\Carbon Dioxide ---
+  ID: 4244
+  FullName: 'Effects\\Carbon Dioxide'
+  variables (4):
+    - Annual Emission Constraint
+    - Externality Cost
+    - AllRegionsGHGLimit__NEMOcc
+    - SingleRegionGHGLimit__NEMOcc
+  -- cost/penalty-like variables: ['Externality Cost'] --
+  Externality Cost per region:
+    [Base Template ] '0'
+    [Brunei        ] '0'
+    [Cambodia      ] '0'
+    [Indonesia     ] '0'
+    [Laos          ] '0'
+    [Malaysia      ] '0'
+
+--- Key\Emission Externality Costs\Carbon Dioxide ---
+  ID: 14386
+  FullName: 'Key\\Emission Externality Costs\\Carbon Dioxide'
+  variables (1):
+    - Activity Level
+
+--- Key\Emission Externality Costs ---
+  ID: 14385
+  FullName: 'Key\\Emission Externality Costs'
+  variables (0):
+
+=== DONE ===

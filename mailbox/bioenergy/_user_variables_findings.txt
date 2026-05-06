@@ -1,0 +1,111 @@
+=== ENV ===
+Area: 'aeo9_v0.33_yy_rev1'
+Scenario: 'Regional Aspiration Scenario'
+
+=== 90 User Variables ===
+  #1: {'#': 1, 'Name': 'TotShare_AltFuels'}
+  #2: {'#': 2, 'Name': 'Share_FossilFuels'}
+  #3: {'#': 3, 'Name': 'Biofuel blend_volume to passkms'}
+  #4: {'#': 4, 'Name': 'ASEANRenewableCapacityTarget__NEMOcc'}
+  #5: {'#': 5, 'Name': 'FanHH'}
+  #6: {'#': 6, 'Name': 'ACHH'}
+  #7: {'#': 7, 'Name': 'RefHH'}
+  #8: {'#': 8, 'Name': 'TVHH'}
+  #9: {'#': 9, 'Name': 'Commercial Uncalibrated Energy Intensity'}
+  #10: {'#': 10, 'Name': 'Commercial Fuel Share_'}
+  #11: {'#': 11, 'Name': 'Commercial Cooking Efficiency_'}
+  #12: {'#': 12, 'Name': 'AllRegionsGHGLimit__NEMOcc'}
+  #13: {'#': 13, 'Name': 'SingleRegionGHGLimit__NEMOcc'}
+  #14: {'#': 14, 'Name': 'Number of Vehicle Checker'}
+  #15: {'#': 15, 'Name': 'Residential Uncalibrated Energy Intensity'}
+  #16: {'#': 16, 'Name': 'PRM for Simulated Scenarios'}
+  #17: {'#': 17, 'Name': 'Historical Capacity Factor'}
+  #18: {'#': 18, 'Name': 'Area Harvested'}
+  #19: {'#': 19, 'Name': 'Crop Yield'}
+  #20: {'#': 20, 'Name': 'RenewableCapacityTarget__NEMOcc'}
+  #21: {'#': 21, 'Name': 'CCS VOM'}
+  #22: {'#': 22, 'Name': 'Region Group Set'}
+  #23: {'#': 23, 'Name': 'Region Group Set Element'}
+  #24: {'#': 24, 'Name': 'Fuel_RE Target'}
+  #25: {'#': 25, 'Name': 'Activity'}
+  #26: {'#': 26, 'Name': 'Historical Emissions'}
+  #27: {'#': 27, 'Name': 'Industrial Consumer Price'}
+  #28: {'#': 28, 'Name': 'Commercial Consumer Price'}
+  #29: {'#': 29, 'Name': 'Residential Consumer Price'}
+  #30: {'#': 30, 'Name': 'Other Consumer Price'}
+  #31: {'#': 31, 'Name': 'Annual Avg Reid Vapour Pressure'}
+  #32: {'#': 32, 'Name': 'BulbsPerHH'}
+  #33: {'#': 33, 'Name': 'LightingHours'}
+  #34: {'#': 34, 'Name': 'Bulb Wattage'}
+  #35: {'#': 35, 'Name': '!EER'}
+  #36: {'#': 36, 'Name': 'Unscaled VAShare'}
+  #37: {'#': 37, 'Name': 'Fuel_Share_Commercial'}
+  #38: {'#': 38, 'Name': 'Energy Intensity per Sub Commercial Building'}
+  #39: {'#': 39, 'Name': 'FuelEconomy'}
+  #40: {'#': 40, 'Name': 'TotalEnergyTran'}
+  #41: {'#': 41, 'Name': 'Hrs per Day'}
+  #42: {'#': 42, 'Name': 'Power_Rating'}
+  #43: {'#': 43, 'Name': 'Uncalibrated Final Intensity'}
+  #44: {'#': 44, 'Name': 'End Year Penetration'}
+  #45: {'#': 45, 'Name': 'Direct Manufacturing'}
+  #46: {'#': 46, 'Name': 'Direct Installation'}
+  #47: {'#': 47, 'Name': 'Direct OpMan'}
+  #48: {'#': 48, 'Name': 'TotalEmployment'}
+  #49: {'#': 49, 'Name': 'Indirect Manufacturing'}
+  #50: {'#': 50, 'Name': 'Indirect Installation'}
+  #51: {'#': 51, 'Name': 'Indirect OpMan'}
+  #52: {'#': 52, 'Name': 'Vehicles'}
+  #53: {'#': 53, 'Name': 'VehicleMileage'}
+  #54: {'#': 54, 'Name': 'PassengerVehicleLoading'}
+  #55: {'#': 55, 'Name': 'FreightVehicleLoading'}
+  #56: {'#': 56, 'Name': 'Energy Consumption per Sub Industry'}
+  #57: {'#': 57, 'Name': 'Fuel_Share_Industry'}
+  #58: {'#': 58, 'Name': 'Share_of_Industry'}
+  #59: {'#': 59, 'Name': 'Energy Intensity per Sub Industry'}
+  #60: {'#': 60, 'Name': 'Region_'}
+  #61: {'#': 61, 'Name': 'Fuel___'}
+  #62: {'#': 62, 'Name': 'Transmission Modeling Type'}
+  #63: {'#': 63, 'Name': 'Node_'}
+  #64: {'#': 64, 'Name': 'Fuel_'}
+  #65: {'#': 65, 'Name': 'From Node'}
+  #66: {'#': 66, 'Name': 'To Node'}
+  #67: {'#': 67, 'Name': 'Maximum Flow'}
+  #68: {'#': 68, 'Name': 'Variable OM Cost_'}
+  #69: {'#': 69, 'Name': 'Lifetime_'}
+  #70: {'#': 70, 'Name': 'Fuel__'}
+  #71: {'#': 71, 'Name': 'Interest Rate_'}
+  #72: {'#': 72, 'Name': '!Reactance'}
+  #73: {'#': 73, 'Name': '!Construction Year'}
+  #74: {'#': 74, 'Name': 'Efficiency_'}
+  #75: {'#': 75, 'Name': 'Capital Cost_'}
+  #76: {'#': 76, 'Name': 'Fixed OM Cost_'}
+  #77: {'#': 77, 'Name': 'Node'}
+  #78: {'#': 78, 'Name': 'CropYield'}
+  #79: {'#': 79, 'Name': 'BioProdYield'}
+  #80: {'#': 80, 'Name': 'Capacity Additions'}
+  #81: {'#': 81, 'Name': 'Capacity Retirement'}
+  #82: {'#': 82, 'Name': 'Existing Capacity'}
+  #83: {'#': 83, 'Name': 'Real Investment Cost'}
+  #84: {'#': 84, 'Name': 'CCS Capital'}
+  #85: {'#': 85, 'Name': 'CCS FOM'}
+  #86: {'#': 86, 'Name': 'Annual Avg Ambient Temp'}
+  #87: {'#': 87, 'Name': 'TVP'}
+  #88: {'#': 88, 'Name': 'TotalEnergy'}
+  #89: {'#': 89, 'Name': 'UnscaledFuelShare'}
+  #90: {'#': 90, 'Name': 'TotalEnergyRes'}
+
+=== Interesting ones (2) ===
+
+  #4: {'#': 4, 'Name': 'ASEANRenewableCapacityTarget__NEMOcc'}
+    Expression ERR: Item.Expression
+    Value ERR: Item.Value
+    Definition ERR: Item.Definition
+    Formula ERR: Item.Formula
+
+  #20: {'#': 20, 'Name': 'RenewableCapacityTarget__NEMOcc'}
+    Expression ERR: Item.Expression
+    Value ERR: Item.Value
+    Definition ERR: Item.Definition
+    Formula ERR: Item.Formula
+
+=== DONE ===

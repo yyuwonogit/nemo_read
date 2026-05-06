@@ -19,12 +19,35 @@ column names and conventions in §1 exactly.
 
 ---
 
-## 0. Scope — single-cap design (current truth, dated 2026-04-29)
+## 0. Scope — single-cap design (current truth, dated 2026-04-29; supply-basis amended 2026-05-05)
 
 The bioenergy model uses a **single-cap design**:
 `Resources\Primary\<Crop>:Maximum Production` is the sole crop-supply cap.
 This is the current truth and what every CSV authored against this guide
 should produce.
+
+> **Supply-basis convention (added 2026-05-05, §12.5):**
+> `Maximum Production` for the 5 main crops is authored in **raw-crop
+> tonnes** (not extracted-product tonnes), so the value lines up with the
+> `Production Cost` and `Import Cost` rows on the same branch (which are
+> already per-tonne of raw crop — `USD/t FFB`, `USD/t cane`, etc.).
+> Concretely:
+> - `Resources\Primary\Palm Oil:Maximum Production` → tonnes of **FFB**
+>   (fresh fruit bunches), *not* tonnes of extracted palm oil.
+> - `Resources\Primary\Sugarcane:Maximum Production` → tonnes of **cane**,
+>   *not* tonnes of raw sugar.
+> - `Resources\Primary\Cassava:Maximum Production` → tonnes of **fresh root**.
+> - `Resources\Primary\Coconut Oil:Maximum Production` → tonnes of
+>   **nuts-in-shell**.
+> - `Resources\Primary\Corn:Maximum Production` → tonnes of **grain**.
+>
+> The unit string in the CSV stays `Metric Tonne` (LEAP-side label is
+> commodity-agnostic), but the **physical basis is the raw crop**. A
+> previous cycle accidentally authored palm/sugarcane caps in
+> extracted-product tonnes (oil, raw sugar) — stating ~5× too small for
+> palm and ~9× too small for sugarcane — which mechanically made
+> Indonesia/Malaysia/Thailand palm and Philippines/Thailand sugarcane
+> infeasible at B40-style demand. See §12.5.
 
 **Out of scope (not authored, not injected):**
 - `Resources\Primary\Arable` and `Resources\Primary\Perennial` (land caps)
@@ -59,14 +82,15 @@ authoring spec.
   variables from §5
 - `Resources\Secondary\<output fuel>` rows (Biodiesel, Ethanol, Methanol)
 
-> **LEAP-side gap (build-time filter, dated 2026-04-29):**
+> **LEAP-side gap (build-time filter, dated 2026-04-29; re-verified
+> 2026-05-05 against the current inject target `aeo9_v0.36`):**
 > `Resources\Primary\Rice Straw` and `Resources\Primary\Used Cooking Oil`
-> branches do not yet exist in LEAP (`aeo9_v0.33_bak`). Until they're
-> added (per §11.B.4 / §11.B.5), `build_canonical.py` filters their
-> rows out of `canonical_leap_inputs.csv` and reports the skip count.
-> The source `bioenergy_leap_input.csv` keeps these rows as-is — once
-> the LEAP branches exist, drop the `LEAP_MISSING_BRANCHES` constant in
-> the adapter and re-run.
+> branches still do not exist in LEAP. Until they're added (per §11.B.4
+> / §11.B.5), `build_canonical.py` filters their rows out of
+> `canonical_leap_inputs.csv` and reports the skip count. The source
+> `bioenergy_leap_input.csv` keeps these rows as-is — once the LEAP
+> branches exist, drop the `LEAP_MISSING_BRANCHES` constant in the
+> adapter and re-run.
 
 ---
 
@@ -866,10 +890,12 @@ Reference table (full list in §11.2; key entries reproduced here):
 
 ### 12.3 Branches to exclude from authoring (LEAP-missing, build-time skipped)
 
-These branches don't exist in LEAP (`aeo9_v0.33_bak` as of 2026-04-29).
-Until they're created (per §11.B templates), the author should **not
-include them in the next CSV** — and `build_canonical.py` filters them
-defensively via the `LEAP_MISSING_BRANCHES` constant.
+These branches don't exist in LEAP — confirmed absent in `aeo9_v0.33_bak`
+(2026-04-29) and re-verified absent in the current inject target
+`aeo9_v0.36` (2026-05-05). Until they're created (per §11.B templates),
+the author should **not include them in the next CSV** — and
+`build_canonical.py` filters them defensively via the
+`LEAP_MISSING_BRANCHES` constant.
 
 | Branch | Where to create in LEAP | Filter section |
 |---|---|---|
@@ -899,9 +925,141 @@ When the cluster is reopened: probe the candidate target branches first
 to confirm they expose the emission-factor variables, then relocate the
 authoring and remove the deferred filter.
 
+### 12.5 Supply-cap basis correction (dated 2026-05-05)
+
+LEAP v0.33 → v0.34 RAS reported six infeasibilities where biofuel
+demand exceeded available feedstock supply: Indonesia / Malaysia /
+Thailand palm and Philippines / Thailand sugarcane and Thailand cassava,
+years 2030–2060. Root cause was *not* a missing/wrong unit — every row
+was already in `Metric Tonne` (the LEAP-side unit). The mistake was the
+**physical basis** of the cap:
+
+| Branch | Authored basis (wrong) | Required basis (LEAP-correct) | Approx. magnitude error |
+|---|---|---|---|
+| `Resources\Primary\Palm Oil:Maximum Production` | tonnes of extracted palm oil (CPO) | tonnes of **FFB** | cap ~5× too small (oil-extraction-rate ≈ 0.20) |
+| `Resources\Primary\Sugarcane:Maximum Production` | tonnes of raw sugar | tonnes of **cane** | cap ~9× too small (sugar-yield ≈ 0.11) |
+| `Resources\Primary\Cassava:Maximum Production` | tonnes of dried/processed | tonnes of **fresh root** | tightness on TH 2030 |
+
+Why it mattered: the `Production Cost` / `Import Cost` rows on the same
+branch were already in **raw-crop USD/t** (`USD/t FFB`, `USD/t cane`,
+`USD/t fresh root`), so the cap and the cost row referred to *different
+physical quantities*. LEAP read both as the same metric tonne and the
+solver saw a cap that was 5–9× lower than the upstream cost rows
+implied was producible. Indonesia palm 2025 lifted from ~19 Mt → ~248 Mt
+once the basis was corrected (comfortably above the ~92 Mt B40
+requirement).
+
+Two extra-ASEAN-export adjustments were applied at the same time,
+treating crop exports as redirectable to biofuel rather than locked to
+existing markets — this closes residual tightness on Malaysia palm and
+Thailand cassava 2030.
+
+> **Author rule going forward:** when authoring `Maximum Production`,
+> the implied basis must equal the basis of the `Production Cost` /
+> `Import Cost` rows on the same branch. If those are `USD/t FFB` then
+> the cap is tonnes of FFB. If you change the cost row's commodity tag,
+> you must change the cap's basis to match. The §6 table in
+> [BIOENERGY_CSV_SPEC.md](BIOENERGY_CSV_SPEC.md) records the locked
+> basis per branch.
+
+> **Historical note on §12.1 row 1 (Palm Oil) and row 3 (Sugarcane):**
+> the 2026-04-29 author-action that converted these rows to
+> `Metric Tonne` was correct on the *unit string* — what it didn't
+> catch was that the underlying values were also in the wrong physical
+> basis. §12.5 is the second half of that fix.
+
+---
+
+## 13. Authoring gotchas (per-cycle lessons)
+
+### 13.1 Don't open `bioenergy_leap_input.csv` in Excel between handoffs
+
+**Excel under a non-English locale auto-converts commas inside
+expressions into periods.** The build-side emitter writes
+`Interp(2025, 3.2422, 2030, 3.0833, ...)` with commas; if Excel reopens
+the CSV under a comma-as-decimal locale (DE / FR / ID / etc.), it
+silently rewrites that to `Interp(2025. 3,2422. 2030. 3,0833. ...)`
+which LEAP's importer cannot parse (LEAP treats the period as a decimal
+point and the expression becomes garbage).
+
+**Symptom in LEAP:** `Expression` parse errors at inject time on
+otherwise-valid Interp rows; or, more insidiously, a single row
+containing two distinct cycles' worth of corrupted text.
+
+**Discipline:**
+- Treat `bioenergy_leap_input.csv` as a build-pipeline artefact, not a
+  spreadsheet. Inspect it in a text editor (VS Code, Notepad++, `cat`).
+- If you must open it in Excel for a quick visual scan, open
+  read-only and **never save**.
+- If you need to edit a row by hand, edit it in a text editor
+  preserving the surrounding `,` separators and quoting verbatim. The
+  pipeline tolerates trailing commas in a row (one extra blank field at
+  end) but does not tolerate `Interp(2025. 3.2422. ...)` form.
+- Our own emitter (`build_per_ams_*` / cost generators on the author
+  side) was always correct — every period→comma corruption observed in
+  past cycles came from Excel re-saves, not from build code.
+
+### 13.2 `Maximum Capacity` is scenario-scoped in v0.36 (cycle 3, 2026-05-05)
+
+LEAP v0.36 only exposes `Maximum Capacity` on the 7 bioenergy process
+branches under the **RAS scenario**. Under any other active scenario
+(e.g. Mitigation, Current Accounts), `branch.Variable("Maximum Capacity")`
+returns `None` — the variable looks retired but isn't.
+
+The 2026-05-05 cycle initially mistook this for a v0.36 schema migration
+(Maximum Capacity → Exogenous / Endogenous Capacity). Defensive handoff
+filter went up, 70 rows routed to a separate CSV, the rest (510) pushed
+clean. Bioenergy team then clarified the scenario-scope behaviour;
+filter removed, regen run with RAS active, all 70 pushed normally same day.
+
+Operating rule going forward: if `Variable("X") = None` on a branch
+where you expect `X`, **switch the active scenario to RAS before
+concluding the variable was retired**. Schema migrations would affect
+all scenarios; scenario-scoped variables only one. The COM probe gives
+you the active-scenario view, not the union.
+
+The handoff machinery in `build_canonical.py`
+(`PROCESS_MAX_CAPACITY_HANDOFF_BRANCHES` set, currently empty +
+`_is_process_max_capacity_handoff()`) is left in place for re-arm if a
+similar v-bump issue recurs. `bioenergy_maximum_capacity_handoff.csv`
+remains as the historical artefact of the cycle.
+
+### 13.3 `Maximum Capacity` — `Add()` vs `Interp()` conventions
+
+`Transformation\<X>:Maximum Capacity` rows can legally be written in
+two LEAP-supported forms:
+
+| Form | Semantics | Inter-milestone behaviour |
+|---|---|---|
+| `Add(year, delta, year, delta, ...)` | Each pair adds `delta` to cumulative capacity in that year | Capacity is a **step function** (cumulative jumps at the listed years, flat between) |
+| `Interp(year, cumulative, year, cumulative, ...)` | Each pair sets cumulative capacity at that milestone year | Capacity is **linearly interpolated** between milestone years |
+
+Both forms produce **the same value at every milestone year** — they
+differ only between milestones. Earlier cycles shipped both forms;
+treat the form choice as the author's decision but please **do not
+mechanically rename `Add(...)` → `Interp(...)` keeping the same
+numeric tokens** (and vice versa). The two forms expect different
+numbers in the body:
+- `Add(2025, 16, 2030, 7.5)` → adds 16 in 2025 then 7.5 in 2030 → cumulative is 16, then 23.5 at 2030.
+- `Interp(2025, 16, 2030, 7.5)` → interpolates linearly from 16 (2025) down to 7.5 (2030) — *not* the same trajectory.
+
+If you regenerate from a panel that emits cumulative values, use
+`Interp(year, cumulative, ...)`. If you regenerate from a panel that
+emits incremental additions, use `Add(year, delta, ...)`. The 2026-04-30
+`canonical_patch_2026_04_30.csv` Issue 5 fix used `Add()` form
+explicitly because the source panel encoded incremental additions
+(matching LEAP's conventional capacity-build semantics); the 2026-05-05
+regen uses `Interp(cumulative)` because the regenerator emits the
+cumulative trajectory directly. **Both are valid for the milestone-year
+schedule shipped, but the choice changes inter-milestone behaviour.**
+
 ---
 
 *Generated to mirror the behaviour of `build_canonical.py` and the
-audit cycle as of nemo_read 0.6.4 against `aeo9_v0.33_bak`. If you
-change the adapter or extend the conversion registry, please update
-this guide in the same commit.*
+audit cycle as of nemo_read 0.6.4 against `aeo9_v0.33_bak`. Current
+inject target as of 2026-05-05 is `aeo9_v0.36` (unit strings verified
+identical to v0.33 for the 58 inject pairs). Last content update:
+2026-05-05 (§0 supply-basis convention, §12.5 supply-cap basis
+correction, §13 authoring gotchas, target-area migration to v0.36).
+If you change the adapter or extend the conversion registry, please
+update this guide in the same commit.*

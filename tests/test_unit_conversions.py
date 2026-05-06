@@ -72,11 +72,12 @@ def _audit_row(branch, variable, your_unit, leap_unit, status,
 
 
 def test_apply_rewrites_interp_with_proposed_factor():
+    # Pipeline standard: comma between (year, value) pairs, period decimal.
     canonical = pd.DataFrame([{
         "ams": "Indonesia",
         "branch": "Resources\\Primary\\Coal Bituminous",
         "variable": "Production Cost",
-        "expression": "Interp(2024; 3.5; 2025; 3.5; 2030; 4.0)",
+        "expression": "Interp(2024, 3.5, 2025, 3.5, 2030, 4.0)",
         "unit": "USD/GJ real 2020 USD",
         "fuel": "Coal Bituminous",
     }])
@@ -87,9 +88,12 @@ def test_apply_rewrites_interp_with_proposed_factor():
     )])
     out = apply_audit_conversions(canonical, audit)
     expr = out.iloc[0]["expression"]
-    # 3.5 × 25.8 = 90.3
+    # 3.5 × 25.8 = 90.3 ; 4.0 × 25.8 = 103.2
     assert "90.3" in expr
+    assert "103.2" in expr
     assert "Interp" in expr
+    # Output must remain comma-form (the only pipeline standard)
+    assert ";" not in expr
     assert out.iloc[0]["unit"] == "U.S. Dollar/Metric Tonne"
     assert out.iloc[0]["unit_audit"].startswith("factor=25.8")
 
@@ -99,7 +103,7 @@ def test_apply_leaves_match_rows_alone():
         "ams": "Indonesia",
         "branch": "Resources\\Primary\\Crude Oil",
         "variable": "Production Cost",
-        "expression": "Interp(2025; 30; 2030; 30)",
+        "expression": "Interp(2025, 30, 2030, 30)",
         "unit": "USD/bbl real 2020 USD",
         "fuel": "Crude Oil",
     }])
@@ -108,7 +112,7 @@ def test_apply_leaves_match_rows_alone():
         "USD/bbl real 2020 USD", "2020 USD/Barrel", "match",
     )])
     out = apply_audit_conversions(canonical, audit)
-    assert out.iloc[0]["expression"] == "Interp(2025; 30; 2030; 30)"
+    assert out.iloc[0]["expression"] == "Interp(2025, 30, 2030, 30)"
     assert out.iloc[0]["unit_audit"] == ""
 
 
@@ -117,7 +121,7 @@ def test_apply_overrides_take_precedence():
         "ams": "Indonesia",
         "branch": "Resources\\Primary\\Coal Lignite",
         "variable": "Production Cost",
-        "expression": "Interp(2024; 2.0; 2025; 2.0)",
+        "expression": "Interp(2024, 2.0, 2025, 2.0)",
         "unit": "USD/GJ real 2020 USD",
         "fuel": "Coal Lignite",
     }])
@@ -137,6 +141,7 @@ def test_apply_overrides_take_precedence():
     expr = out.iloc[0]["expression"]
     # 2.0 × 11.5 = 23
     assert "23" in expr
+    assert ";" not in expr
     assert "11.5" in out.iloc[0]["unit_audit"]
     assert "PT Bukit Asam" in out.iloc[0]["unit_audit"]
 
@@ -146,7 +151,7 @@ def test_apply_unresolved_mismatch_marks_row():
         "ams": "Indonesia",
         "branch": "Resources\\Primary\\Mystery Fuel",
         "variable": "Capital Cost",
-        "expression": "Interp(2024; 100)",
+        "expression": "Interp(2024, 100)",
         "unit": "MysteryUnit",
         "fuel": "Mystery",
     }])
@@ -156,7 +161,7 @@ def test_apply_unresolved_mismatch_marks_row():
         factor=float("nan"), stars=0,
     )])
     out = apply_audit_conversions(canonical, audit)
-    assert out.iloc[0]["expression"] == "Interp(2024; 100)"   # unchanged
+    assert out.iloc[0]["expression"] == "Interp(2024, 100)"   # unchanged
     assert out.iloc[0]["unit_audit"].startswith("MISMATCH unresolved")
 
 
@@ -165,7 +170,7 @@ def test_apply_data_call_rewrite():
         "ams": "Indonesia",
         "branch": "Resources\\Primary\\Crude Oil",
         "variable": "Additions to Reserves",
-        "expression": "Data(2024; 2.25)",
+        "expression": "Data(2024, 2.25)",
         "unit": "Gbbl",
         "fuel": "Crude Oil",
     }])
@@ -176,4 +181,41 @@ def test_apply_data_call_rewrite():
         factor=2.0, stars=5, source="test",
     )])
     out = apply_audit_conversions(canonical, audit)
-    assert out.iloc[0]["expression"] == "Data(2024; 4.5)"   # 2.25 × 2 = 4.5
+    assert out.iloc[0]["expression"] == "Data(2024, 4.5)"   # 2.25 × 2 = 4.5
+
+
+def test_apply_rewrites_realistic_bioenergy_max_capacity():
+    # Real-world shape: bioenergy Maximum Capacity in Million Tonnes/yr →
+    # LEAP-side Million Gigajoules/Year (Biodiesel LHV factor 37). All 8
+    # milestone-year values must be multiplied; comma-form preserved.
+    canonical = pd.DataFrame([{
+        "ams": "Indonesia",
+        "branch": "Transformation\\Biodiesel Production\\Processes\\FAME Biodiesel",
+        "variable": "Maximum Capacity",
+        "expression": "Interp(2025, 16.0, 2030, 23.5, 2035, 31.0, 2040, 38.5, "
+                      "2045, 46.0, 2050, 53.5, 2055, 61.0, 2060, 65.0)",
+        "unit": "Million Tonnes/yr",
+        "fuel": "Biodiesel",
+    }])
+    audit = pd.DataFrame([_audit_row(
+        "Transformation\\Biodiesel Production\\Processes\\FAME Biodiesel",
+        "Maximum Capacity",
+        "Million Tonnes/yr", "Million Gigajoules/Year",
+        "mismatch", factor=37.0, stars=4, source="IPCC FAME LHV",
+    )])
+    out = apply_audit_conversions(canonical, audit)
+    expr = out.iloc[0]["expression"]
+    # Spot-check all 8 milestone values
+    assert "592" in expr      # 16.0  × 37
+    assert "869.5" in expr    # 23.5  × 37
+    assert "1147" in expr     # 31.0  × 37
+    assert "1424.5" in expr   # 38.5  × 37
+    assert "1702" in expr     # 46.0  × 37
+    assert "1979.5" in expr   # 53.5  × 37
+    assert "2257" in expr     # 61.0  × 37
+    assert "2405" in expr     # 65.0  × 37
+    # Years pass through unchanged
+    assert "2025" in expr and "2060" in expr
+    # Comma-form only — never any semicolons in our pipeline output
+    assert ";" not in expr
+    assert out.iloc[0]["unit"] == "Million Gigajoules/Year"

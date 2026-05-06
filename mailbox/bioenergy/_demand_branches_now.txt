@@ -1,0 +1,28 @@
+=== ENV ===
+Area:     'aeo9_v0.33_yy_rev1'
+Scenario: 'Regional Aspiration Scenario'
+
+
+--- Demand\Non Energy Biomass\Palm Oil ---
+  ID: 16153
+  FullName: 'Demand\\Non Energy Biomass\\Palm Oil'
+  Activity Level:
+    [Cambodia      ] '100'
+    [Indonesia     ] '100'
+    [Malaysia      ] '100'
+    [Philippines   ] '100'
+    [Thailand      ] '100'
+    [Vietnam       ] '100'
+  Energy Load Shape:
+    [Cambodia      ] ''
+    [Indonesia     ] ''
+    [Malaysia      ] ''
+    [Philippines   ] ''
+    [Thailand      ] ''
+    [Vietnam       ] ''
+  Power Load Shape:
+    [Cambodia      ] ''
+    [Indonesia     ] ''
+    [Malaysia      ] ''
+    [Philippines   ] ''
+    [Thailand      ] ''

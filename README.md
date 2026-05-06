@@ -43,6 +43,50 @@ cc  = get_parameter(db, "CapitalCost")              # defaults applied
 cap = get_result(db, "vtotalcapacityannual")        # latest solvedtm
 ```
 
+## Infeasibility resolution — the 11-stage methodology
+
+When the solver chokes on `Infeasible column 'xN'` or any other dead end,
+this package owns the full path from "what broke?" to "real fix landed".
+Every stage has a tool and an exit criterion. See
+[docs/infeasibility_methodology.md](docs/infeasibility_methodology.md)
+for the worked diagram.
+
+```
+1  PRE-FLIGHT          validate_scenario, find_infeasibilities, check_scenario
+2  SOLVER RUN          (LEAP/NEMO/CPLEX)
+3  POST-MORTEM TRIAGE  decode_lp_column        ← "x435004 = vaccumulatednewcapacity[R19,P16166,2025]"
+4  PATTERN FORENSICS   classify_parameter      ← bug vs intent classification per (r,t) cluster
+5  PLACEHOLDER         propose_placeholders    ← ranked diagnostic patches, lex-sorted
+6  DIAGNOSTIC TEST     inject_to_leap.py --placeholder-mode  →  re-run Stage 2
+7  PROBE BRIEF         emit_probe_brief        ← minimum LEAP COM read list (only if Stage 6 stuck)
+8  LEAP COM PROBING    nemo_read._leap_com
+9  REAL-FIX DESIGN     (manual, informed by 4+6+8)
+10 PATCH INJECTION     inject_to_leap.py
+11 VERIFICATION        loop back to Stage 1
+```
+
+The principle: exhaust the SQLite + solver report first; reduce the
+residual question to the smallest possible LEAP probe; propose a
+testable placeholder before any real fix is committed. Three mechanically
+distinct outcomes per placeholder run (solves / same column / new column)
+turn debugging into hypothesis testing — no rabbit-chase.
+
+```python
+from nemo_read import (
+    NemoDB, decode_lp_column, forensics_for_pinned_variable,
+    propose_placeholders, emit_probe_brief,
+)
+
+db = NemoDB("scenario.sqlite")
+ident = decode_lp_column(db, 435004)                 # Stage 3
+reports = forensics_for_pinned_variable(db, ident)   # Stage 4
+mu = next(r for r in reports if r.parameter == "MinimumUtilization")
+for p in propose_placeholders(mu, max_per_report=5): # Stage 5
+    print(p, "→", p.real_fix_prompt)
+brief = emit_probe_brief(*reports)                   # Stage 7 (if needed)
+print(brief.to_text())
+```
+
 ## Repository layout
 
 ```

@@ -847,6 +847,12 @@ def _rewrite_expression_value(expr: str, factor: float) -> str:
     """Multiply every numeric literal in an Interp(...) / Data(...) / scalar
     expression by ``factor``. Formula-style expressions (containing variable
     references) are returned unchanged with no rewrite — caller should warn.
+
+    Pipeline standard (LEAP US-English locale): ``Interp(year, value, year,
+    value, ...)`` with **commas** between (year, value) pairs and **periods**
+    as decimal delimiters. Semicolons are not accepted as separators (any
+    semicolon found in an Interp body is treated as part of a token, which
+    will fail the float() parse and leave that token unchanged).
     """
     import re
     expr = (expr or "").strip()
@@ -860,10 +866,10 @@ def _rewrite_expression_value(expr: str, factor: float) -> str:
     if m:
         funcname = m.group(1)
         body = m.group(2)
-        parts = [p.strip() for p in body.split(";")]
+        parts = [p.strip() for p in body.split(",")]
         out = []
         for i, tok in enumerate(parts):
-            # alternating year; value
+            # alternating year, value
             if i % 2 == 1:
                 try:
                     out.append(f"{float(tok) * factor:g}")
@@ -871,7 +877,7 @@ def _rewrite_expression_value(expr: str, factor: float) -> str:
                     out.append(tok)
             else:
                 out.append(tok)
-        return f"{funcname}({'; '.join(out)})"
+        return f"{funcname}({', '.join(out)})"
     # Formula or unknown — leave as-is
     return expr
 

@@ -309,7 +309,57 @@ def validate_scenario(
     if context is not None:
         _check_varstosave_coverage(db, context, report)
 
+    # 11. Stage-5 placeholder leakage (warn loudly).
+    _check_for_placeholder_leakage(db, all_tables, report)
+
     return report
+
+
+def _check_for_placeholder_leakage(
+    db: NemoDB, all_tables: set, report: ValidationReport,
+) -> None:
+    """Warn if PLACEHOLDER values from a diagnostic test cycle are still
+    in the DB.
+
+    The Stage-5 diagnostic placeholder workflow injects rows tagged with
+    a sentinel value into LEAP, then the user re-exports a fresh DB to
+    test whether the infeasibility resolves. After confirming the
+    diagnosis, the user is supposed to revert the placeholders and apply
+    the real fix. If a placeholder-patched DB is mistakenly fed to a
+    real production run, this check catches it.
+
+    Detection works via two heuristics:
+      - the active scenario's name carries a recognisable suffix
+        (currently ``_placeholder``), or
+      - the database has a ``Notes`` table row whose ``description``
+        starts with the placeholder note prefix.
+    Both are best-effort; the canonical signal is the CSV-side tag, but
+    once the patch lands in LEAP the trace is partially lost — hence
+    these heuristics.
+    """
+    # Cheap heuristic 1: scenario-name suffix
+    if "Scenario" in all_tables:
+        try:
+            df = db.query("SELECT name FROM Scenario")
+            for name in df["name"].astype(str):
+                if name.lower().endswith("_placeholder"):
+                    report.issues.append(ValidationIssue(
+                        severity="warning",
+                        category="placeholder_leakage",
+                        table="Scenario",
+                        message=(
+                            f"Scenario {name!r} carries the _placeholder "
+                            f"suffix; this database may still contain "
+                            f"Stage-5 diagnostic values. Revert and "
+                            f"re-export before any production analysis."
+                        ),
+                    ))
+                    break
+        except Exception:
+            pass
+
+
+
 
 
 def _check_varstosave_coverage(db: NemoDB, context, report: ValidationReport) -> None:

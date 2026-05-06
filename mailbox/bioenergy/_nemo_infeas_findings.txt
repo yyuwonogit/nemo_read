@@ -1,0 +1,102 @@
+=== ENV ===
+Area:     'aeo9_v0.33_yy_rev1'
+Scenario: 'Regional Aspiration Scenario'
+
+========================================================================
+ISSUE 1 — Brunei solar Minimum Utilization (Expression read only)
+========================================================================
+ActiveRegion = 'Brunei'
+
+--- Transformation\Centralized Electricity Generation\Processes\Solar PV ---
+  Minimum Utilization.Expression = 'Maximum Availability'
+  Maximum Availability.Expression = 'YearlyShape(Brunei_Solar Availability)'
+  Historical Capacity Factor.Expression = '0'
+
+--- Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop ---
+  Minimum Utilization.Expression = 'Maximum Availability'
+  Maximum Availability.Expression = 'Solar PV:Maximum Availability'
+  Historical Capacity Factor.Expression = '0'
+
+--- Transformation\Centralized Electricity Generation\Processes\Solar Floating ---
+  Minimum Utilization.Expression = 'Maximum Availability'
+  Maximum Availability.Expression = 'Solar PV:Maximum Availability'
+  Historical Capacity Factor.Expression = '0'
+
+--- exploring YearlyShape access (informational) ---
+  leap.Shapes inaccessible: LEAP.LEAPApplication.Shapes
+
+========================================================================
+ISSUE 2 — leftover Demand branches for bioenergy fuels
+========================================================================
+--- Demand\Non Energy Biomass\Palm Oil ---
+  ID: 16153
+  variables (22): ['Demand Cost', 'Total Final Energy Consumption', 'Total Activity', 'Activity Level', 'Final Energy Intensity', 'Share_of_Industry', 'Final Energy Demand', 'Useful Energy Demand', 'Demand Coproduction', 'Primary Energy Requirements Allocated to Demands', 'Demand Devices', 'Investment Costs', 'Power Load Shape', 'Energy Load Shape', 'One_Hundred Year GWP Direct and Indirect Allocated to Demands', 'One_Hundred Year GWP Indirect Allocated to Demands', 'Gross Energy Consumption', 'One_Hundred Year GWP Direct At Point of Emissions', 'Twenty Year GWP Direct At Point of Emissions', 'Five_Hundred Year GWP Direct At Point of Emissions', 'Pollutant Loadings', 'Social Costs']
+  Activity Level:
+    [Cambodia      ] '100'
+    [Indonesia     ] '100'
+    [Malaysia      ] '100'
+    [Philippines   ] '100'
+    [Thailand      ] '100'
+    [Vietnam       ] '100'
+  Final Energy Demand:
+    [Cambodia      ] ''
+    [Indonesia     ] ''
+    [Malaysia      ] ''
+    [Philippines   ] ''
+    [Thailand      ] ''
+    [Vietnam       ] ''
+
+--- Demand\Non Energy Biomass\Coconut Oil ---
+  ID: 16156
+  variables (22): ['Demand Cost', 'Total Final Energy Consumption', 'Total Activity', 'Activity Level', 'Final Energy Intensity', 'Share_of_Industry', 'Final Energy Demand', 'Useful Energy Demand', 'Demand Coproduction', 'Primary Energy Requirements Allocated to Demands', 'Demand Devices', 'Investment Costs', 'Power Load Shape', 'Energy Load Shape', 'One_Hundred Year GWP Direct and Indirect Allocated to Demands', 'One_Hundred Year GWP Indirect Allocated to Demands', 'Gross Energy Consumption', 'One_Hundred Year GWP Direct At Point of Emissions', 'Twenty Year GWP Direct At Point of Emissions', 'Five_Hundred Year GWP Direct At Point of Emissions', 'Pollutant Loadings', 'Social Costs']
+  Activity Level:
+    [Indonesia     ] '100'
+    [Malaysia      ] '100'
+    [Philippines   ] '100'
+    [Thailand      ] '100'
+    [Vietnam       ] '100'
+  Final Energy Demand:
+    [Indonesia     ] ''
+    [Malaysia      ] ''
+    [Philippines   ] ''
+    [Thailand      ] ''
+    [Vietnam       ] ''
+
+--- Demand\Non Energy Biomass\Cassava ---
+  ID: 16158
+  variables (22): ['Demand Cost', 'Total Final Energy Consumption', 'Total Activity', 'Activity Level', 'Final Energy Intensity', 'Share_of_Industry', 'Final Energy Demand', 'Useful Energy Demand', 'Demand Coproduction', 'Primary Energy Requirements Allocated to Demands', 'Demand Devices', 'Investment Costs', 'Power Load Shape', 'Energy Load Shape', 'One_Hundred Year GWP Direct and Indirect Allocated to Demands', 'One_Hundred Year GWP Indirect Allocated to Demands', 'Gross Energy Consumption', 'One_Hundred Year GWP Direct At Point of Emissions', 'Twenty Year GWP Direct At Point of Emissions', 'Five_Hundred Year GWP Direct At Point of Emissions', 'Pollutant Loadings', 'Social Costs']
+  Activity Level:
+    [Cambodia      ] '100'
+    [Indonesia     ] '100'
+    [Laos          ] '100'
+    [Malaysia      ] '100'
+    [Myanmar       ] '100'
+    [Philippines   ] '100'
+    [Thailand      ] '100'
+    [Vietnam       ] '100'
+  Final Energy Demand:
+    [Cambodia      ] ''
+    [Indonesia     ] ''
+    [Laos          ] ''
+    [Malaysia      ] ''
+    [Myanmar       ] ''
+    [Philippines   ] ''
+    [Thailand      ] ''
+    [Vietnam       ] ''
+
+--- Demand\Non Energy Biomass\Sugarcane ---
+  ID: 16154
+  variables (22): ['Demand Cost', 'Total Final Energy Consumption', 'Total Activity', 'Activity Level', 'Final Energy Intensity', 'Share_of_Industry', 'Final Energy Demand', 'Useful Energy Demand', 'Demand Coproduction', 'Primary Energy Requirements Allocated to Demands', 'Demand Devices', 'Investment Costs', 'Power Load Shape', 'Energy Load Shape', 'One_Hundred Year GWP Direct and Indirect Allocated to Demands', 'One_Hundred Year GWP Indirect Allocated to Demands', 'Gross Energy Consumption', 'One_Hundred Year GWP Direct At Point of Emissions', 'Twenty Year GWP Direct At Point of Emissions', 'Five_Hundred Year GWP Direct At Point of Emissions', 'Pollutant Loadings', 'Social Costs']
+  Activity Level:
+    [Malaysia      ] '100'
+    [Myanmar       ] '100'
+    [Thailand      ] '100'
+    [Vietnam       ] '100'
+  Final Energy Demand:
+    [Malaysia      ] ''
+    [Myanmar       ] ''
+    [Thailand      ] ''
+    [Vietnam       ] ''
+
+
+=== DONE ===

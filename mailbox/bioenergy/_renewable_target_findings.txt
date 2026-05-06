@@ -1,0 +1,22 @@
+=== ENV ===
+Area:     'aeo9_v0.33_yy_rev1'
+Scenario: 'Regional Aspiration Scenario'
+
+========================================================================
+STEP 1: tree paths matching Renewable / Target
+========================================================================
+  total tree paths: 5298
+
+  -- containing 'ASEAN' (1) --
+    Key\Region Group RE Targets\ASEAN All Regions Electricity
+
+  -- containing 'RE Target' (2) --
+    Key\Region Group RE Targets
+    Key\Region Group RE Targets\ASEAN All Regions Electricity
+
+========================================================================
+STEP 2: probe candidate Key/Other branches
+========================================================================
+
+  Key  -> exists (ID=3)
+    Branches inaccessible: <unknown>.Branches

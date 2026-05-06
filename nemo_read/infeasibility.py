@@ -30,6 +30,15 @@ decided statically from the SQLite data (e.g. whether a renewable share
 target is achievable given endogenous capacity expansion), the check is
 skipped rather than emitting a guess. NEMO's own ``find_infeasibilities``
 is the right tool for the dynamic case.
+
+When the run *did* go through and the solver reported a column-index
+infeasibility (e.g. CPLEX presolve: ``Infeasible column 'x435004'``),
+the static checks here usually come up clean — the contradiction lives
+in a multi-constraint chain rather than in a single bad row. Use
+:func:`nemo_read.decode_lp_column` (in :mod:`nemo_read.lp_column_decode`)
+to translate the ``xN`` index back to its NemoMod variable identity
+(family + region + tech + year). That tells you which corner of the
+data to inspect; the static checks above tell you what to fix.
 """
 
 from __future__ import annotations

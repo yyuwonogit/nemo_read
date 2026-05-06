@@ -1,0 +1,241 @@
+ams,branch,branch_type,variable,year,value
+Base Template,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,0.0
+Base Template,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Base Template,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Brunei,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,23662952.22528001
+Brunei,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,34746592.92619641
+Brunei,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,6458892.774478825
+Brunei,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,7646104.260758241
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Brunei,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Cambodia,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,7804.723200000606
+Cambodia,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,7163.0304000002225
+Cambodia,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,21588608.23040629
+Cambodia,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,25924080.448906388
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Cambodia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Indonesia,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,57067178.312938444
+Indonesia,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,53312901.203316435
+Indonesia,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,417571510.08817565
+Indonesia,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,561509147.6168048
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Laos,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,0.0
+Laos,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,0.0
+Laos,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,66967126.824305914
+Laos,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,87912853.63660441
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Laos,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Malaysia,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,5984.141876067468
+Malaysia,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,1642.3856925051932
+Malaysia,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,71889503491.2695
+Malaysia,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,156144252751.36636
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Myanmar,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,104575857.96019198
+Myanmar,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,381649941.2456392
+Myanmar,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,33147250.559022002
+Myanmar,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,36423328.73521296
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Myanmar,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Philippines,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,2681216515.261674
+Philippines,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,11207566088.361828
+Philippines,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,137544753.90770546
+Philippines,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,172198363.53182238
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,1213289050.109034
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,1208278614.8995397
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Philippines,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Singapore,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,996144.5041756562
+Singapore,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,389325.4195504468
+Singapore,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,135477524.03415838
+Singapore,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,148728289.26216853
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Singapore,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Thailand,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,179222416.51743522
+Thailand,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,5788149899.78915
+Thailand,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,678242655.2318121
+Thailand,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,878871434.1207095
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,5787621119.999997
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Thailand,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Vietnam,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,630555883.5600001
+Vietnam,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,636153.4944013124
+Vietnam,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,247130342.47045898
+Vietnam,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,301945071.18818325
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Vietnam,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Timor Leste,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2025,298807736.9856001
+Timor Leste,Transformation\Centralized Electricity Generation,Transformation Module,Inputs,2030,338829760.76461256
+Timor Leste,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2025,413283.61619243515
+Timor Leste,Transformation\Centralized Electricity Generation,Transformation Module,Capacity Added,2030,430302.9865452453
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2025,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Inputs,2030,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2025,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Added,2030,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2025,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Inputs,2030,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2025,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Added,2030,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2025,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Inputs,2030,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Added,2030,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2025,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Inputs,2030,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2025,0.0
+Timor Leste,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Added,2030,0.0

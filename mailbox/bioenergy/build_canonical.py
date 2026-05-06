@@ -45,6 +45,7 @@ from pathlib import Path
 TOPIC_DIR = Path(__file__).resolve().parent
 SOURCE_CSV = TOPIC_DIR / "bioenergy_leap_input.csv"
 OUTPUT_CSV = TOPIC_DIR / "canonical_leap_inputs.csv"
+HANDOFF_CSV = TOPIC_DIR / "bioenergy_maximum_capacity_handoff.csv"
 
 # LEAP region names that exist in aeo9 (must match leap.Regions[].Name exactly).
 ALL_10_AMS = [
@@ -88,6 +89,21 @@ def _is_deferred(branch: str, variable: str) -> bool:
         if branch == "Resources\\Secondary\\Biodiesel" and variable == "CO2 biogenic":
             return True
     return False
+
+
+# Note: a Maximum Capacity handoff filter was added 2026-05-05 when live
+# COM probe of v0.36 returned None on the 7 bioenergy process branches. It
+# turned out to be a transient LEAP-side issue (variable was hidden, not
+# retired); LEAP team re-enabled the variable on 2026-05-05 and the filter
+# was removed the same day. CSV_AUTHORING_GUIDE §13.2 records the cycle
+# for posterity. If the variable goes missing again, restore the filter
+# from git history (commit before 2026-05-05 inject).
+PROCESS_MAX_CAPACITY_HANDOFF_BRANCHES: set[str] = set()
+
+
+def _is_process_max_capacity_handoff(branch: str, variable: str) -> bool:
+    return (variable == "Maximum Capacity"
+            and branch in PROCESS_MAX_CAPACITY_HANDOFF_BRANCHES)
 
 # Long-form -> LEAP short-form region names.
 REGION_NORMALISE = {
@@ -173,8 +189,10 @@ def build():
     region_key = "ams" if (in_rows and "ams" in in_rows[0]) else "Region"
 
     out_rows = []
+    handoff_rows = []
     skipped_leap_missing: dict[str, int] = {}
     skipped_deferred: dict[tuple[str, str], int] = {}
+    routed_handoff: dict[tuple[str, str], int] = {}
     for row in in_rows:
         for r in _expand_region(row, region_key):
             branch = _pick(r, "branch")
@@ -192,7 +210,7 @@ def build():
             # If the canonical 'fuel' column is empty (or absent), fall
             # back to extracting from Note / branch-path heuristic.
             fuel = _pick(r, "fuel") or _extract_fuel(note, branch)
-            out_rows.append({
+            row_out = {
                 "ams":             _normalise_region(_pick(r, "ams")),
                 "branch":          branch,
                 "variable":        _pick(r, "variable"),
@@ -205,7 +223,18 @@ def build():
                 # Bioenergy-specific extras (preserved for traceability):
                 "domain":          _pick(r, "domain"),
                 "data_confidence": _pick(r, "data_confidence"),
-            })
+            }
+            # Route Maximum Capacity rows on migrated process branches to
+            # the LEAP-team handoff CSV (§13.3) instead of the inject
+            # canonical. The standard injector would have logged them as
+            # var_not_found on v0.36; this filter keeps the inject CSV
+            # clean while preserving the values for the LEAP team.
+            if _is_process_max_capacity_handoff(branch, variable):
+                handoff_rows.append(row_out)
+                routed_handoff[(branch, variable)] = (
+                    routed_handoff.get((branch, variable), 0) + 1)
+                continue
+            out_rows.append(row_out)
 
     fieldnames = [
         "ams", "branch", "variable", "expression", "unit", "fuel",
@@ -217,6 +246,34 @@ def build():
         for r in out_rows:
             writer.writerow(r)
     print(f"  wrote {OUTPUT_CSV.name}  ({len(out_rows)} rows)")
+
+    # Emit the handoff CSV (Maximum Capacity rows on migrated process
+    # branches). Same canonical schema as the inject CSV, but each row's
+    # `note` column is prefixed with the migration context so the LEAP
+    # team can re-route to Exogenous / Endogenous Capacity as appropriate.
+    if handoff_rows:
+        handoff_prefix = (
+            "[2026-05-05 §13.3 LEAP-team handoff] "
+            "Maximum Capacity variable retired on this Process branch in "
+            "LEAP v0.36 (live COM probe confirms Variable=None). Original "
+            "intent: refinery-fleet schedule. Likely v0.36 target: "
+            "Exogenous Capacity (locked-in fleet) or Endogenous Capacity + "
+            "ceiling (optimizer-picked, capped) — LEAP team to decide. "
+            "Source unit `Million Tonnes/yr` of biofuel; existing v0.36 "
+            "Exogenous Capacity rows on these branches use Interp(year, "
+            "million_litres) * 10^6 * ConvFuelUnits(liter, gj, <fuel>); to "
+            "splice with that style, multiply Mt by 1136 (biodiesel) or "
+            "1267 (ethanol) to convert tonnes to litres. ORIGINAL NOTE: "
+        )
+        with HANDOFF_CSV.open("w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for r in handoff_rows:
+                rr = dict(r)
+                rr["note"] = handoff_prefix + (r.get("note") or "")
+                writer.writerow(rr)
+        print(f"  wrote {HANDOFF_CSV.name}  ({len(handoff_rows)} rows)  "
+              f"[hand to LEAP team — see §13.3]")
 
     # Quick summary
     from collections import Counter
@@ -250,6 +307,18 @@ def build():
             print(f"  {n:>4}  {branch}:{variable}")
         print("These are emission-factor / structural placement issues; "
               "deferred until §12.4 cluster is reopened.")
+
+    if routed_handoff:
+        total_h = sum(routed_handoff.values())
+        print()
+        print(f"NOTE: routed {total_h} rows to {HANDOFF_CSV.name} "
+              f"(LEAP team handoff — see §13.3 in CSV_AUTHORING_GUIDE.md):")
+        for (branch, variable), n in sorted(routed_handoff.items()):
+            print(f"  {n:>4}  {branch}:{variable}")
+        print("Maximum Capacity variable retired in LEAP v0.36. These "
+              "rows preserve the refinery-fleet schedule for the LEAP "
+              "team to inject into Exogenous Capacity or Endogenous "
+              "Capacity (their call) on the v0.36 schema.")
 
 
 if __name__ == "__main__":

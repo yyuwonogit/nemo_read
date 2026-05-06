@@ -6,6 +6,43 @@
 
 A NEMO scenario `.sqlite` carries the numbers but loses the LEAP-side context — sectors, branch hierarchy, custom-constraint sources, formula expressions. `nemo_read` recovers all of it in a way that survives without LEAP installed.
 
+## Infeasibility resolution pipeline (the 11-stage methodology)
+
+When CPLEX/Cbc/Gurobi reports `Infeasible column 'xN'` (or any other dead
+end), `nemo_read` ships the full sequenced process:
+
+```
+1  PRE-FLIGHT          validate_scenario, find_infeasibilities
+2  SOLVER RUN          (LEAP/NEMO/CPLEX)
+3  POST-MORTEM TRIAGE  decode_lp_column        ← xN → vfamily[r,t,y]
+4  PATTERN FORENSICS   classify_parameter      ← bug vs intent per (r,t)
+5  PLACEHOLDER         propose_placeholders    ← ranked diagnostic patches
+6  DIAGNOSTIC TEST     inject_to_leap.py --placeholder-mode + re-run
+                              ┌─ solves          → cause CONFIRMED → Stage 9
+                              ├─ same xN         → wrong cluster, try next
+                              └─ new xN          → cause confirmed; new loop
+7  PROBE BRIEF         emit_probe_brief        ← only if Stage 6 stuck
+8  LEAP COM PROBING    nemo_read._leap_com
+9  REAL-FIX DESIGN     (manual, informed by 4+6+8)
+10 PATCH INJECTION     inject_to_leap.py        (refuses placeholder rows
+                                                without --placeholder-mode)
+11 VERIFICATION        loop back to Stage 1
+```
+
+The principle: **exhaust the SQLite + solver report before any LEAP probe;
+propose a testable placeholder before any real fix is committed**. Three
+mechanically distinct outcomes per placeholder run turn debugging into
+hypothesis testing. Every stage has a tool and an exit criterion.
+
+Detector battery in Stage 4 (each (r, t) cluster):
+`algebraic_of(other)`, `broadcast_across_regions`, `year_split`,
+`small_denom_fraction`, `varies_per_timeslice_only`. Verdict per cluster:
+`bug` / `intent` / `unknown`. Stage 5 emits placeholders only for `bug`
+and `unknown`, ranked lex by `(blast_radius, -confidence, reverse_difficulty)`
+so the smallest, most-confident, most-reversible test runs first.
+
+Worked example end-to-end in [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md).
+
 ## Architecture in one diagram
 
 ```
@@ -57,6 +94,7 @@ print(read_demand(db, by='sector', context=ctx).head())
 - Time-slice expansion (YearSplit × 8760), aggregation to TSGROUP1/2
 - Validation suite: referential integrity, YearSplit sums, demand-profile coverage, CCS unbounded-profit risk, etc.
 - Static infeasibility detector: bound inversions, MinimumUtilization > AvailabilityFactor, reserve-margin gaps
+- **11-stage infeasibility-resolution methodology** — pre-flight checks → solver run → LP-column triage (`decode_lp_column`) → pattern forensics with bug-vs-intent classification (`classify_parameter`) → ranked diagnostic placeholders (`propose_placeholders`) → diagnostic test cycle → minimum LEAP COM probe brief (`emit_probe_brief`) → real-fix design → injection (`inject_to_leap.py --placeholder-mode` gate). Three mechanically distinct outcomes per placeholder run turn debugging into hypothesis testing — no rabbit-chase. See [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md).
 
 ### Reading the LEAP area (one-shot probe, then forever offline)
 
