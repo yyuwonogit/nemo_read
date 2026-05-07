@@ -74,6 +74,94 @@ non-ID/MY AMS, all aligned to authoritative xlsx truth
 - `reference_first_scenario_year_trap.md` — the LEAP-side anchor trap
   for future infeasibility chases.
 
+### Power authoring domain + ID/MY subnational round 2 — validated against `aeo9_v0.38_yy` (2026-05-07)
+
+New mailbox domain [`mailbox/power/`](mailbox/power/) for power-sector
+scenario-level overrides. Adapter pipeline produces canonical CSVs
+from two input shapes (LEAP-export wide-by-row, year-wide pivot);
+3-cache driver pushes them under the per-AMS tree shape of
+`aeo9_v0.38_yy` (Indonesia/Malaysia carry both country-level and
+subnational `_IDxx`/`_MYxx`; other 9 AMS country-level only).
+
+Round 2 ID/MY EC + HP merged in-place into round 1.5 inject CSVs
+(`mailbox/20260505/inject_round1p5_{CA,ATS,BAS}.csv` now 240 / 118 /
+118 = 1148 rows total). Power standardisation pushed independently.
+
+#### Added
+- [`build_canonical.py`](mailbox/power/build_canonical.py) — LEAP-
+  export → canonical schema adapter. Filters: Base Template,
+  subnational-mismatch (`_IDxx` only with Indonesia, `_MYxx` only
+  with Malaysia), country-level-for-subnational-only-tech (per-AMS
+  mutual exclusion when both shapes appear in input), `DROP_OFFTREE_BRANCHES`
+  (global), `DROP_BRANCHES_PER_REGION` (region-specific).
+- [`build_canonical_yearwide.py`](mailbox/power/build_canonical_yearwide.py)
+  — wide-pivot → `Interp(year, value, …, FirstScenarioYear, 0)`
+  converter. Splits by variable into per-scenario canonical CSVs
+  (EC → CA only; HP → CA + ATS + BAS).
+- [`run_workflow.py`](mailbox/power/run_workflow.py) — 3-cache
+  region-grouped inject driver. `--blind` escape hatch for cache
+  lazy-load false-misses; `--fail-fast` to bound hang risk in blind
+  mode; `--expect-area` / `--expect-scenario` locks against drift.
+- [`CSV_AUTHORING_GUIDE.md`](mailbox/power/CSV_AUTHORING_GUIDE.md)
+  — per-AMS tree shape reference + 4 adapter filter rules + 3
+  expression shapes (literal / `Interp` / `Add` / cross-variable
+  formula) + pitfalls + cross-domain learnings (CLAUDE.md §6.3).
+- [`mailbox/20260505/_probe_readback_one.py`](mailbox/20260505/_probe_readback_one.py)
+  — auto-detects ActiveScenario, runs PROBES dict, per-row
+  ActiveRegion + blind direct lookup (no 5-min cache build). EXACT /
+  NORMALISED / FAIL semantics.
+- Round 2 audit chunks
+  ([`mailbox/power/20260507/inject_round2_id_my_*.csv`](mailbox/power/20260507/))
+  alongside the Rev1 source — usable as standalone CA / ATS / BAS
+  pushes if round 1.5 already landed.
+
+#### Documented (CLAUDE.md §11)
+- **Phantom-branch trap** — `--blind`'s direct
+  `leap.Branches(FullName)` returns a Branch object and accepts
+  `Variable.Expression` writes on FullNames that don't exist in the
+  area's UI tree. Inject log shows `[OK]`; read-back finds the value
+  wrote to nowhere or to a phantom node. Mitigation:
+  `DROP_OFFTREE_BRANCHES` (`Solar PV Rooftop` on Centralized,
+  `Unmet Load_IDxx`/`_MYxx`, `Gas Engine_MY*`) +
+  `DROP_BRANCHES_PER_REGION` (Indonesia/Malaysia × `Unmet Load`)
+  in `build_canonical.py` + UI sample-verify post-push.
+- **LEAP cache lazy-loading** — `leap.Branches.Count` enumeration is
+  region-INDEPENDENT (verified: 3 caches built under
+  Brunei/Indonesia/Malaysia byte-identical) but content varies
+  session-to-session as LEAP materialises subtrees. Cache count
+  fluctuated 4172↔5031 across same-area, same-scenario, same-Python
+  sessions. The `--blind` escape hatch is the workaround.
+- **Per-AMS tree shape** — Indonesia and Malaysia mix country-level
+  + subnational. Subnational-only techs in ID/MY: Biogas, Solar PV,
+  Solar PV Rooftop, Wind Onshore, Coal Subcritical, Diesel, Gas
+  Combined Cycle, Gas Engine, Gas Turbine, Geothermal Flash, Large
+  Hydro, Small Hydro, Biomass Other, Unmet Load. Country-level-only
+  in ID/MY: Coal IGCC (with/without CCS), Coal Supercritical (with/
+  without CCS), Coal Ultrasupercritical (with/without CCS), Bioenergy
+  with CCS, Biomass Gasification, CAES, Direct Air Capture, Fuel Oil,
+  Gas Combined Cycle with CCS, Gas Steam.
+- **Off-tree branches in this area:** `Solar PV Rooftop` is
+  Distributed-only (never on Centralized);
+  `Unmet Load_IDxx`/`Unmet Load_MYxx`/`Gas Engine_MY*` don't exist;
+  country-level `Unmet Load` doesn't exist under Indonesia or
+  Malaysia.
+
+#### Validated against `aeo9_v0.38_yy` (2026-05-07)
+- ATS combined power standardisation: 1364 rows pushed (EC formula
+  + per-year `Add(...)` Cap Add / Cap Ret deltas).
+- BAS power standardisation: 1477 rows (Cap Add / Cap Ret / EC = 0
+  across all power techs).
+- Rev1 ID/MY round 2: 126 CA (63 EC + 63 HP) + 63 ATS HP + 63 BAS HP.
+- Bioenergy + round 1.5 re-validated EXACT after separator-form fix
+  (re-injected with comma-list-sep + period-decimal across all 4
+  scenarios, save+reload survives).
+
+#### Memory updates
+- `reference_leap_separator_convention.md` — period-list-sep on
+  read-back = inject committed wrong format, not cosmetic display
+  quirk (Windows + LEAP both configured for comma-list / period-
+  decimal on this engine). Re-inject fixes; save+reload preserves.
+
 ## [0.6.7] — 11-stage infeasibility methodology with placeholder loop
 
 Closes the loop between "the solver said something broke" and "real fix

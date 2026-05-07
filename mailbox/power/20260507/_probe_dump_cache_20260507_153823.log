@@ -1,0 +1,15 @@
+[Brunei    ] 4172 branches dumped -> _cache_dump_brunei.txt (build_errors=0)
+  _MY* leaves: 0, _ID* leaves: 4
+  country-level Gas Combined Cycle present: True
+  country-level Wind Onshore present: True
+  country-level Solar PV present: True
+[Indonesia ] 4172 branches dumped -> _cache_dump_indonesia.txt (build_errors=0)
+  _MY* leaves: 0, _ID* leaves: 4
+  country-level Gas Combined Cycle present: True
+  country-level Wind Onshore present: True
+  country-level Solar PV present: True
+[Malaysia  ] 4172 branches dumped -> _cache_dump_malaysia.txt (build_errors=0)
+  _MY* leaves: 0, _ID* leaves: 4
+  country-level Gas Combined Cycle present: True
+  country-level Wind Onshore present: True
+  country-level Solar PV present: True

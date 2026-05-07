@@ -9,6 +9,19 @@ between v0.36 and v0.38 confirmed via
 expected `Transformation\Centralized Electricity Generation\Processes`
 paths present, no CSV retargeting required.
 
+**Round 2 ID/MY merged 2026-05-07** (`aeo9_v0.38_yy` cycle) — 126 EC
++ 126 HP rows on Indonesia / Malaysia subnational `_IDxx` / `_MYxx`
+nodes appended in-place to the round-1.5 inject CSVs. Source: Rev1
+LEAP-export drop in [`mailbox/power/20260507/`](../power/20260507/).
+Build script: [`build_round2_id_my.py`](../power/20260507/build_round2_id_my.py).
+Pre-merge state preserved as `*.bak_pre_20260507`. Audit chunks:
+`inject_round2_id_my_{CA,ATS,BAS}.csv` next to the source. **Push
+target switched from `inject_to_leap.py` to
+[`run_workflow.py`](../power/run_workflow.py)** for the power injects
+(steps 3-5) — the 3-cache region grouping is required to resolve
+`_IDxx` / `_MYxx` branches under cache region-filtering on
+`aeo9_v0.38_yy` (see [power/CSV_AUTHORING_GUIDE.md §5](../power/CSV_AUTHORING_GUIDE.md)).
+
 In execution order. **Round 1 EC (78 rows) is fully superseded by
 Round 1.5 CA** — skipped from the replication list since 1.5 CA writes
 the same 78 EC rows + anchor + 36 HP rows in one push.
@@ -17,10 +30,10 @@ the same 78 EC rows + anchor + 36 HP rows in one push.
 |---|---|---|---|---|
 | 1 | [`mailbox/bioenergy/canonical_leap_native.csv`](../bioenergy/canonical_leap_native.csv) | 580 | Regional Aspiration Scenario | Full bioenergy domain baseline — Capital Cost, Variable OM Cost, Maximum Capacity, Maximum Production, Production Cost, Import Cost, Area Harvested, Crop Yield, Fuel Cost across Biodiesel + Bioethanol processes + `Resources\Primary` feedstocks |
 | 2 | [`mailbox/bioenergy/canonical_patch_2026_04_30.csv`](../bioenergy/canonical_patch_2026_04_30.csv) | 92 | Regional Aspiration Scenario | Patch over (1): 77 × Maximum Capacity (curve-preserving Add deltas), 3 × Minimum Utilization=0 (Solar PV/Rooftop/Floating), 12 × Externality Cost=0 (Sequestered CO₂) |
-| 3 | [`inject_round1p5_CA.csv`](inject_round1p5_CA.csv) | 114 | Current Accounts | 78 × Existing Capacity + 36 × Historical Production for 8 non-ID/MY AMS, all with `, FirstScenarioYear, 0` anchor |
-| 4 | [`inject_round1p5_ATS.csv`](inject_round1p5_ATS.csv) | 55 | AMS Target Scenario | Historical Production with anchor for non-ID/MY AMS (BAS/ATS hold their own HP overrides — don't auto-inherit from CA) |
-| 5 | [`inject_round1p5_BAS.csv`](inject_round1p5_BAS.csv) | 55 | Baseline Simulation | HP with anchor — same content as ATS but in BAS scenario |
-| **Total** | | **896** | 3 scenarios | |
+| 3 | [`inject_round1p5_CA.csv`](inject_round1p5_CA.csv) | 240 | Current Accounts | Round 1.5 (114: 78 EC + 36 HP for 8 non-ID/MY AMS) **+ Round 2 (126: 63 EC + 63 HP for ID/MY subnational nodes)**, all with `, FirstScenarioYear, 0` anchor |
+| 4 | [`inject_round1p5_ATS.csv`](inject_round1p5_ATS.csv) | 118 | AMS Target Scenario | Round 1.5 (55 HP for non-ID/MY) **+ Round 2 (63 HP for ID/MY subnational nodes)**. BAS/ATS hold their own HP overrides — don't auto-inherit from CA |
+| 5 | [`inject_round1p5_BAS.csv`](inject_round1p5_BAS.csv) | 118 | Baseline Simulation | HP with anchor — same content as ATS but in BAS scenario |
+| **Total** | | **1148** | 3 scenarios | |
 
 ## Replication on a new LEAP file (5 injects in this order)
 
@@ -49,22 +62,27 @@ python mailbox/bioenergy/inject_to_leap.py \
 # expect: 92 rows pushed
 
 # 3. Power EC + HP → switch UI scenario to "Current Accounts"
-python mailbox/bioenergy/inject_to_leap.py \
+#    Use run_workflow.py (3-cache region grouping) — required for ID/MY
+#    subnational rows under aeo9_v0.38_yy cache region-filtering.
+python mailbox/power/run_workflow.py \
     --csv mailbox/20260505/inject_round1p5_CA.csv \
-    --no-scenario-switch
-# expect: 114 rows pushed
+    --expect-area aeo9_v0.38_yy \
+    --expect-scenario "Current Accounts"
+# expect: 240 rows pushed (114 round 1.5 non-ID/MY + 126 round 2 ID/MY)
 
 # 4. Power HP → switch UI scenario to "AMS Target Scenario"
-python mailbox/bioenergy/inject_to_leap.py \
+python mailbox/power/run_workflow.py \
     --csv mailbox/20260505/inject_round1p5_ATS.csv \
-    --no-scenario-switch
-# expect: 55 rows pushed
+    --expect-area aeo9_v0.38_yy \
+    --expect-scenario "AMS Target Scenario"
+# expect: 118 rows pushed (55 round 1.5 + 63 round 2)
 
 # 5. Power HP → switch UI scenario to "Baseline Simulation"
-python mailbox/bioenergy/inject_to_leap.py \
+python mailbox/power/run_workflow.py \
     --csv mailbox/20260505/inject_round1p5_BAS.csv \
-    --no-scenario-switch
-# expect: 55 rows pushed
+    --expect-area aeo9_v0.38_yy \
+    --expect-scenario "Baseline Simulation"
+# expect: 118 rows pushed (55 round 1.5 + 63 round 2)
 ```
 
 ## Ultimate fixing work
