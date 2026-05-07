@@ -37,6 +37,34 @@ non-ID/MY AMS, all aligned to authoritative xlsx truth
   between last named year and FirstScenarioYear, creating phantom
   HP-with-no-capacity errors when First Simulation Year > 2025.
   Canonical fix order documented.
+- **§11.1 Dry-run cache trap** — `inject_to_leap.py --dry-run` skips
+  per-AMS `ActiveRegion` set, so `LeapTreeCache` is built under
+  whatever region is active at start. False `branch_not_found` errors
+  appear for branches only exposed under specific regions; the real
+  push finds them. Mitigation: probe with `ActiveRegion` set to a
+  region that exposes the full tree before declaring structural
+  mismatch.
+- **§11.1 Branch-visibility flux** — cache size varies by hundreds of
+  branches between runs based on `ActiveRegion` at cache-build time
+  (5031 ↔ 4157 observed in same area/scenario). Don't treat cache
+  count as a stable invariant.
+- **§11.1 Spontaneous `ActiveArea=''`** — between back-to-back inject
+  calls, COM state can blank `ActiveArea` and report a placeholder or
+  cross-area scenario name (`'Bad Scenario [1]'`, `'Accelerated NZE
+  with CCS'`). Area-lock catches it; recovery is mechanical (re-verify
+  UI, retry).
+
+### Validated against `aeo9_v0.38` (2026-05-06)
+- All 5 inject blocks from
+  [mailbox/20260505/INJECTS_TO_REPLICATE.md](mailbox/20260505/INJECTS_TO_REPLICATE.md)
+  re-pushed cleanly to a fresh AEO9 v0.38 area: **896/896 rows** across
+  4 scenarios (RAS 672, CA 114, ATS 55, BAS 55). Exposed and documented
+  the dry-run cache trap, branch-visibility flux, and spontaneous
+  ActiveArea blank above. v0.38's `Transformation\Centralized
+  Electricity Generation\Processes` tree confirmed structurally
+  identical to v0.36's at the 18 expected paths via
+  [mailbox/20260505/_probe_v038_power_tree.py](mailbox/20260505/_probe_v038_power_tree.py)
+  — no CSV retargeting needed.
 
 ### Memory updates
 - `feedback_cross_team_handover.md` — when downstream team (Power)

@@ -12,6 +12,10 @@
 
 A fresh session, in 60 seconds:
 
+0. **`TODO.md` at the repo root, if present.** Cross-session pickup
+   note: where the previous session left off and what's not done yet.
+   Read it before forming a plan; it tells you the in-flight cycle's
+   state without needing to grep logs. (Harmless if absent.)
 1. **§2 — Hard rules.** Five standing rules. Don't violate them.
 2. **§3 — Repo layout.** Two halves: `nemo_read/` (library) +
    `mailbox/` (authoring pipeline + dated drops).
@@ -638,6 +642,37 @@ results-harvest probe (§7):
 - **`Base Template` is not a real region.** It appears in
   `leap.Regions` enumeration but is a LEAP placeholder. Always exclude
   from `--regions` lists in any probe or export.
+- **Dry-run cache trap — `inject_to_leap.py --dry-run` skips the
+  per-AMS `ActiveRegion` set** (gated on `not args.dry_run` at
+  [inject_to_leap.py:272](mailbox/bioenergy/inject_to_leap.py#L272)).
+  The `LeapTreeCache` is built before the AMS loop using whatever
+  `ActiveRegion` is active at script start. Branches that are only
+  exposed under specific regions return false `branch_not_found` in
+  dry-run, even though the real push (which sets ActiveRegion per-AMS)
+  finds them. Confirmed 2026-05-06 against `aeo9_v0.38`: a CA dry-run
+  reported 98/114 `branch_not_found` for power-tree branches; the same
+  rows pushed 114/114 cleanly under real-run. **Mitigation:** when
+  dry-run reports `branch_not_found` for branches you expect to exist,
+  before declaring real structural mismatch run a probe (e.g.
+  [mailbox/20260505/_probe_v038_power_tree.py](mailbox/20260505/_probe_v038_power_tree.py))
+  with `ActiveRegion` set to a region that should expose the full
+  tree, and diff `cache.fullname_to_idx` against expected paths.
+- **Branch-visibility flux 5031 ↔ 4157.** Same area, same scenario,
+  but cache size differs by ~870 branches between consecutive runs
+  based on `ActiveRegion` at cache-build time. The ±5 cache tolerance
+  in `LeapTreeCache` is for `Branches.Count` micro-fluctuation; it
+  does not catch the region-scope-dependent visibility delta. Don't
+  treat cache count as a stable invariant of the area.
+- **Spontaneous `ActiveArea=''` between Python invocations.** Even with
+  `--no-scenario-switch` and only the target area open, COM state can
+  spontaneously go bad between back-to-back inject calls — `ActiveArea`
+  blanks, `ActiveScenario` shows a placeholder name like
+  `'Bad Scenario [1]'` or a scenario from a *different* area like
+  `'Accelerated NZE with CCS'`. Observed 3× in one session against
+  `aeo9_v0.38`. Area-lock catches it (no writes happen); user
+  re-verifies UI state and retries. Trying to chase a root cause
+  through COM is not productive — the recovery is mechanical, not
+  diagnostic.
 
 ### 11.2 Variables and units (hoisted from §7's pitfalls)
 - **`Variable.DataUnitText` is the unit attribute.** `Variable.Unit.Name`

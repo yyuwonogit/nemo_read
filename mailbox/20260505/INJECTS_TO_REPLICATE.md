@@ -1,6 +1,13 @@
 # Injects to replicate on a new LEAP file
 
 All injects landed on `aeo9_v0.36` (lineage-inherited from v0.33).
+**Re-validated on `aeo9_v0.38` 2026-05-06 — 896/896 rows pushed
+cleanly across all 5 blocks** (logs in this folder, prefix
+`_inject_log_*.txt` and `_dryrun_*.txt`). Power-tree compatibility
+between v0.36 and v0.38 confirmed via
+[`_probe_v038_power_tree.py`](_probe_v038_power_tree.py) — all 18
+expected `Transformation\Centralized Electricity Generation\Processes`
+paths present, no CSV retargeting required.
 
 In execution order. **Round 1 EC (78 rows) is fully superseded by
 Round 1.5 CA** — skipped from the replication list since 1.5 CA writes
@@ -23,10 +30,16 @@ the same 78 EC rows + anchor + 36 HP rows in one push.
 # For each step: in LEAP UI, set the named scenario in the dropdown manually,
 # then run with --dry-run first.
 
+# Note: pass --expect-area <area name> on every call so the area-lock
+# catches LEAP COM state drift between invocations (observed 3× in the
+# v0.38 cycle; see CLAUDE.md §11.1 "Spontaneous ActiveArea=''"). Also
+# add --already-converted to skip the canonical_leap_native.csv name
+# check when pushing other CSVs in this folder.
+
 # 1. Full bioenergy domain → set scenario "Regional Aspiration Scenario"
 python mailbox/bioenergy/inject_to_leap.py \
     --csv mailbox/bioenergy/canonical_leap_native.csv \
-    --no-scenario-switch
+    --no-scenario-switch --expect-area <area_name>
 # expect: 580 rows pushed
 
 # 2. Bioenergy patch (Issues 1, 5, 6) → still in "Regional Aspiration Scenario"

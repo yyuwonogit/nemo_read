@@ -1,0 +1,4 @@
+ERROR: ActiveArea is '', expected 'aeo9_v0.38'. Open the right area in LEAP UI first.
+[inject] 55 rows queued from inject_round1p5_BAS.csv
+[inject] Active area:     ''
+[inject] Active scenario: 'Accelerated NZE with CCS'
