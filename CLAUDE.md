@@ -8,22 +8,284 @@
 
 ---
 
-## 0. Starting cold? Read in this order
+## 0. STOP — READ §A FIRST, EVERY SESSION
+
+These are HARD rules. Violating any of them has wasted the user's time
+catastrophically in past sessions. They override anything else in this
+file and override your training-data instincts. **You must update §A
+whenever you discover a new destructive failure mode** — memory is not
+durable enough; the failure has to land here, in this file, in the same
+task as the discovery.
+
+---
+
+## §A. Reality-grounding hard rules (anti-hallucination)
+
+**A.1 — Never invent workflow steps from training data.**
+If you cannot grep-confirm a feature, command, flag, file, or
+diagnostic path exists in *this* repo's code or docs, **it does not
+exist**. Do not propose it. Do not claim it works. Ask the user before
+asserting it. Burned 2026-05-11: I proposed `writelpfile=true` as a
+CPLEX diagnostic step — was a hallucination from training (CPLEX/Julia
+textbook content), never existed in this NemoMod build, wasted hours
+of past sessions chasing it. Documented retirement list in §8.
+
+**A.2 — Narrow-interpret scope on every cleanup/removal/change instruction.**
+When the user names items to remove or change, the scope is **exactly
+those items**. Not adjacent things that look fragile. Not items I just
+experienced a failure with. Not the "broader cleanup the user probably
+wants." If the user says X and Y, touch X and Y — nothing else. If you
+think more should change, **stop and ask**, quoting the user's exact
+words first. Burned 2026-05-11: user said "LP file + custom constraints
+never work, why still in workflow"; I retired LP file, custom
+constraints, **plus** probe brief and LEAP COM probing stages — neither
+of those last two was in the user's message. The user described this
+as "inventing things... destructive."
+
+**A.3 — Don't iterate on failing LEAP COM probes.**
+Each `LeapTreeCache` rebuild costs ~160s. Many failures are popup-modal
+traps (§11.2) that stay on screen. If a probe fails, **stop**. Don't
+write a "fixed" version and re-run it. Use cached dumps
+(`mailbox/<domain>/<date>/_cache_dump_*.txt`), existing canonical
+CSVs, prior inject logs, or **ask the user** what variable name /
+branch path to use. Burned 2026-05-11: probed FAME branch, hit the
+"Expressions are not used for result variables" popup, then queued a
+second probe before the user stopped me.
+
+**A.4 — NEVER read `Variable.Expression` or `Variable.DataUnitText`
+on result-side variables.** Hard repeat of §11.2 because I keep
+violating it. The COM call raises a modal popup ("Expressions are not
+used for result variables") that stays on screen even when the error
+is caught. Use `Variable.Name` only when enumerating; for value reads,
+restrict to input-side variables on branch types `{3, 50}` and walk by
+positional index (`Variables.Item(j)`), not by name lookup.
+
+**A.5 — Don't depth-first chase the first quantitative anomaly.**
+When triaging an infeasibility or any open-ended diagnosis, sweep
+broadly first — run *every* applicable static check, list *every*
+candidate bind, **then** drill. Burned 2026-05-11: spotted 190
+suspicious `ActivityLowerLimit` rows on import techs, spent multiple
+SQL probes chasing them before the user redirected me to bioenergy —
+where the real bind (FAME × palm oil, 1034× shortfall) would have
+appeared in the broad sweep on iteration one.
+
+**A.6 — Don't narrate plans. Act.**
+No numbered "Concrete plan:" lists, no "Let me X, then Y, then Z"
+preambles, no recap tables when the user is asking you to act. State
+the action in one sentence, then do it. Save structured write-ups for
+when the user asks for one. Burned repeatedly 2026-05-11; user:
+*"stfu why are you keep on talking in useless jargon."*
+
+**A.7 — When you learn a new destructive failure mode, add it HERE
+in §A, in the same task.**
+Memories get ignored under load (proven by the fact that I had three
+relevant memories on 2026-05-11 and violated all of them). The §A
+list must grow with every destructive lesson. Do not bury new
+destructive rules in `MEMORY.md` and call it done.
+
+**A.8 — Don't edit CLAUDE.md, `docs/**/*.md`, or the methodology
+files beyond what the user named.** These are durable artifacts. Mass
+restructures wasted user time when I did them unprompted. If you're
+adding to §A under rule A.7, that's allowed. Any other CLAUDE.md edit:
+quote the user's exact words authorizing it before editing.
+
+**A.9 — ALWAYS confirm LEAP state with the user before any COM probe
+or inject.** This includes `--dry-run`. Spell out:
+  1. Expected area (`leap.ActiveArea.Name` — confirm it matches what
+     the script will `--expect-area`).
+  2. Expected scenario (in the LEAP UI dropdown — confirm it matches
+     RAS/CA/ATS/BAS or whatever the task targets).
+  3. That the user has nothing else mid-flight in LEAP that the probe
+     could interrupt.
+Read the area name back to the user before launching: *"About to run
+probe X against area Y, scenario Z. OK to proceed?"* — wait for an
+explicit yes. Burned 2026-05-11: launched the bioenergy-infeas probe
+without asking; LEAP's `ActiveArea.Name` came back as `''` (the §11.1
+spontaneous-blanking trap), and the resulting probe output is now
+ambiguous about which area state was queried. The user called this
+out: *"hey remember everytime you are about to probe, you have to
+confirm with me first whether the leap is ready and the scenario is
+right first."* This rule overrides convenience — even short
+diagnostic probes get the confirmation step.
+
+**A.10 — Batch related LEAP COM operations into ONE Python invocation
+once state is confirmed.** When you have to inject + verify, inject +
+probe, multiple probes, or any other set of operations needing the
+same area/scenario state, write them as a single Python script (or
+chain them through the same `dispatch_leap()` session) and run that
+once. Don't fragment across multiple `python ...py` invocations.
+
+Why this matters:
+  1. `leap.ActiveArea.Name` spontaneously blanks between Python
+     invocations (the §11.1 trap — observed 3× on 2026-05-06 and
+     once on 2026-05-11). One invocation = one stable state, locked
+     and confirmed once.
+  2. `LeapTreeCache` rebuild costs ~130–165 seconds each time.
+     Reusing it across operations in the same script saves that.
+  3. §A.9 confirmation is durable for the duration of one Python
+     run; rebuilding it each call wastes user time.
+
+Burned and learned 2026-05-11: pushing the FAME `Minimum Utilization=0`
+placeholder and then probing `DataUnitText` on the same branches were
+done as two consecutive Python runs the first time (placeholder push
+succeeded, but the unit probe immediately afterward came up with
+`ActiveArea.Name = ''` — the spontaneous-blanking trap fired in the
+gap). Doing the *same* two operations as ONE Python invocation later
+that day (placeholder p2 + unit probe) ran cleanly: ActiveArea stayed
+locked to `'aeo9_v0.42_r1a'` throughout, cache was warm for the probe
+(10s instead of 165s), zero drift. User locked it in as SOP: *"when
+we do inject and probe we keep it running for multiple process, that
+way area and scenario in leap wont wane or drift. we manage to both
+inject and probe without any area or scenario issue, we have to
+remember it and keep on doing it that way."*
+
+How to apply:
+  - When planning a LEAP COM cycle, list every operation you'll need
+    (inject A, probe B, inject C, read D) and write them as ONE
+    script that does all of them in sequence.
+  - Inside that script: confirm state once at the top (§A.9), build
+    the cache once, then run every operation against the warm cache.
+  - The injector (`inject_to_leap.py`) already accepts multiple rows
+    in one CSV — use one CSV with everything, not multiple injections
+    with multiple CSVs. For probes that aren't currently
+    library-supported, write a one-off Python file under
+    `mailbox/<domain>/_probe_*.py` that does push-and-probe together.
+
+**A.11 — `Unlimited` string in LEAP authoring is a landmine. LEAP→NEMO
+export translates the literal `"Unlimited"` to `1.0e+12` regardless of
+which variable.** Two failure modes, BOTH catastrophic:
+
+  1. **Upper-bound variables** (`Maximum Production`, `Maximum Capacity`,
+     `Maximum Imports`): some AMS export the cap as missing/zero
+     instead of 1e12 (silent parse failure), leaving the supply chain
+     UN-CAPPED → infeasibility from the other direction. Confirmed
+     2026-05-12: `Maximum Production = Unlimited` on `Resources\Primary\
+     Biomass`/`Wood` for 8 of 11 AMS exported broken; 3 AMS with
+     numeric caps exported clean. p8 fix: replace with numeric 10000.
+  2. **Lower-bound variables** (`Exogenous Capacity` → NEMO
+     `ResidualCapacity`): 1e12 becomes a FORCED FLOOR. NEMO must
+     carry 10¹² of that variable in the LP basis. Confirmed 2026-05-12:
+     4 Blending pseudo-techs (Gasoline/Ethanol/Diesel/Biodiesel
+     Blending) had `Exogenous Capacity = Unlimited` → ResCap=1e12 PJ.
+
+Hard rules:
+  - Never author `Unlimited` on any lower-bound variable. Use 0 if no
+    floor needed, finite numeric if a floor is needed.
+  - On upper-bound variables: prefer a generous numeric (10,000 or
+    100,000) over `Unlimited`. The 1e12 sentinel pollutes LP
+    conditioning (CPLEX tolerance ~10⁹) even when it "works".
+  - **NEVER reflexively zero an existing `Unlimited`→1e12 sentinel
+    on a lower-bound variable** without verifying the tech has
+    alternate capacity sources (non-zero CapCost or non-NULL MaxCap).
+    Burned 2026-05-12: p9 set EC=0 on the 4 Blending techs (all
+    zero-cost, NULL MaxCap) → primal infeasibility went 24k → 4.6M
+    (190× worse). Use finite-but-large (~100,000 PJ) instead.
+  - Audit `Resources\Primary\*` and `Resources\Secondary\*` for
+    `Maximum Production = Unlimited` before any major recalc cycle.
+
+See also: `memory/reference_unlimited_1e12_trap.md` for the full
+operational signatures + grep recipes.
+
+**A.12 — Stage 1 audit clean ≠ structurally feasible. Always check
+Unmet Load slack visibility AND inter-region trade routes for any
+custom-constraint-mandated feedstocks BEFORE proposing another
+placeholder.** When `find_infeasibilities` returns clean but solver
+still INFEASIBLE, the bind is in a class our detector doesn't cover.
+The two most common (load-bearing) classes:
+
+  (a) **Unmet Load slack visibility and cost.** `Transformation\
+      Centralized Electricity Generation\Processes\Unmet Load_*`
+      branches must be UNHIDDEN in Base Template + each region, AND
+      have `Variable OM Cost` + `Fixed OM Cost` set (typical 500).
+      Without this, any unmet electricity demand → INFEASIBLE
+      instead of solved-with-high-cost. Node-specific variants exist
+      for sub-region-decomposed AMS (Indonesia IDJW/IDSA/IDKA/IDEast,
+      Malaysia MYPE/MYSB/MYSR) — all must be unhidden + priced.
+  (b) **Inter-region trade routes for fuels referenced by
+      `MinShareProduction` blend mandates.** When a region has B47/E37
+      blend mandates but zero local feedstock capacity (Indonesia
+      Sugarcane=0, Vietnam/Laos/Timor Leste Palm Oil=0, etc.), the
+      model needs `Key\Optimized Trade` enabled for the feedstock fuels
+      (Ethanol, Biodiesel, Coconut Oil, Palm Oil, POME, Cassava,
+      Molasses, Sugarcane, Corn) to import from surplus AMS. Trade
+      routes must be added per-region AND enabled in the active
+      scenario.
+
+Resolved 2026-05-13 on `aeo9_v0.42` RAS: the 24k residual primal
+infeasibility cleared after (a) + (b) plus the Optimized Trade plug-in
++ removing the legacy `add_trade_routes` function from the
+before-scenario script. Previous diagnostic angles (4 Blending 1e12
+ResCap, RMTag on non-power techs, biogenic CO2 EAR 4e7 magnitudes)
+were real data quality issues but NOT the structural cause.
+
+How to apply:
+  - When `find_infeasibilities` returns clean and solver is still
+    INFEASIBLE: STOP. Do not write another placeholder. Audit:
+      1. Every Unmet Load branch in Centralized Electricity
+         Generation — unhidden? Variable OM Cost set? Fixed OM Cost
+         set? Node-specific variants present for IDxx/MYxx?
+      2. For each `MinShareProduction` row, name the feedstock fuel
+         (via the constrained tech's IAR). Confirm `Key\Optimized
+         Trade` is enabled for that fuel and that all regions with
+         the mandate have trade routes configured.
+  - Only after these come back clean: move to Stage 1 detector
+    extension (storage chain, per-mode balance, per-timeslice balance).
+
+See also: `memory/feedback_stage1_clean_not_enough.md` and
+`memory/project_aeo9_v042_RAS_resolved.md` for the burn record.
+
+**A.13 — Hypothesis discipline. State hypothesis, propose smallest
+falsifying test, await result. NEVER claim "found the cause" without
+proof from a successful test.** Burned multiple times 2026-05-12:
+
+  - Claimed F26 AAD source = Other Biomass cooking Remainder → user
+    moved Remainder to Wood → infeasibility 24k → 1.27M (53× worse).
+  - Claimed 1e12 ResCap on Blending was the bind → pushed p9 EC=0 →
+    infeasibility 24k → 4.6M (190× worse).
+
+The pattern: data anomaly visible in SQLite → plausible mechanism
+story → declared "the cause" → injected fix → made worse. Each test
+disproved the hypothesis, but the over-statement misled the user.
+
+How to apply:
+  1. Frame: "hypothesis, not proven" — quote the anomaly, name the
+     mechanism, but do not say "this is the bind" or "found it".
+  2. Before pushing any fix: write the smallest, most reversible test
+     that would FALSIFY the hypothesis. Push that, then wait.
+  3. If the test makes things worse: hypothesis was wrong. Revert.
+     Move to next candidate. Do not double down with another fix in
+     the same direction.
+  4. If the test partially improves: hypothesis was partial. Don't
+     claim it's "the" cause — there's more.
+  5. The most expensive mistake is confident wrongness. Better to
+     under-claim and over-test than the reverse.
+
+This is on top of §A.5 (sweep broadly before drilling) — A.5 is
+about scope, A.13 is about discipline once a candidate is in view.
+
+See also: `memory/feedback_hypothesis_discipline.md` for the full
+2026-05-12 burn record (Wood reroute + p9 EC=0).
+
+---
+
+## §0. Starting cold? Read in this order
 
 A fresh session, in 60 seconds:
 
-0. **`TODO.md` at the repo root, if present.** Cross-session pickup
+0. **§A above — Reality-grounding hard rules.** READ FIRST. EVERY SESSION.
+1. **`TODO.md` at the repo root, if present.** Cross-session pickup
    note: where the previous session left off and what's not done yet.
    Read it before forming a plan; it tells you the in-flight cycle's
    state without needing to grep logs. (Harmless if absent.)
-1. **§2 — Hard rules.** Five standing rules. Don't violate them.
-2. **§3 — Repo layout.** Two halves: `nemo_read/` (library) +
+2. **§2 — Hard rules (modeling).** Five modeling-specific standing
+   rules. Don't violate them.
+3. **§3 — Repo layout.** Two halves: `nemo_read/` (library) +
    `mailbox/` (authoring pipeline + dated drops).
-3. Pick the workflow that matches the task:
+4. Pick the workflow that matches the task:
    - **§4 — Mailbox workflow** (CSV → inject upstream into LEAP)
    - **§7 — Results harvest SOP** (read calculated results out of LEAP)
    - **§8 — 11-stage infeasibility methodology** (solver said it broke)
-4. **§15 — End-of-task checklist.** Run through this before saying "done."
+5. **§15 — End-of-task checklist.** Run through this before saying "done."
 
 Then: skim `MEMORY.md` (auto-loaded) for user preferences, glance at
 `CHANGELOG.md`'s most recent section to know what just shipped, and
@@ -91,18 +353,63 @@ LEAP uses human names: `Philippines`, `Sugarcane`, `Annual`, `Diesel`.
 ### 2.3 Answer in *both* NEMO and LEAP terminology
 When prose touches a NEMO parameter or table, pair it with the LEAP-side
 equivalent so the modeller (LEAP-native) and the analyst (NEMO-native)
-can both follow. Starter mapping (extend as needed):
+can both follow.
 
-| NEMO side | LEAP side |
+**Mapping verified against the AEO9 LEAP version (2026-05-11)** — every
+LEAP variable name below has been grepped out of active
+`mailbox/<domain>/canonical_leap_inputs.csv` files and is known to
+inject cleanly. This table is the canonical reference for new injects;
+do not invent names. (User instruction 2026-05-11: *"match the claude
+md with the canonical insert. bcs this leap version is what we are
+going to use."*)
+
+**Process branches** (`Transformation\<Sector>\Processes\<Tech>`):
+
+| NEMO side | LEAP side (verified) |
+|---|---|
+| `ResidualCapacity` | `Exogenous Capacity` (the year-by-year exogenous fleet that flows through to NEMO) |
+| `CapitalCost` | `Capital Cost` |
+| `VariableCost` (on process) | `Variable OM Cost` |
+| `VariableCost` (on Feedstock Fuels sub-branch) | `Fuel Cost` (on `…\Processes\<Tech>\Feedstock Fuels\<Fuel>`) |
+| `FixedCost` | `Fixed OM Cost` |
+| `OperationalLife` | `Lifetime` |
+| `InterestRateTechnology` | `Interest Rate` |
+| `AvailabilityFactor` | `Maximum Availability` |
+| `MinimumUtilization` | `Minimum Utilization` (1:1) |
+| `TotalAnnualMaxCapacity` | `Maximum Capacity` |
+| `InputActivityRatio` | `Process Efficiency` (input side) |
+| `OutputActivityRatio` | `Process Efficiency` (output side) |
+| `EmissionActivityRatio` | `<Pollutant> (process)` on `…\Processes\<Tech>\Auxiliary Fuels\<F>\<Pollutant>` (CO2, CH4, N2O, NOx, SO2, NH3, NMVOC, "CO2 biogenic") |
+| `ReserveMarginTagTechnology` | `Capacity Credit` |
+| (LEAP-internal building blocks that don't directly map but inform `Exogenous Capacity`): | `Existing Capacity`, `Capacity Additions`, `Capacity Retirement`, `Historical Production` |
+| (LEAP result variables — never read `.Expression` on these; §11.2): | `Energy Generation`, `Power Generation`, `Capacity Added`, `Curtailed Energy Production`, `Pollutant Loadings`, `Costs of Production`, `Inputs` |
+
+**Resource branches** (`Resources\Primary\<Crop>` and
+`Resources\Secondary\<Fuel>`):
+
+| NEMO side | LEAP side (verified) |
+|---|---|
+| `TotalTechnologyAnnualActivityUpperLimit` (on `S{NN}D` Domestic Production tech) | `Maximum Production` on `Resources\Primary\<Crop>` (raw-crop tonnes per §2.4) |
+| `TotalTechnologyAnnualActivityUpperLimit` (on `S{NN}I` Imports tech) | `Maximum Production` on `Resources\Secondary\<Fuel> Imports` (or equivalent imports sub-branch — verify per-fuel) |
+| `VariableCost` (on `S{NN}D`) | `Production Cost` on `Resources\Primary\<Crop>` |
+| `VariableCost` (on `S{NN}I`) | `Import Cost` on `Resources\Primary\<Crop>` or `Resources\Secondary\<Fuel> Imports` |
+| (LEAP land-cap building blocks — not directly NEMO-mapped, see §2.4): | `Area Harvested`, `Crop Yield`, `Additions to Reserves`, `Export Benefit` |
+
+**Demand and effects branches:**
+
+| NEMO side | LEAP side (verified) |
 |---|---|
 | `SpecifiedAnnualDemand` + `SpecifiedDemandProfile` | Demand branch annual value + Load Shape |
-| `AvailabilityFactor` | `Maximum Availability` on the process |
-| `MinimumUtilization` | `Minimum Availability` (or capacity-factor floor) |
-| `CapitalCost` | `Capital Cost` on the process |
-| `ResidualCapacity` | `Exogenous Capacity` |
-| `TotalAnnualMaxCapacity` / `…MinCapacity` | `Maximum Capacity` / `Minimum Capacity` |
-| `EmissionActivityRatio` | Pollutant intensity on Environmental Loadings |
+| `EmissionsPenalty` (negative on sequestered emissions) | `Externality Cost` on `Effects\Sequestered Carbon Dioxide` |
 | `__NEMOcc_*` tables | Custom Constraint host branches + `customconstraints.txt` |
+
+**When the canonical doesn't have what you need:** the only durable
+truths are this table + the unique-variable list in the canonical
+CSVs. If you suspect a different LEAP variable name applies to your
+target, grep across `mailbox/**/canonical_leap_inputs.csv` first; only
+COM-probe if grep returns nothing. Adding a new mapping entry: confirm
+the LEAP name by reading at least one canonical row that uses it, then
+add the entry here with the verification date.
 
 ### 2.4 Bioenergy: land-resource modelling pattern
 Perennial / Arable land are intentionally modelled as **GJ-equivalent
@@ -489,30 +796,137 @@ CLAUDE.md is one Claude session away from being forgotten.
 
 ---
 
-## 8. The 11-stage infeasibility methodology
+## 8. The 11-stage infeasibility methodology (revised 2026-05-11)
 
-Centerpiece of the package since 0.6.6/0.6.7. When the solver reports
-`Infeasible column 'xN'`, follow this sequence — don't skip stages:
+The **only three sources of information** we use:
+
+> **(i) Solver error log**     `cN` vs `xN`, calc years, presolve status.
+> **(ii) NEMO sqlite**         All parameter tables, dimensions, descriptions.
+> **(iii) LEAP COM probe**     Targeted reads of `Variable.Expression` (or
+>                              equivalent via cached dumps / inject files /
+>                              asking the modelling team in parallel).
+
+We **never re-run `calculatescenario`** just to get more years or more
+detail — the calc is the expensive end of the loop. The two cheap sources
+(error log + sqlite) must narrow the LEAP-side probe down to a small,
+targeted set of reads. If the probe still isn't small after the cheap
+sources, the static check library has a gap — fix the gap (write a new
+detector in `infeasibility.py`) before moving on.
+
+The pipeline:
 
 ```
 1  PRE-FLIGHT          validate_scenario + find_infeasibilities → check_scenario
-2  SOLVER RUN          (LEAP / NEMO / CPLEX)
-3  POST-MORTEM TRIAGE  decode_lp_column(db, N)        → vfamily[r,t,y]
-4  PATTERN FORENSICS   classify_parameter             → bug / intent / unknown
-5  PLACEHOLDER         propose_placeholders           → ranked diagnostic patches
+                       Includes a GENERAL (r, f, y) fuel mass-balance audit:
+                       forced_demand (SpecifiedAnnualDemand + AccumulatedAnnualDemand
+                       + Σ MU×ResCap×C2A×IAR + Σ ActivityLowerLimit×IAR over
+                       consumer techs) vs max_supply (Σ max_activity×OAR over
+                       producer techs, with slack/uncapped producers as +∞).
+                       Output names contributing consumer + producer techs per
+                       (r, f, y) — these are the LEAP branches to probe next.
+
+2  SOLVER RUN          (LEAP / NEMO / CPLEX) — already happened by the time
+                       we're diagnosing.
+
+3  POST-MORTEM TRIAGE  xN → decode_lp_column(db, N) → vfamily[r,t,y]
+                       cN → no offline row decoder; rely on Stage 1's
+                            mass-balance output. The (r, f, y) triples
+                            already pinpoint the bind.
+
+4  PATTERN FORENSICS   classify_parameter / forensics_for_pinned_variable
+                       → bug / intent / unknown per cluster. For cN cases
+                       the mass-balance output names the techs — pattern-
+                       classify them and pick the most-likely-bug one.
+
+5  PLACEHOLDER         propose_placeholders → ranked diagnostic patches.
+                       Lex order: (blast_radius, −confidence, reverse).
+
 6  DIAGNOSTIC TEST     inject_to_leap.py --placeholder-mode
                           ├─ solves         → cause CONFIRMED → Stage 9
-                          ├─ same xN        → wrong cluster, try next
-                          └─ new xN         → cause confirmed; new loop
-7  PROBE BRIEF         emit_probe_brief               → minimum LEAP COM read list
-8  LEAP COM PROBING    nemo_read._leap_com
-9  REAL-FIX DESIGN     manual, informed by 4 + 6 + 8
-10 PATCH INJECTION     inject_to_leap.py              (placeholder gate refuses
-                                                       Stage-5 rows without flag)
-11 VERIFICATION        loop back to Stage 1
+                          ├─ same xN/cN     → wrong cluster, try next
+                          └─ new xN/cN      → cause confirmed; new loop
+
+7  PROBE BRIEF         emit_probe_brief → minimum LEAP COM read list
+                       (only when Stage 6 doesn't converge or you want to
+                       confirm the LEAP-side mechanism before real-fix.)
+                       The probe is THIS NARROW because Stage 1's mass-
+                       balance already named the branches.
+
+8  LEAP COM PROBING    nemo_read._leap_com — execute the brief.
+                       Mind the popup-modal traps (§11.2). ALTERNATIVES /
+                       PARALLEL to live COM probing (any of these is fine
+                       and often faster):
+                         - Read existing inject files in `mailbox/<domain>/`
+                           — most variables we'd probe have already been
+                           authored there with the LEAP-side expressions.
+                         - Read cached branch dumps
+                           (`mailbox/<domain>/<date>/_cache_dump_*.txt`).
+                         - Ask the relevant team (bioenergy / fossil /
+                           power) for the expressions while we probe.
+                       Whichever path delivers the expressions first wins.
+
+9  REAL-FIX DESIGN     Manual, informed by 4 + 6 + 8.
+                          bug + tech-broadcast scope → fix at template branch
+                          bug + per-region scope     → per-region rows
+                          intent (decay/harvest)     → DO NOT TOUCH; preserve
+                       If the calc only ran 2 years (e.g. 2025, 2050) but
+                       the LEAP expressions span 2025-2060: evaluate each
+                       Interp/Step expression offline at each model year,
+                       re-do the mass balance per (r, f, y) per year, and
+                       report all bind years without a recalc.
+
+10 PATCH INJECTION     inject_to_leap.py (placeholder gate refuses
+                       Stage-5 rows without --placeholder-mode flag).
+
+11 VERIFICATION        Loop back to Stage 1.
 ```
 
-Two things you must preserve:
+**Why this is the surefire narrowing:**
+
+- The fuel mass-balance audit at Stage 1 subsumes every known
+  shape-specific check (MU×ResCap, demand-without-supply,
+  ActivityLowerLimit-without-build-path) into ONE algorithm over
+  (r, f, y). No library of detectors to grow per shape — one detector
+  that aggregates all forced demand vs all supply per fuel-year.
+- The output names contributing techs on both sides of the imbalance, so
+  Stage 7's probe list writes itself: the LEAP branches to read are
+  exactly the consumer + producer techs the audit named.
+- If Stage 1 returns clean but the solver still infeasibles: the bind is
+  in a chain class our audit doesn't reach. **Before extending the
+  detector, check the two upstream classes from §A.12 + §11.4** —
+  Unmet Load slack visibility/cost and inter-region trade routes for
+  feedstock fuels referenced by `MinShareProduction` blend mandates.
+  These were the actual root cause on 2026-05-13 (aeo9_v0.42 RAS, 24k
+  residual cleared by enabling Unmet Load + Optimized Trade plug-in).
+  Only after those audits come back clean: extend `infeasibility.py`
+  for storage chain, per-mode balance, per-timeslice balance. The
+  library closes its own gaps over time.
+
+**Retired diagnostic angles (do not propose):**
+
+- **LP file dumps / `writelpfile=true` / `writelpsolution=true` /
+  `nemo.cfg` LP-output options.** This was never real on this user's
+  NemoMod + Julia + CPLEX build — no LP file is produced regardless of
+  the args you pass. Past sessions wasted hours on this. The offline
+  `decode_lp_column` works from SQLite alone; that is the only
+  column-index decoder available, and there is no offline row (cN)
+  decoder.
+- **Custom-constraint table inspection as a "what's causing the bind"
+  angle.** The `__NEMOcc_*` tables (RenewableCapacityTarget,
+  ASEANRenewableCapacityTarget, GHG limits, etc.) are real data and
+  must be preserved during real-fix design, but in practice they have
+  *never been the root cause* of an infeasibility we've diagnosed.
+  **CAVEAT (2026-05-13):** other policy-mandate parameters that are
+  NOT in the `__NEMOcc_*` tables CAN cause infeasibility —
+  specifically `MinShareProduction` blend mandates interacting with
+  missing inter-region trade routes for feedstock fuels (see §A.12
+  and §11.4). The retirement here applies only to the `__NEMOcc_*`
+  tables, not to all policy constraints.
+  Don't start there. Don't waste a Stage-4 cycle picking through them
+  hoping to find the bind — go straight to MinUtil×ResCap, bound
+  inversions, fuel-balance chains.
+
+**Things you must preserve:**
 
 - **The placeholder gate.** `inject_to_leap.py` *refuses* to push a row
   tagged `data_confidence=PLACEHOLDER` (or carrying the
@@ -532,7 +946,7 @@ Worked example + stage-by-stage exit criteria in
 
 | File | When you need it |
 |---|---|
-| [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md) | full 11-stage pipeline + worked x435004 example |
+| [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md) | infeasibility pipeline + worked x435004 example + revised cN path (see §8) |
 | [docs/schema.md](docs/schema.md) | NEMO v11 column reference |
 | [docs/cookbook.md](docs/cookbook.md) | analysis recipes (capacity stack, demand by sector, …) |
 | [docs/leap_integration.md](docs/leap_integration.md) | LEAP COM API + `_def` view semantics |
@@ -736,6 +1150,145 @@ is available."*
 Confirmed 2026-05-05 — Thailand Wind Onshore in BAS hit this on a
 Round 1.5 patch cycle. Resolution was `First Simulation Year = 2025`.
 
+### 11.2c Variable-renewable `Min Utilization = Maximum Availability` trap
+For variable-renewable tech (Solar PV, Solar PV Rooftop, Solar Floating,
+Solar CSP, Wind Onshore, Wind Offshore, Tidal, Wave, Small Hydro and all
+subregional `_IDxx` / `_MYxx` node variants), authoring
+`Minimum Utilization = Maximum Availability` (the formula
+`Maximum Availability` directly, without a `Min()` cap) creates a
+**must-run on the full AvailabilityFactor profile** — meaning the plant is forced to produce at AF in every
+timeslice with no curtailment slack. Two failure modes:
+
+1. **Physical infeasibility.** Solar / Wind / Tidal / Wave inherently
+   produce surplus at certain timeslices (sunny noon, windy nights).
+   With MU=AF the surplus has nowhere to go and the LP primal-infeasibles
+   on per-timeslice fuel balance.
+2. **Floating-point precision trap.** Even when MU = AF "exactly" in
+   LEAP, the AvailabilityFactor YearlyShape can carry tiny precision
+   leaks (~10⁻⁵ at specific timeslices). NEMO export rounds inconsistently,
+   producing MU > AF in some timeslice — instant primal infeas.
+   Static `MU > AF` check catches large leaks; small leaks sneak through.
+
+**Authoring rules:**
+- For variable renewables — **set `Minimum Utilization = 0`**. The plant
+  is fully curtailable; dispatch is driven by demand pull (blend mandates,
+  RE targets, electricity demand) and economics. This is the physically
+  realistic shape.
+- If you want a soft must-run signal on a baseload-ish or
+  incumbent-dispatch tech (Biomass, Large Hydro, Geothermal, etc.), use
+  one of three `Min(..., Maximum Availability)` patterns — the outer
+  `Min()` guards against MU > AF regardless of FP precision in AF:
+  1. **Static constant floor:** `Min(10.92, Maximum Availability)` —
+     used on Vietnam Biomass Other. Picks a fixed capacity-factor floor.
+  2. **Historical-CF static floor:** `Min(Value(Historical Capacity
+     Factor[percentage], LastHistoricalYear), Maximum Availability)` —
+     keeps the tech running at its measured historical CF indefinitely
+     (no phaseout).
+  3. **Phaseout trajectory:** `Min(Interp(FirstScenarioYear,
+     Value(Historical Capacity Factor[percentage], LastHistoricalYear),
+     FirstScenarioYear + Key\Modeling Assumptions\Incumbent Generator
+     Dispatch Phaseout:Activity Level[years], 0), Maximum Availability)`
+     — ramps historical CF down to 0 over the configured phaseout
+     horizon. Used on Malaysia subregional Biomass Other and Large Hydro
+     `_MY*` (set 2026-05-12). One centralized knob drives every
+     incumbent must-run together — change the Modeling Assumptions
+     `Activity Level[years]` value and every tech using this pattern
+     re-shapes simultaneously.
+- Never write the bare `Maximum Availability` as the MU expression on
+  any process branch.
+
+**Cross-tech checklist:** when you find this pattern on one tech, scan
+the LEAP file for the same authoring on every variable-renewable
+process branch — including the subregional `_IDxx` and `_MYxx` node
+variants and the `Rooftop`/`Floating` Solar variants.
+
+Confirmed 2026-04-30 — Brunei Solar PV / Solar PV Rooftop / Solar
+Floating tripped this with the AF YearlyShape's ~7×10⁻⁵ leak at Wet:Hr 7
+/ Dry:Hr 7. Patch set MU=0.
+Re-confirmed 2026-05-11 / 2026-05-12 on `aeo9_v0.42_r1e` RAS — the same
+pattern existed on every AMS for 8 variable-renewable tech families
+(Solar PV / Rooftop / Floating / **CSP**, Wind Onshore / Offshore, Tidal,
+Wave, Small Hydro) plus all subregional node variants. Cleared via
+placeholders p4 / p5 / p6 (~100 rows total) plus user manual cleanup of
+Solar CSP and Wind Onshore (which the placeholders missed). **Always
+search the full Centralized + Distributed Electricity Generation tree
+for any tech where `Minimum Utilization` evaluates to `Maximum
+Availability` — the placeholder lists don't enumerate all tech families
+that may be authored this way; user discovery is the ground truth.**
+
+### 11.2d "Unlimited" string export translation (the 1e12 trap)
+Authoring `Variable.Expression = "Unlimited"` (the literal string) in
+LEAP is parsed by LEAP→NEMO export as the `1.0e+12` numeric sentinel,
+regardless of which variable. See §A.11 for the full rule and burn
+record. Operational signatures:
+  - In `ResidualCapacity` (or any export-bound lower-bound table):
+    rows with `val = 1.000e+12` are the smoking gun. Grep the SQLite
+    for these before any structural diagnosis on an INFEASIBLE.
+  - In `TotalTechnologyAnnualActivityUpperLimit` /
+    `TotalAnnualMaxCapacity`: silently exports as missing/zero for
+    some AMS (~broken parse), un-capping the variable.
+  - In the CPLEX dual basis: ratios of 10¹² between an `Unlimited`-
+    sourced row and a normal-scale row produce dual perturbation
+    objective spikes to 10¹⁸-10²⁵ (observed 3.35×10¹⁸ on 2026-05-12).
+  - LP coefficient ratio ≥ 10⁹ breaches CPLEX's typical numerical
+    tolerance — even when the constraint is non-binding, it floods
+    the basis with precision noise.
+
+### 11.4 Policy-constraint feasibility (blend mandates + Unmet Load + trade routes)
+A tied set — all three must be configured together for any model
+that uses biofuel blend mandates. None of these are caught by
+`find_infeasibilities`; they have to be checked manually before
+triaging an INFEASIBLE that survives Stage 1.
+
+**(a) `MinShareProduction` blend mandates.** Rows like
+`(R1, P19886 Biodiesel, F5 Blended Diesel, 2050, 0.474)` require
+Biodiesel to be ≥47.4% of Blended Diesel production. Required
+upstream feedstock = mandate × demand × IAR; reaches hundreds of PJ
+in growth scenarios. Trace via:
+  - For each MSP row, look up the constrained tech's IAR — those
+    are the upstream feedstock fuel IDs.
+  - The mandate is enforced even when local feedstock production
+    capacity is zero, so the model needs an import path.
+
+**(b) Inter-region trade routes for the feedstock fuels.** If a
+region has zero local feedstock capacity (Indonesia Sugarcane=0,
+Vietnam/Laos/Timor Leste Palm Oil=0, etc.), the model needs
+`Key\Optimized Trade` enabled for the feedstock fuel to import from
+surplus AMS. Trade routes must be added per-region AND enabled in
+the active scenario. Setup requires the Optimized Trade plug-in;
+the legacy `add_trade_routes` before-scenario script function
+must be REMOVED if the plug-in is in use.
+
+**(c) Unmet Load slack visibility and cost.** `Transformation\
+Centralized Electricity Generation\Processes\Unmet Load_*` branches
+must be UNHIDDEN in Base Template + each region, AND have positive
+`Variable OM Cost` + `Fixed OM Cost` (typical 500). Without slack,
+any unmet electricity demand → INFEASIBLE instead of solved-with-
+high-cost. Node-specific variants (Unmet Load_MYSR, Unmet Load_IDJW,
+etc.) exist for sub-region-decomposed AMS and must each be unhidden
++ priced. Parameters on the node-specific variants live in CA, Set
+Up, and Base Template — all three must be consistent.
+
+Confirmed 2026-05-13 against `aeo9_v0.42` RAS: 24k residual primal
+infeasibility cleared after enabling (a) + (b) + (c) — specifically:
+  - Unhid all branches in `Transformation\Centralized Electricity
+    Generation\Processes\` in Base Template.
+  - In CA + Base Template, set Variable OM Cost + Fixed OM Cost = 500
+    on all Unmet Load processes.
+  - Unhid node-specific Unmet Load_* in Indonesia + Malaysia;
+    non-node-specific in other regions.
+  - Corrected parameters in CA, Set up, Base Template, and Malaysia
+    for `Unmet Load_MYSR`.
+  - Added Optimized Trade plug-in. Removed legacy `add_trade_routes`
+    from before-scenario script.
+  - Added trade routes in `Key\Optimized Trade` for Ethanol,
+    Biodiesel, Coconut Oil, Palm Oil, POME, Cassava, Molasses,
+    Sugarcane, Corn. Enabled in RAS.
+
+See also: `memory/project_aeo9_v042_RAS_resolved.md` for the full
+sequence and `mailbox/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md`
+for the dev-team handover.
+
 ### 11.3 Cosmetic-but-visible
 - **Modal popups are cosmetic, not failures.** "variable not visible
   for region X" / various other dialogs fire even when the underlying
@@ -899,6 +1452,46 @@ Every learning has a single right home. Use this table; don't double-park.
 
 If a learning fits two rows, write it once in the more durable home and
 link from the other.
+
+### 15.2.1 The CLAUDE.md → memory router pattern (auto-load reality)
+
+Only **two** files are auto-loaded into every Claude session:
+1. `CLAUDE.md` — full content.
+2. `memory/MEMORY.md` — full content (the one-line index).
+
+Individual memory files (`memory/reference_*.md`, `memory/feedback_*.md`,
+`memory/project_*.md`, `memory/user_*.md`) are **NOT** auto-loaded —
+their full content only enters context when a Claude instance explicitly
+Reads them, triggered by a topic-match against the MEMORY.md description.
+
+This means CLAUDE.md is the **router**: a new Claude in a fresh session
+will see only what's directly in CLAUDE.md + MEMORY.md's one-line
+descriptions. To pull deeper context, CLAUDE.md must contain explicit
+pointers like `See also: memory/<filename>.md for <what's in it>`.
+
+**Rules:**
+- When you add a hard rule to §A or a trap to §11 that has long-form
+  burn-log detail in a memory file, append a `See also: memory/X.md`
+  line at the end of that section. Don't make the next Claude
+  archaeology the connection from MEMORY.md descriptions alone.
+- Soft duplication between CLAUDE.md (the rule) and memory (the
+  long-form context) is **intentional and OK**. The rule must be in
+  CLAUDE.md to be auto-loaded; the long form lives in memory so it
+  doesn't bloat the auto-load context.
+- MEMORY.md descriptions must be keyword-rich (specific terms like
+  "1e12 export sentinel", "Unmet Load + trade routes", "hypothesis
+  discipline") so topic-match triggers reliably.
+- If a rule has NO long-form memory file, that's fine — CLAUDE.md
+  alone is sufficient. Add the memory file only when the burn-log
+  detail is too verbose to inline.
+- If a rule moves entirely from CLAUDE.md to a memory file, replace
+  the CLAUDE.md content with at minimum a one-line summary + the
+  `See also:` pointer. Never silently delete from CLAUDE.md.
+
+Established 2026-05-13 after user pointed out that individual memory
+files were orphaned from the auto-load entry point: *"claude md
+shouldve been able to detect and redirect for more details thru those
+other files."*
 
 ### 15.3 The CLAUDE.md update test
 

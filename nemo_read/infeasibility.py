@@ -78,6 +78,7 @@ def find_infeasibilities(
     _check_reserve_margin_without_tags(db, all_tables, report, sample_rows)
     _check_storage_without_charge_path(db, all_tables, report, sample_rows)
     _check_ccs_unbounded(db, all_tables, report, sample_rows)
+    _check_fuel_mass_balance(db, all_tables, report, sample_rows)
 
     return report
 
@@ -498,6 +499,237 @@ def _check_ccs_unbounded(
                 f"unbounded (infinite profit)."
             ),
             sample=unbounded.head(sample_rows),
+        ))
+
+
+_SLACK_RESIDUAL_THRESHOLD = 1e9
+
+
+def _nan_safe(v, default=0.0):
+    """Return default when v is None or NaN; otherwise v."""
+    if v is None:
+        return default
+    if isinstance(v, float) and (v != v):  # NaN != NaN
+        return default
+    return v
+
+
+def _check_fuel_mass_balance(
+    db: NemoDB, all_tables: set,
+    report: ValidationReport, sample_rows: int,
+) -> None:
+    """Mass-balance audit per (region, fuel, year).
+
+    Compare total forced demand for fuel f in (r, y) against total maximum
+    supply for fuel f in (r, y). When demand > supply, the model is infeasible
+    on a constraint somewhere in the fuel-balance chain, and CPLEX presolve
+    reports "Implied bounds make row 'cN' infeasible".
+
+    forced_demand(r, f, y) =
+        SpecifiedAnnualDemand(r, f, y)
+        + AccumulatedAnnualDemand(r, f, y)
+        + Σ over consumer techs t of [ min_activity(r, t, y) × max_IAR(r, t, f, y) ]
+
+      where min_activity(r, t, y) =
+            MAX( MAX_l(MinimumUtilization[r,t,l,y]) × ResidualCapacity × C2A,
+                 TotalTechnologyAnnualActivityLowerLimit[r,t,y] )
+
+    max_supply(r, f, y) =
+        Σ over producer techs t of [ max_activity(r, t, y) × max_OAR(r, t, f, y) ]
+        + ∞ if any producer is unbounded
+
+      where max_activity(r, t, y) =
+            +∞ if ResidualCapacity ≥ 1e9 (slack tech)
+            +∞ if no upper bound exists (uncapped investment path)
+            TotalTechnologyAnnualActivityUpperLimit[r,t,y] when present
+            TotalAnnualMaxCapacity × C2A otherwise (rough proxy)
+
+    The check subsumes:
+      - demand_without_supply (max_supply = 0, demand > 0)
+      - MinimumUtilization × ResidualCapacity × IAR vs feedstock-cap chain
+      - TotalTechnologyAnnualActivityLowerLimit-without-build-path
+
+    Output names contributing consumer and producer techs per (r, f, y) so
+    the targeted LEAP probe in Stage 4 (CLAUDE.md §8) knows exactly which
+    branches to read.
+
+    Designed 2026-05-11 to replace shape-by-shape checks (the earlier
+    `_check_min_util_feedstock_demand_vs_supply`) with a single general
+    audit, after the user pointed out that growing a check library is not
+    a method.
+    """
+    needed = {"InputActivityRatio", "OutputActivityRatio"}
+    if not needed <= all_tables:
+        return
+    if (db.row_count("InputActivityRatio") == 0
+            and db.row_count("OutputActivityRatio") == 0):
+        return
+
+    # --- Forced minimum activity per (r, t, y) ----------------------------
+    # MU × ResCap × C2A floor
+    mu_floor = pd.DataFrame(columns=["r", "t", "y", "floor"])
+    if {"MinimumUtilization", "ResidualCapacity"} <= all_tables:
+        sql = (
+            "SELECT mu.r, mu.t, mu.y, "
+            "       MAX(mu.val) * rc.val * COALESCE(c2a.val, 1.0) AS floor "
+            "FROM MinimumUtilization mu "
+            "JOIN ResidualCapacity rc "
+            "  ON rc.r = mu.r AND rc.t = mu.t AND rc.y = mu.y "
+            "LEFT JOIN CapacityToActivityUnit c2a "
+            "  ON c2a.r = mu.r AND c2a.t = mu.t "
+            "WHERE mu.val > 0 AND rc.val > 0 "
+            "GROUP BY mu.r, mu.t, mu.y"
+        )
+        mu_floor = db.query(sql)
+
+    # TotalTechnologyAnnualActivityLowerLimit floor
+    ll_floor = pd.DataFrame(columns=["r", "t", "y", "floor"])
+    if "TotalTechnologyAnnualActivityLowerLimit" in all_tables:
+        ll_floor = db.query(
+            "SELECT r, t, y, val AS floor "
+            "FROM TotalTechnologyAnnualActivityLowerLimit WHERE val > 0"
+        )
+
+    if len(mu_floor) == 0 and len(ll_floor) == 0:
+        forced_act: dict = {}
+    else:
+        combined = pd.concat([mu_floor, ll_floor], ignore_index=True)
+        # Take the binding (largest) floor per (r, t, y)
+        per_rty = combined.groupby(["r", "t", "y"])["floor"].max()
+        forced_act = {(r, t, y): v for (r, t, y), v in per_rty.items()}
+
+    # --- IAR and OAR per (r, t, f, y), max across modes ------------------
+    iar = db.query(
+        "SELECT r, t, f, y, MAX(val) AS iar "
+        "FROM InputActivityRatio WHERE val > 0 "
+        "GROUP BY r, t, f, y"
+    )
+    oar = db.query(
+        "SELECT r, t, f, y, MAX(val) AS oar "
+        "FROM OutputActivityRatio WHERE val > 0 "
+        "GROUP BY r, t, f, y"
+    )
+
+    # --- Supply-side bounds per (r, t, y) --------------------------------
+    def _index_rty(table: str) -> dict:
+        if table not in all_tables or db.row_count(table) == 0:
+            return {}
+        return {
+            (row.r, row.t, row.y): _nan_safe(row.val)
+            for row in db.query(
+                f'SELECT r, t, y, val FROM "{table}"'
+            ).itertuples(index=False)
+        }
+
+    residuals = _index_rty("ResidualCapacity")
+    act_ul = _index_rty("TotalTechnologyAnnualActivityUpperLimit")
+    max_cap = _index_rty("TotalAnnualMaxCapacity")
+
+    c2a_map: dict = {}
+    if "CapacityToActivityUnit" in all_tables:
+        c2a_map = {
+            (row.r, row.t): _nan_safe(row.val, 1.0)
+            for row in db.query(
+                "SELECT r, t, val FROM CapacityToActivityUnit"
+            ).itertuples(index=False)
+        }
+
+    def max_activity(r: str, t: str, y) -> float:
+        """Upper bound on annual activity for (r, t, y). +inf if uncapped."""
+        resid = residuals.get((r, t, y), 0.0)
+        if resid >= _SLACK_RESIDUAL_THRESHOLD:
+            return float("inf")
+        if (r, t, y) in act_ul:
+            return act_ul[(r, t, y)]
+        if (r, t, y) in max_cap:
+            return max_cap[(r, t, y)] * c2a_map.get((r, t), 1.0)
+        return float("inf")
+
+    # --- Exogenous demand per (r, f, y) ----------------------------------
+    demand_map: dict = {}
+    for table in ("SpecifiedAnnualDemand", "AccumulatedAnnualDemand"):
+        if table not in all_tables:
+            continue
+        df = db.query(f"SELECT r, f, y, val FROM \"{table}\" WHERE val > 0")
+        for row in df.itertuples(index=False):
+            demand_map[(row.r, row.f, row.y)] = (
+                demand_map.get((row.r, row.f, row.y), 0.0) + _nan_safe(row.val)
+            )
+
+    # --- Aggregate forced demand per (r, f, y), tag contributing consumers
+    forced_demand: dict = dict(demand_map)
+    consumer_contribs: dict = {}
+    if len(iar) > 0:
+        for row in iar.itertuples(index=False):
+            floor = forced_act.get((row.r, row.t, row.y), 0.0)
+            if floor <= 0:
+                continue
+            contrib = floor * row.iar
+            key = (row.r, row.f, row.y)
+            forced_demand[key] = forced_demand.get(key, 0.0) + contrib
+            consumer_contribs.setdefault(key, []).append((row.t, contrib))
+
+    # --- Aggregate max supply per (r, f, y), tag contributing producers --
+    max_supply: dict = {}
+    producer_contribs: dict = {}
+    if len(oar) > 0:
+        for row in oar.itertuples(index=False):
+            key = (row.r, row.f, row.y)
+            max_act = max_activity(row.r, row.t, row.y)
+            if max_act == float("inf"):
+                max_supply[key] = float("inf")
+                producer_contribs.setdefault(key, []).append(
+                    (row.t, float("inf"))
+                )
+            else:
+                contrib = max_act * row.oar
+                if max_supply.get(key) != float("inf"):
+                    max_supply[key] = max_supply.get(key, 0.0) + contrib
+                producer_contribs.setdefault(key, []).append((row.t, contrib))
+
+    # --- Find binds ------------------------------------------------------
+    findings: List[dict] = []
+    for key, demand in forced_demand.items():
+        if demand <= 0:
+            continue
+        supply = max_supply.get(key, 0.0)
+        if supply == float("inf"):
+            continue
+        if demand > supply * 1.001:  # 0.1% tolerance for FP noise
+            r, fuel, y = key
+            consumers = consumer_contribs.get(key, [])
+            producers = producer_contribs.get(key, [])
+            # Top 3 contributors, sorted by magnitude
+            consumers.sort(key=lambda kv: -kv[1])
+            producers.sort(key=lambda kv: -(kv[1] if kv[1] != float("inf") else 0))
+            findings.append({
+                "r": r, "f": fuel, "y": y,
+                "forced_demand": demand,
+                "max_supply": supply,
+                "shortfall_ratio": demand / max(supply, 1e-12),
+                "consumers": ",".join(f"{t}:{v:.3g}" for t, v in consumers[:3]),
+                "producers": ",".join(f"{t}:{v:.3g}" for t, v in producers[:3]),
+            })
+
+    if findings:
+        findings.sort(key=lambda d: -d["shortfall_ratio"])
+        sample = pd.DataFrame(findings[:sample_rows])
+        report.issues.append(ValidationIssue(
+            severity="error", category="fuel_balance",
+            table="(r, f, y) mass balance audit",
+            message=(
+                f"{len(findings)} (r, f, y) triples where total forced demand "
+                f"exceeds total max supply. Forced demand = "
+                f"SpecifiedAnnualDemand + AccumulatedAnnualDemand + sum over "
+                f"consumer techs of [min_activity x max_IAR], where "
+                f"min_activity = max(MU x ResCap x C2A, ActivityLowerLimit). "
+                f"Max supply = sum over producer techs of [max_activity x "
+                f"max_OAR], with slack/uncapped producers treated as +inf. "
+                f"CPLEX presolve will report 'implied bounds make row "
+                f"infeasible' on a row in this fuel balance. The 'consumers' "
+                f"and 'producers' columns name the techs to probe in LEAP."
+            ),
+            sample=sample,
         ))
 
 

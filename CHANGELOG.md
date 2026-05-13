@@ -162,6 +162,73 @@ Round 2 ID/MY EC + HP merged in-place into round 1.5 inject CSVs
   quirk (Windows + LEAP both configured for comma-list / period-
   decimal on this engine). Re-inject fixes; save+reload preserves.
 
+### aeo9_v0.42 RAS infeasibility resolved (2026-05-13)
+
+Resolved a multi-week INFEASIBLE on `aeo9_v0.42` RAS via three
+upstream fixes that none of our detectors caught: Unmet Load slack
+visibility/cost, Optimized Trade plug-in installation, and per-fuel
+inter-region trade routes for biofuel feedstocks. Earlier diagnostic
+angles (4 Blending pseudo-techs with `Exogenous Capacity = Unlimited`
+→ ResCap=1e12, RMTag=1 on non-power techs, biogenic CO2 EAR ~10⁷)
+were real data quality issues but not the structural cause.
+
+#### Documented (CLAUDE.md)
+- **§A.11 hard rule** — `Unlimited` string is a landmine. LEAP→NEMO
+  export converts literal `"Unlimited"` to `1.0e+12` regardless of
+  variable. Catastrophic on lower-bound variables (becomes a forced
+  1e12 floor in `ResidualCapacity`); benign-but-conditioning-toxic
+  on upper bounds. NEVER reflexively zero an existing 1e12 sentinel
+  on zero-cost pseudo-techs — burned 2026-05-12 (p9 EC=0 sent
+  infeasibility 24k → 4.6M, 190× worse).
+- **§A.12 hard rule** — Stage 1 audit clean ≠ structurally feasible.
+  When `find_infeasibilities` returns 0 but solver still INFEASIBLE,
+  audit Unmet Load slack visibility/cost AND inter-region trade
+  routes for `MinShareProduction` feedstocks BEFORE proposing
+  another placeholder.
+- **§A.13 hard rule** — Hypothesis discipline: state hypothesis as
+  "not proven", push smallest falsifying test, revert if worse,
+  never double-down. Captured after burning twice on 2026-05-12.
+- **§11.2d** — Operational signatures of the 1e12 `Unlimited` trap
+  (grep `ResidualCapacity` for `val = 1.000e+12`; dual perturbation
+  spikes to 10¹⁸-10²⁵).
+- **§11.4** — Policy-constraint feasibility tied set: blend mandates
+  + Unmet Load slack visibility + inter-region trade routes. None
+  caught by `find_infeasibilities`. Full fix log from 2026-05-13.
+- **§8 methodology** — Stage 1 description extended to point at
+  §A.12 / §11.4 audits before extending the detector. Custom-
+  constraint retirement gained a caveat distinguishing `__NEMOcc_*`
+  tables (still retired) from `MinShareProduction` policy mandates
+  (can cause infeasibility via missing trade routes).
+- **§15.2.1 router pattern** — formalized the CLAUDE.md → memory
+  redirect convention. Only `CLAUDE.md` and `MEMORY.md` are
+  auto-loaded; individual memory files require topic-match-driven
+  Read. CLAUDE.md must include explicit `See also: memory/X.md`
+  pointers where long-form burn-log detail lives. Soft duplication
+  between CLAUDE.md (rule) and memory (context) is intentional.
+
+#### Memory updates
+- `project_aeo9_v042_RAS_resolved.md` — current state of v0.42 RAS,
+  what's load-bearing, what was reverted (p9).
+- `feedback_hypothesis_discipline.md` — 2× burn record from
+  2026-05-12; "hypothesis-not-proven" framing.
+- `feedback_stage1_clean_not_enough.md` — audit Unmet Load + trade
+  routes when static checks pass but solver still INFEASIBLE.
+- `reference_unlimited_1e12_trap.md` — full operational detail on
+  the `Unlimited` → 1e12 export translation.
+- `MEMORY.md` index updated.
+
+#### Mailbox cleanup (mailbox/bioenergy/)
+- Removed 88 scratch files (`_probe_*`, `_probed_*`, `_audit_*`,
+  `_audited_*`, `_scan_*`, `_scanned_*`, `_diag_*`, `_diagnosed_*`,
+  `_check_*`, `_checked_*`, `_push_and_verify_*`, all
+  `_inject_log_*`, all `_*findings*`, old patch backups, failed p9
+  trio). Kept 21 durable artifacts: placeholder p1-p8 CSVs,
+  HANDOVER doc, FIXSPEC doc, authoring guides, current canonical +
+  unit audit + adapter pipeline.
+- [`mailbox/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md`](mailbox/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md)
+  — numbered-changelog handover doc covering all changes applied
+  (1-16) + status (resolved by items 9-16) + files-not-to-touch.
+
 ## [0.6.7] — 11-stage infeasibility methodology with placeholder loop
 
 Closes the loop between "the solver said something broke" and "real fix

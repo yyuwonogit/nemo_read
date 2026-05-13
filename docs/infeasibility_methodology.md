@@ -4,10 +4,64 @@ The standing process for going from "the solver said something broke" to
 "a real fix is in LEAP and the model solves" without rabbit-chase
 trial-and-error.
 
+> **Important addition 2026-05-13.** When the Stage 1 mass-balance
+> audit returns clean but the solver still reports INFEASIBLE, the
+> bind is NOT necessarily in a missing detector class. Two upstream
+> conditions can bind without showing in `find_infeasibilities`:
+> (a) hidden / unpriced Unmet Load slack on Centralized Electricity
+> Generation, (b) missing inter-region trade routes for fuels
+> referenced by `MinShareProduction` blend mandates. Audit those
+> BEFORE extending the static detector library. See **CLAUDE.md
+> §A.12 and §11.4** for the full rule + 2026-05-13 burn record
+> (aeo9_v0.42 RAS resolution).
+
 The principle: **exhaust the SQLite + solver report first, leave the
 minimum residual question for a precision LEAP probe, and propose a
 testable placeholder before any real fix is designed**. Every stage has
 a defined exit criterion and a tool that owns it.
+
+> **Revised 2026-05-11.** Two diagnostic angles are explicitly retired
+> (don't propose them):
+> - **LP file dumps** (`writelpfile=true` / `writelpsolution=true` /
+>   `nemo.cfg` LP-output options) were never functional on this user's
+>   NemoMod + Julia + CPLEX build. Past sessions wasted hours on this.
+>   Use `nemo_read.decode_lp_column` (offline, SQLite-only) for `xN`
+>   columns; there is no offline row (`cN`) decoder.
+> - **Custom-constraint inspection** as a "what's causing the bind"
+>   angle. The `__NEMOcc_*` tables (RenewableCapacityTarget, ASEAN
+>   target, GHG limits) are real data and must be preserved during
+>   real-fix design, but they have never been the root cause of an
+>   infeasibility in this codebase's history — don't start Stage 4
+>   there.
+>
+> Stage 1 pre-flight now runs a GENERAL (r, f, y) fuel mass-balance
+> audit (`_check_fuel_mass_balance` in `infeasibility.py`) that
+> subsumes the prior shape-by-shape detectors (MU×ResCap×IAR,
+> demand-without-supply, ActivityLowerLimit-without-build-path) into
+> one algorithm. Added after the aeo9_v0.42_r1a RAS cycle, when the
+> user pointed out that growing a library of shape-specific checks is
+> not a method — narrowing-down is.
+>
+> **Three info sources we use, in priority order**:
+> 1. solver error log (cN/xN + calc years)
+> 2. NEMO sqlite (the mass-balance audit runs here — outputs named
+>    consumer + producer techs per (r, f, y))
+> 3. LEAP COM probe targeted by (2). **Alternatives that often beat
+>    live COM in wall-clock time**: read existing
+>    `mailbox/<domain>/canonical_leap_inputs.csv` and inject files for
+>    the same expressions, read cached branch dumps
+>    (`mailbox/<domain>/<date>/_cache_dump_*.txt`), or ask the relevant
+>    domain team for the expressions in parallel.
+>
+> We **do not** re-run `calculatescenario` to get more years or more
+> detail — that's the expensive end of the loop. When the LEAP
+> expressions span more years than the calc produced (e.g. calc ran
+> [2025, 2050] but expressions cover 2025–2060), Stage 9 evaluates
+> them offline at each model year and re-does the mass balance per
+> (r, f, y) per year — no recalc.
+>
+> The 11-stage structure (including Stages 7–8 probe brief + LEAP COM
+> probing) is otherwise unchanged.
 
 ## Pipeline diagram
 
@@ -17,8 +71,10 @@ a defined exit criterion and a tool that owns it.
             │   tool: validate_scenario + find_infeasibilities        │
             │         → check_scenario                                │
             │   catches: schema, bound inversions, MU>AF, MinShare>1, │
-            │            demand-no-supply, reserve gaps, storage      │
-            │            gaps, CCS unbounded                          │
+            │            reserve gaps, storage gaps, CCS unbounded,   │
+            │            AND the general (r, f, y) fuel mass-balance  │
+            │            audit (forced demand vs max supply per fuel- │
+            │            year, with contributing techs named).        │
             │   outcome: clean → Stage 2.   issue → fix in LEAP       │
             └─────────────────────────────────────────────────────────┘
                                      ↓
@@ -84,6 +140,8 @@ a defined exit criterion and a tool that owns it.
             │ Stage 8   LEAP COM PROBING                              │
             │   tool: nemo_read._leap_com (existing)                  │
             │   human + LEAP open; execute brief; annotate answers.   │
+            │   Mind the popup-modal traps (CLAUDE.md §11.2) — never  │
+            │   read .Expression / .DataUnitText on result variables. │
             └─────────────────────────────────────────────────────────┘
                                      ↓
             ┌─────────────────────────────────────────────────────────┐

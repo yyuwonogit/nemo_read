@@ -68,8 +68,8 @@ Public API:
     * :class:`ColumnIdentity` — decoded result.
     * :func:`decode_lp_column` — single-column decode.
     * :func:`enumerate_dense_blocks` — table of (variable, start, end)
-      ranges; useful for sanity-checking the layout against an LP file
-      dump.
+      ranges; useful for sanity-checking the layout against a manual
+      reconstruction.
 """
 
 from __future__ import annotations
@@ -406,7 +406,7 @@ def enumerate_dense_blocks(
 ) -> "pd.DataFrame":
     """Return a DataFrame of the dense-prefix layout: one row per
     variable family with ``start`` / ``end`` column ranges and ``size``.
-    Useful for sanity-checking offsets against an LP-file dump.
+    Useful for sanity-checking offsets against a hand reconstruction.
     """
     import pandas as pd
     if varstosave is None:

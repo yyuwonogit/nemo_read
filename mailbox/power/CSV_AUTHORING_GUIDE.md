@@ -445,3 +445,47 @@ maintains one of these.
   which is country-level), so the bioenergy `inject_to_leap.py`
   single-cache build is still correct for those domains. Re-evaluate
   if a domain starts authoring subnational supply-side rows.
+
+- **2026-05-12 — Variable-renewable `Min Utilization = Maximum Availability`
+  is forbidden** (also see CLAUDE.md §11.2c). For every variable-renewable
+  process branch — Solar PV, Solar PV Rooftop, Solar Floating, **Solar CSP**,
+  Wind Onshore, Wind Offshore, Tidal, Wave, Small Hydro, plus all
+  subregional node variants (`_IDJW`, `_IDSA`, `_IDKA`, `_IDEast`,
+  `_MYPE`, `_MYSB`, `_MYSR`) — **the `Minimum Utilization` expression
+  must be `0`**, not the
+  bare `Maximum Availability`. The bare-`Maximum Availability` pattern
+  forces must-run at the full AF profile with no curtailment slack, which
+  is (a) physically wrong for variable renewables and (b) infeasible in
+  NEMO whenever the AF YearlyShape carries even a ~10⁻⁵ floating-point
+  leak at some timeslice (creates `MU > AF`, primal infeas).
+
+  If you want a soft must-run floor on a baseload-ish or
+  incumbent-dispatch tech (biomass, large hydro, geothermal), use one of
+  the safe patterns — all wrapped in `Min(..., Maximum Availability)` so
+  the outer `Min()` guards against MU > AF:
+
+  | Pattern | Use when | Example |
+  |---|---|---|
+  | `Min(<constant>, Maximum Availability)` | Static floor at a chosen capacity-factor | Vietnam Biomass Other: `Min(10.92, Maximum Availability)` |
+  | `Min(Value(Historical Capacity Factor[percentage], LastHistoricalYear), Maximum Availability)` | Static floor at the tech's actual measured historical CF | Use when you want hydro / biomass to keep running at its historical CF indefinitely |
+  | `Min(Interp(FirstScenarioYear, Value(Historical Capacity Factor[percentage], LastHistoricalYear), FirstScenarioYear + Key\Modeling Assumptions\Incumbent Generator Dispatch Phaseout:Activity Level[years], 0), Maximum Availability)` | Phaseout trajectory: historical CF → 0 over the configured phaseout horizon | Malaysia subregional Biomass Other (`_MYPE`, `_MYSB`, `_MYSR`) and Large Hydro `_MY*` (set 2026-05-12) |
+
+  The phaseout-trajectory pattern centralizes the phaseout horizon under
+  `Key\Modeling Assumptions\Incumbent Generator Dispatch Phaseout:Activity
+  Level` so one knob drives every incumbent must-run together. Apply it
+  to any tech whose dispatch should phase out on the same schedule;
+  apply the static-floor or historical-CF-floor patterns to techs whose
+  must-run is permanent.
+
+  Confirmed 2026-04-30 against Brunei Solar PV (root cause of that cycle's
+  RAS infeas) and re-confirmed 2026-05-11/12 against `aeo9_v0.42_r1e`
+  where the same pattern existed on every AMS × 7 VRE tech families plus
+  all subregional Indonesia / Malaysia node variants. Cleared via
+  placeholders p4 + p5 + p6 (~100 rows) plus manual user cleanup on
+  branches that didn't propagate via COM.
+
+  Other domains: **applies to bioenergy** if any biofuel-process branch
+  is ever authored with `Min Util = Max Availability`; the existing
+  Min(10.92, …) pattern on Biomass Other is the safe template.
+  **Does not apply to fossil** (thermal baseload MUs are intentional
+  must-run anchors per modeller decision).
