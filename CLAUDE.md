@@ -199,6 +199,54 @@ How to apply:
     writes a "finished" timestamp + summary to the JSON. The harness
     Bash background notifies on process exit.
 
+**A.17 — Every mechanically-enforceable rule in CLAUDE.md MUST have
+a pytest tripwire. Prose-only rules are systematically violated.**
+
+This rule about rules. Established 2026-05-17 after two separate
+prose-only-rule failures hit in the same session:
+  - §A.15 Interp() separator: documented since 2026-05-07 as prose.
+    Fossil canonical shipped `Interp(...; ...; ...)` anyway. User
+    caught it at inject time. Tripwire: `tests/test_interp_separator.py`.
+  - §14 public API re-export: documented since the package's start
+    as prose. `CanonicalInjector`, `CanonicalProber`, `HeartbeatLogger`
+    shipped without `__all__` entries. User caught it at install time.
+    Tripwire: `tests/test_public_api_completeness.py`.
+
+The pattern is identical:
+  - Author focused on building the thing
+  - Author satisfies the build-side test (the class works)
+  - Author forgets the ritual that makes the thing usable downstream
+  - Rule existed in prose; author didn't run the §15.1 end-of-task
+    checklist explicitly; bug ships.
+
+The cure is mechanical CI enforcement, not stricter prose.
+
+How to apply:
+  - **When proposing a new rule that has clear mechanical violation
+    criteria** (e.g., "every X must have Y", "no Z anywhere outside
+    W"), write the pytest tripwire in the SAME change that adds the
+    prose rule. Never ship a mechanically-enforceable rule as prose
+    only.
+  - **When discovering a new violation of an existing prose rule**,
+    add the tripwire in the same fix. Per §A.7, the destructive
+    failure mode gets documented; per §A.17, it also gets enforced.
+  - **Judgment-based rules** (§A.1, §A.2, §A.3, §A.5, §A.6, §A.9,
+    §A.13, §A.14) cannot be CI-enforced. Those stay as prose —
+    accepted residual risk.
+  - **The existing tripwire roster** (as of 2026-05-17):
+      `tests/test_interp_separator.py`       — §A.15 separator
+      `tests/test_inject_base.py`            — §5.1 seal + chokepoint
+      `tests/test_probe_base.py`             — §7.1 seal + BT={3,50}
+      `tests/test_public_api_completeness.py` — §14 __all__ completeness
+      `tests/test_claude_md_rules_enforced.py` — §10.2 version sync,
+                                                §A.11 Unlimited-on-LB
+  - **When adding a NEW rule** to this §A list that's mechanically
+    enforceable, either extend an existing tripwire file or add a
+    new one. Don't merge the rule prose without the test.
+
+See also: `tests/test_claude_md_rules_enforced.py` docstring for the
+audit of which §A rules have CI vs which are judgment-only.
+
 **A.11 — `Unlimited` string in LEAP authoring is a landmine. LEAP→NEMO
 export translates the literal `"Unlimited"` to `1.0e+12` regardless of
 which variable.** Two failure modes, BOTH catastrophic:
@@ -1693,7 +1741,12 @@ that computes X"), follow this sequence so it lands cleanly:
    (not positional tuples). Use `decode_dims(df, db)` if codes leak into
    the output.
 3. **Re-export.** Add to the relevant import block + `__all__` in
-   `nemo_read/__init__.py`.
+   `nemo_read/__init__.py`. **Enforced by
+   [tests/test_public_api_completeness.py](tests/test_public_api_completeness.py)
+   per §A.17** — every top-level class/function in `nemo_read/*.py`
+   whose name doesn't start with `_` MUST appear in `nemo_read.__all__`.
+   If a name should NOT be public, prefix it with `_`. The tripwire
+   fails CI on omission.
 4. **Test.** Add a unit test in `tests/test_<module>.py` with a synthetic
    fixture. Real-scenario data is the fallback, not the default.
 5. **Document.** Touch the matching `docs/<topic>.md` if the function is
@@ -1711,13 +1764,22 @@ the loop is closed**, regardless of whether the code change is small.
 
 ### 15.1 End-of-task checklist
 
-Run through this before saying "done" to the user:
+Run through this before saying "done" to the user. Items marked
+**[CI]** are now enforced by pytest tripwires (§A.17) — running
+`python -m pytest` clean is sufficient to verify them. Items
+without **[CI]** are judgment-based — actually walk through them.
 
-- [ ] **Tests.** `python -m pytest` clean (or new test added for the new
+- [ ] **[CI] Tests.** `python -m pytest` clean (or new test added for the new
       behaviour / regression).
-- [ ] **`__all__` synced** if any public symbol was added/renamed/removed.
+- [ ] **[CI] `__all__` synced** if any public symbol was added/renamed/removed.
+      Enforced by
+      [tests/test_public_api_completeness.py](tests/test_public_api_completeness.py).
+- [ ] **[CI] Version sync** — `pyproject.toml` and
+      `nemo_read/__init__.py` agree. Enforced by
+      [tests/test_claude_md_rules_enforced.py](tests/test_claude_md_rules_enforced.py).
 - [ ] **Version bump?** If this is a release-worthy change, both
-      `pyproject.toml` and `nemo_read/__init__.py` updated.
+      `pyproject.toml` and `nemo_read/__init__.py` updated (the CI
+      check above only catches DRIFT, not "should-have-bumped").
 - [ ] **CHANGELOG bullet** added in the appropriate section
       (`### Added` / `### Changed` / `### Fixed` / `### Documented` /
       `### Validated against …`). Bullet explains the *why*, not just

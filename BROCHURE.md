@@ -1,162 +1,117 @@
 # nemo_read
 
-**Decode LEAP/NEMO scenario SQLite databases — and pair them with a one-shot LEAP export so every analytical question works offline.**
+**Read, decode, author, and analyse LEAP/NEMO scenario data — with every LEAP COM operation funneled through a standardised, CI-enforced framework so the same mistake never ships twice.**
 
 ## Why
 
-A NEMO scenario `.sqlite` carries the numbers but loses the LEAP-side context — sectors, branch hierarchy, custom-constraint sources, formula expressions. `nemo_read` recovers all of it in a way that survives without LEAP installed.
+A NEMO scenario `.sqlite` carries the numbers but loses the LEAP-side context — sectors, branch hierarchy, custom-constraint sources, formula expressions. `nemo_read` recovers all of it AND closes the loop by authoring upstream fixes back into LEAP via COM. Every LEAP write goes through a sealed chokepoint with pre-flight CSV validation; every long-running probe runs in one warm COM session with structured heartbeat monitoring. Lessons from real failure modes (LP infeasibilities, COM modal popups, separator-encoding traps) are encoded as pytest tripwires, not just prose.
 
-## Infeasibility resolution pipeline (the 11-stage methodology)
+## The thirteen capabilities
 
-When CPLEX/Cbc/Gurobi reports `Infeasible column 'xN'` (or any other dead
-end), `nemo_read` ships the full sequenced process:
+| # | The Name | What it does | Primary entry points |
+|---|---|---|---|
+| 1 | **THE ORACLE** | Reads what NEMO already calculated — opens `.sqlite` scenario databases, decodes dimensions, returns named DataFrames for parameters and results. | `NemoDB`, `get_result`, `get_parameter`, `capacity_stack`, `energy_balance`, `print_overview`, `inspect_scenario` |
+| 2 | **THE PROBE** | Reads live LEAP area state via COM — branch tree, variable expressions, input units, result values, scenarios, regions. Long-running probes loop scenarios in ONE warm COM session. | `CanonicalProber` (subclass + `.run()`), `safe_value`, `safe_expression`, `safe_data_unit_text` |
+| 3 | **THE FORGE** | Pushes authored data UPSTREAM into LEAP via COM. Multi-phase warm-COM flow: dry-run → confirm → real inject → readback verify; multi-scenario in one COM session. | `CanonicalInjector` (subclass + `.run()`), `safe_set_expression` |
+| 4 | **THE SCRIBE** | Adapter pattern: hand-authored sector CSVs → normalised canonical CSV ready for THE FORGE. Auto-normalises `Interp()` separators at write time. | Each sector's `build_canonical.py` + `normalize_interp` |
+| 5 | **THE WARDEN** | Pre-flight static infeasibility detection on a NEMO scenario before the solver runs. General (region, fuel, year) fuel mass-balance audit names contributing techs. | `validate_scenario`, `find_infeasibilities`, `check_scenario` |
+| 6 | **THE SEER** | Post-mortem forensics when the solver returned INFEASIBLE — decodes `xN` columns to (var, region, tech, year), classifies clusters bug/intent/unknown, proposes ranked placeholder patches. | `decode_lp_column`, `classify_parameter`, `forensics_for_pinned_variable`, `propose_placeholders`, `emit_probe_brief` |
+| 7 | **THE HERALD** | Heartbeat broadcasting for long-running COM ops — structured stdout every 30s + parallel `_progress_*.json` updated every tick. Wired automatically into THE PROBE and THE FORGE. | `HeartbeatLogger`, `read_progress` |
+| 8 | **THE SIGIL** | The sealed mark on every `Interp(...)` expression — only comma list-separator + period decimal is permitted on this engine. Enforced at three layers: adapter write-time, injector chokepoint, pre-flight CSV scan. | `normalize_interp`, `assert_interp_canonical`, `validate_canonical_csv_expressions`, `InterpSeparatorError` |
+| 9 | **THE GATE** | The only sanctioned passage for writing `Variable.Expression` to LEAP. Sealed against override; subclass attempt raises `InjectorSealError` at class-definition time. Every sector's writes pass through here. | `safe_set_expression`, `compare_expressions` |
+| 10 | **THE ATLAS** | Frozen map of the NEMO v11 schema — every dimension, parameter, result-variable, source mapping, branch type, unit. The reference the rest of the library reads from. | `DIMENSIONS`, `PARAMETERS`, `RESULT_VARIABLES`, `LEAP_SOURCE_MAP`, `LEAP_BRANCH_TYPES`, `LEAP_NEMO_UNITS` |
+| 11 | **THE ALCHEMIST** | Transmutes between source-author units and LEAP-native units, with cited conversion factors and a 5★ confidence rubric. Audits canonical CSVs against the LEAP area's expected units. | `audit_canonical_units`, `apply_audit_conversions`, `propose_conversion`, `list_known_conversions`, `ConversionProposal` |
+| 12 | **THE DIVINER** | Cost and result decomposition — given a result row, trace back which input parameters and bound constraints produced it. Reveals whether a value hit lower bound, upper bound, or sits free. | `trace_cost`, `trace_result`, `BoundCheck`, `CostBreakdown`, `ResultTrace` |
+| 13 | **THE BLUEPRINT** | Scaffolds a new package skeleton following the established conventions (flat layout, `pyproject.toml`, GitHub Actions trusted publishing). The pattern reused across sibling repos. | `scaffold_package`, `nemo_read-scaffold` CLI |
 
-```
-1  PRE-FLIGHT          validate_scenario, find_infeasibilities
-2  SOLVER RUN          (LEAP/NEMO/CPLEX)
-3  POST-MORTEM TRIAGE  decode_lp_column        ← xN → vfamily[r,t,y]
-4  PATTERN FORENSICS   classify_parameter      ← bug vs intent per (r,t)
-5  PLACEHOLDER         propose_placeholders    ← ranked diagnostic patches
-6  DIAGNOSTIC TEST     inject_to_leap.py --placeholder-mode + re-run
-                              ┌─ solves          → cause CONFIRMED → Stage 9
-                              ├─ same xN         → wrong cluster, try next
-                              └─ new xN          → cause confirmed; new loop
-7  PROBE BRIEF         emit_probe_brief        ← only if Stage 6 stuck
-8  LEAP COM PROBING    nemo_read._leap_com
-9  REAL-FIX DESIGN     (manual, informed by 4+6+8)
-10 PATCH INJECTION     inject_to_leap.py        (refuses placeholder rows
-                                                without --placeholder-mode)
-11 VERIFICATION        loop back to Stage 1
-```
+All thirteen are top-level discoverable: `from nemo_read import <name>`. The tripwire `tests/test_public_api_completeness.py` guarantees no future capability ships without being re-exported.
 
-The principle: **exhaust the SQLite + solver report before any LEAP probe;
-propose a testable placeholder before any real fix is committed**. Three
-mechanically distinct outcomes per placeholder run turn debugging into
-hypothesis testing. Every stage has a tool and an exit criterion.
+## The silent layer — what enforces the rules
 
-Detector battery in Stage 4 (each (r, t) cluster):
-`algebraic_of(other)`, `broadcast_across_regions`, `year_split`,
-`small_denom_fraction`, `varies_per_timeslice_only`. Verdict per cluster:
-`bug` / `intent` / `unknown`. Stage 5 emits placeholders only for `bug`
-and `unknown`, ranked lex by `(blast_radius, -confidence, reverse_difficulty)`
-so the smallest, most-confident, most-reversible test runs first.
+| Tripwire | What fails CI if violated |
+|---|---|
+| `tests/test_interp_separator.py` | THE SIGIL violations in any canonical CSV |
+| `tests/test_inject_base.py` | THE GATE bypass (`var.Expression = expr` anywhere outside the chokepoint) + sealed-method override on `CanonicalInjector` |
+| `tests/test_probe_base.py` | THE PROBE's sealed BT={3,50} unit-read guard bypass + sealed-method override on `CanonicalProber` |
+| `tests/test_public_api_completeness.py` | Any public class/function in `nemo_read/` missing from `__all__` |
+| `tests/test_claude_md_rules_enforced.py` | Version drift (`pyproject.toml` ↔ `__init__.py`) + `Unlimited` authored on lower-bound LEAP variables (the 1e12 export sentinel trap) |
 
-Worked example end-to-end in [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md).
+Judgment-based rules (hypothesis discipline, cite-or-hedge, narrow scope, etc.) stay as prose — they can't be mechanically checked. Mechanical rules become tripwires.
 
-## Architecture in one diagram
+## Architecture
 
 ```
-   Windows (LEAP installed, run once)         Any OS (analysis side)
-   ┌──────────────────────────────────┐       ┌─────────────────────────────┐
-   │  nemo_read-leap-export           │  ──►  │  NemoDB("scenario.sqlite")  │
-   │  (Python + pywin32 + LEAP COM)   │       │  LeapAreaContext.discover() │
-   │                                  │       │                             │
-   │  Walks the LEAP area, dumps:     │       │  Now you can:               │
-   │  - branches.csv (full tree)      │       │  - read_demand by sector    │
-   │  - branch_variable_values.csv    │       │  - where_in_leap any row    │
-   │  - fuels/regions/timeslices/...  │       │  - trace_result with bound  │
-   │  - nemo.cfg, customconstraints   │       │  - trace_cost decomposition │
-   └──────────────────────────────────┘       └─────────────────────────────┘
-                                                            ▲
-                                                            │
-                                              from any platform, any time
+Windows (LEAP installed, COM access)             Any OS (analysis side)
+┌────────────────────────────────────────┐       ┌──────────────────────────────┐
+│  THE FORGE / THE PROBE                 │  ──►  │  THE ORACLE                  │
+│  (Python + pywin32 + LEAP COM)         │       │  NemoDB("scenario.sqlite")   │
+│                                        │       │  LeapAreaContext.discover()  │
+│  Author CSV → THE SCRIBE → canonical   │       │                              │
+│        → THE GATE → THE FORGE → LEAP   │       │  THE WARDEN runs first:      │
+│        ↓                               │       │  static infeasibility check  │
+│  THE PROBE → results + units CSVs ────►│       │                              │
+│        ↓                               │       │  THE SEER on failure:        │
+│  THE HERALD broadcasts heartbeat       │       │  xN decode → forensics       │
+└────────────────────────────────────────┘       │           → placeholders     │
+                                                  │  THE DIVINER traces results  │
+                                                  └──────────────────────────────┘
 ```
 
 ## Install
 
 ```bash
 pip install nemo_read              # core (any OS, no LEAP)
-pip install 'nemo_read[leap]'      # adds pywin32 for the exporter (Windows only)
+pip install 'nemo_read[leap]'      # adds pywin32 for THE FORGE + THE PROBE (Windows)
 ```
 
-## The flow
+## Quickstart — the three loops
 
 ```bash
-# 1. Once per area (Windows + LEAP open):
-nemo_read-leap-export --scenario "Regional Aspiration Scenario"
-
-# 2. Forever after, anywhere:
+# 1. ORACLE — read a calculated scenario (works anywhere, no LEAP)
 python -c "
-from nemo_read import NemoDB, LeapAreaContext, read_demand
+from nemo_read import NemoDB, get_result
 db = NemoDB('NEMO_25.sqlite')
-ctx = LeapAreaContext.discover(db)
-print(read_demand(db, by='sector', context=ctx).head())
+print(get_result(db, 'vtotalcapacityannual').head())
 "
+
+# 2. PROBE — harvest a full area in one COM session (Windows + LEAP open)
+python my_probe.py --scenarios "BAS,ATS,RAS,CA" --expect-area "aeo9_v0.45"
+# Writes results_<scenario>.csv per scenario, units.csv once, plus
+# _progress_*.json updated every tick for at-rest monitoring.
+
+# 3. FORGE — push authored data upstream into LEAP (Windows + LEAP open)
+python inject/<domain>/inject_to_leap.py \
+    --scenarios "BAS,ATS,RAS,CA" \
+    --expect-area "aeo9_v0.45"
+# Default flow: dry-run → confirm → real inject → readback verify,
+# all in ONE warm COM session per scenario.
 ```
 
-## Capabilities
+A new sector adds itself by writing a ~10-line `CanonicalInjector` subclass — see `inject/bioenergy/inject_to_leap.py` as the reference shape. The framework owns every LEAP-side concern; the subclass only declares scope.
 
-### Reading the SQLite alone (no LEAP)
-- 14 dimensions, 64 parameters, 88 result variables — full schema metadata in `nemo_read.schema`
-- `get_parameter` reconstructs the default-overlay even on pre-calculation databases
-- `get_result` filters latest `solvedtm` automatically; `solvedtm_values()` lets you walk history
-- xarray cubes, CSV / Parquet bulk export
-- Time-slice expansion (YearSplit × 8760), aggregation to TSGROUP1/2
-- Validation suite: referential integrity, YearSplit sums, demand-profile coverage, CCS unbounded-profit risk, etc.
-- Static infeasibility detector: bound inversions, MinimumUtilization > AvailabilityFactor, reserve-margin gaps
-- **11-stage infeasibility-resolution methodology** — pre-flight checks → solver run → LP-column triage (`decode_lp_column`) → pattern forensics with bug-vs-intent classification (`classify_parameter`) → ranked diagnostic placeholders (`propose_placeholders`) → diagnostic test cycle → minimum LEAP COM probe brief (`emit_probe_brief`) → real-fix design → injection (`inject_to_leap.py --placeholder-mode` gate). Three mechanically distinct outcomes per placeholder run turn debugging into hypothesis testing — no rabbit-chase. See [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md).
+## Status — v0.6.9
 
-### Reading the LEAP area (one-shot probe, then forever offline)
-
-The `nemo_read-leap-export` CLI walks the entire LEAP area through the COM API and writes a self-contained directory of plain CSV / TOML / text files next to your scenario `.sqlite`. After this runs once, the LEAP application doesn't need to be open (or even installed) on any machine that consumes the data.
-
-**Captured by default** (~30–60 min one-time on an AEO9-sized area):
-
-| File | Contents | Scale |
-|---|---|---|
-| `branches.csv` | **Every branch in the LEAP tree** — id, Name, FullName, parent_id, parent_name, BranchType (37-code map), level, **Notes** (provenance text) | All 5066 branches in AEO9: every Demand sector & subsector & technology, every Transformation Module & Process & Process Node, every Resource, Key Assumption, Transmission Line, Environmental Effect, Custom Constraint host |
-| `branch_variable_values.csv` | Numeric `Value()` readings for demand-tree leaves' `Final Energy Demand` and `Activity Level`, all years × all regions × active scenario | ~80,000 rows on AEO9 — sufficient to reconstruct demand-by-sector entirely offline |
-| `fuels.csv`, `regions.csv`, `timeslices.csv`, `tags.csv`, `units.csv`, `scenarios.csv` | Top-level LEAP catalogues with IDs and names | 66 fuels, 12 regions, 48 timeslices, 26 tags, 203 units, 11 scenarios in AEO9 |
-| `nemocc_sources.csv` | Every `*__NEMOcc` user variable mapped to the LEAP branch that defines it | Resolves the bid → branch link in `__NEMOcc` SQLite tables |
-| `nemo.cfg` | Verbatim TOML — `varstosave`, solver params, includes | Plain copy from LEAP's WorkingDirectory |
-| `customconstraints.txt` | Verbatim Julia source | Parsed by `read_custom_constraints()` for function names, NEMOcc table refs, and pollutant→eid map |
-| `manifest.json` | Export metadata — area, scenario, base/end years, format version, stats | For reproducibility |
-
-**Optional broader captures** (opt-in CLI flags):
-
-- `--include-expressions` — every input variable's `Expression` string (LEAP-side formulas like `Interp(2025, 35, 2040, 63, ...) ? RAS assumption`) for the active scenario across every branch
-- `--values-scope=all-input-vars` — `Value()` capture extended beyond demand leaves to every input variable on every branch (~1 hour territory, generates large CSVs)
-
-**Defensive infrastructure that makes the walk reliable**:
-
-- `LeapTreeCache` builds `id → positional-index` and `FullName → positional-index` maps once, then caches to JSON. Avoids the LEAP COM hang where `Branches("non-existent")` blocks indefinitely.
-- `safe_expression()` and `safe_value()` swallow the modal "Expressions are not used for result variables" / "Unrecognized unit" dialogs LEAP fires on certain reads.
-- 15-second per-branch deadline so a single stuck branch can't hang the whole export.
-- Region scoping uses `leap.ActiveRegion` global setter in an outer loop — 12 sets per area instead of thousands.
-- Persistent JSON cache means re-runs (after structural area changes) skip the slow id-map build and reuse it incrementally.
-
-### Pairing the two
-- `where_in_leap(table, row, context)` — any parameter row → branch FullName + LEAP UI variable name + UI navigation hint. Covers 59 of 64 NEMO parameters.
-- `read_demand(db, by="sector", context=ctx)` — sector × subsector × region × year breakdown without LEAP
-- `trace_result(db, table, row, context)` — for any result row, list contributing inputs (each with LEAP UI hint) + binding-constraint detection (hit upper / floored / freely optimised)
-- `trace_cost(db, region, year)` — decompose `vtotaldiscountedcost` into capex / opex / emissions-penalty / salvage / financing streams, by tech/storage/transmission
-- `decode_dims(df, db)` — package-wide rule: any DataFrame with NEMO codes (r, f, t, e, s, l, n) gets human names attached
-
-### Other utilities
-- `nemo_read-scaffold` CLI — generates a `src`-layout project package wrapping the reader for a research repo (registry, loaders, Parquet cache, CLI, tests)
-- `nemo_read-list-branch-vars` CLI (since 0.6.5) — single-branch variable enumeration via COM (names-only, no result-var modal popups). Targeted alternative to `nemo_read-leap-units --all` when you want to see what variables one specific branch type exposes.
-- `slack_technology_ids()` — auto-detects "Unserved" / "Unmet Load" pseudo-processes
-- `units_for(variable_name)` — labels every parameter and result with its LEAP-NEMO unit (PJ / GW / M$ / t)
-
-## Status — v0.6.5
-
-- 66 unit tests passing
-- End-to-end validated against multiple AEO9 scenarios — `aeo9_v0.32` (458 rows, 0.6.4) and `aeo9_v0.33_bak` (809 rows across bioenergy + fossil mailboxes, 0.6.5) — with 0 unresolved unit mismatches at injection time
-- Documented author-iteration workflow + build-adapter filter pattern in [docs/leap_export.md](docs/leap_export.md) for recurring per-domain CSV authoring cycles
+- **199 pytest tests passing** end-to-end (was 66 at v0.6.5)
+- End-to-end validated against multiple AEO9 scenarios — `aeo9_v0.32`, `aeo9_v0.33_bak`, `aeo9_v0.36`, `aeo9_v0.38_yy`, and `aeo9_v0.42` RAS infeasibility resolution
+- All thirteen capabilities re-exported at the top level (`from nemo_read import X`)
+- Five CI tripwires now enforce every CLAUDE.md rule that has a mechanical violation criterion (see "The silent layer" above)
 - Repository: https://github.com/yyuwonogit/nemo_read
-- Wheel + sdist built; PyPI publication pending
+- Wheel + sdist built (`dist/nemo_read-0.6.9-py3-none-any.whl`)
 
-## Gotchas (real-session learnings)
+## Gotchas (real-session learnings — now mostly framework-handled)
 
-- **Multi-area open**: when LEAP has more than one area open, setting `leap.ActiveScenario` over COM can jump to a different open area if it has a scenario with the same name. The injector auto-locks to the ActiveArea at start (since 0.6.4) and aborts if it shifts. **Best practice: keep only the target area open during a push.**
-- **Cosmetic LEAP popups**: setting an Expression on a branch where the variable isn't visible for a particular region (e.g. Cambodia → Refinery Capacity) triggers an informational LEAP popup. The COM call still succeeds; just dismiss the dialog. The script reports `[OK]` either way.
-- **Branch count fluctuates by ±1**: LEAP's `Branches.Count` can vary between calls. The tree-cache (since 0.6.4) tolerates ±5 to avoid unnecessary 3-minute rebuilds.
-- **Result-variable Expression access fires modals**: reading `Variable.Expression` on a *result* variable triggers a "Expressions are not used for result variables" dialog. The package uses a names-first iteration pattern to avoid touching `.Expression` on result variables. If you see one, the script's still alive — dismiss it.
+- **Multi-area open** — setting `leap.ActiveScenario` over COM can jump to a different open area if it has a scenario with the same name. THE FORGE / THE PROBE auto-lock to ActiveArea at start and abort on drift. Best practice: keep only the target area open during a push.
+- **`Variable.Expression` on result variables fires modal popups** — handled by THE PROBE's sealed `_read_unit_text` (BT={3,50} guard) and by never reading `.Expression` on result-side variables. If a dialog still appears, dismiss; the script logs `[OK]`.
+- **`Interp(...)` separator** — must be comma list-separator + period decimal on this engine. THE SIGIL enforces; semicolon-form CSVs are refused by THE GATE's pre-flight scan before any COM write.
+- **`Unlimited` on lower-bound LEAP variables** — converts to 1e12 in NEMO export and is a confirmed LP-infeasibility cause. `tests/test_claude_md_rules_enforced.py` scans every canonical CSV at CI time.
+- **Long-running probes** — a probe that exceeds 60s MUST run in background with THE HERALD wired in. The framework does this automatically; the harness `Monitor` tool streams heartbeats as notifications.
 
 ## More
 
-- **Cookbook**: `docs/cookbook.md` — 17 recipes, from first-look inventory to demand-by-sector
-- **LEAP export reference**: `docs/leap_export.md` — the export directory format + pairing convention
-- **Unit conversions**: `docs/unit_conversions.md` — defensible conversion factors with citations + 5★ confidence rubric
-- **Schema**: `nemo_read.PARAMETERS`, `nemo_read.RESULT_VARIABLES`, `nemo_read.LEAP_SOURCE_MAP`
-- **Wishlist + open work**: `docs/leap_area_wishlist.md`
+- **Cookbook**: `docs/cookbook.md` — 17 recipes, first-look inventory to demand-by-sector
+- **Standardised flows**: `docs/FLOWS.md` — canonical step-by-step for inject / results-harvest / infeasibility triage
+- **LEAP export reference**: `docs/leap_export.md`
+- **Infeasibility methodology**: `docs/infeasibility_methodology.md` — full 11-stage walk-through
+- **Unit conversions**: `docs/unit_conversions.md` — defensible factors with citations
+- **Repository layout + routing**: `MAILBOX_ROUTING.md` — the inbox → inject/result routing ritual
+- **Operator brief**: `CLAUDE.md` — full hard-rules + workflow contract for any agentic LLM working inside this repo

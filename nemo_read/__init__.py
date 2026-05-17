@@ -39,9 +39,24 @@ Infeasibility resolution pipeline (11 stages, see docs/infeasibility_methodology
           variable; ranked placeholder patches for diagnostic testing.
     Stage 7  emit_probe_brief
         — minimum LEAP COM read list when placeholders don't converge.
-    Stage 10 mailbox/.../inject_to_leap.py (existing)
+    Stage 10 inject/.../inject_to_leap.py (existing)
         — pushes patches via LEAP COM; refuses placeholder rows without
           --placeholder-mode flag.
+
+Standardised LEAP COM frameworks (2026-05-17):
+    CanonicalInjector   — subclass for sector-specific authoring pipelines.
+        Sealed safe_set_expression chokepoint, area/scenario locks,
+        warm-COM multi-phase flow (dry-run → confirm → real → readback),
+        multi-scenario in one COM session. See docs/FLOWS.md §1.
+    CanonicalProber     — subclass for long-running LEAP COM probes
+        (results harvest, units harvest). Sealed safe_value /
+        safe_data_unit_text reads, BT={3,50} popup-safe guard,
+        heartbeat + progress JSON convention. See docs/FLOWS.md §2.
+    HeartbeatLogger     — universal heartbeat + _progress_*.json file
+        for any LEAP COM op > 60s (§A.16).
+    safe_set_expression, normalize_interp, validate_canonical_csv_expressions,
+    compare_expressions — the §A.15 Interp() separator enforcement
+    primitives.
 """
 
 from .db import NemoDB
@@ -136,6 +151,24 @@ from .trace import (
 
 from .scaffold import scaffold_package
 
+# Standardised LEAP COM frameworks (2026-05-17)
+from .inject_base import (
+    CanonicalInjector, InjectorSealError,
+)
+from .probe_base import (
+    CanonicalProber, ProberSealError,
+    DEFAULT_RESULT_VARS, DEFAULT_INPUT_VARS,
+    DEFAULT_RESULT_BRANCH_TYPES, DEFAULT_UNIT_BRANCH_TYPES,
+    DEFAULT_YEARS,
+)
+from ._heartbeat import HeartbeatLogger, read_progress
+from ._leap_com import (
+    InterpSeparatorError,
+    assert_interp_canonical, compare_expressions,
+    normalize_interp, safe_set_expression,
+    validate_canonical_csv_expressions,
+)
+
 __all__ = [
     "NemoDB",
     "inspect_scenario", "print_overview",
@@ -182,6 +215,17 @@ __all__ = [
     "BoundCheck", "CostBreakdown", "InputTrace", "ResultTrace",
     "trace_cost", "trace_result",
     "scaffold_package",
+    # Standardised LEAP COM frameworks (2026-05-17, §A.10 + §A.15 + §A.16)
+    "CanonicalInjector", "InjectorSealError",
+    "CanonicalProber", "ProberSealError",
+    "DEFAULT_RESULT_VARS", "DEFAULT_INPUT_VARS",
+    "DEFAULT_RESULT_BRANCH_TYPES", "DEFAULT_UNIT_BRANCH_TYPES",
+    "DEFAULT_YEARS",
+    "HeartbeatLogger", "read_progress",
+    "InterpSeparatorError",
+    "assert_interp_canonical", "compare_expressions",
+    "normalize_interp", "safe_set_expression",
+    "validate_canonical_csv_expressions",
 ]
 
-__version__ = "0.6.7"
+__version__ = "0.6.9"
