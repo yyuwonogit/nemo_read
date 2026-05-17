@@ -1,88 +1,84 @@
 # In-flight work — pick up here
 
-> **Cross-session pickup note.** Started 2026-05-06; user is continuing
-> in another engine. Read this before doing anything else. Delete (or
-> empty) once §1-3 are complete.
+> **Cross-session pickup note.** This file is what a fresh Claude
+> session reads first (CLAUDE.md §0). It tells you what's pending
+> across sessions. Update or empty it whenever a major piece of work
+> completes.
 
-## Where we are
+## Status as of 2026-05-17
 
-Re-validated the [`mailbox/20260505/INJECTS_TO_REPLICATE.md`](mailbox/20260505/INJECTS_TO_REPLICATE.md)
-inject queue on a fresh `aeo9_v0.38` LEAP area. **896/896 rows pushed
-clean** across 4 scenarios (RAS 672, CA 114, ATS 55, BAS 55). Logs in
-[`mailbox/20260505/_inject_log_*.txt`](mailbox/20260505/) and
-[`mailbox/bioenergy/_inject_log_*.txt`](mailbox/bioenergy/).
+**Workstream 1 — Standardised inject + probe framework: DONE.**
+- [nemo_read/inject_base.py](nemo_read/inject_base.py) ships `CanonicalInjector` (sealed primitives + open hooks; warm-COM dry-run → confirm → real → readback in one Python invocation; multi-scenario via `--scenarios`)
+- [nemo_read/probe_base.py](nemo_read/probe_base.py) ships `CanonicalProber` (sealed BT={3,50} unit-read guard; Probe A per scenario + Probe B once per area, one COM session)
+- [nemo_read/_heartbeat.py](nemo_read/_heartbeat.py) ships the universal heartbeat + `_progress_*.json` convention for any LEAP COM op > 60s (CLAUDE.md §A.16)
+- All 3 existing injectors (bioenergy / fossil / power) migrated to thin `CanonicalInjector` subclasses
+- 166 tests passing; CI scan refuses any `Variable.Expression =` write outside the sealed chokepoint
 
-Power-tree compatibility v0.36 → v0.38 confirmed via
-[`mailbox/20260505/_probe_v038_power_tree.py`](mailbox/20260505/_probe_v038_power_tree.py)
-— all 18 expected branches present, no CSV retargeting needed.
+**Workstream 1.5 — `Interp(...)` separator enforcement (§A.15): DONE.**
+- 3-layer defence (adapter normaliser + injector chokepoint + pre-flight CSV scan); readback verify hard-fails on NORMALISED matches.
 
-CLAUDE.md §11.1 + CHANGELOG already updated with three new LEAP COM
-findings discovered during this cycle (dry-run cache trap,
-branch-visibility flux, spontaneous `ActiveArea=''`).
+## What's pending — pick up in this order
 
-## Not done — pick up in this order
+### 1. Full-area probe of `aeo9_v0.45` (when user signals)
 
-### 1. Read-back-one verify per scenario (CLAUDE.md §4.1)
-Lightweight post-push sanity check: for each scenario, read
-`Variable.Expression` via COM on one representative row, diff against
-the inject CSV's `expression` field byte-exact. Catches injector
-misroutes before the 30-min calculatescenario round-trip.
+User intends to run a **full-area probe** of the next LEAP version
+(`aeo9_v0.45` — to be confirmed by user) covering:
+- Multiple scenarios (likely BAS + ATS + RAS + CA, confirm with user)
+- The **entire area** (not just Centralized Electricity Generation
+  like the 2026-05-05 cycle)
+- Both input + result sides (one CanonicalProber.run() handles both)
+- Branch + unit + value reads in one COM session
 
-Suggested probe rows (`Brunei` for all):
-| Scenario | Branch | Variable |
-|---|---|---|
-| RAS | `Transformation\Biodiesel Production\Processes\FAME Biodiesel` | `Capital Cost` |
-| CA  | `Transformation\Centralized Electricity Generation\Processes\Coal IGCC` | `Existing Capacity` |
-| ATS | `Transformation\Centralized Electricity Generation\Processes\Coal IGCC` | `Historical Production` |
-| BAS | `Transformation\Centralized Electricity Generation\Processes\Coal IGCC` | `Historical Production` |
+**Trigger:** when the user opens a new Claude session, asks "what to
+do now?", "wazzup", or any session-status query — propose this as the
+next concrete action. Do NOT start without explicit go-ahead.
 
-User has to flip UI scenario between calls (per the §11.1
-multi-area recipe). ~70s cache rebuild × 4 = ~5 min total.
+**Setup recipe** (when user says go):
+1. Confirm with user (§A.9): exact area filename + scenario list +
+   any scope narrowing (full area or a subtree?)
+2. Drop a `result/<YYYYMMDD>/probe_aeo9_v0.45.py` (~10-line subclass
+   of `CanonicalProber` — see CLAUDE.md §7.1 template)
+3. Launch via `Bash run_in_background=True`:
+   ```
+   python result/<date>/probe_aeo9_v0.45.py \
+       --scenarios "BAS,ATS,RAS,CA" \
+       --expect-area "aeo9_v0.45" \
+       --out-dir result/<date>/
+   ```
+4. Monitor via the harness `Monitor` tool on the background shell, or
+   `cat _progress_*.json` on demand
+5. Expected wall-clock: ~50 min/scenario × N + ~4 min for units + cache
+   build (~3 min once). For 4 scenarios on full area, budget 3-4 hours.
 
-### 2. `calculatescenario` (LEAP UI, heavy step)
-Run from LEAP UI for each scenario that should produce a `.sqlite`:
-RAS, CA, ATS, BAS. Tens of minutes per scenario. Drop the resulting
-`.sqlite` into `infeas/` (or wherever the user prefers) for §3.
+**Pitfalls already enforced by the framework:**
+- `Base Template` region excluded automatically
+- `--years` defaults to 2025-2060 step 5 (pitfall #6 — pre-model years
+  inflate CSV ~7×)
+- `--skip-zeros` default ON
+- BT={3,50} restriction for unit reads (§11.2; sealed)
+- safe_value / safe_data_unit_text on every read
 
-### 3. Post-calc validation (per CLAUDE.md §4.1)
-For each fresh `.sqlite`:
-- `print_overview(db)` — no new validation issues vs. v0.36 baseline
-- `check_scenario(db)` — returns `ok()` (or *strictly subset* of prior
-  issues; if not, see CLAUDE.md §8 for the 11-stage infeasibility flow)
+### 2. Workstream 2 — repo reorg `mailbox/` → `mailbox/` + `inject/` + `result/`
 
-### 4. Deferred power-domain authoring work
-From [`INJECTS_TO_REPLICATE.md` lines 57-64](mailbox/20260505/INJECTS_TO_REPLICATE.md)
-"Ultimate fixing work" — *not* blocking the v0.38 baseline, separate
-authoring task:
-- **BAS** standardisation: Exogenous Capacity, Capacity Additions,
-  Capacity Retirement all = 0 across all AMS
-- **ATS** standardisation: Exogenous Capacity = Existing + Addition +
-  Retirement (positive deltas → Addition, negative → Retirement;
-  Exogenous Capacity in ATS = PDP)
+After the v0.45 probe lands (or sooner if user prioritises). Plan:
+1. `mkdir inject/ result/` at repo root
+2. `git mv inject/bioenergy/` → `inject/bioenergy/`, same for `fossil/`, `power/`
+3. `git mv result/20260505/` → `result/20260505/`, same for `20260513/`
+   (with the inject-probe split flagged per-file — `_probe_v038_power_tree.py`,
+   `_probe_readback_one.py` are inject-side scratch, ask first)
+4. Update path references in CLAUDE.md, FLOWS.md, pyproject.toml, scripts
+5. Add `MAILBOX_ROUTING.md` at repo root explaining the inbox→inject/result
+   flow + clone-then-sweep ritual
+6. `infeas/` and `mailbox/` (now pure inbox) stay put
+7. Run pytest after each major move
 
-### 5. Possible v0.6.8 release
-Only after §1-3 pass. Bump in [`pyproject.toml`](pyproject.toml) and
-[`nemo_read/__init__.py`](nemo_read/__init__.py); CHANGELOG bullets
-already accumulated under `[Unreleased]`.
+### 3. (deferred from earlier session, lower priority)
+- v0.38 cycle: §1-3 of previous TODO.md (read-back-one verify per
+  scenario, then calculatescenario, then post-calc validate). Stale
+  if a newer LEAP version is now in use; check with user before
+  re-attempting.
 
-## Cleanup at next pass
-
-[`mailbox/20260505/_build_RAS_combined.py`](mailbox/20260505/_build_RAS_combined.py)
-and `_inject_RAS_combined.csv` are an abandoned merge experiment from
-the start of this session (decided to push 5 blocks separately
-instead). Per CLAUDE.md §12.3 they can be deleted at the next cleanup
-pass — kept for now as breadcrumb.
-
-## Traps to remember (already in CLAUDE.md §11.1, repeated for emphasis)
-
-- **Always pass `--expect-area aeo9_v0.38`** on every `inject_to_leap.py`
-  call — `ActiveArea` blanks spontaneously between Python invocations
-  (3× this session).
-- **`PYTHONPATH=$(pwd)`** before invoking the injector if `nemo_read`
-  isn't installed in the active Python env.
-- **Dry-run `branch_not_found` is unreliable** — false positives when
-  ActiveRegion at cache-build time doesn't expose all branches. Run
-  `_probe_v038_power_tree.py` (or similar) under a region that should
-  see the full tree before declaring real structural mismatch.
-- **User must flip UI scenario** between scenario blocks; the script
-  uses `--no-scenario-switch` and reads whatever's active.
+## When in doubt
+- Re-read [CLAUDE.md §A](CLAUDE.md) hard rules
+- [docs/FLOWS.md](docs/FLOWS.md) for the standardised inject / probe / infeas flows
+- Memory: `MEMORY.md` for user preferences + project context

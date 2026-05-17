@@ -324,21 +324,29 @@ def test_probe_brief_emits_for_unknown_clusters():
 # Inject-side placeholder gate
 # ---------------------------------------------------------------------------
 def test_inject_split_placeholder_rows():
-    """The injector helper must split placeholder rows from real rows."""
-    sys.path.insert(0, str(HERE.parent / "mailbox" / "bioenergy"))
-    import inject_to_leap as itl
+    """The injector base must split placeholder rows from real rows.
 
+    Placeholder detection moved from a bioenergy-local function to
+    `CanonicalInjector.is_placeholder_row` / `split_placeholder_rows`
+    as part of the 2026-05-17 framework consolidation.
+    """
+    from nemo_read.inject_base import CanonicalInjector
+
+    class _Probe(CanonicalInjector):
+        SECTOR_NAME = "_test_probe"
+
+    inj = _Probe()
     rows = [
         {"data_confidence": "PLACEHOLDER", "note": "PLACEHOLDER (Stage 5 ...): test"},
         {"data_confidence": "High", "note": "real fix"},
         {"data_confidence": "Low",  "note": "PLACEHOLDER (Stage 5 ...): test2"},
         {"data_confidence": "High", "note": "another real"},
     ]
-    real, ph = itl._split_placeholder_rows(rows)
+    real, ph = inj.split_placeholder_rows(rows)
     assert len(real) == 2
     assert len(ph) == 2
-    assert all(itl._is_placeholder(p) for p in ph)
-    assert all(not itl._is_placeholder(r) for r in real)
+    assert all(inj.is_placeholder_row(p) for p in ph)
+    assert all(not inj.is_placeholder_row(r) for r in real)
 
 
 def main() -> int:

@@ -108,7 +108,7 @@ Both are fully handled — see `nemo_read/_leap_com.py`.
 
 ## Author-iteration workflow (recurring CSV authoring cycles)
 
-When a domain has its own bioenergy/fossil-style mailbox (per-domain `build_canonical.py` + `run_workflow.py` + `inject_to_leap.py`), the package supports a recurring iteration pattern. Captured here so it generalises beyond bioenergy — see [mailbox/bioenergy/BIOENERGY_CSV_SPEC.md](../mailbox/bioenergy/BIOENERGY_CSV_SPEC.md) for a worked example.
+When a domain has its own bioenergy/fossil-style mailbox (per-domain `build_canonical.py` + `run_workflow.py` + `inject_to_leap.py`), the package supports a recurring iteration pattern. Captured here so it generalises beyond bioenergy — see [inject/bioenergy/BIOENERGY_CSV_SPEC.md](../inject/bioenergy/BIOENERGY_CSV_SPEC.md) for a worked example.
 
 **The cycle:**
 
@@ -135,7 +135,7 @@ build_canonical.py  →  audit (probe + audit_canonical_units)  →  unresolved?
 
 1. **`audit_canonical_units` returns one of four statuses per (branch, variable) pair**: `match` (canonical unit ≡ LEAP unit, no action), `mismatch` with a `proposed_factor` (registry handles auto-conversion at inject time), `mismatch` with no factor (author-action — fix at source), or `no_leap_unit` (branch missing from LEAP tree — exclude or create branch). Author-action mismatches are the only ones that block injection.
 
-2. **Source-side note markers preserve traceability across iterations.** When the author fixes a row at source per `audit_canonical_units`'s guidance, the convention is to prepend a `[YYYY-MM-DD §section author-action applied]` token to the row's `note` column. Reviewers can grep the source CSV to find the cycle's manual fixes; subsequent iterations preserve the marker so units don't accidentally drift back. Used in `mailbox/bioenergy/CSV_AUTHORING_GUIDE.md §12.1` to track 7 cycle-1 fixes across 70 rows.
+2. **Source-side note markers preserve traceability across iterations.** When the author fixes a row at source per `audit_canonical_units`'s guidance, the convention is to prepend a `[YYYY-MM-DD §section author-action applied]` token to the row's `note` column. Reviewers can grep the source CSV to find the cycle's manual fixes; subsequent iterations preserve the marker so units don't accidentally drift back. Used in `inject/bioenergy/CSV_AUTHORING_GUIDE.md §12.1` to track 7 cycle-1 fixes across 70 rows.
 
 3. **Spec-vs-reference doc split.** Each mailbox can carry two complementary docs: a deep technical reference (`CSV_AUTHORING_GUIDE.md`-style — column conventions, audit registry, branch-creation templates) and an operational spec (`*_SPEC.md`-style — the per-cycle truth: row-count expectations, exact (branch, variable) matrix, do-not-modify rules, anti-patterns). The reference is the textbook; the spec is the operational checklist the author opens first.
 
@@ -143,7 +143,7 @@ build_canonical.py  →  audit (probe + audit_canonical_units)  →  unresolved?
 
 ## Build-adapter filter pattern (rows-in-source / not-yet-in-LEAP)
 
-When the source CSV authors rows that LEAP doesn't expose yet — either branches that need to be created later, or variables on the wrong branch pending placement clarification — the build adapter filters them at canonical-build time so the audit and injection don't trip. The pattern, used in [mailbox/bioenergy/build_canonical.py](../mailbox/bioenergy/build_canonical.py):
+When the source CSV authors rows that LEAP doesn't expose yet — either branches that need to be created later, or variables on the wrong branch pending placement clarification — the build adapter filters them at canonical-build time so the audit and injection don't trip. The pattern, used in [inject/bioenergy/build_canonical.py](../inject/bioenergy/build_canonical.py):
 
 ```python
 # Branches that exist in the source CSV but are missing in LEAP.

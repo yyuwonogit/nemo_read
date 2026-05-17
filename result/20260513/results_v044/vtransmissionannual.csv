@@ -1,0 +1,70 @@
+n,f,y,val,solvedtm,fuel_name,node_name
+N14,F25,2025,37.8432,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Indonesia Sumatra
+N17,F25,2025,33.112799999999986,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Peninsular
+N3,F25,2025,-21.08476584253462,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Cambodia
+N4,F25,2025,-14.399226180018195,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Thailand
+N6,F25,2025,10.63581983041886,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Laos
+N7,F25,2025,24.84817219213389,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Vietnam
+N9,F25,2025,-70.95599999999999,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Singapore
+N14,F25,2030,37.8432,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Indonesia Sumatra
+N17,F25,2030,33.112799999999986,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Peninsular
+N3,F25,2030,-2.405332558693512,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Cambodia
+N4,F25,2030,-29.2026805045248,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Thailand
+N6,F25,2030,5.748493063218275,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Laos
+N7,F25,2030,25.859519999999968,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Vietnam
+N9,F25,2030,-70.95600000000012,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Singapore
+N14,F25,2035,37.8432,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Indonesia Sumatra
+N17,F25,2035,33.112799999999986,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Peninsular
+N3,F25,2035,0.23460167435509893,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Cambodia
+N4,F25,2035,-29.328480000000063,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Thailand
+N6,F25,2035,3.2343583256449113,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Laos
+N7,F25,2035,25.859519999999968,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Vietnam
+N9,F25,2035,-70.95600000000012,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Singapore
+N14,F25,2040,37.8432,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Indonesia Sumatra
+N17,F25,2040,33.112799999999986,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Peninsular
+N3,F25,2040,-0.3726848428131855,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Cambodia
+N4,F25,2040,-32.36587879098011,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Thailand
+N5,F25,2040,-8.00020120901995,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Myanmar
+N6,F25,2040,16.13506884281324,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Laos
+N7,F25,2040,24.603695999999974,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Vietnam
+N9,F25,2040,-70.95600000000012,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Singapore
+N1,F25,2045,3.4293876613266367,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Philippines
+N14,F25,2045,37.8432,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Indonesia Sumatra
+N17,F25,2045,33.112799999999986,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Peninsular
+N18,F25,2045,-3.4293876613266367,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Sabah
+N3,F25,2045,-5.069873830010349,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Cambodia
+N4,F25,2045,-37.526802629117185,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Thailand
+N5,F25,2045,-2.8392773708828836,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Myanmar
+N6,F25,2045,23.971817830010412,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Laos
+N7,F25,2045,21.464135999999982,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Vietnam
+N9,F25,2045,-70.95600000000012,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Singapore
+N1,F25,2050,6.3071999999999955,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Philippines
+N14,F25,2050,37.8432,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Indonesia Sumatra
+N17,F25,2050,33.112799999999986,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Peninsular
+N18,F25,2050,-6.3071999999999955,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Sabah
+N3,F25,2050,-6.937920000000009,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Cambodia
+N4,F25,2050,-40.277054281051946,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Thailand
+N5,F25,2050,-0.08902571894810862,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Myanmar
+N6,F25,2050,29.515171855285022,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Laos
+N7,F25,2050,17.78882814471501,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Vietnam
+N9,F25,2050,-70.95600000000012,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Singapore
+N1,F25,2055,6.3071999999999955,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Philippines
+N14,F25,2055,37.8432,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Indonesia Sumatra
+N17,F25,2055,33.112799999999986,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Peninsular
+N18,F25,2055,-6.3071999999999955,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Sabah
+N3,F25,2055,-10.225971263141782,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Cambodia
+N4,F25,2055,-41.90329490626284,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Thailand
+N5,F25,2055,4.825266169404561,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Myanmar
+N6,F25,2055,38.890583999999954,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Laos
+N7,F25,2055,8.413416000000003,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Vietnam
+N9,F25,2055,-70.95600000000012,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Singapore
+N1,F25,2060,6.3071999999999955,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Philippines
+N14,F25,2060,37.8432,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Indonesia Sumatra
+N17,F25,2060,33.112799999999986,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Peninsular
+N18,F25,2060,-6.3071999999999955,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Malaysia Sabah
+N3,F25,2060,-14.630887783189863,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Cambodia
+N4,F25,2060,-38.09450591194146,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Thailand
+N5,F25,2060,5.421393695131249,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Myanmar
+N6,F25,2060,45.16970399999991,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Laos
+N7,F25,2060,2.1342960000000097,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Vietnam
+N9,F25,2060,-70.95600000000012,2026-05-13 13:38:49.789,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",Singapore

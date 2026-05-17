@@ -183,6 +183,141 @@ def safe_expression(variable) -> str | None:
     return expr  # type: ignore[return-value]
 
 
+# ---------------------------------------------------------------------------
+# Universal Interp() separator enforcement (CLAUDE.md §A.15)
+# ---------------------------------------------------------------------------
+import re as _re
+
+_INTERP_RE = _re.compile(r"Interp\(([^)]*)\)", flags=_re.IGNORECASE)
+_SEMICOLON_INSIDE_INTERP_RE = _re.compile(r"Interp\([^)]*;[^)]*\)", flags=_re.IGNORECASE)
+
+
+class InterpSeparatorError(ValueError):
+    """Raised when an expression contains a forbidden Interp() form.
+
+    Per CLAUDE.md §A.15, every Interp(...) committed to LEAP must use
+    comma list-separator + period decimal. Anything else (semicolon
+    list-sep, comma decimal) raises this before any COM write happens.
+    """
+
+
+def normalize_interp(expr):
+    """Force every `Interp(...)` substring to comma list-sep + period decimal.
+
+    Returns the input unchanged for non-strings and for strings with no
+    Interp() substrings. See CLAUDE.md §A.15 — comma list-sep + period
+    decimal is the only accepted form on this engine.
+    """
+    if not isinstance(expr, str):
+        return expr
+
+    def _fix(m):
+        inner = m.group(1).replace("; ", ", ").replace(";", ",")
+        return f"Interp({inner})"
+
+    return _INTERP_RE.sub(_fix, expr)
+
+
+def assert_interp_canonical(expr) -> None:
+    """Raise InterpSeparatorError if `expr` has any forbidden Interp form.
+
+    Strict gate: refuses to let a wrong-separator Interp expression
+    reach the COM layer. Use this in any injector before
+    `variable.Expression = expr`.
+    """
+    if not isinstance(expr, str):
+        return
+    if _SEMICOLON_INSIDE_INTERP_RE.search(expr):
+        raise InterpSeparatorError(
+            f"Interp() expression uses ';' as list separator — forbidden "
+            f"on this engine (CLAUDE.md §A.15). Expression: {expr!r}. "
+            f"Run normalize_interp() upstream or fix the canonical CSV."
+        )
+
+
+def safe_set_expression(variable, expr):
+    """The single chokepoint for writing `Variable.Expression` from any
+    injector. ALWAYS go through here — never `variable.Expression = expr`
+    directly.
+
+    Behaviour:
+      1. Normalises any `Interp(...; ...)` to `Interp(..., ..., ...)` so
+         a tired author's mis-typed semicolon never reaches LEAP.
+      2. After normalisation, asserts the expression is canonical
+         (CLAUDE.md §A.15). Raises InterpSeparatorError if not — this
+         should be impossible after step 1, so a raise here means the
+         input had some other forbidden pattern we should learn about.
+      3. Sets `variable.Expression`. Returns the normalised expression
+         actually committed, so the caller can log it.
+
+    This is the universal LAST line of defence. Every domain's injector
+    (bioenergy, fossil, power, and any future sector) must call this
+    function. Bypassing it = the same fossil-domain incident waiting to
+    happen.
+    """
+    if not _HAS_PYWIN32:
+        raise RuntimeError(_NOT_WINDOWS_ERROR)
+    normalised = normalize_interp(expr)
+    assert_interp_canonical(normalised)
+    variable.Expression = normalised
+    return normalised
+
+
+def compare_expressions(actual, expected) -> str:
+    """Compare an actual LEAP read-back to the expected CSV expression.
+
+    Returns one of:
+      - "EXACT"      : byte-equal
+      - "NORMALISED" : equal after collapsing list-separator variants
+                       (e.g. LEAP re-rendered commas as periods on read-back,
+                       which means the inject committed wrong — see §A.15).
+                       This is a HARD FAIL per §A.15, not a soft pass.
+      - "FAIL"       : not equal even after normalisation.
+    """
+    if actual is None or expected is None:
+        return "FAIL"
+    actual_s = str(actual)
+    expected_s = str(expected)
+    if actual_s == expected_s:
+        return "EXACT"
+    # Locale-flip normalisation: LEAP may display commas as periods when
+    # reading back. Both forms collapse to the same canonical sequence.
+    def _strip_sep(s: str) -> str:
+        # Replace ". " and "; " inside Interp() with ", "
+        def _fix(m):
+            inner = (m.group(1)
+                     .replace(". ", ", ")
+                     .replace("; ", ", ")
+                     .replace(";", ","))
+            return f"Interp({inner})"
+        return _INTERP_RE.sub(_fix, s)
+    if _strip_sep(actual_s) == _strip_sep(expected_s):
+        return "NORMALISED"
+    return "FAIL"
+
+
+def validate_canonical_csv_expressions(csv_path, expr_column: str = "expression"):
+    """Pre-flight: scan a canonical CSV for forbidden Interp forms before
+    any inject begins. Returns a list of (row_index, expression) tuples
+    that violate CLAUDE.md §A.15.
+
+    Empty list = CSV is clean. Non-empty = injector should refuse to
+    proceed. This is the upstream complement to safe_set_expression() —
+    catches batch problems before COM state is even touched.
+    """
+    import csv as _csv
+    from pathlib import Path as _Path
+
+    violations = []
+    with _Path(csv_path).open("r", encoding="utf-8", newline="") as f:
+        reader = _csv.DictReader(f)
+        for i, row in enumerate(reader, start=2):  # start=2 → header is row 1
+            expr = row.get(expr_column, "")
+            if isinstance(expr, str) and _SEMICOLON_INSIDE_INTERP_RE.search(expr):
+                violations.append((i, expr))
+    return violations
+
+
 class visible_false:
     """Context manager: temporarily set ``leap.Visible = False``.
 

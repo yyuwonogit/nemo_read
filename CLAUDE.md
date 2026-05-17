@@ -140,16 +140,64 @@ inject and probe without any area or scenario issue, we have to
 remember it and keep on doing it that way."*
 
 How to apply:
-  - When planning a LEAP COM cycle, list every operation you'll need
-    (inject A, probe B, inject C, read D) and write them as ONE
-    script that does all of them in sequence.
-  - Inside that script: confirm state once at the top (§A.9), build
-    the cache once, then run every operation against the warm cache.
-  - The injector (`inject_to_leap.py`) already accepts multiple rows
-    in one CSV — use one CSV with everything, not multiple injections
-    with multiple CSVs. For probes that aren't currently
-    library-supported, write a one-off Python file under
-    `mailbox/<domain>/_probe_*.py` that does push-and-probe together.
+  - **The `CanonicalInjector` framework enforces this for every inject.**
+    Default flow: `dispatch_leap` once → area lock → for each scenario:
+    set+verify → dry-run → confirm → real inject → readback. ALL in one
+    Python invocation. See §5.1 + [docs/FLOWS.md §1](docs/FLOWS.md).
+  - **The `CanonicalProber` framework enforces this for every probe.**
+    Default flow: `dispatch_leap` once → area lock → tree cache built
+    once → for each scenario: Probe A (results) → Probe B (units, once
+    for the area). ALL in one Python invocation. See §7.1 +
+    [docs/FLOWS.md §2](docs/FLOWS.md).
+  - For multi-scenario operations, pass `--scenarios "RAS,CA,ATS,BAS"`
+    to the inject or probe CLI — the framework loops scenarios in the
+    same COM session. Don't run the script N times.
+  - For one-off custom probes outside the framework: list every
+    operation you'll need (inject A, probe B, inject C, read D) and
+    write them as ONE script under `mailbox/<domain>/_probe_*.py`.
+    Confirm state once at the top (§A.9), build the cache once, run
+    every operation against the warm cache. Don't fragment across
+    multiple `python …` invocations — each restart loses cache warmth
+    (~160s rebuild) and risks the spontaneous-blanking trap (§11.1).
+  - **Long-running ops (>60s) MUST use the heartbeat convention** (see
+    A.16 below). Inject + probe frameworks already wire it in.
+  - The injector accepts multiple rows in one CSV — use one CSV with
+    everything, not multiple injections with multiple CSVs.
+
+**A.16 — Long-running LEAP COM operations run in the background with
+heartbeat + progress-JSON monitoring.** Any COM operation expected to
+exceed ~60 seconds (multi-scenario inject, full-area probe, large
+results harvest) is run via `Bash run_in_background=True` and reports
+progress through the standardised heartbeat convention
+([`nemo_read._heartbeat.HeartbeatLogger`](nemo_read/_heartbeat.py)).
+Both channels run in parallel:
+
+  - **Heartbeat stdout** — structured line every ~30s:
+    `[HB t=14:23:01 scenario=BAS region=Indonesia rows_written=4523
+    elapsed=27m04s]`. Monitor via the harness `Monitor` tool (streams
+    stdout lines as notifications) or `tail -f` on a captured log.
+  - **Progress JSON file** — `_progress_<op>_<ts>.json` updated on
+    every tick. Read on demand:
+    `python -c "from nemo_read._heartbeat import read_progress;
+    import json; print(json.dumps(read_progress('path'), indent=2))"`.
+    Contains scenario, region, rows_written, elapsed, last_heartbeat.
+
+Both `CanonicalInjector.run()` and `CanonicalProber.run()` wire the
+heartbeat in automatically — subclasses don't need to do anything.
+For custom one-off COM scripts, instantiate `HeartbeatLogger` at the
+top and call `.tick(**context)` whenever progress changes.
+
+How to apply:
+  - Launch any inject or probe that's expected to exceed 60s via
+    `Bash run_in_background=True`. Avoid blocking the foreground.
+  - When checking status: read the `_progress_*.json` file (cheap,
+    at-rest) OR use the `Monitor` tool on the background shell ID
+    (streams new heartbeats as they arrive).
+  - Don't poll in a sleep loop — the heartbeat is the polling mechanism;
+    you only need to check when the user asks or when the op completes.
+  - On completion: the heartbeat emits `[HB-DONE ...]` to stdout AND
+    writes a "finished" timestamp + summary to the JSON. The harness
+    Bash background notifies on process exit.
 
 **A.11 — `Unlimited` string in LEAP authoring is a landmine. LEAP→NEMO
 export translates the literal `"Unlimited"` to `1.0e+12` regardless of
@@ -265,6 +313,134 @@ about scope, A.13 is about discipline once a candidate is in view.
 
 See also: `memory/feedback_hypothesis_discipline.md` for the full
 2026-05-12 burn record (Wood reroute + p9 EC=0).
+
+**A.14 — Cite the source for every LEAP/NEMO state claim, or hedge.**
+Before asserting "X is set to Y", "X is missing", "X exists where I
+expect it", "the inject did/did not land", or any other factual claim
+about LEAP authoring or NEMO export contents, the claim must cite the
+*direct* data source backing it:
+  - NEMO-side claim → quote the SQLite SELECT row (or row absence) on
+    the exact table/parameter being claimed about.
+  - LEAP-side claim → quote a COM-probe read of `Variable.Expression`
+    (or the user's eye-test read of the LEAP UI cell).
+  - Mailbox/canonical claim → quote the actual row from the CSV (or
+    its absence in a grep).
+
+**CLAUDE.md mapping tables (§2.3), naming-convention patterns
+(`S{NN}I = Imports`), and architectural mental models are STARTING
+HYPOTHESES, never facts about a specific area.** If the claim cannot
+cite a direct query result, the claim MUST be hedged ("hypothesis,
+not yet verified" / "extrapolated from §2.3, would need to probe").
+Never present an extrapolation in the same register as a verified fact.
+
+Burned 2026-05-13 (the same petroleum-import-cost investigation), in
+sequence — each claim sounded plausible from CLAUDE.md + convention,
+each was wrong:
+  (i) "petroleum Import Cost rows need `\<Fuel> Imports` suffix in the
+      LEAP path" → COM probe found those sub-branches do not exist
+      anywhere in `Resources\Secondary` — all 33 secondary fuels are
+      flat BT=15 leaves with zero children;
+  (ii) "the inject silently failed to push our fossil canonical for
+       Singapore Gasoline Import Cost" → user's eye-test of the LEAP
+       UI cell showed an `Interp(...)` expression IS authored on
+       `Resources\Secondary\Gasoline:Import Cost`;
+  (iii) "the 1.5899× factor between LEAP-displayed value and our
+        canonical proves the same trajectory in different units" →
+        also extrapolation; cannot be confirmed without reading the
+        variable's `DataUnit` setting (USD/bbl vs USD/100L).
+
+Each "wrong-but-plausible" claim cost the user time and trust.
+
+How to apply: when an answer feels obvious from CLAUDE.md mapping,
+**stop and ask "what query would prove this?"** — then either run it,
+or hedge the answer. The phrasing of an unverified claim should make
+the unverified-ness load-bearing, not buried in a clause.
+
+See also: `memory/feedback_cite_or_hedge.md` for the full burn-log
+detail.
+
+**A.15 — LEAP `Interp(...)` expressions: comma list-separator + period
+decimal is the ONLY accepted form on this engine. No exceptions, no
+domain-specific variants.** The canonical form for every authored
+expression — in raw input CSVs, canonical CSVs, and anything injected
+via `inject_to_leap.py` / `Variable.Expression`:
+
+```
+Interp(2025, 3.2422, 2030, 3.0833, ...)
+       ^^^^                              comma between args
+            ^                            period for decimal
+```
+
+Both this Windows install (`Get-Culture` → en-US) and LEAP's own
+regional setting use comma-as-list, period-as-decimal. Any other
+form is wrong, regardless of how plausible it looks:
+  - `Interp(2025; 3.2422; ...)` (semicolon list-sep) — wrong
+  - `Interp(2025; 3,2422; ...)` (semicolon + comma decimal) — wrong
+  - `Interp(2025. 3.2422. ...)` (period list-sep on read-back) —
+    indicates the inject committed wrong, not a display quirk
+
+Burned 2026-05-17: the bioenergy canonical correctly used commas, but
+the fossil canonical (`inject/fossil/canonical_leap_inputs.csv` +
+`canonical_leap_native.csv`, plus 3 raw input CSVs feeding them) had
+~300 `Interp(...; ...; ...)` rows on semicolon list-sep. The wrong
+form had leaked in via
+[`inject/fossil/build_canonical.py:74`](inject/fossil/build_canonical.py#L74)'s
+hardcoded `"; ".join(...)` AND raw-author CSVs (`coal_supply_costs.csv`
+etc.) authored that way. The fossil inject log was missing, so it's
+unknown whether the bad form ever committed cleanly — the user
+called it out before another push could happen. *"why you have
+varying rules? ... we cant possibly keep on making the same
+mistake."*
+
+How to apply — there is now a three-layer enforcement stack. If you
+are adding a new mailbox domain or touching any inject path, **route
+through it**; do not invent a parallel path.
+
+  **Layer 1 — Adapter normalisation (write-time).** Every domain's
+  `build_canonical.py` (and `run_workflow.py` step 4 where it exists)
+  must call `nemo_read._leap_com.normalize_interp(expr)` on the
+  `expression` column before writing the canonical CSV. Fossil,
+  bioenergy, and power adapters all do this as of 2026-05-17.
+  Catches mis-typed semicolons in raw input CSVs.
+
+  **Layer 2 — `CanonicalInjector` framework + universal chokepoint.**
+  Every sector's injector MUST subclass
+  `nemo_read.inject_base.CanonicalInjector` (see §5.1). The framework
+  owns `_set_expression` as a sealed method that routes through
+  `safe_set_expression`. Subclasses cannot override sealed methods
+  — `__init_subclass__` raises `InjectorSealError` at class
+  definition. The `tests/test_inject_base.py` CI scan rejects any
+  `var.Expression = expr` site under `mailbox/**/*.py`. Bioenergy /
+  fossil / power are all thin subclasses (~50 lines each) of the
+  framework as of 2026-05-17. **A new domain that writes a
+  hand-rolled injector instead of subclassing — or that adds a
+  `Variable.Expression =` write anywhere in `mailbox/` — fails CI.**
+
+  **Layer 3 — Pre-flight CSV scan.** Every injector calls
+  `validate_canonical_csv_expressions(csv_path)` at startup and
+  refuses to proceed (non-zero exit) if any row contains a
+  forbidden Interp() form. Catches batch problems before any COM
+  state is touched.
+
+  **Plus: post-inject readback.** Run
+  [`result/20260505/_probe_readback_one.py`](result/20260505/_probe_readback_one.py)
+  after every push. NORMALISED matches (commas got renormalised to
+  periods on read-back) are now a HARD FAIL — exit code 1, do NOT
+  proceed to `calculatescenario`.
+
+  **Plus: pytest regression**
+  ([`tests/test_interp_separator.py`](tests/test_interp_separator.py))
+  pins all of the above plus a smoke test that scans every committed
+  canonical CSV — re-introducing the wrong form anywhere fails CI.
+
+If you find yourself writing code that bypasses any of these layers
+because "it's just a quick fix" — stop. The fossil-domain incident
+happened because the rule was documented but unenforced. Defense in
+depth is the entire point.
+
+See also: `memory/reference_leap_separator_convention.md` for the
+full origin (2026-05-07 v0.38 read-back discovery + 2026-05-17
+fossil burn).
 
 ---
 
@@ -419,7 +595,7 @@ modelling bug to be "cleaned up." If a fix you're proposing collapses
 that double-cap, escalate to the user before changing it.
 
 Single-cap design (current truth, see
-[mailbox/bioenergy/CSV_AUTHORING_GUIDE.md](mailbox/bioenergy/CSV_AUTHORING_GUIDE.md)
+[inject/bioenergy/CSV_AUTHORING_GUIDE.md](inject/bioenergy/CSV_AUTHORING_GUIDE.md)
 §0): `Resources\Primary\<Crop>:Maximum Production` is the **sole**
 crop-supply cap, authored in **raw-crop tonnes** (FFB / cane / fresh root /
 nuts-in-shell / grain), not extracted-product tonnes. Off-limits in this
@@ -463,6 +639,13 @@ drifted.
 
 ## 3. Repository layout (operator view)
 
+> **Quick reference for the three standardised flows** (inject /
+> results harvest / infeasibility triage):
+> [docs/FLOWS.md](docs/FLOWS.md). New sessions should skim this
+> doc once before doing any flow-shaped work — saves re-deriving
+> the canonical step sequence.
+
+
 ```
 nemo_read/
 ├── pyproject.toml                  setuptools, version, scripts, extras
@@ -489,14 +672,26 @@ nemo_read/
 │   ├── unit_conversions.py         defensible factors with citations
 │   ├── inspect.py                  print_overview, inspect_scenario
 │   └── scaffold.py                 nemo_read-scaffold CLI
-├── mailbox/
+├── mailbox/                        pure INBOX — sector teams drop files here.
+│                                   Cleaned at every stage commit after files
+│                                   are routed. See MAILBOX_ROUTING.md.
+├── inject/                         OUTBOX → LEAP. One subdir per sector.
 │   ├── bioenergy/                  domain — see CSV_AUTHORING_GUIDE.md
 │   ├── fossil/                     domain — coal/gas/oil supply + cost rows
-│   └── <YYYYMMDD>/                 dated drops + per-cycle SOPs (§7)
+│   └── power/                      domain — electricity generation tech rows
+├── result/                         OUTBOX ← LEAP. One subdir per harvest cycle.
+│   └── <YYYYMMDD>/                 probes + result CSVs + joined CSVs + SOP
 ├── tests/                          pytest suites — keep green
 ├── docs/                           topic references (see §9)
 └── infeas/                         scratch DBs for live infeasibility runs
 ```
+
+The inbox → inject/result routing ritual is documented in
+[MAILBOX_ROUTING.md](MAILBOX_ROUTING.md). Established 2026-05-17
+(workstream 2 reorg) so the previous overloaded `mailbox/`
+(authoring + harvest + raw drops all mixed) becomes three
+single-purpose directories with clear lifecycles.
+
 
 Convention note: this repo follows the **tyuwono PyPI template** —
 flat layout (package directory at root, *no* `src/`), `pyproject.toml`
@@ -507,6 +702,10 @@ trusted publishing. Sibling repos look the same; reuse the pattern.
 
 ## 4. The mailbox / authoring workflow (write-side: CSV → LEAP)
 
+> **Canonical step-by-step:** [docs/FLOWS.md §1](docs/FLOWS.md).
+> This section retains the prose rationale; the doc has the numbered
+> sequence with cross-references.
+
 When the user asks you to "fix the bioenergy CSV" or "add a new fossil
 import-cost trajectory," this is the loop:
 
@@ -514,8 +713,8 @@ import-cost trajectory," this is the loop:
    Don't skip; this is the front-line check against operating on the
    wrong file.
 1. **Author or edit the input CSV** under the right domain
-   (`mailbox/bioenergy/bioenergy_leap_input.csv`,
-   `mailbox/fossil/<topic>.csv`, etc.). Match the column conventions in
+   (`inject/bioenergy/bioenergy_leap_input.csv`,
+   `inject/fossil/<topic>.csv`, etc.). Match the column conventions in
    the domain's `CSV_AUTHORING_GUIDE.md` / `<DOMAIN>_CSV_SPEC.md`
    exactly. Before a structural rewrite, snapshot a backup as
    `<filename>.bak_pre_<YYYYMMDD>` so a later cycle can diff.
@@ -597,15 +796,75 @@ mailbox/<domain>/
 ├── build_canonical.py            adapter → canonical_leap_inputs.csv
 ├── canonical_leap_inputs.csv     output: ready for injection
 ├── canonical_leap_native.csv     parallel canonical in NEMO-native units
-├── inject_to_leap.py             COM injection (re-uses _leap_com)
+├── inject_to_leap.py             thin CanonicalInjector subclass (see §5.1)
 ├── run_workflow.py               one-shot driver: build → dry-run → push
 └── unit_audit.csv                per-row unit-conversion audit trail
 ```
 
-The injector itself should be a thin wrapper around
-`nemo_read._leap_com.LeapTreeCache + dispatch_leap` — copy from
-`mailbox/bioenergy/inject_to_leap.py` and adjust filters. Don't
-re-implement COM defensiveness; the package already owns it.
+### 5.1 The injector MUST subclass `nemo_read.inject_base.CanonicalInjector`
+
+Established 2026-05-17 after the fossil-domain Interp() separator
+incident proved that one injector per sector with copy-pasted COM
+code is a recipe for the same bug to leak in every new sector.
+`CanonicalInjector` is the standardised framework: every LEAP-side
+rule (Interp separator §A.15, area/scenario lock §11.1+§A.9,
+placeholder gate, `safe_set_expression` chokepoint, CSV pre-flight)
+lives in the base class. Each sector contributes only the
+domain-unique pieces via narrow override hooks.
+
+**Minimum viable subclass** (~10 lines of sector code, everything else
+inherited):
+
+```python
+from nemo_read.inject_base import CanonicalInjector
+
+class MySectorInjector(CanonicalInjector):
+    SECTOR_NAME = "mysector"
+    DEFAULT_CSV = Path(__file__).parent / "canonical_leap_inputs.csv"
+    REQUIRE_EXPECT_AREA = True  # if §A.9 area-confirmation is mandatory
+
+    def filter_rows(self, rows, args):
+        return [r for r in rows if not r["branch"].startswith("TBD\\\\")]
+
+if __name__ == "__main__":
+    raise SystemExit(MySectorInjector().run())
+```
+
+**The framework owns** (sealed — subclass override raises
+`InjectorSealError` at class definition):
+- `_set_expression` — the only sanctioned `Variable.Expression =` site
+- `_preflight_csv` — Interp() scan + extra validators
+- `_assert_area_lock` / `_assert_scenario_lock` — drift detection
+- (placeholder gate logic in `run()`)
+
+**The subclass overrides** (open hooks):
+- `filter_rows(rows, args)` — sector row filtering
+- `extra_cli_args(parser)` — sector CLI flags
+- `extra_csv_validators()` — extra pre-flight checks
+- `group_by_region(rows)` — region iteration strategy
+- `cache_for_region(leap, region)` — tree-cache strategy
+- `before_push_row(leap, row, args)` — per-row pre-hook
+- `post_push_verify(committed, leap)` — readback hook
+- `is_placeholder_row(row)` — sector-specific placeholder detection
+
+**Reference subclasses to copy from:**
+- [bioenergy](inject/bioenergy/inject_to_leap.py) — simplest (default
+  per-AMS region grouping)
+- [fossil](inject/fossil/inject_to_leap.py) — adds LEAP-native unit
+  gate via extra_csv_validators
+- [power](inject/power/run_workflow.py) — overrides group_by_region
+  for 3-cache pattern, before_push_row for per-row ActiveRegion
+
+**Never** write `var.Expression = expr` directly in a sector script —
+the pytest regression
+[tests/test_inject_base.py](tests/test_inject_base.py) scans every
+`mailbox/**/*.py` file for that pattern and fails CI if found
+outside the sanctioned chokepoint.
+
+**Existing scratch utilities** (`run_workflow.py` step 4 conversion,
+ad-hoc probes) may still talk to LEAP COM directly — they're not
+inject paths. But anything that ends with a `Variable.Expression`
+write goes through the framework.
 
 ---
 
@@ -661,8 +920,8 @@ Concrete worked example:
 > extracted-product tonnes — palm cap was 5× too small at B40 demand."
 > **Generalisation:** "supply cap and its per-unit cost row on the same
 > branch must share the same physical basis."
-> **Cross-domain check:** scan `mailbox/fossil/crude_oil_max_production.csv`
-> vs `mailbox/fossil/crude_production_cost.csv` — both per-tonne crude;
+> **Cross-domain check:** scan `inject/fossil/crude_oil_max_production.csv`
+> vs `inject/fossil/crude_production_cost.csv` — both per-tonne crude;
 > aligned. `coal_supply_costs.csv` vs reserves — confirm
 > per-tonne-coal alignment.
 > **Outcome:** record cross-check + result in **both** guides under
@@ -695,11 +954,13 @@ sections — copy any lesson you can verify still applies.
 
 ## 7. Results harvest — the lite three-step SOP (read-side: LEAP → CSV)
 
+> **Canonical step-by-step:** [docs/FLOWS.md §2](docs/FLOWS.md).
+
 When the analyst just wants the **calculated result numbers** out of a
 `.leap` area (not a full read+write area dump), use the established
 A → B → C pipeline. **Canonical reference, with command lines, defaults,
 and a 9-pitfall postmortem:**
-[mailbox/20260505/RESULTS_HARVEST_SOP.md](mailbox/20260505/RESULTS_HARVEST_SOP.md).
+[result/20260505/RESULTS_HARVEST_SOP.md](result/20260505/RESULTS_HARVEST_SOP.md).
 **Read it before starting any new harvest cycle.** It's faster than
 re-discovering the same dead ends.
 
@@ -718,7 +979,57 @@ broad branch types `{2,3,4,34,50}`, all regions × years) from
 unit-reading (Probe B, narrow branch types `{3, 50}`,
 scenario-/region-agnostic). Step C merges offline.
 
-### 7.1 When NOT to use this SOP
+### 7.1 The probe MUST subclass `nemo_read.probe_base.CanonicalProber`
+
+Established 2026-05-17. Same justification as §5.1 for injectors:
+the prior pattern was per-cycle copy-pasted ~300-line probe scripts
+under `mailbox/<date>/`. Pitfalls (§7.3 + §11.2) were documented but
+unenforced — a new probe author could miss the BT={3,50} restriction,
+the multi-area trap, the heartbeat convention, etc.
+`CanonicalProber` seals those concerns.
+
+**Minimum viable subclass** (everything else inherited):
+
+```python
+from nemo_read.probe_base import CanonicalProber
+
+class FullAreaProbe(CanonicalProber):
+    PROBE_NAME = "aeo9_full_area_20260517"
+    EXPECT_AREA = "aeo9_v0.42_r1e"
+    REQUIRE_EXPECT_AREA = True
+    # BRANCH_PREFIX = ""  # default: whole area
+    # Override RESULT_VARS / INPUT_VARS / DEFAULT_YEARS as needed
+
+if __name__ == "__main__":
+    raise SystemExit(FullAreaProbe().run())
+```
+
+**The framework owns** (sealed):
+- `_assert_area_lock` / `_assert_scenario_lock` — drift detection
+- `_read_value` — safe value read (catches popups)
+- `_read_unit_text` — `DataUnitText` with BT={3,50} guard (§11.2
+  enforced; subclass cannot bypass)
+- Heartbeat + progress-JSON wiring throughout
+
+**The subclass overrides** (open hooks):
+- `result_variables()`, `input_variables()` — target variable names
+- `result_branch_types()`, `unit_branch_types()` — BT filter
+- `regions()`, `years()`, `branch_prefixes()` — scope
+- `extra_cli_args(parser)` — sector CLI flags
+
+**Default `run()`** does in ONE COM session:
+1. `dispatch_leap` → area lock
+2. Build tree cache once (reused everywhere)
+3. For each scenario: set+verify → Probe A (results per region)
+4. Probe B once for the area (units, scenario-agnostic)
+5. Final summary + heartbeat finish
+
+**Background convention** (A.16): all probe runs use the heartbeat
+logger automatically. Launch via `Bash run_in_background=True`,
+monitor via the harness `Monitor` tool or the `_progress_*.json`
+file. Don't run probes in the foreground.
+
+### 7.2 When NOT to use this SOP
 
 Use the full [`nemo_read-leap-export`](nemo_read/leap_export.py) CLI
 (plus `LeapAreaContext.discover()`) instead when:
@@ -732,7 +1043,7 @@ Use the full [`nemo_read-leap-export`](nemo_read/leap_export.py) CLI
 The A → B → C pipeline is the **focused, fast** counterpart for "I just
 want the result numbers, properly unit-annotated."
 
-### 7.2 Each cycle's artifacts live in `mailbox/<YYYYMMDD>/`
+### 7.3 Each cycle's artifacts live in `mailbox/<YYYYMMDD>/`
 
 The probe + join scripts are **templates** — copy and adapt per cycle.
 The dated folder holds:
@@ -752,7 +1063,7 @@ mailbox/<YYYYMMDD>/
 
 Keep this shape so the next cycle is mechanical.
 
-### 7.3 Pitfalls — DON'T repeat (full list in the SOP doc)
+### 7.4 Pitfalls — DON'T repeat (full list in the SOP doc)
 
 The most load-bearing pitfalls are also hoisted into §11 (LEAP COM
 gotchas), so they surface during routine COM work even when you're not
@@ -780,7 +1091,7 @@ reading the SOP. Summary:
   if the area changes mid-run); use `--no-scenario-switch` if user is
   driving the dropdown manually.
 
-### 7.4 SOP discoverability — the meta-rule
+### 7.5 SOP discoverability — the meta-rule
 
 When a recurring procedure earns its own SOP / how-to / pitfalls
 postmortem (like `RESULTS_HARVEST_SOP.md`), **CLAUDE.md must reference
@@ -797,6 +1108,10 @@ CLAUDE.md is one Claude session away from being forgotten.
 ---
 
 ## 8. The 11-stage infeasibility methodology (revised 2026-05-11)
+
+> **Canonical step-by-step:** [docs/FLOWS.md §3](docs/FLOWS.md).
+> The 11-stage details below remain authoritative for stage exit
+> criteria and rationale.
 
 The **only three sources of information** we use:
 
@@ -946,6 +1261,7 @@ Worked example + stage-by-stage exit criteria in
 
 | File | When you need it |
 |---|---|
+| [docs/FLOWS.md](docs/FLOWS.md) | canonical step-by-step for inject / results harvest / infeasibility triage — quick reference for the three established flows |
 | [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md) | infeasibility pipeline + worked x435004 example + revised cN path (see §8) |
 | [docs/schema.md](docs/schema.md) | NEMO v11 column reference |
 | [docs/cookbook.md](docs/cookbook.md) | analysis recipes (capacity stack, demand by sector, …) |
@@ -955,9 +1271,9 @@ Worked example + stage-by-stage exit criteria in
 | [docs/unit_conversions.md](docs/unit_conversions.md) | defensible conversion factors with citations + 5★ confidence rubric |
 | [docs/scaffolding.md](docs/scaffolding.md) | the `nemo_read-scaffold` CLI |
 | [docs/leap_area_wishlist.md](docs/leap_area_wishlist.md) | open-work backlog |
-| [mailbox/bioenergy/CSV_AUTHORING_GUIDE.md](mailbox/bioenergy/CSV_AUTHORING_GUIDE.md) | bioenergy mailbox column conventions |
-| [mailbox/bioenergy/BIOENERGY_CSV_SPEC.md](mailbox/bioenergy/BIOENERGY_CSV_SPEC.md) | bioenergy spec (single-cap design) |
-| [mailbox/20260505/RESULTS_HARVEST_SOP.md](mailbox/20260505/RESULTS_HARVEST_SOP.md) | results-harvest A→B→C SOP + 9-pitfall postmortem (carry forward to next cycle) |
+| [inject/bioenergy/CSV_AUTHORING_GUIDE.md](inject/bioenergy/CSV_AUTHORING_GUIDE.md) | bioenergy mailbox column conventions |
+| [inject/bioenergy/BIOENERGY_CSV_SPEC.md](inject/bioenergy/BIOENERGY_CSV_SPEC.md) | bioenergy spec (single-cap design) |
+| [result/20260505/RESULTS_HARVEST_SOP.md](result/20260505/RESULTS_HARVEST_SOP.md) | results-harvest A→B→C SOP + 9-pitfall postmortem (carry forward to next cycle) |
 
 When you write a new doc, put it in `docs/` and link it from README's
 "Repository layout" section. When you write a new per-cycle SOP (like
@@ -1058,7 +1374,7 @@ results-harvest probe (§7):
   from `--regions` lists in any probe or export.
 - **Dry-run cache trap — `inject_to_leap.py --dry-run` skips the
   per-AMS `ActiveRegion` set** (gated on `not args.dry_run` at
-  [inject_to_leap.py:272](mailbox/bioenergy/inject_to_leap.py#L272)).
+  [inject_to_leap.py:272](inject/bioenergy/inject_to_leap.py#L272)).
   The `LeapTreeCache` is built before the AMS loop using whatever
   `ActiveRegion` is active at script start. Branches that are only
   exposed under specific regions return false `branch_not_found` in
@@ -1068,7 +1384,7 @@ results-harvest probe (§7):
   rows pushed 114/114 cleanly under real-run. **Mitigation:** when
   dry-run reports `branch_not_found` for branches you expect to exist,
   before declaring real structural mismatch run a probe (e.g.
-  [mailbox/20260505/_probe_v038_power_tree.py](mailbox/20260505/_probe_v038_power_tree.py))
+  [result/20260505/_probe_v038_power_tree.py](result/20260505/_probe_v038_power_tree.py))
   with `ActiveRegion` set to a region that should expose the full
   tree, and diff `cache.fullname_to_idx` against expected paths.
 - **Branch-visibility flux 5031 ↔ 4157.** Same area, same scenario,
@@ -1286,7 +1602,7 @@ infeasibility cleared after enabling (a) + (b) + (c) — specifically:
     Sugarcane, Corn. Enabled in RAS.
 
 See also: `memory/project_aeo9_v042_RAS_resolved.md` for the full
-sequence and `mailbox/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md`
+sequence and `inject/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md`
 for the dev-team handover.
 
 ### 11.3 Cosmetic-but-visible

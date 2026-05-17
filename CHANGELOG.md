@@ -1,6 +1,41 @@
 # Changelog
 
-## [Unreleased] — Cross-team Power-sector inject cycle (mailbox/20260505)
+## [Unreleased] — Workstream 2: repo reorg `mailbox/` → `mailbox/` + `inject/` + `result/` (2026-05-17)
+
+### Changed — breaking (layout)
+- **Top-level structure** split into three single-purpose directories:
+  - `mailbox/` is now a **pure inbox** — sector teams drop files here;
+    cleaned at every stage commit after relevant files are routed
+  - `inject/` is the **outbox to LEAP** — `bioenergy/`, `fossil/`,
+    `power/` sector pipelines (was `mailbox/bioenergy/` etc.)
+  - `result/` is the **outbox from LEAP** — harvest-cycle outputs
+    by date (was `mailbox/<YYYYMMDD>/`)
+- `infeas/` unchanged (separate scratch space for diagnostic .sqlite)
+- New [MAILBOX_ROUTING.md](MAILBOX_ROUTING.md) at repo root documents
+  the inbox→inject/result routing ritual and clone-then-sweep flow.
+
+### Migration notes
+- All 3 sector folders moved via `git mv` (preserves blame history):
+  `mailbox/bioenergy` → `inject/bioenergy`,
+  `mailbox/fossil` → `inject/fossil`,
+  `mailbox/power` → `inject/power`.
+- Date folders moved: `mailbox/20260505` → `result/20260505`,
+  `mailbox/20260513` → `result/20260513`.
+- Live path references updated in CLAUDE.md, docs/FLOWS.md,
+  docs/leap_export.md, CHANGELOG.md, tests/, and the moved
+  inject/*/inject_to_leap.py + build_canonical.py docstrings/examples.
+- Injector scripts use `Path(__file__).parent / "canonical_leap_inputs.csv"`,
+  so no code changes needed — they follow the move automatically.
+
+### Documented
+- CLAUDE.md §3 — new layout box + reference to MAILBOX_ROUTING.md
+- docs/FLOWS.md — all three flows already used `mailbox/<date>/` for
+  drops; updated to use `result/<date>/` for harvest outputs and
+  `inject/<domain>/` for inject targets.
+
+---
+
+## [Unreleased] — Cross-team Power-sector inject cycle (result/20260505)
 
 End-to-end cycle handing off non-ID/MY power-sector input fixes to a
 team that doesn't run our tooling (LEAP UI only, no COM, no SQLite).
@@ -9,7 +44,7 @@ Validated against `aeo9_v0.36`. Two-round inject (1 + 1.5) totaling
 non-ID/MY AMS, all aligned to authoritative xlsx truth
 (`mailbox/existing_cap_historical_prod.xlsx`).
 
-### Mailbox artifacts ([mailbox/20260505/](mailbox/20260505/))
+### Mailbox artifacts ([result/20260505/](result/20260505/))
 - `probe_leap_results.py` / `probe_leap_units.py` — Probe A + B
   (results-harvest SOP); `join_results_with_units.py` Step C
 - `RESULTS_HARVEST_SOP.md` — full A→B→C SOP with 9-pitfall postmortem
@@ -56,14 +91,14 @@ non-ID/MY AMS, all aligned to authoritative xlsx truth
 
 ### Validated against `aeo9_v0.38` (2026-05-06)
 - All 5 inject blocks from
-  [mailbox/20260505/INJECTS_TO_REPLICATE.md](mailbox/20260505/INJECTS_TO_REPLICATE.md)
+  [result/20260505/INJECTS_TO_REPLICATE.md](result/20260505/INJECTS_TO_REPLICATE.md)
   re-pushed cleanly to a fresh AEO9 v0.38 area: **896/896 rows** across
   4 scenarios (RAS 672, CA 114, ATS 55, BAS 55). Exposed and documented
   the dry-run cache trap, branch-visibility flux, and spontaneous
   ActiveArea blank above. v0.38's `Transformation\Centralized
   Electricity Generation\Processes` tree confirmed structurally
   identical to v0.36's at the 18 expected paths via
-  [mailbox/20260505/_probe_v038_power_tree.py](mailbox/20260505/_probe_v038_power_tree.py)
+  [result/20260505/_probe_v038_power_tree.py](result/20260505/_probe_v038_power_tree.py)
   — no CSV retargeting needed.
 
 ### Memory updates
@@ -76,7 +111,7 @@ non-ID/MY AMS, all aligned to authoritative xlsx truth
 
 ### Power authoring domain + ID/MY subnational round 2 — validated against `aeo9_v0.38_yy` (2026-05-07)
 
-New mailbox domain [`mailbox/power/`](mailbox/power/) for power-sector
+New mailbox domain [`inject/power/`](inject/power/) for power-sector
 scenario-level overrides. Adapter pipeline produces canonical CSVs
 from two input shapes (LEAP-export wide-by-row, year-wide pivot);
 3-cache driver pushes them under the per-AMS tree shape of
@@ -84,34 +119,34 @@ from two input shapes (LEAP-export wide-by-row, year-wide pivot);
 subnational `_IDxx`/`_MYxx`; other 9 AMS country-level only).
 
 Round 2 ID/MY EC + HP merged in-place into round 1.5 inject CSVs
-(`mailbox/20260505/inject_round1p5_{CA,ATS,BAS}.csv` now 240 / 118 /
+(`result/20260505/inject_round1p5_{CA,ATS,BAS}.csv` now 240 / 118 /
 118 = 1148 rows total). Power standardisation pushed independently.
 
 #### Added
-- [`build_canonical.py`](mailbox/power/build_canonical.py) — LEAP-
+- [`build_canonical.py`](inject/power/build_canonical.py) — LEAP-
   export → canonical schema adapter. Filters: Base Template,
   subnational-mismatch (`_IDxx` only with Indonesia, `_MYxx` only
   with Malaysia), country-level-for-subnational-only-tech (per-AMS
   mutual exclusion when both shapes appear in input), `DROP_OFFTREE_BRANCHES`
   (global), `DROP_BRANCHES_PER_REGION` (region-specific).
-- [`build_canonical_yearwide.py`](mailbox/power/build_canonical_yearwide.py)
+- [`build_canonical_yearwide.py`](inject/power/build_canonical_yearwide.py)
   — wide-pivot → `Interp(year, value, …, FirstScenarioYear, 0)`
   converter. Splits by variable into per-scenario canonical CSVs
   (EC → CA only; HP → CA + ATS + BAS).
-- [`run_workflow.py`](mailbox/power/run_workflow.py) — 3-cache
+- [`run_workflow.py`](inject/power/run_workflow.py) — 3-cache
   region-grouped inject driver. `--blind` escape hatch for cache
   lazy-load false-misses; `--fail-fast` to bound hang risk in blind
   mode; `--expect-area` / `--expect-scenario` locks against drift.
-- [`CSV_AUTHORING_GUIDE.md`](mailbox/power/CSV_AUTHORING_GUIDE.md)
+- [`CSV_AUTHORING_GUIDE.md`](inject/power/CSV_AUTHORING_GUIDE.md)
   — per-AMS tree shape reference + 4 adapter filter rules + 3
   expression shapes (literal / `Interp` / `Add` / cross-variable
   formula) + pitfalls + cross-domain learnings (CLAUDE.md §6.3).
-- [`mailbox/20260505/_probe_readback_one.py`](mailbox/20260505/_probe_readback_one.py)
+- [`result/20260505/_probe_readback_one.py`](result/20260505/_probe_readback_one.py)
   — auto-detects ActiveScenario, runs PROBES dict, per-row
   ActiveRegion + blind direct lookup (no 5-min cache build). EXACT /
   NORMALISED / FAIL semantics.
 - Round 2 audit chunks
-  ([`mailbox/power/20260507/inject_round2_id_my_*.csv`](mailbox/power/20260507/))
+  ([`inject/power/20260507/inject_round2_id_my_*.csv`](inject/power/20260507/))
   alongside the Rev1 source — usable as standalone CA / ATS / BAS
   pushes if round 1.5 already landed.
 
@@ -217,7 +252,7 @@ were real data quality issues but not the structural cause.
   the `Unlimited` → 1e12 export translation.
 - `MEMORY.md` index updated.
 
-#### Mailbox cleanup (mailbox/bioenergy/)
+#### Mailbox cleanup (inject/bioenergy/)
 - Removed 88 scratch files (`_probe_*`, `_probed_*`, `_audit_*`,
   `_audited_*`, `_scan_*`, `_scanned_*`, `_diag_*`, `_diagnosed_*`,
   `_check_*`, `_checked_*`, `_push_and_verify_*`, all
@@ -225,7 +260,7 @@ were real data quality issues but not the structural cause.
   trio). Kept 21 durable artifacts: placeholder p1-p8 CSVs,
   HANDOVER doc, FIXSPEC doc, authoring guides, current canonical +
   unit audit + adapter pipeline.
-- [`mailbox/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md`](mailbox/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md)
+- [`inject/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md`](inject/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md)
   — numbered-changelog handover doc covering all changes applied
   (1-16) + status (resolved by items 9-16) + files-not-to-touch.
 
@@ -439,7 +474,7 @@ the package and records the bioenergy domain's single-cap migration.
   LEAP-side branch is pending or the (branch, variable) placement is
   deferred. Lets data be preserved for forward compatibility while
   unblocking the audit/inject pipeline. Worked example in
-  [mailbox/bioenergy/build_canonical.py](mailbox/bioenergy/build_canonical.py).
+  [inject/bioenergy/build_canonical.py](inject/bioenergy/build_canonical.py).
 - **Single-branch variable enumeration** — `nemo_read-list-branch-vars`
   reference, with positioning vs `nemo_read-leap-units --all`.
 
@@ -454,7 +489,7 @@ the package and records the bioenergy domain's single-cap migration.
   Metric Tonne; Corn ProdCost to USD/Metric Tonne after a mid-cycle
   LEAP-side unit shift; POME ProdCost converted via the new POME-oil
   LHV entry). Captured in
-  [mailbox/bioenergy/BIOENERGY_CSV_SPEC.md](mailbox/bioenergy/BIOENERGY_CSV_SPEC.md)
+  [inject/bioenergy/BIOENERGY_CSV_SPEC.md](inject/bioenergy/BIOENERGY_CSV_SPEC.md)
   as the operational spec.
 
 ### Recurring gotchas (re-confirmed; both already covered in BROCHURE.md)

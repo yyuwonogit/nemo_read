@@ -1,0 +1,6 @@
+ams,branch,variable,expression,rationale,note
+all_10_AMS,Resources\Secondary\Gasoline,Maximum Production,0,Refinery is sole producer — Secondary Resource MaxProd must be 0 to prevent LEAP from generating product from nowhere,Currently Unlimited in LEAP (probed 2026-04-20); inconsistent with Diesel=0 pattern — standardise to 0
+all_10_AMS,Resources\Secondary\Diesel,Maximum Production,0,Refinery is sole producer — retain current 0,Already 0 in LEAP — confirmed correct
+all_10_AMS,Resources\Secondary\Kerosene,Maximum Production,0,Refinery is sole producer — retain current 0,Already 0 in LEAP — confirmed correct
+all_10_AMS,Resources\Secondary\LPG,Maximum Production,0,Out of Fossils scope but for LEAP consistency Maximum Production should be 0,LPG dropped from module scope; this row documents required LEAP state for consistency
+all_10_AMS,Resources\Secondary\Residual Fuel Oil,Maximum Production,0,Refinery is sole producer — Secondary Resource MaxProd must be 0,Currently Unlimited in LEAP (probed 2026-04-20); standardise to 0

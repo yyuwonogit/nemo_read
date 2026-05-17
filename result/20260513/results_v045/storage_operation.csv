@@ -1,0 +1,2071 @@
+region,tech_name,season,hour,year,charge_PJ,discharge_PJ,net_PJ
+Cambodia,Lithium Ion Batteries,Dry,1,2025,0.0491,0.0000,-0.0491
+Cambodia,Lithium Ion Batteries,Dry,2,2025,0.1952,0.0000,-0.1952
+Cambodia,Lithium Ion Batteries,Dry,4,2025,0.2304,0.0000,-0.2304
+Cambodia,Lithium Ion Batteries,Dry,5,2025,0.2263,0.0000,-0.2263
+Cambodia,Lithium Ion Batteries,Dry,6,2025,0.1341,0.0000,-0.1341
+Cambodia,Lithium Ion Batteries,Dry,7,2025,0.0000,0.0419,0.0419
+Cambodia,Lithium Ion Batteries,Dry,8,2025,0.0000,0.1123,0.1123
+Cambodia,Lithium Ion Batteries,Dry,9,2025,0.0618,0.0000,-0.0618
+Cambodia,Lithium Ion Batteries,Dry,10,2025,0.0085,0.0000,-0.0085
+Cambodia,Lithium Ion Batteries,Dry,12,2025,0.3748,0.0000,-0.3748
+Cambodia,Lithium Ion Batteries,Dry,14,2025,0.0456,0.0000,-0.0456
+Cambodia,Lithium Ion Batteries,Dry,15,2025,0.0345,0.0000,-0.0345
+Cambodia,Lithium Ion Batteries,Dry,17,2025,0.0000,0.0807,0.0807
+Cambodia,Lithium Ion Batteries,Dry,18,2025,0.0000,0.0146,0.0146
+Cambodia,Lithium Ion Batteries,Dry,19,2025,0.0000,0.1757,0.1757
+Cambodia,Lithium Ion Batteries,Dry,20,2025,0.0000,0.4589,0.4589
+Cambodia,Lithium Ion Batteries,Dry,21,2025,0.0000,0.1990,0.1990
+Cambodia,Lithium Ion Batteries,Dry,22,2025,0.0000,0.2160,0.2160
+Cambodia,Lithium Ion Batteries,Wet,2,2025,0.0336,0.0000,-0.0336
+Cambodia,Lithium Ion Batteries,Wet,3,2025,0.1027,0.0000,-0.1027
+Cambodia,Lithium Ion Batteries,Wet,4,2025,0.1176,0.0000,-0.1176
+Cambodia,Lithium Ion Batteries,Wet,5,2025,0.1012,0.0000,-0.1012
+Cambodia,Lithium Ion Batteries,Wet,6,2025,0.0632,0.0000,-0.0632
+Cambodia,Lithium Ion Batteries,Wet,7,2025,0.0000,0.0251,0.0251
+Cambodia,Lithium Ion Batteries,Wet,8,2025,0.0000,0.0973,0.0973
+Cambodia,Lithium Ion Batteries,Wet,9,2025,0.0105,0.0000,-0.0105
+Cambodia,Lithium Ion Batteries,Wet,11,2025,0.1130,0.0000,-0.1130
+Cambodia,Lithium Ion Batteries,Wet,12,2025,0.2406,0.0000,-0.2406
+Cambodia,Lithium Ion Batteries,Wet,13,2025,0.1227,0.0000,-0.1227
+Cambodia,Lithium Ion Batteries,Wet,14,2025,0.0346,0.0000,-0.0346
+Cambodia,Lithium Ion Batteries,Wet,15,2025,0.0382,0.0000,-0.0382
+Cambodia,Lithium Ion Batteries,Wet,16,2025,0.0155,0.0000,-0.0155
+Cambodia,Lithium Ion Batteries,Wet,18,2025,0.0000,0.1109,0.1109
+Cambodia,Lithium Ion Batteries,Wet,19,2025,0.0000,0.3228,0.3228
+Cambodia,Lithium Ion Batteries,Wet,20,2025,0.0000,0.2322,0.2322
+Cambodia,Lithium Ion Batteries,Wet,21,2025,0.0000,0.0622,0.0622
+Cambodia,Lithium Ion Batteries,Wet,23,2025,0.0000,0.0981,0.0981
+Cambodia,Lithium Ion Batteries,Dry,12,2030,0.0774,0.0000,-0.0774
+Cambodia,Lithium Ion Batteries,Dry,13,2030,0.7925,0.0000,-0.7925
+Cambodia,Lithium Ion Batteries,Dry,14,2030,0.7201,0.0000,-0.7201
+Cambodia,Lithium Ion Batteries,Dry,18,2030,0.0000,0.1108,0.1108
+Cambodia,Lithium Ion Batteries,Dry,20,2030,0.0000,0.6178,0.6178
+Cambodia,Lithium Ion Batteries,Dry,22,2030,0.0000,0.6646,0.6646
+Cambodia,Lithium Ion Batteries,Dry,24,2030,0.0000,0.1332,0.1332
+Cambodia,Lithium Ion Batteries,Wet,12,2030,0.5738,0.0000,-0.5738
+Cambodia,Lithium Ion Batteries,Wet,14,2030,0.5738,0.0000,-0.5738
+Cambodia,Lithium Ion Batteries,Wet,18,2030,0.0000,0.1745,0.1745
+Cambodia,Lithium Ion Batteries,Wet,20,2030,0.0000,0.4514,0.4514
+Cambodia,Lithium Ion Batteries,Wet,21,2030,0.0000,0.4123,0.4123
+Cambodia,Lithium Ion Batteries,Wet,23,2030,0.0000,0.0634,0.0634
+Cambodia,Lithium Ion Batteries,Dry,9,2035,0.7950,0.0000,-0.7950
+Cambodia,Lithium Ion Batteries,Dry,12,2035,0.7950,0.0000,-0.7950
+Cambodia,Lithium Ion Batteries,Dry,19,2035,0.0000,0.3074,0.3074
+Cambodia,Lithium Ion Batteries,Dry,21,2035,0.0000,0.7632,0.7632
+Cambodia,Lithium Ion Batteries,Dry,23,2035,0.0000,0.4558,0.4558
+Cambodia,Lithium Ion Batteries,Wet,3,2035,0.0171,0.0000,-0.0171
+Cambodia,Lithium Ion Batteries,Wet,6,2035,0.0000,0.0164,0.0164
+Cambodia,Lithium Ion Batteries,Wet,10,2035,0.5738,0.0000,-0.5738
+Cambodia,Lithium Ion Batteries,Wet,11,2035,0.5738,0.0000,-0.5738
+Cambodia,Lithium Ion Batteries,Wet,21,2035,0.0000,0.5508,0.5508
+Cambodia,Lithium Ion Batteries,Wet,23,2035,0.0000,0.2640,0.2640
+Cambodia,Lithium Ion Batteries,Wet,24,2035,0.0000,0.2868,0.2868
+Cambodia,Lithium Ion Batteries,Dry,12,2040,0.7950,0.0000,-0.7950
+Cambodia,Lithium Ion Batteries,Dry,13,2040,0.7950,0.0000,-0.7950
+Cambodia,Lithium Ion Batteries,Dry,19,2040,0.0000,0.7632,0.7632
+Cambodia,Lithium Ion Batteries,Dry,21,2040,0.0000,0.7632,0.7632
+Cambodia,Lithium Ion Batteries,Wet,12,2040,0.5738,0.0000,-0.5738
+Cambodia,Lithium Ion Batteries,Wet,14,2040,0.5738,0.0000,-0.5738
+Cambodia,Lithium Ion Batteries,Wet,19,2040,0.0000,0.5508,0.5508
+Cambodia,Lithium Ion Batteries,Wet,22,2040,0.0000,0.5508,0.5508
+Cambodia,Lithium Ion Batteries,Dry,14,2045,0.7950,0.0000,-0.7950
+Cambodia,Lithium Ion Batteries,Dry,15,2045,0.7950,0.0000,-0.7950
+Cambodia,Lithium Ion Batteries,Dry,18,2045,0.0000,0.7632,0.7632
+Cambodia,Lithium Ion Batteries,Dry,21,2045,0.0000,0.7632,0.7632
+Cambodia,Lithium Ion Batteries,Wet,9,2045,0.1305,0.0000,-0.1305
+Cambodia,Lithium Ion Batteries,Wet,12,2045,0.5738,0.0000,-0.5738
+Cambodia,Lithium Ion Batteries,Wet,14,2045,0.4433,0.0000,-0.4433
+Cambodia,Lithium Ion Batteries,Wet,21,2045,0.0000,0.5508,0.5508
+Cambodia,Lithium Ion Batteries,Wet,23,2045,0.0000,0.0163,0.0163
+Cambodia,Lithium Ion Batteries,Wet,24,2045,0.0000,0.5345,0.5345
+Cambodia,Lithium Ion Batteries,Dry,9,2050,0.7950,0.0000,-0.7950
+Cambodia,Lithium Ion Batteries,Dry,10,2050,0.7950,0.0000,-0.7950
+Cambodia,Lithium Ion Batteries,Dry,19,2050,0.0000,0.7632,0.7632
+Cambodia,Lithium Ion Batteries,Dry,21,2050,0.0000,0.7632,0.7632
+Cambodia,Lithium Ion Batteries,Wet,3,2050,0.0025,0.0000,-0.0025
+Cambodia,Lithium Ion Batteries,Wet,4,2050,0.0226,0.0000,-0.0226
+Cambodia,Lithium Ion Batteries,Wet,5,2050,0.0006,0.0000,-0.0006
+Cambodia,Lithium Ion Batteries,Wet,6,2050,0.0000,0.0247,0.0247
+Cambodia,Lithium Ion Batteries,Wet,9,2050,0.5738,0.0000,-0.5738
+Cambodia,Lithium Ion Batteries,Wet,15,2050,0.5738,0.0000,-0.5738
+Cambodia,Lithium Ion Batteries,Wet,17,2050,0.0000,0.0136,0.0136
+Cambodia,Lithium Ion Batteries,Wet,20,2050,0.0000,0.5508,0.5508
+Cambodia,Lithium Ion Batteries,Wet,23,2050,0.0000,0.0402,0.0402
+Cambodia,Lithium Ion Batteries,Wet,24,2050,0.0000,0.4970,0.4970
+Cambodia,Lithium Ion Batteries,Dry,8,2055,0.3493,0.0000,-0.3493
+Cambodia,Lithium Ion Batteries,Dry,10,2055,0.1851,0.0000,-0.1851
+Cambodia,Lithium Ion Batteries,Dry,12,2055,0.5189,0.0000,-0.5189
+Cambodia,Lithium Ion Batteries,Dry,15,2055,0.2241,0.0000,-0.2241
+Cambodia,Lithium Ion Batteries,Dry,16,2055,0.3126,0.0000,-0.3126
+Cambodia,Lithium Ion Batteries,Dry,19,2055,0.0000,0.7632,0.7632
+Cambodia,Lithium Ion Batteries,Dry,21,2055,0.0000,0.6783,0.6783
+Cambodia,Lithium Ion Batteries,Dry,23,2055,0.0000,0.0849,0.0849
+Cambodia,Lithium Ion Batteries,Wet,1,2055,0.1339,0.0000,-0.1339
+Cambodia,Lithium Ion Batteries,Wet,4,2055,0.2558,0.0000,-0.2558
+Cambodia,Lithium Ion Batteries,Wet,5,2055,0.2113,0.0000,-0.2113
+Cambodia,Lithium Ion Batteries,Wet,6,2055,0.0707,0.0000,-0.0707
+Cambodia,Lithium Ion Batteries,Wet,8,2055,0.2494,0.0000,-0.2494
+Cambodia,Lithium Ion Batteries,Wet,10,2055,0.1167,0.0000,-0.1167
+Cambodia,Lithium Ion Batteries,Wet,11,2055,0.1097,0.0000,-0.1097
+Cambodia,Lithium Ion Batteries,Wet,18,2055,0.0000,0.3073,0.3073
+Cambodia,Lithium Ion Batteries,Wet,19,2055,0.0000,0.5508,0.5508
+Cambodia,Lithium Ion Batteries,Wet,21,2055,0.0000,0.2435,0.2435
+Cambodia,Lithium Ion Batteries,Dry,2,2060,0.2521,0.0000,-0.2521
+Cambodia,Lithium Ion Batteries,Dry,3,2060,0.3275,0.0000,-0.3275
+Cambodia,Lithium Ion Batteries,Dry,12,2060,0.7950,0.0000,-0.7950
+Cambodia,Lithium Ion Batteries,Dry,13,2060,0.0554,0.0000,-0.0554
+Cambodia,Lithium Ion Batteries,Dry,16,2060,0.1601,0.0000,-0.1601
+Cambodia,Lithium Ion Batteries,Dry,19,2060,0.0000,0.2755,0.2755
+Cambodia,Lithium Ion Batteries,Dry,21,2060,0.0000,0.7632,0.7632
+Cambodia,Lithium Ion Batteries,Dry,22,2060,0.0000,0.4877,0.4877
+Cambodia,Lithium Ion Batteries,Wet,2,2060,0.0888,0.0000,-0.0888
+Cambodia,Lithium Ion Batteries,Wet,5,2060,0.2368,0.0000,-0.2368
+Cambodia,Lithium Ion Batteries,Wet,7,2060,0.1016,0.0000,-0.1016
+Cambodia,Lithium Ion Batteries,Wet,10,2060,0.2370,0.0000,-0.2370
+Cambodia,Lithium Ion Batteries,Wet,13,2060,0.4833,0.0000,-0.4833
+Cambodia,Lithium Ion Batteries,Wet,21,2060,0.0000,0.5508,0.5508
+Cambodia,Lithium Ion Batteries,Wet,22,2060,0.0000,0.5508,0.5508
+Cambodia,Pumped Hydro,Dry,1,2030,0.0000,0.0621,0.0621
+Cambodia,Pumped Hydro,Dry,2,2030,0.0000,0.0119,0.0119
+Cambodia,Pumped Hydro,Dry,6,2030,0.0000,0.0685,0.0685
+Cambodia,Pumped Hydro,Dry,7,2030,0.0000,0.1561,0.1561
+Cambodia,Pumped Hydro,Dry,10,2030,0.3494,0.0000,-0.3494
+Cambodia,Pumped Hydro,Dry,11,2030,0.8496,0.0000,-0.8496
+Cambodia,Pumped Hydro,Dry,12,2030,0.9540,0.0000,-0.9540
+Cambodia,Pumped Hydro,Dry,13,2030,0.0650,0.0000,-0.0650
+Cambodia,Pumped Hydro,Dry,15,2030,0.3079,0.0000,-0.3079
+Cambodia,Pumped Hydro,Dry,18,2030,0.0000,0.2976,0.2976
+Cambodia,Pumped Hydro,Dry,19,2030,0.0000,0.6543,0.6543
+Cambodia,Pumped Hydro,Dry,21,2030,0.0000,0.5275,0.5275
+Cambodia,Pumped Hydro,Dry,23,2030,0.0000,0.2441,0.2441
+Cambodia,Pumped Hydro,Wet,10,2030,0.1123,0.0000,-0.1123
+Cambodia,Pumped Hydro,Wet,11,2030,0.5908,0.0000,-0.5908
+Cambodia,Pumped Hydro,Wet,12,2030,0.1099,0.0000,-0.1099
+Cambodia,Pumped Hydro,Wet,13,2030,0.5385,0.0000,-0.5385
+Cambodia,Pumped Hydro,Wet,16,2030,0.0088,0.0000,-0.0088
+Cambodia,Pumped Hydro,Wet,19,2030,0.0000,0.4381,0.4381
+Cambodia,Pumped Hydro,Wet,22,2030,0.0000,0.3283,0.3283
+Cambodia,Pumped Hydro,Wet,23,2030,0.0000,0.1665,0.1665
+Cambodia,Pumped Hydro,Wet,24,2030,0.0000,0.1540,0.1540
+Cambodia,Pumped Hydro,Dry,1,2035,0.0000,0.7973,0.7973
+Cambodia,Pumped Hydro,Dry,2,2035,0.0000,0.7488,0.7488
+Cambodia,Pumped Hydro,Dry,4,2035,0.0000,0.6942,0.6942
+Cambodia,Pumped Hydro,Dry,5,2035,0.0000,0.7210,0.7210
+Cambodia,Pumped Hydro,Dry,6,2035,0.0000,0.8034,0.8034
+Cambodia,Pumped Hydro,Dry,7,2035,0.0000,0.2550,0.2550
+Cambodia,Pumped Hydro,Dry,8,2035,0.0000,0.0607,0.0607
+Cambodia,Pumped Hydro,Dry,9,2035,0.5319,0.0000,-0.5319
+Cambodia,Pumped Hydro,Dry,10,2035,1.4332,0.0000,-1.4332
+Cambodia,Pumped Hydro,Dry,11,2035,1.6069,0.0000,-1.6069
+Cambodia,Pumped Hydro,Dry,12,2035,0.9918,0.0000,-0.9918
+Cambodia,Pumped Hydro,Dry,13,2035,1.6186,0.0000,-1.6186
+Cambodia,Pumped Hydro,Dry,14,2035,1.4805,0.0000,-1.4805
+Cambodia,Pumped Hydro,Dry,15,2035,1.4538,0.0000,-1.4538
+Cambodia,Pumped Hydro,Dry,16,2035,1.2747,0.0000,-1.2747
+Cambodia,Pumped Hydro,Dry,17,2035,0.0000,0.0412,0.0412
+Cambodia,Pumped Hydro,Dry,18,2035,0.0000,1.2875,1.2875
+Cambodia,Pumped Hydro,Dry,19,2035,0.0000,0.2386,0.2386
+Cambodia,Pumped Hydro,Dry,20,2035,0.0000,0.5107,0.5107
+Cambodia,Pumped Hydro,Dry,21,2035,0.0000,0.4039,0.4039
+Cambodia,Pumped Hydro,Dry,22,2035,0.0000,0.5991,0.5991
+Cambodia,Pumped Hydro,Dry,24,2035,0.0000,1.1711,1.1711
+Cambodia,Pumped Hydro,Wet,9,2035,0.7217,0.0000,-0.7217
+Cambodia,Pumped Hydro,Wet,10,2035,0.4497,0.0000,-0.4497
+Cambodia,Pumped Hydro,Wet,11,2035,0.5603,0.0000,-0.5603
+Cambodia,Pumped Hydro,Wet,12,2035,1.2524,0.0000,-1.2524
+Cambodia,Pumped Hydro,Wet,13,2035,1.1457,0.0000,-1.1457
+Cambodia,Pumped Hydro,Wet,14,2035,1.0596,0.0000,-1.0596
+Cambodia,Pumped Hydro,Wet,15,2035,1.0508,0.0000,-1.0508
+Cambodia,Pumped Hydro,Wet,16,2035,0.4455,0.0000,-0.4455
+Cambodia,Pumped Hydro,Wet,17,2035,0.0000,0.3083,0.3083
+Cambodia,Pumped Hydro,Wet,18,2035,0.0000,0.8170,0.8170
+Cambodia,Pumped Hydro,Wet,19,2035,0.0000,0.9544,0.9544
+Cambodia,Pumped Hydro,Wet,20,2035,0.0000,1.1876,1.1876
+Cambodia,Pumped Hydro,Wet,21,2035,0.0000,0.5992,0.5992
+Cambodia,Pumped Hydro,Wet,22,2035,0.0000,1.0690,1.0690
+Cambodia,Pumped Hydro,Wet,24,2035,0.0000,0.3939,0.3939
+Cambodia,Pumped Hydro,Dry,1,2040,0.0000,0.1671,0.1671
+Cambodia,Pumped Hydro,Dry,2,2040,0.0000,0.4199,0.4199
+Cambodia,Pumped Hydro,Dry,3,2040,0.0000,0.3815,0.3815
+Cambodia,Pumped Hydro,Dry,4,2040,0.0000,0.0556,0.0556
+Cambodia,Pumped Hydro,Dry,5,2040,0.0000,0.9332,0.9332
+Cambodia,Pumped Hydro,Dry,6,2040,0.0000,0.1736,0.1736
+Cambodia,Pumped Hydro,Dry,7,2040,0.0000,0.4615,0.4615
+Cambodia,Pumped Hydro,Dry,8,2040,0.0000,0.0010,0.0010
+Cambodia,Pumped Hydro,Dry,9,2040,1.0873,0.0000,-1.0873
+Cambodia,Pumped Hydro,Dry,10,2040,1.6529,0.0000,-1.6529
+Cambodia,Pumped Hydro,Dry,11,2040,1.8465,0.0000,-1.8465
+Cambodia,Pumped Hydro,Dry,12,2040,1.2490,0.0000,-1.2490
+Cambodia,Pumped Hydro,Dry,13,2040,1.0668,0.0000,-1.0668
+Cambodia,Pumped Hydro,Dry,14,2040,1.7087,0.0000,-1.7087
+Cambodia,Pumped Hydro,Dry,15,2040,1.6743,0.0000,-1.6743
+Cambodia,Pumped Hydro,Dry,16,2040,1.0375,0.0000,-1.0375
+Cambodia,Pumped Hydro,Dry,17,2040,0.0000,0.2071,0.2071
+Cambodia,Pumped Hydro,Dry,18,2040,0.0000,0.6937,0.6937
+Cambodia,Pumped Hydro,Dry,19,2040,0.0000,0.0211,0.0211
+Cambodia,Pumped Hydro,Dry,20,2040,0.0000,1.9001,1.9001
+Cambodia,Pumped Hydro,Dry,22,2040,0.0000,1.3602,1.3602
+Cambodia,Pumped Hydro,Dry,23,2040,0.0000,1.2053,1.2053
+Cambodia,Pumped Hydro,Dry,24,2040,0.0000,1.0897,1.0897
+Cambodia,Pumped Hydro,Wet,9,2040,0.5462,0.0000,-0.5462
+Cambodia,Pumped Hydro,Wet,10,2040,1.1793,0.0000,-1.1793
+Cambodia,Pumped Hydro,Wet,11,2040,1.3021,0.0000,-1.3021
+Cambodia,Pumped Hydro,Wet,12,2040,0.8579,0.0000,-0.8579
+Cambodia,Pumped Hydro,Wet,13,2040,1.3157,0.0000,-1.3157
+Cambodia,Pumped Hydro,Wet,14,2040,0.6465,0.0000,-0.6465
+Cambodia,Pumped Hydro,Wet,15,2040,1.0332,0.0000,-1.0332
+Cambodia,Pumped Hydro,Wet,16,2040,0.2724,0.0000,-0.2724
+Cambodia,Pumped Hydro,Wet,17,2040,0.0000,0.2629,0.2629
+Cambodia,Pumped Hydro,Wet,18,2040,0.0000,0.3324,0.3324
+Cambodia,Pumped Hydro,Wet,19,2040,0.0000,0.5921,0.5921
+Cambodia,Pumped Hydro,Wet,20,2040,0.0000,1.1567,1.1567
+Cambodia,Pumped Hydro,Wet,21,2040,0.0000,1.1160,1.1160
+Cambodia,Pumped Hydro,Wet,22,2040,0.0000,0.4776,0.4776
+Cambodia,Pumped Hydro,Wet,23,2040,0.0000,0.9259,0.9259
+Cambodia,Pumped Hydro,Wet,24,2040,0.0000,0.8468,0.8468
+Cambodia,Pumped Hydro,Dry,1,2045,0.0000,0.5582,0.5582
+Cambodia,Pumped Hydro,Dry,2,2045,0.0000,0.4976,0.4976
+Cambodia,Pumped Hydro,Dry,3,2045,0.0000,0.4531,0.4531
+Cambodia,Pumped Hydro,Dry,4,2045,0.0000,0.4293,0.4293
+Cambodia,Pumped Hydro,Dry,5,2045,0.0000,0.4629,0.4629
+Cambodia,Pumped Hydro,Dry,6,2045,0.0000,0.5658,0.5658
+Cambodia,Pumped Hydro,Dry,7,2045,0.0000,0.5892,0.5892
+Cambodia,Pumped Hydro,Dry,8,2045,0.3232,0.0000,-0.3232
+Cambodia,Pumped Hydro,Dry,9,2045,1.1044,0.0000,-1.1044
+Cambodia,Pumped Hydro,Dry,10,2045,1.4440,0.0000,-1.4440
+Cambodia,Pumped Hydro,Dry,11,2045,1.6599,0.0000,-1.6599
+Cambodia,Pumped Hydro,Dry,12,2045,1.8841,0.0000,-1.8841
+Cambodia,Pumped Hydro,Dry,13,2045,1.6739,0.0000,-1.6739
+Cambodia,Pumped Hydro,Dry,14,2045,0.7071,0.0000,-0.7071
+Cambodia,Pumped Hydro,Dry,15,2045,0.6750,0.0000,-0.6750
+Cambodia,Pumped Hydro,Dry,16,2045,1.5238,0.0000,-1.5238
+Cambodia,Pumped Hydro,Dry,17,2045,0.0451,0.0000,-0.0451
+Cambodia,Pumped Hydro,Dry,18,2045,0.0000,0.1067,0.1067
+Cambodia,Pumped Hydro,Dry,19,2045,0.0000,1.2721,1.2721
+Cambodia,Pumped Hydro,Dry,20,2045,0.0000,1.2281,1.2281
+Cambodia,Pumped Hydro,Dry,21,2045,0.0000,0.3561,0.3561
+Cambodia,Pumped Hydro,Dry,22,2045,0.0000,0.9568,0.9568
+Cambodia,Pumped Hydro,Dry,23,2045,0.0000,0.7776,0.7776
+Cambodia,Pumped Hydro,Dry,24,2045,0.0000,0.6439,0.6439
+Cambodia,Pumped Hydro,Wet,10,2045,0.8086,0.0000,-0.8086
+Cambodia,Pumped Hydro,Wet,11,2045,1.1665,0.0000,-1.1665
+Cambodia,Pumped Hydro,Wet,12,2045,0.5201,0.0000,-0.5201
+Cambodia,Pumped Hydro,Wet,13,2045,0.9605,0.0000,-0.9605
+Cambodia,Pumped Hydro,Wet,14,2045,0.4102,0.0000,-0.4102
+Cambodia,Pumped Hydro,Wet,15,2045,0.6150,0.0000,-0.6150
+Cambodia,Pumped Hydro,Wet,16,2045,0.4908,0.0000,-0.4908
+Cambodia,Pumped Hydro,Wet,17,2045,0.0000,0.0075,0.0075
+Cambodia,Pumped Hydro,Wet,18,2045,0.0000,0.4855,0.4855
+Cambodia,Pumped Hydro,Wet,19,2045,0.0000,0.8769,0.8769
+Cambodia,Pumped Hydro,Wet,20,2045,0.0000,0.8930,0.8930
+Cambodia,Pumped Hydro,Wet,21,2045,0.0000,0.2951,0.2951
+Cambodia,Pumped Hydro,Wet,22,2045,0.0000,0.7446,0.7446
+Cambodia,Pumped Hydro,Wet,23,2045,0.0000,0.6097,0.6097
+Cambodia,Pumped Hydro,Dry,2,2050,0.0000,0.3960,0.3960
+Cambodia,Pumped Hydro,Dry,4,2050,0.0000,0.3137,0.3137
+Cambodia,Pumped Hydro,Dry,5,2050,0.0000,0.3541,0.3541
+Cambodia,Pumped Hydro,Dry,6,2050,0.0000,0.4781,0.4781
+Cambodia,Pumped Hydro,Dry,7,2050,0.0000,0.3636,0.3636
+Cambodia,Pumped Hydro,Dry,9,2050,0.1979,0.0000,-0.1979
+Cambodia,Pumped Hydro,Dry,10,2050,0.1618,0.0000,-0.1618
+Cambodia,Pumped Hydro,Dry,11,2050,1.2180,0.0000,-1.2180
+Cambodia,Pumped Hydro,Dry,12,2050,1.4886,0.0000,-1.4886
+Cambodia,Pumped Hydro,Dry,13,2050,1.2353,0.0000,-1.2353
+Cambodia,Pumped Hydro,Dry,14,2050,1.0276,0.0000,-1.0276
+Cambodia,Pumped Hydro,Dry,15,2050,0.9879,0.0000,-0.9879
+Cambodia,Pumped Hydro,Dry,16,2050,1.0512,0.0000,-1.0512
+Cambodia,Pumped Hydro,Dry,18,2050,0.0000,0.9013,0.9013
+Cambodia,Pumped Hydro,Dry,19,2050,0.0000,0.0950,0.0950
+Cambodia,Pumped Hydro,Dry,20,2050,0.0000,0.8052,0.8052
+Cambodia,Pumped Hydro,Dry,22,2050,0.0000,0.9491,0.9491
+Cambodia,Pumped Hydro,Dry,23,2050,0.0000,0.7333,0.7333
+Cambodia,Pumped Hydro,Dry,24,2050,0.0000,0.5722,0.5722
+Cambodia,Pumped Hydro,Wet,9,2050,0.0019,0.0000,-0.0019
+Cambodia,Pumped Hydro,Wet,10,2050,0.6743,0.0000,-0.6743
+Cambodia,Pumped Hydro,Wet,11,2050,0.8406,0.0000,-0.8406
+Cambodia,Pumped Hydro,Wet,12,2050,1.0188,0.0000,-1.0188
+Cambodia,Pumped Hydro,Wet,13,2050,0.8581,0.0000,-0.8581
+Cambodia,Pumped Hydro,Wet,14,2050,0.7286,0.0000,-0.7286
+Cambodia,Pumped Hydro,Wet,15,2050,0.1419,0.0000,-0.1419
+Cambodia,Pumped Hydro,Wet,16,2050,0.3379,0.0000,-0.3379
+Cambodia,Pumped Hydro,Wet,18,2050,0.0000,0.4776,0.4776
+Cambodia,Pumped Hydro,Wet,19,2050,0.0000,0.9095,0.9095
+Cambodia,Pumped Hydro,Wet,20,2050,0.0000,0.3780,0.3780
+Cambodia,Pumped Hydro,Wet,21,2050,0.0000,0.8721,0.8721
+Cambodia,Pumped Hydro,Wet,22,2050,0.0000,0.4104,0.4104
+Cambodia,Pumped Hydro,Wet,23,2050,0.0000,0.5671,0.5671
+Cambodia,Pumped Hydro,Dry,3,2055,0.0259,0.0000,-0.0259
+Cambodia,Pumped Hydro,Dry,4,2055,0.3186,0.0000,-0.3186
+Cambodia,Pumped Hydro,Dry,9,2055,0.2411,0.0000,-0.2411
+Cambodia,Pumped Hydro,Dry,11,2055,0.4926,0.0000,-0.4926
+Cambodia,Pumped Hydro,Dry,12,2055,0.2966,0.0000,-0.2966
+Cambodia,Pumped Hydro,Dry,13,2055,0.5094,0.0000,-0.5094
+Cambodia,Pumped Hydro,Dry,14,2055,0.2637,0.0000,-0.2637
+Cambodia,Pumped Hydro,Dry,17,2055,0.4039,0.0000,-0.4039
+Cambodia,Pumped Hydro,Dry,18,2055,0.0000,0.5132,0.5132
+Cambodia,Pumped Hydro,Dry,19,2055,0.0000,0.1626,0.1626
+Cambodia,Pumped Hydro,Dry,20,2055,0.0000,0.8515,0.8515
+Cambodia,Pumped Hydro,Dry,22,2055,0.0000,0.4285,0.4285
+Cambodia,Pumped Hydro,Dry,23,2055,0.0000,0.0855,0.0855
+Cambodia,Pumped Hydro,Wet,2,2055,0.1952,0.0000,-0.1952
+Cambodia,Pumped Hydro,Wet,3,2055,0.2361,0.0000,-0.2361
+Cambodia,Pumped Hydro,Wet,7,2055,0.1233,0.0000,-0.1233
+Cambodia,Pumped Hydro,Wet,9,2055,0.1561,0.0000,-0.1561
+Cambodia,Pumped Hydro,Wet,11,2055,0.2034,0.0000,-0.2034
+Cambodia,Pumped Hydro,Wet,12,2055,0.5266,0.0000,-0.5266
+Cambodia,Pumped Hydro,Wet,13,2055,0.3327,0.0000,-0.3327
+Cambodia,Pumped Hydro,Wet,14,2055,0.4332,0.0000,-0.4332
+Cambodia,Pumped Hydro,Wet,15,2055,0.1703,0.0000,-0.1703
+Cambodia,Pumped Hydro,Wet,16,2055,0.2647,0.0000,-0.2647
+Cambodia,Pumped Hydro,Wet,17,2055,0.1361,0.0000,-0.1361
+Cambodia,Pumped Hydro,Wet,19,2055,0.0000,0.2235,0.2235
+Cambodia,Pumped Hydro,Wet,20,2055,0.0000,0.7836,0.7836
+Cambodia,Pumped Hydro,Wet,21,2055,0.0000,0.4587,0.4587
+Cambodia,Pumped Hydro,Wet,22,2055,0.0000,0.5414,0.5414
+Cambodia,Pumped Hydro,Wet,23,2055,0.0000,0.2150,0.2150
+Cambodia,Pumped Hydro,Dry,1,2060,0.1493,0.0000,-0.1493
+Cambodia,Pumped Hydro,Dry,4,2060,0.3679,0.0000,-0.3679
+Cambodia,Pumped Hydro,Dry,5,2060,0.2617,0.0000,-0.2617
+Cambodia,Pumped Hydro,Dry,6,2060,0.1364,0.0000,-0.1364
+Cambodia,Pumped Hydro,Dry,8,2060,0.2140,0.0000,-0.2140
+Cambodia,Pumped Hydro,Dry,9,2060,0.0761,0.0000,-0.0761
+Cambodia,Pumped Hydro,Dry,10,2060,0.0016,0.0000,-0.0016
+Cambodia,Pumped Hydro,Dry,11,2060,0.7034,0.0000,-0.7034
+Cambodia,Pumped Hydro,Dry,13,2060,0.3134,0.0000,-0.3134
+Cambodia,Pumped Hydro,Dry,14,2060,0.4385,0.0000,-0.4385
+Cambodia,Pumped Hydro,Dry,15,2060,0.0480,0.0000,-0.0480
+Cambodia,Pumped Hydro,Dry,17,2060,0.2776,0.0000,-0.2776
+Cambodia,Pumped Hydro,Dry,18,2060,0.0000,0.6211,0.6211
+Cambodia,Pumped Hydro,Dry,19,2060,0.0000,0.7843,0.7843
+Cambodia,Pumped Hydro,Dry,20,2060,0.0000,0.9751,0.9751
+Cambodia,Pumped Hydro,Dry,21,2060,0.0000,0.0129,0.0129
+Cambodia,Pumped Hydro,Dry,24,2060,0.0039,0.0000,-0.0039
+Cambodia,Pumped Hydro,Wet,1,2060,0.1428,0.0000,-0.1428
+Cambodia,Pumped Hydro,Wet,2,2060,0.1253,0.0000,-0.1253
+Cambodia,Pumped Hydro,Wet,3,2060,0.2620,0.0000,-0.2620
+Cambodia,Pumped Hydro,Wet,4,2060,0.2856,0.0000,-0.2856
+Cambodia,Pumped Hydro,Wet,6,2060,0.1493,0.0000,-0.1493
+Cambodia,Pumped Hydro,Wet,8,2060,0.4147,0.0000,-0.4147
+Cambodia,Pumped Hydro,Wet,9,2060,0.2894,0.0000,-0.2894
+Cambodia,Pumped Hydro,Wet,11,2060,0.4616,0.0000,-0.4616
+Cambodia,Pumped Hydro,Wet,12,2060,0.7081,0.0000,-0.7081
+Cambodia,Pumped Hydro,Wet,14,2060,0.3083,0.0000,-0.3083
+Cambodia,Pumped Hydro,Wet,15,2060,0.0486,0.0000,-0.0486
+Cambodia,Pumped Hydro,Wet,16,2060,0.1651,0.0000,-0.1651
+Cambodia,Pumped Hydro,Wet,17,2060,0.0711,0.0000,-0.0711
+Cambodia,Pumped Hydro,Wet,18,2060,0.0000,0.3496,0.3496
+Cambodia,Pumped Hydro,Wet,19,2060,0.0000,0.8613,0.8613
+Cambodia,Pumped Hydro,Wet,20,2060,0.0000,0.8743,0.8743
+Cambodia,Pumped Hydro,Wet,21,2060,0.0000,0.2309,0.2309
+Cambodia,Pumped Hydro,Wet,22,2060,0.0000,0.0462,0.0462
+Cambodia,Pumped Hydro,Wet,23,2060,0.0000,0.3832,0.3832
+Cambodia,Pumped Hydro,Wet,24,2060,0.0000,0.0000,-0.0000
+Indonesia,Lithium Ion Batteries,Dry,14,2030,1.9390,0.0000,-1.9390
+Indonesia,Lithium Ion Batteries,Dry,16,2030,0.1807,0.0000,-0.1807
+Indonesia,Lithium Ion Batteries,Dry,18,2030,0.0000,0.2528,0.2528
+Indonesia,Lithium Ion Batteries,Dry,19,2030,0.0000,1.0734,1.0734
+Indonesia,Lithium Ion Batteries,Dry,20,2030,0.0000,0.7087,0.7087
+Indonesia,Lithium Ion Batteries,Wet,1,2030,0.1304,0.0000,-0.1304
+Indonesia,Lithium Ion Batteries,Wet,7,2030,1.3994,0.0000,-1.3994
+Indonesia,Lithium Ion Batteries,Wet,18,2030,0.0000,0.3474,0.3474
+Indonesia,Lithium Ion Batteries,Wet,19,2030,0.0000,0.5434,0.5434
+Indonesia,Lithium Ion Batteries,Wet,20,2030,0.0000,0.3552,0.3552
+Indonesia,Lithium Ion Batteries,Wet,21,2030,0.0000,0.2226,0.2226
+Indonesia,Lithium Ion Batteries,Dry,4,2035,0.9975,0.0000,-0.9975
+Indonesia,Lithium Ion Batteries,Dry,6,2035,3.9872,0.0000,-3.9872
+Indonesia,Lithium Ion Batteries,Dry,19,2035,0.0000,2.5598,2.5598
+Indonesia,Lithium Ion Batteries,Dry,20,2035,0.0000,2.2255,2.2255
+Indonesia,Lithium Ion Batteries,Wet,1,2035,0.1469,0.0000,-0.1469
+Indonesia,Lithium Ion Batteries,Wet,3,2035,3.4505,0.0000,-3.4505
+Indonesia,Lithium Ion Batteries,Wet,18,2035,0.0000,1.0395,1.0395
+Indonesia,Lithium Ion Batteries,Wet,19,2035,0.0000,1.6455,1.6455
+Indonesia,Lithium Ion Batteries,Wet,20,2035,0.0000,0.7686,0.7686
+Indonesia,Lithium Ion Batteries,Dry,14,2045,0.7031,0.0000,-0.7031
+Indonesia,Lithium Ion Batteries,Dry,15,2045,0.3616,0.0000,-0.3616
+Indonesia,Lithium Ion Batteries,Dry,16,2045,3.5587,0.0000,-3.5587
+Indonesia,Lithium Ion Batteries,Dry,18,2045,0.0000,0.0257,0.0257
+Indonesia,Lithium Ion Batteries,Dry,19,2045,0.0000,1.5071,1.5071
+Indonesia,Lithium Ion Batteries,Dry,20,2045,0.0000,2.9057,2.9057
+Indonesia,Lithium Ion Batteries,Wet,6,2045,2.4693,0.0000,-2.4693
+Indonesia,Lithium Ion Batteries,Wet,7,2045,0.8674,0.0000,-0.8674
+Indonesia,Lithium Ion Batteries,Wet,19,2045,0.0000,1.4555,1.4555
+Indonesia,Lithium Ion Batteries,Wet,20,2045,0.0000,0.1863,0.1863
+Indonesia,Lithium Ion Batteries,Wet,21,2045,0.0000,1.5614,1.5614
+Indonesia,Lithium Ion Batteries,Dry,6,2050,1.3763,0.0000,-1.3763
+Indonesia,Lithium Ion Batteries,Dry,13,2050,1.7276,0.0000,-1.7276
+Indonesia,Lithium Ion Batteries,Dry,17,2050,1.4016,0.0000,-1.4016
+Indonesia,Lithium Ion Batteries,Dry,18,2050,0.0000,0.5595,0.5595
+Indonesia,Lithium Ion Batteries,Dry,19,2050,0.0000,2.3535,2.3535
+Indonesia,Lithium Ion Batteries,Dry,20,2050,0.0000,1.4122,1.4122
+Indonesia,Lithium Ion Batteries,Wet,14,2050,2.1813,0.0000,-2.1813
+Indonesia,Lithium Ion Batteries,Wet,15,2050,0.8050,0.0000,-0.8050
+Indonesia,Lithium Ion Batteries,Wet,17,2050,0.2653,0.0000,-0.2653
+Indonesia,Lithium Ion Batteries,Wet,18,2050,0.0000,0.2381,0.2381
+Indonesia,Lithium Ion Batteries,Wet,19,2050,0.0000,1.2092,1.2092
+Indonesia,Lithium Ion Batteries,Wet,20,2050,0.0000,0.6907,0.6907
+Indonesia,Lithium Ion Batteries,Wet,21,2050,0.0000,0.9834,0.9834
+Indonesia,Lithium Ion Batteries,Dry,2,2055,4.3876,0.0000,-4.3876
+Indonesia,Lithium Ion Batteries,Dry,18,2055,0.0000,0.4003,0.4003
+Indonesia,Lithium Ion Batteries,Dry,19,2055,0.0000,2.4703,2.4703
+Indonesia,Lithium Ion Batteries,Dry,20,2055,0.0000,1.3416,1.3416
+Indonesia,Lithium Ion Batteries,Wet,8,2055,3.1666,0.0000,-3.1666
+Indonesia,Lithium Ion Batteries,Wet,18,2055,0.0000,1.1822,1.1822
+Indonesia,Lithium Ion Batteries,Wet,19,2055,0.0000,1.2340,1.2340
+Indonesia,Lithium Ion Batteries,Wet,20,2055,0.0000,0.6237,0.6237
+Indonesia,Lithium Ion Batteries,Dry,4,2060,3.4719,0.0000,-3.4719
+Indonesia,Lithium Ion Batteries,Dry,11,2060,0.8194,0.0000,-0.8194
+Indonesia,Lithium Ion Batteries,Dry,19,2060,0.0000,1.6136,1.6136
+Indonesia,Lithium Ion Batteries,Dry,20,2060,0.0000,2.5060,2.5060
+Indonesia,Lithium Ion Batteries,Wet,4,2060,3.0970,0.0000,-3.0970
+Indonesia,Lithium Ion Batteries,Wet,19,2060,0.0000,0.9392,0.9392
+Indonesia,Lithium Ion Batteries,Wet,20,2060,0.0000,2.0340,2.0340
+Indonesia,Pumped Hydro,Dry,17,2035,0.3941,0.0000,-0.3941
+Indonesia,Pumped Hydro,Dry,18,2035,0.0000,1.7045,1.7045
+Indonesia,Pumped Hydro,Dry,19,2035,0.0000,0.1147,0.1147
+Indonesia,Pumped Hydro,Dry,21,2035,0.0000,1.2300,1.2300
+Indonesia,Pumped Hydro,Dry,24,2035,3.3397,0.0000,-3.3397
+Indonesia,Pumped Hydro,Wet,1,2035,1.6474,0.0000,-1.6474
+Indonesia,Pumped Hydro,Wet,3,2035,0.2716,0.0000,-0.2716
+Indonesia,Pumped Hydro,Wet,20,2035,0.0000,0.6338,0.6338
+Indonesia,Pumped Hydro,Wet,21,2035,0.0000,0.8391,0.8391
+Indonesia,Pumped Hydro,Dry,12,2045,0.4998,0.0000,-0.4998
+Indonesia,Pumped Hydro,Dry,14,2045,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Dry,15,2045,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Dry,18,2045,0.0000,3.2383,3.2383
+Indonesia,Pumped Hydro,Dry,19,2045,0.0000,3.2383,3.2383
+Indonesia,Pumped Hydro,Dry,20,2045,0.0000,1.0729,1.0729
+Indonesia,Pumped Hydro,Dry,21,2045,0.0000,2.2786,2.2786
+Indonesia,Pumped Hydro,Dry,23,2045,3.6562,0.0000,-3.6562
+Indonesia,Pumped Hydro,Wet,6,2045,2.9213,0.0000,-2.9213
+Indonesia,Pumped Hydro,Wet,7,2045,2.9213,0.0000,-2.9213
+Indonesia,Pumped Hydro,Wet,10,2045,1.5666,0.0000,-1.5666
+Indonesia,Pumped Hydro,Wet,18,2045,0.0000,2.1074,2.1074
+Indonesia,Pumped Hydro,Wet,19,2045,0.0000,1.4830,1.4830
+Indonesia,Pumped Hydro,Wet,20,2045,0.0000,2.3370,2.3370
+Indonesia,Pumped Hydro,Wet,24,2045,0.0333,0.0000,-0.0333
+Indonesia,Pumped Hydro,Dry,1,2050,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Dry,8,2050,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Dry,15,2050,1.8055,0.0000,-1.8055
+Indonesia,Pumped Hydro,Dry,18,2050,0.0000,3.2383,3.2383
+Indonesia,Pumped Hydro,Dry,19,2050,0.0000,3.2383,3.2383
+Indonesia,Pumped Hydro,Dry,20,2050,0.0000,3.2205,3.2205
+Indonesia,Pumped Hydro,Dry,21,2050,0.0000,2.5092,2.5092
+Indonesia,Pumped Hydro,Dry,22,2050,1.2835,0.0000,-1.2835
+Indonesia,Pumped Hydro,Dry,24,2050,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Wet,5,2050,2.1399,0.0000,-2.1399
+Indonesia,Pumped Hydro,Wet,11,2050,2.9213,0.0000,-2.9213
+Indonesia,Pumped Hydro,Wet,15,2050,0.5248,0.0000,-0.5248
+Indonesia,Pumped Hydro,Wet,16,2050,1.3351,0.0000,-1.3351
+Indonesia,Pumped Hydro,Wet,17,2050,2.9213,0.0000,-2.9213
+Indonesia,Pumped Hydro,Wet,18,2050,0.0000,2.3370,2.3370
+Indonesia,Pumped Hydro,Wet,19,2050,0.0000,2.3370,2.3370
+Indonesia,Pumped Hydro,Wet,20,2050,0.0000,2.3370,2.3370
+Indonesia,Pumped Hydro,Wet,21,2050,0.0000,0.8426,0.8426
+Indonesia,Pumped Hydro,Dry,2,2055,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Dry,3,2055,1.8290,0.0000,-1.8290
+Indonesia,Pumped Hydro,Dry,4,2055,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Dry,18,2055,0.0000,3.2383,3.2383
+Indonesia,Pumped Hydro,Dry,19,2055,0.0000,3.2383,3.2383
+Indonesia,Pumped Hydro,Dry,20,2055,0.0000,3.2383,3.2383
+Indonesia,Pumped Hydro,Dry,21,2055,0.0000,2.1722,2.1722
+Indonesia,Pumped Hydro,Dry,22,2055,0.8630,0.0000,-0.8630
+Indonesia,Pumped Hydro,Dry,24,2055,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Wet,8,2055,2.9213,0.0000,-2.9213
+Indonesia,Pumped Hydro,Wet,10,2055,2.9213,0.0000,-2.9213
+Indonesia,Pumped Hydro,Wet,12,2055,0.7197,0.0000,-0.7197
+Indonesia,Pumped Hydro,Wet,14,2055,2.8308,0.0000,-2.8308
+Indonesia,Pumped Hydro,Wet,18,2055,0.0000,1.2941,1.2941
+Indonesia,Pumped Hydro,Wet,19,2055,0.0000,2.3370,2.3370
+Indonesia,Pumped Hydro,Wet,20,2055,0.0000,2.3370,2.3370
+Indonesia,Pumped Hydro,Wet,21,2055,0.0000,1.5463,1.5463
+Indonesia,Pumped Hydro,Wet,24,2055,0.0233,0.0000,-0.0233
+Indonesia,Pumped Hydro,Dry,4,2060,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Dry,5,2060,1.5744,0.0000,-1.5744
+Indonesia,Pumped Hydro,Dry,11,2060,4.0478,0.0000,-4.0478
+Indonesia,Pumped Hydro,Dry,18,2060,0.0000,2.5865,2.5865
+Indonesia,Pumped Hydro,Dry,19,2060,0.0000,3.2383,3.2383
+Indonesia,Pumped Hydro,Dry,20,2060,0.0000,1.0991,1.0991
+Indonesia,Pumped Hydro,Dry,21,2060,0.0000,0.8306,0.8306
+Indonesia,Pumped Hydro,Wet,1,2060,2.5144,0.0000,-2.5144
+Indonesia,Pumped Hydro,Wet,4,2060,0.8434,0.0000,-0.8434
+Indonesia,Pumped Hydro,Wet,8,2060,1.3687,0.0000,-1.3687
+Indonesia,Pumped Hydro,Wet,18,2060,0.0000,1.5267,1.5267
+Indonesia,Pumped Hydro,Wet,19,2060,0.0000,1.7723,1.7723
+Indonesia,Pumped Hydro,Wet,21,2060,0.0000,0.4639,0.4639
+Laos,Pumped Hydro,Dry,13,2055,0.2482,0.0000,-0.2482
+Laos,Pumped Hydro,Dry,19,2055,0.0000,0.2156,0.2156
+Laos,Pumped Hydro,Dry,20,2055,0.0000,0.0108,0.0108
+Laos,Pumped Hydro,Wet,1,2055,0.0348,0.0000,-0.0348
+Laos,Pumped Hydro,Dry,19,2060,0.0000,0.4741,0.4741
+Laos,Pumped Hydro,Dry,20,2060,0.0000,0.2634,0.2634
+Laos,Pumped Hydro,Dry,24,2060,0.9176,0.0000,-0.9176
+Laos,Pumped Hydro,Wet,2,2060,0.5424,0.0000,-0.5424
+Laos,Pumped Hydro,Wet,4,2060,0.6885,0.0000,-0.6885
+Laos,Pumped Hydro,Wet,16,2060,0.4719,0.0000,-0.4719
+Laos,Pumped Hydro,Wet,19,2060,0.0000,0.4497,0.4497
+Laos,Pumped Hydro,Wet,20,2060,0.0000,0.5171,0.5171
+Laos,Pumped Hydro,Wet,21,2060,0.0000,0.3919,0.3919
+Myanmar,Lithium Ion Batteries,Dry,2,2030,0.1139,0.0000,-0.1139
+Myanmar,Lithium Ion Batteries,Dry,3,2030,0.1263,0.0000,-0.1263
+Myanmar,Lithium Ion Batteries,Dry,4,2030,0.0124,0.0000,-0.0124
+Myanmar,Lithium Ion Batteries,Dry,8,2030,0.0000,0.0218,0.0218
+Myanmar,Lithium Ion Batteries,Dry,10,2030,0.0000,0.1212,0.1212
+Myanmar,Lithium Ion Batteries,Dry,11,2030,0.0000,0.0994,0.0994
+Myanmar,Lithium Ion Batteries,Dry,12,2030,0.0181,0.0000,-0.0181
+Myanmar,Lithium Ion Batteries,Dry,13,2030,0.1236,0.0000,-0.1236
+Myanmar,Lithium Ion Batteries,Dry,14,2030,0.1108,0.0000,-0.1108
+Myanmar,Lithium Ion Batteries,Dry,18,2030,0.0000,0.1212,0.1212
+Myanmar,Lithium Ion Batteries,Dry,19,2030,0.0000,0.1212,0.1212
+Myanmar,Lithium Ion Batteries,Wet,1,2030,0.0911,0.0000,-0.0911
+Myanmar,Lithium Ion Batteries,Wet,3,2030,0.0911,0.0000,-0.0911
+Myanmar,Lithium Ion Batteries,Wet,10,2030,0.0000,0.0510,0.0510
+Myanmar,Lithium Ion Batteries,Wet,11,2030,0.0000,0.0830,0.0830
+Myanmar,Lithium Ion Batteries,Wet,12,2030,0.0259,0.0000,-0.0259
+Myanmar,Lithium Ion Batteries,Wet,13,2030,0.0815,0.0000,-0.0815
+Myanmar,Lithium Ion Batteries,Wet,14,2030,0.0321,0.0000,-0.0321
+Myanmar,Lithium Ion Batteries,Wet,17,2030,0.0000,0.0209,0.0209
+Myanmar,Lithium Ion Batteries,Wet,19,2030,0.0000,0.0875,0.0875
+Myanmar,Lithium Ion Batteries,Wet,20,2030,0.0000,0.0666,0.0666
+Myanmar,Lithium Ion Batteries,Dry,2,2035,0.2221,0.0000,-0.2221
+Myanmar,Lithium Ion Batteries,Dry,3,2035,0.2221,0.0000,-0.2221
+Myanmar,Lithium Ion Batteries,Dry,10,2035,0.0000,0.0424,0.0424
+Myanmar,Lithium Ion Batteries,Dry,11,2035,0.0000,0.0649,0.0649
+Myanmar,Lithium Ion Batteries,Dry,12,2035,0.0826,0.0000,-0.0826
+Myanmar,Lithium Ion Batteries,Dry,13,2035,0.0292,0.0000,-0.0292
+Myanmar,Lithium Ion Batteries,Dry,17,2035,0.0000,0.0137,0.0137
+Myanmar,Lithium Ion Batteries,Dry,18,2035,0.0000,0.1931,0.1931
+Myanmar,Lithium Ion Batteries,Dry,19,2035,0.0000,0.1938,0.1938
+Myanmar,Lithium Ion Batteries,Dry,20,2035,0.0000,0.0259,0.0259
+Myanmar,Lithium Ion Batteries,Wet,1,2035,0.1200,0.0000,-0.1200
+Myanmar,Lithium Ion Batteries,Wet,3,2035,0.1603,0.0000,-0.1603
+Myanmar,Lithium Ion Batteries,Wet,4,2035,0.0403,0.0000,-0.0403
+Myanmar,Lithium Ion Batteries,Wet,6,2035,0.0000,0.0065,0.0065
+Myanmar,Lithium Ion Batteries,Wet,7,2035,0.0000,0.0607,0.0607
+Myanmar,Lithium Ion Batteries,Wet,8,2035,0.0000,0.0440,0.0440
+Myanmar,Lithium Ion Batteries,Wet,9,2035,0.0000,0.0785,0.0785
+Myanmar,Lithium Ion Batteries,Wet,10,2035,0.0000,0.0927,0.0927
+Myanmar,Lithium Ion Batteries,Wet,11,2035,0.0000,0.0254,0.0254
+Myanmar,Lithium Ion Batteries,Wet,12,2035,0.0976,0.0000,-0.0976
+Myanmar,Lithium Ion Batteries,Wet,13,2035,0.1160,0.0000,-0.1160
+Myanmar,Lithium Ion Batteries,Wet,14,2035,0.1070,0.0000,-0.1070
+Myanmar,Lithium Ion Batteries,Wet,17,2035,0.0000,0.0333,0.0333
+Myanmar,Lithium Ion Batteries,Wet,18,2035,0.0000,0.0360,0.0360
+Myanmar,Lithium Ion Batteries,Wet,19,2035,0.0000,0.1440,0.1440
+Myanmar,Lithium Ion Batteries,Wet,20,2035,0.0000,0.0945,0.0945
+Myanmar,Lithium Ion Batteries,Dry,3,2040,0.5533,0.0000,-0.5533
+Myanmar,Lithium Ion Batteries,Dry,4,2040,0.5533,0.0000,-0.5533
+Myanmar,Lithium Ion Batteries,Dry,6,2040,0.0000,0.5311,0.5311
+Myanmar,Lithium Ion Batteries,Dry,7,2040,0.0000,0.5190,0.5190
+Myanmar,Lithium Ion Batteries,Dry,9,2040,0.0000,0.0121,0.0121
+Myanmar,Lithium Ion Batteries,Dry,10,2040,0.0248,0.0000,-0.0248
+Myanmar,Lithium Ion Batteries,Dry,11,2040,0.3492,0.0000,-0.3492
+Myanmar,Lithium Ion Batteries,Dry,12,2040,0.1793,0.0000,-0.1793
+Myanmar,Lithium Ion Batteries,Dry,14,2040,0.5533,0.0000,-0.5533
+Myanmar,Lithium Ion Batteries,Dry,19,2040,0.0000,0.3773,0.3773
+Myanmar,Lithium Ion Batteries,Dry,21,2040,0.0000,0.2914,0.2914
+Myanmar,Lithium Ion Batteries,Dry,22,2040,0.0000,0.3773,0.3773
+Myanmar,Lithium Ion Batteries,Dry,24,2040,0.0000,0.0163,0.0163
+Myanmar,Lithium Ion Batteries,Wet,3,2040,0.3993,0.0000,-0.3993
+Myanmar,Lithium Ion Batteries,Wet,4,2040,0.3993,0.0000,-0.3993
+Myanmar,Lithium Ion Batteries,Wet,19,2040,0.0000,0.2723,0.2723
+Myanmar,Lithium Ion Batteries,Wet,21,2040,0.0000,0.2221,0.2221
+Myanmar,Lithium Ion Batteries,Wet,22,2040,0.0000,0.2723,0.2723
+Myanmar,Lithium Ion Batteries,Dry,1,2045,0.1047,0.0000,-0.1047
+Myanmar,Lithium Ion Batteries,Dry,2,2045,0.1698,0.0000,-0.1698
+Myanmar,Lithium Ion Batteries,Dry,3,2045,0.8974,0.0000,-0.8974
+Myanmar,Lithium Ion Batteries,Dry,4,2045,0.1288,0.0000,-0.1288
+Myanmar,Lithium Ion Batteries,Dry,6,2045,0.0000,0.6472,0.6472
+Myanmar,Lithium Ion Batteries,Dry,8,2045,0.0000,0.6014,0.6014
+Myanmar,Lithium Ion Batteries,Dry,12,2045,0.8534,0.0000,-0.8534
+Myanmar,Lithium Ion Batteries,Dry,13,2045,0.7002,0.0000,-0.7002
+Myanmar,Lithium Ion Batteries,Dry,15,2045,0.2412,0.0000,-0.2412
+Myanmar,Lithium Ion Batteries,Dry,17,2045,0.0000,0.3843,0.3843
+Myanmar,Lithium Ion Batteries,Dry,18,2045,0.0000,0.4085,0.4085
+Myanmar,Lithium Ion Batteries,Dry,19,2045,0.0000,0.5679,0.5679
+Myanmar,Lithium Ion Batteries,Dry,22,2045,0.0000,0.3624,0.3624
+Myanmar,Lithium Ion Batteries,Wet,1,2045,0.0525,0.0000,-0.0525
+Myanmar,Lithium Ion Batteries,Wet,2,2045,0.6477,0.0000,-0.6477
+Myanmar,Lithium Ion Batteries,Wet,9,2045,0.0000,0.4202,0.4202
+Myanmar,Lithium Ion Batteries,Wet,12,2045,0.5637,0.0000,-0.5637
+Myanmar,Lithium Ion Batteries,Wet,15,2045,0.4691,0.0000,-0.4691
+Myanmar,Lithium Ion Batteries,Wet,18,2045,0.0000,0.2943,0.2943
+Myanmar,Lithium Ion Batteries,Wet,19,2045,0.0000,0.2975,0.2975
+Myanmar,Lithium Ion Batteries,Wet,20,2045,0.0000,0.2975,0.2975
+Myanmar,Lithium Ion Batteries,Wet,21,2045,0.0000,0.2975,0.2975
+Myanmar,Lithium Ion Batteries,Wet,22,2045,0.0000,0.0569,0.0569
+Myanmar,Lithium Ion Batteries,Dry,1,2050,0.2920,0.0000,-0.2920
+Myanmar,Lithium Ion Batteries,Dry,2,2050,0.3665,0.0000,-0.3665
+Myanmar,Lithium Ion Batteries,Dry,3,2050,0.4074,0.0000,-0.4074
+Myanmar,Lithium Ion Batteries,Dry,4,2050,0.3195,0.0000,-0.3195
+Myanmar,Lithium Ion Batteries,Dry,5,2050,0.2386,0.0000,-0.2386
+Myanmar,Lithium Ion Batteries,Dry,7,2050,0.0000,0.7512,0.7512
+Myanmar,Lithium Ion Batteries,Dry,10,2050,0.6846,0.0000,-0.6846
+Myanmar,Lithium Ion Batteries,Dry,11,2050,0.0979,0.0000,-0.0979
+Myanmar,Lithium Ion Batteries,Dry,17,2050,0.0000,0.7242,0.7242
+Myanmar,Lithium Ion Batteries,Dry,18,2050,0.0000,0.7596,0.7596
+Myanmar,Lithium Ion Batteries,Dry,23,2050,0.0000,0.0752,0.0752
+Myanmar,Lithium Ion Batteries,Wet,1,2050,0.5860,0.0000,-0.5860
+Myanmar,Lithium Ion Batteries,Wet,2,2050,0.1283,0.0000,-0.1283
+Myanmar,Lithium Ion Batteries,Wet,4,2050,0.0484,0.0000,-0.0484
+Myanmar,Lithium Ion Batteries,Wet,8,2050,0.0000,0.5236,0.5236
+Myanmar,Lithium Ion Batteries,Wet,10,2050,0.0000,0.2086,0.2086
+Myanmar,Lithium Ion Batteries,Wet,13,2050,0.5860,0.0000,-0.5860
+Myanmar,Lithium Ion Batteries,Wet,14,2050,0.5860,0.0000,-0.5860
+Myanmar,Lithium Ion Batteries,Wet,17,2050,0.0000,0.3659,0.3659
+Myanmar,Lithium Ion Batteries,Wet,18,2050,0.0000,0.3780,0.3780
+Myanmar,Lithium Ion Batteries,Wet,21,2050,0.0000,0.3812,0.3812
+Myanmar,Lithium Ion Batteries,Dry,1,2055,1.0404,0.0000,-1.0404
+Myanmar,Lithium Ion Batteries,Dry,2,2055,0.5781,0.0000,-0.5781
+Myanmar,Lithium Ion Batteries,Dry,3,2055,0.3292,0.0000,-0.3292
+Myanmar,Lithium Ion Batteries,Dry,4,2055,0.2329,0.0000,-0.2329
+Myanmar,Lithium Ion Batteries,Dry,8,2055,0.0000,0.8788,0.8788
+Myanmar,Lithium Ion Batteries,Dry,11,2055,0.9372,0.0000,-0.9372
+Myanmar,Lithium Ion Batteries,Dry,14,2055,1.1040,0.0000,-1.1040
+Myanmar,Lithium Ion Batteries,Dry,16,2055,0.0000,0.5852,0.5852
+Myanmar,Lithium Ion Batteries,Dry,17,2055,0.0000,0.6164,0.6164
+Myanmar,Lithium Ion Batteries,Dry,18,2055,0.0000,0.6407,0.6407
+Myanmar,Lithium Ion Batteries,Dry,19,2055,0.0000,0.6443,0.6443
+Myanmar,Lithium Ion Batteries,Dry,20,2055,0.0000,0.6443,0.6443
+Myanmar,Lithium Ion Batteries,Dry,22,2055,0.0000,0.0431,0.0431
+Myanmar,Lithium Ion Batteries,Wet,1,2055,0.0495,0.0000,-0.0495
+Myanmar,Lithium Ion Batteries,Wet,2,2055,1.1931,0.0000,-1.1931
+Myanmar,Lithium Ion Batteries,Wet,3,2055,0.9380,0.0000,-0.9380
+Myanmar,Lithium Ion Batteries,Wet,4,2055,0.0390,0.0000,-0.0390
+Myanmar,Lithium Ion Batteries,Wet,8,2055,0.0000,0.6073,0.6073
+Myanmar,Lithium Ion Batteries,Wet,13,2055,0.7992,0.0000,-0.7992
+Myanmar,Lithium Ion Batteries,Wet,16,2055,0.0000,0.4339,0.4339
+Myanmar,Lithium Ion Batteries,Wet,18,2055,0.0000,0.4618,0.4618
+Myanmar,Lithium Ion Batteries,Wet,19,2055,0.0000,0.4650,0.4650
+Myanmar,Lithium Ion Batteries,Wet,20,2055,0.0000,0.4650,0.4650
+Myanmar,Lithium Ion Batteries,Wet,21,2055,0.0000,0.4650,0.4650
+Myanmar,Lithium Ion Batteries,Dry,1,2060,0.5334,0.0000,-0.5334
+Myanmar,Lithium Ion Batteries,Dry,2,2060,0.2152,0.0000,-0.2152
+Myanmar,Lithium Ion Batteries,Dry,3,2060,0.5546,0.0000,-0.5546
+Myanmar,Lithium Ion Batteries,Dry,4,2060,0.1569,0.0000,-0.1569
+Myanmar,Lithium Ion Batteries,Dry,5,2060,1.4600,0.0000,-1.4600
+Myanmar,Lithium Ion Batteries,Dry,9,2060,0.0000,0.9370,0.9370
+Myanmar,Lithium Ion Batteries,Dry,11,2060,0.1551,0.0000,-0.1551
+Myanmar,Lithium Ion Batteries,Dry,12,2060,0.8209,0.0000,-0.8209
+Myanmar,Lithium Ion Batteries,Dry,16,2060,0.0000,0.6249,0.6249
+Myanmar,Lithium Ion Batteries,Dry,17,2060,0.0000,0.7075,0.7075
+Myanmar,Lithium Ion Batteries,Dry,19,2060,0.0000,0.7354,0.7354
+Myanmar,Lithium Ion Batteries,Dry,20,2060,0.0000,0.7354,0.7354
+Myanmar,Lithium Ion Batteries,Wet,1,2060,0.1639,0.0000,-0.1639
+Myanmar,Lithium Ion Batteries,Wet,2,2060,0.2060,0.0000,-0.2060
+Myanmar,Lithium Ion Batteries,Wet,3,2060,1.0537,0.0000,-1.0537
+Myanmar,Lithium Ion Batteries,Wet,4,2060,0.1525,0.0000,-0.1525
+Myanmar,Lithium Ion Batteries,Wet,7,2060,0.5084,0.0000,-0.5084
+Myanmar,Lithium Ion Batteries,Wet,10,2060,0.0000,0.6375,0.6375
+Myanmar,Lithium Ion Batteries,Wet,13,2060,0.6871,0.0000,-0.6871
+Myanmar,Lithium Ion Batteries,Wet,16,2060,0.0000,0.4996,0.4996
+Myanmar,Lithium Ion Batteries,Wet,18,2060,0.0000,0.2875,0.2875
+Myanmar,Lithium Ion Batteries,Wet,19,2060,0.0000,0.5307,0.5307
+Myanmar,Lithium Ion Batteries,Wet,20,2060,0.0000,0.5307,0.5307
+Myanmar,Lithium Ion Batteries,Wet,22,2060,0.0000,0.1745,0.1745
+Myanmar,Pumped Hydro,Dry,1,2035,0.1851,0.0000,-0.1851
+Myanmar,Pumped Hydro,Dry,2,2035,0.1851,0.0000,-0.1851
+Myanmar,Pumped Hydro,Dry,3,2035,0.1851,0.0000,-0.1851
+Myanmar,Pumped Hydro,Dry,4,2035,0.1851,0.0000,-0.1851
+Myanmar,Pumped Hydro,Dry,5,2035,0.1851,0.0000,-0.1851
+Myanmar,Pumped Hydro,Dry,7,2035,0.0000,0.0767,0.0767
+Myanmar,Pumped Hydro,Dry,8,2035,0.0000,0.0637,0.0637
+Myanmar,Pumped Hydro,Dry,9,2035,0.0000,0.1015,0.1015
+Myanmar,Pumped Hydro,Dry,10,2035,0.0000,0.0962,0.0962
+Myanmar,Pumped Hydro,Dry,16,2035,0.0000,0.0805,0.0805
+Myanmar,Pumped Hydro,Dry,17,2035,0.0000,0.1481,0.1481
+Myanmar,Pumped Hydro,Dry,18,2035,0.0000,0.1481,0.1481
+Myanmar,Pumped Hydro,Dry,19,2035,0.0000,0.1481,0.1481
+Myanmar,Pumped Hydro,Dry,20,2035,0.0000,0.1481,0.1481
+Myanmar,Pumped Hydro,Dry,21,2035,0.0000,0.0287,0.0287
+Myanmar,Pumped Hydro,Dry,22,2035,0.0011,0.0000,-0.0011
+Myanmar,Pumped Hydro,Dry,23,2035,0.1851,0.0000,-0.1851
+Myanmar,Pumped Hydro,Dry,24,2035,0.1851,0.0000,-0.1851
+Myanmar,Pumped Hydro,Wet,1,2035,0.1336,0.0000,-0.1336
+Myanmar,Pumped Hydro,Wet,2,2035,0.1336,0.0000,-0.1336
+Myanmar,Pumped Hydro,Wet,3,2035,0.1336,0.0000,-0.1336
+Myanmar,Pumped Hydro,Wet,4,2035,0.1336,0.0000,-0.1336
+Myanmar,Pumped Hydro,Wet,5,2035,0.1336,0.0000,-0.1336
+Myanmar,Pumped Hydro,Wet,13,2035,0.0456,0.0000,-0.0456
+Myanmar,Pumped Hydro,Wet,15,2035,0.0601,0.0000,-0.0601
+Myanmar,Pumped Hydro,Wet,16,2035,0.0000,0.0957,0.0957
+Myanmar,Pumped Hydro,Wet,17,2035,0.0000,0.1069,0.1069
+Myanmar,Pumped Hydro,Wet,18,2035,0.0000,0.1069,0.1069
+Myanmar,Pumped Hydro,Wet,19,2035,0.0000,0.1069,0.1069
+Myanmar,Pumped Hydro,Wet,20,2035,0.0000,0.1069,0.1069
+Myanmar,Pumped Hydro,Wet,21,2035,0.0000,0.0957,0.0957
+Myanmar,Pumped Hydro,Wet,23,2035,0.0026,0.0000,-0.0026
+Myanmar,Pumped Hydro,Dry,10,2040,0.1923,0.0000,-0.1923
+Myanmar,Pumped Hydro,Dry,11,2040,0.1923,0.0000,-0.1923
+Myanmar,Pumped Hydro,Dry,12,2040,0.1923,0.0000,-0.1923
+Myanmar,Pumped Hydro,Dry,13,2040,0.1923,0.0000,-0.1923
+Myanmar,Pumped Hydro,Dry,14,2040,0.1923,0.0000,-0.1923
+Myanmar,Pumped Hydro,Dry,15,2040,0.1923,0.0000,-0.1923
+Myanmar,Pumped Hydro,Dry,17,2040,0.0000,0.1539,0.1539
+Myanmar,Pumped Hydro,Dry,19,2040,0.0000,0.1539,0.1539
+Myanmar,Pumped Hydro,Dry,20,2040,0.0000,0.1539,0.1539
+Myanmar,Pumped Hydro,Dry,22,2040,0.0000,0.1539,0.1539
+Myanmar,Pumped Hydro,Dry,23,2040,0.0000,0.1539,0.1539
+Myanmar,Pumped Hydro,Dry,24,2040,0.0000,0.1539,0.1539
+Myanmar,Pumped Hydro,Wet,2,2040,0.1388,0.0000,-0.1388
+Myanmar,Pumped Hydro,Wet,3,2040,0.1388,0.0000,-0.1388
+Myanmar,Pumped Hydro,Wet,4,2040,0.1388,0.0000,-0.1388
+Myanmar,Pumped Hydro,Wet,6,2040,0.1388,0.0000,-0.1388
+Myanmar,Pumped Hydro,Wet,7,2040,0.1388,0.0000,-0.1388
+Myanmar,Pumped Hydro,Wet,9,2040,0.1388,0.0000,-0.1388
+Myanmar,Pumped Hydro,Wet,13,2040,0.0119,0.0000,-0.0119
+Myanmar,Pumped Hydro,Wet,15,2040,0.1269,0.0000,-0.1269
+Myanmar,Pumped Hydro,Wet,17,2040,0.0000,0.1110,0.1110
+Myanmar,Pumped Hydro,Wet,18,2040,0.0000,0.1110,0.1110
+Myanmar,Pumped Hydro,Wet,19,2040,0.0000,0.1110,0.1110
+Myanmar,Pumped Hydro,Wet,20,2040,0.0000,0.1110,0.1110
+Myanmar,Pumped Hydro,Wet,21,2040,0.0000,0.1110,0.1110
+Myanmar,Pumped Hydro,Wet,22,2040,0.0000,0.1110,0.1110
+Myanmar,Pumped Hydro,Wet,23,2040,0.0000,0.1110,0.1110
+Myanmar,Pumped Hydro,Dry,12,2045,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,13,2045,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,14,2045,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,15,2045,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,17,2045,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,18,2045,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,19,2045,0.0000,0.0794,0.0794
+Myanmar,Pumped Hydro,Dry,20,2045,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,22,2045,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,24,2045,0.0987,0.0000,-0.0987
+Myanmar,Pumped Hydro,Wet,1,2045,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,2,2045,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,3,2045,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,4,2045,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,6,2045,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,12,2045,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,13,2045,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,15,2045,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,16,2045,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,17,2045,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,18,2045,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,19,2045,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,20,2045,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,21,2045,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,22,2045,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,23,2045,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,24,2045,0.0005,0.0000,-0.0005
+Myanmar,Pumped Hydro,Dry,17,2050,0.0000,0.0089,0.0089
+Myanmar,Pumped Hydro,Dry,22,2050,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,24,2050,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Wet,1,2050,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,3,2050,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,4,2050,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,5,2050,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,6,2050,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,7,2050,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,11,2050,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,12,2050,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,15,2050,0.0000,0.0372,0.0372
+Myanmar,Pumped Hydro,Wet,16,2050,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,17,2050,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,18,2050,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,19,2050,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,20,2050,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,21,2050,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,22,2050,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,23,2050,0.0000,0.1324,0.1324
+Myanmar,Pumped Hydro,Wet,24,2050,0.0111,0.0000,-0.0111
+Myanmar,Pumped Hydro,Dry,1,2055,0.1614,0.0000,-0.1614
+Myanmar,Pumped Hydro,Dry,3,2055,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,4,2055,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,5,2055,0.0353,0.0000,-0.0353
+Myanmar,Pumped Hydro,Dry,12,2055,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,13,2055,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,14,2055,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,16,2055,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,17,2055,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,18,2055,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,19,2055,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,20,2055,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,21,2055,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,22,2055,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,23,2055,0.0939,0.0000,-0.0939
+Myanmar,Pumped Hydro,Dry,24,2055,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Wet,1,2055,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,2,2055,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,3,2055,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,4,2055,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,6,2055,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,7,2055,0.1848,0.0000,-0.1848
+Myanmar,Pumped Hydro,Wet,11,2055,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,13,2055,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,14,2055,0.0268,0.0000,-0.0268
+Myanmar,Pumped Hydro,Wet,15,2055,0.0000,0.0824,0.0824
+Myanmar,Pumped Hydro,Wet,16,2055,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,17,2055,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,18,2055,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,19,2055,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,20,2055,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,21,2055,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,22,2055,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,23,2055,0.0000,0.0869,0.0869
+Myanmar,Pumped Hydro,Wet,24,2055,0.0032,0.0000,-0.0032
+Myanmar,Pumped Hydro,Dry,1,2060,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,2,2060,0.2910,0.0000,-0.2910
+Myanmar,Pumped Hydro,Dry,4,2060,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,5,2060,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,12,2060,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,14,2060,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Dry,16,2060,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,17,2060,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,18,2060,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,19,2060,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,20,2060,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,21,2060,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,22,2060,0.0000,0.2350,0.2350
+Myanmar,Pumped Hydro,Dry,24,2060,0.2938,0.0000,-0.2938
+Myanmar,Pumped Hydro,Wet,1,2060,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,2,2060,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,3,2060,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,4,2060,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,6,2060,0.1510,0.0000,-0.1510
+Myanmar,Pumped Hydro,Wet,7,2060,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,11,2060,0.0610,0.0000,-0.0610
+Myanmar,Pumped Hydro,Wet,12,2060,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,13,2060,0.2120,0.0000,-0.2120
+Myanmar,Pumped Hydro,Wet,15,2060,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,16,2060,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,17,2060,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,18,2060,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,19,2060,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,20,2060,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,21,2060,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,22,2060,0.0000,0.1696,0.1696
+Myanmar,Pumped Hydro,Wet,24,2060,0.0028,0.0000,-0.0028
+Philippines,Lithium Ion Batteries,Dry,3,2025,0.0157,0.0000,-0.0157
+Philippines,Lithium Ion Batteries,Dry,4,2025,0.0554,0.0000,-0.0554
+Philippines,Lithium Ion Batteries,Dry,5,2025,0.1437,0.0000,-0.1437
+Philippines,Lithium Ion Batteries,Dry,6,2025,0.0272,0.0000,-0.0272
+Philippines,Lithium Ion Batteries,Dry,8,2025,0.2753,0.0000,-0.2753
+Philippines,Lithium Ion Batteries,Dry,9,2025,0.1953,0.0000,-0.1953
+Philippines,Lithium Ion Batteries,Dry,10,2025,0.1185,0.0000,-0.1185
+Philippines,Lithium Ion Batteries,Dry,11,2025,0.0000,0.0445,0.0445
+Philippines,Lithium Ion Batteries,Dry,12,2025,0.0466,0.0000,-0.0466
+Philippines,Lithium Ion Batteries,Dry,18,2025,0.0000,0.3969,0.3969
+Philippines,Lithium Ion Batteries,Dry,24,2025,0.0000,0.3969,0.3969
+Philippines,Lithium Ion Batteries,Dry,10,2030,0.0308,0.0000,-0.0308
+Philippines,Lithium Ion Batteries,Dry,11,2030,0.0996,0.0000,-0.0996
+Philippines,Lithium Ion Batteries,Dry,12,2030,0.3053,0.0000,-0.3053
+Philippines,Lithium Ion Batteries,Dry,13,2030,0.3911,0.0000,-0.3911
+Philippines,Lithium Ion Batteries,Dry,18,2030,0.0000,0.0688,0.0688
+Philippines,Lithium Ion Batteries,Dry,19,2030,0.0000,0.3962,0.3962
+Philippines,Lithium Ion Batteries,Dry,20,2030,0.0000,0.2274,0.2274
+Philippines,Lithium Ion Batteries,Dry,21,2030,0.0000,0.1013,0.1013
+Philippines,Lithium Ion Batteries,Wet,12,2030,0.2984,0.0000,-0.2984
+Philippines,Lithium Ion Batteries,Wet,13,2030,0.2984,0.0000,-0.2984
+Philippines,Lithium Ion Batteries,Wet,20,2030,0.0000,0.2864,0.2864
+Philippines,Lithium Ion Batteries,Wet,22,2030,0.0000,0.1995,0.1995
+Philippines,Lithium Ion Batteries,Wet,23,2030,0.0000,0.0869,0.0869
+Philippines,Lithium Ion Batteries,Dry,9,2035,0.5214,0.0000,-0.5214
+Philippines,Lithium Ion Batteries,Dry,10,2035,0.2153,0.0000,-0.2153
+Philippines,Lithium Ion Batteries,Dry,11,2035,0.4247,0.0000,-0.4247
+Philippines,Lithium Ion Batteries,Dry,12,2035,1.7625,0.0000,-1.7625
+Philippines,Lithium Ion Batteries,Dry,13,2035,0.2025,0.0000,-0.2025
+Philippines,Lithium Ion Batteries,Dry,14,2035,0.3986,0.0000,-0.3986
+Philippines,Lithium Ion Batteries,Dry,16,2035,0.0000,0.2732,0.2732
+Philippines,Lithium Ion Batteries,Dry,18,2035,0.0000,0.4912,0.4912
+Philippines,Lithium Ion Batteries,Dry,21,2035,0.0000,1.6920,1.6920
+Philippines,Lithium Ion Batteries,Dry,23,2035,0.0000,0.9276,0.9276
+Philippines,Lithium Ion Batteries,Wet,10,2035,0.1661,0.0000,-0.1661
+Philippines,Lithium Ion Batteries,Wet,11,2035,0.3542,0.0000,-0.3542
+Philippines,Lithium Ion Batteries,Wet,12,2035,0.4248,0.0000,-0.4248
+Philippines,Lithium Ion Batteries,Wet,13,2035,1.2720,0.0000,-1.2720
+Philippines,Lithium Ion Batteries,Wet,14,2035,0.3269,0.0000,-0.3269
+Philippines,Lithium Ion Batteries,Wet,18,2035,0.0000,0.1726,0.1726
+Philippines,Lithium Ion Batteries,Wet,19,2035,0.0000,0.7539,0.7539
+Philippines,Lithium Ion Batteries,Wet,20,2035,0.0000,0.0389,0.0389
+Philippines,Lithium Ion Batteries,Wet,21,2035,0.0000,0.1711,0.1711
+Philippines,Lithium Ion Batteries,Wet,22,2035,0.0000,0.7531,0.7531
+Philippines,Lithium Ion Batteries,Wet,23,2035,0.0000,0.4390,0.4390
+Philippines,Lithium Ion Batteries,Wet,24,2035,0.0000,0.1137,0.1137
+Philippines,Lithium Ion Batteries,Dry,9,2040,0.1657,0.0000,-0.1657
+Philippines,Lithium Ion Batteries,Dry,10,2040,1.4117,0.0000,-1.4117
+Philippines,Lithium Ion Batteries,Dry,11,2040,1.8005,0.0000,-1.8005
+Philippines,Lithium Ion Batteries,Dry,12,2040,3.3744,0.0000,-3.3744
+Philippines,Lithium Ion Batteries,Dry,13,2040,1.5130,0.0000,-1.5130
+Philippines,Lithium Ion Batteries,Dry,14,2040,0.1283,0.0000,-0.1283
+Philippines,Lithium Ion Batteries,Dry,18,2040,0.0000,1.9320,1.9320
+Philippines,Lithium Ion Batteries,Dry,19,2040,0.0000,2.4349,2.4349
+Philippines,Lithium Ion Batteries,Dry,20,2040,0.0000,3.2667,3.2667
+Philippines,Lithium Ion Batteries,Dry,24,2040,0.0000,0.4243,0.4243
+Philippines,Lithium Ion Batteries,Wet,8,2040,0.8649,0.0000,-0.8649
+Philippines,Lithium Ion Batteries,Wet,9,2040,1.8658,0.0000,-1.8658
+Philippines,Lithium Ion Batteries,Wet,10,2040,0.3936,0.0000,-0.3936
+Philippines,Lithium Ion Batteries,Wet,11,2040,0.8009,0.0000,-0.8009
+Philippines,Lithium Ion Batteries,Wet,12,2040,1.2513,0.0000,-1.2513
+Philippines,Lithium Ion Batteries,Wet,13,2040,0.8191,0.0000,-0.8191
+Philippines,Lithium Ion Batteries,Wet,15,2040,0.0620,0.0000,-0.0620
+Philippines,Lithium Ion Batteries,Wet,18,2040,0.0000,1.9503,1.9503
+Philippines,Lithium Ion Batteries,Wet,20,2040,0.0000,2.7059,2.7059
+Philippines,Lithium Ion Batteries,Wet,21,2040,0.0000,0.1444,0.1444
+Philippines,Lithium Ion Batteries,Wet,23,2040,0.0000,1.0147,1.0147
+Philippines,Lithium Ion Batteries,Dry,9,2045,1.7816,0.0000,-1.7816
+Philippines,Lithium Ion Batteries,Dry,10,2045,3.8098,0.0000,-3.8098
+Philippines,Lithium Ion Batteries,Dry,11,2045,4.5157,0.0000,-4.5157
+Philippines,Lithium Ion Batteries,Dry,12,2045,4.8213,0.0000,-4.8213
+Philippines,Lithium Ion Batteries,Dry,13,2045,3.1252,0.0000,-3.1252
+Philippines,Lithium Ion Batteries,Dry,14,2045,2.1368,0.0000,-2.1368
+Philippines,Lithium Ion Batteries,Dry,15,2045,0.2951,0.0000,-0.2951
+Philippines,Lithium Ion Batteries,Dry,17,2045,0.0000,2.4434,2.4434
+Philippines,Lithium Ion Batteries,Dry,18,2045,0.0000,0.3246,0.3246
+Philippines,Lithium Ion Batteries,Dry,19,2045,0.0000,4.3960,4.3960
+Philippines,Lithium Ion Batteries,Dry,20,2045,0.0000,0.8104,0.8104
+Philippines,Lithium Ion Batteries,Dry,21,2045,0.0000,6.1232,6.1232
+Philippines,Lithium Ion Batteries,Dry,22,2045,0.0000,5.5686,5.5686
+Philippines,Lithium Ion Batteries,Wet,9,2045,0.9383,0.0000,-0.9383
+Philippines,Lithium Ion Batteries,Wet,10,2045,2.2494,0.0000,-2.2494
+Philippines,Lithium Ion Batteries,Wet,11,2045,2.9595,0.0000,-2.9595
+Philippines,Lithium Ion Batteries,Wet,12,2045,3.5893,0.0000,-3.5893
+Philippines,Lithium Ion Batteries,Wet,13,2045,2.9974,0.0000,-2.9974
+Philippines,Lithium Ion Batteries,Wet,14,2045,1.2758,0.0000,-1.2758
+Philippines,Lithium Ion Batteries,Wet,18,2045,0.0000,4.6391,4.6391
+Philippines,Lithium Ion Batteries,Wet,19,2045,0.0000,1.6353,1.6353
+Philippines,Lithium Ion Batteries,Wet,20,2045,0.0000,1.7092,1.7092
+Philippines,Lithium Ion Batteries,Wet,21,2045,0.0000,1.8243,1.8243
+Philippines,Lithium Ion Batteries,Wet,22,2045,0.0000,1.6344,1.6344
+Philippines,Lithium Ion Batteries,Wet,23,2045,0.0000,1.2213,1.2213
+Philippines,Lithium Ion Batteries,Wet,24,2045,0.0000,0.7856,0.7856
+Philippines,Lithium Ion Batteries,Dry,9,2050,3.7179,0.0000,-3.7179
+Philippines,Lithium Ion Batteries,Dry,10,2050,6.9357,0.0000,-6.9357
+Philippines,Lithium Ion Batteries,Dry,11,2050,6.4642,0.0000,-6.4642
+Philippines,Lithium Ion Batteries,Dry,12,2050,6.7986,0.0000,-6.7986
+Philippines,Lithium Ion Batteries,Dry,13,2050,7.2508,0.0000,-7.2508
+Philippines,Lithium Ion Batteries,Dry,14,2050,3.7223,0.0000,-3.7223
+Philippines,Lithium Ion Batteries,Dry,15,2050,1.5946,0.0000,-1.5946
+Philippines,Lithium Ion Batteries,Dry,16,2050,0.0000,0.2649,0.2649
+Philippines,Lithium Ion Batteries,Dry,18,2050,0.0000,6.9931,6.9931
+Philippines,Lithium Ion Batteries,Dry,19,2050,0.0000,7.7663,7.7663
+Philippines,Lithium Ion Batteries,Dry,20,2050,0.0000,7.5319,7.5319
+Philippines,Lithium Ion Batteries,Dry,22,2050,0.0000,0.3185,0.3185
+Philippines,Lithium Ion Batteries,Dry,23,2050,0.0000,6.9678,6.9678
+Philippines,Lithium Ion Batteries,Dry,24,2050,0.0000,5.1823,5.1823
+Philippines,Lithium Ion Batteries,Wet,9,2050,0.9977,0.0000,-0.9977
+Philippines,Lithium Ion Batteries,Wet,10,2050,2.5683,0.0000,-2.5683
+Philippines,Lithium Ion Batteries,Wet,11,2050,3.4102,0.0000,-3.4102
+Philippines,Lithium Ion Batteries,Wet,12,2050,4.1341,0.0000,-4.1341
+Philippines,Lithium Ion Batteries,Wet,13,2050,3.4411,0.0000,-3.4411
+Philippines,Lithium Ion Batteries,Wet,14,2050,1.4756,0.0000,-1.4756
+Philippines,Lithium Ion Batteries,Wet,15,2050,0.0000,0.6199,0.6199
+Philippines,Lithium Ion Batteries,Wet,16,2050,0.0000,1.3327,1.3327
+Philippines,Lithium Ion Batteries,Wet,19,2050,0.0000,0.0482,0.0482
+Philippines,Lithium Ion Batteries,Wet,20,2050,0.0000,6.6043,6.6043
+Philippines,Lithium Ion Batteries,Wet,21,2050,0.0000,0.2608,0.2608
+Philippines,Lithium Ion Batteries,Wet,22,2050,0.0000,6.5200,6.5200
+Philippines,Lithium Ion Batteries,Dry,9,2055,1.6682,0.0000,-1.6682
+Philippines,Lithium Ion Batteries,Dry,10,2055,3.9526,0.0000,-3.9526
+Philippines,Lithium Ion Batteries,Dry,11,2055,4.7270,0.0000,-4.7270
+Philippines,Lithium Ion Batteries,Dry,12,2055,5.0935,0.0000,-5.0935
+Philippines,Lithium Ion Batteries,Dry,13,2055,4.2048,0.0000,-4.2048
+Philippines,Lithium Ion Batteries,Dry,14,2055,1.9430,0.0000,-1.9430
+Philippines,Lithium Ion Batteries,Dry,18,2055,0.0000,11.0838,11.0838
+Philippines,Lithium Ion Batteries,Dry,19,2055,0.0000,2.5088,2.5088
+Philippines,Lithium Ion Batteries,Dry,20,2055,0.0000,2.2414,2.2414
+Philippines,Lithium Ion Batteries,Dry,21,2055,0.0000,3.2577,3.2577
+Philippines,Lithium Ion Batteries,Dry,22,2055,0.0000,1.2550,1.2550
+Philippines,Lithium Ion Batteries,Dry,23,2055,0.0000,0.3790,0.3790
+Philippines,Lithium Ion Batteries,Wet,5,2055,0.8415,0.0000,-0.8415
+Philippines,Lithium Ion Batteries,Wet,6,2055,0.9713,0.0000,-0.9713
+Philippines,Lithium Ion Batteries,Wet,9,2055,5.5999,0.0000,-5.5999
+Philippines,Lithium Ion Batteries,Wet,10,2055,0.3014,0.0000,-0.3014
+Philippines,Lithium Ion Batteries,Wet,11,2055,1.0771,0.0000,-1.0771
+Philippines,Lithium Ion Batteries,Wet,12,2055,1.8188,0.0000,-1.8188
+Philippines,Lithium Ion Batteries,Wet,13,2055,1.1081,0.0000,-1.1081
+Philippines,Lithium Ion Batteries,Wet,15,2055,0.2349,0.0000,-0.2349
+Philippines,Lithium Ion Batteries,Wet,18,2055,0.0000,0.8938,0.8938
+Philippines,Lithium Ion Batteries,Wet,19,2055,0.0000,1.9761,1.9761
+Philippines,Lithium Ion Batteries,Wet,20,2055,0.0000,2.0709,2.0709
+Philippines,Lithium Ion Batteries,Wet,21,2055,0.0000,2.2186,2.2186
+Philippines,Lithium Ion Batteries,Wet,22,2055,0.0000,1.9748,1.9748
+Philippines,Lithium Ion Batteries,Wet,23,2055,0.0000,1.4448,1.4448
+Philippines,Lithium Ion Batteries,Wet,24,2055,0.0000,0.8958,0.8958
+Philippines,Lithium Ion Batteries,Dry,4,2060,0.0001,0.0000,-0.0001
+Philippines,Lithium Ion Batteries,Dry,6,2060,0.0000,0.0001,0.0001
+Philippines,Lithium Ion Batteries,Dry,8,2060,5.2567,0.0000,-5.2567
+Philippines,Lithium Ion Batteries,Dry,10,2060,0.8875,0.0000,-0.8875
+Philippines,Lithium Ion Batteries,Dry,11,2060,1.5690,0.0000,-1.5690
+Philippines,Lithium Ion Batteries,Dry,12,2060,10.6354,0.0000,-10.6354
+Philippines,Lithium Ion Batteries,Dry,13,2060,1.0746,0.0000,-1.0746
+Philippines,Lithium Ion Batteries,Dry,15,2060,6.4539,0.0000,-6.4539
+Philippines,Lithium Ion Batteries,Dry,16,2060,3.3588,0.0000,-3.3588
+Philippines,Lithium Ion Batteries,Dry,17,2060,0.0000,0.3092,0.3092
+Philippines,Lithium Ion Batteries,Dry,18,2060,0.0000,4.3914,4.3914
+Philippines,Lithium Ion Batteries,Dry,19,2060,0.0000,5.2364,5.2364
+Philippines,Lithium Ion Batteries,Dry,20,2060,0.0000,4.9348,4.9348
+Philippines,Lithium Ion Batteries,Dry,21,2060,0.0000,4.6252,4.6252
+Philippines,Lithium Ion Batteries,Dry,22,2060,0.0000,3.8225,3.8225
+Philippines,Lithium Ion Batteries,Dry,23,2060,0.0000,2.8347,2.8347
+Philippines,Lithium Ion Batteries,Dry,24,2060,0.0000,1.9124,1.9124
+Philippines,Lithium Ion Batteries,Wet,7,2060,0.3210,0.0000,-0.3210
+Philippines,Lithium Ion Batteries,Wet,9,2060,3.6694,0.0000,-3.6694
+Philippines,Lithium Ion Batteries,Wet,10,2060,5.0424,0.0000,-5.0424
+Philippines,Lithium Ion Batteries,Wet,11,2060,5.7496,0.0000,-5.7496
+Philippines,Lithium Ion Batteries,Wet,12,2060,6.5097,0.0000,-6.5097
+Philippines,Lithium Ion Batteries,Wet,13,2060,4.7118,0.0000,-4.7118
+Philippines,Lithium Ion Batteries,Wet,16,2060,0.3266,0.0000,-0.3266
+Philippines,Lithium Ion Batteries,Wet,17,2060,0.0000,0.1110,0.1110
+Philippines,Lithium Ion Batteries,Wet,18,2060,0.0000,2.8103,2.8103
+Philippines,Lithium Ion Batteries,Wet,19,2060,0.0000,3.9657,3.9657
+Philippines,Lithium Ion Batteries,Wet,20,2060,0.0000,4.0727,4.0727
+Philippines,Lithium Ion Batteries,Wet,21,2060,0.0000,4.2392,4.2392
+Philippines,Lithium Ion Batteries,Wet,22,2060,0.0000,3.9643,3.9643
+Philippines,Lithium Ion Batteries,Wet,23,2060,0.0000,3.3666,3.3666
+Philippines,Lithium Ion Batteries,Wet,24,2060,0.0000,2.7476,2.7476
+Philippines,Pumped Hydro,Dry,11,2030,0.0292,0.0000,-0.0292
+Philippines,Pumped Hydro,Dry,20,2030,0.0000,0.0234,0.0234
+Philippines,Pumped Hydro,Wet,10,2030,0.1826,0.0000,-0.1826
+Philippines,Pumped Hydro,Wet,11,2030,0.3222,0.0000,-0.3222
+Philippines,Pumped Hydro,Wet,12,2030,0.7574,0.0000,-0.7574
+Philippines,Pumped Hydro,Wet,13,2030,0.0340,0.0000,-0.0340
+Philippines,Pumped Hydro,Wet,16,2030,0.2049,0.0000,-0.2049
+Philippines,Pumped Hydro,Wet,19,2030,0.0000,0.3760,0.3760
+Philippines,Pumped Hydro,Wet,20,2030,0.0000,0.1412,0.1412
+Philippines,Pumped Hydro,Wet,21,2030,0.0000,0.5079,0.5079
+Philippines,Pumped Hydro,Wet,22,2030,0.0000,0.1758,0.1758
+Philippines,Pumped Hydro,Dry,10,2035,1.2633,0.0000,-1.2633
+Philippines,Pumped Hydro,Dry,11,2035,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,12,2035,0.2024,0.0000,-0.2024
+Philippines,Pumped Hydro,Dry,13,2035,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,19,2035,0.0000,1.0069,1.0069
+Philippines,Pumped Hydro,Dry,20,2035,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,21,2035,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,22,2035,0.0000,0.1656,0.1656
+Philippines,Pumped Hydro,Wet,10,2035,0.8472,0.0000,-0.8472
+Philippines,Pumped Hydro,Wet,11,2035,0.9639,0.0000,-0.9639
+Philippines,Pumped Hydro,Wet,13,2035,0.0608,0.0000,-0.0608
+Philippines,Pumped Hydro,Wet,20,2035,0.0000,0.7711,0.7711
+Philippines,Pumped Hydro,Wet,21,2035,0.0000,0.7265,0.7265
+Philippines,Pumped Hydro,Dry,9,2040,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,10,2040,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,11,2040,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,12,2040,0.0018,0.0000,-0.0018
+Philippines,Pumped Hydro,Dry,13,2040,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,14,2040,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,15,2040,0.2381,0.0000,-0.2381
+Philippines,Pumped Hydro,Dry,17,2040,0.0000,0.5854,0.5854
+Philippines,Pumped Hydro,Dry,18,2040,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,19,2040,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,20,2040,0.0000,0.0542,0.0542
+Philippines,Pumped Hydro,Dry,21,2040,0.0000,0.6207,0.6207
+Philippines,Pumped Hydro,Dry,23,2040,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,24,2040,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,8,2045,1.0000,0.0000,-1.0000
+Philippines,Pumped Hydro,Dry,9,2045,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,10,2045,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,11,2045,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,12,2045,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,13,2045,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,14,2045,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,15,2045,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,16,2045,0.0000,0.1903,0.1903
+Philippines,Pumped Hydro,Dry,17,2045,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,18,2045,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,19,2045,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,20,2045,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,21,2045,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,22,2045,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,23,2045,0.0000,0.6097,0.6097
+Philippines,Pumped Hydro,Dry,24,2045,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,8,2050,0.8495,0.0000,-0.8495
+Philippines,Pumped Hydro,Dry,9,2050,0.8005,0.0000,-0.8005
+Philippines,Pumped Hydro,Dry,11,2050,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,12,2050,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,14,2050,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,15,2050,1.3356,0.0000,-1.3356
+Philippines,Pumped Hydro,Dry,17,2050,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,18,2050,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,19,2050,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,20,2050,0.0000,1.0685,1.0685
+Philippines,Pumped Hydro,Dry,22,2050,0.0000,0.2516,0.2516
+Philippines,Pumped Hydro,Dry,24,2050,0.0000,1.0685,1.0685
+Singapore,Lithium Ion Batteries,Dry,9,2030,0.0901,0.0000,-0.0901
+Singapore,Lithium Ion Batteries,Dry,11,2030,0.0988,0.0000,-0.0988
+Singapore,Lithium Ion Batteries,Dry,13,2030,0.1521,0.0000,-0.1521
+Singapore,Lithium Ion Batteries,Dry,15,2030,0.1503,0.0000,-0.1503
+Singapore,Lithium Ion Batteries,Dry,16,2030,0.0344,0.0000,-0.0344
+Singapore,Lithium Ion Batteries,Dry,20,2030,0.0000,0.3560,0.3560
+Singapore,Lithium Ion Batteries,Dry,21,2030,0.0000,0.1487,0.1487
+Singapore,Lithium Ion Batteries,Wet,3,2030,0.4696,0.0000,-0.4696
+Singapore,Lithium Ion Batteries,Wet,4,2030,0.0959,0.0000,-0.0959
+Singapore,Lithium Ion Batteries,Wet,6,2030,0.4570,0.0000,-0.4570
+Singapore,Lithium Ion Batteries,Wet,7,2030,0.2672,0.0000,-0.2672
+Singapore,Lithium Ion Batteries,Wet,8,2030,0.0874,0.0000,-0.0874
+Singapore,Lithium Ion Batteries,Wet,19,2030,0.0000,0.1515,0.1515
+Singapore,Lithium Ion Batteries,Wet,20,2030,0.0000,0.5279,0.5279
+Singapore,Lithium Ion Batteries,Wet,21,2030,0.0000,0.4619,0.4619
+Singapore,Lithium Ion Batteries,Wet,22,2030,0.0000,0.1807,0.1807
+Singapore,Lithium Ion Batteries,Dry,1,2035,0.0327,0.0000,-0.0327
+Singapore,Lithium Ion Batteries,Dry,2,2035,0.1826,0.0000,-0.1826
+Singapore,Lithium Ion Batteries,Dry,3,2035,0.0556,0.0000,-0.0556
+Singapore,Lithium Ion Batteries,Dry,4,2035,0.3522,0.0000,-0.3522
+Singapore,Lithium Ion Batteries,Dry,5,2035,0.3655,0.0000,-0.3655
+Singapore,Lithium Ion Batteries,Dry,6,2035,0.2427,0.0000,-0.2427
+Singapore,Lithium Ion Batteries,Dry,7,2035,0.0000,0.0393,0.0393
+Singapore,Lithium Ion Batteries,Dry,8,2035,0.0000,0.1992,0.1992
+Singapore,Lithium Ion Batteries,Dry,9,2035,0.0000,0.1362,0.1362
+Singapore,Lithium Ion Batteries,Dry,11,2035,0.3989,0.0000,-0.3989
+Singapore,Lithium Ion Batteries,Dry,12,2035,0.6721,0.0000,-0.6721
+Singapore,Lithium Ion Batteries,Dry,13,2035,0.8341,0.0000,-0.8341
+Singapore,Lithium Ion Batteries,Dry,14,2035,0.7214,0.0000,-0.7214
+Singapore,Lithium Ion Batteries,Dry,15,2035,0.2988,0.0000,-0.2988
+Singapore,Lithium Ion Batteries,Dry,16,2035,0.2033,0.0000,-0.2033
+Singapore,Lithium Ion Batteries,Dry,17,2035,0.0000,0.0832,0.0832
+Singapore,Lithium Ion Batteries,Dry,18,2035,0.0000,0.3374,0.3374
+Singapore,Lithium Ion Batteries,Dry,19,2035,0.0000,0.6613,0.6613
+Singapore,Lithium Ion Batteries,Dry,20,2035,0.0000,0.8247,0.8247
+Singapore,Lithium Ion Batteries,Dry,21,2035,0.0000,0.5685,0.5685
+Singapore,Lithium Ion Batteries,Dry,22,2035,0.0000,0.6861,0.6861
+Singapore,Lithium Ion Batteries,Dry,23,2035,0.0000,0.4385,0.4385
+Singapore,Lithium Ion Batteries,Dry,24,2035,0.0000,0.2112,0.2112
+Singapore,Lithium Ion Batteries,Wet,1,2035,0.0208,0.0000,-0.0208
+Singapore,Lithium Ion Batteries,Wet,2,2035,0.1342,0.0000,-0.1342
+Singapore,Lithium Ion Batteries,Wet,3,2035,0.2150,0.0000,-0.2150
+Singapore,Lithium Ion Batteries,Wet,4,2035,0.2684,0.0000,-0.2684
+Singapore,Lithium Ion Batteries,Wet,5,2035,0.2798,0.0000,-0.2798
+Singapore,Lithium Ion Batteries,Wet,6,2035,0.2022,0.0000,-0.2022
+Singapore,Lithium Ion Batteries,Wet,7,2035,0.0101,0.0000,-0.0101
+Singapore,Lithium Ion Batteries,Wet,8,2035,0.0000,0.1406,0.1406
+Singapore,Lithium Ion Batteries,Wet,9,2035,0.0000,0.1995,0.1995
+Singapore,Lithium Ion Batteries,Wet,10,2035,0.0000,0.0462,0.0462
+Singapore,Lithium Ion Batteries,Wet,11,2035,0.1561,0.0000,-0.1561
+Singapore,Lithium Ion Batteries,Wet,12,2035,0.3809,0.0000,-0.3809
+Singapore,Lithium Ion Batteries,Wet,13,2035,0.4992,0.0000,-0.4992
+Singapore,Lithium Ion Batteries,Wet,14,2035,0.4605,0.0000,-0.4605
+Singapore,Lithium Ion Batteries,Wet,15,2035,0.4189,0.0000,-0.4189
+Singapore,Lithium Ion Batteries,Wet,16,2035,0.2209,0.0000,-0.2209
+Singapore,Lithium Ion Batteries,Wet,17,2035,0.0000,0.0234,0.0234
+Singapore,Lithium Ion Batteries,Wet,18,2035,0.0000,0.2421,0.2421
+Singapore,Lithium Ion Batteries,Wet,19,2035,0.0000,0.4356,0.4356
+Singapore,Lithium Ion Batteries,Wet,20,2035,0.0000,0.5490,0.5490
+Singapore,Lithium Ion Batteries,Wet,21,2035,0.0000,0.5367,0.5367
+Singapore,Lithium Ion Batteries,Wet,22,2035,0.0000,0.4843,0.4843
+Singapore,Lithium Ion Batteries,Wet,23,2035,0.0000,0.3205,0.3205
+Singapore,Lithium Ion Batteries,Wet,24,2035,0.0000,0.1585,0.1585
+Singapore,Lithium Ion Batteries,Dry,2,2040,0.0833,0.0000,-0.0833
+Singapore,Lithium Ion Batteries,Dry,3,2040,0.4284,0.0000,-0.4284
+Singapore,Lithium Ion Batteries,Dry,4,2040,0.2632,0.0000,-0.2632
+Singapore,Lithium Ion Batteries,Dry,5,2040,0.2774,0.0000,-0.2774
+Singapore,Lithium Ion Batteries,Dry,6,2040,0.1471,0.0000,-0.1471
+Singapore,Lithium Ion Batteries,Dry,8,2040,0.0000,0.0962,0.0962
+Singapore,Lithium Ion Batteries,Dry,9,2040,0.0000,0.0569,0.0569
+Singapore,Lithium Ion Batteries,Dry,11,2040,0.2258,0.0000,-0.2258
+Singapore,Lithium Ion Batteries,Dry,12,2040,0.5120,0.0000,-0.5120
+Singapore,Lithium Ion Batteries,Dry,13,2040,0.6655,0.0000,-0.6655
+Singapore,Lithium Ion Batteries,Dry,14,2040,0.5850,0.0000,-0.5850
+Singapore,Lithium Ion Batteries,Dry,15,2040,0.3586,0.0000,-0.3586
+Singapore,Lithium Ion Batteries,Dry,16,2040,0.0312,0.0000,-0.0312
+Singapore,Lithium Ion Batteries,Dry,17,2040,0.0000,0.0210,0.0210
+Singapore,Lithium Ion Batteries,Dry,18,2040,0.0000,0.3131,0.3131
+Singapore,Lithium Ion Batteries,Dry,19,2040,0.0000,0.5877,0.5877
+Singapore,Lithium Ion Batteries,Dry,20,2040,0.0000,0.7525,0.7525
+Singapore,Lithium Ion Batteries,Dry,21,2040,0.0000,0.5573,0.5573
+Singapore,Lithium Ion Batteries,Dry,22,2040,0.0000,0.6054,0.6054
+Singapore,Lithium Ion Batteries,Dry,23,2040,0.0000,0.3428,0.3428
+Singapore,Lithium Ion Batteries,Dry,24,2040,0.0000,0.1016,0.1016
+Singapore,Lithium Ion Batteries,Wet,2,2040,0.0641,0.0000,-0.0641
+Singapore,Lithium Ion Batteries,Wet,3,2040,0.1498,0.0000,-0.1498
+Singapore,Lithium Ion Batteries,Wet,4,2040,0.3354,0.0000,-0.3354
+Singapore,Lithium Ion Batteries,Wet,5,2040,0.3756,0.0000,-0.3756
+Singapore,Lithium Ion Batteries,Wet,6,2040,0.2933,0.0000,-0.2933
+Singapore,Lithium Ion Batteries,Wet,8,2040,0.0000,0.0735,0.0735
+Singapore,Lithium Ion Batteries,Wet,9,2040,0.0000,0.1500,0.1500
+Singapore,Lithium Ion Batteries,Wet,10,2040,0.0000,0.0052,0.0052
+Singapore,Lithium Ion Batteries,Wet,11,2040,0.1626,0.0000,-0.1626
+Singapore,Lithium Ion Batteries,Wet,12,2040,0.2536,0.0000,-0.2536
+Singapore,Lithium Ion Batteries,Wet,13,2040,0.3646,0.0000,-0.3646
+Singapore,Lithium Ion Batteries,Wet,14,2040,0.3234,0.0000,-0.3234
+Singapore,Lithium Ion Batteries,Wet,15,2040,0.2814,0.0000,-0.2814
+Singapore,Lithium Ion Batteries,Wet,16,2040,0.1011,0.0000,-0.1011
+Singapore,Lithium Ion Batteries,Wet,18,2040,0.0000,0.1999,0.1999
+Singapore,Lithium Ion Batteries,Wet,19,2040,0.0000,0.3886,0.3886
+Singapore,Lithium Ion Batteries,Wet,20,2040,0.0000,0.5036,0.5036
+Singapore,Lithium Ion Batteries,Wet,21,2040,0.0000,0.4905,0.4905
+Singapore,Lithium Ion Batteries,Wet,22,2040,0.0000,0.4349,0.4349
+Singapore,Lithium Ion Batteries,Wet,23,2040,0.0000,0.2612,0.2612
+Singapore,Lithium Ion Batteries,Wet,24,2040,0.0000,0.0894,0.0894
+Singapore,Lithium Ion Batteries,Dry,3,2045,0.6782,0.0000,-0.6782
+Singapore,Lithium Ion Batteries,Dry,6,2045,0.6782,0.0000,-0.6782
+Singapore,Lithium Ion Batteries,Dry,10,2045,0.0000,0.0794,0.0794
+Singapore,Lithium Ion Batteries,Dry,11,2045,0.0000,0.1253,0.1253
+Singapore,Lithium Ion Batteries,Dry,12,2045,0.0000,0.0517,0.0517
+Singapore,Lithium Ion Batteries,Dry,13,2045,0.0451,0.0000,-0.0451
+Singapore,Lithium Ion Batteries,Dry,14,2045,0.0000,0.0288,0.0288
+Singapore,Lithium Ion Batteries,Dry,16,2045,0.0000,0.1575,0.1575
+Singapore,Lithium Ion Batteries,Dry,17,2045,0.0000,0.2047,0.2047
+Singapore,Lithium Ion Batteries,Dry,18,2045,0.0000,0.1966,0.1966
+Singapore,Lithium Ion Batteries,Dry,20,2045,0.0000,0.2383,0.2383
+Singapore,Lithium Ion Batteries,Dry,21,2045,0.0000,0.1811,0.1811
+Singapore,Lithium Ion Batteries,Dry,22,2045,0.0000,0.0820,0.0820
+Singapore,Lithium Ion Batteries,Dry,23,2045,0.0000,0.0000,-0.0000
+Singapore,Lithium Ion Batteries,Wet,2,2045,0.3054,0.0000,-0.3054
+Singapore,Lithium Ion Batteries,Wet,4,2045,0.1262,0.0000,-0.1262
+Singapore,Lithium Ion Batteries,Wet,6,2045,0.3820,0.0000,-0.3820
+Singapore,Lithium Ion Batteries,Wet,7,2045,0.1654,0.0000,-0.1654
+Singapore,Lithium Ion Batteries,Wet,10,2045,0.0000,0.0831,0.0831
+Singapore,Lithium Ion Batteries,Wet,11,2045,0.0000,0.1084,0.1084
+Singapore,Lithium Ion Batteries,Wet,12,2045,0.0000,0.0473,0.0473
+Singapore,Lithium Ion Batteries,Wet,13,2045,0.0482,0.0000,-0.0482
+Singapore,Lithium Ion Batteries,Wet,14,2045,0.0032,0.0000,-0.0032
+Singapore,Lithium Ion Batteries,Wet,15,2045,0.0000,0.0264,0.0264
+Singapore,Lithium Ion Batteries,Wet,16,2045,0.0000,0.0722,0.0722
+Singapore,Lithium Ion Batteries,Wet,17,2045,0.0000,0.1174,0.1174
+Singapore,Lithium Ion Batteries,Wet,18,2045,0.0000,0.1124,0.1124
+Singapore,Lithium Ion Batteries,Wet,19,2045,0.0000,0.0889,0.0889
+Singapore,Lithium Ion Batteries,Wet,20,2045,0.0000,0.1399,0.1399
+Singapore,Lithium Ion Batteries,Wet,21,2045,0.0000,0.1261,0.1261
+Singapore,Lithium Ion Batteries,Wet,22,2045,0.0000,0.0670,0.0670
+Singapore,Lithium Ion Batteries,Dry,2,2050,0.3097,0.0000,-0.3097
+Singapore,Lithium Ion Batteries,Dry,6,2050,0.7055,0.0000,-0.7055
+Singapore,Lithium Ion Batteries,Dry,8,2050,0.3958,0.0000,-0.3958
+Singapore,Lithium Ion Batteries,Dry,12,2050,0.0000,0.0525,0.0525
+Singapore,Lithium Ion Batteries,Dry,13,2050,0.0476,0.0000,-0.0476
+Singapore,Lithium Ion Batteries,Dry,14,2050,0.0000,0.0294,0.0294
+Singapore,Lithium Ion Batteries,Dry,15,2050,0.0000,0.0630,0.0630
+Singapore,Lithium Ion Batteries,Dry,16,2050,0.0000,0.1578,0.1578
+Singapore,Lithium Ion Batteries,Dry,18,2050,0.0000,0.1912,0.1912
+Singapore,Lithium Ion Batteries,Dry,19,2050,0.0000,0.6773,0.6773
+Singapore,Lithium Ion Batteries,Dry,20,2050,0.0000,0.2291,0.2291
+Singapore,Lithium Ion Batteries,Wet,5,2050,0.3720,0.0000,-0.3720
+Singapore,Lithium Ion Batteries,Wet,6,2050,0.5092,0.0000,-0.5092
+Singapore,Lithium Ion Batteries,Wet,8,2050,0.1372,0.0000,-0.1372
+Singapore,Lithium Ion Batteries,Wet,10,2050,0.0000,0.0860,0.0860
+Singapore,Lithium Ion Batteries,Wet,11,2050,0.0000,0.1156,0.1156
+Singapore,Lithium Ion Batteries,Wet,12,2050,0.0000,0.0541,0.0541
+Singapore,Lithium Ion Batteries,Wet,13,2050,0.0442,0.0000,-0.0442
+Singapore,Lithium Ion Batteries,Wet,14,2050,0.0000,0.0028,0.0028
+Singapore,Lithium Ion Batteries,Wet,15,2050,0.0000,0.0328,0.0328
+Singapore,Lithium Ion Batteries,Wet,16,2050,0.0000,0.0782,0.0782
+Singapore,Lithium Ion Batteries,Wet,17,2050,0.0000,0.1226,0.1226
+Singapore,Lithium Ion Batteries,Wet,18,2050,0.0000,0.1143,0.1143
+Singapore,Lithium Ion Batteries,Wet,19,2050,0.0000,0.0868,0.0868
+Singapore,Lithium Ion Batteries,Wet,20,2050,0.0000,0.1392,0.1392
+Singapore,Lithium Ion Batteries,Wet,21,2050,0.0000,0.1247,0.1247
+Singapore,Lithium Ion Batteries,Wet,22,2050,0.0000,0.0630,0.0630
+Singapore,Lithium Ion Batteries,Dry,7,2055,0.8841,0.0000,-0.8841
+Singapore,Lithium Ion Batteries,Dry,19,2055,0.0000,0.8488,0.8488
+Singapore,Lithium Ion Batteries,Wet,4,2055,0.0035,0.0000,-0.0035
+Singapore,Lithium Ion Batteries,Wet,11,2055,0.0000,0.0033,0.0033
+Singapore,Lithium Ion Batteries,Wet,14,2055,0.0310,0.0000,-0.0310
+Singapore,Lithium Ion Batteries,Wet,17,2055,0.0000,0.0082,0.0082
+Singapore,Lithium Ion Batteries,Wet,20,2055,0.0000,0.0184,0.0184
+Singapore,Lithium Ion Batteries,Wet,21,2055,0.0000,0.0032,0.0032
+Singapore,Lithium Ion Batteries,Dry,4,2060,0.8929,0.0000,-0.8929
+Singapore,Lithium Ion Batteries,Dry,10,2060,0.1571,0.0000,-0.1571
+Singapore,Lithium Ion Batteries,Dry,14,2060,0.0290,0.0000,-0.0290
+Singapore,Lithium Ion Batteries,Dry,18,2060,0.0000,0.0176,0.0176
+Singapore,Lithium Ion Batteries,Dry,19,2060,0.0000,0.8572,0.8572
+Singapore,Lithium Ion Batteries,Dry,20,2060,0.0000,0.1052,0.1052
+Singapore,Lithium Ion Batteries,Dry,21,2060,0.0000,0.0558,0.0558
+Singapore,Lithium Ion Batteries,Wet,1,2060,0.3874,0.0000,-0.3874
+Singapore,Lithium Ion Batteries,Wet,4,2060,0.6444,0.0000,-0.6444
+Singapore,Lithium Ion Batteries,Wet,8,2060,0.2570,0.0000,-0.2570
+Singapore,Lithium Ion Batteries,Wet,9,2060,0.0000,0.0313,0.0313
+Singapore,Lithium Ion Batteries,Wet,10,2060,0.0000,0.1084,0.1084
+Singapore,Lithium Ion Batteries,Wet,11,2060,0.0000,0.1148,0.1148
+Singapore,Lithium Ion Batteries,Wet,12,2060,0.0000,0.0285,0.0285
+Singapore,Lithium Ion Batteries,Wet,13,2060,0.0904,0.0000,-0.0904
+Singapore,Lithium Ion Batteries,Wet,14,2060,0.0400,0.0000,-0.0400
+Singapore,Lithium Ion Batteries,Wet,15,2060,0.0000,0.0008,0.0008
+Singapore,Lithium Ion Batteries,Wet,16,2060,0.0000,0.0704,0.0704
+Singapore,Lithium Ion Batteries,Wet,17,2060,0.0000,0.1420,0.1420
+Singapore,Lithium Ion Batteries,Wet,18,2060,0.0000,0.1585,0.1585
+Singapore,Lithium Ion Batteries,Wet,19,2060,0.0000,0.1531,0.1531
+Singapore,Lithium Ion Batteries,Wet,20,2060,0.0000,0.2177,0.2177
+Singapore,Lithium Ion Batteries,Wet,21,2060,0.0000,0.2020,0.2020
+Singapore,Lithium Ion Batteries,Wet,22,2060,0.0000,0.1350,0.1350
+Thailand,Lithium Ion Batteries,Dry,1,2040,0.4795,0.0000,-0.4795
+Thailand,Lithium Ion Batteries,Dry,2,2040,0.8311,0.0000,-0.8311
+Thailand,Lithium Ion Batteries,Dry,3,2040,0.4376,0.0000,-0.4376
+Thailand,Lithium Ion Batteries,Dry,4,2040,0.3398,0.0000,-0.3398
+Thailand,Lithium Ion Batteries,Dry,5,2040,0.1159,0.0000,-0.1159
+Thailand,Lithium Ion Batteries,Dry,8,2040,0.0000,2.1157,2.1157
+Thailand,Lithium Ion Batteries,Dry,11,2040,1.5966,0.0000,-1.5966
+Thailand,Lithium Ion Batteries,Dry,12,2040,4.1762,0.0000,-4.1762
+Thailand,Lithium Ion Batteries,Dry,13,2040,3.8182,0.0000,-3.8182
+Thailand,Lithium Ion Batteries,Dry,14,2040,1.7030,0.0000,-1.7030
+Thailand,Lithium Ion Batteries,Dry,18,2040,0.0000,5.1322,5.1322
+Thailand,Lithium Ion Batteries,Dry,19,2040,0.0000,3.7048,3.7048
+Thailand,Lithium Ion Batteries,Dry,20,2040,0.0000,1.4320,1.4320
+Thailand,Lithium Ion Batteries,Dry,21,2040,0.0000,0.5731,0.5731
+Thailand,Lithium Ion Batteries,Wet,1,2040,1.4846,0.0000,-1.4846
+Thailand,Lithium Ion Batteries,Wet,2,2040,1.1634,0.0000,-1.1634
+Thailand,Lithium Ion Batteries,Wet,3,2040,1.0515,0.0000,-1.0515
+Thailand,Lithium Ion Batteries,Wet,4,2040,1.1029,0.0000,-1.1029
+Thailand,Lithium Ion Batteries,Wet,6,2040,0.8295,0.0000,-0.8295
+Thailand,Lithium Ion Batteries,Wet,8,2040,0.0000,0.6244,0.6244
+Thailand,Lithium Ion Batteries,Wet,9,2040,0.1625,0.0000,-0.1625
+Thailand,Lithium Ion Batteries,Wet,11,2040,0.6433,0.0000,-0.6433
+Thailand,Lithium Ion Batteries,Wet,12,2040,1.6514,0.0000,-1.6514
+Thailand,Lithium Ion Batteries,Wet,13,2040,0.5447,0.0000,-0.5447
+Thailand,Lithium Ion Batteries,Wet,16,2040,0.1676,0.0000,-0.1676
+Thailand,Lithium Ion Batteries,Wet,18,2040,0.0000,1.3191,1.3191
+Thailand,Lithium Ion Batteries,Wet,19,2040,0.0000,2.3435,2.3435
+Thailand,Lithium Ion Batteries,Wet,20,2040,0.0000,1.8991,1.8991
+Thailand,Lithium Ion Batteries,Wet,21,2040,0.0000,1.6786,1.6786
+Thailand,Lithium Ion Batteries,Wet,22,2040,0.0000,0.5844,0.5844
+Thailand,Lithium Ion Batteries,Dry,1,2045,1.1873,0.0000,-1.1873
+Thailand,Lithium Ion Batteries,Dry,2,2045,1.5689,0.0000,-1.5689
+Thailand,Lithium Ion Batteries,Dry,3,2045,1.0495,0.0000,-1.0495
+Thailand,Lithium Ion Batteries,Dry,4,2045,1.7124,0.0000,-1.7124
+Thailand,Lithium Ion Batteries,Dry,5,2045,0.9171,0.0000,-0.9171
+Thailand,Lithium Ion Batteries,Dry,6,2045,0.0000,0.4577,0.4577
+Thailand,Lithium Ion Batteries,Dry,7,2045,0.0000,2.7249,2.7249
+Thailand,Lithium Ion Batteries,Dry,8,2045,0.0000,2.8322,2.8322
+Thailand,Lithium Ion Batteries,Dry,9,2045,0.0000,0.1631,0.1631
+Thailand,Lithium Ion Batteries,Dry,10,2045,1.1121,0.0000,-1.1121
+Thailand,Lithium Ion Batteries,Dry,11,2045,2.5959,0.0000,-2.5959
+Thailand,Lithium Ion Batteries,Dry,12,2045,5.6414,0.0000,-5.6414
+Thailand,Lithium Ion Batteries,Dry,13,2045,4.3918,0.0000,-4.3918
+Thailand,Lithium Ion Batteries,Dry,14,2045,3.2400,0.0000,-3.2400
+Thailand,Lithium Ion Batteries,Dry,17,2045,0.0000,0.7680,0.7680
+Thailand,Lithium Ion Batteries,Dry,18,2045,0.0000,6.0004,6.0004
+Thailand,Lithium Ion Batteries,Dry,19,2045,0.0000,3.8685,3.8685
+Thailand,Lithium Ion Batteries,Dry,20,2045,0.0000,2.2026,2.2026
+Thailand,Lithium Ion Batteries,Dry,21,2045,0.0000,2.2766,2.2766
+Thailand,Lithium Ion Batteries,Dry,23,2045,0.0000,1.1858,1.1858
+Thailand,Lithium Ion Batteries,Wet,1,2045,0.7044,0.0000,-0.7044
+Thailand,Lithium Ion Batteries,Wet,2,2045,0.6577,0.0000,-0.6577
+Thailand,Lithium Ion Batteries,Wet,3,2045,1.6621,0.0000,-1.6621
+Thailand,Lithium Ion Batteries,Wet,4,2045,2.3593,0.0000,-2.3593
+Thailand,Lithium Ion Batteries,Wet,5,2045,1.5316,0.0000,-1.5316
+Thailand,Lithium Ion Batteries,Wet,6,2045,0.3999,0.0000,-0.3999
+Thailand,Lithium Ion Batteries,Wet,8,2045,0.0000,1.4380,1.4380
+Thailand,Lithium Ion Batteries,Wet,9,2045,0.0000,0.3550,0.3550
+Thailand,Lithium Ion Batteries,Wet,10,2045,0.4849,0.0000,-0.4849
+Thailand,Lithium Ion Batteries,Wet,11,2045,1.5809,0.0000,-1.5809
+Thailand,Lithium Ion Batteries,Wet,12,2045,4.0464,0.0000,-4.0464
+Thailand,Lithium Ion Batteries,Wet,14,2045,0.6958,0.0000,-0.6958
+Thailand,Lithium Ion Batteries,Wet,17,2045,0.0000,0.4103,0.4103
+Thailand,Lithium Ion Batteries,Wet,18,2045,0.0000,1.8507,1.8507
+Thailand,Lithium Ion Batteries,Wet,19,2045,0.0000,3.2716,3.2716
+Thailand,Lithium Ion Batteries,Wet,20,2045,0.0000,2.4023,2.4023
+Thailand,Lithium Ion Batteries,Wet,21,2045,0.0000,2.4268,2.4268
+Thailand,Lithium Ion Batteries,Wet,22,2045,0.0000,1.4033,1.4033
+Thailand,Lithium Ion Batteries,Dry,1,2050,1.4392,0.0000,-1.4392
+Thailand,Lithium Ion Batteries,Dry,2,2050,2.7651,0.0000,-2.7651
+Thailand,Lithium Ion Batteries,Dry,3,2050,2.9774,0.0000,-2.9774
+Thailand,Lithium Ion Batteries,Dry,4,2050,2.0847,0.0000,-2.0847
+Thailand,Lithium Ion Batteries,Dry,5,2050,1.0994,0.0000,-1.0994
+Thailand,Lithium Ion Batteries,Dry,6,2050,0.0000,0.1515,0.1515
+Thailand,Lithium Ion Batteries,Dry,7,2050,0.0000,1.3664,1.3664
+Thailand,Lithium Ion Batteries,Dry,8,2050,0.0000,3.6714,3.6714
+Thailand,Lithium Ion Batteries,Dry,9,2050,0.0000,1.6446,1.6446
+Thailand,Lithium Ion Batteries,Dry,11,2050,2.1533,0.0000,-2.1533
+Thailand,Lithium Ion Batteries,Dry,12,2050,7.4808,0.0000,-7.4808
+Thailand,Lithium Ion Batteries,Dry,13,2050,5.4298,0.0000,-5.4298
+Thailand,Lithium Ion Batteries,Dry,14,2050,3.2574,0.0000,-3.2574
+Thailand,Lithium Ion Batteries,Dry,17,2050,0.0000,4.8636,4.8636
+Thailand,Lithium Ion Batteries,Dry,18,2050,0.0000,6.2750,6.2750
+Thailand,Lithium Ion Batteries,Dry,19,2050,0.0000,5.0877,5.0877
+Thailand,Lithium Ion Batteries,Dry,20,2050,0.0000,2.6755,2.6755
+Thailand,Lithium Ion Batteries,Dry,21,2050,0.0000,1.8037,1.8037
+Thailand,Lithium Ion Batteries,Wet,1,2050,0.6762,0.0000,-0.6762
+Thailand,Lithium Ion Batteries,Wet,2,2050,2.3685,0.0000,-2.3685
+Thailand,Lithium Ion Batteries,Wet,3,2050,2.3284,0.0000,-2.3284
+Thailand,Lithium Ion Batteries,Wet,4,2050,2.9947,0.0000,-2.9947
+Thailand,Lithium Ion Batteries,Wet,5,2050,2.5678,0.0000,-2.5678
+Thailand,Lithium Ion Batteries,Wet,6,2050,0.8774,0.0000,-0.8774
+Thailand,Lithium Ion Batteries,Wet,8,2050,0.0000,1.2659,1.2659
+Thailand,Lithium Ion Batteries,Wet,9,2050,0.0000,1.3675,1.3675
+Thailand,Lithium Ion Batteries,Wet,11,2050,0.7454,0.0000,-0.7454
+Thailand,Lithium Ion Batteries,Wet,12,2050,3.7091,0.0000,-3.7091
+Thailand,Lithium Ion Batteries,Wet,13,2050,1.8953,0.0000,-1.8953
+Thailand,Lithium Ion Batteries,Wet,14,2050,0.1461,0.0000,-0.1461
+Thailand,Lithium Ion Batteries,Wet,16,2050,0.0000,0.6385,0.6385
+Thailand,Lithium Ion Batteries,Wet,17,2050,0.0000,0.4906,0.4906
+Thailand,Lithium Ion Batteries,Wet,18,2050,0.0000,2.1851,2.1851
+Thailand,Lithium Ion Batteries,Wet,19,2050,0.0000,4.1063,4.1063
+Thailand,Lithium Ion Batteries,Wet,20,2050,0.0000,3.0966,3.0966
+Thailand,Lithium Ion Batteries,Wet,21,2050,0.0000,2.7576,2.7576
+Thailand,Lithium Ion Batteries,Wet,22,2050,0.0000,1.6685,1.6685
+Thailand,Lithium Ion Batteries,Dry,1,2055,1.7913,0.0000,-1.7913
+Thailand,Lithium Ion Batteries,Dry,2,2055,2.2294,0.0000,-2.2294
+Thailand,Lithium Ion Batteries,Dry,3,2055,3.2874,0.0000,-3.2874
+Thailand,Lithium Ion Batteries,Dry,4,2055,2.8519,0.0000,-2.8519
+Thailand,Lithium Ion Batteries,Dry,5,2055,2.0441,0.0000,-2.0441
+Thailand,Lithium Ion Batteries,Dry,7,2055,0.0000,1.5005,1.5005
+Thailand,Lithium Ion Batteries,Dry,8,2055,0.0000,2.6779,2.6779
+Thailand,Lithium Ion Batteries,Dry,9,2055,0.0000,1.7508,1.7508
+Thailand,Lithium Ion Batteries,Dry,11,2055,1.4489,0.0000,-1.4489
+Thailand,Lithium Ion Batteries,Dry,12,2055,6.6411,0.0000,-6.6411
+Thailand,Lithium Ion Batteries,Dry,13,2055,6.2118,0.0000,-6.2118
+Thailand,Lithium Ion Batteries,Dry,14,2055,1.7962,0.0000,-1.7962
+Thailand,Lithium Ion Batteries,Dry,17,2055,0.0000,0.6450,0.6450
+Thailand,Lithium Ion Batteries,Dry,18,2055,0.0000,10.6205,10.6205
+Thailand,Lithium Ion Batteries,Dry,19,2055,0.0000,6.8622,6.8622
+Thailand,Lithium Ion Batteries,Dry,20,2055,0.0000,1.7763,1.7763
+Thailand,Lithium Ion Batteries,Dry,21,2055,0.0000,1.3370,1.3370
+Thailand,Lithium Ion Batteries,Wet,1,2055,2.0590,0.0000,-2.0590
+Thailand,Lithium Ion Batteries,Wet,2,2055,1.1275,0.0000,-1.1275
+Thailand,Lithium Ion Batteries,Wet,3,2055,1.8574,0.0000,-1.8574
+Thailand,Lithium Ion Batteries,Wet,4,2055,2.8622,0.0000,-2.8622
+Thailand,Lithium Ion Batteries,Wet,5,2055,3.2146,0.0000,-3.2146
+Thailand,Lithium Ion Batteries,Wet,6,2055,1.2554,0.0000,-1.2554
+Thailand,Lithium Ion Batteries,Wet,8,2055,0.0000,0.8762,0.8762
+Thailand,Lithium Ion Batteries,Wet,9,2055,0.0000,1.2669,1.2669
+Thailand,Lithium Ion Batteries,Wet,10,2055,0.0000,0.1940,0.1940
+Thailand,Lithium Ion Batteries,Wet,11,2055,0.3728,0.0000,-0.3728
+Thailand,Lithium Ion Batteries,Wet,12,2055,4.4688,0.0000,-4.4688
+Thailand,Lithium Ion Batteries,Wet,13,2055,1.1850,0.0000,-1.1850
+Thailand,Lithium Ion Batteries,Wet,16,2055,0.0000,0.6532,0.6532
+Thailand,Lithium Ion Batteries,Wet,17,2055,0.0000,1.0764,1.0764
+Thailand,Lithium Ion Batteries,Wet,18,2055,0.0000,2.2973,2.2973
+Thailand,Lithium Ion Batteries,Wet,19,2055,0.0000,3.9374,3.9374
+Thailand,Lithium Ion Batteries,Wet,20,2055,0.0000,2.8084,2.8084
+Thailand,Lithium Ion Batteries,Wet,21,2055,0.0000,2.8677,2.8677
+Thailand,Lithium Ion Batteries,Wet,22,2055,0.0000,1.6891,1.6891
+Thailand,Lithium Ion Batteries,Dry,1,2060,2.0742,0.0000,-2.0742
+Thailand,Lithium Ion Batteries,Dry,2,2060,3.1342,0.0000,-3.1342
+Thailand,Lithium Ion Batteries,Dry,3,2060,4.3295,0.0000,-4.3295
+Thailand,Lithium Ion Batteries,Dry,4,2060,3.4806,0.0000,-3.4806
+Thailand,Lithium Ion Batteries,Dry,5,2060,1.8491,0.0000,-1.8491
+Thailand,Lithium Ion Batteries,Dry,7,2060,0.0000,1.0594,1.0594
+Thailand,Lithium Ion Batteries,Dry,8,2060,0.0000,3.3464,3.3464
+Thailand,Lithium Ion Batteries,Dry,9,2060,0.0000,0.9292,0.9292
+Thailand,Lithium Ion Batteries,Dry,11,2060,0.7727,0.0000,-0.7727
+Thailand,Lithium Ion Batteries,Dry,12,2060,6.8244,0.0000,-6.8244
+Thailand,Lithium Ion Batteries,Dry,13,2060,5.9437,0.0000,-5.9437
+Thailand,Lithium Ion Batteries,Dry,14,2060,1.0770,0.0000,-1.0770
+Thailand,Lithium Ion Batteries,Dry,16,2060,0.0000,1.9489,1.9489
+Thailand,Lithium Ion Batteries,Dry,17,2060,0.0000,0.6980,0.6980
+Thailand,Lithium Ion Batteries,Dry,18,2060,0.0000,11.4854,11.4854
+Thailand,Lithium Ion Batteries,Dry,19,2060,0.0000,6.0850,6.0850
+Thailand,Lithium Ion Batteries,Dry,20,2060,0.0000,1.5965,1.5965
+Thailand,Lithium Ion Batteries,Dry,21,2060,0.0000,1.1570,1.1570
+Thailand,Lithium Ion Batteries,Wet,1,2060,1.9877,0.0000,-1.9877
+Thailand,Lithium Ion Batteries,Wet,2,2060,2.7455,0.0000,-2.7455
+Thailand,Lithium Ion Batteries,Wet,3,2060,2.4196,0.0000,-2.4196
+Thailand,Lithium Ion Batteries,Wet,4,2060,3.4400,0.0000,-3.4400
+Thailand,Lithium Ion Batteries,Wet,5,2060,3.2752,0.0000,-3.2752
+Thailand,Lithium Ion Batteries,Wet,6,2060,2.4217,0.0000,-2.4217
+Thailand,Lithium Ion Batteries,Wet,8,2060,0.0000,1.8063,1.8063
+Thailand,Lithium Ion Batteries,Wet,9,2060,0.0000,1.7673,1.7673
+Thailand,Lithium Ion Batteries,Wet,10,2060,0.0000,0.1315,0.1315
+Thailand,Lithium Ion Batteries,Wet,12,2060,3.3640,0.0000,-3.3640
+Thailand,Lithium Ion Batteries,Wet,13,2060,1.4746,0.0000,-1.4746
+Thailand,Lithium Ion Batteries,Wet,16,2060,0.0000,0.9237,0.9237
+Thailand,Lithium Ion Batteries,Wet,17,2060,0.0000,1.2151,1.2151
+Thailand,Lithium Ion Batteries,Wet,18,2060,0.0000,2.5896,2.5896
+Thailand,Lithium Ion Batteries,Wet,19,2060,0.0000,4.0768,4.0768
+Thailand,Lithium Ion Batteries,Wet,20,2060,0.0000,2.8444,2.8444
+Thailand,Lithium Ion Batteries,Wet,21,2060,0.0000,3.4486,3.4486
+Thailand,Lithium Ion Batteries,Wet,22,2060,0.0000,1.4798,1.4798
+Thailand,Pumped Hydro,Dry,10,2040,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,11,2040,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,12,2040,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,13,2040,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,14,2040,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,15,2040,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,16,2040,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,17,2040,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,19,2040,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,20,2040,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,21,2040,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,23,2040,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Wet,2,2040,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,3,2040,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,4,2040,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,5,2040,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,6,2040,0.1732,0.0000,-0.1732
+Thailand,Pumped Hydro,Wet,7,2040,0.3752,0.0000,-0.3752
+Thailand,Pumped Hydro,Wet,12,2040,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,13,2040,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,14,2040,0.0765,0.0000,-0.0765
+Thailand,Pumped Hydro,Wet,17,2040,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,18,2040,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,19,2040,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,20,2040,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,21,2040,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,22,2040,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,23,2040,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Dry,8,2045,0.0000,0.1654,0.1654
+Thailand,Pumped Hydro,Dry,11,2045,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,12,2045,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,13,2045,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,15,2045,0.1575,0.0000,-0.1575
+Thailand,Pumped Hydro,Dry,16,2045,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,18,2045,0.0000,0.1260,0.1260
+Thailand,Pumped Hydro,Dry,19,2045,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,20,2045,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,24,2045,0.2057,0.0000,-0.2057
+Thailand,Pumped Hydro,Wet,1,2045,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,2,2045,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,3,2045,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,5,2045,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,6,2045,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,7,2045,0.3496,0.0000,-0.3496
+Thailand,Pumped Hydro,Wet,11,2045,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,13,2045,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,14,2045,0.2753,0.0000,-0.2753
+Thailand,Pumped Hydro,Wet,16,2045,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,17,2045,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,18,2045,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,19,2045,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,20,2045,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,21,2045,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,22,2045,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,23,2045,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,24,2045,0.0010,0.0000,-0.0010
+Thailand,Pumped Hydro,Dry,1,2050,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,4,2050,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,5,2050,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,11,2050,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,12,2050,0.4404,0.0000,-0.4404
+Thailand,Pumped Hydro,Dry,13,2050,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,15,2050,0.2872,0.0000,-0.2872
+Thailand,Pumped Hydro,Dry,17,2050,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,18,2050,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,19,2050,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,20,2050,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,21,2050,0.0000,0.5853,0.5853
+Thailand,Pumped Hydro,Dry,22,2050,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,23,2050,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,24,2050,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Wet,1,2050,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,2,2050,0.2479,0.0000,-0.2479
+Thailand,Pumped Hydro,Wet,3,2050,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,6,2050,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,7,2050,0.3769,0.0000,-0.3769
+Thailand,Pumped Hydro,Wet,11,2050,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,12,2050,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,13,2050,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,14,2050,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,16,2050,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,17,2050,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,18,2050,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,19,2050,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,20,2050,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,21,2050,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,22,2050,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,23,2050,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,24,2050,0.0041,0.0000,-0.0041
+Thailand,Pumped Hydro,Dry,2,2055,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,3,2055,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,4,2055,0.7076,0.0000,-0.7076
+Thailand,Pumped Hydro,Dry,5,2055,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,6,2055,0.8376,0.0000,-0.8376
+Thailand,Pumped Hydro,Dry,10,2055,0.4976,0.0000,-0.4976
+Thailand,Pumped Hydro,Dry,12,2055,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,15,2055,0.1152,0.0000,-0.1152
+Thailand,Pumped Hydro,Dry,16,2055,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,17,2055,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,18,2055,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,19,2055,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,20,2055,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,21,2055,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,22,2055,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,23,2055,0.0000,0.3392,0.3392
+Thailand,Pumped Hydro,Dry,24,2055,0.8592,0.0000,-0.8592
+Thailand,Pumped Hydro,Wet,1,2055,0.1087,0.0000,-0.1087
+Thailand,Pumped Hydro,Wet,2,2055,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,3,2055,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,4,2055,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,6,2055,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,7,2055,0.5162,0.0000,-0.5162
+Thailand,Pumped Hydro,Wet,11,2055,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,13,2055,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,14,2055,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,16,2055,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,17,2055,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,18,2055,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,19,2055,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,20,2055,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,21,2055,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,22,2055,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,23,2055,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,24,2055,0.0041,0.0000,-0.0041
+Thailand,Pumped Hydro,Dry,1,2060,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,2,2060,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,4,2060,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,6,2060,0.7110,0.0000,-0.7110
+Thailand,Pumped Hydro,Dry,11,2060,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,13,2060,0.1507,0.0000,-0.1507
+Thailand,Pumped Hydro,Dry,14,2060,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Dry,16,2060,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,17,2060,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,18,2060,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,19,2060,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,20,2060,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,21,2060,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,22,2060,0.0000,0.6926,0.6926
+Thailand,Pumped Hydro,Dry,24,2060,0.8658,0.0000,-0.8658
+Thailand,Pumped Hydro,Wet,1,2060,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,2,2060,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,3,2060,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,4,2060,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,5,2060,0.5881,0.0000,-0.5881
+Thailand,Pumped Hydro,Wet,7,2060,0.3484,0.0000,-0.3484
+Thailand,Pumped Hydro,Wet,11,2060,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,12,2060,0.6249,0.0000,-0.6249
+Thailand,Pumped Hydro,Wet,14,2060,0.3132,0.0000,-0.3132
+Thailand,Pumped Hydro,Wet,15,2060,0.0000,0.2687,0.2687
+Thailand,Pumped Hydro,Wet,16,2060,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,17,2060,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,18,2060,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,19,2060,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,20,2060,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,21,2060,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,22,2060,0.0000,0.4999,0.4999
+Thailand,Pumped Hydro,Wet,23,2060,0.0000,0.2311,0.2311
+Thailand,Pumped Hydro,Wet,24,2060,0.0041,0.0000,-0.0041
+Vietnam,Lithium Ion Batteries,Dry,2,2025,4.1796,3.9915,-0.1881
+Vietnam,Lithium Ion Batteries,Dry,4,2025,4.3452,3.8334,-0.5119
+Vietnam,Lithium Ion Batteries,Dry,5,2025,0.0000,0.3163,0.3163
+Vietnam,Lithium Ion Batteries,Dry,9,2025,8.3592,0.0000,-8.3592
+Vietnam,Lithium Ion Batteries,Dry,11,2025,0.0000,7.9831,7.9831
+Vietnam,Lithium Ion Batteries,Dry,13,2025,8.3592,0.0000,-8.3592
+Vietnam,Lithium Ion Batteries,Dry,14,2025,8.3592,0.0000,-8.3592
+Vietnam,Lithium Ion Batteries,Dry,16,2025,0.0000,1.5782,1.5782
+Vietnam,Lithium Ion Batteries,Dry,17,2025,1.6526,0.0000,-1.6526
+Vietnam,Lithium Ion Batteries,Dry,18,2025,0.0000,1.9503,1.9503
+Vietnam,Lithium Ion Batteries,Dry,19,2025,0.0000,4.4525,4.4525
+Vietnam,Lithium Ion Batteries,Dry,20,2025,0.0000,4.2266,4.2266
+Vietnam,Lithium Ion Batteries,Dry,21,2025,0.0000,0.6316,0.6316
+Vietnam,Lithium Ion Batteries,Dry,22,2025,0.0000,2.8640,2.8640
+Vietnam,Lithium Ion Batteries,Dry,23,2025,0.0000,1.8412,1.8412
+Vietnam,Lithium Ion Batteries,Wet,4,2025,0.0197,0.0000,-0.0197
+Vietnam,Lithium Ion Batteries,Wet,5,2025,0.0000,0.0188,0.0188
+Vietnam,Lithium Ion Batteries,Wet,8,2025,0.8991,0.0000,-0.8991
+Vietnam,Lithium Ion Batteries,Wet,10,2025,5.8133,0.0000,-5.8133
+Vietnam,Lithium Ion Batteries,Wet,11,2025,4.9738,0.0000,-4.9738
+Vietnam,Lithium Ion Batteries,Wet,15,2025,0.2969,0.0000,-0.2969
+Vietnam,Lithium Ion Batteries,Wet,17,2025,0.0000,1.2806,1.2806
+Vietnam,Lithium Ion Batteries,Wet,18,2025,0.0000,0.5400,0.5400
+Vietnam,Lithium Ion Batteries,Wet,19,2025,0.0000,1.5951,1.5951
+Vietnam,Lithium Ion Batteries,Wet,20,2025,0.0000,1.2276,1.2276
+Vietnam,Lithium Ion Batteries,Wet,21,2025,0.0000,1.3343,1.3343
+Vietnam,Lithium Ion Batteries,Wet,22,2025,0.0000,3.2716,3.2716
+Vietnam,Lithium Ion Batteries,Wet,23,2025,0.0000,0.2776,0.2776
+Vietnam,Lithium Ion Batteries,Wet,24,2025,0.0000,1.9171,1.9171
+Vietnam,Lithium Ion Batteries,Dry,4,2030,2.7347,0.0000,-2.7347
+Vietnam,Lithium Ion Batteries,Dry,8,2030,2.5144,0.0000,-2.5144
+Vietnam,Lithium Ion Batteries,Dry,9,2030,7.7094,0.0000,-7.7094
+Vietnam,Lithium Ion Batteries,Dry,14,2030,12.9585,0.0000,-12.9585
+Vietnam,Lithium Ion Batteries,Dry,18,2030,0.0000,9.6385,9.6385
+Vietnam,Lithium Ion Batteries,Dry,19,2030,0.0000,2.5706,2.5706
+Vietnam,Lithium Ion Batteries,Dry,21,2030,0.0000,12.4402,12.4402
+Vietnam,Lithium Ion Batteries,Dry,22,2030,0.0000,0.2311,0.2311
+Vietnam,Lithium Ion Batteries,Wet,9,2030,6.7138,0.0000,-6.7138
+Vietnam,Lithium Ion Batteries,Wet,12,2030,8.3846,0.0000,-8.3846
+Vietnam,Lithium Ion Batteries,Wet,14,2030,3.6059,0.0000,-3.6059
+Vietnam,Lithium Ion Batteries,Wet,20,2030,4.0787,5.0625,0.9839
+Vietnam,Lithium Ion Batteries,Wet,21,2030,5.2735,3.9155,-1.3580
+Vietnam,Lithium Ion Batteries,Wet,22,2030,0.0000,8.9781,8.9781
+Vietnam,Lithium Ion Batteries,Wet,23,2030,0.0000,8.9781,8.9781
+Vietnam,Lithium Ion Batteries,Wet,24,2030,4.6761,4.4890,-0.1870
+Vietnam,Lithium Ion Batteries,Dry,2,2035,6.0994,0.0000,-6.0994
+Vietnam,Lithium Ion Batteries,Dry,3,2035,11.4392,8.4041,-3.0351
+Vietnam,Lithium Ion Batteries,Dry,5,2035,5.7046,13.9094,8.2048
+Vietnam,Lithium Ion Batteries,Dry,9,2035,13.9427,0.0000,-13.9427
+Vietnam,Lithium Ion Batteries,Dry,12,2035,0.0000,13.3850,13.3850
+Vietnam,Lithium Ion Batteries,Dry,13,2035,17.3089,0.0000,-17.3089
+Vietnam,Lithium Ion Batteries,Dry,15,2035,0.0000,6.4150,6.4150
+Vietnam,Lithium Ion Batteries,Dry,18,2035,0.0000,0.0419,0.0419
+Vietnam,Lithium Ion Batteries,Dry,19,2035,0.0000,2.6057,2.6057
+Vietnam,Lithium Ion Batteries,Dry,20,2035,0.0000,5.2831,5.2831
+Vietnam,Lithium Ion Batteries,Dry,23,2035,0.0000,2.2709,2.2709
+Vietnam,Lithium Ion Batteries,Wet,8,2035,0.6795,0.0000,-0.6795
+Vietnam,Lithium Ion Batteries,Wet,11,2035,6.8116,0.0000,-6.8116
+Vietnam,Lithium Ion Batteries,Wet,12,2035,6.8197,0.0000,-6.8197
+Vietnam,Lithium Ion Batteries,Wet,17,2035,2.8604,0.0000,-2.8604
+Vietnam,Lithium Ion Batteries,Wet,18,2035,0.0000,3.8668,3.8668
+Vietnam,Lithium Ion Batteries,Wet,19,2035,0.0000,0.4768,0.4768
+Vietnam,Lithium Ion Batteries,Wet,20,2035,0.0000,4.5504,4.5504
+Vietnam,Lithium Ion Batteries,Wet,21,2035,0.0000,0.1474,0.1474
+Vietnam,Lithium Ion Batteries,Wet,22,2035,0.0000,4.0922,4.0922
+Vietnam,Lithium Ion Batteries,Wet,23,2035,0.0000,3.3508,3.3508
+Vietnam,Lithium Ion Batteries,Dry,1,2040,1.8900,0.0000,-1.8900
+Vietnam,Lithium Ion Batteries,Dry,2,2040,2.2488,0.0000,-2.2488
+Vietnam,Lithium Ion Batteries,Dry,3,2040,2.4303,0.0000,-2.4303
+Vietnam,Lithium Ion Batteries,Dry,4,2040,15.8800,14.9644,-0.9156
+Vietnam,Lithium Ion Batteries,Dry,5,2040,0.0000,6.5868,6.5868
+Vietnam,Lithium Ion Batteries,Dry,9,2040,18.1410,12.7939,-5.3471
+Vietnam,Lithium Ion Batteries,Dry,10,2040,16.1387,0.0000,-16.1387
+Vietnam,Lithium Ion Batteries,Dry,11,2040,8.4283,22.1180,13.6897
+Vietnam,Lithium Ion Batteries,Dry,12,2040,6.6366,0.0000,-6.6366
+Vietnam,Lithium Ion Batteries,Dry,13,2040,31.4679,0.0000,-31.4679
+Vietnam,Lithium Ion Batteries,Dry,15,2040,5.3471,0.0000,-5.3471
+Vietnam,Lithium Ion Batteries,Dry,16,2040,13.1429,0.0000,-13.1429
+Vietnam,Lithium Ion Batteries,Dry,18,2040,0.0000,13.7406,13.7406
+Vietnam,Lithium Ion Batteries,Dry,19,2040,0.0000,14.3048,14.3048
+Vietnam,Lithium Ion Batteries,Dry,20,2040,0.0000,12.9430,12.9430
+Vietnam,Lithium Ion Batteries,Dry,21,2040,0.0000,9.3755,9.3755
+Vietnam,Lithium Ion Batteries,Dry,22,2040,0.0000,2.0947,2.0947
+Vietnam,Lithium Ion Batteries,Dry,23,2040,0.0000,0.4321,0.4321
+Vietnam,Lithium Ion Batteries,Dry,24,2040,0.0000,7.5278,7.5278
+Vietnam,Lithium Ion Batteries,Wet,8,2040,2.1526,0.0000,-2.1526
+Vietnam,Lithium Ion Batteries,Wet,9,2040,20.4772,2.1438,-18.3333
+Vietnam,Lithium Ion Batteries,Wet,10,2040,7.1631,14.9253,7.7622
+Vietnam,Lithium Ion Batteries,Wet,11,2040,17.9019,0.0000,-17.9019
+Vietnam,Lithium Ion Batteries,Wet,12,2040,11.6473,0.0000,-11.6473
+Vietnam,Lithium Ion Batteries,Wet,14,2040,3.8590,0.0000,-3.8590
+Vietnam,Lithium Ion Batteries,Wet,15,2040,11.3552,10.9010,-0.4542
+Vietnam,Lithium Ion Batteries,Wet,18,2040,9.8710,12.3258,2.4548
+Vietnam,Lithium Ion Batteries,Wet,19,2040,5.5684,16.4562,10.8878
+Vietnam,Lithium Ion Batteries,Wet,20,2040,9.0521,13.1119,4.0598
+Vietnam,Lithium Ion Batteries,Wet,21,2040,0.0000,10.4638,10.4638
+Vietnam,Lithium Ion Batteries,Wet,22,2040,0.0000,3.4699,3.4699
+Vietnam,Lithium Ion Batteries,Wet,23,2040,0.0000,2.5155,2.5155
+Vietnam,Lithium Ion Batteries,Wet,24,2040,6.7861,15.2872,8.5011
+Vietnam,Lithium Ion Batteries,Dry,9,2045,24.7772,23.2894,-1.4878
+Vietnam,Lithium Ion Batteries,Dry,10,2045,1.2631,0.0000,-1.2631
+Vietnam,Lithium Ion Batteries,Dry,11,2045,31.1007,0.0000,-31.1007
+Vietnam,Lithium Ion Batteries,Dry,12,2045,1.2631,0.0000,-1.2631
+Vietnam,Lithium Ion Batteries,Dry,13,2045,39.0019,9.6337,-29.3682
+Vietnam,Lithium Ion Batteries,Dry,14,2045,1.2631,0.0000,-1.2631
+Vietnam,Lithium Ion Batteries,Dry,15,2045,35.5305,12.9662,-22.5643
+Vietnam,Lithium Ion Batteries,Dry,16,2045,11.6758,0.0000,-11.6758
+Vietnam,Lithium Ion Batteries,Dry,18,2045,0.0000,21.9152,21.9152
+Vietnam,Lithium Ion Batteries,Dry,19,2045,0.0000,19.0267,19.0267
+Vietnam,Lithium Ion Batteries,Dry,20,2045,0.0000,5.4244,5.4244
+Vietnam,Lithium Ion Batteries,Dry,21,2045,0.0000,9.6668,9.6668
+Vietnam,Lithium Ion Batteries,Dry,22,2045,0.0000,15.4893,15.4893
+Vietnam,Lithium Ion Batteries,Dry,23,2045,0.0000,12.3013,12.3013
+Vietnam,Lithium Ion Batteries,Dry,24,2045,0.0000,10.3274,10.3274
+Vietnam,Lithium Ion Batteries,Wet,8,2045,8.9270,0.0000,-8.9270
+Vietnam,Lithium Ion Batteries,Wet,9,2045,13.2315,21.2721,8.0407
+Vietnam,Lithium Ion Batteries,Wet,10,2045,11.3744,0.0000,-11.3744
+Vietnam,Lithium Ion Batteries,Wet,11,2045,27.2448,7.8193,-19.4255
+Vietnam,Lithium Ion Batteries,Wet,12,2045,21.0962,0.0000,-21.0962
+Vietnam,Lithium Ion Batteries,Wet,13,2045,27.2997,7.7666,-19.5331
+Vietnam,Lithium Ion Batteries,Wet,15,2045,0.0000,15.1041,15.1041
+Vietnam,Lithium Ion Batteries,Wet,16,2045,25.5617,9.4351,-16.1266
+Vietnam,Lithium Ion Batteries,Wet,17,2045,17.6950,16.9872,-0.7078
+Vietnam,Lithium Ion Batteries,Wet,18,2045,0.0000,6.3640,6.3640
+Vietnam,Lithium Ion Batteries,Wet,19,2045,12.8613,21.6275,8.7662
+Vietnam,Lithium Ion Batteries,Wet,20,2045,13.2525,21.2519,7.9994
+Vietnam,Lithium Ion Batteries,Wet,21,2045,0.0000,8.2220,8.2220
+Vietnam,Lithium Ion Batteries,Wet,22,2045,9.2740,25.0713,15.7974
+Vietnam,Lithium Ion Batteries,Wet,23,2045,9.8990,24.4713,14.5723
+Vietnam,Lithium Ion Batteries,Wet,24,2045,0.0000,4.4159,4.4159
+Vietnam,Lithium Ion Batteries,Dry,5,2050,0.0000,-0.0000,-0.0000
+Vietnam,Lithium Ion Batteries,Dry,8,2050,41.7284,33.2995,-8.4288
+Vietnam,Lithium Ion Batteries,Dry,9,2050,48.7537,26.5552,-22.1986
+Vietnam,Lithium Ion Batteries,Dry,10,2050,28.1730,0.0000,-28.1730
+Vietnam,Lithium Ion Batteries,Dry,11,2050,32.5713,0.0000,-32.5713
+Vietnam,Lithium Ion Batteries,Dry,12,2050,32.7578,0.0000,-32.7578
+Vietnam,Lithium Ion Batteries,Dry,13,2050,30.2925,0.0000,-30.2925
+Vietnam,Lithium Ion Batteries,Dry,14,2050,11.1687,62.6368,51.4681
+Vietnam,Lithium Ion Batteries,Dry,15,2050,41.6896,0.0000,-41.6896
+Vietnam,Lithium Ion Batteries,Dry,16,2050,13.2911,0.0000,-13.2911
+Vietnam,Lithium Ion Batteries,Dry,18,2050,0.0000,11.0729,11.0729
+Vietnam,Lithium Ion Batteries,Dry,19,2050,0.0000,29.2771,29.2771
+Vietnam,Lithium Ion Batteries,Dry,20,2050,0.0000,27.1525,27.1525
+Vietnam,Lithium Ion Batteries,Dry,21,2050,0.0000,26.4930,26.4930
+Vietnam,Lithium Ion Batteries,Dry,22,2050,0.0000,23.6969,23.6969
+Vietnam,Lithium Ion Batteries,Dry,23,2050,0.0000,10.3209,10.3209
+Vietnam,Lithium Ion Batteries,Dry,24,2050,0.0000,18.7041,18.7041
+Vietnam,Lithium Ion Batteries,Wet,8,2050,32.7222,21.5295,-11.1927
+Vietnam,Lithium Ion Batteries,Wet,9,2050,16.7901,0.0000,-16.7901
+Vietnam,Lithium Ion Batteries,Wet,10,2050,16.4191,0.0000,-16.4191
+Vietnam,Lithium Ion Batteries,Wet,11,2050,34.2184,0.0000,-34.2184
+Vietnam,Lithium Ion Batteries,Wet,12,2050,38.0995,16.3673,-21.7322
+Vietnam,Lithium Ion Batteries,Wet,13,2050,12.4664,40.9752,28.5088
+Vietnam,Lithium Ion Batteries,Wet,14,2050,15.9524,0.0000,-15.9524
+Vietnam,Lithium Ion Batteries,Wet,15,2050,40.4683,14.0933,-26.3751
+Vietnam,Lithium Ion Batteries,Wet,16,2050,27.5744,26.4714,-1.1030
+Vietnam,Lithium Ion Batteries,Wet,18,2050,0.0000,8.6799,8.6799
+Vietnam,Lithium Ion Batteries,Wet,19,2050,0.0000,13.9599,13.9599
+Vietnam,Lithium Ion Batteries,Wet,20,2050,0.0000,12.6111,12.6111
+Vietnam,Lithium Ion Batteries,Wet,21,2050,0.0000,12.8815,12.8815
+Vietnam,Lithium Ion Batteries,Wet,22,2050,21.0470,32.7377,11.6907
+Vietnam,Lithium Ion Batteries,Wet,23,2050,8.3217,44.9540,36.6323
+Vietnam,Lithium Ion Batteries,Wet,24,2050,0.0000,8.2556,8.2556
+Vietnam,Lithium Ion Batteries,Dry,7,2055,0.0000,0.0000,-0.0000
+Vietnam,Lithium Ion Batteries,Dry,9,2055,46.3731,28.8406,-17.5325
+Vietnam,Lithium Ion Batteries,Dry,10,2055,17.1442,0.0000,-17.1442
+Vietnam,Lithium Ion Batteries,Dry,11,2055,30.1632,0.0000,-30.1632
+Vietnam,Lithium Ion Batteries,Dry,12,2055,42.5641,32.4972,-10.0669
+Vietnam,Lithium Ion Batteries,Dry,13,2055,27.8844,0.0000,-27.8844
+Vietnam,Lithium Ion Batteries,Dry,14,2055,50.2648,25.1045,-25.1603
+Vietnam,Lithium Ion Batteries,Dry,15,2055,18.9355,0.0000,-18.9355
+Vietnam,Lithium Ion Batteries,Dry,16,2055,42.9805,32.0975,-10.8829
+Vietnam,Lithium Ion Batteries,Dry,18,2055,0.0000,17.8682,17.8682
+Vietnam,Lithium Ion Batteries,Dry,19,2055,0.0000,30.7765,30.7765
+Vietnam,Lithium Ion Batteries,Dry,20,2055,0.0000,22.7709,22.7709
+Vietnam,Lithium Ion Batteries,Dry,21,2055,0.0000,27.5389,27.5389
+Vietnam,Lithium Ion Batteries,Dry,22,2055,0.0000,24.2873,24.2873
+Vietnam,Lithium Ion Batteries,Dry,23,2055,0.0000,4.9944,4.9944
+Vietnam,Lithium Ion Batteries,Dry,24,2055,0.0000,18.4813,18.4813
+Vietnam,Lithium Ion Batteries,Wet,9,2055,12.5758,0.0000,-12.5758
+Vietnam,Lithium Ion Batteries,Wet,10,2055,14.6811,0.0000,-14.6811
+Vietnam,Lithium Ion Batteries,Wet,11,2055,17.7969,0.0000,-17.7969
+Vietnam,Lithium Ion Batteries,Wet,12,2055,23.1375,0.0000,-23.1375
+Vietnam,Lithium Ion Batteries,Wet,13,2055,17.9383,0.0000,-17.9383
+Vietnam,Lithium Ion Batteries,Wet,14,2055,14.2145,0.0000,-14.2145
+Vietnam,Lithium Ion Batteries,Wet,15,2055,9.9535,0.0000,-9.9535
+Vietnam,Lithium Ion Batteries,Wet,18,2055,0.0000,12.7489,12.7489
+Vietnam,Lithium Ion Batteries,Wet,19,2055,0.0000,17.7269,17.7269
+Vietnam,Lithium Ion Batteries,Wet,20,2055,0.0000,16.6432,16.6432
+Vietnam,Lithium Ion Batteries,Wet,21,2055,0.0000,16.9577,16.9577
+Vietnam,Lithium Ion Batteries,Wet,22,2055,0.0000,16.3893,16.3893
+Vietnam,Lithium Ion Batteries,Wet,23,2055,0.0000,13.8414,13.8414
+Vietnam,Lithium Ion Batteries,Wet,24,2055,0.0000,11.5783,11.5783
+Vietnam,Lithium Ion Batteries,Dry,9,2060,15.1244,0.0000,-15.1244
+Vietnam,Lithium Ion Batteries,Dry,10,2060,23.3567,0.0000,-23.3567
+Vietnam,Lithium Ion Batteries,Dry,11,2060,51.5887,23.8336,-27.7551
+Vietnam,Lithium Ion Batteries,Dry,12,2060,37.3435,0.0000,-37.3435
+Vietnam,Lithium Ion Batteries,Dry,13,2060,25.4762,0.0000,-25.4762
+Vietnam,Lithium Ion Batteries,Dry,14,2060,41.3331,33.6790,-7.6541
+Vietnam,Lithium Ion Batteries,Dry,15,2060,45.8603,29.3329,-16.5274
+Vietnam,Lithium Ion Batteries,Dry,16,2060,3.2120,0.0000,-3.2120
+Vietnam,Lithium Ion Batteries,Dry,17,2060,0.0000,3.8347,3.8347
+Vietnam,Lithium Ion Batteries,Dry,19,2060,0.0000,39.8762,39.8762
+Vietnam,Lithium Ion Batteries,Dry,20,2060,0.0000,34.1593,34.1593
+Vietnam,Lithium Ion Batteries,Dry,21,2060,0.0000,36.2464,36.2464
+Vietnam,Lithium Ion Batteries,Dry,22,2060,0.0000,32.6009,32.6009
+Vietnam,Lithium Ion Batteries,Wet,9,2060,7.7688,0.0000,-7.7688
+Vietnam,Lithium Ion Batteries,Wet,10,2060,16.2238,0.0000,-16.2238
+Vietnam,Lithium Ion Batteries,Wet,11,2060,19.3395,0.0000,-19.3395
+Vietnam,Lithium Ion Batteries,Wet,12,2060,21.5370,0.0000,-21.5370
+Vietnam,Lithium Ion Batteries,Wet,13,2060,19.4810,0.0000,-19.4810
+Vietnam,Lithium Ion Batteries,Wet,14,2060,15.7571,0.0000,-15.7571
+Vietnam,Lithium Ion Batteries,Wet,15,2060,10.1904,0.0000,-10.1904
+Vietnam,Lithium Ion Batteries,Wet,18,2060,0.0000,13.1018,13.1018
+Vietnam,Lithium Ion Batteries,Wet,19,2060,0.0000,18.1791,18.1791
+Vietnam,Lithium Ion Batteries,Wet,20,2060,0.0000,16.9640,16.9640
+Vietnam,Lithium Ion Batteries,Wet,21,2060,0.0000,17.3167,17.3167
+Vietnam,Lithium Ion Batteries,Wet,22,2060,0.0000,15.7641,15.7641
+Vietnam,Lithium Ion Batteries,Wet,23,2060,0.0000,13.2746,13.2746
+Vietnam,Lithium Ion Batteries,Wet,24,2060,0.0000,11.2855,11.2855
+Vietnam,Pumped Hydro,Dry,1,2025,0.0000,0.4126,0.4126
+Vietnam,Pumped Hydro,Dry,2,2025,0.0000,0.3800,0.3800
+Vietnam,Pumped Hydro,Dry,3,2025,0.0000,0.0802,0.0802
+Vietnam,Pumped Hydro,Dry,4,2025,0.0000,3.3350,3.3350
+Vietnam,Pumped Hydro,Dry,6,2025,0.0000,1.0494,1.0494
+Vietnam,Pumped Hydro,Dry,7,2025,1.0293,0.0000,-1.0293
+Vietnam,Pumped Hydro,Dry,9,2025,0.0552,0.0000,-0.0552
+Vietnam,Pumped Hydro,Dry,13,2025,4.1687,0.0000,-4.1687
+Vietnam,Pumped Hydro,Dry,14,2025,3.0927,0.0000,-3.0927
+Vietnam,Pumped Hydro,Dry,15,2025,4.1687,0.0000,-4.1687
+Vietnam,Pumped Hydro,Dry,16,2025,4.1687,0.0000,-4.1687
+Vietnam,Pumped Hydro,Dry,18,2025,0.0000,3.3350,3.3350
+Vietnam,Pumped Hydro,Dry,19,2025,0.0000,0.6119,0.6119
+Vietnam,Pumped Hydro,Dry,21,2025,0.0000,3.3350,3.3350
+Vietnam,Pumped Hydro,Dry,24,2025,0.0000,0.8952,0.8952
+Vietnam,Pumped Hydro,Wet,7,2025,0.4723,0.3779,-0.0945
+Vietnam,Pumped Hydro,Wet,9,2025,2.5754,0.0000,-2.5754
+Vietnam,Pumped Hydro,Wet,12,2025,3.0086,0.0000,-3.0086
+Vietnam,Pumped Hydro,Wet,13,2025,3.0086,0.0000,-3.0086
+Vietnam,Pumped Hydro,Wet,14,2025,3.0086,0.0000,-3.0086
+Vietnam,Pumped Hydro,Wet,15,2025,3.0086,0.0000,-3.0086
+Vietnam,Pumped Hydro,Wet,16,2025,0.5428,0.0000,-0.5428
+Vietnam,Pumped Hydro,Wet,18,2025,0.0000,2.4069,2.4069
+Vietnam,Pumped Hydro,Wet,19,2025,0.0000,2.4069,2.4069
+Vietnam,Pumped Hydro,Wet,20,2025,0.0000,2.4069,2.4069
+Vietnam,Pumped Hydro,Wet,21,2025,0.0000,2.4069,2.4069
+Vietnam,Pumped Hydro,Wet,23,2025,0.0000,2.4069,2.4069
+Vietnam,Pumped Hydro,Dry,5,2030,0.0000,4.5792,4.5792
+Vietnam,Pumped Hydro,Dry,7,2030,3.1538,0.0000,-3.1538
+Vietnam,Pumped Hydro,Dry,9,2030,5.7240,0.0000,-5.7240
+Vietnam,Pumped Hydro,Dry,12,2030,0.0000,2.0607,2.0607
+Vietnam,Pumped Hydro,Dry,14,2030,4.3834,0.0000,-4.3834
+Vietnam,Pumped Hydro,Dry,17,2030,2.8355,0.0000,-2.8355
+Vietnam,Pumped Hydro,Dry,18,2030,0.0000,4.5792,4.5792
+Vietnam,Pumped Hydro,Dry,20,2030,0.0000,1.6799,1.6799
+Vietnam,Pumped Hydro,Wet,1,2030,0.4552,0.0000,-0.4552
+Vietnam,Pumped Hydro,Wet,2,2030,0.7318,0.0000,-0.7318
+Vietnam,Pumped Hydro,Wet,11,2030,4.1310,0.0000,-4.1310
+Vietnam,Pumped Hydro,Wet,12,2030,4.1310,0.0000,-4.1310
+Vietnam,Pumped Hydro,Wet,13,2030,4.1310,0.0000,-4.1310
+Vietnam,Pumped Hydro,Wet,17,2030,0.9954,0.0000,-0.9954
+Vietnam,Pumped Hydro,Wet,18,2030,0.0000,1.0023,1.0023
+Vietnam,Pumped Hydro,Wet,19,2030,0.0000,2.2242,2.2242
+Vietnam,Pumped Hydro,Wet,20,2030,0.9389,2.5537,1.6149
+Vietnam,Pumped Hydro,Wet,21,2030,0.0000,3.3048,3.3048
+Vietnam,Pumped Hydro,Wet,22,2030,0.0000,3.3048,3.3048
+Vietnam,Pumped Hydro,Wet,23,2030,4.1310,0.0000,-4.1310
+Vietnam,Pumped Hydro,Wet,24,2030,0.0000,3.3048,3.3048
+Vietnam,Pumped Hydro,Dry,1,2035,0.0000,0.4669,0.4669
+Vietnam,Pumped Hydro,Dry,2,2035,0.0000,6.2876,6.2876
+Vietnam,Pumped Hydro,Dry,3,2035,1.7807,4.8630,3.0823
+Vietnam,Pumped Hydro,Dry,4,2035,0.0000,0.0399,0.0399
+Vietnam,Pumped Hydro,Dry,5,2035,7.8595,0.0000,-7.8595
+Vietnam,Pumped Hydro,Dry,6,2035,0.0000,1.2710,1.2710
+Vietnam,Pumped Hydro,Dry,7,2035,0.6545,0.0000,-0.6545
+Vietnam,Pumped Hydro,Dry,8,2035,6.6258,0.0000,-6.6258
+Vietnam,Pumped Hydro,Dry,10,2035,7.8595,0.0000,-7.8595
+Vietnam,Pumped Hydro,Dry,12,2035,7.8595,0.0000,-7.8595
+Vietnam,Pumped Hydro,Dry,16,2035,7.8595,0.0000,-7.8595
+Vietnam,Pumped Hydro,Dry,18,2035,0.0000,6.2876,6.2876
+Vietnam,Pumped Hydro,Dry,19,2035,0.0000,3.7353,3.7353
+Vietnam,Pumped Hydro,Dry,21,2035,0.0000,4.9547,4.9547
+Vietnam,Pumped Hydro,Dry,22,2035,0.0000,3.5624,3.5624
+Vietnam,Pumped Hydro,Dry,24,2035,0.0000,1.0763,1.0763
+Vietnam,Pumped Hydro,Wet,11,2035,5.6722,0.0000,-5.6722
+Vietnam,Pumped Hydro,Wet,12,2035,5.6722,0.0000,-5.6722
+Vietnam,Pumped Hydro,Wet,13,2035,5.6722,0.0000,-5.6722
+Vietnam,Pumped Hydro,Wet,17,2035,1.5795,3.2742,1.6947
+Vietnam,Pumped Hydro,Wet,19,2035,0.0000,4.5377,4.5377
+Vietnam,Pumped Hydro,Wet,21,2035,0.0000,4.5377,4.5377
+Vietnam,Pumped Hydro,Wet,24,2035,0.0000,2.3817,2.3817
+Vietnam,Pumped Hydro,Dry,1,2040,0.0000,8.6333,8.6333
+Vietnam,Pumped Hydro,Dry,2,2040,0.0000,8.6333,8.6333
+Vietnam,Pumped Hydro,Dry,3,2040,0.0000,8.6333,8.6333
+Vietnam,Pumped Hydro,Dry,4,2040,0.0000,7.1093,7.1093
+Vietnam,Pumped Hydro,Dry,6,2040,0.0000,7.7784,7.7784
+Vietnam,Pumped Hydro,Dry,7,2040,0.0000,1.3258,1.3258
+Vietnam,Pumped Hydro,Dry,8,2040,8.4587,0.0000,-8.4587
+Vietnam,Pumped Hydro,Dry,9,2040,10.7917,0.0000,-10.7917
+Vietnam,Pumped Hydro,Dry,11,2040,10.7917,0.0000,-10.7917
+Vietnam,Pumped Hydro,Dry,12,2040,9.5022,0.0000,-9.5022
+Vietnam,Pumped Hydro,Dry,13,2040,5.9887,0.0000,-5.9887
+Vietnam,Pumped Hydro,Dry,14,2040,10.7917,0.0000,-10.7917
+Vietnam,Pumped Hydro,Dry,15,2040,10.7917,0.0000,-10.7917
+Vietnam,Pumped Hydro,Dry,16,2040,10.7917,0.0000,-10.7917
+Vietnam,Pumped Hydro,Dry,21,2040,0.0000,3.1448,3.1448
+Vietnam,Pumped Hydro,Dry,22,2040,0.0000,8.6333,8.6333
+Vietnam,Pumped Hydro,Dry,23,2040,0.0000,8.6333,8.6333
+Vietnam,Pumped Hydro,Wet,9,2040,3.8942,3.1153,-0.7788
+Vietnam,Pumped Hydro,Wet,10,2040,7.7883,0.0000,-7.7883
+Vietnam,Pumped Hydro,Wet,11,2040,7.7883,0.0000,-7.7883
+Vietnam,Pumped Hydro,Wet,13,2040,7.7883,0.0000,-7.7883
+Vietnam,Pumped Hydro,Wet,14,2040,7.7883,0.0000,-7.7883
+Vietnam,Pumped Hydro,Wet,15,2040,2.9582,3.8641,0.9059
+Vietnam,Pumped Hydro,Wet,16,2040,2.2857,0.0000,-2.2857
+Vietnam,Pumped Hydro,Wet,17,2040,0.0000,0.6196,0.6196
+Vietnam,Pumped Hydro,Wet,18,2040,0.1803,6.0864,5.9061
+Vietnam,Pumped Hydro,Wet,20,2040,0.0000,6.2307,6.2307
+Vietnam,Pumped Hydro,Wet,22,2040,0.0000,6.2307,6.2307
+Vietnam,Pumped Hydro,Wet,23,2040,0.0000,6.2307,6.2307
+Vietnam,Pumped Hydro,Wet,24,2040,4.0183,3.0160,-1.0023
+Vietnam,Pumped Hydro,Dry,1,2045,0.0000,11.8542,11.8542
+Vietnam,Pumped Hydro,Dry,2,2045,0.0000,11.8542,11.8542
+Vietnam,Pumped Hydro,Dry,3,2045,0.0000,11.8542,11.8542
+Vietnam,Pumped Hydro,Dry,4,2045,0.0000,11.8542,11.8542
+Vietnam,Pumped Hydro,Dry,5,2045,0.0000,11.8542,11.8542
+Vietnam,Pumped Hydro,Dry,6,2045,0.0000,11.8542,11.8542
+Vietnam,Pumped Hydro,Dry,7,2045,0.0000,5.1448,5.1448
+Vietnam,Pumped Hydro,Dry,8,2045,10.4126,0.0000,-10.4126
+Vietnam,Pumped Hydro,Dry,9,2045,14.8178,0.0000,-14.8178
+Vietnam,Pumped Hydro,Dry,10,2045,14.8178,0.0000,-14.8178
+Vietnam,Pumped Hydro,Dry,11,2045,14.8178,0.0000,-14.8178
+Vietnam,Pumped Hydro,Dry,12,2045,14.8178,0.0000,-14.8178
+Vietnam,Pumped Hydro,Dry,13,2045,14.8178,0.0000,-14.8178
+Vietnam,Pumped Hydro,Dry,14,2045,14.8178,0.0000,-14.8178
+Vietnam,Pumped Hydro,Dry,15,2045,14.8178,0.0000,-14.8178
+Vietnam,Pumped Hydro,Dry,16,2045,4.4051,0.0000,-4.4051
+Vietnam,Pumped Hydro,Dry,20,2045,0.0000,11.8542,11.8542
+Vietnam,Pumped Hydro,Dry,21,2045,0.0000,7.0692,7.0692
+Vietnam,Pumped Hydro,Wet,9,2045,10.6940,0.0000,-10.6940
+Vietnam,Pumped Hydro,Wet,10,2045,10.6940,0.0000,-10.6940
+Vietnam,Pumped Hydro,Wet,11,2045,10.6940,0.0000,-10.6940
+Vietnam,Pumped Hydro,Wet,12,2045,10.6940,0.0000,-10.6940
+Vietnam,Pumped Hydro,Wet,13,2045,10.6940,0.0000,-10.6940
+Vietnam,Pumped Hydro,Wet,14,2045,10.6940,0.0000,-10.6940
+Vietnam,Pumped Hydro,Wet,16,2045,1.5898,7.2833,5.6935
+Vietnam,Pumped Hydro,Wet,17,2045,0.0000,3.3404,3.3404
+Vietnam,Pumped Hydro,Wet,18,2045,0.0000,7.3987,7.3987
+Vietnam,Pumped Hydro,Wet,19,2045,0.0000,8.5552,8.5552
+Vietnam,Pumped Hydro,Wet,20,2045,0.0000,8.5552,8.5552
+Vietnam,Pumped Hydro,Wet,21,2045,0.0000,8.5552,8.5552
+Vietnam,Pumped Hydro,Wet,24,2045,0.0000,8.5552,8.5552
+Vietnam,Pumped Hydro,Dry,1,2050,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,2,2050,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,3,2050,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,4,2050,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,5,2050,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,6,2050,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,7,2050,0.0000,5.9834,5.9834
+Vietnam,Pumped Hydro,Dry,8,2050,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,9,2050,18.0880,0.0000,-18.0880
+Vietnam,Pumped Hydro,Dry,10,2050,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,11,2050,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,12,2050,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,13,2050,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,14,2050,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,16,2050,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,17,2050,2.2579,0.0000,-2.2579
+Vietnam,Pumped Hydro,Dry,18,2050,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,23,2050,0.0000,10.7823,10.7823
+Vietnam,Pumped Hydro,Wet,9,2050,11.4853,2.5586,-8.9267
+Vietnam,Pumped Hydro,Wet,10,2050,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,12,2050,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,13,2050,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,14,2050,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,16,2050,12.5633,0.0000,-12.5633
+Vietnam,Pumped Hydro,Wet,17,2050,0.0000,4.8613,4.8613
+Vietnam,Pumped Hydro,Wet,18,2050,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,19,2050,0.0000,11.3301,11.3301
+Vietnam,Pumped Hydro,Wet,20,2050,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,21,2050,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,22,2050,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,23,2050,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,24,2050,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Dry,1,2055,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,2,2055,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,3,2055,0.0000,16.0779,16.0779
+Vietnam,Pumped Hydro,Dry,4,2055,0.0000,16.0610,16.0610
+Vietnam,Pumped Hydro,Dry,5,2055,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,6,2055,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,7,2055,0.0000,5.7399,5.7399
+Vietnam,Pumped Hydro,Dry,8,2055,19.1482,0.0000,-19.1482
+Vietnam,Pumped Hydro,Dry,9,2055,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,10,2055,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,11,2055,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,12,2055,1.1977,0.0000,-1.1977
+Vietnam,Pumped Hydro,Dry,13,2055,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,14,2055,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,15,2055,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,16,2055,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,18,2055,0.0000,11.4372,11.4372
+Vietnam,Pumped Hydro,Dry,23,2055,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Wet,8,2055,3.9037,0.0000,-3.9037
+Vietnam,Pumped Hydro,Wet,9,2055,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,10,2055,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,11,2055,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,12,2055,12.3166,0.0000,-12.3166
+Vietnam,Pumped Hydro,Wet,13,2055,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,14,2055,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,15,2055,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,16,2055,9.2512,0.0000,-9.2512
+Vietnam,Pumped Hydro,Wet,17,2055,0.0000,8.9609,8.9609
+Vietnam,Pumped Hydro,Wet,18,2055,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,19,2055,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,20,2055,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,21,2055,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,22,2055,0.0000,10.9305,10.9305
+Vietnam,Pumped Hydro,Wet,23,2055,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,24,2055,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Dry,1,2060,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,2,2060,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,3,2060,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,4,2060,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,5,2060,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,6,2060,0.0000,16.2767,16.2767
+Vietnam,Pumped Hydro,Dry,7,2060,0.0000,13.7138,13.7138
+Vietnam,Pumped Hydro,Dry,8,2060,14.8739,4.3776,-10.4963
+Vietnam,Pumped Hydro,Dry,9,2060,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,10,2060,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,11,2060,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,12,2060,10.9440,0.0000,-10.9440
+Vietnam,Pumped Hydro,Dry,13,2060,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,14,2060,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,15,2060,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,16,2060,20.3459,0.0000,-20.3459
+Vietnam,Pumped Hydro,Dry,18,2060,0.0000,12.3905,12.3905
+Vietnam,Pumped Hydro,Dry,20,2060,0.0000,2.9469,2.9469
+Vietnam,Pumped Hydro,Dry,23,2060,0.0000,2.8099,2.8099
+Vietnam,Pumped Hydro,Dry,24,2060,0.0000,1.2178,1.2178
+Vietnam,Pumped Hydro,Wet,8,2060,3.7328,0.0000,-3.7328
+Vietnam,Pumped Hydro,Wet,9,2060,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,10,2060,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,11,2060,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,12,2060,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,13,2060,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,14,2060,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,15,2060,14.6836,0.0000,-14.6836
+Vietnam,Pumped Hydro,Wet,16,2060,8.5990,0.0000,-8.5990
+Vietnam,Pumped Hydro,Wet,17,2060,0.0000,9.3401,9.3401
+Vietnam,Pumped Hydro,Wet,18,2060,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,19,2060,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,20,2060,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,21,2060,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,22,2060,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,23,2060,0.0000,11.7469,11.7469
+Vietnam,Pumped Hydro,Wet,24,2060,0.0000,11.7469,11.7469
+Vietnam,VRB Flow Batteries,Wet,22,2045,-0.0000,0.0000,0.0000

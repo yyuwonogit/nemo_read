@@ -1,0 +1,831 @@
+branch,branch_type,variable,unit
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Diesel,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar CSP,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar Floating,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Tidal,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wave,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Biogas,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Waste,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\CAES,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDEast,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSB,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYPE,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_MYKA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYKA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDJW,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDSA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDKA,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_IDEast,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYSR,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSR,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYSB,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYPE,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSB,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Engine_MYSR,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSB,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYSR,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Lifetime,Years
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Interest Rate,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Exogenous Capacity,Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Maximum Availability,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Minimum Utilization,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Capacity Credit,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Process Efficiency,Percent
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Variable OM Cost,U.S. Dollar/Megawatt-Hour
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Capital Cost,Thousand U.S. Dollar/Megawatt
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE,Transformation Process,Fixed OM Cost,Thousand U.S. Dollar/Megawatt
