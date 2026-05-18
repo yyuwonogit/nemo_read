@@ -97,6 +97,17 @@ class CanonicalInjector:
     EXPECT_AREA: str | None = None  # if set, run() refuses to start unless ActiveArea matches
     REQUIRE_EXPECT_AREA: bool = False  # if True, --expect-area is mandatory
 
+    # v0.7.0 — Timor Leste supplement CSV (§A.18).
+    # Path to a sibling CSV containing ONLY Timor Leste rows (same schema
+    # as the main canonical). Loaded and concatenated when
+    # --include-timor-leste is passed; ignored on --exclude-timor-leste.
+    # Default location: <main canonical dir>/timor_leste_supplement.csv.
+    # Subclass can override to a custom path. Per the §A.18 CI tripwire,
+    # this file MUST exist (or the subclass MUST set
+    # TIMOR_LESTE_SUPPLEMENT_NOT_APPLICABLE = True to opt out).
+    TIMOR_LESTE_SUPPLEMENT: Path | None = None
+    TIMOR_LESTE_SUPPLEMENT_NOT_APPLICABLE: bool = False
+
     # ---- sealed-method registry (runtime-enforced) ----
     _SEALED = frozenset({
         "_set_expression",
@@ -318,6 +329,26 @@ class CanonicalInjector:
                        help="Only push rows for these comma-separated AMS")
         p.add_argument("--filter-variable", default="",
                        help="Only push rows for this LEAP variable")
+        # v0.7.0 — mandatory Timor Leste decision (CLAUDE.md §A.18).
+        # One of these flags MUST be passed; injector refuses to start
+        # otherwise. Forces explicit opt-in/opt-out of the 11th ASEAN
+        # cohort member to prevent §A.11 1e12 Unlimited leakage.
+        tl_group = p.add_mutually_exclusive_group()
+        tl_group.add_argument(
+            "--include-timor-leste", action="store_true",
+            help="Include Timor Leste rows from "
+                 "`timor_leste_supplement.csv` alongside the main "
+                 "canonical. REQUIRED to inject without §A.11 1e12 "
+                 "Unlimited leakage on Timor Leste's LEAP defaults.")
+        tl_group.add_argument(
+            "--exclude-timor-leste", action="store_true",
+            help="Explicitly inject WITHOUT Timor Leste — main canonical "
+                 "only. Use this when you've verified Timor Leste data "
+                 "isn't needed for this run (e.g. ASEAN-10 study). "
+                 "WARNING: §A.11 1e12 trap still applies to unauthored "
+                 "Timor Leste regions in the LEAP area; this flag does "
+                 "NOT make them safe — it just says you intentionally "
+                 "chose not to push corrections.")
         self.extra_cli_args(p)
         return p
 
@@ -376,6 +407,22 @@ class CanonicalInjector:
                   f"for this sector (CLAUDE.md §A.9).", file=sys.stderr)
             return 1
 
+        # ---- v0.7.0 — Timor Leste decision (CLAUDE.md §A.18) ----
+        if not self.TIMOR_LESTE_SUPPLEMENT_NOT_APPLICABLE:
+            if not (args.include_timor_leste or args.exclude_timor_leste):
+                print(
+                    f"[{self.SECTOR_NAME}] REFUSED: must explicitly choose "
+                    f"Timor Leste inclusion (CLAUDE.md §A.18).\n"
+                    f"  Pass --include-timor-leste to push the supplement "
+                    f"file alongside the main canonical,\n"
+                    f"  OR --exclude-timor-leste to inject without Timor "
+                    f"Leste (main canonical only).\n"
+                    f"  Without one of these flags, the inject would "
+                    f"silently miss Timor Leste's authoring and leave "
+                    f"LEAP defaults (§A.11 1e12 Unlimited trap) in place.",
+                    file=sys.stderr)
+                return 8
+
         csv_path = Path(args.csv) if args.csv else self.DEFAULT_CSV
         if csv_path is None or not csv_path.exists():
             print(f"[{self.SECTOR_NAME}] ERROR: CSV not found: {csv_path}",
@@ -393,6 +440,37 @@ class CanonicalInjector:
 
         # ---- Load + filter ----
         rows = self.load_csv(csv_path)
+        # v0.7.0 — merge Timor Leste supplement if --include-timor-leste
+        if args.include_timor_leste and not self.TIMOR_LESTE_SUPPLEMENT_NOT_APPLICABLE:
+            tl_path = self.TIMOR_LESTE_SUPPLEMENT
+            if tl_path is None:
+                tl_path = csv_path.parent / "timor_leste_supplement.csv"
+            if not tl_path.exists():
+                print(f"[{self.SECTOR_NAME}] REFUSED: --include-timor-leste "
+                      f"passed but supplement not found at {tl_path}",
+                      file=sys.stderr)
+                return 9
+            tl_rows = self.load_csv(tl_path)
+            non_tl = [r for r in tl_rows if r.get("ams") != "Timor Leste"]
+            if non_tl:
+                print(f"[{self.SECTOR_NAME}] REFUSED: supplement {tl_path.name} "
+                      f"contains {len(non_tl)} non-Timor-Leste row(s). The "
+                      f"supplement must contain ONLY ams='Timor Leste' rows.",
+                      file=sys.stderr)
+                return 10
+            rows.extend(tl_rows)
+            print(f"[{self.SECTOR_NAME}] Merged {len(tl_rows)} Timor Leste "
+                  f"row(s) from {tl_path.name} (§A.18 include)")
+        elif args.exclude_timor_leste:
+            # Defensive: warn if main canonical accidentally has TL rows
+            tl_in_main = [r for r in rows if r.get("ams") == "Timor Leste"]
+            if tl_in_main:
+                print(f"[{self.SECTOR_NAME}] WARN: --exclude-timor-leste set "
+                      f"but main canonical has {len(tl_in_main)} Timor Leste "
+                      f"row(s). They will be SKIPPED. Move them to the "
+                      f"supplement file if intended.")
+                rows = [r for r in rows if r.get("ams") != "Timor Leste"]
+
         rows = self.apply_universal_filters(rows, args)
         rows = self.filter_rows(rows, args)
         if not rows:

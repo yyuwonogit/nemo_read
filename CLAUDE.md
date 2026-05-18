@@ -199,6 +199,72 @@ How to apply:
     writes a "finished" timestamp + summary to the JSON. The harness
     Bash background notifies on process exit.
 
+**A.18 — Every inject MUST explicitly choose Timor Leste inclusion or
+exclusion. Mandatory CLI flag at runtime + sibling supplement CSV per
+domain. Default = refuse to start.**
+
+Established 2026-05-18 after the aeo9_v0.45 Indonesia/Demand probe
+revealed that **all biodiesel production was being routed to Timor
+Leste** by the LP solver. Smoking gun:
+
+  > Branch: Transformation\Biodiesel Production
+  > Timor Leste  2025: 748.78  2030: 2,194.71  2050: 5,926.99  (Million GJ)
+  > Indonesia, Malaysia, Thailand: 0 from 2025 onward
+
+Root cause: every existing `build_canonical.py` defined
+`ALL_10_AMS = [Brunei, ..., Vietnam]` — Timor Leste was missing.
+Result: zero authoring rows for Timor Leste, which means LEAP's defaults
+(`Maximum Production = Unlimited`, `Production Cost ≈ 0`) survive the
+inject. Per §A.11, "Unlimited" exports as 1.0e+12 to NEMO, making
+Timor Leste an unlimited free-supply region. The LP correctly routes
+production there.
+
+Same bug existed in fossil (and any future sector) — anyone authoring
+the ASEAN-10 cohort silently misses the 11th region.
+
+How to apply — every sector ships its Timor Leste rows in a SEPARATE
+CSV; every inject must explicitly decide whether to push them:
+
+  **Repo layout:**
+    inject/<domain>/
+    ├── canonical_leap_inputs.csv          ← main, ASEAN-10 (no TL rows)
+    └── timor_leste_supplement.csv         ← TL rows ONLY (zeros + edits)
+
+  **Runtime (CanonicalInjector framework, v0.7.0):**
+    --include-timor-leste    Merge supplement rows into the inject.
+    --exclude-timor-leste    Push main canonical only (no TL rows).
+
+  **One of the two flags is REQUIRED.** Injector refuses to start
+  without one (exit code 8). No default — forces explicit choice
+  every cycle. Prevents both:
+    (a) Accidentally LEAVING the §A.11 1e12 trap in place by
+        forgetting to push Timor Leste corrections
+    (b) Accidentally PUSHING half-baked Timor Leste data when only
+        ASEAN-10 work was intended
+
+  **CI tripwires** in
+  [tests/test_inject_base.py](tests/test_inject_base.py):
+    1. Every `inject/<domain>/canonical_leap_inputs.csv` must have a
+       sibling `timor_leste_supplement.csv` (fails CI if missing).
+    2. The supplement must contain ONLY `ams='Timor Leste'` rows.
+    3. The main canonical must contain NO `ams='Timor Leste'` rows
+       (no overlap with supplement).
+    4. Subclass can opt out via `TIMOR_LESTE_SUPPLEMENT_NOT_APPLICABLE
+       = True` — but ONLY for sectors where Timor Leste is genuinely
+       unmodeled (use sparingly).
+
+  **Authoring the supplement.** Seed it as zero-supply trajectories
+  for every variable that would otherwise default to Unlimited:
+    Timor Leste,Resources\Primary\Palm Oil,Maximum Production,
+    "Interp(2025, 0, 2030, 0, ..., 2060, 0)",Metric Tonne,...
+
+  Domain owners refine these as research progresses. For crops/fuels
+  Timor Leste does produce (small coconut industry, possible offshore
+  gas), replace 0 with realistic trajectories.
+
+See also: `memory/feedback_timor_leste_supplement.md` (TBD if needed)
+for the full burn-log of the 2026-05-18 biodiesel-routing-to-TL incident.
+
 **A.17 — Every mechanically-enforceable rule in CLAUDE.md MUST have
 a pytest tripwire. Prose-only rules are systematically violated.**
 

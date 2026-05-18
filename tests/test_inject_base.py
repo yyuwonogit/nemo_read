@@ -384,6 +384,151 @@ class TestReadbackVerify:
 # 7. compare_expressions semantics
 # ---------------------------------------------------------------------------
 
+class TestTimorLesteSupplement:
+    """v0.7.0 — every inject MUST explicitly opt in or out of Timor Leste."""
+
+    def test_runtime_refuses_without_tl_decision(self, tmp_path, capsys):
+        """Injector exits non-zero if neither --include nor --exclude flag passed."""
+        import csv as _csv
+
+        class Probe(CanonicalInjector):
+            SECTOR_NAME = "tl_test"
+            DEFAULT_CSV = tmp_path / "main.csv"
+
+        # Write a minimal valid main CSV
+        p = tmp_path / "main.csv"
+        with p.open("w", encoding="utf-8", newline="") as f:
+            w = _csv.writer(f)
+            w.writerow(["ams", "branch", "variable", "expression"])
+            w.writerow(["Brunei", "X", "Y", "Interp(2025, 1.0)"])
+
+        # No TL flag → must refuse
+        rc = Probe().run(argv=[])
+        assert rc == 8  # exit code 8 = TL decision missing
+
+    def test_runtime_proceeds_with_exclude_flag(self, tmp_path):
+        import csv as _csv
+
+        class Probe(CanonicalInjector):
+            SECTOR_NAME = "tl_test"
+            DEFAULT_CSV = tmp_path / "main.csv"
+
+        p = tmp_path / "main.csv"
+        with p.open("w", encoding="utf-8", newline="") as f:
+            w = _csv.writer(f)
+            w.writerow(["ams", "branch", "variable", "expression"])
+            w.writerow(["Brunei", "X", "Y", "Interp(2025, 1.0)"])
+
+        # --exclude-timor-leste passes the TL check, but the inject still
+        # fails downstream at LEAP COM dispatch (no LEAP). We're not
+        # asserting exit 0 here — we're asserting exit != 8 (the TL gate
+        # didn't trip).
+        rc = Probe().run(argv=["--exclude-timor-leste"])
+        assert rc != 8  # passed the TL gate
+
+    def test_subclass_can_opt_out_entirely(self, tmp_path):
+        """A subclass with TIMOR_LESTE_SUPPLEMENT_NOT_APPLICABLE=True
+        bypasses the TL gate entirely."""
+        import csv as _csv
+
+        class OptOut(CanonicalInjector):
+            SECTOR_NAME = "opt_out"
+            DEFAULT_CSV = tmp_path / "m.csv"
+            TIMOR_LESTE_SUPPLEMENT_NOT_APPLICABLE = True
+
+        p = tmp_path / "m.csv"
+        with p.open("w", encoding="utf-8", newline="") as f:
+            w = _csv.writer(f)
+            w.writerow(["ams", "branch", "variable", "expression"])
+            w.writerow(["Brunei", "X", "Y", "Interp(2025, 1.0)"])
+
+        rc = OptOut().run(argv=[])  # no TL flag, no error
+        assert rc != 8
+
+    def test_mutually_exclusive_flags(self, tmp_path):
+        """--include-timor-leste and --exclude-timor-leste can't both be set."""
+        import argparse
+
+        class P(CanonicalInjector):
+            SECTOR_NAME = "p"
+
+        parser = P().build_arg_parser()
+        with pytest.raises(SystemExit):
+            parser.parse_args(["--include-timor-leste", "--exclude-timor-leste"])
+
+    def test_help_text_mentions_timor_leste(self):
+        class P(CanonicalInjector):
+            SECTOR_NAME = "p"
+        parser = P().build_arg_parser()
+        help_text = parser.format_help()
+        assert "--include-timor-leste" in help_text
+        assert "--exclude-timor-leste" in help_text
+
+
+class TestTimorLesteSupplementFiles:
+    """v0.7.0 — every domain MUST ship a timor_leste_supplement.csv next
+    to its main canonical (§A.18 CI tripwire)."""
+
+    DOMAINS_REQUIRING_SUPPLEMENT = [
+        ("inject/bioenergy/canonical_leap_inputs.csv",
+         "inject/bioenergy/timor_leste_supplement.csv"),
+        ("inject/fossil/canonical_leap_inputs.csv",
+         "inject/fossil/timor_leste_supplement.csv"),
+    ]
+
+    @pytest.mark.parametrize("main_csv,supplement_csv",
+                             DOMAINS_REQUIRING_SUPPLEMENT)
+    def test_supplement_exists(self, main_csv, supplement_csv):
+        from pathlib import Path
+        main = REPO_ROOT / main_csv
+        supplement = REPO_ROOT / supplement_csv
+        if not main.exists():
+            pytest.skip(f"{main_csv} not present; skip supplement check")
+        assert supplement.exists(), (
+            f"Missing required supplement: {supplement_csv}\n"
+            f"Every domain with a canonical_leap_inputs.csv must ship a\n"
+            f"sibling timor_leste_supplement.csv per CLAUDE.md §A.18. "
+            f"It can be near-empty (header + a few rows) but must exist."
+        )
+
+    @pytest.mark.parametrize("main_csv,supplement_csv",
+                             DOMAINS_REQUIRING_SUPPLEMENT)
+    def test_supplement_only_has_timor_leste_rows(self, main_csv,
+                                                   supplement_csv):
+        from pathlib import Path
+        import csv as _csv
+        supplement = REPO_ROOT / supplement_csv
+        if not supplement.exists():
+            pytest.skip(f"{supplement_csv} not present")
+        with supplement.open("r", encoding="utf-8", newline="") as f:
+            reader = _csv.DictReader(f)
+            non_tl = [r for r in reader if r.get("ams") != "Timor Leste"]
+        assert not non_tl, (
+            f"{supplement_csv} contains {len(non_tl)} non-Timor-Leste row(s). "
+            f"The supplement file must contain ONLY ams='Timor Leste' rows; "
+            f"all other AMS belong in the main canonical."
+        )
+
+    @pytest.mark.parametrize("main_csv,supplement_csv",
+                             DOMAINS_REQUIRING_SUPPLEMENT)
+    def test_main_canonical_has_no_timor_leste_rows(self, main_csv,
+                                                     supplement_csv):
+        """Main canonical and supplement must be disjoint on ams=Timor Leste."""
+        from pathlib import Path
+        import csv as _csv
+        main = REPO_ROOT / main_csv
+        if not main.exists():
+            pytest.skip(f"{main_csv} not present")
+        with main.open("r", encoding="utf-8", newline="") as f:
+            reader = _csv.DictReader(f)
+            tl_in_main = [r for r in reader if r.get("ams") == "Timor Leste"]
+        assert not tl_in_main, (
+            f"{main_csv} has {len(tl_in_main)} Timor Leste row(s). "
+            f"Move them to {supplement_csv} — main canonical must NOT "
+            f"contain ams='Timor Leste' rows (§A.18)."
+        )
+
+
 class TestCompareExpressions:
     def test_byte_equal_returns_exact(self):
         from nemo_read._leap_com import compare_expressions
