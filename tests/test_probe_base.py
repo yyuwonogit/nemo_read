@@ -241,3 +241,98 @@ class TestProberCliParser:
         ns = parser.parse_args(["--all-vars", "--all-input-vars"])
         assert ns.all_vars is True
         assert ns.all_input_vars is True
+
+    def test_v0612_emission_and_projection_flags(self):
+        """v0.6.12 — emission + projection auto-skip flags must exist."""
+        class P(CanonicalProber):
+            PROBE_NAME = "p"
+        parser = P().build_arg_parser()
+        ns = parser.parse_args([])
+        assert ns.include_emissions is False
+        assert ns.include_projection_layers is False
+        ns = parser.parse_args([
+            "--include-emissions",
+            "--include-projection-layers",
+        ])
+        assert ns.include_emissions is True
+        assert ns.include_projection_layers is True
+
+
+# ---------------------------------------------------------------------------
+# 6. v0.6.12 — emission + projection auto-skip defaults
+# ---------------------------------------------------------------------------
+
+class TestProjectionBranchDetection:
+    """The `<Sector>_` projection-layer pattern is detected via a path
+    segment ending with single trailing underscore."""
+
+    def test_industry_underscore_detected(self):
+        from nemo_read.probe_base import CanonicalProber
+
+        class P(CanonicalProber):
+            PROBE_NAME = "p"
+        assert P()._is_projection_branch(
+            "Demand\\Industry_\\Projection\\Chemical") is True
+
+    def test_transport_underscore_detected(self):
+        from nemo_read.probe_base import CanonicalProber
+
+        class P(CanonicalProber):
+            PROBE_NAME = "p"
+        assert P()._is_projection_branch("Demand\\Transport_\\Road") is True
+
+    def test_main_sector_not_flagged(self):
+        from nemo_read.probe_base import CanonicalProber
+
+        class P(CanonicalProber):
+            PROBE_NAME = "p"
+        assert P()._is_projection_branch(
+            "Demand\\Industry\\End Use\\Iron and Steel") is False
+        assert P()._is_projection_branch(
+            "Demand\\Residential\\Lighting") is False
+
+    def test_naked_underscore_segment_not_flagged(self):
+        """A segment that's JUST `_` (no name) shouldn't trigger — only
+        named-sector_ patterns do."""
+        from nemo_read.probe_base import CanonicalProber
+
+        class P(CanonicalProber):
+            PROBE_NAME = "p"
+        # Path with literal lone "_" segment (unusual but possible)
+        assert P()._is_projection_branch("Demand\\_\\foo") is False
+
+
+class TestEmissionExcludeDefault:
+    def test_seven_emission_vars_in_default_exclude(self):
+        from nemo_read.probe_base import DEFAULT_EMISSION_VARS_EXCLUDE
+
+        # All 7 variables we identified from the 2026-05-18 probe
+        expected = {
+            "Avg Environmental Loading",
+            "Pollutant Loadings",
+            "One_Hundred Year GWP Direct and Indirect Allocated to Demands",
+            "One_Hundred Year GWP Indirect Allocated to Demands",
+            "One_Hundred Year GWP Direct At Point of Emissions",
+            "Twenty Year GWP Direct At Point of Emissions",
+            "Five_Hundred Year GWP Direct At Point of Emissions",
+        }
+        assert DEFAULT_EMISSION_VARS_EXCLUDE == expected
+
+    def test_subclass_can_override_exclude(self):
+        from nemo_read.probe_base import CanonicalProber
+
+        class NoExclusion(CanonicalProber):
+            PROBE_NAME = "no_excl"
+            EMISSION_VARS_EXCLUDE = frozenset()
+
+        p = NoExclusion()
+        assert len(p.EMISSION_VARS_EXCLUDE) == 0
+
+    def test_skip_projection_class_attr_overridable(self):
+        from nemo_read.probe_base import CanonicalProber
+
+        class KeepProjection(CanonicalProber):
+            PROBE_NAME = "keep_proj"
+            SKIP_PROJECTION_LAYERS = False
+
+        assert KeepProjection.SKIP_PROJECTION_LAYERS is False

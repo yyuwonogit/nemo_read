@@ -103,6 +103,24 @@ DEFAULT_RESULT_BRANCH_TYPES = frozenset({2, 3, 4, 34, 50})
 DEFAULT_UNIT_BRANCH_TYPES = frozenset({3, 50})
 DEFAULT_YEARS = tuple(range(2025, 2061, 5))
 
+# v0.6.12: emission/pollutant variables auto-excluded by default.
+# Established 2026-05-18 from the aeo9_v0.45 Indonesia/Demand probe —
+# `Avg Environmental Loading` alone produced 8120 rows (24% of the
+# whole CSV) across 1015 branches that ONLY held pollutant data
+# (LEAP encodes pollutant identity as the leaf branch name, so each
+# pollutant gets its own auxiliary branch). For most demand /
+# transformation analyses these explode the row count without adding
+# energy-quantity signal. Opt back in with --include-emissions.
+DEFAULT_EMISSION_VARS_EXCLUDE = frozenset({
+    "Avg Environmental Loading",
+    "Pollutant Loadings",
+    "One_Hundred Year GWP Direct and Indirect Allocated to Demands",
+    "One_Hundred Year GWP Indirect Allocated to Demands",
+    "One_Hundred Year GWP Direct At Point of Emissions",
+    "Twenty Year GWP Direct At Point of Emissions",
+    "Five_Hundred Year GWP Direct At Point of Emissions",
+})
+
 
 class CanonicalProber:
     """Base class for every mailbox/result-harvest LEAP COM probe.
@@ -124,6 +142,17 @@ class CanonicalProber:
     UNIT_BRANCH_TYPES: frozenset = DEFAULT_UNIT_BRANCH_TYPES
     DEFAULT_YEARS: tuple[int, ...] = DEFAULT_YEARS
     BRANCH_PREFIX: str = ""  # empty = whole area
+
+    # v0.6.12 — emission + projection-layer auto-skip defaults.
+    # The 7-variable emission exclude list (see DEFAULT_EMISSION_VARS_EXCLUDE
+    # above) is always applied unless --include-emissions is passed.
+    EMISSION_VARS_EXCLUDE: frozenset = DEFAULT_EMISSION_VARS_EXCLUDE
+    # Skip branches whose path contains a segment ending with `_` —
+    # LEAP convention for parallel projection-scenario sub-trees that
+    # duplicate the main sector's structure (e.g. `Demand\Industry_\`).
+    # Override at subclass with SKIP_PROJECTION_LAYERS = False, or pass
+    # --include-projection-layers at the CLI.
+    SKIP_PROJECTION_LAYERS: bool = True
 
     # ---- sealed-method registry (runtime-enforced) ----
     _SEALED = frozenset({
@@ -300,6 +329,20 @@ class CanonicalProber:
                        help="Skip the input-side variable filter for Probe B. "
                             "Captures unit for EVERY input variable on every "
                             "BT={3,50} branch.")
+        # v0.6.12 — emission + projection auto-skip
+        p.add_argument("--include-emissions", action="store_true",
+                       help="Re-include the 7 emission/pollutant variables "
+                            "that are auto-excluded by default "
+                            "(Avg Environmental Loading, Pollutant Loadings, "
+                            "and the 5 GWP variants). Default behavior "
+                            "skips them — they dominate row counts without "
+                            "adding energy-quantity signal.")
+        p.add_argument("--include-projection-layers", action="store_true",
+                       help="Re-include parallel `<Sector>_` projection sub-"
+                            "trees (e.g. Demand\\Industry_, Demand\\Transport_) "
+                            "that are auto-skipped by default. These duplicate "
+                            "the main sector's structure and roughly double "
+                            "the walk time.")
         self.extra_cli_args(p)
         return p
 
@@ -403,6 +446,23 @@ class CanonicalProber:
             print(f"[{self.PROBE_NAME}] Input vars (class default): "
                   f"{target_inputs}")
 
+        # v0.6.12 — emission exclude set + projection-skip status
+        emission_exclude_set = (
+            frozenset()
+            if args.include_emissions
+            else self.EMISSION_VARS_EXCLUDE
+        )
+        if emission_exclude_set:
+            print(f"[{self.PROBE_NAME}] Excluding {len(emission_exclude_set)} "
+                  f"emission var(s) by default (override with "
+                  f"--include-emissions): {sorted(emission_exclude_set)}")
+        if self.SKIP_PROJECTION_LAYERS and not args.include_projection_layers:
+            print(f"[{self.PROBE_NAME}] Skipping projection-layer branches "
+                  f"(`<Sector>_` pattern; override with "
+                  f"--include-projection-layers)")
+        # Stash on self for downstream methods
+        self._emission_exclude_set = emission_exclude_set
+
         # ---- Filter branches once ----
         branch_index = self._filter_branches(
             cache, args.branch_prefix, self.result_branch_types())
@@ -433,9 +493,16 @@ class CanonicalProber:
     def _filter_branches(
         self, cache: LeapTreeCache, prefix: str, type_filter: frozenset,
     ) -> list[tuple[int, str, int]]:
+        # v0.6.12 — skip projection-layer branches by default
+        skip_projection = (
+            self.SKIP_PROJECTION_LAYERS
+            and not getattr(self._args, "include_projection_layers", False)
+        )
         out: list[tuple[int, str, int]] = []
         for fn, idx in cache.fullname_to_idx.items():
             if prefix and not fn.startswith(prefix):
+                continue
+            if skip_projection and self._is_projection_branch(fn):
                 continue
             try:
                 br = cache.branches.Item(idx)
@@ -446,6 +513,17 @@ class CanonicalProber:
                 continue
             out.append((idx, fn, bt))
         return out
+
+    def _is_projection_branch(self, branch_path: str) -> bool:
+        """LEAP convention: parallel projection-scenario sub-trees use
+        `<Sector>_` (trailing underscore) at any path segment to mark
+        themselves as auxiliary to the main sector. Returns True if any
+        segment of the path ends with `_` (single trailing underscore,
+        with the segment longer than just `_`)."""
+        for segment in branch_path.split("\\"):
+            if len(segment) > 1 and segment.endswith("_"):
+                return True
+        return False
 
     def _probe_a_results(
         self, leap, cache, branch_index, scenario, regions, years,
@@ -523,9 +601,15 @@ class CanonicalProber:
                     # branch" (--all-vars mode). Otherwise filter to the
                     # provided list.
                     if target_vars is None:
-                        hits = var_names
+                        hits = list(var_names)
                     else:
                         hits = [n for n in var_names if n in target_vars]
+
+                    # v0.6.12 — emission auto-exclude (unless --include-emissions
+                    # was passed; the set is empty in that case).
+                    if self._emission_exclude_set:
+                        hits = [n for n in hits
+                                if n not in self._emission_exclude_set]
 
                     if hits:
                         for vname in hits:
@@ -627,6 +711,10 @@ class CanonicalProber:
                         if vname in seen:
                             continue
                         if target_vars is not None and vname not in target_vars:
+                            continue
+                        # v0.6.12 — emission auto-exclude
+                        if (self._emission_exclude_set
+                                and vname in self._emission_exclude_set):
                             continue
                         seen.add(vname)
                         unit = self._read_unit_text(var, bt)

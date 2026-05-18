@@ -160,6 +160,7 @@ from .probe_base import (
     DEFAULT_RESULT_VARS, DEFAULT_INPUT_VARS,
     DEFAULT_RESULT_BRANCH_TYPES, DEFAULT_UNIT_BRANCH_TYPES,
     DEFAULT_YEARS,
+    DEFAULT_EMISSION_VARS_EXCLUDE,
 )
 from ._heartbeat import HeartbeatLogger, read_progress
 from ._leap_com import (
@@ -220,7 +221,7 @@ __all__ = [
     "CanonicalProber", "ProberSealError",
     "DEFAULT_RESULT_VARS", "DEFAULT_INPUT_VARS",
     "DEFAULT_RESULT_BRANCH_TYPES", "DEFAULT_UNIT_BRANCH_TYPES",
-    "DEFAULT_YEARS",
+    "DEFAULT_YEARS", "DEFAULT_EMISSION_VARS_EXCLUDE",
     "HeartbeatLogger", "read_progress",
     "InterpSeparatorError",
     "assert_interp_canonical", "compare_expressions",
@@ -228,4 +229,4 @@ __all__ = [
     "validate_canonical_csv_expressions",
 ]
 
-__version__ = "0.6.11"
+__version__ = "0.6.12"
