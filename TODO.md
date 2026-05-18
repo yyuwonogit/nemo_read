@@ -5,80 +5,131 @@
 > across sessions. Update or empty it whenever a major piece of work
 > completes.
 
-## Status as of 2026-05-17
+## Status as of 2026-05-18
 
-**Workstream 1 — Standardised inject + probe framework: DONE.**
-- [nemo_read/inject_base.py](nemo_read/inject_base.py) ships `CanonicalInjector` (sealed primitives + open hooks; warm-COM dry-run → confirm → real → readback in one Python invocation; multi-scenario via `--scenarios`)
-- [nemo_read/probe_base.py](nemo_read/probe_base.py) ships `CanonicalProber` (sealed BT={3,50} unit-read guard; Probe A per scenario + Probe B once per area, one COM session)
-- [nemo_read/_heartbeat.py](nemo_read/_heartbeat.py) ships the universal heartbeat + `_progress_*.json` convention for any LEAP COM op > 60s (CLAUDE.md §A.16)
-- All 3 existing injectors (bioenergy / fossil / power) migrated to thin `CanonicalInjector` subclasses
-- 166 tests passing; CI scan refuses any `Variable.Expression =` write outside the sealed chokepoint
+**Done since 2026-05-17:**
+- Workstream 1 (`CanonicalInjector` + `CanonicalProber` frameworks)
+- Workstream 1.5 (`Interp()` separator §A.15 enforcement — 3-layer)
+- Workstream 2 (repo reorg: `mailbox/` + `inject/` + `result/`)
+- v0.6.9 — public API re-exports (CanonicalInjector / CanonicalProber
+  / HeartbeatLogger discoverable at top level)
+- v0.6.10 — flexible variable filters (--all-vars / --result-vars)
+- v0.6.11 — inner-loop heartbeat tick (mid-region progress visible)
+- v0.6.12 — emission vars + projection layers auto-skip default
+- v0.7.0 — Timor Leste supplement mandatory (§A.18; mutually-
+  exclusive --include-timor-leste / --exclude-timor-leste flags)
 
-**Workstream 1.5 — `Interp(...)` separator enforcement (§A.15): DONE.**
-- 3-layer defence (adapter normaliser + injector chokepoint + pre-flight CSV scan); readback verify hard-fails on NORMALISED matches.
+**First real full-area probe done:**
+- aeo9_v0.45 RAS scenario, Indonesia, Demand subtree, `--all-vars`
+- 4h06m wall-clock, 33,116 rows, 1944 branches, 50 distinct variables
+- Output: `output/probe/demand_indonesia/results_Regional_Aspiration_Scenario.csv`
+
+**Operational state (as of 2026-05-18):**
+- Timor Leste DISABLED from LEAP calc by user. Don't fret about TL
+  §A.11 leakage. Use `--exclude-timor-leste` on all injects until
+  user re-enables. See
+  [`memory/project_timor_leste_disabled.md`](../../memory/project_timor_leste_disabled.md).
 
 ## What's pending — pick up in this order
 
-### 1. Full-area probe of `aeo9_v0.45` (when user signals)
+### 1. Extend bioenergy canonical for 8 missing biomass items (URGENT, in-scope)
 
-User intends to run a **full-area probe** of the next LEAP version
-(`aeo9_v0.45` — to be confirmed by user) covering:
-- Multiple scenarios (likely BAS + ATS + RAS + CA, confirm with user)
-- The **entire area** (not just Centralized Electricity Generation
-  like the 2026-05-05 cycle)
-- Both input + result sides (one CanonicalProber.run() handles both)
-- Branch + unit + value reads in one COM session
+**Why this matters NOW.** With Timor Leste disabled, the §A.11 1e12
+Unlimited trap shifted the LP's preferred "free supply" region to
+**Brunei** (or whoever's next alphabetically). The user verified in
+LEAP UI that biomass-production redirection is now landing on Brunei.
 
-**Trigger:** when the user opens a new Claude session, asks "what to
-do now?", "wazzup", or any session-status query — propose this as the
-next concrete action. Do NOT start without explicit go-ahead.
+**Root cause.** Our bioenergy canonical authors 7 primary crops +
+3 secondary fuels (Palm Oil, POME, Coconut Oil, Sugarcane, Cassava,
+Corn, Molasses; Biodiesel, Ethanol, Methanol). But the v0.45 LEAP
+area has 8 ADDITIONAL biomass items as branches that we never
+authored:
 
-**Setup recipe** (when user says go):
-1. Confirm with user (§A.9): exact area filename + scenario list +
-   any scope narrowing (full area or a subtree?)
-2. Drop a `result/<YYYYMMDD>/probe_aeo9_v0.45.py` (~10-line subclass
-   of `CanonicalProber` — see CLAUDE.md §7.1 template)
-3. Launch via `Bash run_in_background=True`:
-   ```
-   python result/<date>/probe_aeo9_v0.45.py \
-       --scenarios "BAS,ATS,RAS,CA" \
-       --expect-area "aeo9_v0.45" \
-       --out-dir result/<date>/
-   ```
-4. Monitor via the harness `Monitor` tool on the background shell, or
-   `cat _progress_*.json` on demand
-5. Expected wall-clock: ~50 min/scenario × N + ~4 min for units + cache
-   build (~3 min once). For 4 scenarios on full area, budget 3-4 hours.
+  1. Wood
+  2. Efficient Wood
+  3. Charcoal
+  4. Biomass (generic)
+  5. Other Biomass
+  6. Bagasse
+  7. Municipal Solid Waste
+  8. Biogas
 
-**Pitfalls already enforced by the framework:**
-- `Base Template` region excluded automatically
-- `--years` defaults to 2025-2060 step 5 (pitfall #6 — pre-model years
-  inflate CSV ~7×)
-- `--skip-zeros` default ON
-- BT={3,50} restriction for unit reads (§11.2; sealed)
-- safe_value / safe_data_unit_text on every read
+For each of these × all 11 AMS, LEAP defaults apply:
+`Maximum Production = Unlimited` (→ 1e12 in NEMO via §A.11) +
+`Production Cost ≈ 0`. LP routes biomass-power demand to the
+cheapest "free unlimited" source — currently Brunei.
 
-### 2. Workstream 2 — repo reorg `mailbox/` → `mailbox/` + `inject/` + `result/`
+**Work to do (~176 new rows + adapter extension):**
 
-After the v0.45 probe lands (or sooner if user prioritises). Plan:
-1. `mkdir inject/ result/` at repo root
-2. `git mv inject/bioenergy/` → `inject/bioenergy/`, same for `fossil/`, `power/`
-3. `git mv result/20260505/` → `result/20260505/`, same for `20260513/`
-   (with the inject-probe split flagged per-file — `_probe_v038_power_tree.py`,
-   `_probe_readback_one.py` are inject-side scratch, ask first)
-4. Update path references in CLAUDE.md, FLOWS.md, pyproject.toml, scripts
-5. Add `MAILBOX_ROUTING.md` at repo root explaining the inbox→inject/result
-   flow + clone-then-sweep ritual
-6. `infeas/` and `mailbox/` (now pure inbox) stay put
-7. Run pytest after each major move
+a) **Research per-AMS values** for each of the 8 items:
+   - `Maximum Production`: 0 for AMS where this isn't produced;
+     finite trajectory where it is (e.g. Indonesia has substantial
+     POME-adjacent biomass, Malaysia has Bagasse from sugar mills,
+     Thailand has rice husk / Bagasse, etc.)
+   - `Production Cost` (or `Import Cost` for traded fuels):
+     market-derived per-tonne or per-GJ figure with citation
+   - `Maximum Imports` / `Export Benefit` if relevant
+   - Unit choice per CLAUDE.md §2.4 — for biomass that maps cleanly
+     to LEAP's GJ-equivalent Primary fuel pattern, use that anchor
 
-### 3. (deferred from earlier session, lower priority)
-- v0.38 cycle: §1-3 of previous TODO.md (read-back-one verify per
-  scenario, then calculatescenario, then post-calc validate). Stale
-  if a newer LEAP version is now in use; check with user before
-  re-attempting.
+b) **Add source CSVs under `inject/bioenergy/`:**
+   - Likely one per item or one combined `solid_biomass_supply.csv`
+   - Match the existing `bioenergy_leap_input.csv` column shape
+     (region, branch, variable, expression, unit, fuel, source, note)
+
+c) **Extend `inject/bioenergy/build_canonical.py`** to register the
+   new source CSV(s), broadcasting across AMS via the existing
+   `ALL_10_AMS` machinery (NOT adding Timor Leste rows since TL is
+   disabled — TL goes into `timor_leste_supplement.csv` per §A.18).
+
+d) **Run `python inject/bioenergy/build_canonical.py`** to regenerate
+   `canonical_leap_inputs.csv`. The `_normalize_interp` adapter
+   normaliser + the §A.15 pre-flight scan will catch any Interp()
+   separator issues.
+
+e) **Inject + recalc + verify:**
+   - `python inject/bioenergy/inject_to_leap.py --scenarios "RAS" --expect-area "aeo9_v0.45" --exclude-timor-leste` (per §A.18 mandatory choice)
+   - `calculatescenario` in LEAP UI for RAS
+   - Re-probe Indonesia Demand to verify Brunei is no longer the leak
+     point. Same probe command:
+     ```
+     python .\dist\probe_v045.py --scenarios "RAS" --expect-area "aeo9_v0.45" --branch-prefix "Demand\" --regions "Indonesia" --all-vars --out-dir ".\output\probe\demand_indonesia_v2"
+     ```
+
+**Stop-gap option (if real values aren't researched yet):**
+   Author all 8 × 11 AMS with `Maximum Production = 0` and arbitrary
+   non-zero `Production Cost` as a temporary zero-supply patch. Stops
+   the §A.11 leak but loses any actual biomass-power dispatch in the
+   model. Per the 2026-05-18 conversation, the user marked this as
+   IN SCOPE, so the real fix (researched values) is preferred over
+   the stop-gap.
+
+**Reference for the bioenergy team:**
+   [`inject/bioenergy/CSV_AUTHORING_GUIDE.md`](inject/bioenergy/CSV_AUTHORING_GUIDE.md)
+   — convention for column shapes, units, off-limits patterns.
+
+### 2. (Carry-over from previous session) Other LEAP-area probes
+
+If the user wants to expand probe coverage from Indonesia/Demand:
+
+- **All 11 AMS, Demand subtree, RAS** — ~24h wall-clock with v0.6.12
+  defaults (emissions + projection layers auto-skipped). Already
+  produces useful data.
+- **Indonesia, Transformation subtree, RAS** — to validate
+  Transformation-side variable naming for the eventual
+  per-sector probe configs.
+- **Other scenarios (BAS, ATS, CA)** for Indonesia/Demand — gives
+  scenario comparison once a single scenario is fully working.
+
+Hold until user signals priority.
+
+### 3. (Deferred from earlier sessions, lower priority)
+
+- v0.38 cycle read-back-one verify / calc / post-calc validate.
+  Likely stale now that v0.45 is in use.
 
 ## When in doubt
 - Re-read [CLAUDE.md §A](CLAUDE.md) hard rules
-- [docs/FLOWS.md](docs/FLOWS.md) for the standardised inject / probe / infeas flows
+- [docs/FLOWS.md](docs/FLOWS.md) for the standardised inject /
+  probe / infeas flows
 - Memory: `MEMORY.md` for user preferences + project context
