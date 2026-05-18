@@ -219,3 +219,25 @@ class TestProberCliParser:
         parser = P().build_arg_parser()
         ns = parser.parse_args([])
         assert ns.scenarios == ""  # empty → use current ActiveScenario
+
+    def test_variable_override_flags(self):
+        """v0.6.10 — per-sector variable lists must be overridable."""
+        class P(CanonicalProber):
+            PROBE_NAME = "p"
+        parser = P().build_arg_parser()
+        ns = parser.parse_args([
+            "--result-vars", "Final Energy Demand,Activity Level",
+            "--input-vars", "Capital Cost",
+        ])
+        assert ns.result_vars == "Final Energy Demand,Activity Level"
+        assert ns.input_vars == "Capital Cost"
+        assert ns.all_vars is False
+        assert ns.all_input_vars is False
+
+    def test_all_vars_flag_disables_filter(self):
+        class P(CanonicalProber):
+            PROBE_NAME = "p"
+        parser = P().build_arg_parser()
+        ns = parser.parse_args(["--all-vars", "--all-input-vars"])
+        assert ns.all_vars is True
+        assert ns.all_input_vars is True

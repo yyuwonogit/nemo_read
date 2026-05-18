@@ -268,11 +268,38 @@ class CanonicalProber:
         p.add_argument("--per-branch-deadline", type=float, default=20.0,
                        help="Seconds before bailing on one branch's var loop")
         p.add_argument("--heartbeat-interval", type=float, default=30.0,
-                       help="Heartbeat throttle interval (seconds)")
+                       help="Heartbeat stdout throttle (seconds)")
+        p.add_argument("--heartbeat-every-n-branches", type=int, default=100,
+                       help="Tick progress JSON every N branches walked "
+                            "inside Probe A (v0.6.11). Lower = finer "
+                            "progress signal for monitors; higher = less "
+                            "disk I/O. Default 100.")
         p.add_argument("--skip-units", action="store_true",
                        help="Skip Probe B (units). Only Probe A runs.")
         p.add_argument("--skip-results", action="store_true",
                        help="Skip Probe A (results). Only Probe B runs.")
+        # ---- Variable list overrides (2026-05-18, v0.6.10) ----
+        # The hardcoded RESULT_VARS/INPUT_VARS were Transformation-side
+        # names from the 2026-05-05 SOP cycle. They DON'T match what
+        # Demand/Resources/Effects subtrees expose. Per-sector probing
+        # needs per-sector variable lists.
+        p.add_argument("--result-vars", default="",
+                       help="Comma-separated result-side variable names to "
+                            "capture (overrides RESULT_VARS class attr). "
+                            "E.g. 'Final Energy Demand,Activity Level' for "
+                            "Demand subtree.")
+        p.add_argument("--input-vars", default="",
+                       help="Comma-separated input-side variable names for "
+                            "Probe B unit capture (overrides INPUT_VARS).")
+        p.add_argument("--all-vars", action="store_true",
+                       help="Skip the result-side variable filter entirely. "
+                            "Probe A captures EVERY variable exposed on every "
+                            "walked branch. Larger CSV (skip-zeros still "
+                            "drops empties), comprehensive coverage, slower.")
+        p.add_argument("--all-input-vars", action="store_true",
+                       help="Skip the input-side variable filter for Probe B. "
+                            "Captures unit for EVERY input variable on every "
+                            "BT={3,50} branch.")
         self.extra_cli_args(p)
         return p
 
@@ -345,8 +372,36 @@ class CanonicalProber:
             [r.strip() for r in args.regions.split(",") if r.strip()]
             or self.regions(leap)
         )
-        target_results = list(self.result_variables())
-        target_inputs = list(self.input_variables())
+        # ---- Resolve variable filters ----
+        # Precedence: --all-vars > --result-vars > self.result_variables()
+        # `None` sentinel = no filter, capture EVERY variable.
+        if args.all_vars:
+            target_results = None
+            print(f"[{self.PROBE_NAME}] Result vars: <ALL> "
+                  f"(--all-vars; no filter)")
+        elif args.result_vars.strip():
+            target_results = [v.strip() for v in args.result_vars.split(",")
+                              if v.strip()]
+            print(f"[{self.PROBE_NAME}] Result vars (CLI override): "
+                  f"{target_results}")
+        else:
+            target_results = list(self.result_variables())
+            print(f"[{self.PROBE_NAME}] Result vars (class default): "
+                  f"{target_results}")
+
+        if args.all_input_vars:
+            target_inputs = None
+            print(f"[{self.PROBE_NAME}] Input vars: <ALL> "
+                  f"(--all-input-vars; no filter)")
+        elif args.input_vars.strip():
+            target_inputs = [v.strip() for v in args.input_vars.split(",")
+                             if v.strip()]
+            print(f"[{self.PROBE_NAME}] Input vars (CLI override): "
+                  f"{target_inputs}")
+        else:
+            target_inputs = list(self.input_variables())
+            print(f"[{self.PROBE_NAME}] Input vars (class default): "
+                  f"{target_inputs}")
 
         # ---- Filter branches once ----
         branch_index = self._filter_branches(
@@ -426,11 +481,23 @@ class CanonicalProber:
                     continue
                 r_started = time.perf_counter()
                 r_rows = 0
+                branches_walked = 0
+                total_branches = len(branch_index)
 
                 for idx, fn, bt in branch_index:
+                    branches_walked += 1
                     try:
                         br = cache.branches.Item(idx)
                     except Exception:
+                        # still count as walked for progress visibility
+                        if branches_walked % args.heartbeat_every_n_branches == 0:
+                            hb.tick(
+                                phase="probe_a_walking",
+                                scenario=active_scen, region=region,
+                                branches_done=branches_walked,
+                                branches_total=total_branches,
+                                rows_written=n_rows,
+                            )
                         continue
 
                     var_names: list[str] = []
@@ -442,36 +509,62 @@ class CanonicalProber:
                             if name:
                                 var_names.append(name)
                     except Exception:
+                        if branches_walked % args.heartbeat_every_n_branches == 0:
+                            hb.tick(
+                                phase="probe_a_walking",
+                                scenario=active_scen, region=region,
+                                branches_done=branches_walked,
+                                branches_total=total_branches,
+                                rows_written=n_rows,
+                            )
                         continue
 
-                    hits = [n for n in var_names if n in target_vars]
-                    if not hits:
-                        continue
+                    # target_vars=None means "capture every variable on the
+                    # branch" (--all-vars mode). Otherwise filter to the
+                    # provided list.
+                    if target_vars is None:
+                        hits = var_names
+                    else:
+                        hits = [n for n in var_names if n in target_vars]
 
-                    for vname in hits:
-                        try:
-                            var = br.Variable(vname)
-                        except Exception:
-                            continue
-                        if var is None:
-                            continue
-                        for y in years:
-                            v = self._read_value(var, y)
-                            if v is None:
+                    if hits:
+                        for vname in hits:
+                            try:
+                                var = br.Variable(vname)
+                            except Exception:
                                 continue
-                            if args.skip_zeros and v == 0:
+                            if var is None:
                                 continue
-                            w.writerow({
-                                "ams": region,
-                                "branch": fn,
-                                "branch_type": LEAP_BRANCH_TYPES.get(
-                                    bt, str(bt)),
-                                "variable": vname,
-                                "year": y,
-                                "value": v,
-                            })
-                            n_rows += 1
-                            r_rows += 1
+                            for y in years:
+                                v = self._read_value(var, y)
+                                if v is None:
+                                    continue
+                                if args.skip_zeros and v == 0:
+                                    continue
+                                w.writerow({
+                                    "ams": region,
+                                    "branch": fn,
+                                    "branch_type": LEAP_BRANCH_TYPES.get(
+                                        bt, str(bt)),
+                                    "variable": vname,
+                                    "year": y,
+                                    "value": v,
+                                })
+                                n_rows += 1
+                                r_rows += 1
+
+                    # Inner-loop progress tick — fires every N branches
+                    # regardless of whether the branch yielded data, so
+                    # long mid-region walks stay visible to monitors
+                    # (CLAUDE.md §A.16). v0.6.11.
+                    if branches_walked % args.heartbeat_every_n_branches == 0:
+                        hb.tick(
+                            phase="probe_a_walking",
+                            scenario=active_scen, region=region,
+                            branches_done=branches_walked,
+                            branches_total=total_branches,
+                            rows_written=n_rows,
+                        )
 
                 elapsed = time.perf_counter() - r_started
                 print(f"  [region={region}] {r_rows} rows in {elapsed:.1f}s")
@@ -530,7 +623,10 @@ class CanonicalProber:
                             vname = var.Name
                         except Exception:
                             continue
-                        if vname not in target_vars or vname in seen:
+                        # target_vars=None → capture every variable's unit
+                        if vname in seen:
+                            continue
+                        if target_vars is not None and vname not in target_vars:
                             continue
                         seen.add(vname)
                         unit = self._read_unit_text(var, bt)
