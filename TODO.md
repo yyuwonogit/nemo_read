@@ -5,7 +5,16 @@
 > across sessions. Update or empty it whenever a major piece of work
 > completes.
 
-## Status as of 2026-05-18
+## Status as of 2026-05-19
+
+**Done 2026-05-18 / 19:**
+- **Bioenergy fully resolved.** The 8-biomass-items gap (Wood, Charcoal,
+  Bagasse, MSW, Biogas, Other Biomass, Efficient Wood, generic Biomass)
+  closed. Final unlock was authoring **POME Import Cost** — that was
+  the remaining hole letting Brunei pull POME at LEAP-default ≈ 0 cost.
+  Verified clean by user against the LEAP UI biodiesel-production table.
+  No more Timor-Leste-style or Brunei-style routing leakage on
+  bioenergy supply.
 
 **Done since 2026-05-17:**
 - Workstream 1 (`CanonicalInjector` + `CanonicalProber` frameworks)
@@ -32,7 +41,52 @@
 
 ## What's pending — pick up in this order
 
-### 1. Extend bioenergy canonical for 8 missing biomass items (URGENT, in-scope)
+### 1. Transport sector inject — NEW DOMAIN (in-scope as of 2026-05-19)
+
+**Scope (user-confirmed 2026-05-19):**
+- LEAP area: **`aeo9_v0.46`** (note: bumped from v0.45 to v0.46 between
+  bioenergy-fix landing and transport scope confirmation)
+- Sector: **Demand side ONLY** — `Demand\Transport\...` subtree
+  - Vehicle stocks, fuel shares, activity levels, fuel economy
+  - NO transformation-side (no vehicle production etc.)
+- Scenarios: **BAS, ATS, RAS** (all 3 in one warm-COM session via
+  `--scenarios "BAS,ATS,RAS"`)
+- Timor Leste: **excluded** (operational state, per
+  `memory/project_timor_leste_disabled.md`); use
+  `--exclude-timor-leste` flag
+
+**Pending: input data from user.**
+- User will drop the transport CSV in `mailbox/<YYYYMMDD>/`
+- User will signal explicitly when it's there ("not yet")
+- Do NOT pre-create files in mailbox/; just inspect when user signals
+
+**Pre-inject work to do BEFORE user drops the CSV (optional, can start now):**
+- Probe v0.46 LEAP area's Demand\Transport subtree for ALL 3 scenarios
+  via `CanonicalProber` with `--all-vars` to discover:
+  - What transport-related variable names LEAP v0.46 exposes
+    (Activity Level, FuelEconomy, Vehicle Distance, Device Stocks, etc.
+    — confirmed from the prior v0.45 Indonesia/Demand probe)
+  - What branch shape transport has (sub-modes: Road, Rail, Air,
+    Marine, Domestic / International splits)
+  - What's there for ASEAN-10 vs what's missing
+- Use the v0.6.12 defaults (emission auto-skip + projection-layer skip);
+  per the bioenergy-resolved memory, also watch for **pair-completeness:**
+  every Maximum Production / Maximum Capacity must have a companion
+  Production Cost / Variable OM Cost or the LP routes via cost ≈ 0
+- §A.9 confirmation needed before launching: confirm LEAP UI has
+  `aeo9_v0.46` loaded as ActiveArea + appropriate scenario in dropdown
+
+**Once input arrives + probe results land — standard new-domain workflow:**
+- Per CLAUDE.md §5 + §5.1, scaffold `inject/transport/`:
+  - `transport_leap_input.csv` (user-authored, dropped via mailbox)
+  - `build_canonical.py` (adapter → canonical_leap_inputs.csv)
+  - `inject_to_leap.py` (CanonicalInjector subclass)
+  - `timor_leste_supplement.csv` (per §A.18 mandatory; seed zeros)
+  - `TRANSPORT_CSV_SPEC.md` + `CSV_AUTHORING_GUIDE.md`
+- Standard inject cycle (per docs/FLOWS.md §1):
+  dry-run → confirm → real inject → readback → recalc → re-probe
+
+### 1b. (RESOLVED 2026-05-19) ~~Extend bioenergy canonical for 8 missing biomass items~~
 
 **Why this matters NOW.** With Timor Leste disabled, the §A.11 1e12
 Unlimited trap shifted the LP's preferred "free supply" region to
