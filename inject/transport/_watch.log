@@ -1,0 +1,373 @@
+[15:30:29] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=15:29:24 | finished=None
+[15:30:59] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=15:29:24 | finished=None
+[15:31:29] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=15:29:24 | finished=None
+[15:31:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=15:29:24 | finished=None
+[15:32:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=15:32:36 | finished=None
+[15:33:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=15:32:36 | finished=None
+[15:34:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=15:32:36 | finished=None
+[15:35:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=15:35:39 | finished=None
+[15:36:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=15:35:39 | finished=None
+[15:37:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=15:35:39 | finished=None
+[15:38:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=50/63/56 | rows_written=0 | last_hb=15:38:38 | finished=None
+[15:39:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=50/63/56 | rows_written=0 | last_hb=15:38:38 | finished=None
+[15:40:41] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=50/63/56 | rows_written=0 | last_hb=15:38:38 | finished=None
+[15:41:41] stage=scenario_start | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=0 | last_hb=15:41:30 | finished=None
+[15:42:41] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=0 | last_hb=15:42:08 | finished=None
+[15:43:41] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=0 | last_hb=15:42:08 | finished=None
+[15:44:41] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=0 | last_hb=15:42:08 | finished=None
+[15:45:41] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Cambodia 2/10 | row=50/60/61 | rows_written=0 | last_hb=15:45:09 | finished=None
+[15:46:41] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Cambodia 2/10 | row=50/60/61 | rows_written=0 | last_hb=15:45:09 | finished=None
+[15:48:33] stage=scenario_start | scen=Baseline Simulation 1/4 | region=? ? | row=?/? | rows_written=0 | last_hb=15:48:31 | finished=None
+[15:49:34] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=15:49:11 | finished=None
+[15:50:34] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=15:49:11 | finished=None
+[15:51:34] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=15:49:11 | finished=None
+[15:52:34] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=50/60/61 | rows_written=0 | last_hb=15:52:01 | finished=None
+[15:53:34] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=50/60/61 | rows_written=0 | last_hb=15:52:01 | finished=None
+[15:54:34] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=50/60/61 | rows_written=0 | last_hb=15:52:01 | finished=None
+[15:55:34] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=50/60/61 | rows_written=0 | last_hb=15:52:01 | finished=None
+[15:56:34] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=50/60/61 | rows_written=0 | last_hb=15:52:01 | finished=None
+[15:57:34] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=50/60/61 | rows_written=0 | last_hb=15:52:01 | finished=None
+[15:57:57] stage=scenario_start | scen=Baseline Simulation 1/4 | region=? ? | row=?/? | rows_written=0 | last_hb=15:57:54 | finished=None
+[15:58:27] stage=scenario_start | scen=Baseline Simulation 1/4 | region=? ? | row=?/? | rows_written=0 | last_hb=15:57:54 | finished=None
+[15:58:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=15:58:34 | finished=None
+[15:59:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=15:58:34 | finished=None
+[15:59:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=15:58:34 | finished=None
+[16:00:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=15:58:34 | finished=None
+[16:00:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=15:58:34 | finished=None
+[16:01:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:01:21 | finished=None
+[16:01:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:01:21 | finished=None
+[16:02:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:01:21 | finished=None
+[16:02:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:01:21 | finished=None
+[16:03:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:01:21 | finished=None
+[16:03:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:01:21 | finished=None
+[16:04:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:04:10 | finished=None
+[16:04:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:04:10 | finished=None
+[16:05:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:04:10 | finished=None
+[16:05:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:04:10 | finished=None
+[16:06:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:04:10 | finished=None
+[16:06:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:04:10 | finished=None
+[16:07:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:07:09 | finished=None
+[16:07:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:07:09 | finished=None
+[16:08:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:07:09 | finished=None
+[16:08:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:07:09 | finished=None
+[16:09:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:07:09 | finished=None
+[16:09:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:07:09 | finished=None
+[16:10:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:10:00 | finished=None
+[16:10:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:10:00 | finished=None
+[16:11:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:10:00 | finished=None
+[16:11:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:10:00 | finished=None
+[16:12:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:10:00 | finished=None
+[16:12:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:12:49 | finished=None
+[16:13:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:12:49 | finished=None
+[16:13:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:12:49 | finished=None
+[16:14:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:12:49 | finished=None
+[16:14:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:12:49 | finished=None
+[16:15:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:12:49 | finished=None
+[16:15:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:15:33 | finished=None
+[16:16:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:15:33 | finished=None
+[16:16:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:15:33 | finished=None
+[16:17:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:15:33 | finished=None
+[16:17:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:15:33 | finished=None
+[16:18:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:18:15 | finished=None
+[16:18:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:18:15 | finished=None
+[16:19:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:18:15 | finished=None
+[16:19:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:18:15 | finished=None
+[16:20:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:18:15 | finished=None
+[16:20:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:18:15 | finished=None
+[16:21:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=16:20:58 | finished=None
+[16:21:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=16:20:58 | finished=None
+[16:22:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=16:20:58 | finished=None
+[16:22:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=16:20:58 | finished=None
+[16:23:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=16:20:58 | finished=None
+[16:23:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=16:23:43 | finished=None
+[16:24:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=16:23:43 | finished=None
+[16:24:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=16:23:43 | finished=None
+[16:25:27] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=16:23:43 | finished=None
+[16:25:57] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=16:23:43 | finished=None
+[16:26:27] stage=dry_pushing | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=40/56/56 | rows_written=0 | last_hb=16:26:26 | finished=None
+[16:26:57] stage=scenario_start | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=0 | last_hb=16:26:26 | finished=None
+[16:27:27] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=0 | last_hb=16:27:07 | finished=None
+[16:27:57] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=0 | last_hb=16:27:07 | finished=None
+[16:28:27] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=0 | last_hb=16:27:07 | finished=None
+[16:37:32] stage=scenario_start | scen=Baseline Simulation 1/4 | region=? ? | row=?/? | rows_written=0 | last_hb=16:37:29 | finished=None
+[16:38:02] stage=scenario_start | scen=Baseline Simulation 1/4 | region=? ? | row=?/? | rows_written=0 | last_hb=16:37:29 | finished=None
+[16:38:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=16:38:08 | finished=None
+[16:39:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=16:38:08 | finished=None
+[16:39:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=16:38:08 | finished=None
+[16:40:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=16:38:08 | finished=None
+[16:40:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/60 | rows_written=0 | last_hb=16:38:08 | finished=None
+[16:41:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:40:47 | finished=None
+[16:41:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:40:47 | finished=None
+[16:42:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:40:47 | finished=None
+[16:42:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:40:47 | finished=None
+[16:43:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:40:47 | finished=None
+[16:43:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=0 | last_hb=16:40:47 | finished=None
+[16:44:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:43:33 | finished=None
+[16:44:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:43:33 | finished=None
+[16:45:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:43:33 | finished=None
+[16:45:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:43:33 | finished=None
+[16:46:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=0 | last_hb=16:43:33 | finished=None
+[16:46:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:46:21 | finished=None
+[16:47:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:46:21 | finished=None
+[16:47:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:46:21 | finished=None
+[16:48:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:46:21 | finished=None
+[16:48:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=60/62/57 | rows_written=0 | last_hb=16:46:21 | finished=None
+[16:49:02] stage=dry_pushing | scen=Baseline Simulation 1/4 | region=Laos 4/10 | row=20/57/57 | rows_written=0 | last_hb=16:49:02 | finished=None
+[16:49:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:49:02 | finished=None
+[16:50:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:49:02 | finished=None
+[16:50:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:49:02 | finished=None
+[16:51:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:49:02 | finished=None
+[16:51:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:49:02 | finished=None
+[16:52:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=0 | last_hb=16:49:02 | finished=None
+[16:52:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:52:06 | finished=None
+[16:53:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:52:06 | finished=None
+[16:53:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:52:06 | finished=None
+[16:54:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:52:06 | finished=None
+[16:54:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=0 | last_hb=16:52:06 | finished=None
+[16:55:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:54:47 | finished=None
+[16:55:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:54:47 | finished=None
+[16:56:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:54:47 | finished=None
+[16:56:32] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:54:47 | finished=None
+[16:57:02] stage=dry_region | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=0 | last_hb=16:54:47 | finished=None
+[16:57:33] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:57:27 | finished=None
+[16:58:03] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:57:27 | finished=None
+[16:58:33] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:57:27 | finished=None
+[16:59:03] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:57:27 | finished=None
+[16:59:33] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:57:27 | finished=None
+[17:00:03] stage=dry_region | scen=Baseline Simulation 1/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=0 | last_hb=16:57:27 | finished=None
+[17:00:33] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=17:00:18 | finished=None
+[17:01:03] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=17:00:18 | finished=None
+[17:01:33] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=17:00:18 | finished=None
+[17:02:03] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=17:00:18 | finished=None
+[17:02:33] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=17:00:18 | finished=None
+[17:03:03] stage=dry_region | scen=Baseline Simulation 1/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=0 | last_hb=17:00:18 | finished=None
+[17:03:33] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=17:03:07 | finished=None
+[17:04:03] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=17:03:07 | finished=None
+[17:04:33] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=17:03:07 | finished=None
+[17:05:03] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=17:03:07 | finished=None
+[17:05:33] stage=dry_region | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=0 | last_hb=17:03:07 | finished=None
+[17:06:03] stage=real_pushing | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=40/61/61 | rows_written=100 | last_hb=17:06:01 | finished=None
+[17:06:33] stage=real_pushing | scen=Baseline Simulation 1/4 | region=Philippines 7/10 | row=40/59/59 | rows_written=404 | last_hb=17:06:22 | finished=None
+[17:07:03] stage=real_inject_done | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=17:06:43 | finished=None
+[17:07:33] stage=real_inject_done | scen=Baseline Simulation 1/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=17:06:43 | finished=None
+[17:08:03] stage=scenario_start | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=17:06:43 | finished=None
+[17:08:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:08:18 | finished=None
+[17:09:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:08:18 | finished=None
+[17:09:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:08:18 | finished=None
+[17:10:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:08:18 | finished=None
+[17:10:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:08:18 | finished=None
+[17:11:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:08:18 | finished=None
+[17:11:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:11:30 | finished=None
+[17:12:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:11:30 | finished=None
+[17:12:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:11:30 | finished=None
+[17:13:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:11:30 | finished=None
+[17:13:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:11:30 | finished=None
+[17:14:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:11:30 | finished=None
+[17:14:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:11:30 | finished=None
+[17:15:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:14:43 | finished=None
+[17:15:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:14:43 | finished=None
+[17:16:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:14:43 | finished=None
+[17:16:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:14:43 | finished=None
+[17:17:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:14:43 | finished=None
+[17:17:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:14:43 | finished=None
+[17:18:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:14:43 | finished=None
+[17:18:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:18:06 | finished=None
+[17:19:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:18:06 | finished=None
+[17:19:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:18:06 | finished=None
+[17:20:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:18:06 | finished=None
+[17:20:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:18:06 | finished=None
+[17:21:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:18:06 | finished=None
+[17:21:33] stage=dry_pushing | scen=AMS Target Scenario 2/4 | region=Laos 4/10 | row=40/57/57 | rows_written=595 | last_hb=17:21:30 | finished=None
+[17:22:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:21:30 | finished=None
+[17:22:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:21:30 | finished=None
+[17:23:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:21:30 | finished=None
+[17:23:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:21:30 | finished=None
+[17:24:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:21:30 | finished=None
+[17:24:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:21:30 | finished=None
+[17:25:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=17:24:48 | finished=None
+[17:25:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=17:24:48 | finished=None
+[17:26:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=17:24:48 | finished=None
+[17:26:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=17:24:48 | finished=None
+[17:27:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=17:24:48 | finished=None
+[17:27:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=17:24:48 | finished=None
+[17:28:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=17:24:48 | finished=None
+[17:28:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=17:28:07 | finished=None
+[17:29:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=17:28:07 | finished=None
+[17:29:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=17:28:07 | finished=None
+[17:30:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=17:28:07 | finished=None
+[17:30:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=17:28:07 | finished=None
+[17:31:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=17:28:07 | finished=None
+[17:31:33] stage=dry_pushing | scen=AMS Target Scenario 2/4 | region=Philippines 7/10 | row=10/59/59 | rows_written=595 | last_hb=17:28:07 | finished=None
+[17:32:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=17:31:32 | finished=None
+[17:32:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=17:31:32 | finished=None
+[17:33:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=17:31:32 | finished=None
+[17:33:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=17:31:32 | finished=None
+[17:34:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=17:31:32 | finished=None
+[17:34:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=17:31:32 | finished=None
+[17:35:03] stage=dry_pushing | scen=AMS Target Scenario 2/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=17:34:59 | finished=None
+[17:35:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=17:34:59 | finished=None
+[17:36:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=17:34:59 | finished=None
+[17:36:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=17:34:59 | finished=None
+[17:37:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=17:34:59 | finished=None
+[17:37:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=17:34:59 | finished=None
+[17:38:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=17:34:59 | finished=None
+[17:38:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=17:38:20 | finished=None
+[17:39:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=17:38:20 | finished=None
+[17:39:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=17:38:20 | finished=None
+[17:40:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=17:38:20 | finished=None
+[17:40:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=17:38:20 | finished=None
+[17:41:03] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=17:38:20 | finished=None
+[17:41:33] stage=dry_region | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=17:38:20 | finished=None
+[17:42:03] stage=real_pushing | scen=AMS Target Scenario 2/4 | region=Laos 4/10 | row=20/57/57 | rows_written=595 | last_hb=17:42:01 | finished=None
+[17:42:33] stage=real_pushing | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=30/56/56 | rows_written=595 | last_hb=17:42:32 | finished=None
+[17:43:03] stage=real_inject_done | scen=AMS Target Scenario 2/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=17:42:32 | finished=None
+[17:43:33] stage=scenario_start | scen=Regional Aspiration Scenario 3/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=17:42:32 | finished=None
+[17:44:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:43:56 | finished=None
+[17:44:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:43:56 | finished=None
+[17:45:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:43:56 | finished=None
+[17:45:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:43:56 | finished=None
+[17:46:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:43:56 | finished=None
+[17:46:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:43:56 | finished=None
+[17:47:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=17:43:56 | finished=None
+[17:47:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:47:26 | finished=None
+[17:48:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:47:26 | finished=None
+[17:48:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:47:26 | finished=None
+[17:49:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:47:26 | finished=None
+[17:49:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:47:26 | finished=None
+[17:50:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:47:26 | finished=None
+[17:50:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=17:47:26 | finished=None
+[17:51:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:50:52 | finished=None
+[17:51:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:50:52 | finished=None
+[17:52:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:50:52 | finished=None
+[17:52:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:50:52 | finished=None
+[17:53:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:50:52 | finished=None
+[17:53:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:50:52 | finished=None
+[17:54:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=17:50:52 | finished=None
+[17:54:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:54:09 | finished=None
+[17:55:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:54:09 | finished=None
+[17:55:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:54:09 | finished=None
+[17:56:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:54:09 | finished=None
+[17:56:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:54:09 | finished=None
+[17:57:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=17:54:09 | finished=None
+[17:57:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:57:19 | finished=None
+[17:58:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:57:19 | finished=None
+[17:58:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:57:19 | finished=None
+[17:59:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:57:19 | finished=None
+[17:59:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:57:19 | finished=None
+[18:00:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=17:57:19 | finished=None
+[18:00:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:00:28 | finished=None
+[18:01:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:00:28 | finished=None
+[18:01:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:00:28 | finished=None
+[18:02:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:00:28 | finished=None
+[18:02:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:00:28 | finished=None
+[18:03:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:00:28 | finished=None
+[18:03:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:00:28 | finished=None
+[18:04:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:03:39 | finished=None
+[18:04:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:03:39 | finished=None
+[18:05:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:03:39 | finished=None
+[18:05:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:03:39 | finished=None
+[18:06:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:03:39 | finished=None
+[18:06:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:03:39 | finished=None
+[18:07:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:06:46 | finished=None
+[18:07:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:06:46 | finished=None
+[18:08:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:06:46 | finished=None
+[18:08:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:06:46 | finished=None
+[18:09:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:06:46 | finished=None
+[18:09:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:06:46 | finished=None
+[18:10:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:09:55 | finished=None
+[18:10:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:09:55 | finished=None
+[18:11:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:09:55 | finished=None
+[18:11:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:09:55 | finished=None
+[18:12:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:09:55 | finished=None
+[18:12:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:09:55 | finished=None
+[18:13:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:09:55 | finished=None
+[18:13:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:13:10 | finished=None
+[18:14:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:13:10 | finished=None
+[18:14:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:13:10 | finished=None
+[18:15:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:13:10 | finished=None
+[18:15:33] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:13:10 | finished=None
+[18:16:03] stage=dry_region | scen=Regional Aspiration Scenario 3/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:13:10 | finished=None
+[18:16:33] stage=real_pushing | scen=Regional Aspiration Scenario 3/4 | region=Indonesia 3/10 | row=30/62/62 | rows_written=595 | last_hb=18:16:29 | finished=None
+[18:17:03] stage=real_pushing | scen=Regional Aspiration Scenario 3/4 | region=Vietnam 10/10 | row=10/56/56 | rows_written=595 | last_hb=18:17:00 | finished=None
+[18:17:33] stage=real_inject_done | scen=Regional Aspiration Scenario 3/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=18:17:00 | finished=None
+[18:18:03] stage=scenario_start | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=18:17:00 | finished=None
+[18:18:33] stage=dry_region | scen=Current Accounts 4/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=18:18:23 | finished=None
+[18:19:03] stage=dry_region | scen=Current Accounts 4/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=18:18:23 | finished=None
+[18:19:33] stage=dry_region | scen=Current Accounts 4/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=18:18:23 | finished=None
+[18:20:03] stage=dry_region | scen=Current Accounts 4/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=18:18:23 | finished=None
+[18:20:33] stage=dry_region | scen=Current Accounts 4/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=18:18:23 | finished=None
+[18:21:03] stage=dry_region | scen=Current Accounts 4/4 | region=Brunei 1/10 | row=50/56/60 | rows_written=595 | last_hb=18:18:23 | finished=None
+[18:21:33] stage=dry_region | scen=Current Accounts 4/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=18:21:27 | finished=None
+[18:22:03] stage=dry_region | scen=Current Accounts 4/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=18:21:27 | finished=None
+[18:22:33] stage=dry_region | scen=Current Accounts 4/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=18:21:27 | finished=None
+[18:23:03] stage=dry_region | scen=Current Accounts 4/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=18:21:27 | finished=None
+[18:23:33] stage=dry_region | scen=Current Accounts 4/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=18:21:27 | finished=None
+[18:24:03] stage=dry_region | scen=Current Accounts 4/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=18:21:27 | finished=None
+[18:24:33] stage=dry_region | scen=Current Accounts 4/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=18:21:27 | finished=None
+[18:25:03] stage=dry_region | scen=Current Accounts 4/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=18:24:38 | finished=None
+[18:25:33] stage=dry_region | scen=Current Accounts 4/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=18:24:38 | finished=None
+[18:26:03] stage=dry_region | scen=Current Accounts 4/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=18:24:38 | finished=None
+[18:26:33] stage=dry_region | scen=Current Accounts 4/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=18:24:38 | finished=None
+[18:27:03] stage=dry_region | scen=Current Accounts 4/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=18:24:38 | finished=None
+[18:27:33] stage=dry_region | scen=Current Accounts 4/4 | region=Indonesia 3/10 | row=60/61/62 | rows_written=595 | last_hb=18:24:38 | finished=None
+[18:28:03] stage=dry_region | scen=Current Accounts 4/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=18:27:51 | finished=None
+[18:28:33] stage=dry_region | scen=Current Accounts 4/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=18:27:51 | finished=None
+[18:29:03] stage=dry_region | scen=Current Accounts 4/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=18:27:51 | finished=None
+[18:29:33] stage=dry_region | scen=Current Accounts 4/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=18:27:51 | finished=None
+[18:30:03] stage=dry_region | scen=Current Accounts 4/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=18:27:51 | finished=None
+[18:30:33] stage=dry_region | scen=Current Accounts 4/4 | region=Laos 4/10 | row=60/62/57 | rows_written=595 | last_hb=18:27:51 | finished=None
+[18:31:03] stage=dry_region | scen=Current Accounts 4/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=18:30:57 | finished=None
+[18:31:33] stage=dry_region | scen=Current Accounts 4/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=18:30:57 | finished=None
+[18:32:03] stage=dry_region | scen=Current Accounts 4/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=18:30:57 | finished=None
+[18:32:33] stage=dry_region | scen=Current Accounts 4/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=18:30:57 | finished=None
+[18:33:03] stage=dry_region | scen=Current Accounts 4/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=18:30:57 | finished=None
+[18:33:33] stage=dry_region | scen=Current Accounts 4/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=18:30:57 | finished=None
+[18:34:03] stage=dry_region | scen=Current Accounts 4/4 | region=Malaysia 5/10 | row=50/57/65 | rows_written=595 | last_hb=18:30:57 | finished=None
+[18:34:33] stage=dry_region | scen=Current Accounts 4/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:34:06 | finished=None
+[18:35:03] stage=dry_region | scen=Current Accounts 4/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:34:06 | finished=None
+[18:35:33] stage=dry_region | scen=Current Accounts 4/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:34:06 | finished=None
+[18:36:03] stage=dry_region | scen=Current Accounts 4/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:34:06 | finished=None
+[18:36:33] stage=dry_region | scen=Current Accounts 4/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:34:06 | finished=None
+[18:37:03] stage=dry_region | scen=Current Accounts 4/4 | region=Myanmar 6/10 | row=60/65/59 | rows_written=595 | last_hb=18:34:06 | finished=None
+[18:37:33] stage=dry_region | scen=Current Accounts 4/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:37:14 | finished=None
+[18:38:03] stage=dry_region | scen=Current Accounts 4/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:37:14 | finished=None
+[18:38:33] stage=dry_region | scen=Current Accounts 4/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:37:14 | finished=None
+[18:39:03] stage=dry_region | scen=Current Accounts 4/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:37:14 | finished=None
+[18:39:33] stage=dry_region | scen=Current Accounts 4/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:37:14 | finished=None
+[18:40:03] stage=dry_region | scen=Current Accounts 4/4 | region=Philippines 7/10 | row=50/59/59 | rows_written=595 | last_hb=18:37:14 | finished=None
+[18:40:33] stage=dry_region | scen=Current Accounts 4/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:40:21 | finished=None
+[18:41:03] stage=dry_region | scen=Current Accounts 4/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:40:21 | finished=None
+[18:41:33] stage=dry_region | scen=Current Accounts 4/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:40:21 | finished=None
+[18:42:03] stage=dry_region | scen=Current Accounts 4/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:40:21 | finished=None
+[18:42:33] stage=dry_region | scen=Current Accounts 4/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:40:21 | finished=None
+[18:43:03] stage=dry_region | scen=Current Accounts 4/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:40:21 | finished=None
+[18:43:33] stage=dry_region | scen=Current Accounts 4/4 | region=Singapore 8/10 | row=50/59/59 | rows_written=595 | last_hb=18:40:21 | finished=None
+[18:44:03] stage=dry_region | scen=Current Accounts 4/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:43:35 | finished=None
+[18:44:33] stage=dry_region | scen=Current Accounts 4/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:43:35 | finished=None
+[18:45:03] stage=dry_region | scen=Current Accounts 4/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:43:35 | finished=None
+[18:45:33] stage=dry_region | scen=Current Accounts 4/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:43:35 | finished=None
+[18:46:03] stage=dry_region | scen=Current Accounts 4/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:43:35 | finished=None
+[18:46:33] stage=dry_region | scen=Current Accounts 4/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:43:35 | finished=None
+[18:47:03] stage=dry_region | scen=Current Accounts 4/4 | region=Thailand 9/10 | row=50/59/63 | rows_written=595 | last_hb=18:43:35 | finished=None
+[18:47:33] stage=dry_region | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:47:18 | finished=None
+[18:48:03] stage=dry_region | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:47:18 | finished=None
+[18:48:33] stage=dry_region | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:47:18 | finished=None
+[18:49:03] stage=dry_region | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:47:18 | finished=None
+[18:49:33] stage=dry_region | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:47:18 | finished=None
+[18:50:03] stage=dry_region | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:47:18 | finished=None
+[18:50:33] stage=dry_region | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:47:18 | finished=None
+[18:51:03] stage=dry_region | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=60/63/56 | rows_written=595 | last_hb=18:47:18 | finished=None
+[18:51:33] stage=real_region | scen=Current Accounts 4/4 | region=Cambodia 2/10 | row=60/60/61 | rows_written=595 | last_hb=18:51:24 | finished=None
+[18:52:03] stage=real_pushing | scen=Current Accounts 4/4 | region=Myanmar 6/10 | row=40/59/59 | rows_written=595 | last_hb=18:51:56 | finished=None
+[18:52:33] stage=real_inject_done | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=18:52:17 | finished=None
+[18:53:03] stage=real_inject_done | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=18:52:17 | finished=None
+[18:53:33] stage=real_inject_done | scen=Current Accounts 4/4 | region=Vietnam 10/10 | row=50/56/56 | rows_written=595 | last_hb=18:52:28 | finished=2026-05-19T18:53:12
+[19:15:41] stage=scenario_start | scen=Baseline Simulation 1/4 | region=? ? | row=?/? | rows_written=0 | last_hb=19:15:37 | finished=None
+[19:16:11] stage=scenario_start | scen=Baseline Simulation 1/4 | region=? ? | row=?/? | rows_written=0 | last_hb=19:15:37 | finished=None
+[19:16:41] stage=real_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/56 | rows_written=0 | last_hb=19:16:23 | finished=None
+[19:17:11] stage=real_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/56 | rows_written=0 | last_hb=19:16:23 | finished=None
+[19:17:41] stage=real_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/56 | rows_written=0 | last_hb=19:16:23 | finished=None
+[19:18:11] stage=real_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/56 | rows_written=0 | last_hb=19:16:23 | finished=None
+[19:18:41] stage=real_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/56 | rows_written=0 | last_hb=19:16:23 | finished=None
+[19:19:11] stage=real_region | scen=Baseline Simulation 1/4 | region=Brunei 1/10 | row=?/56 | rows_written=0 | last_hb=19:16:23 | finished=None
+[19:19:41] stage=real_region | scen=Baseline Simulation 1/4 | region=Cambodia 2/10 | row=50/56/57 | rows_written=56 | last_hb=19:19:19 | finished=None

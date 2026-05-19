@@ -1,0 +1,20 @@
+{
+  "op": "inject_transport",
+  "started": "2026-05-19T19:15:37",
+  "progress_file": "c:\\Users\\ThinkPad\\Desktop\\Py YY\\NEMO_read\\inject\\transport\\_progress_inject_transport_20260519_191537.json",
+  "current": {
+    "stage": "real_region",
+    "area": "aeo9_v0.46",
+    "scenarios_total": 4,
+    "scenario": "Baseline Simulation",
+    "scenario_idx": "1/4",
+    "region": "Cambodia",
+    "region_idx": "2/10",
+    "rows_in_region": 57,
+    "rows_written": 56,
+    "row_in_region": "50/56"
+  },
+  "rows_total": 56,
+  "last_heartbeat": "19:19:19",
+  "finished": null
+}

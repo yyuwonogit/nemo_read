@@ -1,0 +1,2112 @@
+Country,ISO3,Year,vehicle_type,sales_count,source_method
+Brunei Darussalam,BRN,2006,2W,81.0,observed
+Brunei Darussalam,BRN,2007,2W,85.0,observed
+Brunei Darussalam,BRN,2008,2W,89.0,observed
+Brunei Darussalam,BRN,2009,2W,92.0,observed
+Brunei Darussalam,BRN,2010,2W,96.0,observed
+Brunei Darussalam,BRN,2011,2W,101.0,observed
+Brunei Darussalam,BRN,2012,2W,105.0,observed
+Brunei Darussalam,BRN,2013,2W,109.0,observed
+Brunei Darussalam,BRN,2014,2W,114.0,observed
+Brunei Darussalam,BRN,2015,2W,119.0,observed
+Brunei Darussalam,BRN,2016,2W,124.0,observed
+Brunei Darussalam,BRN,2017,2W,130.0,observed
+Brunei Darussalam,BRN,2018,2W,135.0,observed
+Brunei Darussalam,BRN,2019,2W,141.0,observed
+Brunei Darussalam,BRN,2020,2W,150.0,observed
+Brunei Darussalam,BRN,2021,2W,158.0,observed
+Brunei Darussalam,BRN,2022,2W,165.0,observed
+Brunei Darussalam,BRN,2023,2W,173.0,observed
+Brunei Darussalam,BRN,2024,2W,181.0,observed
+Brunei Darussalam,BRN,2025,2W,1940.1943064728937,stock_flow_gompertz
+Brunei Darussalam,BRN,2026,2W,127.09077622024051,stock_flow_gompertz
+Brunei Darussalam,BRN,2027,2W,131.76899544568005,stock_flow_gompertz
+Brunei Darussalam,BRN,2028,2W,134.684272672901,stock_flow_gompertz
+Brunei Darussalam,BRN,2029,2W,139.3903786818555,stock_flow_gompertz
+Brunei Darussalam,BRN,2030,2W,144.1112377530335,stock_flow_gompertz
+Brunei Darussalam,BRN,2031,2W,148.9116380181904,stock_flow_gompertz
+Brunei Darussalam,BRN,2032,2W,155.5053209458597,stock_flow_gompertz
+Brunei Darussalam,BRN,2033,2W,164.11054874566844,stock_flow_gompertz
+Brunei Darussalam,BRN,2034,2W,205.83620622163696,stock_flow_gompertz
+Brunei Darussalam,BRN,2035,2W,306.2822838347097,stock_flow_gompertz
+Brunei Darussalam,BRN,2036,2W,289.26885319189523,stock_flow_gompertz
+Brunei Darussalam,BRN,2037,2W,307.7338448395808,stock_flow_gompertz
+Brunei Darussalam,BRN,2038,2W,325.3033349772759,stock_flow_gompertz
+Brunei Darussalam,BRN,2039,2W,324.5189586166075,stock_flow_gompertz
+Brunei Darussalam,BRN,2040,2W,341.21803162172546,stock_flow_gompertz
+Brunei Darussalam,BRN,2041,2W,339.6018121403463,stock_flow_gompertz
+Brunei Darussalam,BRN,2042,2W,338.1709086410133,stock_flow_gompertz
+Brunei Darussalam,BRN,2043,2W,284.83286222105016,stock_flow_gompertz
+Brunei Darussalam,BRN,2044,2W,272.1566781630927,stock_flow_gompertz
+Brunei Darussalam,BRN,2045,2W,264.34190122644486,stock_flow_gompertz
+Brunei Darussalam,BRN,2046,2W,255.77166462030848,stock_flow_gompertz
+Brunei Darussalam,BRN,2047,2W,223.98783452197316,stock_flow_gompertz
+Brunei Darussalam,BRN,2048,2W,226.69477683224292,stock_flow_gompertz
+Brunei Darussalam,BRN,2049,2W,236.833127931724,stock_flow_gompertz
+Brunei Darussalam,BRN,2050,2W,248.84905706776,stock_flow_gompertz
+Brunei Darussalam,BRN,2051,2W,265.2494686206824,stock_flow_gompertz
+Brunei Darussalam,BRN,2052,2W,280.79546748641496,stock_flow_gompertz
+Brunei Darussalam,BRN,2053,2W,289.70862367092104,stock_flow_gompertz
+Brunei Darussalam,BRN,2054,2W,296.971490626594,stock_flow_gompertz
+Brunei Darussalam,BRN,2055,2W,301.20230644075446,stock_flow_gompertz
+Brunei Darussalam,BRN,2056,2W,301.01514766854643,stock_flow_gompertz
+Brunei Darussalam,BRN,2057,2W,295.99833694561585,stock_flow_gompertz
+Brunei Darussalam,BRN,2058,2W,289.6898192802837,stock_flow_gompertz
+Brunei Darussalam,BRN,2059,2W,282.59588704286125,stock_flow_gompertz
+Brunei Darussalam,BRN,2060,2W,275.06468897917966,stock_flow_gompertz
+Brunei Darussalam,BRN,2006,Bus,50.0,observed
+Brunei Darussalam,BRN,2007,Bus,32.670888075617626,observed
+Brunei Darussalam,BRN,2008,Bus,33.65101471788616,observed
+Brunei Darussalam,BRN,2009,Bus,34.66054515942274,observed
+Brunei Darussalam,BRN,2010,Bus,35.70036151420542,observed
+Brunei Darussalam,BRN,2011,Bus,36.771372359631584,observed
+Brunei Darussalam,BRN,2012,Bus,37.874513530420536,observed
+Brunei Darussalam,BRN,2013,Bus,39.01074893633315,observed
+Brunei Darussalam,BRN,2014,Bus,40.18107140442315,observed
+Brunei Darussalam,BRN,2015,Bus,41.38650354655584,observed
+Brunei Darussalam,BRN,2016,Bus,42.62809865295252,observed
+Brunei Darussalam,BRN,2017,Bus,43.9069416125411,observed
+Brunei Darussalam,BRN,2018,Bus,45.22414986091733,observed
+Brunei Darussalam,BRN,2019,Bus,46.58087435674485,observed
+Brunei Darussalam,BRN,2020,Bus,50.9783005874472,observed
+Brunei Darussalam,BRN,2021,Bus,53.417649605070615,observed
+Brunei Darussalam,BRN,2022,Bus,55.90017909322274,observed
+Brunei Darussalam,BRN,2023,Bus,58.42718446601942,observed
+Brunei Darussalam,BRN,2024,Bus,61.0,observed
+Brunei Darussalam,BRN,2025,Bus,1593.452075926276,stock_flow_fe_ols
+Brunei Darussalam,BRN,2026,Bus,101.24053339382226,stock_flow_fe_ols
+Brunei Darussalam,BRN,2027,Bus,104.4090640626432,stock_flow_fe_ols
+Brunei Darussalam,BRN,2028,Bus,105.6303851733287,stock_flow_fe_ols
+Brunei Darussalam,BRN,2029,Bus,108.33133518578552,stock_flow_fe_ols
+Brunei Darussalam,BRN,2030,Bus,81.55729981660988,stock_flow_fe_ols
+Brunei Darussalam,BRN,2031,Bus,79.71250243305644,stock_flow_fe_ols
+Brunei Darussalam,BRN,2032,Bus,83.80021339855466,stock_flow_fe_ols
+Brunei Darussalam,BRN,2033,Bus,85.08794974750845,stock_flow_fe_ols
+Brunei Darussalam,BRN,2034,Bus,119.10493547739998,stock_flow_fe_ols
+Brunei Darussalam,BRN,2035,Bus,211.30785629385173,stock_flow_fe_ols
+Brunei Darussalam,BRN,2036,Bus,190.0230496128252,stock_flow_fe_ols
+Brunei Darussalam,BRN,2037,Bus,215.4308240290443,stock_flow_fe_ols
+Brunei Darussalam,BRN,2038,Bus,235.4146064864317,stock_flow_fe_ols
+Brunei Darussalam,BRN,2039,Bus,240.4347530394789,stock_flow_fe_ols
+Brunei Darussalam,BRN,2040,Bus,258.31247826652,stock_flow_fe_ols
+Brunei Darussalam,BRN,2041,Bus,262.273832648144,stock_flow_fe_ols
+Brunei Darussalam,BRN,2042,Bus,259.80726533391226,stock_flow_fe_ols
+Brunei Darussalam,BRN,2043,Bus,223.55751644610015,stock_flow_fe_ols
+Brunei Darussalam,BRN,2044,Bus,214.3998970940033,stock_flow_fe_ols
+Brunei Darussalam,BRN,2045,Bus,208.83869651787563,stock_flow_fe_ols
+Brunei Darussalam,BRN,2046,Bus,195.33560632014223,stock_flow_fe_ols
+Brunei Darussalam,BRN,2047,Bus,173.90506796307773,stock_flow_fe_ols
+Brunei Darussalam,BRN,2048,Bus,168.95378678155157,stock_flow_fe_ols
+Brunei Darussalam,BRN,2049,Bus,183.4590467223029,stock_flow_fe_ols
+Brunei Darussalam,BRN,2050,Bus,193.97070532419048,stock_flow_fe_ols
+Brunei Darussalam,BRN,2051,Bus,206.3925794803681,stock_flow_fe_ols
+Brunei Darussalam,BRN,2052,Bus,221.32916766735707,stock_flow_fe_ols
+Brunei Darussalam,BRN,2053,Bus,231.57809443561743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2054,Bus,240.9359848928393,stock_flow_fe_ols
+Brunei Darussalam,BRN,2055,Bus,247.75366533239776,stock_flow_fe_ols
+Brunei Darussalam,BRN,2056,Bus,250.65277335385872,stock_flow_fe_ols
+Brunei Darussalam,BRN,2057,Bus,249.32011373901375,stock_flow_fe_ols
+Brunei Darussalam,BRN,2058,Bus,246.43580851455363,stock_flow_fe_ols
+Brunei Darussalam,BRN,2059,Bus,242.7961530193138,stock_flow_fe_ols
+Brunei Darussalam,BRN,2060,Bus,238.41469055811692,stock_flow_fe_ols
+Brunei Darussalam,BRN,2006,LDV,3930.612040212753,observed
+Brunei Darussalam,BRN,2007,LDV,4044.550401419136,observed
+Brunei Darussalam,BRN,2008,LDV,4161.8769134617105,observed
+Brunei Darussalam,BRN,2009,LDV,4281.693220865562,observed
+Brunei Darussalam,BRN,2010,LDV,4406.104017491528,observed
+Brunei Darussalam,BRN,2011,LDV,4534.2171380162745,observed
+Brunei Darussalam,BRN,2012,LDV,4665.143652156763,observed
+Brunei Darussalam,BRN,2013,LDV,4800.997961721466,observed
+Brunei Darussalam,BRN,2014,LDV,4940.89790057311,observed
+Brunei Darussalam,BRN,2015,LDV,5084.964837590303,observed
+Brunei Darussalam,BRN,2016,LDV,5232.323782718013,observed
+Brunei Darussalam,BRN,2017,LDV,5385.103496199553,observed
+Brunei Darussalam,BRN,2018,LDV,5542.43660108554,observed
+Brunei Darussalam,BRN,2019,LDV,5705.459699118107,observed
+Brunei Darussalam,BRN,2020,LDV,5873.313490091649,observed
+Brunei Darussalam,BRN,2021,LDV,6046.1428947944,observed
+Brunei Darussalam,BRN,2022,LDV,6223.097181638232,observed
+Brunei Darussalam,BRN,2023,LDV,6406.330097087379,observed
+Brunei Darussalam,BRN,2024,LDV,6595.0,observed
+Brunei Darussalam,BRN,2025,LDV,207560.29239423916,stock_flow_gompertz
+Brunei Darussalam,BRN,2026,LDV,6784.556801012368,stock_flow_gompertz
+Brunei Darussalam,BRN,2027,LDV,6803.690537550545,stock_flow_gompertz
+Brunei Darussalam,BRN,2028,LDV,6726.345392265997,stock_flow_gompertz
+Brunei Darussalam,BRN,2029,LDV,6846.049919689831,stock_flow_gompertz
+Brunei Darussalam,BRN,2030,LDV,6946.970816815388,stock_flow_gompertz
+Brunei Darussalam,BRN,2031,LDV,7041.067045763659,stock_flow_gompertz
+Brunei Darussalam,BRN,2032,LDV,7326.437641660159,stock_flow_gompertz
+Brunei Darussalam,BRN,2033,LDV,7817.472855355474,stock_flow_gompertz
+Brunei Darussalam,BRN,2034,LDV,12103.582276387198,stock_flow_gompertz
+Brunei Darussalam,BRN,2035,LDV,23246.22810136189,stock_flow_gompertz
+Brunei Darussalam,BRN,2036,LDV,21337.87810295197,stock_flow_gompertz
+Brunei Darussalam,BRN,2037,LDV,23414.10630619817,stock_flow_gompertz
+Brunei Darussalam,BRN,2038,LDV,25473.872677281037,stock_flow_gompertz
+Brunei Darussalam,BRN,2039,LDV,25521.711018192407,stock_flow_gompertz
+Brunei Darussalam,BRN,2040,LDV,27577.853810239467,stock_flow_gompertz
+Brunei Darussalam,BRN,2041,LDV,27629.11188849929,stock_flow_gompertz
+Brunei Darussalam,BRN,2042,LDV,27720.382824382454,stock_flow_gompertz
+Brunei Darussalam,BRN,2043,LDV,21891.9884054946,stock_flow_gompertz
+Brunei Darussalam,BRN,2044,LDV,20516.997900199374,stock_flow_gompertz
+Brunei Darussalam,BRN,2045,LDV,19664.6529608657,stock_flow_gompertz
+Brunei Darussalam,BRN,2046,LDV,18696.06688492652,stock_flow_gompertz
+Brunei Darussalam,BRN,2047,LDV,15034.327086539706,stock_flow_gompertz
+Brunei Darussalam,BRN,2048,LDV,15178.23076955008,stock_flow_gompertz
+Brunei Darussalam,BRN,2049,LDV,16181.67308562866,stock_flow_gompertz
+Brunei Darussalam,BRN,2050,LDV,17435.446716752078,stock_flow_gompertz
+Brunei Darussalam,BRN,2051,LDV,19097.799989434017,stock_flow_gompertz
+Brunei Darussalam,BRN,2052,LDV,20794.668669208942,stock_flow_gompertz
+Brunei Darussalam,BRN,2053,LDV,21794.23229828762,stock_flow_gompertz
+Brunei Darussalam,BRN,2054,LDV,22644.252852841517,stock_flow_gompertz
+Brunei Darussalam,BRN,2055,LDV,23184.079447598662,stock_flow_gompertz
+Brunei Darussalam,BRN,2056,LDV,23244.972144305764,stock_flow_gompertz
+Brunei Darussalam,BRN,2057,LDV,22763.071918273286,stock_flow_gompertz
+Brunei Darussalam,BRN,2058,LDV,22123.6917502248,stock_flow_gompertz
+Brunei Darussalam,BRN,2059,LDV,21378.871590190043,stock_flow_gompertz
+Brunei Darussalam,BRN,2060,LDV,20560.868903975817,stock_flow_gompertz
+Brunei Darussalam,BRN,2006,Truck,175.6309876772684,observed
+Brunei Darussalam,BRN,2007,Truck,180.8999173075865,observed
+Brunei Darussalam,BRN,2008,Truck,186.3269148268141,observed
+Brunei Darussalam,BRN,2009,Truck,191.9167222716185,observed
+Brunei Darussalam,BRN,2010,Truck,197.67422393976705,observed
+Brunei Darussalam,BRN,2011,Truck,203.6044506579601,observed
+Brunei Darussalam,BRN,2012,Truck,209.7125841776989,observed
+Brunei Darussalam,BRN,2013,Truck,216.00396170302983,observed
+Brunei Darussalam,BRN,2014,Truck,222.4840805541208,observed
+Brunei Darussalam,BRN,2015,Truck,229.1586029707444,observed
+Brunei Darussalam,BRN,2016,Truck,236.0333610598667,observed
+Brunei Darussalam,BRN,2017,Truck,243.11436189166272,observed
+Brunei Darussalam,BRN,2018,Truck,250.40779274841265,observed
+Brunei Darussalam,BRN,2019,Truck,257.920026530865,observed
+Brunei Darussalam,BRN,2020,Truck,265.65762732679093,observed
+Brunei Darussalam,BRN,2021,Truck,273.6273561465947,observed
+Brunei Darussalam,BRN,2022,Truck,286.83617683099254,observed
+Brunei Darussalam,BRN,2023,Truck,296.2912621359223,observed
+Brunei Darussalam,BRN,2024,Truck,306.0,observed
+Brunei Darussalam,BRN,2025,Truck,4508.621846168327,stock_flow_fe_ols
+Brunei Darussalam,BRN,2026,Truck,341.671361209963,stock_flow_fe_ols
+Brunei Darussalam,BRN,2027,Truck,361.0373672734802,stock_flow_fe_ols
+Brunei Darussalam,BRN,2028,Truck,381.50104271591175,stock_flow_fe_ols
+Brunei Darussalam,BRN,2029,Truck,403.1246036731743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2030,Truck,403.1246036731743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2031,Truck,403.1246036731743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2032,Truck,403.1246036731743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2033,Truck,403.1246036731743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2034,Truck,403.1246036731743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2035,Truck,403.1246036731743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2036,Truck,403.1246036731743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2037,Truck,403.1246036731743,stock_flow_fe_ols
+Brunei Darussalam,BRN,2038,Truck,681.8891492754647,stock_flow_fe_ols
+Brunei Darussalam,BRN,2039,Truck,721.7119986919151,stock_flow_fe_ols
+Brunei Darussalam,BRN,2040,Truck,775.4067075271087,stock_flow_fe_ols
+Brunei Darussalam,BRN,2041,Truck,785.9925763941428,stock_flow_fe_ols
+Brunei Darussalam,BRN,2042,Truck,791.646684555858,stock_flow_fe_ols
+Brunei Darussalam,BRN,2043,Truck,679.432214763111,stock_flow_fe_ols
+Brunei Darussalam,BRN,2044,Truck,645.477358883988,stock_flow_fe_ols
+Brunei Darussalam,BRN,2045,Truck,610.3505491012911,stock_flow_fe_ols
+Brunei Darussalam,BRN,2046,Truck,567.9687118413603,stock_flow_fe_ols
+Brunei Darussalam,BRN,2047,Truck,478.0439042429789,stock_flow_fe_ols
+Brunei Darussalam,BRN,2048,Truck,468.4604026864581,stock_flow_fe_ols
+Brunei Darussalam,BRN,2049,Truck,484.42479199960144,stock_flow_fe_ols
+Brunei Darussalam,BRN,2050,Truck,500.62110313829726,stock_flow_fe_ols
+Brunei Darussalam,BRN,2051,Truck,526.7572043865603,stock_flow_fe_ols
+Brunei Darussalam,BRN,2052,Truck,558.659685492772,stock_flow_fe_ols
+Brunei Darussalam,BRN,2053,Truck,585.925600701772,stock_flow_fe_ols
+Brunei Darussalam,BRN,2054,Truck,613.3057533320552,stock_flow_fe_ols
+Brunei Darussalam,BRN,2055,Truck,636.2790561074135,stock_flow_fe_ols
+Brunei Darussalam,BRN,2056,Truck,645.473329909094,stock_flow_fe_ols
+Brunei Darussalam,BRN,2057,Truck,646.7912593074443,stock_flow_fe_ols
+Brunei Darussalam,BRN,2058,Truck,640.0726038152461,stock_flow_fe_ols
+Brunei Darussalam,BRN,2059,Truck,631.3967872226003,stock_flow_fe_ols
+Brunei Darussalam,BRN,2060,Truck,612.9636524244488,stock_flow_fe_ols
+Cambodia,KHM,2006,2W,84915.0,observed
+Cambodia,KHM,2007,2W,92819.0,observed
+Cambodia,KHM,2008,2W,101460.0,observed
+Cambodia,KHM,2009,2W,110905.0,observed
+Cambodia,KHM,2010,2W,121228.0,observed
+Cambodia,KHM,2011,2W,132513.0,observed
+Cambodia,KHM,2012,2W,144848.0,observed
+Cambodia,KHM,2013,2W,158331.0,observed
+Cambodia,KHM,2014,2W,173070.0,observed
+Cambodia,KHM,2015,2W,189181.0,observed
+Cambodia,KHM,2016,2W,206790.0,observed
+Cambodia,KHM,2017,2W,226040.0,observed
+Cambodia,KHM,2018,2W,247080.0,observed
+Cambodia,KHM,2019,2W,270080.0,observed
+Cambodia,KHM,2020,2W,295223.0,observed
+Cambodia,KHM,2021,2W,322704.0,observed
+Cambodia,KHM,2022,2W,352743.0,observed
+Cambodia,KHM,2023,2W,385578.0,observed
+Cambodia,KHM,2024,2W,421469.0,observed
+Cambodia,KHM,2025,2W,2315902.326713101,stock_flow_gompertz
+Cambodia,KHM,2026,2W,538257.4853896685,stock_flow_gompertz
+Cambodia,KHM,2027,2W,533912.7762460662,stock_flow_gompertz
+Cambodia,KHM,2028,2W,522758.4937728429,stock_flow_gompertz
+Cambodia,KHM,2029,2W,508853.2550627431,stock_flow_gompertz
+Cambodia,KHM,2030,2W,265009.39124204125,stock_flow_gompertz
+Cambodia,KHM,2031,2W,385410.5532304719,stock_flow_gompertz
+Cambodia,KHM,2032,2W,404837.0384405488,stock_flow_gompertz
+Cambodia,KHM,2033,2W,427731.6877981089,stock_flow_gompertz
+Cambodia,KHM,2034,2W,487525.3418543767,stock_flow_gompertz
+Cambodia,KHM,2035,2W,612912.0070810905,stock_flow_gompertz
+Cambodia,KHM,2036,2W,622026.021015699,stock_flow_gompertz
+Cambodia,KHM,2037,2W,663808.2637970485,stock_flow_gompertz
+Cambodia,KHM,2038,2W,703414.672732017,stock_flow_gompertz
+Cambodia,KHM,2039,2W,717381.4517504787,stock_flow_gompertz
+Cambodia,KHM,2040,2W,736775.0336575937,stock_flow_gompertz
+Cambodia,KHM,2041,2W,742409.6087419419,stock_flow_gompertz
+Cambodia,KHM,2042,2W,745537.5070248079,stock_flow_gompertz
+Cambodia,KHM,2043,2W,690823.2173742838,stock_flow_gompertz
+Cambodia,KHM,2044,2W,675199.2548747733,stock_flow_gompertz
+Cambodia,KHM,2045,2W,661417.6866857521,stock_flow_gompertz
+Cambodia,KHM,2046,2W,643559.0627153367,stock_flow_gompertz
+Cambodia,KHM,2047,2W,606190.9806985129,stock_flow_gompertz
+Cambodia,KHM,2048,2W,610735.2044916507,stock_flow_gompertz
+Cambodia,KHM,2049,2W,622859.626202913,stock_flow_gompertz
+Cambodia,KHM,2050,2W,639224.1555736605,stock_flow_gompertz
+Cambodia,KHM,2051,2W,663674.7165453285,stock_flow_gompertz
+Cambodia,KHM,2052,2W,691443.5569335911,stock_flow_gompertz
+Cambodia,KHM,2053,2W,710668.0454178974,stock_flow_gompertz
+Cambodia,KHM,2054,2W,726745.9737366922,stock_flow_gompertz
+Cambodia,KHM,2055,2W,738130.292080015,stock_flow_gompertz
+Cambodia,KHM,2056,2W,742898.2723255958,stock_flow_gompertz
+Cambodia,KHM,2057,2W,740578.3387665134,stock_flow_gompertz
+Cambodia,KHM,2058,2W,735548.0053095091,stock_flow_gompertz
+Cambodia,KHM,2059,2W,728387.8896049876,stock_flow_gompertz
+Cambodia,KHM,2060,2W,719981.6083593387,stock_flow_gompertz
+Cambodia,KHM,2006,Bus,2302.0,observed
+Cambodia,KHM,2007,Bus,2334.0,observed
+Cambodia,KHM,2008,Bus,2360.0,observed
+Cambodia,KHM,2009,Bus,1578.1615161697223,observed
+Cambodia,KHM,2010,Bus,1623.026361654814,observed
+Cambodia,KHM,2011,Bus,1668.2071525044582,observed
+Cambodia,KHM,2012,Bus,1714.7433670795922,observed
+Cambodia,KHM,2013,Bus,1762.67566809198,observed
+Cambodia,KHM,2014,Bus,1813.0459381347391,observed
+Cambodia,KHM,2015,Bus,1863.8973162787815,observed
+Cambodia,KHM,2016,Bus,1916.274235767145,observed
+Cambodia,KHM,2017,Bus,1971.22246284016,observed
+Cambodia,KHM,2018,Bus,2026.7891367253644,observed
+Cambodia,KHM,2019,Bus,2084.022810827125,observed
+Cambodia,KHM,2020,Bus,2142.973495151939,observed
+Cambodia,KHM,2021,Bus,2204.692700006497,observed
+Cambodia,KHM,2022,Bus,2267.2334810066927,observed
+Cambodia,KHM,2023,Bus,2331.650485436893,observed
+Cambodia,KHM,2024,Bus,2405.0,observed
+Cambodia,KHM,2025,Bus,41503.95708189517,stock_flow_fe_ols
+Cambodia,KHM,2026,Bus,5438.075946327575,stock_flow_fe_ols
+Cambodia,KHM,2027,Bus,5626.790300628185,stock_flow_fe_ols
+Cambodia,KHM,2028,Bus,5751.428657854645,stock_flow_fe_ols
+Cambodia,KHM,2029,Bus,5879.07348833872,stock_flow_fe_ols
+Cambodia,KHM,2030,Bus,4057.3848467791977,stock_flow_fe_ols
+Cambodia,KHM,2031,Bus,5020.158875679219,stock_flow_fe_ols
+Cambodia,KHM,2032,Bus,5231.451009075172,stock_flow_fe_ols
+Cambodia,KHM,2033,Bus,5492.371455412824,stock_flow_fe_ols
+Cambodia,KHM,2034,Bus,6512.295195290775,stock_flow_fe_ols
+Cambodia,KHM,2035,Bus,8931.812033984228,stock_flow_fe_ols
+Cambodia,KHM,2036,Bus,9005.754666546316,stock_flow_fe_ols
+Cambodia,KHM,2037,Bus,9825.586360865927,stock_flow_fe_ols
+Cambodia,KHM,2038,Bus,10678.509016804994,stock_flow_fe_ols
+Cambodia,KHM,2039,Bus,11139.218094019554,stock_flow_fe_ols
+Cambodia,KHM,2040,Bus,11919.214542842194,stock_flow_fe_ols
+Cambodia,KHM,2041,Bus,12363.404597842236,stock_flow_fe_ols
+Cambodia,KHM,2042,Bus,12850.133527804792,stock_flow_fe_ols
+Cambodia,KHM,2043,Bus,12180.884358331576,stock_flow_fe_ols
+Cambodia,KHM,2044,Bus,12339.206070996835,stock_flow_fe_ols
+Cambodia,KHM,2045,Bus,12566.62764826868,stock_flow_fe_ols
+Cambodia,KHM,2046,Bus,12655.900043281814,stock_flow_fe_ols
+Cambodia,KHM,2047,Bus,12343.851558835073,stock_flow_fe_ols
+Cambodia,KHM,2048,Bus,12800.792228696637,stock_flow_fe_ols
+Cambodia,KHM,2049,Bus,13420.139957298905,stock_flow_fe_ols
+Cambodia,KHM,2050,Bus,14138.099852868792,stock_flow_fe_ols
+Cambodia,KHM,2051,Bus,15077.09928432008,stock_flow_fe_ols
+Cambodia,KHM,2052,Bus,16047.594926930617,stock_flow_fe_ols
+Cambodia,KHM,2053,Bus,16918.36213830384,stock_flow_fe_ols
+Cambodia,KHM,2054,Bus,17794.42434136884,stock_flow_fe_ols
+Cambodia,KHM,2055,Bus,18642.62317772786,stock_flow_fe_ols
+Cambodia,KHM,2056,Bus,19421.985309416545,stock_flow_fe_ols
+Cambodia,KHM,2057,Bus,20122.54319447023,stock_flow_fe_ols
+Cambodia,KHM,2058,Bus,20817.88868169667,stock_flow_fe_ols
+Cambodia,KHM,2059,Bus,21517.96662271096,stock_flow_fe_ols
+Cambodia,KHM,2060,Bus,22235.31763980721,stock_flow_fe_ols
+Cambodia,KHM,2006,LDV,923.0,observed
+Cambodia,KHM,2007,LDV,1091.0,observed
+Cambodia,KHM,2008,LDV,1284.0,observed
+Cambodia,KHM,2009,LDV,1502.0,observed
+Cambodia,KHM,2010,LDV,1752.0,observed
+Cambodia,KHM,2011,LDV,2034.0,observed
+Cambodia,KHM,2012,LDV,2354.0,observed
+Cambodia,KHM,2013,LDV,2716.0,observed
+Cambodia,KHM,2014,LDV,3125.0,observed
+Cambodia,KHM,2015,LDV,3587.0,observed
+Cambodia,KHM,2016,LDV,4108.0,observed
+Cambodia,KHM,2017,LDV,4695.0,observed
+Cambodia,KHM,2018,LDV,5357.0,observed
+Cambodia,KHM,2019,LDV,6100.0,observed
+Cambodia,KHM,2020,LDV,7257.0,observed
+Cambodia,KHM,2021,LDV,8289.0,observed
+Cambodia,KHM,2022,LDV,9449.0,observed
+Cambodia,KHM,2023,LDV,10755.0,observed
+Cambodia,KHM,2024,LDV,12221.0,observed
+Cambodia,KHM,2025,LDV,40606.38456919204,stock_flow_gompertz
+Cambodia,KHM,2026,LDV,23565.58212091218,stock_flow_gompertz
+Cambodia,KHM,2027,LDV,27259.703298822424,stock_flow_gompertz
+Cambodia,KHM,2028,LDV,31036.02968522202,stock_flow_gompertz
+Cambodia,KHM,2029,LDV,34591.94270963306,stock_flow_gompertz
+Cambodia,KHM,2030,LDV,6463.249976238003,stock_flow_gompertz
+Cambodia,KHM,2031,LDV,20444.273892965983,stock_flow_gompertz
+Cambodia,KHM,2032,LDV,22350.407077159645,stock_flow_gompertz
+Cambodia,KHM,2033,LDV,24498.92987676,stock_flow_gompertz
+Cambodia,KHM,2034,LDV,27336.09374318656,stock_flow_gompertz
+Cambodia,KHM,2035,LDV,31471.2789215424,stock_flow_gompertz
+Cambodia,KHM,2036,LDV,34957.78132085997,stock_flow_gompertz
+Cambodia,KHM,2037,LDV,38937.069350903446,stock_flow_gompertz
+Cambodia,KHM,2038,LDV,43316.87338884844,stock_flow_gompertz
+Cambodia,KHM,2039,LDV,47272.59305699816,stock_flow_gompertz
+Cambodia,KHM,2040,LDV,50344.05550536874,stock_flow_gompertz
+Cambodia,KHM,2041,LDV,53474.266428531264,stock_flow_gompertz
+Cambodia,KHM,2042,LDV,57315.68463343679,stock_flow_gompertz
+Cambodia,KHM,2043,LDV,60451.25119580206,stock_flow_gompertz
+Cambodia,KHM,2044,LDV,64354.06258197897,stock_flow_gompertz
+Cambodia,KHM,2045,LDV,68173.94013266114,stock_flow_gompertz
+Cambodia,KHM,2046,LDV,68957.10273446864,stock_flow_gompertz
+Cambodia,KHM,2047,LDV,72427.00214645138,stock_flow_gompertz
+Cambodia,KHM,2048,LDV,77403.83992640185,stock_flow_gompertz
+Cambodia,KHM,2049,LDV,82622.06393801724,stock_flow_gompertz
+Cambodia,KHM,2050,LDV,88112.90159119572,stock_flow_gompertz
+Cambodia,KHM,2051,LDV,93018.45981220133,stock_flow_gompertz
+Cambodia,KHM,2052,LDV,99346.82800623216,stock_flow_gompertz
+Cambodia,KHM,2053,LDV,105692.87627213774,stock_flow_gompertz
+Cambodia,KHM,2054,LDV,112193.90846464668,stock_flow_gompertz
+Cambodia,KHM,2055,LDV,118780.14034885634,stock_flow_gompertz
+Cambodia,KHM,2056,LDV,125265.87825472374,stock_flow_gompertz
+Cambodia,KHM,2057,LDV,131786.9954902879,stock_flow_gompertz
+Cambodia,KHM,2058,LDV,138403.43294026866,stock_flow_gompertz
+Cambodia,KHM,2059,LDV,145102.83917531557,stock_flow_gompertz
+Cambodia,KHM,2060,LDV,151889.0416962509,stock_flow_gompertz
+Cambodia,KHM,2006,Truck,1858.0,observed
+Cambodia,KHM,2007,Truck,2004.0,observed
+Cambodia,KHM,2008,Truck,2160.0,observed
+Cambodia,KHM,2009,Truck,2328.0,observed
+Cambodia,KHM,2010,Truck,2508.0,observed
+Cambodia,KHM,2011,Truck,2702.0,observed
+Cambodia,KHM,2012,Truck,2910.0,observed
+Cambodia,KHM,2013,Truck,3133.0,observed
+Cambodia,KHM,2014,Truck,3373.0,observed
+Cambodia,KHM,2015,Truck,3630.0,observed
+Cambodia,KHM,2016,Truck,3905.0,observed
+Cambodia,KHM,2017,Truck,4200.0,observed
+Cambodia,KHM,2018,Truck,4517.0,observed
+Cambodia,KHM,2019,Truck,4855.0,observed
+Cambodia,KHM,2020,Truck,5218.0,observed
+Cambodia,KHM,2021,Truck,5606.0,observed
+Cambodia,KHM,2022,Truck,6020.0,observed
+Cambodia,KHM,2023,Truck,6464.0,observed
+Cambodia,KHM,2024,Truck,6937.0,observed
+Cambodia,KHM,2025,Truck,48466.73561967302,stock_flow_fe_ols
+Cambodia,KHM,2026,Truck,11478.124923771276,stock_flow_fe_ols
+Cambodia,KHM,2027,Truck,11981.784697863795,stock_flow_fe_ols
+Cambodia,KHM,2028,Truck,12345.291342849509,stock_flow_fe_ols
+Cambodia,KHM,2029,Truck,12587.915369065217,stock_flow_fe_ols
+Cambodia,KHM,2030,Truck,7066.77940781423,stock_flow_fe_ols
+Cambodia,KHM,2031,Truck,7066.77940781423,stock_flow_fe_ols
+Cambodia,KHM,2032,Truck,8954.82603026033,stock_flow_fe_ols
+Cambodia,KHM,2033,Truck,9732.104522162264,stock_flow_fe_ols
+Cambodia,KHM,2034,Truck,11059.300290439453,stock_flow_fe_ols
+Cambodia,KHM,2035,Truck,13886.207067106094,stock_flow_fe_ols
+Cambodia,KHM,2036,Truck,14352.130333764972,stock_flow_fe_ols
+Cambodia,KHM,2037,Truck,15531.760757622746,stock_flow_fe_ols
+Cambodia,KHM,2038,Truck,16723.923184615298,stock_flow_fe_ols
+Cambodia,KHM,2039,Truck,17454.309442280646,stock_flow_fe_ols
+Cambodia,KHM,2040,Truck,18252.35085134901,stock_flow_fe_ols
+Cambodia,KHM,2041,Truck,18591.2325804024,stock_flow_fe_ols
+Cambodia,KHM,2042,Truck,19136.53044315989,stock_flow_fe_ols
+Cambodia,KHM,2043,Truck,18379.896372951534,stock_flow_fe_ols
+Cambodia,KHM,2044,Truck,18474.84384777682,stock_flow_fe_ols
+Cambodia,KHM,2045,Truck,18560.451413682636,stock_flow_fe_ols
+Cambodia,KHM,2046,Truck,18274.910234150244,stock_flow_fe_ols
+Cambodia,KHM,2047,Truck,17786.964340965613,stock_flow_fe_ols
+Cambodia,KHM,2048,Truck,18208.02593982214,stock_flow_fe_ols
+Cambodia,KHM,2049,Truck,18856.78846854297,stock_flow_fe_ols
+Cambodia,KHM,2050,Truck,19605.56667515982,stock_flow_fe_ols
+Cambodia,KHM,2051,Truck,20415.353841018747,stock_flow_fe_ols
+Cambodia,KHM,2052,Truck,21416.858999200107,stock_flow_fe_ols
+Cambodia,KHM,2053,Truck,22260.475608287088,stock_flow_fe_ols
+Cambodia,KHM,2054,Truck,23095.26577737089,stock_flow_fe_ols
+Cambodia,KHM,2055,Truck,23803.497034706525,stock_flow_fe_ols
+Cambodia,KHM,2056,Truck,24393.357761509196,stock_flow_fe_ols
+Cambodia,KHM,2057,Truck,24836.04018377763,stock_flow_fe_ols
+Cambodia,KHM,2058,Truck,25204.0768212807,stock_flow_fe_ols
+Cambodia,KHM,2059,Truck,25533.344333285237,stock_flow_fe_ols
+Cambodia,KHM,2060,Truck,25840.14866314025,stock_flow_fe_ols
+Indonesia,IDN,2019,2W,5596771.68137978,observed
+Indonesia,IDN,2020,2W,5812682.031821174,observed
+Indonesia,IDN,2021,2W,5986919.776775809,observed
+Indonesia,IDN,2022,2W,6167643.209079083,observed
+Indonesia,IDN,2023,2W,6364090.434951455,observed
+Indonesia,IDN,2024,2W,6569274.54,observed
+Indonesia,IDN,2025,2W,107965514.27873497,stock_flow_gompertz
+Indonesia,IDN,2026,2W,5276071.378078818,stock_flow_gompertz
+Indonesia,IDN,2027,2W,4823831.65912199,stock_flow_gompertz
+Indonesia,IDN,2028,2W,4495206.092756718,stock_flow_gompertz
+Indonesia,IDN,2029,2W,4573527.3461892605,stock_flow_gompertz
+Indonesia,IDN,2030,2W,4130083.2894319296,stock_flow_gompertz
+Indonesia,IDN,2031,2W,4366936.003037393,stock_flow_gompertz
+Indonesia,IDN,2032,2W,4793447.889594108,stock_flow_gompertz
+Indonesia,IDN,2033,2W,5355073.024658173,stock_flow_gompertz
+Indonesia,IDN,2034,2W,7924919.617391646,stock_flow_gompertz
+Indonesia,IDN,2035,2W,13941313.721797824,stock_flow_gompertz
+Indonesia,IDN,2036,2W,13324749.639319869,stock_flow_gompertz
+Indonesia,IDN,2037,2W,14550710.080884516,stock_flow_gompertz
+Indonesia,IDN,2038,2W,15701265.404340832,stock_flow_gompertz
+Indonesia,IDN,2039,2W,15772325.057870535,stock_flow_gompertz
+Indonesia,IDN,2040,2W,16770804.632192465,stock_flow_gompertz
+Indonesia,IDN,2041,2W,16630563.038182288,stock_flow_gompertz
+Indonesia,IDN,2042,2W,16478999.480611296,stock_flow_gompertz
+Indonesia,IDN,2043,2W,13352026.390191972,stock_flow_gompertz
+Indonesia,IDN,2044,2W,12523184.465462536,stock_flow_gompertz
+Indonesia,IDN,2045,2W,12006905.915549785,stock_flow_gompertz
+Indonesia,IDN,2046,2W,11496406.81470564,stock_flow_gompertz
+Indonesia,IDN,2047,2W,9671981.77183947,stock_flow_gompertz
+Indonesia,IDN,2048,2W,9830842.866051732,stock_flow_gompertz
+Indonesia,IDN,2049,2W,10470679.19201523,stock_flow_gompertz
+Indonesia,IDN,2050,2W,11253666.518380793,stock_flow_gompertz
+Indonesia,IDN,2051,2W,12224617.75656098,stock_flow_gompertz
+Indonesia,IDN,2052,2W,13204018.362574428,stock_flow_gompertz
+Indonesia,IDN,2053,2W,13799628.961447924,stock_flow_gompertz
+Indonesia,IDN,2054,2W,14282638.052072585,stock_flow_gompertz
+Indonesia,IDN,2055,2W,14576457.575401813,stock_flow_gompertz
+Indonesia,IDN,2056,2W,14599688.899857191,stock_flow_gompertz
+Indonesia,IDN,2057,2W,14326564.430267692,stock_flow_gompertz
+Indonesia,IDN,2058,2W,13962926.50745359,stock_flow_gompertz
+Indonesia,IDN,2059,2W,13549032.33681205,stock_flow_gompertz
+Indonesia,IDN,2060,2W,13109260.84128204,stock_flow_gompertz
+Indonesia,IDN,2019,Bus,3774.0,observed
+Indonesia,IDN,2020,Bus,3774.0,observed
+Indonesia,IDN,2021,Bus,3774.0,observed
+Indonesia,IDN,2022,Bus,3774.0,observed
+Indonesia,IDN,2023,Bus,3774.0,observed
+Indonesia,IDN,2024,Bus,9087.0,observed
+Indonesia,IDN,2025,Bus,285328.4739230032,stock_flow_fe_ols
+Indonesia,IDN,2026,Bus,16352.07756626996,stock_flow_fe_ols
+Indonesia,IDN,2027,Bus,16749.524975404725,stock_flow_fe_ols
+Indonesia,IDN,2028,Bus,17283.552934471692,stock_flow_fe_ols
+Indonesia,IDN,2029,Bus,18287.0653989088,stock_flow_fe_ols
+Indonesia,IDN,2030,Bus,17297.280171714607,stock_flow_fe_ols
+Indonesia,IDN,2031,Bus,18048.116508180625,stock_flow_fe_ols
+Indonesia,IDN,2032,Bus,19124.43192642537,stock_flow_fe_ols
+Indonesia,IDN,2033,Bus,20599.884232988115,stock_flow_fe_ols
+Indonesia,IDN,2034,Bus,27669.61521618237,stock_flow_fe_ols
+Indonesia,IDN,2035,Bus,44252.016338689136,stock_flow_fe_ols
+Indonesia,IDN,2036,Bus,43366.33108332008,stock_flow_fe_ols
+Indonesia,IDN,2037,Bus,47857.67132439232,stock_flow_fe_ols
+Indonesia,IDN,2038,Bus,52423.17378773505,stock_flow_fe_ols
+Indonesia,IDN,2039,Bus,54326.25579235115,stock_flow_fe_ols
+Indonesia,IDN,2040,Bus,58871.76007642783,stock_flow_fe_ols
+Indonesia,IDN,2041,Bus,60702.08799884911,stock_flow_fe_ols
+Indonesia,IDN,2042,Bus,62629.56490530621,stock_flow_fe_ols
+Indonesia,IDN,2043,Bus,56456.77552342811,stock_flow_fe_ols
+Indonesia,IDN,2044,Bus,56189.975461316295,stock_flow_fe_ols
+Indonesia,IDN,2045,Bus,56611.44349762716,stock_flow_fe_ols
+Indonesia,IDN,2046,Bus,56801.54448915494,stock_flow_fe_ols
+Indonesia,IDN,2047,Bus,53219.75673818053,stock_flow_fe_ols
+Indonesia,IDN,2048,Bus,54882.18893357378,stock_flow_fe_ols
+Indonesia,IDN,2049,Bus,57775.04759789654,stock_flow_fe_ols
+Indonesia,IDN,2050,Bus,61127.61408363283,stock_flow_fe_ols
+Indonesia,IDN,2051,Bus,66109.81350459158,stock_flow_fe_ols
+Indonesia,IDN,2052,Bus,70747.74398994655,stock_flow_fe_ols
+Indonesia,IDN,2053,Bus,74558.33357153891,stock_flow_fe_ols
+Indonesia,IDN,2054,Bus,78255.30470345158,stock_flow_fe_ols
+Indonesia,IDN,2055,Bus,81608.72069712554,stock_flow_fe_ols
+Indonesia,IDN,2056,Bus,84362.39311664517,stock_flow_fe_ols
+Indonesia,IDN,2057,Bus,86408.67152221152,stock_flow_fe_ols
+Indonesia,IDN,2058,Bus,88270.32660464768,stock_flow_fe_ols
+Indonesia,IDN,2059,Bus,90019.17338883795,stock_flow_fe_ols
+Indonesia,IDN,2060,Bus,91722.33767304524,stock_flow_fe_ols
+Indonesia,IDN,2005,LDV,4236388.8,observed
+Indonesia,IDN,2006,LDV,813315.9439999998,observed
+Indonesia,IDN,2007,LDV,699558.5797199997,observed
+Indonesia,IDN,2008,LDV,514072.18169859995,observed
+Indonesia,IDN,2009,LDV,350551.4768524929,observed
+Indonesia,IDN,2010,LDV,816227.515963982,observed
+Indonesia,IDN,2011,LDV,552339.59856152,observed
+Indonesia,IDN,2012,LDV,737165.7654136576,observed
+Indonesia,IDN,2013,LDV,992828.669322753,observed
+Indonesia,IDN,2014,LDV,1001165.9263988736,observed
+Indonesia,IDN,2015,LDV,7736.726730620127,observed
+Indonesia,IDN,2016,LDV,1089222.736772621,observed
+Indonesia,IDN,2017,LDV,1161580.5503648624,observed
+Indonesia,IDN,2018,LDV,1322988.7176796065,observed
+Indonesia,IDN,2019,LDV,1212623.7542080262,observed
+Indonesia,IDN,2020,LDV,790781.0359462987,observed
+Indonesia,IDN,2021,LDV,1182292.2744771258,observed
+Indonesia,IDN,2022,LDV,1393520.4456973355,observed
+Indonesia,IDN,2023,LDV,1895956.4878021122,observed
+Indonesia,IDN,2024,LDV,658000.0,observed
+Indonesia,IDN,2025,LDV,7598974.990687266,stock_flow_gompertz
+Indonesia,IDN,2026,LDV,2461928.0874644816,stock_flow_gompertz
+Indonesia,IDN,2027,LDV,2555795.8963516764,stock_flow_gompertz
+Indonesia,IDN,2028,LDV,2717326.447855677,stock_flow_gompertz
+Indonesia,IDN,2029,LDV,2905668.014175821,stock_flow_gompertz
+Indonesia,IDN,2030,LDV,2625032.15358764,stock_flow_gompertz
+Indonesia,IDN,2031,LDV,2755443.6995241046,stock_flow_gompertz
+Indonesia,IDN,2032,LDV,2904087.643348101,stock_flow_gompertz
+Indonesia,IDN,2033,LDV,3092849.4218498208,stock_flow_gompertz
+Indonesia,IDN,2034,LDV,3320902.486974247,stock_flow_gompertz
+Indonesia,IDN,2035,LDV,3827140.6327397376,stock_flow_gompertz
+Indonesia,IDN,2036,LDV,3969598.8484519273,stock_flow_gompertz
+Indonesia,IDN,2037,LDV,4241981.601548247,stock_flow_gompertz
+Indonesia,IDN,2038,LDV,4538564.567206055,stock_flow_gompertz
+Indonesia,IDN,2039,LDV,4756488.300318457,stock_flow_gompertz
+Indonesia,IDN,2040,LDV,5017484.664544813,stock_flow_gompertz
+Indonesia,IDN,2041,LDV,5222604.036813974,stock_flow_gompertz
+Indonesia,IDN,2042,LDV,5468020.737754352,stock_flow_gompertz
+Indonesia,IDN,2043,LDV,5512017.156693041,stock_flow_gompertz
+Indonesia,IDN,2044,LDV,5660067.146712594,stock_flow_gompertz
+Indonesia,IDN,2045,LDV,5801815.869933546,stock_flow_gompertz
+Indonesia,IDN,2046,LDV,5945694.333066046,stock_flow_gompertz
+Indonesia,IDN,2047,LDV,5985131.399574794,stock_flow_gompertz
+Indonesia,IDN,2048,LDV,6130484.478606999,stock_flow_gompertz
+Indonesia,IDN,2049,LDV,6300821.973351389,stock_flow_gompertz
+Indonesia,IDN,2050,LDV,6479288.168538585,stock_flow_gompertz
+Indonesia,IDN,2051,LDV,6793963.750261799,stock_flow_gompertz
+Indonesia,IDN,2052,LDV,7048355.707970232,stock_flow_gompertz
+Indonesia,IDN,2053,LDV,7283914.353861093,stock_flow_gompertz
+Indonesia,IDN,2054,LDV,7512012.334960192,stock_flow_gompertz
+Indonesia,IDN,2055,LDV,7725442.087064132,stock_flow_gompertz
+Indonesia,IDN,2056,LDV,7917966.1404953,stock_flow_gompertz
+Indonesia,IDN,2057,LDV,8083610.954820365,stock_flow_gompertz
+Indonesia,IDN,2058,LDV,8232660.734119549,stock_flow_gompertz
+Indonesia,IDN,2059,LDV,8365971.548791096,stock_flow_gompertz
+Indonesia,IDN,2060,LDV,8484941.231101856,stock_flow_gompertz
+Indonesia,IDN,2019,Truck,228977.0,observed
+Indonesia,IDN,2020,Truck,133413.0,observed
+Indonesia,IDN,2021,Truck,212620.0,observed
+Indonesia,IDN,2022,Truck,242360.0,observed
+Indonesia,IDN,2023,Truck,220249.0,observed
+Indonesia,IDN,2024,Truck,265624.5,observed
+Indonesia,IDN,2025,Truck,4907513.154673933,stock_flow_fe_ols
+Indonesia,IDN,2026,Truck,355730.29549079726,stock_flow_fe_ols
+Indonesia,IDN,2027,Truck,411668.0997367218,stock_flow_fe_ols
+Indonesia,IDN,2028,Truck,476402.0003048285,stock_flow_fe_ols
+Indonesia,IDN,2029,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2030,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2031,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2032,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2033,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2034,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2035,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2036,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2037,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2038,Truck,551315.163938112,stock_flow_fe_ols
+Indonesia,IDN,2039,Truck,904130.7099950798,stock_flow_fe_ols
+Indonesia,IDN,2040,Truck,1080561.4198801052,stock_flow_fe_ols
+Indonesia,IDN,2041,Truck,1114917.6791058816,stock_flow_fe_ols
+Indonesia,IDN,2042,Truck,1147901.4467113689,stock_flow_fe_ols
+Indonesia,IDN,2043,Truck,1041626.2395574712,stock_flow_fe_ols
+Indonesia,IDN,2044,Truck,1022148.122948384,stock_flow_fe_ols
+Indonesia,IDN,2045,Truck,998567.2610841189,stock_flow_fe_ols
+Indonesia,IDN,2046,Truck,969304.4708879218,stock_flow_fe_ols
+Indonesia,IDN,2047,Truck,865897.9020573217,stock_flow_fe_ols
+Indonesia,IDN,2048,Truck,851365.8898316957,stock_flow_fe_ols
+Indonesia,IDN,2049,Truck,872950.1770374626,stock_flow_fe_ols
+Indonesia,IDN,2050,Truck,898553.9878693204,stock_flow_fe_ols
+Indonesia,IDN,2051,Truck,947597.4304870646,stock_flow_fe_ols
+Indonesia,IDN,2052,Truck,997790.6057242882,stock_flow_fe_ols
+Indonesia,IDN,2053,Truck,1044089.9961918984,stock_flow_fe_ols
+Indonesia,IDN,2054,Truck,1091673.757063698,stock_flow_fe_ols
+Indonesia,IDN,2055,Truck,1141336.4902197253,stock_flow_fe_ols
+Indonesia,IDN,2056,Truck,1184571.8982466685,stock_flow_fe_ols
+Indonesia,IDN,2057,Truck,1211212.285267856,stock_flow_fe_ols
+Indonesia,IDN,2058,Truck,1229821.9589627609,stock_flow_fe_ols
+Indonesia,IDN,2059,Truck,1240956.149653012,stock_flow_fe_ols
+Indonesia,IDN,2060,Truck,1246894.7160356268,stock_flow_fe_ols
+Lao PDR,LAO,2006,2W,65294.0,observed
+Lao PDR,LAO,2007,2W,68656.0,observed
+Lao PDR,LAO,2008,2W,72074.0,observed
+Lao PDR,LAO,2009,2W,75530.0,observed
+Lao PDR,LAO,2010,2W,79001.0,observed
+Lao PDR,LAO,2011,2W,82459.0,observed
+Lao PDR,LAO,2012,2W,85871.0,observed
+Lao PDR,LAO,2013,2W,89198.0,observed
+Lao PDR,LAO,2014,2W,92394.0,observed
+Lao PDR,LAO,2015,2W,95407.0,observed
+Lao PDR,LAO,2016,2W,98172.0,observed
+Lao PDR,LAO,2017,2W,100617.0,observed
+Lao PDR,LAO,2018,2W,102659.0,observed
+Lao PDR,LAO,2019,2W,104199.0,observed
+Lao PDR,LAO,2020,2W,93573.12496419284,observed
+Lao PDR,LAO,2021,2W,96381.22871311865,observed
+Lao PDR,LAO,2022,2W,99273.54557451222,observed
+Lao PDR,LAO,2023,2W,102252.60194174758,observed
+Lao PDR,LAO,2024,2W,105321.0,observed
+Lao PDR,LAO,2025,2W,1057428.4355068072,stock_flow_gompertz
+Lao PDR,LAO,2026,2W,185407.6500551621,stock_flow_gompertz
+Lao PDR,LAO,2027,2W,196312.50166065665,stock_flow_gompertz
+Lao PDR,LAO,2028,2W,206208.81638768732,stock_flow_gompertz
+Lao PDR,LAO,2029,2W,214746.6293436401,stock_flow_gompertz
+Lao PDR,LAO,2030,2W,100568.2399305487,stock_flow_gompertz
+Lao PDR,LAO,2031,2W,169444.86916906526,stock_flow_gompertz
+Lao PDR,LAO,2032,2W,172905.31531510316,stock_flow_gompertz
+Lao PDR,LAO,2033,2W,177162.76978115225,stock_flow_gompertz
+Lao PDR,LAO,2034,2W,199403.6216173749,stock_flow_gompertz
+Lao PDR,LAO,2035,2W,255306.8872488984,stock_flow_gompertz
+Lao PDR,LAO,2036,2W,259153.25680201597,stock_flow_gompertz
+Lao PDR,LAO,2037,2W,276124.1588697117,stock_flow_gompertz
+Lao PDR,LAO,2038,2W,294332.2801246671,stock_flow_gompertz
+Lao PDR,LAO,2039,2W,301816.3545323056,stock_flow_gompertz
+Lao PDR,LAO,2040,2W,313822.52678938257,stock_flow_gompertz
+Lao PDR,LAO,2041,2W,329323.43842987623,stock_flow_gompertz
+Lao PDR,LAO,2042,2W,335825.78949287906,stock_flow_gompertz
+Lao PDR,LAO,2043,2W,313861.1250653295,stock_flow_gompertz
+Lao PDR,LAO,2044,2W,311306.3166210088,stock_flow_gompertz
+Lao PDR,LAO,2045,2W,309217.39922423474,stock_flow_gompertz
+Lao PDR,LAO,2046,2W,310519.4698137394,stock_flow_gompertz
+Lao PDR,LAO,2047,2W,293912.3221433521,stock_flow_gompertz
+Lao PDR,LAO,2048,2W,296887.0250394116,stock_flow_gompertz
+Lao PDR,LAO,2049,2W,302561.0723823258,stock_flow_gompertz
+Lao PDR,LAO,2050,2W,309504.1169614573,stock_flow_gompertz
+Lao PDR,LAO,2051,2W,320201.6759939017,stock_flow_gompertz
+Lao PDR,LAO,2052,2W,332973.53117068484,stock_flow_gompertz
+Lao PDR,LAO,2053,2W,341939.37984984554,stock_flow_gompertz
+Lao PDR,LAO,2054,2W,350052.27289621346,stock_flow_gompertz
+Lao PDR,LAO,2055,2W,356753.40330956783,stock_flow_gompertz
+Lao PDR,LAO,2056,2W,361301.6034436459,stock_flow_gompertz
+Lao PDR,LAO,2057,2W,362771.3710848484,stock_flow_gompertz
+Lao PDR,LAO,2058,2W,363208.64022986125,stock_flow_gompertz
+Lao PDR,LAO,2059,2W,362486.6791155879,stock_flow_gompertz
+Lao PDR,LAO,2060,2W,360950.09788910206,stock_flow_gompertz
+Lao PDR,LAO,2006,Bus,2436.0,observed
+Lao PDR,LAO,2007,Bus,2583.0,observed
+Lao PDR,LAO,2008,Bus,2737.0,observed
+Lao PDR,LAO,2009,Bus,2898.0,observed
+Lao PDR,LAO,2010,Bus,3064.0,observed
+Lao PDR,LAO,2011,Bus,3236.0,observed
+Lao PDR,LAO,2012,Bus,3413.0,observed
+Lao PDR,LAO,2013,Bus,3595.0,observed
+Lao PDR,LAO,2014,Bus,3781.0,observed
+Lao PDR,LAO,2015,Bus,3971.0,observed
+Lao PDR,LAO,2016,Bus,4162.0,observed
+Lao PDR,LAO,2017,Bus,4355.0,observed
+Lao PDR,LAO,2018,Bus,4548.0,observed
+Lao PDR,LAO,2019,Bus,4738.0,observed
+Lao PDR,LAO,2020,Bus,4924.0,observed
+Lao PDR,LAO,2021,Bus,5103.0,observed
+Lao PDR,LAO,2022,Bus,5273.0,observed
+Lao PDR,LAO,2023,Bus,5430.0,observed
+Lao PDR,LAO,2024,Bus,5576.0,observed
+Lao PDR,LAO,2025,Bus,5735.791979430456,stock_flow_fe_ols
+Lao PDR,LAO,2026,Bus,5900.16313330322,stock_flow_fe_ols
+Lao PDR,LAO,2027,Bus,6069.244687469849,stock_flow_fe_ols
+Lao PDR,LAO,2028,Bus,6243.171628334016,stock_flow_fe_ols
+Lao PDR,LAO,2029,Bus,6422.082810618012,stock_flow_fe_ols
+Lao PDR,LAO,2030,Bus,6422.082810618012,stock_flow_fe_ols
+Lao PDR,LAO,2031,Bus,6422.082810618012,stock_flow_fe_ols
+Lao PDR,LAO,2032,Bus,6422.082810618012,stock_flow_fe_ols
+Lao PDR,LAO,2033,Bus,7036.238228552727,stock_flow_fe_ols
+Lao PDR,LAO,2034,Bus,8099.326280398105,stock_flow_fe_ols
+Lao PDR,LAO,2035,Bus,8391.983746294922,stock_flow_fe_ols
+Lao PDR,LAO,2036,Bus,8787.322665362328,stock_flow_fe_ols
+Lao PDR,LAO,2037,Bus,9080.594848878478,stock_flow_fe_ols
+Lao PDR,LAO,2038,Bus,9374.015293236267,stock_flow_fe_ols
+Lao PDR,LAO,2039,Bus,9661.101696657162,stock_flow_fe_ols
+Lao PDR,LAO,2040,Bus,9936.644719060874,stock_flow_fe_ols
+Lao PDR,LAO,2041,Bus,10366.437979755605,stock_flow_fe_ols
+Lao PDR,LAO,2042,Bus,10680.415932654449,stock_flow_fe_ols
+Lao PDR,LAO,2043,Bus,11036.768281659242,stock_flow_fe_ols
+Lao PDR,LAO,2044,Bus,11443.31805106491,stock_flow_fe_ols
+Lao PDR,LAO,2045,Bus,11857.057742928082,stock_flow_fe_ols
+Lao PDR,LAO,2046,Bus,12444.068430343075,stock_flow_fe_ols
+Lao PDR,LAO,2047,Bus,12917.83861068511,stock_flow_fe_ols
+Lao PDR,LAO,2048,Bus,13421.541289060202,stock_flow_fe_ols
+Lao PDR,LAO,2049,Bus,13961.556067047874,stock_flow_fe_ols
+Lao PDR,LAO,2050,Bus,14527.52415168169,stock_flow_fe_ols
+Lao PDR,LAO,2051,Bus,15280.536449779553,stock_flow_fe_ols
+Lao PDR,LAO,2052,Bus,15947.776119536897,stock_flow_fe_ols
+Lao PDR,LAO,2053,Bus,16641.273271364218,stock_flow_fe_ols
+Lao PDR,LAO,2054,Bus,17359.49093107952,stock_flow_fe_ols
+Lao PDR,LAO,2055,Bus,18096.46966862207,stock_flow_fe_ols
+Lao PDR,LAO,2056,Bus,18855.45056600371,stock_flow_fe_ols
+Lao PDR,LAO,2057,Bus,19644.227264675195,stock_flow_fe_ols
+Lao PDR,LAO,2058,Bus,20471.12704910364,stock_flow_fe_ols
+Lao PDR,LAO,2059,Bus,21338.24814446704,stock_flow_fe_ols
+Lao PDR,LAO,2060,Bus,22255.023642282817,stock_flow_fe_ols
+Lao PDR,LAO,2006,LDV,5588.0,observed
+Lao PDR,LAO,2007,LDV,5917.0,observed
+Lao PDR,LAO,2008,LDV,6259.0,observed
+Lao PDR,LAO,2009,LDV,6612.0,observed
+Lao PDR,LAO,2010,LDV,6978.0,observed
+Lao PDR,LAO,2011,LDV,7355.0,observed
+Lao PDR,LAO,2012,LDV,7740.0,observed
+Lao PDR,LAO,2013,LDV,8131.0,observed
+Lao PDR,LAO,2014,LDV,8530.0,observed
+Lao PDR,LAO,2015,LDV,8931.0,observed
+Lao PDR,LAO,2016,LDV,9333.0,observed
+Lao PDR,LAO,2017,LDV,9731.0,observed
+Lao PDR,LAO,2018,LDV,10123.0,observed
+Lao PDR,LAO,2019,LDV,10502.0,observed
+Lao PDR,LAO,2020,LDV,10867.0,observed
+Lao PDR,LAO,2021,LDV,11204.0,observed
+Lao PDR,LAO,2022,LDV,11510.0,observed
+Lao PDR,LAO,2023,LDV,11774.0,observed
+Lao PDR,LAO,2024,LDV,11986.0,observed
+Lao PDR,LAO,2025,LDV,97327.47814794796,stock_flow_gompertz
+Lao PDR,LAO,2026,LDV,28174.917040904053,stock_flow_gompertz
+Lao PDR,LAO,2027,LDV,31729.25514805972,stock_flow_gompertz
+Lao PDR,LAO,2028,LDV,35868.55006026983,stock_flow_gompertz
+Lao PDR,LAO,2029,LDV,40291.48940423975,stock_flow_gompertz
+Lao PDR,LAO,2030,LDV,4893.632431840815,stock_flow_gompertz
+Lao PDR,LAO,2031,LDV,26766.73051979387,stock_flow_gompertz
+Lao PDR,LAO,2032,LDV,28238.61726720165,stock_flow_gompertz
+Lao PDR,LAO,2033,LDV,29859.000697743148,stock_flow_gompertz
+Lao PDR,LAO,2034,LDV,33146.01566870551,stock_flow_gompertz
+Lao PDR,LAO,2035,LDV,39685.29501490062,stock_flow_gompertz
+Lao PDR,LAO,2036,LDV,43891.52898435056,stock_flow_gompertz
+Lao PDR,LAO,2037,LDV,47917.88782481477,stock_flow_gompertz
+Lao PDR,LAO,2038,LDV,52369.61743527901,stock_flow_gompertz
+Lao PDR,LAO,2039,LDV,55682.44330779527,stock_flow_gompertz
+Lao PDR,LAO,2040,LDV,58401.72681282245,stock_flow_gompertz
+Lao PDR,LAO,2041,LDV,66159.51174057333,stock_flow_gompertz
+Lao PDR,LAO,2042,LDV,69884.00597261323,stock_flow_gompertz
+Lao PDR,LAO,2043,LDV,71119.29207141802,stock_flow_gompertz
+Lao PDR,LAO,2044,LDV,74148.38440683123,stock_flow_gompertz
+Lao PDR,LAO,2045,LDV,77017.79995469365,stock_flow_gompertz
+Lao PDR,LAO,2046,LDV,83183.39270224283,stock_flow_gompertz
+Lao PDR,LAO,2047,LDV,85206.9591313334,stock_flow_gompertz
+Lao PDR,LAO,2048,LDV,89678.22245283658,stock_flow_gompertz
+Lao PDR,LAO,2049,LDV,94123.28668869929,stock_flow_gompertz
+Lao PDR,LAO,2050,LDV,98807.743185565,stock_flow_gompertz
+Lao PDR,LAO,2051,LDV,103284.03222346026,stock_flow_gompertz
+Lao PDR,LAO,2052,LDV,108900.24466084225,stock_flow_gompertz
+Lao PDR,LAO,2053,LDV,114037.27093745233,stock_flow_gompertz
+Lao PDR,LAO,2054,LDV,119045.9652047765,stock_flow_gompertz
+Lao PDR,LAO,2055,LDV,123943.97570013604,stock_flow_gompertz
+Lao PDR,LAO,2056,LDV,128771.15638756822,stock_flow_gompertz
+Lao PDR,LAO,2057,LDV,133193.81603425718,stock_flow_gompertz
+Lao PDR,LAO,2058,LDV,137484.17064357083,stock_flow_gompertz
+Lao PDR,LAO,2059,LDV,141495.00410455256,stock_flow_gompertz
+Lao PDR,LAO,2060,LDV,145288.97754065087,stock_flow_gompertz
+Lao PDR,LAO,2006,Truck,3521.0,observed
+Lao PDR,LAO,2007,Truck,3860.0,observed
+Lao PDR,LAO,2008,Truck,4231.0,observed
+Lao PDR,LAO,2009,Truck,4638.0,observed
+Lao PDR,LAO,2010,Truck,5085.0,observed
+Lao PDR,LAO,2011,Truck,5574.0,observed
+Lao PDR,LAO,2012,Truck,6111.0,observed
+Lao PDR,LAO,2013,Truck,6699.0,observed
+Lao PDR,LAO,2014,Truck,7343.0,observed
+Lao PDR,LAO,2015,Truck,8050.0,observed
+Lao PDR,LAO,2016,Truck,8824.0,observed
+Lao PDR,LAO,2017,Truck,9673.0,observed
+Lao PDR,LAO,2018,Truck,10604.0,observed
+Lao PDR,LAO,2019,Truck,11624.0,observed
+Lao PDR,LAO,2020,Truck,12742.0,observed
+Lao PDR,LAO,2021,Truck,13967.0,observed
+Lao PDR,LAO,2022,Truck,15310.0,observed
+Lao PDR,LAO,2023,Truck,16783.0,observed
+Lao PDR,LAO,2024,Truck,18397.0,observed
+Lao PDR,LAO,2025,Truck,19772.543682732085,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2026,Truck,21250.936766078627,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2027,Truck,22839.869299682938,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2028,Truck,24547.60631819712,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2029,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2030,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2031,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2032,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2033,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2034,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2035,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2036,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2037,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2038,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2039,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2040,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2041,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2042,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2043,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2044,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2045,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2046,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2047,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2048,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2049,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2050,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2051,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2052,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2053,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2054,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2055,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2056,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2057,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2058,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2059,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Lao PDR,LAO,2060,Truck,26383.030832910943,stock_flow_fe_ols_with_peer_floor
+Malaysia,MYS,2018,2W,471842.0,observed
+Malaysia,MYS,2019,2W,546813.0,observed
+Malaysia,MYS,2020,2W,498327.0,observed
+Malaysia,MYS,2021,2W,497262.0,observed
+Malaysia,MYS,2022,2W,680749.0,observed
+Malaysia,MYS,2023,2W,541703.0,observed
+Malaysia,MYS,2024,2W,555675.0,observed
+Malaysia,MYS,2025,2W,13272248.99739106,stock_flow_gompertz
+Malaysia,MYS,2026,2W,496275.25207029656,stock_flow_gompertz
+Malaysia,MYS,2027,2W,441651.0607009791,stock_flow_gompertz
+Malaysia,MYS,2028,2W,451434.839226868,stock_flow_gompertz
+Malaysia,MYS,2029,2W,471424.0752460994,stock_flow_gompertz
+Malaysia,MYS,2030,2W,505649.00082943216,stock_flow_gompertz
+Malaysia,MYS,2031,2W,555031.0940150768,stock_flow_gompertz
+Malaysia,MYS,2032,2W,568101.1783749983,stock_flow_gompertz
+Malaysia,MYS,2033,2W,620204.6081119552,stock_flow_gompertz
+Malaysia,MYS,2034,2W,921097.3090803772,stock_flow_gompertz
+Malaysia,MYS,2035,2W,1682315.0127129853,stock_flow_gompertz
+Malaysia,MYS,2036,2W,1566746.1887941174,stock_flow_gompertz
+Malaysia,MYS,2037,2W,1683224.747066915,stock_flow_gompertz
+Malaysia,MYS,2038,2W,1836552.8855143152,stock_flow_gompertz
+Malaysia,MYS,2039,2W,1840539.9353185596,stock_flow_gompertz
+Malaysia,MYS,2040,2W,1958750.5888122956,stock_flow_gompertz
+Malaysia,MYS,2041,2W,1960438.7995096296,stock_flow_gompertz
+Malaysia,MYS,2042,2W,1946950.50791188,stock_flow_gompertz
+Malaysia,MYS,2043,2W,1572295.160119921,stock_flow_gompertz
+Malaysia,MYS,2044,2W,1486817.3555991205,stock_flow_gompertz
+Malaysia,MYS,2045,2W,1434743.4878243394,stock_flow_gompertz
+Malaysia,MYS,2046,2W,1385349.146199223,stock_flow_gompertz
+Malaysia,MYS,2047,2W,1163876.3821510412,stock_flow_gompertz
+Malaysia,MYS,2048,2W,1186808.134695992,stock_flow_gompertz
+Malaysia,MYS,2049,2W,1265781.0099743863,stock_flow_gompertz
+Malaysia,MYS,2050,2W,1359566.4163146503,stock_flow_gompertz
+Malaysia,MYS,2051,2W,1474675.2009957023,stock_flow_gompertz
+Malaysia,MYS,2052,2W,1590862.8940941729,stock_flow_gompertz
+Malaysia,MYS,2053,2W,1659722.9321514517,stock_flow_gompertz
+Malaysia,MYS,2054,2W,1717728.78560346,stock_flow_gompertz
+Malaysia,MYS,2055,2W,1755037.9451520368,stock_flow_gompertz
+Malaysia,MYS,2056,2W,1760767.0966761932,stock_flow_gompertz
+Malaysia,MYS,2057,2W,1730949.257883709,stock_flow_gompertz
+Malaysia,MYS,2058,2W,1691939.4552808218,stock_flow_gompertz
+Malaysia,MYS,2059,2W,1647564.4579939768,stock_flow_gompertz
+Malaysia,MYS,2060,2W,1599734.076069627,stock_flow_gompertz
+Malaysia,MYS,2006,Bus,461.1963772817466,observed
+Malaysia,MYS,2007,Bus,474.342268600199,observed
+Malaysia,MYS,2008,Bus,488.88253665820497,observed
+Malaysia,MYS,2009,Bus,502.8290127579512,observed
+Malaysia,MYS,2010,Bus,518.1938831406896,observed
+Malaysia,MYS,2011,Bus,532.9896996349104,observed
+Malaysia,MYS,2012,Bus,549.2293906239578,observed
+Malaysia,MYS,2013,Bus,564.9262723426765,observed
+Malaysia,MYS,2014,Bus,582.0940605129568,observed
+Malaysia,MYS,2015,Bus,599.7468823283455,observed
+Malaysia,MYS,2016,Bus,616.8992887981959,observed
+Malaysia,MYS,2017,Bus,634.5662674621418,observed
+Malaysia,MYS,2018,Bus,702.7632554860061,observed
+Malaysia,MYS,2019,Bus,740.5061531505863,observed
+Malaysia,MYS,2020,Bus,781.8113377451039,observed
+Malaysia,MYS,2021,Bus,827.695677877457,observed
+Malaysia,MYS,2022,Bus,878.1765482137807,observed
+Malaysia,MYS,2023,Bus,934.2718446601941,observed
+Malaysia,MYS,2024,Bus,994.0,observed
+Malaysia,MYS,2025,Bus,90299.06218450368,stock_flow_fe_ols
+Malaysia,MYS,2026,Bus,4970.442504824037,stock_flow_fe_ols
+Malaysia,MYS,2027,Bus,4788.313147791603,stock_flow_fe_ols
+Malaysia,MYS,2028,Bus,4823.999021398762,stock_flow_fe_ols
+Malaysia,MYS,2029,Bus,4946.190174593037,stock_flow_fe_ols
+Malaysia,MYS,2030,Bus,5216.975939110125,stock_flow_fe_ols
+Malaysia,MYS,2031,Bus,5633.420341389472,stock_flow_fe_ols
+Malaysia,MYS,2032,Bus,5420.054148244642,stock_flow_fe_ols
+Malaysia,MYS,2033,Bus,5620.953283091832,stock_flow_fe_ols
+Malaysia,MYS,2034,Bus,7532.226559247036,stock_flow_fe_ols
+Malaysia,MYS,2035,Bus,13201.092256811622,stock_flow_fe_ols
+Malaysia,MYS,2036,Bus,12646.853637984195,stock_flow_fe_ols
+Malaysia,MYS,2037,Bus,13174.386656443969,stock_flow_fe_ols
+Malaysia,MYS,2038,Bus,15025.198452941111,stock_flow_fe_ols
+Malaysia,MYS,2039,Bus,15388.155175875698,stock_flow_fe_ols
+Malaysia,MYS,2040,Bus,16655.94456656961,stock_flow_fe_ols
+Malaysia,MYS,2041,Bus,17704.150913847232,stock_flow_fe_ols
+Malaysia,MYS,2042,Bus,17504.543793822784,stock_flow_fe_ols
+Malaysia,MYS,2043,Bus,15355.915991588789,stock_flow_fe_ols
+Malaysia,MYS,2044,Bus,15698.547192394646,stock_flow_fe_ols
+Malaysia,MYS,2045,Bus,15072.544597054395,stock_flow_fe_ols
+Malaysia,MYS,2046,Bus,15564.035853638605,stock_flow_fe_ols
+Malaysia,MYS,2047,Bus,14221.57256994961,stock_flow_fe_ols
+Malaysia,MYS,2048,Bus,14535.969741064182,stock_flow_fe_ols
+Malaysia,MYS,2049,Bus,15211.923693837947,stock_flow_fe_ols
+Malaysia,MYS,2050,Bus,15470.131413586438,stock_flow_fe_ols
+Malaysia,MYS,2051,Bus,17238.662929222075,stock_flow_fe_ols
+Malaysia,MYS,2052,Bus,18412.627700687157,stock_flow_fe_ols
+Malaysia,MYS,2053,Bus,19322.330979201597,stock_flow_fe_ols
+Malaysia,MYS,2054,Bus,20214.640066054504,stock_flow_fe_ols
+Malaysia,MYS,2055,Bus,20978.911532866623,stock_flow_fe_ols
+Malaysia,MYS,2056,Bus,21584.324875301303,stock_flow_fe_ols
+Malaysia,MYS,2057,Bus,21933.72581173756,stock_flow_fe_ols
+Malaysia,MYS,2058,Bus,22214.325065242418,stock_flow_fe_ols
+Malaysia,MYS,2059,Bus,22439.638569916337,stock_flow_fe_ols
+Malaysia,MYS,2060,Bus,22610.944162948465,stock_flow_fe_ols
+Malaysia,MYS,2000,LDV,352437.0,observed
+Malaysia,MYS,2001,LDV,406245.0,observed
+Malaysia,MYS,2002,LDV,446651.0,observed
+Malaysia,MYS,2003,LDV,431706.0,observed
+Malaysia,MYS,2004,LDV,489293.0,observed
+Malaysia,MYS,2005,LDV,566609.0,observed
+Malaysia,MYS,2006,LDV,475514.0,observed
+Malaysia,MYS,2007,LDV,480705.0,observed
+Malaysia,MYS,2008,LDV,551151.0,observed
+Malaysia,MYS,2009,LDV,539220.0,observed
+Malaysia,MYS,2010,LDV,608644.0,observed
+Malaysia,MYS,2011,LDV,607579.0,observed
+Malaysia,MYS,2012,LDV,633069.0,observed
+Malaysia,MYS,2013,LDV,664722.0,observed
+Malaysia,MYS,2014,LDV,677266.0,observed
+Malaysia,MYS,2015,LDV,678115.0,observed
+Malaysia,MYS,2016,LDV,588126.0,observed
+Malaysia,MYS,2017,LDV,579631.0,observed
+Malaysia,MYS,2018,LDV,608994.0,observed
+Malaysia,MYS,2019,LDV,612973.0,observed
+Malaysia,MYS,2020,LDV,552359.0,observed
+Malaysia,MYS,2021,LDV,530057.0,observed
+Malaysia,MYS,2022,LDV,744762.0,observed
+Malaysia,MYS,2023,LDV,832347.0,observed
+Malaysia,MYS,2024,LDV,856292.0,observed
+Malaysia,MYS,2025,LDV,9059615.579486296,stock_flow_gompertz
+Malaysia,MYS,2026,LDV,1219820.7592157235,stock_flow_gompertz
+Malaysia,MYS,2027,LDV,1157089.352822464,stock_flow_gompertz
+Malaysia,MYS,2028,LDV,1147991.413529627,stock_flow_gompertz
+Malaysia,MYS,2029,LDV,1141079.5107597187,stock_flow_gompertz
+Malaysia,MYS,2030,LDV,1150025.1511431932,stock_flow_gompertz
+Malaysia,MYS,2031,LDV,1173532.5885269493,stock_flow_gompertz
+Malaysia,MYS,2032,LDV,1106579.4881710075,stock_flow_gompertz
+Malaysia,MYS,2033,LDV,1104187.8725072928,stock_flow_gompertz
+Malaysia,MYS,2034,LDV,1264280.5427803695,stock_flow_gompertz
+Malaysia,MYS,2035,LDV,1776857.2027450316,stock_flow_gompertz
+Malaysia,MYS,2036,LDV,1703322.944036264,stock_flow_gompertz
+Malaysia,MYS,2037,LDV,1746477.7029919175,stock_flow_gompertz
+Malaysia,MYS,2038,LDV,1899777.5126974436,stock_flow_gompertz
+Malaysia,MYS,2039,LDV,1926852.6534461528,stock_flow_gompertz
+Malaysia,MYS,2040,LDV,2033307.6739217716,stock_flow_gompertz
+Malaysia,MYS,2041,LDV,2086445.7793831413,stock_flow_gompertz
+Malaysia,MYS,2042,LDV,2080162.9873013608,stock_flow_gompertz
+Malaysia,MYS,2043,LDV,1862553.378081359,stock_flow_gompertz
+Malaysia,MYS,2044,LDV,1829062.4425594693,stock_flow_gompertz
+Malaysia,MYS,2045,LDV,1780777.583471749,stock_flow_gompertz
+Malaysia,MYS,2046,LDV,1754433.5256741792,stock_flow_gompertz
+Malaysia,MYS,2047,LDV,1599504.0591396354,stock_flow_gompertz
+Malaysia,MYS,2048,LDV,1597499.211581897,stock_flow_gompertz
+Malaysia,MYS,2049,LDV,1631873.0949954877,stock_flow_gompertz
+Malaysia,MYS,2050,LDV,1676300.0736325458,stock_flow_gompertz
+Malaysia,MYS,2051,LDV,1757530.2237320729,stock_flow_gompertz
+Malaysia,MYS,2052,LDV,1833051.113599524,stock_flow_gompertz
+Malaysia,MYS,2053,LDV,1882776.372177724,stock_flow_gompertz
+Malaysia,MYS,2054,LDV,1929804.049267538,stock_flow_gompertz
+Malaysia,MYS,2055,LDV,1966045.1123702156,stock_flow_gompertz
+Malaysia,MYS,2056,LDV,1983199.546055257,stock_flow_gompertz
+Malaysia,MYS,2057,LDV,1975770.037350621,stock_flow_gompertz
+Malaysia,MYS,2058,LDV,1960453.4468304776,stock_flow_gompertz
+Malaysia,MYS,2059,LDV,1939241.8356978367,stock_flow_gompertz
+Malaysia,MYS,2060,LDV,1912730.274846837,stock_flow_gompertz
+Malaysia,MYS,2006,Truck,19374.0,observed
+Malaysia,MYS,2007,Truck,20660.0,observed
+Malaysia,MYS,2008,Truck,22009.0,observed
+Malaysia,MYS,2009,Truck,23424.0,observed
+Malaysia,MYS,2010,Truck,24908.0,observed
+Malaysia,MYS,2011,Truck,26465.0,observed
+Malaysia,MYS,2012,Truck,28096.0,observed
+Malaysia,MYS,2013,Truck,29806.0,observed
+Malaysia,MYS,2014,Truck,31597.0,observed
+Malaysia,MYS,2015,Truck,33473.0,observed
+Malaysia,MYS,2016,Truck,35438.0,observed
+Malaysia,MYS,2017,Truck,37494.0,observed
+Malaysia,MYS,2018,Truck,39649.0,observed
+Malaysia,MYS,2019,Truck,41903.0,observed
+Malaysia,MYS,2020,Truck,44261.0,observed
+Malaysia,MYS,2021,Truck,46730.0,observed
+Malaysia,MYS,2022,Truck,49312.0,observed
+Malaysia,MYS,2023,Truck,52012.0,observed
+Malaysia,MYS,2024,Truck,54838.0,observed
+Malaysia,MYS,2025,Truck,1044505.3521881131,stock_flow_fe_ols
+Malaysia,MYS,2026,Truck,82418.62517049233,stock_flow_fe_ols
+Malaysia,MYS,2027,Truck,84988.60328532326,stock_flow_fe_ols
+Malaysia,MYS,2028,Truck,98352.8736721055,stock_flow_fe_ols
+Malaysia,MYS,2029,Truck,113818.64609641876,stock_flow_fe_ols
+Malaysia,MYS,2030,Truck,113818.64609641876,stock_flow_fe_ols
+Malaysia,MYS,2031,Truck,113818.64609641876,stock_flow_fe_ols
+Malaysia,MYS,2032,Truck,113818.64609641876,stock_flow_fe_ols
+Malaysia,MYS,2033,Truck,113818.64609641876,stock_flow_fe_ols
+Malaysia,MYS,2034,Truck,113818.64609641876,stock_flow_fe_ols
+Malaysia,MYS,2035,Truck,113818.64609641876,stock_flow_fe_ols
+Malaysia,MYS,2036,Truck,130410.49384279433,stock_flow_fe_ols
+Malaysia,MYS,2037,Truck,181077.7810995842,stock_flow_fe_ols
+Malaysia,MYS,2038,Truck,205909.68773976807,stock_flow_fe_ols
+Malaysia,MYS,2039,Truck,210668.36830097204,stock_flow_fe_ols
+Malaysia,MYS,2040,Truck,225385.4403376752,stock_flow_fe_ols
+Malaysia,MYS,2041,Truck,239750.64920001663,stock_flow_fe_ols
+Malaysia,MYS,2042,Truck,235559.04966759545,stock_flow_fe_ols
+Malaysia,MYS,2043,Truck,210975.02262649965,stock_flow_fe_ols
+Malaysia,MYS,2044,Truck,213690.07891191915,stock_flow_fe_ols
+Malaysia,MYS,2045,Truck,199792.4822546593,stock_flow_fe_ols
+Malaysia,MYS,2046,Truck,203505.65615984984,stock_flow_fe_ols
+Malaysia,MYS,2047,Truck,186258.74193710275,stock_flow_fe_ols
+Malaysia,MYS,2048,Truck,187273.3497770913,stock_flow_fe_ols
+Malaysia,MYS,2049,Truck,192354.4630362629,stock_flow_fe_ols
+Malaysia,MYS,2050,Truck,191940.6979182665,stock_flow_fe_ols
+Malaysia,MYS,2051,Truck,209132.87460373947,stock_flow_fe_ols
+Malaysia,MYS,2052,Truck,220568.0066423458,stock_flow_fe_ols
+Malaysia,MYS,2053,Truck,230642.85869066,stock_flow_fe_ols
+Malaysia,MYS,2054,Truck,240801.9046396222,stock_flow_fe_ols
+Malaysia,MYS,2055,Truck,248163.7534285197,stock_flow_fe_ols
+Malaysia,MYS,2056,Truck,254081.9292601189,stock_flow_fe_ols
+Malaysia,MYS,2057,Truck,257926.53258464392,stock_flow_fe_ols
+Malaysia,MYS,2058,Truck,260107.2358496208,stock_flow_fe_ols
+Malaysia,MYS,2059,Truck,259782.28929786524,stock_flow_fe_ols
+Malaysia,MYS,2060,Truck,258799.4531654017,stock_flow_fe_ols
+Myanmar,MMR,2006,2W,195689.0,observed
+Myanmar,MMR,2007,2W,206234.0,observed
+Myanmar,MMR,2008,2W,217038.0,observed
+Myanmar,MMR,2009,2W,228054.0,observed
+Myanmar,MMR,2010,2W,239230.0,observed
+Myanmar,MMR,2011,2W,250497.0,observed
+Myanmar,MMR,2012,2W,261774.0,observed
+Myanmar,MMR,2013,2W,272966.0,observed
+Myanmar,MMR,2014,2W,283955.0,observed
+Myanmar,MMR,2015,2W,294607.0,observed
+Myanmar,MMR,2016,2W,304761.0,observed
+Myanmar,MMR,2017,2W,314230.0,observed
+Myanmar,MMR,2018,2W,322797.0,observed
+Myanmar,MMR,2019,2W,330210.0,observed
+Myanmar,MMR,2020,2W,336177.0,observed
+Myanmar,MMR,2021,2W,340362.0,observed
+Myanmar,MMR,2022,2W,342379.0,observed
+Myanmar,MMR,2023,2W,342379.0,observed
+Myanmar,MMR,2024,2W,342380.0,observed
+Myanmar,MMR,2025,2W,2418155.0968244206,stock_flow_gompertz
+Myanmar,MMR,2026,2W,461301.05240095407,stock_flow_gompertz
+Myanmar,MMR,2027,2W,485557.5503203161,stock_flow_gompertz
+Myanmar,MMR,2028,2W,504242.264664908,stock_flow_gompertz
+Myanmar,MMR,2029,2W,523392.81391850486,stock_flow_gompertz
+Myanmar,MMR,2030,2W,342331.4410530776,stock_flow_gompertz
+Myanmar,MMR,2031,2W,680437.4288209165,stock_flow_gompertz
+Myanmar,MMR,2032,2W,707452.2442461755,stock_flow_gompertz
+Myanmar,MMR,2033,2W,735573.553025905,stock_flow_gompertz
+Myanmar,MMR,2034,2W,802237.0359312855,stock_flow_gompertz
+Myanmar,MMR,2035,2W,941003.0087703113,stock_flow_gompertz
+Myanmar,MMR,2036,2W,955313.3602919356,stock_flow_gompertz
+Myanmar,MMR,2037,2W,1005886.592463754,stock_flow_gompertz
+Myanmar,MMR,2038,2W,1057347.8816976286,stock_flow_gompertz
+Myanmar,MMR,2039,2W,1085624.9035923015,stock_flow_gompertz
+Myanmar,MMR,2040,2W,1130713.8013866935,stock_flow_gompertz
+Myanmar,MMR,2041,2W,1183189.7520151418,stock_flow_gompertz
+Myanmar,MMR,2042,2W,1224839.9084398055,stock_flow_gompertz
+Myanmar,MMR,2043,2W,1207108.3125746548,stock_flow_gompertz
+Myanmar,MMR,2044,2W,1235581.8653457535,stock_flow_gompertz
+Myanmar,MMR,2045,2W,1266731.7299364116,stock_flow_gompertz
+Myanmar,MMR,2046,2W,1322784.345827736,stock_flow_gompertz
+Myanmar,MMR,2047,2W,1325807.973480517,stock_flow_gompertz
+Myanmar,MMR,2048,2W,1370404.7310865838,stock_flow_gompertz
+Myanmar,MMR,2049,2W,1414311.93320778,stock_flow_gompertz
+Myanmar,MMR,2050,2W,1457807.2817167696,stock_flow_gompertz
+Myanmar,MMR,2051,2W,1501117.3122213408,stock_flow_gompertz
+Myanmar,MMR,2052,2W,1548088.1808430776,stock_flow_gompertz
+Myanmar,MMR,2053,2W,1581268.1088779122,stock_flow_gompertz
+Myanmar,MMR,2054,2W,1611007.9408453666,stock_flow_gompertz
+Myanmar,MMR,2055,2W,1637286.4055609442,stock_flow_gompertz
+Myanmar,MMR,2056,2W,1659450.6754850077,stock_flow_gompertz
+Myanmar,MMR,2057,2W,1675134.4692089967,stock_flow_gompertz
+Myanmar,MMR,2058,2W,1689455.0089902394,stock_flow_gompertz
+Myanmar,MMR,2059,2W,1701795.587792907,stock_flow_gompertz
+Myanmar,MMR,2060,2W,1712361.9144163616,stock_flow_gompertz
+Myanmar,MMR,2006,Bus,333.18979894383824,observed
+Myanmar,MMR,2007,Bus,339.07549291215344,observed
+Myanmar,MMR,2008,Bus,346.1377576995181,observed
+Myanmar,MMR,2009,Bus,352.38189043050363,observed
+Myanmar,MMR,2010,Bus,358.8133471434187,observed
+Myanmar,MMR,2011,Bus,366.4377475577213,observed
+Myanmar,MMR,2012,Bus,373.2608799844529,observed
+Myanmar,MMR,2013,Bus,381.2887063839865,observed
+Myanmar,MMR,2014,Bus,388.5273675755061,observed
+Myanmar,MMR,2015,Bus,395.9831886027713,observed
+Myanmar,MMR,2016,Bus,404.66268426085446,observed
+Myanmar,MMR,2017,Bus,412.5725647886801,observed
+Myanmar,MMR,2018,Bus,420.71974173234054,observed
+Myanmar,MMR,2019,Bus,430.1113339843108,observed
+Myanmar,MMR,2020,Bus,441.7546740038401,observed
+Myanmar,MMR,2021,Bus,452.65731422395527,observed
+Myanmar,MMR,2022,Bus,462.827033650674,observed
+Myanmar,MMR,2023,Bus,473.2718446601942,observed
+Myanmar,MMR,2024,Bus,485.0,observed
+Myanmar,MMR,2025,Bus,26821.082201185323,stock_flow_fe_ols
+Myanmar,MMR,2026,Bus,1264.595956207595,stock_flow_fe_ols
+Myanmar,MMR,2027,Bus,1297.0784997385636,stock_flow_fe_ols
+Myanmar,MMR,2028,Bus,1320.70071580683,stock_flow_fe_ols
+Myanmar,MMR,2029,Bus,1368.7590735344347,stock_flow_fe_ols
+Myanmar,MMR,2030,Bus,1147.186389363902,stock_flow_fe_ols
+Myanmar,MMR,2031,Bus,1638.0955515928508,stock_flow_fe_ols
+Myanmar,MMR,2032,Bus,1728.524009340159,stock_flow_fe_ols
+Myanmar,MMR,2033,Bus,1850.6786680135772,stock_flow_fe_ols
+Myanmar,MMR,2034,Bus,2478.58750824356,stock_flow_fe_ols
+Myanmar,MMR,2035,Bus,4020.314433473126,stock_flow_fe_ols
+Myanmar,MMR,2036,Bus,3909.6346068205385,stock_flow_fe_ols
+Myanmar,MMR,2037,Bus,4312.1526916262665,stock_flow_fe_ols
+Myanmar,MMR,2038,Bus,4727.203652885386,stock_flow_fe_ols
+Myanmar,MMR,2039,Bus,4889.240923685487,stock_flow_fe_ols
+Myanmar,MMR,2040,Bus,5309.250181647352,stock_flow_fe_ols
+Myanmar,MMR,2041,Bus,5510.439912299764,stock_flow_fe_ols
+Myanmar,MMR,2042,Bus,5703.325621502998,stock_flow_fe_ols
+Myanmar,MMR,2043,Bus,5133.536450862528,stock_flow_fe_ols
+Myanmar,MMR,2044,Bus,5137.8656412670825,stock_flow_fe_ols
+Myanmar,MMR,2045,Bus,5214.204628192914,stock_flow_fe_ols
+Myanmar,MMR,2046,Bus,5322.330489715911,stock_flow_fe_ols
+Myanmar,MMR,2047,Bus,5045.516292191336,stock_flow_fe_ols
+Myanmar,MMR,2048,Bus,5273.694511159061,stock_flow_fe_ols
+Myanmar,MMR,2049,Bus,5607.178790131322,stock_flow_fe_ols
+Myanmar,MMR,2050,Bus,5992.345404731052,stock_flow_fe_ols
+Myanmar,MMR,2051,Bus,6471.023739617536,stock_flow_fe_ols
+Myanmar,MMR,2052,Bus,6959.263650439345,stock_flow_fe_ols
+Myanmar,MMR,2053,Bus,7366.896950516195,stock_flow_fe_ols
+Myanmar,MMR,2054,Bus,7770.445289510622,stock_flow_fe_ols
+Myanmar,MMR,2055,Bus,8151.491733757619,stock_flow_fe_ols
+Myanmar,MMR,2056,Bus,8489.154706822315,stock_flow_fe_ols
+Myanmar,MMR,2057,Bus,8771.774632875837,stock_flow_fe_ols
+Myanmar,MMR,2058,Bus,9050.90503622424,stock_flow_fe_ols
+Myanmar,MMR,2059,Bus,9332.28657702553,stock_flow_fe_ols
+Myanmar,MMR,2060,Bus,9621.94245424107,stock_flow_fe_ols
+Myanmar,MMR,2006,LDV,12527.952191240069,observed
+Myanmar,MMR,2007,LDV,12903.790756977272,observed
+Myanmar,MMR,2008,LDV,13290.904479686591,observed
+Myanmar,MMR,2009,LDV,13689.631614077189,observed
+Myanmar,MMR,2010,LDV,14100.320562499503,observed
+Myanmar,MMR,2011,LDV,14523.33017937449,observed
+Myanmar,MMR,2012,LDV,14959.030084755726,observed
+Myanmar,MMR,2013,LDV,15407.800987298397,observed
+Myanmar,MMR,2014,LDV,15870.03501691735,observed
+Myanmar,MMR,2015,LDV,16346.13606742487,observed
+Myanmar,MMR,2016,LDV,16836.520149447617,observed
+Myanmar,MMR,2017,LDV,17341.615753931044,observed
+Myanmar,MMR,2018,LDV,17862.86422654898,observed
+Myanmar,MMR,2019,LDV,18399.72015334545,observed
+Myanmar,MMR,2020,LDV,18952.651757945812,observed
+Myanmar,MMR,2021,LDV,19522.141310684186,observed
+Myanmar,MMR,2022,LDV,20108.685550004713,observed
+Myanmar,MMR,2023,LDV,20712.796116504855,observed
+Myanmar,MMR,2024,LDV,21335.0,observed
+Myanmar,MMR,2025,LDV,481753.85173853487,stock_flow_gompertz
+Myanmar,MMR,2026,LDV,35604.51210221194,stock_flow_gompertz
+Myanmar,MMR,2027,LDV,36960.37030749768,stock_flow_gompertz
+Myanmar,MMR,2028,LDV,37967.353621800896,stock_flow_gompertz
+Myanmar,MMR,2029,LDV,39385.23319138191,stock_flow_gompertz
+Myanmar,MMR,2030,LDV,22069.96735912492,stock_flow_gompertz
+Myanmar,MMR,2031,LDV,53605.2210114958,stock_flow_gompertz
+Myanmar,MMR,2032,LDV,56785.69912310247,stock_flow_gompertz
+Myanmar,MMR,2033,LDV,60588.53650303651,stock_flow_gompertz
+Myanmar,MMR,2034,LDV,73317.26913310064,stock_flow_gompertz
+Myanmar,MMR,2035,LDV,102167.99481982586,stock_flow_gompertz
+Myanmar,MMR,2036,LDV,102594.41844852456,stock_flow_gompertz
+Myanmar,MMR,2037,LDV,111867.9744509873,stock_flow_gompertz
+Myanmar,MMR,2038,LDV,121517.35096974856,stock_flow_gompertz
+Myanmar,MMR,2039,LDV,126657.87075004516,stock_flow_gompertz
+Myanmar,MMR,2040,LDV,136327.09105139016,stock_flow_gompertz
+Myanmar,MMR,2041,LDV,144663.06066378183,stock_flow_gompertz
+Myanmar,MMR,2042,LDV,152248.13482112554,stock_flow_gompertz
+Myanmar,MMR,2043,LDV,146889.56260192813,stock_flow_gompertz
+Myanmar,MMR,2044,LDV,152154.73259397317,stock_flow_gompertz
+Myanmar,MMR,2045,LDV,158959.81129026902,stock_flow_gompertz
+Myanmar,MMR,2046,LDV,170344.2762444634,stock_flow_gompertz
+Myanmar,MMR,2047,LDV,172635.32979147672,stock_flow_gompertz
+Myanmar,MMR,2048,LDV,184609.3683558649,stock_flow_gompertz
+Myanmar,MMR,2049,LDV,198648.45631611208,stock_flow_gompertz
+Myanmar,MMR,2050,LDV,213895.95168496133,stock_flow_gompertz
+Myanmar,MMR,2051,LDV,229309.4777452308,stock_flow_gompertz
+Myanmar,MMR,2052,LDV,246699.54748822004,stock_flow_gompertz
+Myanmar,MMR,2053,LDV,262786.0761353336,stock_flow_gompertz
+Myanmar,MMR,2054,LDV,279260.37022262113,stock_flow_gompertz
+Myanmar,MMR,2055,LDV,295952.73798487894,stock_flow_gompertz
+Myanmar,MMR,2056,LDV,312658.46277273167,stock_flow_gompertz
+Myanmar,MMR,2057,LDV,328988.53567301715,stock_flow_gompertz
+Myanmar,MMR,2058,LDV,345968.5135181919,stock_flow_gompertz
+Myanmar,MMR,2059,LDV,363621.63080867473,stock_flow_gompertz
+Myanmar,MMR,2060,LDV,381978.8837223989,stock_flow_gompertz
+Myanmar,MMR,2006,Truck,14894.0,observed
+Myanmar,MMR,2007,Truck,15565.0,observed
+Myanmar,MMR,2008,Truck,16232.0,observed
+Myanmar,MMR,2009,Truck,16886.0,observed
+Myanmar,MMR,2010,Truck,17521.0,observed
+Myanmar,MMR,2011,Truck,18126.0,observed
+Myanmar,MMR,2012,Truck,18692.0,observed
+Myanmar,MMR,2013,Truck,19203.0,observed
+Myanmar,MMR,2014,Truck,19647.0,observed
+Myanmar,MMR,2015,Truck,20005.0,observed
+Myanmar,MMR,2016,Truck,20257.0,observed
+Myanmar,MMR,2017,Truck,16578.122824779635,observed
+Myanmar,MMR,2018,Truck,17075.466509523027,observed
+Myanmar,MMR,2019,Truck,17587.73050480872,observed
+Myanmar,MMR,2020,Truck,18115.362419952977,observed
+Myanmar,MMR,2021,Truck,18658.82329255157,observed
+Myanmar,MMR,2022,Truck,19218.58799132812,observed
+Myanmar,MMR,2023,Truck,19795.145631067964,observed
+Myanmar,MMR,2024,Truck,20389.0,observed
+Myanmar,MMR,2025,Truck,131234.92686899178,stock_flow_fe_ols
+Myanmar,MMR,2026,Truck,28233.244277028483,stock_flow_fe_ols
+Myanmar,MMR,2027,Truck,29308.224198781536,stock_flow_fe_ols
+Myanmar,MMR,2028,Truck,30065.553815220424,stock_flow_fe_ols
+Myanmar,MMR,2029,Truck,30746.72763765737,stock_flow_fe_ols
+Myanmar,MMR,2030,Truck,29239.746461500312,stock_flow_fe_ols
+Myanmar,MMR,2031,Truck,31883.294174577284,stock_flow_fe_ols
+Myanmar,MMR,2032,Truck,40796.17110695434,stock_flow_fe_ols
+Myanmar,MMR,2033,Truck,42042.319721110456,stock_flow_fe_ols
+Myanmar,MMR,2034,Truck,45340.89663755358,stock_flow_fe_ols
+Myanmar,MMR,2035,Truck,52706.39986195695,stock_flow_fe_ols
+Myanmar,MMR,2036,Truck,53609.87772941101,stock_flow_fe_ols
+Myanmar,MMR,2037,Truck,56516.63523096475,stock_flow_fe_ols
+Myanmar,MMR,2038,Truck,59568.54128553113,stock_flow_fe_ols
+Myanmar,MMR,2039,Truck,61696.38130335766,stock_flow_fe_ols
+Myanmar,MMR,2040,Truck,64870.98509083095,stock_flow_fe_ols
+Myanmar,MMR,2041,Truck,67883.52561234299,stock_flow_fe_ols
+Myanmar,MMR,2042,Truck,70934.7212501961,stock_flow_fe_ols
+Myanmar,MMR,2043,Truck,70670.46518147353,stock_flow_fe_ols
+Myanmar,MMR,2044,Truck,72723.42743152694,stock_flow_fe_ols
+Myanmar,MMR,2045,Truck,75243.71985994221,stock_flow_fe_ols
+Myanmar,MMR,2046,Truck,79473.29332639731,stock_flow_fe_ols
+Myanmar,MMR,2047,Truck,80691.72284399578,stock_flow_fe_ols
+Myanmar,MMR,2048,Truck,83970.14199861186,stock_flow_fe_ols
+Myanmar,MMR,2049,Truck,87789.49438397307,stock_flow_fe_ols
+Myanmar,MMR,2050,Truck,91455.6237352133,stock_flow_fe_ols
+Myanmar,MMR,2051,Truck,94226.11613964674,stock_flow_fe_ols
+Myanmar,MMR,2052,Truck,98359.6335138547,stock_flow_fe_ols
+Myanmar,MMR,2053,Truck,102172.6152385606,stock_flow_fe_ols
+Myanmar,MMR,2054,Truck,105894.9409985002,stock_flow_fe_ols
+Myanmar,MMR,2055,Truck,109471.4874648212,stock_flow_fe_ols
+Myanmar,MMR,2056,Truck,113092.12217685628,stock_flow_fe_ols
+Myanmar,MMR,2057,Truck,116396.12273150728,stock_flow_fe_ols
+Myanmar,MMR,2058,Truck,120045.68214029586,stock_flow_fe_ols
+Myanmar,MMR,2059,Truck,123386.92145335,stock_flow_fe_ols
+Myanmar,MMR,2060,Truck,126993.30433823192,stock_flow_fe_ols
+Philippines,PHL,2006,2W,152287.0,observed
+Philippines,PHL,2007,2W,164938.0,observed
+Philippines,PHL,2008,2W,178632.0,observed
+Philippines,PHL,2009,2W,193455.0,observed
+Philippines,PHL,2010,2W,209500.0,observed
+Philippines,PHL,2011,2W,226867.0,observed
+Philippines,PHL,2012,2W,245663.0,observed
+Philippines,PHL,2013,2W,266006.0,observed
+Philippines,PHL,2014,2W,288022.0,observed
+Philippines,PHL,2015,2W,311848.0,observed
+Philippines,PHL,2016,2W,337632.0,observed
+Philippines,PHL,2017,2W,365535.0,observed
+Philippines,PHL,2018,2W,395729.0,observed
+Philippines,PHL,2019,2W,428401.0,observed
+Philippines,PHL,2020,2W,463756.0,observed
+Philippines,PHL,2021,2W,502009.0,observed
+Philippines,PHL,2022,2W,543398.0,observed
+Philippines,PHL,2023,2W,588179.0,observed
+Philippines,PHL,2024,2W,636628.0,observed
+Philippines,PHL,2025,2W,5076842.228485702,stock_flow_gompertz
+Philippines,PHL,2026,2W,1214660.24577472,stock_flow_gompertz
+Philippines,PHL,2027,2W,1325879.9553413484,stock_flow_gompertz
+Philippines,PHL,2028,2W,1413989.1096880138,stock_flow_gompertz
+Philippines,PHL,2029,2W,1517196.6039902195,stock_flow_gompertz
+Philippines,PHL,2030,2W,1298103.8926671091,stock_flow_gompertz
+Philippines,PHL,2031,2W,1353859.6699818652,stock_flow_gompertz
+Philippines,PHL,2032,2W,1576170.4817087892,stock_flow_gompertz
+Philippines,PHL,2033,2W,1388321.9507510662,stock_flow_gompertz
+Philippines,PHL,2034,2W,1689125.498359453,stock_flow_gompertz
+Philippines,PHL,2035,2W,1760179.3082843495,stock_flow_gompertz
+Philippines,PHL,2036,2W,1953407.0926112868,stock_flow_gompertz
+Philippines,PHL,2037,2W,2042611.9946948849,stock_flow_gompertz
+Philippines,PHL,2038,2W,2140552.159574088,stock_flow_gompertz
+Philippines,PHL,2039,2W,2353235.2502030022,stock_flow_gompertz
+Philippines,PHL,2040,2W,2282385.3177229725,stock_flow_gompertz
+Philippines,PHL,2041,2W,2480368.843313813,stock_flow_gompertz
+Philippines,PHL,2042,2W,2530459.3339980543,stock_flow_gompertz
+Philippines,PHL,2043,2W,2439985.9798843525,stock_flow_gompertz
+Philippines,PHL,2044,2W,2444327.9509243816,stock_flow_gompertz
+Philippines,PHL,2045,2W,2442646.611909632,stock_flow_gompertz
+Philippines,PHL,2046,2W,2445868.0462455004,stock_flow_gompertz
+Philippines,PHL,2047,2W,2474768.3239141293,stock_flow_gompertz
+Philippines,PHL,2048,2W,2479824.8706607,stock_flow_gompertz
+Philippines,PHL,2049,2W,2436576.6138069816,stock_flow_gompertz
+Philippines,PHL,2050,2W,2545204.243401855,stock_flow_gompertz
+Philippines,PHL,2051,2W,2637190.931809984,stock_flow_gompertz
+Philippines,PHL,2052,2W,2713117.807367537,stock_flow_gompertz
+Philippines,PHL,2053,2W,2779461.334133014,stock_flow_gompertz
+Philippines,PHL,2054,2W,2838018.4136163294,stock_flow_gompertz
+Philippines,PHL,2055,2W,2890605.2467899024,stock_flow_gompertz
+Philippines,PHL,2056,2W,2932218.1095713004,stock_flow_gompertz
+Philippines,PHL,2057,2W,2962110.6462000534,stock_flow_gompertz
+Philippines,PHL,2058,2W,2982989.366819963,stock_flow_gompertz
+Philippines,PHL,2059,2W,2992276.6030916944,stock_flow_gompertz
+Philippines,PHL,2060,2W,3001764.709743634,stock_flow_gompertz
+Philippines,PHL,2006,Bus,1469.4865190407056,observed
+Philippines,PHL,2007,Bus,1513.541114611927,observed
+Philippines,PHL,2008,Bus,1558.9173480502848,observed
+Philippines,PHL,2009,Bus,1605.6548684917934,observed
+Philippines,PHL,2010,Bus,1653.7945145465471,observed
+Philippines,PHL,2011,Bus,1704.3783499829435,observed
+Philippines,PHL,2012,Bus,1755.4497004824325,observed
+Philippines,PHL,2013,Bus,1808.053191496905,observed
+Philippines,PHL,2014,Bus,1862.2347872418125,observed
+Philippines,PHL,2015,Bus,1918.0418308590667,observed
+Philippines,PHL,2016,Bus,1975.5230857848387,observed
+Philippines,PHL,2017,Bus,2034.728778358384,observed
+Philippines,PHL,2018,Bus,2214.710641709136,observed
+Philippines,PHL,2019,Bus,2323.5219609604096,observed
+Philippines,PHL,2020,Bus,2443.2176197892218,observed
+Philippines,PHL,2021,Bus,2572.854148382899,observed
+Philippines,PHL,2022,Bus,2713.489772834386,observed
+Philippines,PHL,2023,Bus,2869.1844660194174,observed
+Philippines,PHL,2024,Bus,3000.0,observed
+Philippines,PHL,2025,Bus,16414.60381287488,stock_flow_fe_ols
+Philippines,PHL,2026,Bus,4035.923205922751,stock_flow_fe_ols
+Philippines,PHL,2027,Bus,4308.213069921236,stock_flow_fe_ols
+Philippines,PHL,2028,Bus,4533.945779903144,stock_flow_fe_ols
+Philippines,PHL,2029,Bus,4797.760304563293,stock_flow_fe_ols
+Philippines,PHL,2030,Bus,4633.66874905289,stock_flow_fe_ols
+Philippines,PHL,2031,Bus,4811.945646869797,stock_flow_fe_ols
+Philippines,PHL,2032,Bus,5316.468469699008,stock_flow_fe_ols
+Philippines,PHL,2033,Bus,5210.706272923366,stock_flow_fe_ols
+Philippines,PHL,2034,Bus,5989.841298592583,stock_flow_fe_ols
+Philippines,PHL,2035,Bus,6636.128414655293,stock_flow_fe_ols
+Philippines,PHL,2036,Bus,7089.526940235664,stock_flow_fe_ols
+Philippines,PHL,2037,Bus,7510.751949590805,stock_flow_fe_ols
+Philippines,PHL,2038,Bus,7960.586282962133,stock_flow_fe_ols
+Philippines,PHL,2039,Bus,8597.141918879584,stock_flow_fe_ols
+Philippines,PHL,2040,Bus,8742.538047318332,stock_flow_fe_ols
+Philippines,PHL,2041,Bus,9399.034062686917,stock_flow_fe_ols
+Philippines,PHL,2042,Bus,9760.03323044216,stock_flow_fe_ols
+Philippines,PHL,2043,Bus,9707.886865674283,stock_flow_fe_ols
+Philippines,PHL,2044,Bus,9942.203243335243,stock_flow_fe_ols
+Philippines,PHL,2045,Bus,10195.425791596674,stock_flow_fe_ols
+Philippines,PHL,2046,Bus,10464.312818324324,stock_flow_fe_ols
+Philippines,PHL,2047,Bus,10869.17812138937,stock_flow_fe_ols
+Philippines,PHL,2048,Bus,11217.484138095038,stock_flow_fe_ols
+Philippines,PHL,2049,Bus,11331.943845523669,stock_flow_fe_ols
+Philippines,PHL,2050,Bus,12084.690911308688,stock_flow_fe_ols
+Philippines,PHL,2051,Bus,12864.1893924436,stock_flow_fe_ols
+Philippines,PHL,2052,Bus,13550.467308090128,stock_flow_fe_ols
+Philippines,PHL,2053,Bus,14225.650126496534,stock_flow_fe_ols
+Philippines,PHL,2054,Bus,14910.040758314542,stock_flow_fe_ols
+Philippines,PHL,2055,Bus,15599.778862287088,stock_flow_fe_ols
+Philippines,PHL,2056,Bus,16286.431734489131,stock_flow_fe_ols
+Philippines,PHL,2057,Bus,16970.888192871207,stock_flow_fe_ols
+Philippines,PHL,2058,Bus,17659.357405714312,stock_flow_fe_ols
+Philippines,PHL,2059,Bus,18346.80740459645,stock_flow_fe_ols
+Philippines,PHL,2060,Bus,19078.555599315296,stock_flow_fe_ols
+Philippines,PHL,2006,LDV,60890.49981471905,observed
+Philippines,PHL,2007,LDV,62717.21480916063,observed
+Philippines,PHL,2008,LDV,64598.73125343545,observed
+Philippines,PHL,2009,LDV,66536.69319103852,observed
+Philippines,PHL,2010,LDV,68532.79398676966,observed
+Philippines,PHL,2011,LDV,70588.77780637276,observed
+Philippines,PHL,2012,LDV,72706.44114056395,observed
+Philippines,PHL,2013,LDV,74887.63437478087,observed
+Philippines,PHL,2014,LDV,77134.26340602431,observed
+Philippines,PHL,2015,LDV,79448.29130820502,observed
+Philippines,PHL,2016,LDV,81831.74004745118,observed
+Philippines,PHL,2017,LDV,84286.69224887472,observed
+Philippines,PHL,2018,LDV,86815.29301634096,observed
+Philippines,PHL,2019,LDV,89421.75180683119,observed
+Philippines,PHL,2020,LDV,92105.34436103614,observed
+Philippines,PHL,2021,LDV,94869.41469186722,observed
+Philippines,PHL,2022,LDV,97716.37713262325,observed
+Philippines,PHL,2023,LDV,100648.71844660194,observed
+Philippines,PHL,2024,LDV,103669.0,observed
+Philippines,PHL,2025,LDV,4003205.800071937,stock_flow_gompertz
+Philippines,PHL,2026,LDV,365718.9671650184,stock_flow_gompertz
+Philippines,PHL,2027,LDV,395425.8716689581,stock_flow_gompertz
+Philippines,PHL,2028,LDV,420786.9706578804,stock_flow_gompertz
+Philippines,PHL,2029,LDV,455818.1854554648,stock_flow_gompertz
+Philippines,PHL,2030,LDV,397623.137638662,stock_flow_gompertz
+Philippines,PHL,2031,LDV,417244.8248757348,stock_flow_gompertz
+Philippines,PHL,2032,LDV,495021.7064180095,stock_flow_gompertz
+Philippines,PHL,2033,LDV,443911.5266688634,stock_flow_gompertz
+Philippines,PHL,2034,LDV,602567.3442451525,stock_flow_gompertz
+Philippines,PHL,2035,LDV,761586.2400697935,stock_flow_gompertz
+Philippines,PHL,2036,LDV,822433.8535267031,stock_flow_gompertz
+Philippines,PHL,2037,LDV,890822.079253871,stock_flow_gompertz
+Philippines,PHL,2038,LDV,963068.4501748178,stock_flow_gompertz
+Philippines,PHL,2039,LDV,1074559.9608527962,stock_flow_gompertz
+Philippines,PHL,2040,LDV,1073167.1150914785,stock_flow_gompertz
+Philippines,PHL,2041,LDV,1189957.118054634,stock_flow_gompertz
+Philippines,PHL,2042,LDV,1234894.4044590872,stock_flow_gompertz
+Philippines,PHL,2043,LDV,1162252.4210755115,stock_flow_gompertz
+Philippines,PHL,2044,LDV,1172930.6096480545,stock_flow_gompertz
+Philippines,PHL,2045,LDV,1188101.7999767028,stock_flow_gompertz
+Philippines,PHL,2046,LDV,1203962.855869528,stock_flow_gompertz
+Philippines,PHL,2047,LDV,1248580.0232538506,stock_flow_gompertz
+Philippines,PHL,2048,LDV,1283682.539297115,stock_flow_gompertz
+Philippines,PHL,2049,LDV,1254746.6081608962,stock_flow_gompertz
+Philippines,PHL,2050,LDV,1393971.8541331068,stock_flow_gompertz
+Philippines,PHL,2051,LDV,1500341.6425396334,stock_flow_gompertz
+Philippines,PHL,2052,LDV,1599318.7232947927,stock_flow_gompertz
+Philippines,PHL,2053,LDV,1690051.601850968,stock_flow_gompertz
+Philippines,PHL,2054,LDV,1779661.8033438772,stock_flow_gompertz
+Philippines,PHL,2055,LDV,1866077.204891745,stock_flow_gompertz
+Philippines,PHL,2056,LDV,1946832.0955906135,stock_flow_gompertz
+Philippines,PHL,2057,LDV,2021706.9625927024,stock_flow_gompertz
+Philippines,PHL,2058,LDV,2092629.4721571729,stock_flow_gompertz
+Philippines,PHL,2059,LDV,2157966.5926603004,stock_flow_gompertz
+Philippines,PHL,2060,LDV,2228479.4832154475,stock_flow_gompertz
+Philippines,PHL,2006,Truck,6711.0,observed
+Philippines,PHL,2007,Truck,7237.0,observed
+Philippines,PHL,2008,Truck,7793.0,observed
+Philippines,PHL,2009,Truck,8380.0,observed
+Philippines,PHL,2010,Truck,8998.0,observed
+Philippines,PHL,2011,Truck,9651.0,observed
+Philippines,PHL,2012,Truck,10339.0,observed
+Philippines,PHL,2013,Truck,11064.0,observed
+Philippines,PHL,2014,Truck,11828.0,observed
+Philippines,PHL,2015,Truck,12633.0,observed
+Philippines,PHL,2016,Truck,13481.0,observed
+Philippines,PHL,2017,Truck,14372.0,observed
+Philippines,PHL,2018,Truck,15312.0,observed
+Philippines,PHL,2019,Truck,16300.0,observed
+Philippines,PHL,2020,Truck,17339.0,observed
+Philippines,PHL,2021,Truck,18432.0,observed
+Philippines,PHL,2022,Truck,19582.0,observed
+Philippines,PHL,2023,Truck,20790.0,observed
+Philippines,PHL,2024,Truck,22061.0,observed
+Philippines,PHL,2025,Truck,433866.754745696,stock_flow_fe_ols
+Philippines,PHL,2026,Truck,48672.019378498895,stock_flow_fe_ols
+Philippines,PHL,2027,Truck,51560.89038060652,stock_flow_fe_ols
+Philippines,PHL,2028,Truck,53760.03218296554,stock_flow_fe_ols
+Philippines,PHL,2029,Truck,56740.44541674724,stock_flow_fe_ols
+Philippines,PHL,2030,Truck,49433.299168951344,stock_flow_fe_ols
+Philippines,PHL,2031,Truck,51085.35053616064,stock_flow_fe_ols
+Philippines,PHL,2032,Truck,58717.69241516944,stock_flow_fe_ols
+Philippines,PHL,2033,Truck,53135.44690575579,stock_flow_fe_ols
+Philippines,PHL,2034,Truck,68766.62842833262,stock_flow_fe_ols
+Philippines,PHL,2035,Truck,86001.82327273826,stock_flow_fe_ols
+Philippines,PHL,2036,Truck,90898.70391541264,stock_flow_fe_ols
+Philippines,PHL,2037,Truck,97275.60270575467,stock_flow_fe_ols
+Philippines,PHL,2038,Truck,104140.54793436662,stock_flow_fe_ols
+Philippines,PHL,2039,Truck,112975.1279524325,stock_flow_fe_ols
+Philippines,PHL,2040,Truck,113627.45976327964,stock_flow_fe_ols
+Philippines,PHL,2041,Truck,122209.51542111904,stock_flow_fe_ols
+Philippines,PHL,2042,Truck,125544.03963142657,stock_flow_fe_ols
+Philippines,PHL,2043,Truck,116023.37180550653,stock_flow_fe_ols
+Philippines,PHL,2044,Truck,115656.31928748336,stock_flow_fe_ols
+Philippines,PHL,2045,Truck,115514.22568849265,stock_flow_fe_ols
+Philippines,PHL,2046,Truck,115318.85303304392,stock_flow_fe_ols
+Philippines,PHL,2047,Truck,114656.1049467998,stock_flow_fe_ols
+Philippines,PHL,2048,Truck,116303.57362382812,stock_flow_fe_ols
+Philippines,PHL,2049,Truck,115149.83249876532,stock_flow_fe_ols
+Philippines,PHL,2050,Truck,123842.44379966008,stock_flow_fe_ols
+Philippines,PHL,2051,Truck,131272.45354363765,stock_flow_fe_ols
+Philippines,PHL,2052,Truck,138084.02292207256,stock_flow_fe_ols
+Philippines,PHL,2053,Truck,143844.73843078827,stock_flow_fe_ols
+Philippines,PHL,2054,Truck,149527.81959284563,stock_flow_fe_ols
+Philippines,PHL,2055,Truck,154371.94863035297,stock_flow_fe_ols
+Philippines,PHL,2056,Truck,158645.3196947924,stock_flow_fe_ols
+Philippines,PHL,2057,Truck,161532.5406515333,stock_flow_fe_ols
+Philippines,PHL,2058,Truck,164441.71005500108,stock_flow_fe_ols
+Philippines,PHL,2059,Truck,166134.2012084208,stock_flow_fe_ols
+Philippines,PHL,2060,Truck,168429.90328478534,stock_flow_fe_ols
+Singapore,SGP,2006,2W,792.9827202819811,observed
+Singapore,SGP,2007,2W,816.7722018904406,observed
+Singapore,SGP,2008,2W,841.2753679471538,observed
+Singapore,SGP,2009,2W,866.5136289855685,observed
+Singapore,SGP,2010,2W,892.5090378551355,observed
+Singapore,SGP,2011,2W,919.2843089907896,observed
+Singapore,SGP,2012,2W,946.8628382605134,observed
+Singapore,SGP,2013,2W,975.2687234083288,observed
+Singapore,SGP,2014,2W,1004.5267851105788,observed
+Singapore,SGP,2015,2W,1034.662588663896,observed
+Singapore,SGP,2016,2W,1065.7024663238128,observed
+Singapore,SGP,2017,2W,1097.6735403135274,observed
+Singapore,SGP,2018,2W,2153.6037465229333,observed
+Singapore,SGP,2019,2W,2591.521858918621,observed
+Singapore,SGP,2020,2W,3096.45751468618,observed
+Singapore,SGP,2021,2W,3678.4412401267655,observed
+Singapore,SGP,2022,2W,4347.504477330568,observed
+Singapore,SGP,2023,2W,5113.679611650486,observed
+Singapore,SGP,2024,2W,1500.0,observed
+Singapore,SGP,2025,2W,112938.23595000897,stock_flow_gompertz
+Singapore,SGP,2026,2W,2063.594296153402,stock_flow_gompertz
+Singapore,SGP,2027,2W,1999.8358440908487,stock_flow_gompertz
+Singapore,SGP,2028,2W,1980.208131944033,stock_flow_gompertz
+Singapore,SGP,2029,2W,2078.026358714793,stock_flow_gompertz
+Singapore,SGP,2030,2W,2224.0642142136057,stock_flow_gompertz
+Singapore,SGP,2031,2W,2411.3225583066524,stock_flow_gompertz
+Singapore,SGP,2032,2W,2749.728048000281,stock_flow_gompertz
+Singapore,SGP,2033,2W,3176.0351195163385,stock_flow_gompertz
+Singapore,SGP,2034,2W,5520.910803354462,stock_flow_gompertz
+Singapore,SGP,2035,2W,11728.67020541412,stock_flow_gompertz
+Singapore,SGP,2036,2W,10681.85644980814,stock_flow_gompertz
+Singapore,SGP,2037,2W,11787.70103562859,stock_flow_gompertz
+Singapore,SGP,2038,2W,12882.6421616851,stock_flow_gompertz
+Singapore,SGP,2039,2W,12813.364731448528,stock_flow_gompertz
+Singapore,SGP,2040,2W,13814.777414439535,stock_flow_gompertz
+Singapore,SGP,2041,2W,13663.041106227844,stock_flow_gompertz
+Singapore,SGP,2042,2W,13630.391884444747,stock_flow_gompertz
+Singapore,SGP,2043,2W,10344.774643722572,stock_flow_gompertz
+Singapore,SGP,2044,2W,9528.100736223309,stock_flow_gompertz
+Singapore,SGP,2045,2W,9026.874502907536,stock_flow_gompertz
+Singapore,SGP,2046,2W,8546.500549369637,stock_flow_gompertz
+Singapore,SGP,2047,2W,6594.5328864380135,stock_flow_gompertz
+Singapore,SGP,2048,2W,6736.611100349837,stock_flow_gompertz
+Singapore,SGP,2049,2W,7360.080906044226,stock_flow_gompertz
+Singapore,SGP,2050,2W,8096.237249382422,stock_flow_gompertz
+Singapore,SGP,2051,2W,8964.327400221984,stock_flow_gompertz
+Singapore,SGP,2052,2W,9883.546335928111,stock_flow_gompertz
+Singapore,SGP,2053,2W,10401.209131519456,stock_flow_gompertz
+Singapore,SGP,2054,2W,10821.752503782684,stock_flow_gompertz
+Singapore,SGP,2055,2W,11063.245236444753,stock_flow_gompertz
+Singapore,SGP,2056,2W,11041.499878224276,stock_flow_gompertz
+Singapore,SGP,2057,2W,10724.19500273178,stock_flow_gompertz
+Singapore,SGP,2058,2W,10328.180903028056,stock_flow_gompertz
+Singapore,SGP,2059,2W,9887.26394424017,stock_flow_gompertz
+Singapore,SGP,2060,2W,9415.353912441877,stock_flow_gompertz
+Singapore,SGP,2006,Bus,157.76218382284884,observed
+Singapore,SGP,2007,Bus,157.8150493375343,observed
+Singapore,SGP,2008,Bus,158.86950081766034,observed
+Singapore,SGP,2009,Bus,158.92558584219015,observed
+Singapore,SGP,2010,Bus,158.98335341745585,observed
+Singapore,SGP,2011,Bus,159.04285401997953,observed
+Singapore,SGP,2012,Bus,160.10413964057892,observed
+Singapore,SGP,2013,Bus,160.1672638297963,observed
+Singapore,SGP,2014,Bus,160.23228174469017,observed
+Singapore,SGP,2015,Bus,160.2992501970309,observed
+Singapore,SGP,2016,Bus,161.3682277029418,observed
+Singapore,SGP,2017,Bus,161.43927453403006,observed
+Singapore,SGP,2018,Bus,312.51245277005097,observed
+Singapore,SGP,2019,Bus,371.5878263531525,observed
+Singapore,SGP,2020,Bus,441.66546114374705,observed
+Singapore,SGP,2021,Bus,521.7454249780594,observed
+Singapore,SGP,2022,Bus,613.8277877274013,observed
+Singapore,SGP,2023,Bus,719.9126213592233,observed
+Singapore,SGP,2024,Bus,853.0,observed
+Singapore,SGP,2025,Bus,17077.77724145877,stock_flow_fe_ols
+Singapore,SGP,2026,Bus,949.3528848878772,stock_flow_fe_ols
+Singapore,SGP,2027,Bus,1001.5369952724452,stock_flow_fe_ols
+Singapore,SGP,2028,Bus,1056.58956628949,stock_flow_fe_ols
+Singapore,SGP,2029,Bus,1114.668271727822,stock_flow_fe_ols
+Singapore,SGP,2030,Bus,1114.668271727822,stock_flow_fe_ols
+Singapore,SGP,2031,Bus,1114.668271727822,stock_flow_fe_ols
+Singapore,SGP,2032,Bus,1114.668271727822,stock_flow_fe_ols
+Singapore,SGP,2033,Bus,1114.668271727822,stock_flow_fe_ols
+Singapore,SGP,2034,Bus,1114.668271727822,stock_flow_fe_ols
+Singapore,SGP,2035,Bus,1114.668271727822,stock_flow_fe_ols
+Singapore,SGP,2036,Bus,1114.668271727822,stock_flow_fe_ols
+Singapore,SGP,2037,Bus,1114.668271727822,stock_flow_fe_ols
+Singapore,SGP,2038,Bus,2297.980154888053,stock_flow_fe_ols
+Singapore,SGP,2039,Bus,2606.5517743126547,stock_flow_fe_ols
+Singapore,SGP,2040,Bus,2807.126549796805,stock_flow_fe_ols
+Singapore,SGP,2041,Bus,2881.0074442656296,stock_flow_fe_ols
+Singapore,SGP,2042,Bus,2904.779793791869,stock_flow_fe_ols
+Singapore,SGP,2043,Bus,2478.613737700707,stock_flow_fe_ols
+Singapore,SGP,2044,Bus,2346.4783405137205,stock_flow_fe_ols
+Singapore,SGP,2045,Bus,2187.744770648933,stock_flow_fe_ols
+Singapore,SGP,2046,Bus,2085.3734398517263,stock_flow_fe_ols
+Singapore,SGP,2047,Bus,1699.4854010877607,stock_flow_fe_ols
+Singapore,SGP,2048,Bus,1711.6140281712433,stock_flow_fe_ols
+Singapore,SGP,2049,Bus,1775.367878625777,stock_flow_fe_ols
+Singapore,SGP,2050,Bus,1856.2010724722604,stock_flow_fe_ols
+Singapore,SGP,2051,Bus,1988.6516202030648,stock_flow_fe_ols
+Singapore,SGP,2052,Bus,2139.062562818676,stock_flow_fe_ols
+Singapore,SGP,2053,Bus,2277.0115855398108,stock_flow_fe_ols
+Singapore,SGP,2054,Bus,2411.977838876781,stock_flow_fe_ols
+Singapore,SGP,2055,Bus,2534.6464141329307,stock_flow_fe_ols
+Singapore,SGP,2056,Bus,2605.0467725278977,stock_flow_fe_ols
+Singapore,SGP,2057,Bus,2631.941773567254,stock_flow_fe_ols
+Singapore,SGP,2058,Bus,2637.114323465885,stock_flow_fe_ols
+Singapore,SGP,2059,Bus,2622.398366692236,stock_flow_fe_ols
+Singapore,SGP,2060,Bus,2573.2242177804183,stock_flow_fe_ols
+Singapore,SGP,2006,LDV,4722.65264523491,observed
+Singapore,SGP,2007,LDV,4864.332224591957,observed
+Singapore,SGP,2008,LDV,5010.262191329716,observed
+Singapore,SGP,2009,LDV,5160.570057069608,observed
+Singapore,SGP,2010,LDV,5315.387158781696,observed
+Singapore,SGP,2011,LDV,5474.848773545147,observed
+Singapore,SGP,2012,LDV,5639.094236751502,observed
+Singapore,SGP,2013,LDV,5808.267063854048,observed
+Singapore,SGP,2014,LDV,5982.515075769669,observed
+Singapore,SGP,2015,LDV,6161.990528042758,observed
+Singapore,SGP,2016,LDV,6346.850243884042,observed
+Singapore,SGP,2017,LDV,6537.255751200563,observed
+Singapore,SGP,2018,LDV,13317.37342373658,observed
+Singapore,SGP,2019,LDV,14955.374626448678,observed
+Singapore,SGP,2020,LDV,16810.435865242136,observed
+Singapore,SGP,2021,LDV,18909.7389411994,observed
+Singapore,SGP,2022,LDV,21285.471109435384,observed
+Singapore,SGP,2023,LDV,23968.82524271845,observed
+Singapore,SGP,2024,LDV,12000.0,observed
+Singapore,SGP,2025,LDV,513493.09105058655,stock_flow_gompertz
+Singapore,SGP,2026,LDV,10791.46984486794,stock_flow_gompertz
+Singapore,SGP,2027,LDV,10617.0613682291,stock_flow_gompertz
+Singapore,SGP,2028,LDV,10717.530565646592,stock_flow_gompertz
+Singapore,SGP,2029,LDV,11288.720634707948,stock_flow_gompertz
+Singapore,SGP,2030,LDV,12059.596208386356,stock_flow_gompertz
+Singapore,SGP,2031,LDV,12989.19171711267,stock_flow_gompertz
+Singapore,SGP,2032,LDV,14547.082724502545,stock_flow_gompertz
+Singapore,SGP,2033,LDV,16557.266350010992,stock_flow_gompertz
+Singapore,SGP,2034,LDV,27416.833918997785,stock_flow_gompertz
+Singapore,SGP,2035,LDV,55518.09559005639,stock_flow_gompertz
+Singapore,SGP,2036,LDV,50735.57294154319,stock_flow_gompertz
+Singapore,SGP,2037,LDV,55711.29502054176,stock_flow_gompertz
+Singapore,SGP,2038,LDV,60600.18362256978,stock_flow_gompertz
+Singapore,SGP,2039,LDV,60267.17013449152,stock_flow_gompertz
+Singapore,SGP,2040,LDV,64745.13306319423,stock_flow_gompertz
+Singapore,SGP,2041,LDV,64034.9445574194,stock_flow_gompertz
+Singapore,SGP,2042,LDV,63767.98674694728,stock_flow_gompertz
+Singapore,SGP,2043,LDV,48860.86674480944,stock_flow_gompertz
+Singapore,SGP,2044,LDV,45181.75609861559,stock_flow_gompertz
+Singapore,SGP,2045,LDV,42947.9238177801,stock_flow_gompertz
+Singapore,SGP,2046,LDV,40742.017819896806,stock_flow_gompertz
+Singapore,SGP,2047,LDV,31925.04603275226,stock_flow_gompertz
+Singapore,SGP,2048,LDV,32607.13529116346,stock_flow_gompertz
+Singapore,SGP,2049,LDV,35462.59612846433,stock_flow_gompertz
+Singapore,SGP,2050,LDV,38813.012165186345,stock_flow_gompertz
+Singapore,SGP,2051,LDV,42770.11691667279,stock_flow_gompertz
+Singapore,SGP,2052,LDV,46930.37276791362,stock_flow_gompertz
+Singapore,SGP,2053,LDV,49263.59110373096,stock_flow_gompertz
+Singapore,SGP,2054,LDV,51153.25094110111,stock_flow_gompertz
+Singapore,SGP,2055,LDV,52227.31722421467,stock_flow_gompertz
+Singapore,SGP,2056,LDV,52103.31540191022,stock_flow_gompertz
+Singapore,SGP,2057,LDV,50642.74326136883,stock_flow_gompertz
+Singapore,SGP,2058,LDV,48831.14834719023,stock_flow_gompertz
+Singapore,SGP,2059,LDV,46820.491036448046,stock_flow_gompertz
+Singapore,SGP,2060,LDV,44677.78750309977,stock_flow_gompertz
+Singapore,SGP,2005,Truck,14762.0,observed
+Singapore,SGP,2006,Truck,14367.0,observed
+Singapore,SGP,2007,Truck,11682.0,observed
+Singapore,SGP,2008,Truck,9616.0,observed
+Singapore,SGP,2009,Truck,6142.0,observed
+Singapore,SGP,2010,Truck,4714.0,observed
+Singapore,SGP,2011,Truck,6094.0,observed
+Singapore,SGP,2012,Truck,4852.999999999999,observed
+Singapore,SGP,2013,Truck,6745.0,observed
+Singapore,SGP,2014,Truck,12598.0,observed
+Singapore,SGP,2015,Truck,1798.0,observed
+Singapore,SGP,2016,Truck,17339.0,observed
+Singapore,SGP,2017,Truck,19748.0,observed
+Singapore,SGP,2025,Truck,97860.2148235814,stock_flow_fe_ols
+Singapore,SGP,2026,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2027,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2028,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2029,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2030,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2031,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2032,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2033,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2034,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2035,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2036,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2037,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2038,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2039,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2040,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2041,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2042,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2043,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2044,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2045,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2046,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2047,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2048,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2049,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2050,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2051,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2052,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2053,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2054,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2055,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2056,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2057,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2058,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2059,Truck,26016.028344241324,stock_flow_fe_ols
+Singapore,SGP,2060,Truck,26016.028344241324,stock_flow_fe_ols
+Thailand,THA,2018,2W,1790000.0,observed
+Thailand,THA,2019,2W,1715000.0,observed
+Thailand,THA,2020,2W,1515000.0,observed
+Thailand,THA,2021,2W,1600000.0,observed
+Thailand,THA,2022,2W,1790000.0,observed
+Thailand,THA,2023,2W,1850000.0,observed
+Thailand,THA,2024,2W,1680000.0,observed
+Thailand,THA,2025,2W,15851504.709045198,stock_flow_gompertz
+Thailand,THA,2026,2W,815733.2276646942,stock_flow_gompertz
+Thailand,THA,2027,2W,800654.28796174,stock_flow_gompertz
+Thailand,THA,2028,2W,883890.8452886194,stock_flow_gompertz
+Thailand,THA,2029,2W,958576.2182012722,stock_flow_gompertz
+Thailand,THA,2030,2W,1185002.337426722,stock_flow_gompertz
+Thailand,THA,2031,2W,1245268.450306218,stock_flow_gompertz
+Thailand,THA,2032,2W,1463098.6873159967,stock_flow_gompertz
+Thailand,THA,2033,2W,1442827.8760080896,stock_flow_gompertz
+Thailand,THA,2034,2W,1927986.6758950688,stock_flow_gompertz
+Thailand,THA,2035,2W,2764840.52359432,stock_flow_gompertz
+Thailand,THA,2036,2W,2592683.7058805227,stock_flow_gompertz
+Thailand,THA,2037,2W,2707215.3520050533,stock_flow_gompertz
+Thailand,THA,2038,2W,2817562.421924155,stock_flow_gompertz
+Thailand,THA,2039,2W,2808799.028146997,stock_flow_gompertz
+Thailand,THA,2040,2W,2839242.569533635,stock_flow_gompertz
+Thailand,THA,2041,2W,2784106.508305479,stock_flow_gompertz
+Thailand,THA,2042,2W,2720034.080474999,stock_flow_gompertz
+Thailand,THA,2043,2W,2242493.289236974,stock_flow_gompertz
+Thailand,THA,2044,2W,2119806.433481723,stock_flow_gompertz
+Thailand,THA,2045,2W,2052670.186685335,stock_flow_gompertz
+Thailand,THA,2046,2W,1988965.8938138708,stock_flow_gompertz
+Thailand,THA,2047,2W,1751734.398604419,stock_flow_gompertz
+Thailand,THA,2048,2W,1789317.6553026177,stock_flow_gompertz
+Thailand,THA,2049,2W,1888418.1994175464,stock_flow_gompertz
+Thailand,THA,2050,2W,1997477.1841905937,stock_flow_gompertz
+Thailand,THA,2051,2W,2132333.9812477008,stock_flow_gompertz
+Thailand,THA,2052,2W,2248711.0978691205,stock_flow_gompertz
+Thailand,THA,2053,2W,2303003.102428745,stock_flow_gompertz
+Thailand,THA,2054,2W,2338034.7370305997,stock_flow_gompertz
+Thailand,THA,2055,2W,2347186.2954530083,stock_flow_gompertz
+Thailand,THA,2056,2W,2318086.340285331,stock_flow_gompertz
+Thailand,THA,2057,2W,2249992.4091169317,stock_flow_gompertz
+Thailand,THA,2058,2W,2176255.417780172,stock_flow_gompertz
+Thailand,THA,2059,2W,2100811.4615432248,stock_flow_gompertz
+Thailand,THA,2060,2W,2026581.0654866472,stock_flow_gompertz
+Thailand,THA,2006,Bus,2839.854697490189,observed
+Thailand,THA,2007,Bus,2920.580338414896,observed
+Thailand,THA,2008,Bus,3004.727748567342,observed
+Thailand,THA,2009,Bus,3091.369581024362,observed
+Thailand,THA,2010,Bus,3179.5806684550926,observed
+Thailand,THA,2011,Bus,3271.4380885087458,observed
+Thailand,THA,2012,Bus,3366.0212311640084,observed
+Thailand,THA,2013,Bus,3462.411868098929,observed
+Thailand,THA,2014,Bus,3562.6942241418965,observed
+Thailand,THA,2015,Bus,3665.955050866154,observed
+Thailand,THA,2016,Bus,3771.2837023921384,observed
+Thailand,THA,2017,Bus,3880.7722134639025,observed
+Thailand,THA,2018,Bus,4648.51537986782,observed
+Thailand,THA,2019,Bus,4877.610841263855,observed
+Thailand,THA,2020,Bus,5127.15916650177,observed
+Thailand,THA,2021,Bus,5398.263941496824,observed
+Thailand,THA,2022,Bus,5692.031859741729,observed
+Thailand,THA,2023,Bus,6011.57281553398,observed
+Thailand,THA,2024,Bus,6361.0,observed
+Thailand,THA,2025,Bus,162331.949373234,stock_flow_fe_ols
+Thailand,THA,2026,Bus,12031.290681674816,stock_flow_fe_ols
+Thailand,THA,2027,Bus,12311.066265473317,stock_flow_fe_ols
+Thailand,THA,2028,Bus,12574.189769797056,stock_flow_fe_ols
+Thailand,THA,2029,Bus,13008.0250683348,stock_flow_fe_ols
+Thailand,THA,2030,Bus,14516.60796170408,stock_flow_fe_ols
+Thailand,THA,2031,Bus,14840.58166207088,stock_flow_fe_ols
+Thailand,THA,2032,Bus,16628.38782534795,stock_flow_fe_ols
+Thailand,THA,2033,Bus,15996.391866066202,stock_flow_fe_ols
+Thailand,THA,2034,Bus,20932.73215360375,stock_flow_fe_ols
+Thailand,THA,2035,Bus,29980.03082636249,stock_flow_fe_ols
+Thailand,THA,2036,Bus,29221.331238884188,stock_flow_fe_ols
+Thailand,THA,2037,Bus,31491.03135509172,stock_flow_fe_ols
+Thailand,THA,2038,Bus,33805.87998953444,stock_flow_fe_ols
+Thailand,THA,2039,Bus,35926.243907669734,stock_flow_fe_ols
+Thailand,THA,2040,Bus,37085.810116437264,stock_flow_fe_ols
+Thailand,THA,2041,Bus,39319.13360833679,stock_flow_fe_ols
+Thailand,THA,2042,Bus,40318.21765123063,stock_flow_fe_ols
+Thailand,THA,2043,Bus,36673.60622609104,stock_flow_fe_ols
+Thailand,THA,2044,Bus,36624.42112116976,stock_flow_fe_ols
+Thailand,THA,2045,Bus,36923.30643803376,stock_flow_fe_ols
+Thailand,THA,2046,Bus,37107.59803423658,stock_flow_fe_ols
+Thailand,THA,2047,Bus,36476.489520944015,stock_flow_fe_ols
+Thailand,THA,2048,Bus,37404.608525336254,stock_flow_fe_ols
+Thailand,THA,2049,Bus,37804.023943895765,stock_flow_fe_ols
+Thailand,THA,2050,Bus,40841.05716704007,stock_flow_fe_ols
+Thailand,THA,2051,Bus,43771.38927446923,stock_flow_fe_ols
+Thailand,THA,2052,Bus,46454.10525207053,stock_flow_fe_ols
+Thailand,THA,2053,Bus,48651.74984812015,stock_flow_fe_ols
+Thailand,THA,2054,Bus,50800.53159562976,stock_flow_fe_ols
+Thailand,THA,2055,Bus,52774.87997851975,stock_flow_fe_ols
+Thailand,THA,2056,Bus,54451.705317303305,stock_flow_fe_ols
+Thailand,THA,2057,Bus,55785.645530254464,stock_flow_fe_ols
+Thailand,THA,2058,Bus,57025.04314377392,stock_flow_fe_ols
+Thailand,THA,2059,Bus,58155.82557154284,stock_flow_fe_ols
+Thailand,THA,2060,Bus,59358.70506620512,stock_flow_fe_ols
+Thailand,THA,2015,LDV,356063.0,observed
+Thailand,THA,2016,LDV,328053.0,observed
+Thailand,THA,2017,LDV,665871.0,observed
+Thailand,THA,2018,LDV,729709.0,observed
+Thailand,THA,2019,LDV,468638.0,observed
+Thailand,THA,2020,LDV,343494.0,observed
+Thailand,THA,2021,LDV,312200.0,observed
+Thailand,THA,2022,LDV,628423.0,observed
+Thailand,THA,2023,LDV,775780.0,observed
+Thailand,THA,2024,LDV,572675.0,observed
+Thailand,THA,2025,LDV,6877263.109761929,stock_flow_gompertz
+Thailand,THA,2026,LDV,990725.626155017,stock_flow_gompertz
+Thailand,THA,2027,LDV,1070517.611988902,stock_flow_gompertz
+Thailand,THA,2028,LDV,1148714.877679322,stock_flow_gompertz
+Thailand,THA,2029,LDV,1222070.6328870226,stock_flow_gompertz
+Thailand,THA,2030,LDV,1562898.2919940297,stock_flow_gompertz
+Thailand,THA,2031,LDV,1595866.1442846523,stock_flow_gompertz
+Thailand,THA,2032,LDV,1952614.4964146763,stock_flow_gompertz
+Thailand,THA,2033,LDV,1676562.3461519442,stock_flow_gompertz
+Thailand,THA,2034,LDV,2096597.1337403096,stock_flow_gompertz
+Thailand,THA,2035,LDV,2416630.5696939197,stock_flow_gompertz
+Thailand,THA,2036,LDV,2335098.579472266,stock_flow_gompertz
+Thailand,THA,2037,LDV,2371361.9609133564,stock_flow_gompertz
+Thailand,THA,2038,LDV,2415644.7834845334,stock_flow_gompertz
+Thailand,THA,2039,LDV,2602411.263824202,stock_flow_gompertz
+Thailand,THA,2040,LDV,2447267.766848959,stock_flow_gompertz
+Thailand,THA,2041,LDV,2618372.3127473034,stock_flow_gompertz
+Thailand,THA,2042,LDV,2620075.4098661398,stock_flow_gompertz
+Thailand,THA,2043,LDV,2432058.9159991,stock_flow_gompertz
+Thailand,THA,2044,LDV,2394343.838978812,stock_flow_gompertz
+Thailand,THA,2045,LDV,2370434.9860358946,stock_flow_gompertz
+Thailand,THA,2046,LDV,2345136.943390783,stock_flow_gompertz
+Thailand,THA,2047,LDV,2312348.42936806,stock_flow_gompertz
+Thailand,THA,2048,LDV,2288082.34693693,stock_flow_gompertz
+Thailand,THA,2049,LDV,2248821.97106285,stock_flow_gompertz
+Thailand,THA,2050,LDV,2309735.5324021056,stock_flow_gompertz
+Thailand,THA,2051,LDV,2365220.590778932,stock_flow_gompertz
+Thailand,THA,2052,LDV,2395708.400683336,stock_flow_gompertz
+Thailand,THA,2053,LDV,2402780.99464678,stock_flow_gompertz
+Thailand,THA,2054,LDV,2405367.7335584983,stock_flow_gompertz
+Thailand,THA,2055,LDV,2403660.71399374,stock_flow_gompertz
+Thailand,THA,2056,LDV,2389879.7244878635,stock_flow_gompertz
+Thailand,THA,2057,LDV,2361058.7306278422,stock_flow_gompertz
+Thailand,THA,2058,LDV,2332872.342934251,stock_flow_gompertz
+Thailand,THA,2059,LDV,2298953.354258869,stock_flow_gompertz
+Thailand,THA,2060,LDV,2267382.8764158413,stock_flow_gompertz
+Thailand,THA,2006,Truck,19237.173399433246,observed
+Thailand,THA,2007,Truck,19814.288601416243,observed
+Thailand,THA,2008,Truck,20408.717259458732,observed
+Thailand,THA,2009,Truck,21020.978777242497,observed
+Thailand,THA,2010,Truck,21651.60814055977,observed
+Thailand,THA,2011,Truck,22301.156384776565,observed
+Thailand,THA,2012,Truck,22970.19107631986,observed
+Thailand,THA,2013,Truck,23659.296808609462,observed
+Thailand,THA,2014,Truck,24369.075712867743,observed
+Thailand,THA,2015,Truck,25100.14798425377,observed
+Thailand,THA,2016,Truck,25853.152423781386,observed
+Thailand,THA,2017,Truck,26628.746996494832,observed
+Thailand,THA,2018,Truck,27427.609406389678,observed
+Thailand,THA,2019,Truck,28250.43768858137,observed
+Thailand,THA,2020,Truck,29097.950819238806,observed
+Thailand,THA,2021,Truck,29970.88934381598,observed
+Thailand,THA,2022,Truck,30870.01602413046,observed
+Thailand,THA,2023,Truck,31796.11650485437,observed
+Thailand,THA,2024,Truck,32750.0,observed
+Thailand,THA,2025,Truck,841518.4660535508,stock_flow_fe_ols
+Thailand,THA,2026,Truck,53332.942524679005,stock_flow_fe_ols
+Thailand,THA,2027,Truck,53952.21795913903,stock_flow_fe_ols
+Thailand,THA,2028,Truck,54310.20214498858,stock_flow_fe_ols
+Thailand,THA,2029,Truck,55537.81530722859,stock_flow_fe_ols
+Thailand,THA,2030,Truck,64435.89723690064,stock_flow_fe_ols
+Thailand,THA,2031,Truck,64332.692776192445,stock_flow_fe_ols
+Thailand,THA,2032,Truck,73671.81136455783,stock_flow_fe_ols
+Thailand,THA,2033,Truck,66075.94235079736,stock_flow_fe_ols
+Thailand,THA,2034,Truck,91290.57616066118,stock_flow_fe_ols
+Thailand,THA,2035,Truck,135734.33803462633,stock_flow_fe_ols
+Thailand,THA,2036,Truck,128625.540595992,stock_flow_fe_ols
+Thailand,THA,2037,Truck,137609.4598273104,stock_flow_fe_ols
+Thailand,THA,2038,Truck,146824.85910491226,stock_flow_fe_ols
+Thailand,THA,2039,Truck,155422.5250963443,stock_flow_fe_ols
+Thailand,THA,2040,Truck,158210.72002005088,stock_flow_fe_ols
+Thailand,THA,2041,Truck,167074.44498882163,stock_flow_fe_ols
+Thailand,THA,2042,Truck,169601.15827364917,stock_flow_fe_ols
+Thailand,THA,2043,Truck,147706.3511652716,stock_flow_fe_ols
+Thailand,THA,2044,Truck,144054.6489833519,stock_flow_fe_ols
+Thailand,THA,2045,Truck,142024.39049774222,stock_flow_fe_ols
+Thailand,THA,2046,Truck,139650.92908826307,stock_flow_fe_ols
+Thailand,THA,2047,Truck,131906.42764536035,stock_flow_fe_ols
+Thailand,THA,2048,Truck,133003.5494312048,stock_flow_fe_ols
+Thailand,THA,2049,Truck,132641.33283495484,stock_flow_fe_ols
+Thailand,THA,2050,Truck,143039.90422922955,stock_flow_fe_ols
+Thailand,THA,2051,Truck,152040.8579327974,stock_flow_fe_ols
+Thailand,THA,2052,Truck,160528.14045306202,stock_flow_fe_ols
+Thailand,THA,2053,Truck,165904.595025555,stock_flow_fe_ols
+Thailand,THA,2054,Truck,171250.25189443678,stock_flow_fe_ols
+Thailand,THA,2055,Truck,175291.07564618345,stock_flow_fe_ols
+Thailand,THA,2056,Truck,177381.9253619751,stock_flow_fe_ols
+Thailand,THA,2057,Truck,177471.1525558452,stock_flow_fe_ols
+Thailand,THA,2058,Truck,176925.86423421418,stock_flow_fe_ols
+Thailand,THA,2059,Truck,175777.11545457598,stock_flow_fe_ols
+Thailand,THA,2060,Truck,174133.24445526348,stock_flow_fe_ols
+Viet Nam,VNM,2015,2W,2834815.0,observed
+Viet Nam,VNM,2016,2W,3089813.0,observed
+Viet Nam,VNM,2017,2W,3232673.0,observed
+Viet Nam,VNM,2018,2W,3533435.0,observed
+Viet Nam,VNM,2019,2W,3446588.0,observed
+Viet Nam,VNM,2020,2W,2984218.0,observed
+Viet Nam,VNM,2021,2W,2889318.0,observed
+Viet Nam,VNM,2022,2W,3003000.0,observed
+Viet Nam,VNM,2023,2W,2516212.0,observed
+Viet Nam,VNM,2024,2W,2653607.0,observed
+Viet Nam,VNM,2025,2W,51063055.22574888,stock_flow_gompertz
+Viet Nam,VNM,2026,2W,3148469.684945628,stock_flow_gompertz
+Viet Nam,VNM,2027,2W,3061912.2744861245,stock_flow_gompertz
+Viet Nam,VNM,2028,2W,3028473.452314452,stock_flow_gompertz
+Viet Nam,VNM,2029,2W,3048063.130532235,stock_flow_gompertz
+Viet Nam,VNM,2030,2W,2889047.264131829,stock_flow_gompertz
+Viet Nam,VNM,2031,2W,3062892.800011024,stock_flow_gompertz
+Viet Nam,VNM,2032,2W,3271710.9955301136,stock_flow_gompertz
+Viet Nam,VNM,2033,2W,3436603.5089087337,stock_flow_gompertz
+Viet Nam,VNM,2034,2W,4528931.867693961,stock_flow_gompertz
+Viet Nam,VNM,2035,2W,7220187.855258584,stock_flow_gompertz
+Viet Nam,VNM,2036,2W,6780013.277414471,stock_flow_gompertz
+Viet Nam,VNM,2037,2W,7225992.300533429,stock_flow_gompertz
+Viet Nam,VNM,2038,2W,7666710.111725464,stock_flow_gompertz
+Viet Nam,VNM,2039,2W,7618783.188780323,stock_flow_gompertz
+Viet Nam,VNM,2040,2W,8061993.709207326,stock_flow_gompertz
+Viet Nam,VNM,2041,2W,8042139.053925335,stock_flow_gompertz
+Viet Nam,VNM,2042,2W,8056008.830613688,stock_flow_gompertz
+Viet Nam,VNM,2043,2W,6666242.29953438,stock_flow_gompertz
+Viet Nam,VNM,2044,2W,6351545.627829969,stock_flow_gompertz
+Viet Nam,VNM,2045,2W,6180285.444203466,stock_flow_gompertz
+Viet Nam,VNM,2046,2W,5981324.655664831,stock_flow_gompertz
+Viet Nam,VNM,2047,2W,5131073.007262245,stock_flow_gompertz
+Viet Nam,VNM,2048,2W,5189837.020660445,stock_flow_gompertz
+Viet Nam,VNM,2049,2W,5450470.986308798,stock_flow_gompertz
+Viet Nam,VNM,2050,2W,5764177.318558022,stock_flow_gompertz
+Viet Nam,VNM,2051,2W,6154232.5419309735,stock_flow_gompertz
+Viet Nam,VNM,2052,2W,6559998.396035999,stock_flow_gompertz
+Viet Nam,VNM,2053,2W,6792907.025157496,stock_flow_gompertz
+Viet Nam,VNM,2054,2W,6984783.983623996,stock_flow_gompertz
+Viet Nam,VNM,2055,2W,7102760.521144539,stock_flow_gompertz
+Viet Nam,VNM,2056,2W,7107273.536527306,stock_flow_gompertz
+Viet Nam,VNM,2057,2W,6984668.2833765,stock_flow_gompertz
+Viet Nam,VNM,2058,2W,6828508.626807183,stock_flow_gompertz
+Viet Nam,VNM,2059,2W,6652378.825201869,stock_flow_gompertz
+Viet Nam,VNM,2060,2W,6463014.138649255,stock_flow_gompertz
+Viet Nam,VNM,2006,Bus,1954.0,observed
+Viet Nam,VNM,2007,Bus,2220.0,observed
+Viet Nam,VNM,2008,Bus,2507.0,observed
+Viet Nam,VNM,2009,Bus,2814.0,observed
+Viet Nam,VNM,2010,Bus,3146.0,observed
+Viet Nam,VNM,2011,Bus,3503.0,observed
+Viet Nam,VNM,2012,Bus,3886.0,observed
+Viet Nam,VNM,2013,Bus,4298.0,observed
+Viet Nam,VNM,2014,Bus,4740.0,observed
+Viet Nam,VNM,2015,Bus,5214.0,observed
+Viet Nam,VNM,2016,Bus,5722.0,observed
+Viet Nam,VNM,2017,Bus,6267.0,observed
+Viet Nam,VNM,2018,Bus,6850.0,observed
+Viet Nam,VNM,2019,Bus,7474.0,observed
+Viet Nam,VNM,2020,Bus,8143.0,observed
+Viet Nam,VNM,2021,Bus,8857.0,observed
+Viet Nam,VNM,2022,Bus,9620.0,observed
+Viet Nam,VNM,2023,Bus,10437.0,observed
+Viet Nam,VNM,2024,Bus,11308.0,observed
+Viet Nam,VNM,2025,Bus,129265.13671674032,stock_flow_fe_ols
+Viet Nam,VNM,2026,Bus,17090.22495661126,stock_flow_fe_ols
+Viet Nam,VNM,2027,Bus,19158.30042145847,stock_flow_fe_ols
+Viet Nam,VNM,2028,Bus,22839.19042901033,stock_flow_fe_ols
+Viet Nam,VNM,2029,Bus,27227.290937996822,stock_flow_fe_ols
+Viet Nam,VNM,2030,Bus,27227.290937996822,stock_flow_fe_ols
+Viet Nam,VNM,2031,Bus,27227.290937996822,stock_flow_fe_ols
+Viet Nam,VNM,2032,Bus,27227.290937996822,stock_flow_fe_ols
+Viet Nam,VNM,2033,Bus,27227.290937996822,stock_flow_fe_ols
+Viet Nam,VNM,2034,Bus,27227.290937996822,stock_flow_fe_ols
+Viet Nam,VNM,2035,Bus,27227.290937996822,stock_flow_fe_ols
+Viet Nam,VNM,2036,Bus,27227.290937996822,stock_flow_fe_ols
+Viet Nam,VNM,2037,Bus,27227.290937996822,stock_flow_fe_ols
+Viet Nam,VNM,2038,Bus,34900.8861785903,stock_flow_fe_ols
+Viet Nam,VNM,2039,Bus,43016.58236093423,stock_flow_fe_ols
+Viet Nam,VNM,2040,Bus,48133.953372362186,stock_flow_fe_ols
+Viet Nam,VNM,2041,Bus,50081.21626317187,stock_flow_fe_ols
+Viet Nam,VNM,2042,Bus,51959.6697999828,stock_flow_fe_ols
+Viet Nam,VNM,2043,Bus,50515.712776567205,stock_flow_fe_ols
+Viet Nam,VNM,2044,Bus,51233.17179955117,stock_flow_fe_ols
+Viet Nam,VNM,2045,Bus,51827.70941467589,stock_flow_fe_ols
+Viet Nam,VNM,2046,Bus,52197.0139847009,stock_flow_fe_ols
+Viet Nam,VNM,2047,Bus,50743.76888856967,stock_flow_fe_ols
+Viet Nam,VNM,2048,Bus,54025.58994080464,stock_flow_fe_ols
+Viet Nam,VNM,2049,Bus,53554.58310268726,stock_flow_fe_ols
+Viet Nam,VNM,2050,Bus,57780.528700848925,stock_flow_fe_ols
+Viet Nam,VNM,2051,Bus,60651.63104542834,stock_flow_fe_ols
+Viet Nam,VNM,2052,Bus,64039.169479333446,stock_flow_fe_ols
+Viet Nam,VNM,2053,Bus,67529.39272600203,stock_flow_fe_ols
+Viet Nam,VNM,2054,Bus,71254.04592776718,stock_flow_fe_ols
+Viet Nam,VNM,2055,Bus,75132.77176220622,stock_flow_fe_ols
+Viet Nam,VNM,2056,Bus,78861.18788608373,stock_flow_fe_ols
+Viet Nam,VNM,2057,Bus,82370.9894664624,stock_flow_fe_ols
+Viet Nam,VNM,2058,Bus,85845.94842551777,stock_flow_fe_ols
+Viet Nam,VNM,2059,Bus,89178.82378661516,stock_flow_fe_ols
+Viet Nam,VNM,2060,Bus,92538.41409828096,stock_flow_fe_ols
+Viet Nam,VNM,2015,LDV,117288.0,observed
+Viet Nam,VNM,2016,LDV,159501.0,observed
+Viet Nam,VNM,2017,LDV,152799.0,observed
+Viet Nam,VNM,2018,LDV,197752.0,observed
+Viet Nam,VNM,2019,LDV,229539.0,observed
+Viet Nam,VNM,2020,LDV,215898.0,observed
+Viet Nam,VNM,2021,LDV,207693.0,observed
+Viet Nam,VNM,2022,LDV,508547.0,observed
+Viet Nam,VNM,2023,LDV,370000.0,observed
+Viet Nam,VNM,2024,LDV,340000.0,observed
+Viet Nam,VNM,2025,LDV,4307183.719678763,stock_flow_gompertz
+Viet Nam,VNM,2026,LDV,993490.332917842,stock_flow_gompertz
+Viet Nam,VNM,2027,LDV,1121554.6820822218,stock_flow_gompertz
+Viet Nam,VNM,2028,LDV,1260506.908105146,stock_flow_gompertz
+Viet Nam,VNM,2029,LDV,1408751.4890875034,stock_flow_gompertz
+Viet Nam,VNM,2030,LDV,1196976.9016795792,stock_flow_gompertz
+Viet Nam,VNM,2031,LDV,1315404.2418145817,stock_flow_gompertz
+Viet Nam,VNM,2032,LDV,1410732.6917686297,stock_flow_gompertz
+Viet Nam,VNM,2033,LDV,1489451.4516259655,stock_flow_gompertz
+Viet Nam,VNM,2034,LDV,1710391.9139193837,stock_flow_gompertz
+Viet Nam,VNM,2035,LDV,1962678.605626136,stock_flow_gompertz
+Viet Nam,VNM,2036,LDV,2053710.9688178748,stock_flow_gompertz
+Viet Nam,VNM,2037,LDV,2178520.966658734,stock_flow_gompertz
+Viet Nam,VNM,2038,LDV,2337935.956569448,stock_flow_gompertz
+Viet Nam,VNM,2039,LDV,2295776.7924463563,stock_flow_gompertz
+Viet Nam,VNM,2040,LDV,2641802.8997229896,stock_flow_gompertz
+Viet Nam,VNM,2041,LDV,2667492.8009520173,stock_flow_gompertz
+Viet Nam,VNM,2042,LDV,2695330.066563122,stock_flow_gompertz
+Viet Nam,VNM,2043,LDV,2609616.728794925,stock_flow_gompertz
+Viet Nam,VNM,2044,LDV,2597667.425910402,stock_flow_gompertz
+Viet Nam,VNM,2045,LDV,2591621.7951802537,stock_flow_gompertz
+Viet Nam,VNM,2046,LDV,2585953.3838400133,stock_flow_gompertz
+Viet Nam,VNM,2047,LDV,2524645.545773532,stock_flow_gompertz
+Viet Nam,VNM,2048,LDV,2695617.0417888127,stock_flow_gompertz
+Viet Nam,VNM,2049,LDV,2547061.342802059,stock_flow_gompertz
+Viet Nam,VNM,2050,LDV,2723021.1970003545,stock_flow_gompertz
+Viet Nam,VNM,2051,LDV,2752740.093548931,stock_flow_gompertz
+Viet Nam,VNM,2052,LDV,2810369.429123439,stock_flow_gompertz
+Viet Nam,VNM,2053,LDV,2854344.190801859,stock_flow_gompertz
+Viet Nam,VNM,2054,LDV,2888066.139714584,stock_flow_gompertz
+Viet Nam,VNM,2055,LDV,2914106.5659724995,stock_flow_gompertz
+Viet Nam,VNM,2056,LDV,2924621.982000597,stock_flow_gompertz
+Viet Nam,VNM,2057,LDV,2927000.755431339,stock_flow_gompertz
+Viet Nam,VNM,2058,LDV,2920810.1364811286,stock_flow_gompertz
+Viet Nam,VNM,2059,LDV,2900335.737286493,stock_flow_gompertz
+Viet Nam,VNM,2060,LDV,2885831.299828932,stock_flow_gompertz
+Viet Nam,VNM,2006,Truck,10138.0,observed
+Viet Nam,VNM,2007,Truck,13229.0,observed
+Viet Nam,VNM,2008,Truck,16809.0,observed
+Viet Nam,VNM,2009,Truck,20945.0,observed
+Viet Nam,VNM,2010,Truck,25708.0,observed
+Viet Nam,VNM,2011,Truck,31181.0,observed
+Viet Nam,VNM,2012,Truck,37453.0,observed
+Viet Nam,VNM,2013,Truck,44627.0,observed
+Viet Nam,VNM,2014,Truck,52816.0,observed
+Viet Nam,VNM,2015,Truck,62149.0,observed
+Viet Nam,VNM,2016,Truck,72767.0,observed
+Viet Nam,VNM,2017,Truck,84830.0,observed
+Viet Nam,VNM,2018,Truck,98514.0,observed
+Viet Nam,VNM,2019,Truck,114019.0,observed
+Viet Nam,VNM,2020,Truck,131564.0,observed
+Viet Nam,VNM,2021,Truck,151397.0,observed
+Viet Nam,VNM,2022,Truck,173791.0,observed
+Viet Nam,VNM,2023,Truck,199054.0,observed
+Viet Nam,VNM,2024,Truck,227525.0,observed
+Viet Nam,VNM,2025,Truck,234382.06530283944,stock_flow_fe_ols
+Viet Nam,VNM,2026,Truck,241445.78633391703,stock_flow_fe_ols
+Viet Nam,VNM,2027,Truck,248722.39120804996,stock_flow_fe_ols
+Viet Nam,VNM,2028,Truck,256218.29574070335,stock_flow_fe_ols
+Viet Nam,VNM,2029,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2030,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2031,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2032,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2033,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2034,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2035,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2036,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2037,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2038,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2039,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2040,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2041,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2042,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2043,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2044,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2045,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2046,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2047,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2048,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2049,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2050,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2051,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2052,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2053,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2054,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2055,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2056,Truck,263940.1091048445,stock_flow_fe_ols
+Viet Nam,VNM,2057,Truck,318975.73209189344,stock_flow_fe_ols
+Viet Nam,VNM,2058,Truck,334927.95910984045,stock_flow_fe_ols
+Viet Nam,VNM,2059,Truck,335284.3297518664,stock_flow_fe_ols
+Viet Nam,VNM,2060,Truck,335087.8759705522,stock_flow_fe_ols

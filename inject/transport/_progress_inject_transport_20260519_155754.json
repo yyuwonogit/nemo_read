@@ -1,0 +1,23 @@
+{
+  "op": "inject_transport",
+  "started": "2026-05-19T15:57:54",
+  "progress_file": "c:\\Users\\ThinkPad\\Desktop\\Py YY\\NEMO_read\\inject\\transport\\_progress_inject_transport_20260519_155754.json",
+  "current": {
+    "stage": "dry_region",
+    "area": "aeo9_v0.46",
+    "scenarios_total": 4,
+    "scenario": "AMS Target Scenario",
+    "scenario_idx": "2/4",
+    "regions": 10,
+    "region": "Brunei",
+    "region_idx": "1/10",
+    "rows_in_region": 60,
+    "rows_written": 0,
+    "row_in_region": "50/56",
+    "dry_pushed": 160,
+    "dry_skipped": 441
+  },
+  "rows_total": 0,
+  "last_heartbeat": "16:27:07",
+  "finished": null
+}

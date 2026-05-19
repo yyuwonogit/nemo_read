@@ -1,0 +1,23 @@
+{
+  "op": "inject_transport",
+  "started": "2026-05-19T15:10:55",
+  "progress_file": "c:\\Users\\ThinkPad\\Desktop\\Py YY\\NEMO_read\\inject\\transport\\_progress_inject_transport_20260519_151055.json",
+  "current": {
+    "stage": "dry_region",
+    "area": "aeo9_v0.46",
+    "scenarios_total": 4,
+    "scenario": "AMS Target Scenario",
+    "scenario_idx": "2/4",
+    "regions": 10,
+    "region": "Cambodia",
+    "region_idx": "2/10",
+    "rows_in_region": 61,
+    "rows_written": 0,
+    "row_in_region": "50/60",
+    "dry_pushed": 160,
+    "dry_skipped": 441
+  },
+  "rows_total": 0,
+  "last_heartbeat": "15:45:09",
+  "finished": null
+}

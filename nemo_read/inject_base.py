@@ -67,6 +67,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+from nemo_read._heartbeat import HeartbeatLogger
 from nemo_read._leap_com import (
     LeapTreeCache,
     compare_expressions,
@@ -297,6 +298,11 @@ class CanonicalInjector:
         p.add_argument("--dry-run-only", "--dry-run", action="store_true",
                        help="Run only the dry-run phase, then exit. "
                             "Does NOT proceed to real inject.")
+        p.add_argument("--skip-dry-run", action="store_true",
+                       help="Skip Phase 1 dry-run entirely; go straight "
+                            "to real inject. Use only after a prior run "
+                            "has verified the same canonical's structural "
+                            "validity. Saves ~25 min/scenario.")
         p.add_argument("--yes", "-y", action="store_true",
                        help="Skip the confirmation prompt between dry-run "
                             "and real inject. Required for non-interactive "
@@ -398,6 +404,16 @@ class CanonicalInjector:
 
         Override only if your sector needs a fundamentally different
         control flow (e.g. power's 3-cache region grouping)."""
+        # Windows-safe stdout/stderr: this framework prints box-drawing
+        # chars and §A.x section markers (non-ASCII) which crash under
+        # CP1252 on default Windows consoles. Reconfigure to UTF-8 once
+        # here so every phase print() works regardless of locale.
+        for _stream in (sys.stdout, sys.stderr):
+            try:
+                _stream.reconfigure(encoding="utf-8", errors="replace")
+            except (AttributeError, Exception):
+                pass
+
         parser = self.build_arg_parser()
         args = parser.parse_args(argv)
         self._args = args
@@ -491,6 +507,17 @@ class CanonicalInjector:
         # ---- Resolve scenario list (multi-scenario in ONE COM session) ----
         scenario_list = self._resolve_scenarios(args)
 
+        # ---- Heartbeat: §A.16 progress channel for long-running runs ----
+        # Progress JSON lands next to the canonical CSV. The op_name
+        # encodes sector + verb so multiple sectors don't collide.
+        self._hb = HeartbeatLogger(
+            op_name=f"inject_{self.SECTOR_NAME}",
+            progress_dir=Path(csv_path).parent,
+            interval_seconds=10.0,  # tighter than the 30s default so
+            # stalls are visible faster (was throttling stdout to the
+            # point the operator couldn't distinguish slow from hung)
+        )
+
         # ---- COM dispatch ONCE (warm session across all phases) ----
         leap = dispatch_leap()
         self._assert_area_lock(leap, args.expect_area)
@@ -498,20 +525,31 @@ class CanonicalInjector:
         print(f"[{self.SECTOR_NAME}] ActiveArea (locked): {initial_area!r}")
         print(f"[{self.SECTOR_NAME}] Will process {len(scenario_list)} "
               f"scenario(s) in ONE COM session: {scenario_list or '<current>'}")
+        self._hb.tick(stage="com_dispatched", area=initial_area,
+                      scenarios_total=len(scenario_list))
 
         any_failed = False
-        for scenario in scenario_list:
-            rc = self._run_scenario_cycle(
-                leap, scenario, rows_to_push, args, csv_path)
-            if rc != 0:
-                any_failed = True
-                if args.fail_fast:
-                    print(f"[{self.SECTOR_NAME}] --fail-fast: aborting "
-                          f"remaining scenarios.")
-                    break
+        scenarios_processed = 0
+        try:
+            for idx, scenario in enumerate(scenario_list, start=1):
+                self._hb.tick(stage="scenario_start",
+                              scenario=scenario or "<current>",
+                              scenario_idx=f"{idx}/{len(scenario_list)}")
+                rc = self._run_scenario_cycle(
+                    leap, scenario, rows_to_push, args, csv_path)
+                scenarios_processed = idx
+                if rc != 0:
+                    any_failed = True
+                    if args.fail_fast:
+                        print(f"[{self.SECTOR_NAME}] --fail-fast: aborting "
+                              f"remaining scenarios.")
+                        break
 
-        print(f"\n[{self.SECTOR_NAME}] === ALL SCENARIOS DONE ===")
-        return 1 if any_failed else 0
+            print(f"\n[{self.SECTOR_NAME}] === ALL SCENARIOS DONE ===")
+            return 1 if any_failed else 0
+        finally:
+            self._hb.finish({"any_failed": any_failed,
+                             "scenarios_processed": scenarios_processed})
 
     def _resolve_scenarios(self, args) -> list[str | None]:
         """Build the ordered scenario list for this run.
@@ -561,10 +599,24 @@ class CanonicalInjector:
         for region in groups:
             caches[region] = self.cache_for_region(leap, region)
 
-        # ---- Phase 1: DRY RUN ----
-        print(f"\n[{self.SECTOR_NAME}] ── Phase 1: DRY RUN ──")
-        dry_counts, dry_failures, _ = self._execute_phase(
-            leap, groups, caches, args, dry_run=True)
+        # ---- Phase 1: DRY RUN (skippable via --skip-dry-run) ----
+        if args.skip_dry_run:
+            print(f"\n[{self.SECTOR_NAME}] ── Phase 1: DRY RUN — SKIPPED "
+                  f"(per --skip-dry-run) ──")
+            self._maybe_tick(stage="dry_run_skipped", scenario=scen_label)
+            dry_counts, dry_failures = Counter(), []
+        else:
+            print(f"\n[{self.SECTOR_NAME}] ── Phase 1: DRY RUN ──")
+            self._maybe_tick(stage="dry_run_start",
+                             scenario=scen_label, regions=len(groups))
+            dry_counts, dry_failures, _ = self._execute_phase(
+                leap, groups, caches, args, dry_run=True)
+            self._maybe_tick(stage="dry_run_done", scenario=scen_label,
+                             dry_pushed=dry_counts.get("dry_run", 0),
+                             dry_skipped=(
+                                 dry_counts.get("branch_not_found", 0)
+                                 + dry_counts.get("var_not_found", 0)
+                                 + dry_counts.get("row_invalid", 0)))
         self._print_phase_summary("dry-run", dry_counts, dry_failures)
         dry_blocking = (
             dry_failures
@@ -595,8 +647,12 @@ class CanonicalInjector:
 
         # ---- Phase 3: REAL INJECT (warm cache from dry-run is reused) ----
         print(f"\n[{self.SECTOR_NAME}] ── Phase 3: REAL INJECT ──")
+        self._maybe_tick(stage="real_inject_start", scenario=scen_label)
         real_counts, real_failures, committed = self._execute_phase(
             leap, groups, caches, args, dry_run=False)
+        self._maybe_tick(stage="real_inject_done", scenario=scen_label,
+                         pushed=real_counts.get("pushed", 0),
+                         failed=len(real_failures))
         self._print_phase_summary("real-inject", real_counts, real_failures)
         self.post_push_verify(committed, leap)
 
@@ -632,12 +688,44 @@ class CanonicalInjector:
         import copy as _copy
         phase_args = _copy.copy(args)
         phase_args.dry_run = dry_run
-        for region, group_rows in groups.items():
+        for region_idx, (region, group_rows) in enumerate(groups.items(),
+                                                          start=1):
             print(f"  --- region {region!r} ({len(group_rows)} rows) ---")
+            # CRITICAL: set ActiveRegion at each region transition.
+            # `cache_for_region` sets it during cache build, but after
+            # the build loop the cache map is complete and ActiveRegion
+            # is whatever the LAST built region was. Without this
+            # re-set, every row's `var.Expression =` write goes to the
+            # wrong region's slot — silent data corruption. Power
+            # historically guarded this via a per-row `before_push_row`
+            # override; making it default-on means every sector is
+            # safe. See CLAUDE.md §A on "ActiveRegion drift in inject".
+            if region:
+                try:
+                    leap.ActiveRegion = leap.Regions(region)
+                except Exception as exc:
+                    print(f"    WARN: could not set ActiveRegion={region!r}: {exc}")
+            self._maybe_tick(
+                stage=("dry_region" if dry_run else "real_region"),
+                region=region,
+                region_idx=f"{region_idx}/{len(groups)}",
+                rows_in_region=len(group_rows),
+                rows_written=len(committed),
+            )
             cache = caches.get(region)
-            for r in group_rows:
+            for row_idx, r in enumerate(group_rows, start=1):
                 self._push_one(leap, cache, r, phase_args,
                                counts, failures, committed)
+                # Tick every 10 rows so a slow scenario still flows
+                # and JSON state advances granularly enough that the
+                # operator can see whether we're moving or stalled.
+                if row_idx % 10 == 0:
+                    self._maybe_tick(
+                        stage=("dry_pushing" if dry_run else "real_pushing"),
+                        region=region,
+                        row_in_region=f"{row_idx}/{len(group_rows)}",
+                        rows_written=len(committed),
+                    )
         return counts, failures, committed
 
     def _print_phase_summary(
@@ -649,6 +737,18 @@ class CanonicalInjector:
             for r, msg in failures[:5]:
                 print(f"    - {r.get('ams','?')} | {r.get('branch','?')} "
                       f". {r.get('variable','?')}: {msg}")
+
+    def _maybe_tick(self, **context) -> None:
+        """Tick the heartbeat if one is attached (set by run()).
+
+        Subclasses that override `run()` and skip the HeartbeatLogger
+        setup still inherit `_run_scenario_cycle` / `_execute_phase` —
+        this no-op guard lets the ticks live in the hot path without
+        forcing every caller to set up the logger.
+        """
+        hb = getattr(self, "_hb", None)
+        if hb is not None:
+            hb.tick(**context)
 
     def _prompt_yes_no(self, message: str) -> bool:
         """Ask the user; return True only on explicit 'y' / 'yes'.

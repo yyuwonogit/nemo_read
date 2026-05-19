@@ -556,6 +556,62 @@ See also: `memory/reference_leap_separator_convention.md` for the
 full origin (2026-05-07 v0.38 read-back discovery + 2026-05-17
 fossil burn).
 
+**A.19 — `Variable.Expression =` writes are scoped to whatever
+`leap.ActiveRegion` is at write time. Per-region row loops MUST
+re-set `ActiveRegion` before each region's rows OR the whole canonical
+silently writes to a single (wrong) region's slot.**
+
+Discovered 2026-05-19 during the transport inject. Post-inject
+readback found 9/10 region samples FAIL with the only EXACT match
+being the last-iterated region (Vietnam). Tracing showed:
+
+  1. The framework's `_run_scenario_cycle` builds caches per region
+     up-front via `cache_for_region(leap, region)` which sets
+     `ActiveRegion = leap.Regions(region)` as a side effect.
+  2. After that cache-building loop, `ActiveRegion` equals the LAST
+     region built (Vietnam in alphabetical iteration).
+  3. The subsequent `_execute_phase` then walks rows per region group,
+     but the default `before_push_row` is a no-op — so `ActiveRegion`
+     is NEVER reset back to the row's `ams`.
+  4. Every `var.Expression = expr` write therefore lands in Vietnam's
+     slot, regardless of which AMS the row belongs to.
+  5. The last region's last write is what survives. Other regions'
+     pre-existing LEAP values stay untouched.
+
+How to apply:
+  - The fix is one block at the top of each region group in
+    `nemo_read.inject_base._execute_phase`:
+    `leap.ActiveRegion = leap.Regions(region)`. Applied 2026-05-19;
+    defensive against this class of bug for every future sector.
+  - Subclasses (e.g. power's per-row `before_push_row`) can still
+    re-flip ActiveRegion at finer granularity; the framework's
+    per-group flip is the FLOOR, not the ceiling.
+  - If you're authoring a NEW domain and rows-per-region grouping
+    differs from row-per-ActiveRegion semantics (e.g. one cache
+    serves multiple ActiveRegions), override `before_push_row` to
+    flip per-row — same as power.
+  - Bioenergy/fossil have shipped fine without an explicit re-set;
+    their target branches (Resources, Transformation Processes) must
+    behave differently from KA branches under the framework's
+    cache+ActiveRegion flow. Don't retroactively blame those sectors.
+    What the fix gives us is a defensive floor so a NEW domain whose
+    target branches need per-region ActiveRegion correctness (like
+    transport KA) gets it without each sector having to re-discover
+    the gotcha. If your domain is verified to be region-invariant or
+    otherwise immune, the fix is a no-op overhead and harmless.
+
+This is the same class as the §A.15 fossil-separator bug: a
+behaviour that was implicit-correct for some sectors and silently-
+wrong for others until a careful readback caught the divergence.
+The pytest tripwire for this rule lives in
+[tests/test_inject_base.py](tests/test_inject_base.py) — it
+mocks a multi-region inject and asserts ActiveRegion gets set
+to each row's `ams` before that row's write.
+
+See also: `memory/feedback_active_region_drift_in_inject.md` for
+the full 2026-05-19 burn record (transport readback FAIL pattern,
+Vietnam EXACT clue, fix application).
+
 ---
 
 ## §0. Starting cold? Read in this order
