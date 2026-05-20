@@ -1,0 +1,28 @@
+{
+  "op": "inject_transport",
+  "started": "2026-05-20T07:38:37",
+  "progress_file": "d:\\Users\\YudiandraYuwono\\Documents\\GitHub\\nemo_read\\inject\\transport\\_progress_inject_transport_20260520_073837.json",
+  "current": {
+    "stage": "real_inject_done",
+    "area": "aeo9_v0.47",
+    "scenarios_total": 4,
+    "scenario": "Current Accounts",
+    "scenario_idx": "4/4",
+    "region": "Brunei",
+    "region_idx": "1/1",
+    "rows_in_region": 29,
+    "rows_written": 20,
+    "pushed": 29,
+    "failed": 0,
+    "row_in_region": "20/29"
+  },
+  "rows_total": 20,
+  "last_heartbeat": "07:38:53",
+  "finished": "2026-05-20T07:39:05",
+  "elapsed_seconds": 27.5,
+  "elapsed_human": "0m27s",
+  "summary": {
+    "any_failed": false,
+    "scenarios_processed": 4
+  }
+}

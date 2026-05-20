@@ -200,6 +200,53 @@ those semantics are correct.
 
 ---
 
+## 4c. MANDATORY: CA-2024 → forward-2025 continuity check (added 2026-05-20)
+
+For every time-series share variable, the **last historical year in
+Current Accounts (2024)** must connect smoothly to the **first
+projection year (2025)** in each forward scenario (Baseline / AMS
+Target / Regional Aspiration). A share that reads (say) 70% in CA-2024
+must not jump to 100% in 2025 — there is no physical event in a single
+year to justify that.
+
+**Why this is an author responsibility, not an inject responsibility.**
+The inject framework writes exactly what the canonical says, byte-exact
+(verified by readback). A 2024→2025 discontinuity is therefore always
+a *data-authoring* defect that the inject faithfully reproduces. It will
+not be caught by the readback (which only checks write fidelity) — it
+must be caught here, at authoring time.
+
+**The 2026-05-20 incident.** The first full transport inject surfaced
+**13 (AMS, vehicle\fuel) combinations** where the dominant fuel's share
+jumped upward at 2024→2025 — worst cases Myanmar/Vietnam Bus & Truck
+Blended Diesel at ~+30 points. Root-cause hypothesis: the forward
+`sales_mix.csv` was renormalised to 100% across a *narrower* fuel set
+than CA history carried (minor historical fuels like LPG/CNG dropped
+out of the forward set, so the dominant fuel absorbed their share — but
+only from 2025 on, producing the step).
+
+Interim fix applied to the LEAP area: the 39 forward rows (13 combos ×
+3 scenarios) were re-expressed as **`Remainder(100)`** so the dominant
+fuel becomes the residual of 100% after the other modelled shares,
+self-consistently tracking them with no hard-coded jump. CA historical
+rows were left untouched. See
+`author_handover_20260520/README_TRANSPORT_AUTHOR_FIXES.md` and the
+full mismatch CSV for the reference list.
+
+**Author action required each cycle:**
+1. Run the continuity checker after `build_canonical.py`:
+   `python inject/transport/_check_ca_to_fwd_continuity.py`
+   (flags any CA-2024 vs forward-2025 jump > 1% relative).
+2. For each flagged combo, decide:
+   - the dominant fuel should be `Remainder(100)` (residual modelling), OR
+   - `sales_mix.csv` should be re-authored so the 2025 starting share
+     equals the CA-2024 share and diverges smoothly from there.
+3. Re-check until the script reports `CLEAN: no discontinuities found`.
+
+**This check is now in the §10 validation checklist — do not skip it.**
+
+---
+
 ## 5. Interp() expression form (§A.15 compliance)
 
 Every `Interp(...)` produced by this adapter uses **comma list-sep,
@@ -363,6 +410,10 @@ Before declaring a transport push successful (CLAUDE.md §4.1):
 - [ ] Dry-run inject completes without `[FAIL]` lines
 - [ ] Read-back-one verify on one representative `(ams, vehicle, fuel,
       scenario)` row after real push
+- [ ] **CA-2024 → forward-2025 continuity (§4c)** —
+      `python inject/transport/_check_ca_to_fwd_continuity.py` reports
+      `CLEAN`, OR every flagged jump has been author-confirmed as
+      intended (e.g. resolved via `Remainder(100)`)
 - [ ] No placeholder rows in the canonical (transport doesn't author
       Stage-5 placeholders — they belong to infeasibility triage, not
       data authoring)

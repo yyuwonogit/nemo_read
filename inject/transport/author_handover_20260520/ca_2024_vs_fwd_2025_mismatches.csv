@@ -1,0 +1,40 @@
+ams,branch,variable,scenario,ca_2024,fwd_2025,abs_diff,rel_pct
+Cambodia,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,AMS Target Scenario,94.7193,99.7089,4.9896,5.0
+Cambodia,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Baseline Simulation,94.7193,99.7089,4.9896,5.0
+Cambodia,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Regional Aspiration Scenario,94.7193,99.7089,4.9896,5.0
+Cambodia,Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline,Activity Level,AMS Target Scenario,94.7123,99.9983,5.286,5.29
+Cambodia,Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline,Activity Level,Baseline Simulation,94.7123,99.9983,5.286,5.29
+Cambodia,Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline,Activity Level,Regional Aspiration Scenario,94.7123,99.9983,5.286,5.29
+Cambodia,Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline,Activity Level,AMS Target Scenario,53.8908,65.3874,11.4966,17.58
+Cambodia,Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline,Activity Level,Baseline Simulation,53.8908,65.3874,11.4966,17.58
+Cambodia,Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline,Activity Level,Regional Aspiration Scenario,53.8908,65.3874,11.4966,17.58
+Indonesia,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,AMS Target Scenario,91.1302,97.7991,6.6689,6.82
+Indonesia,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Baseline Simulation,91.1302,97.7991,6.6689,6.82
+Indonesia,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Regional Aspiration Scenario,91.1302,97.7991,6.6689,6.82
+Malaysia,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,AMS Target Scenario,75.0503,78.2696,3.2193,4.11
+Malaysia,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Baseline Simulation,75.0503,78.2696,3.2193,4.11
+Malaysia,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Regional Aspiration Scenario,75.0503,78.2696,3.2193,4.11
+Malaysia,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,AMS Target Scenario,82.4319,100.0,17.5681,17.57
+Malaysia,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,Baseline Simulation,82.4319,100.0,17.5681,17.57
+Malaysia,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,Regional Aspiration Scenario,82.4319,100.0,17.5681,17.57
+Myanmar,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,AMS Target Scenario,68.866,98.5567,29.6907,30.13
+Myanmar,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Baseline Simulation,68.866,98.5567,29.6907,30.13
+Myanmar,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Regional Aspiration Scenario,68.866,98.5567,29.6907,30.13
+Myanmar,Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline,Activity Level,AMS Target Scenario,40.0469,49.993,9.9461,19.89
+Myanmar,Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline,Activity Level,Baseline Simulation,40.0469,49.993,9.9461,19.89
+Myanmar,Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline,Activity Level,Regional Aspiration Scenario,40.0469,49.993,9.9461,19.89
+Myanmar,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,AMS Target Scenario,69.9887,100.0,30.0113,30.01
+Myanmar,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,Baseline Simulation,69.9887,100.0,30.0113,30.01
+Myanmar,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,Regional Aspiration Scenario,69.9887,100.0,30.0113,30.01
+Philippines,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,AMS Target Scenario,98.7988,100.0,1.2012,1.2
+Philippines,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,Baseline Simulation,98.7988,100.0,1.2012,1.2
+Philippines,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,Regional Aspiration Scenario,98.7988,100.0,1.2012,1.2
+Thailand,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,AMS Target Scenario,55.5416,74.548,19.0064,25.5
+Thailand,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Baseline Simulation,55.5416,74.548,19.0064,25.5
+Thailand,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Regional Aspiration Scenario,55.5416,74.548,19.0064,25.5
+Thailand,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,AMS Target Scenario,88.7756,100.0,11.2244,11.22
+Thailand,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,Baseline Simulation,88.7756,100.0,11.2244,11.22
+Thailand,Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel,Activity Level,Regional Aspiration Scenario,88.7756,100.0,11.2244,11.22
+Vietnam,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,AMS Target Scenario,70.0035,100.0,29.9965,30.0
+Vietnam,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Baseline Simulation,70.0035,100.0,29.9965,30.0
+Vietnam,Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel,Activity Level,Regional Aspiration Scenario,70.0035,100.0,29.9965,30.0

@@ -33,6 +33,11 @@ class TransportInjector(CanonicalInjector):
     # until further notice; the supplement CSV is a stub for now.
     # (Framework still enforces --include-timor-leste / --exclude-timor-leste
     # decision per §A.18.)
+    #
+    # Transport writes to KA (`Key\TransportDataStock\...`) + Demand
+    # (`Demand\Transport\...`) branches, whose cached writes silently
+    # no-op — ALWAYS inject with --blind --fail-fast (now inherited from
+    # the base framework). See docs/inject_sop.md branch-structure matrix.
 
 
 if __name__ == "__main__":
