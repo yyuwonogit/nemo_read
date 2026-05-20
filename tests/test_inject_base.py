@@ -554,3 +554,164 @@ class TestCompareExpressions:
     def test_none_returns_fail(self):
         from nemo_read._leap_com import compare_expressions
         assert compare_expressions(None, "anything") == "FAIL"
+
+
+# ---------------------------------------------------------------------------
+# 8. Scenario-column row filter (§A.X — added 2026-05-20)
+# ---------------------------------------------------------------------------
+
+class TestFilterRowsForScenario:
+    """A canonical that carries a per-row `scenario` column ships one row
+    per (branch, ams, scenario). The framework must filter to the current
+    scenario before pushing — otherwise every scenario iteration writes
+    ALL scenario-tagged rows into ActiveScenario (last-writer-wins
+    corruption on shared branches).
+
+    Pre-fix bug: transport canonical 2026-05-19 had 4 scenario-tagged
+    rows per shared branch; all 4 wrote under every scenario, so e.g.
+    Current Accounts ended up holding RAS values.
+
+    Untagged rows (no `scenario` column at all, or empty value) MUST
+    pass through to every scenario — that's bioenergy/fossil/power's
+    LEAP-scenario-inheritance semantics.
+    """
+
+    def test_untagged_rows_pass_through(self):
+        rows = [
+            {"ams": "Brunei", "branch": "B", "variable": "V"},  # no scenario key
+            {"ams": "Brunei", "branch": "B", "variable": "V", "scenario": ""},
+            {"ams": "Brunei", "branch": "B", "variable": "V", "scenario": "   "},
+        ]
+        out = CanonicalInjector._filter_rows_for_scenario(rows, "Baseline Simulation")
+        assert len(out) == 3, "untagged/empty/whitespace rows must pass through"
+
+    def test_tagged_rows_filtered_by_scenario(self):
+        rows = [
+            {"ams": "Brunei", "branch": "B", "variable": "V",
+             "scenario": "Baseline Simulation", "expression": "BAS_EXPR"},
+            {"ams": "Brunei", "branch": "B", "variable": "V",
+             "scenario": "AMS Target Scenario", "expression": "ATS_EXPR"},
+            {"ams": "Brunei", "branch": "B", "variable": "V",
+             "scenario": "Current Accounts", "expression": "CA_EXPR"},
+            {"ams": "Brunei", "branch": "B", "variable": "V",
+             "scenario": "Regional Aspiration Scenario", "expression": "RAS_EXPR"},
+        ]
+        out = CanonicalInjector._filter_rows_for_scenario(rows, "Baseline Simulation")
+        assert len(out) == 1
+        assert out[0]["expression"] == "BAS_EXPR"
+
+    def test_mixed_tagged_and_untagged(self):
+        rows = [
+            {"ams": "Brunei", "branch": "B1", "variable": "V"},                 # untagged
+            {"ams": "Brunei", "branch": "B2", "variable": "V", "scenario": ""},  # empty
+            {"ams": "Brunei", "branch": "B3", "variable": "V",
+             "scenario": "Baseline Simulation"},                                # match
+            {"ams": "Brunei", "branch": "B4", "variable": "V",
+             "scenario": "Current Accounts"},                                   # no match
+        ]
+        out = CanonicalInjector._filter_rows_for_scenario(rows, "Baseline Simulation")
+        assert {r["branch"] for r in out} == {"B1", "B2", "B3"}
+
+    def test_no_scenario_matches_returns_empty(self):
+        rows = [
+            {"ams": "Brunei", "branch": "B", "variable": "V",
+             "scenario": "Current Accounts"},
+            {"ams": "Brunei", "branch": "B", "variable": "V",
+             "scenario": "AMS Target Scenario"},
+        ]
+        out = CanonicalInjector._filter_rows_for_scenario(rows, "Baseline Simulation")
+        assert out == []
+
+    def test_preserves_row_order(self):
+        rows = [
+            {"branch": "first", "scenario": "X"},
+            {"branch": "second"},
+            {"branch": "third", "scenario": "X"},
+            {"branch": "fourth", "scenario": "Y"},  # filtered out
+            {"branch": "fifth"},
+        ]
+        out = CanonicalInjector._filter_rows_for_scenario(rows, "X")
+        assert [r["branch"] for r in out] == ["first", "second", "third", "fifth"]
+
+    def test_bioenergy_canonical_no_scenario_column_unaffected(self, tmp_path):
+        """End-to-end: a bioenergy-shape canonical (no scenario column)
+        must have every row pass through for any scenario name."""
+        import csv as _csv
+        rows = []
+        with (tmp_path / "bio.csv").open("w", encoding="utf-8", newline="") as f:
+            w = _csv.writer(f)
+            w.writerow(["ams", "branch", "variable", "expression"])
+            for ams in ("Brunei", "Cambodia", "Indonesia"):
+                w.writerow([ams, "X", "Y", "Interp(2025, 1.0)"])
+        with (tmp_path / "bio.csv").open("r", encoding="utf-8") as f:
+            rows = list(_csv.DictReader(f))
+        out = CanonicalInjector._filter_rows_for_scenario(rows, "any_scenario_name")
+        assert len(out) == 3
+
+
+# ---------------------------------------------------------------------------
+# 9. Decimal-separator regional classifier (§A.15 reinforcement, 2026-05-20)
+# ---------------------------------------------------------------------------
+
+class TestClassifyDecimalSeparator:
+    """Pure-function classifier for LEAP regional decimal detection.
+    The COM-touching `verify_leap_decimal_is_period` builds on top of
+    this and isn't unit-testable without LEAP, but the classifier itself
+    is fully testable.
+
+    Discovered 2026-05-20: this LEAP install's regional decimal can
+    differ from Windows en-US assumption. Comma-decimal storage produces
+    ambiguous Interp() round-trips that `compare_expressions` can't
+    classify (returns FAIL even when values are correct).
+    """
+
+    def test_period_decimal_simple(self):
+        from nemo_read._leap_com import classify_decimal_separator
+        assert classify_decimal_separator("Interp(2025, 1.5, 2030, 2.0)") == "period"
+
+    def test_comma_decimal_simple(self):
+        from nemo_read._leap_com import classify_decimal_separator
+        assert classify_decimal_separator("Interp(2025, 1,5, 2030, 2,0)") == "comma"
+
+    def test_period_decimal_real_world(self):
+        from nemo_read._leap_com import classify_decimal_separator
+        # Actual transport KA Activity Level expression we wrote (period decimal)
+        assert classify_decimal_separator(
+            "Interp(2006, 50, 2007, 32.6709, 2008, 33.651, 2009, 34.6605, "
+            "2010, 35.7004, 2011, 36.7714)"
+        ) == "period"
+
+    def test_comma_decimal_real_world(self):
+        from nemo_read._leap_com import classify_decimal_separator
+        # Actual transport KA Activity Level read-back under comma-decimal regional
+        assert classify_decimal_separator(
+            "Interp(2006, 50, 2007, 32,6709, 2008, 33,651, 2009, 34,6605, "
+            "2010, 35,7004, 2011, 36,7714)"
+        ) == "comma"
+
+    def test_integer_only_returns_unknown(self):
+        from nemo_read._leap_com import classify_decimal_separator
+        # No decimal evidence either way → can't determine
+        assert classify_decimal_separator(
+            "Interp(2025, 50, 2030, 60, 2035, 70)"
+        ) == "unknown"
+
+    def test_empty_returns_unknown(self):
+        from nemo_read._leap_com import classify_decimal_separator
+        assert classify_decimal_separator("") == "unknown"
+        assert classify_decimal_separator(None) == "unknown"
+
+    def test_no_interp_returns_unknown(self):
+        from nemo_read._leap_com import classify_decimal_separator
+        assert classify_decimal_separator("Step(2025, 1.5)") == "unknown"
+
+    def test_too_few_tokens_returns_unknown(self):
+        from nemo_read._leap_com import classify_decimal_separator
+        # Need at least 2 year-value pairs (4 tokens) to confidently classify
+        assert classify_decimal_separator("Interp(2025, 1.5)") == "unknown"
+
+    def test_period_decimal_negative_values(self):
+        from nemo_read._leap_com import classify_decimal_separator
+        assert classify_decimal_separator(
+            "Interp(2025, -1.5, 2030, -2.7, 2035, 3.1)"
+        ) == "period"

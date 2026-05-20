@@ -1,5 +1,52 @@
 # Changelog
 
+## [Unreleased] — Blind-mode inject standard + scenario filter + decimal guard (2026-05-20)
+
+Generalised from the transport inject cycle — the first sector to write
+KA (`Key\...`) and Demand (`Demand\...`) branches, which surfaced three
+failure modes the prior cached path hid. All now framework-enforced for
+every `CanonicalInjector` subclass.
+
+### Added
+- **Blind mode is the standard inject method, DEFAULT ON.** `--blind`
+  promoted from per-sector (power) to the base `CanonicalInjector`, and
+  defaulted on (opt out with `--no-blind`). Cached `branch.Variable()`
+  writes silently no-op on KA/Demand branches — blind's direct
+  `leap.Branches(FullName)` writes correctly, and is ~50× faster
+  everywhere (no tree-cache build). Pair with `--fail-fast`.
+- `_filter_rows_for_scenario` — canonicals with a per-row `scenario`
+  column now have each scenario iteration filtered to its own tagged
+  rows (untagged rows apply to all — preserves inheritance). Prevents
+  last-writer-wins cross-scenario corruption.
+- Decimal-separator regional guard: `classify_decimal_separator`,
+  `verify_leap_decimal_is_period`, `assert_leap_decimal_is_period`,
+  `LeapRegionalDecimalError` (all re-exported). Inject + probe refuse to
+  start (exit 11) if LEAP regional decimal is comma, not period.
+- [docs/inject_sop.md](docs/inject_sop.md) — the general standard inject
+  method + branch-structure decision matrix (KA/Demand → blind
+  MANDATORY; Resource/Process → blind faster default).
+- [inject/LAST_SUCCESSFUL_INJECT.md](inject/LAST_SUCCESSFUL_INJECT.md) —
+  rolling pointer to the current known-good inject (transport, 2026-05-20:
+  562 rows, 40/40 readbacks EXACT).
+
+### Fixed
+- Transport inject failure (cached writes silently no-op on KA/Demand)
+  — resolved by blind mode. Full ASEAN-10 × 4-scenario inject now
+  completes in ~4m30s with every readback EXACT.
+
+### Documented
+- CLAUDE.md §A.20 (new hard rule), §9 docs map entry.
+- Transport [CSV_AUTHORING_GUIDE.md](inject/transport/CSV_AUTHORING_GUIDE.md)
+  §4c — mandatory CA-last-year → forward-first-year continuity check
+  for time-series share data (an authoring defect the inject faithfully
+  reproduces; ships `_check_ca_to_fwd_continuity.py`).
+
+### Tests
+- `tests/test_inject_base.py`: `TestFilterRowsForScenario` (6),
+  `TestClassifyDecimalSeparator` (9).
+
+---
+
 ## [Unreleased] — Workstream 2: repo reorg `mailbox/` → `mailbox/` + `inject/` + `result/` (2026-05-17)
 
 ### Changed — breaking (layout)

@@ -164,10 +164,12 @@ from .probe_base import (
 )
 from ._heartbeat import HeartbeatLogger, read_progress
 from ._leap_com import (
-    InterpSeparatorError,
+    InterpSeparatorError, LeapRegionalDecimalError,
     assert_interp_canonical, compare_expressions,
     normalize_interp, safe_set_expression,
     validate_canonical_csv_expressions,
+    classify_decimal_separator, verify_leap_decimal_is_period,
+    assert_leap_decimal_is_period,
 )
 
 __all__ = [
@@ -223,10 +225,12 @@ __all__ = [
     "DEFAULT_RESULT_BRANCH_TYPES", "DEFAULT_UNIT_BRANCH_TYPES",
     "DEFAULT_YEARS", "DEFAULT_EMISSION_VARS_EXCLUDE",
     "HeartbeatLogger", "read_progress",
-    "InterpSeparatorError",
+    "InterpSeparatorError", "LeapRegionalDecimalError",
     "assert_interp_canonical", "compare_expressions",
     "normalize_interp", "safe_set_expression",
     "validate_canonical_csv_expressions",
+    "classify_decimal_separator", "verify_leap_decimal_is_period",
+    "assert_leap_decimal_is_period",
 ]
 
 __version__ = "0.7.0"

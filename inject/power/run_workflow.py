@@ -51,12 +51,9 @@ class PowerInjector(CanonicalInjector):
     SECTOR_NAME = "power"
     REQUIRE_EXPECT_AREA = True  # §A.9 — area must be confirmed
 
-    def extra_cli_args(self, parser: argparse.ArgumentParser) -> None:
-        parser.add_argument(
-            "--blind", action="store_true",
-            help="ESCAPE HATCH (§11.1) — skip the tree cache, look up "
-                 "each branch via direct leap.Branches(FullName). Hangs "
-                 "if any FullName doesn't exist. Pair with --fail-fast.")
+    # --blind is now inherited from the base CanonicalInjector
+    # (promoted to the framework 2026-05-20). Power keeps only its
+    # group-cache override below.
 
     def group_by_region(self, rows: list[dict]) -> dict[str, list[dict]]:
         """Group by GROUPS dict (Indonesia / Malaysia / Other), not by AMS."""

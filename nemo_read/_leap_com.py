@@ -296,6 +296,129 @@ def compare_expressions(actual, expected) -> str:
     return "FAIL"
 
 
+# ---------------------------------------------------------------------------
+# Decimal-separator regional check (CLAUDE.md §A.15 reinforcement)
+# ---------------------------------------------------------------------------
+
+_YEAR_TOKEN_RE = _re.compile(r"^\s*(19|20|21)\d{2}\s*$")
+
+
+def classify_decimal_separator(expression: str) -> str:
+    """Inspect an ``Interp(...)`` expression and return the decimal separator
+    in use: ``"period"`` / ``"comma"`` / ``"unknown"``.
+
+    Algorithm: split the inner content of ``Interp(...)`` by comma. In a
+    period-decimal regime the tokens pair cleanly as (year, value) with
+    even indices being 4-digit years. In a comma-decimal regime the
+    decimal commas split values into fragments, so even-indexed tokens
+    stop matching the year pattern.
+
+    Per CLAUDE.md §A.15: this LEAP install MUST be on period-decimal.
+    Comma-decimal storage produces ambiguous Interp() expressions that
+    LEAP parses differently on round-trip and that ``compare_expressions``
+    cannot reliably classify.
+    """
+    if not expression or "Interp(" not in expression:
+        return "unknown"
+    m = _INTERP_RE.search(expression)
+    if not m:
+        return "unknown"
+    tokens = [t.strip() for t in m.group(1).split(",")]
+    if len(tokens) < 4:
+        return "unknown"
+    even = list(range(0, len(tokens), 2))
+    years_ok = sum(1 for i in even if _YEAR_TOKEN_RE.match(tokens[i]))
+    if len(even) >= 2 and years_ok / len(even) >= 0.8:
+        odd = list(range(1, len(tokens), 2))
+        if any("." in tokens[i] for i in odd):
+            return "period"
+        return "unknown"  # all integer values; no decimal evidence either way
+    return "comma"
+
+
+class LeapRegionalDecimalError(RuntimeError):
+    """Raised when LEAP's regional decimal separator is not period.
+
+    Per CLAUDE.md §A.15: every inject and probe MUST run under
+    period-decimal regional. Comma-decimal storage produces ambiguous
+    Interp() round-trips. Fix: in LEAP, Settings → Regional settings →
+    set decimal separator to '.' (period).
+    """
+
+
+def verify_leap_decimal_is_period(
+    leap, max_branches: int = 200, max_vars_per_branch: int = 8,
+) -> tuple[str, str]:
+    """Walk a sample of LEAP branches to detect the regional decimal
+    separator. Returns ``(verdict, evidence)``.
+
+    ``verdict`` is ``"period"`` / ``"comma"`` / ``"unknown"``. Stops on
+    first conclusive (period or comma) finding.
+
+    Popup-safe: restricts to BT={3, 50} (§A.4 / §11.2) so result-side
+    Variable.Expression reads don't fire LEAP's modal dialog.
+    """
+    try:
+        n_branches = leap.Branches.Count
+    except Exception as exc:
+        return ("unknown", f"could not enumerate branches: {exc}")
+    upper = min(max_branches, int(n_branches))
+    for i in range(1, upper + 1):
+        try:
+            br = leap.Branches.Item(i)
+        except Exception:
+            continue
+        try:
+            bt = int(br.BranchType)
+        except Exception:
+            continue
+        if bt not in (3, 50):
+            continue
+        for _idx, _name, expr in iterate_variables_safe(
+            br, max_vars=max_vars_per_branch, fetch_expression=True
+        ):
+            if not expr:
+                continue
+            verdict = classify_decimal_separator(str(expr))
+            if verdict in ("period", "comma"):
+                try:
+                    fullname = br.FullName
+                except Exception:
+                    fullname = f"branch[{i}]"
+                return (verdict, f"{fullname} . {_name!r} = {str(expr)[:100]}")
+    return ("unknown",
+            f"no decimal-bearing Interp() found in first {upper} BT={{3,50}} branches")
+
+
+def assert_leap_decimal_is_period(leap, sector_label: str = "?") -> None:
+    """Hard-fail helper: raise LeapRegionalDecimalError if LEAP's decimal
+    separator is comma. Silent pass if period or unknown.
+
+    Call this from every framework that touches LEAP COM, right after
+    area lock (CLAUDE.md §A.15 universal guard).
+    """
+    verdict, evidence = verify_leap_decimal_is_period(leap)
+    if verdict == "comma":
+        raise LeapRegionalDecimalError(
+            f"\n[{sector_label}] REFUSED: LEAP regional decimal separator is "
+            f"COMMA, not PERIOD (§A.15).\n"
+            f"  Evidence: {evidence}\n"
+            f"  Period decimal is required for round-trip-safe Interp() "
+            f"expressions on this engine.\n"
+            f"  FIX: In LEAP UI -> Settings -> Regional / Locale, set the "
+            f"decimal separator to '.' (period). Then re-run.\n"
+            f"  Without this, every decimal-bearing write read-backs with "
+            f"comma decimals and compare_expressions returns FAIL even "
+            f"when values are correct."
+        )
+    if verdict == "unknown":
+        print(f"[{sector_label}] WARN: could not verify LEAP decimal "
+              f"separator regional (no decimal-bearing Interp found in "
+              f"sample). Proceeding; if decimal-bearing rows produce "
+              f"readback FAIL with comma-decimal evidence, abort and "
+              f"flip LEAP regional to period.")
+
+
 def validate_canonical_csv_expressions(csv_path, expr_column: str = "expression"):
     """Pre-flight: scan a canonical CSV for forbidden Interp forms before
     any inject begins. Returns a list of (row_index, expression) tuples

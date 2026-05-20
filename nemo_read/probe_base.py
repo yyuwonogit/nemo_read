@@ -60,6 +60,8 @@ from pathlib import Path
 from nemo_read._heartbeat import HeartbeatLogger
 from nemo_read._leap_com import (
     LeapTreeCache,
+    LeapRegionalDecimalError,
+    assert_leap_decimal_is_period,
     dispatch_leap,
     iterate_variables_safe,
     safe_value,
@@ -390,6 +392,14 @@ class CanonicalProber:
         self._assert_area_lock(leap, args.expect_area)
         initial_area = leap.ActiveArea.Name
         print(f"[{self.PROBE_NAME}] ActiveArea (locked): {initial_area!r}")
+        # CLAUDE.md §A.15 — hard guard: refuse to probe if LEAP regional
+        # decimal separator is comma. Probe values would be ambiguous
+        # round-trip and result CSVs corrupted with bad numeric parses.
+        try:
+            assert_leap_decimal_is_period(leap, sector_label=self.PROBE_NAME)
+        except LeapRegionalDecimalError as exc:
+            print(str(exc), file=sys.stderr)
+            return 11
 
         # ---- Tree cache built ONCE, reused everywhere ----
         cache_start = time.perf_counter()

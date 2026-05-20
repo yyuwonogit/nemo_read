@@ -70,6 +70,8 @@ from typing import Any
 from nemo_read._heartbeat import HeartbeatLogger
 from nemo_read._leap_com import (
     LeapTreeCache,
+    LeapRegionalDecimalError,
+    assert_leap_decimal_is_period,
     compare_expressions,
     dispatch_leap,
     safe_expression,
@@ -251,13 +253,20 @@ class CanonicalInjector:
             or confidence.strip().upper() == "PLACEHOLDER"
         )
 
-    def cache_for_region(self, leap, region: str) -> LeapTreeCache:
+    def cache_for_region(self, leap, region: str) -> LeapTreeCache | None:
         """Build a tree cache scoped to the given region.
 
         Default: sets `leap.ActiveRegion` to the named region, builds
         a fresh `LeapTreeCache`. Subclasses can override to reuse
         caches across region groups (power's 3-cache pattern).
+
+        Returns None under `--blind` (the universal escape hatch) so
+        the per-row push falls back to direct `leap.Branches(FullName)`
+        lookup. Blind mode is REQUIRED for KA + Demand branches whose
+        cached writes silently no-op (transport, 2026-05-20).
         """
+        if getattr(self._args, "blind", False):
+            return None
         if region:
             leap.ActiveRegion = leap.Regions(region)
         return LeapTreeCache(leap=leap)
@@ -327,6 +336,30 @@ class CanonicalInjector:
                        help="Abort if leap.ActiveScenario.Name doesn't match")
         p.add_argument("--no-scenario-switch", action="store_true",
                        help="Don't touch ActiveScenario (use UI state)")
+        # Blind mode is the STANDARD method (DEFAULT ON as of 2026-05-20)
+        # — promoted to the base framework after the transport cycle proved
+        # it, not a power-only special case. See the inject SOP
+        # (docs/inject_sop.md) for the branch-structure decision matrix:
+        # KA (`Key\...`) + Demand (`Demand\...`) branches REQUIRE blind —
+        # the cached branch.Variable() path silently no-ops writes there.
+        # Resources/Transformation/Process branches work cached or blind
+        # (blind ~50x faster, no cache build). Opt out with --no-blind for
+        # the rare case you need the tree cache (e.g. debugging a
+        # branch_not_found that blind would hang on).
+        p.add_argument("--blind", dest="blind", action="store_true",
+                       default=True,
+                       help="(DEFAULT ON) Skip the tree cache; look up each "
+                            "branch via direct leap.Branches(FullName). "
+                            "REQUIRED for KA + Demand branches (cached "
+                            "writes silently no-op there). Hangs if a "
+                            "FullName doesn't exist — ALWAYS pair with "
+                            "--fail-fast.")
+        p.add_argument("--no-blind", dest="blind", action="store_false",
+                       help="Opt OUT of blind mode — build + use the tree "
+                            "cache. Cleanly reports branch_not_found instead "
+                            "of hanging, but cached writes SILENTLY NO-OP on "
+                            "KA/Demand branches. Use only for "
+                            "Resource/Process sectors when debugging.")
         p.add_argument("--placeholder-mode", action="store_true",
                        help="Allow Stage-5 placeholder rows through")
         p.add_argument("--fail-fast", action="store_true",
@@ -374,6 +407,29 @@ class CanonicalInjector:
             if var_filter and r.get("variable") != var_filter:
                 continue
             out.append(r)
+        return out
+
+    @staticmethod
+    def _filter_rows_for_scenario(
+        rows: list[dict], scenario_name: str,
+    ) -> list[dict]:
+        """Keep rows whose `scenario` column matches `scenario_name`
+        OR is empty/missing (= applies to every scenario, the
+        bioenergy/fossil/power semantics where one row inherits via
+        LEAP's scenario inheritance).
+
+        Added 2026-05-20 after the transport inject revealed that
+        multi-scenario-tagged canonicals (one row per branch+ams+scenario)
+        had ALL their rows pushed under every scenario iteration —
+        last-writer-wins corruption on shared branches. Bioenergy/fossil
+        canonicals have no `scenario` column at all, so every row passes
+        through unchanged (the .get default is empty string).
+        """
+        out: list[dict] = []
+        for r in rows:
+            tag = (r.get("scenario") or "").strip()
+            if not tag or tag == scenario_name:
+                out.append(r)
         return out
 
     def split_placeholder_rows(
@@ -523,6 +579,16 @@ class CanonicalInjector:
         self._assert_area_lock(leap, args.expect_area)
         initial_area = leap.ActiveArea.Name
         print(f"[{self.SECTOR_NAME}] ActiveArea (locked): {initial_area!r}")
+        # CLAUDE.md §A.15 — hard guard: refuse to push if LEAP regional
+        # decimal separator is comma. Comma-decimal storage produces
+        # ambiguous Interp() round-trips that compare_expressions cannot
+        # classify. Discovered 2026-05-20 (transport KA readback FAIL
+        # was actually correct values stored under comma-decimal regional).
+        try:
+            assert_leap_decimal_is_period(leap, sector_label=self.SECTOR_NAME)
+        except LeapRegionalDecimalError as exc:
+            print(str(exc), file=sys.stderr)
+            return 11
         print(f"[{self.SECTOR_NAME}] Will process {len(scenario_list)} "
               f"scenario(s) in ONE COM session: {scenario_list or '<current>'}")
         self._hb.tick(stage="com_dispatched", area=initial_area,
@@ -591,6 +657,13 @@ class CanonicalInjector:
             self._assert_scenario_lock(leap, args.expect_scenario)
         actual_scen = leap.ActiveScenario.Name
         print(f"  ActiveScenario: {actual_scen!r}")
+
+        # ---- Scenario-column row filter ----
+        before_n = len(rows)
+        rows = self._filter_rows_for_scenario(rows, actual_scen)
+        if before_n != len(rows):
+            print(f"  scenario-column filter: {before_n} -> {len(rows)} "
+                  f"rows (kept untagged + scenario={actual_scen!r})")
 
         # ---- Build region caches ONCE; reused across dry + real phases ----
         groups = self.group_by_region(rows)

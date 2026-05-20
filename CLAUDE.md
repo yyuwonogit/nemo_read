@@ -612,6 +612,72 @@ See also: `memory/feedback_active_region_drift_in_inject.md` for
 the full 2026-05-19 burn record (transport readback FAIL pattern,
 Vietnam EXACT clue, fix application).
 
+**A.20 — Blind mode is the STANDARD inject method for every
+`CanonicalInjector`. Cached `branch.Variable()` writes SILENTLY NO-OP
+on KA (`Key\...`) and Demand (`Demand\...`) branches. Per-row
+`scenario` columns MUST be filter-routed or every scenario gets every
+row.**
+
+Three discoveries from the 2026-05-20 transport cycle, all now
+framework-enforced. The full standard method + branch-structure
+decision matrix is [docs/inject_sop.md](docs/inject_sop.md) — read it
+before any inject in a new or KA/Demand sector.
+
+  1. **Silent write no-op on KA/Demand branches (cached path).** The
+     first transport inject reported `[OK]` on all 56 Brunei rows but
+     NOTHING persisted — UI + COM readback both showed the pre-inject
+     historical data. Confirmed by reading an untouched region
+     (Indonesia) showing the same. The cached `cache.branches.Item(idx)`
+     handle's `var.Expression =` write is a no-op on `Key\
+     TransportDataStock\...` and `Demand\Transport\...` branches.
+     **Direct `leap.Branches(FullName)` (blind mode) writes correctly.**
+     Resource/Process branches (bioenergy/fossil/power) write fine
+     cached OR blind — so the bug stayed hidden until transport was the
+     first KA/Demand sector. **Fix:** `--blind` promoted to the base
+     `CanonicalInjector` and made **DEFAULT ON** (2026-05-20) — every
+     subclass injects blind unless `--no-blind` is passed. ALWAYS pair
+     with `--fail-fast` (blind hangs on a missing FullName, §11.1).
+     KA/Demand sectors: blind is MANDATORY. Others: blind is the faster
+     default (~50× faster, no cache build); `--no-blind` only for
+     debugging a `branch_not_found` that blind would hang on.
+
+  2. **Scenario-column filter (last-writer-wins corruption).**
+     Canonicals with a per-row `scenario` column (transport ships one
+     row per branch+ams+scenario) had ALL scenario-tagged rows pushed
+     into EVERY scenario iteration — the framework didn't filter by the
+     row's scenario. Result: every shared branch got 4 writes per
+     scenario, last-in-CSV-order winning, so e.g. Current Accounts ended
+     up holding RAS values. **Fix:** `_filter_rows_for_scenario` filters
+     each iteration to its tagged rows (untagged rows apply to all —
+     preserves bioenergy/fossil/power inheritance). Tripwire:
+     `tests/test_inject_base.py::TestFilterRowsForScenario`.
+
+  3. **LEAP regional decimal MUST be period, not comma (§A.15
+     reinforcement).** LEAP's regional decimal can differ from Windows
+     en-US. Comma-decimal storage makes Interp() round-trips ambiguous
+     (`32.6709` stored/read as `32,6709`) → readback FAIL even when
+     values are correct. **Fix:** `assert_leap_decimal_is_period`
+     guards every inject + probe at dispatch (exit 11 on comma; WARN if
+     unverifiable). Set LEAP → Settings → Regional → decimal = '.'
+     before injecting. Tripwire:
+     `tests/test_inject_base.py::TestClassifyDecimalSeparator`.
+
+How to apply:
+  - Blind is DEFAULT ON; just pass `--fail-fast --skip-dry-run` for every
+    inject. `--no-blind` only to opt out (Resource/Process debugging).
+  - If any canonical row's `branch` starts with `Key\` or `Demand\`,
+    blind is MANDATORY — cached writes will silently vanish (never pass
+    `--no-blind` for these sectors).
+  - After every inject, verify per-scenario readback `N EXACT, 0
+    NORMALISED, 0 FAIL` AND do a UI eye-test on a multi-scenario branch.
+  - Time-series share data: check the last-CA-year → first-forward-year
+    continuity (an AUTHORING check — the inject faithfully writes
+    whatever the canonical says). See [docs/inject_sop.md](docs/inject_sop.md).
+
+See also: `memory/reference_blind_inject_standard.md` for the full
+2026-05-20 transport burn record (KA no-op discovery sequence, decimal
+regional flip, scenario-filter validation, Remainder(100) data fix).
+
 ---
 
 ## §0. Starting cold? Read in this order
@@ -1432,6 +1498,7 @@ Worked example + stage-by-stage exit criteria in
 | File | When you need it |
 |---|---|
 | [docs/FLOWS.md](docs/FLOWS.md) | canonical step-by-step for inject / results harvest / infeasibility triage — quick reference for the three established flows |
+| [docs/inject_sop.md](docs/inject_sop.md) | **standard `CanonicalInjector` inject method (all sectors)** — blind-mode command, branch-structure decision matrix (KA/Demand REQUIRE blind), 3 framework guardrails, pitfalls catalogue. Generalised from the 2026-05-20 transport cycle |
 | [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md) | infeasibility pipeline + worked x435004 example + revised cN path (see §8) |
 | [docs/schema.md](docs/schema.md) | NEMO v11 column reference |
 | [docs/cookbook.md](docs/cookbook.md) | analysis recipes (capacity stack, demand by sector, …) |
