@@ -1,0 +1,100 @@
+METHOD SIDECAR — build_lighting_bulb_wattage.py
+===============================================
+Per-AMS per-technology bulb-wattage table for the LEAP electricity-
+lighting tree (LEAP-tree remap deliverable, 2026-05-20).
+
+Output: ../LEAP Input/lighting_bulb_wattage.csv
+  Country, Tech, watts, source   (10 AMS x 5 techs = 50 rows).
+
+
+1. WHAT THE INJECT TEAM RECEIVES
+--------------------------------
+Each LEAP tech leaf carries a `Bulb Wattage` (Watts) input that LEAP
+multiplies (with BulbsPerHH, LightingHours, 365, calibration / 1000) to
+derive `Final Energy Intensity`. LEAP's current authoring has LED 7.2 W
+and defaults for the other four techs (handover §2.2, open Q3). This
+file supplies defensible per-tech wattages so the team can author
+region-aware values instead of LEAP defaults.
+
+Drop-shape mapping (handover §4.3): this file = `bulb_wattage.csv`
+(schema Country, Tech, watts) plus a `source` provenance column.
+
+
+2. DATA SOURCES
+---------------
+- LED (per AMS): Outputs/lighting_detail_classified.csv (Stage 3
+  classifier; residential rows, Size_group == "Lamp"). Per-AMS MEDIAN of
+  Wattage_W. Catalogue chain: Raw/Lighting_Product_Data_Input_National_
+  Retail.xlsx (ACE 2026 compilation) -> convert_lighting_v1.py ->
+  transform_lighting_efficiency.py.
+- Incandescent / Halogen / CFL / Fluorescent (regional reference
+  constants): US DOE Lighting Facts / ENERGY STAR typical residential
+  lamp wattages + UNEP U4E lamp-class conventions, 60 W-incandescent-
+  equivalent lumen class (~800 lm).
+  - US DOE / ENERGY STAR Lighting: https://www.energystar.gov/products/
+    lighting
+  - UNEP U4E lamp efficiency conventions: https://united4efficiency.org/
+
+
+3. METHOD
+---------
+- LED: median (not mean) per-AMS residential Lamp wattage. Median is
+  used because the catalogue over-represents high-output bulbs (the same
+  sample-selection artefact flagged for Lamp price in DESIGN.md §5.3);
+  the median tracks the typical household A-bulb. This is a PRODUCT-
+  CATALOGUE estimate and sits slightly above LEAP's installed-stock
+  7.2 W default — both are reported (run summary) so the team can pick.
+- Non-LED: regional reference constants applied to all AMS:
+    Incandescent 60 W / Halogen 42 W / CFL 14 W / Fluorescent 32 W.
+  (60 W-incandescent-equivalent service class.)
+- Emit per (Country, Tech); 5 rows per AMS.
+
+
+4. KEY ASSUMPTIONS
+------------------
+- Wattage ordering by service-equivalent class: LED < CFL < Fluorescent
+  < Halogen < Incandescent. The per-AMS LED median (7.00-13.00 W,
+  2026-05-20 run) stays below the CFL 14 W reference, so LED is the
+  lowest-wattage tech everywhere (validated).
+- Non-LED wattages are region-flat: our catalogue carries no
+  incandescent/CFL/fluorescent/halogen products, so per-AMS variation is
+  not estimable; reference constants are the defensible choice.
+- IDN (12.46 W), MMR (13.00 W), LAO/VNM (12.00 W) LED medians sit on the
+  high side (catalogue high-output skew) but remain < 14 W and < the
+  20 W plausibility ceiling.
+
+
+5. VALIDATION REGIME
+--------------------
+HARD-FAIL:
+- Row count == 50; ASEAN-10 x 5-tech coverage; no duplicate (Country,
+  Tech); positive watts.
+WARN (non-blocking):
+- LED is the lowest-wattage tech per AMS.
+- LED median within plausible (0, 20] W.
+
+Cross-checked by Residential/Lighting/_sanity.py Level 8 (bulb_wattage:*).
+
+
+6. RUN SUMMARY (2026-05-20)
+---------------------------
+Saved lighting_bulb_wattage.csv (50 rows, no WARN).
+Per-AMS LED median (W): BRN 7.00 / KHM 8.25 / IDN 12.46 / LAO 12.00 /
+MYS 10.00 / MMR 13.00 / PHL 9.00 / SGP 9.00 / THA 9.00 / VNM 12.00.
+Non-LED reference (all AMS): Incandescent 60 / Halogen 42 / CFL 14 /
+Fluorescent 32 W. LEAP default LED for comparison: 7.2 W.
+
+
+7. REFRESH / NEXT STEPS
+-----------------------
+- If per-AMS non-LED wattages become available (e.g. U4E-2026 lamp-class
+  breakdowns), replace the REFERENCE_WATTS constants with per-AMS values.
+- If the team prefers installed-stock LED wattage over catalogue median,
+  swap the LED source to LEAP's 7.2 W default (one-line change).
+
+
+8. REFERENCES
+-------------
+- LIGHTING_TEAM_HANDOVER_20260520.md §2.2 + open Q3 (Bulb Wattage).
+- Residential/DESIGN.md §5.3 (catalogue wattage means + sample skew).
+- Outputs/efficacy_summary.csv (pooled per-cell Lamp/Tube wattage means).

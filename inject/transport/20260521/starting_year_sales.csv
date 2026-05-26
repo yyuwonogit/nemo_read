@@ -1,0 +1,161 @@
+Country,ISO3,vehicle_type,fuel_type,Year,sales_count,sales_total_year,share_percent,provenance_note
+Brunei Darussalam,BRN,2W,Electric,2024,10.393793021389572,268.75379098164467,3.867403314917127,Land Transport Dept BRN; tiny 2W fleet; Tier A
+Brunei Darussalam,BRN,2W,Gasoline,2024,258.3599979602551,268.75379098164467,96.13259668508287,Land Transport Dept BRN; tiny 2W fleet; Tier A
+Brunei Darussalam,BRN,Bus,Electric,2024,22.6778282317505,197.62107459096865,11.475409836065571,Land Transport Dept BRN; tiny bus fleet; Tier A
+Brunei Darussalam,BRN,Bus,Gasoline,2024,0.0,197.62107459096865,0.0,Land Transport Dept BRN; tiny bus fleet; Tier A
+Brunei Darussalam,BRN,Bus,HybridDiesel,2024,174.94324635921814,197.62107459096865,88.52459016393442,Land Transport Dept BRN; tiny bus fleet; Tier A
+Brunei Darussalam,BRN,Bus,Hydrogen,2024,0.0,197.62107459096865,0.0,Land Transport Dept BRN; tiny bus fleet; Tier A
+Brunei Darussalam,BRN,Bus,NaturalGas,2024,0.0,197.62107459096865,0.0,Land Transport Dept BRN; tiny bus fleet; Tier A
+Brunei Darussalam,BRN,LDV,Electric,2024,21.22982972262222,20001.53243152765,0.1061410159211523,"Land Transport Dept BRN; small fleet, disciplined registration; Tier A"
+Brunei Darussalam,BRN,LDV,Gasoline,2024,19437.425527469404,20001.53243152765,97.17968157695223,"Land Transport Dept BRN; small fleet, disciplined registration; Tier A"
+Brunei Darussalam,BRN,LDV,HybridDiesel,2024,542.8770743356254,20001.53243152765,2.714177407126611,"Land Transport Dept BRN; small fleet, disciplined registration; Tier A"
+Brunei Darussalam,BRN,LDV,NaturalGas,2024,0.0,20001.53243152765,0.0,"Land Transport Dept BRN; small fleet, disciplined registration; Tier A"
+Brunei Darussalam,BRN,Truck,Electric,2024,13.830598560449586,604.5947370710819,2.287581699346405,Land Transport Dept BRN; small commercial fleet; Tier A
+Brunei Darussalam,BRN,Truck,Gasoline,2024,0.0,604.5947370710819,0.0,Land Transport Dept BRN; small commercial fleet; Tier A
+Brunei Darussalam,BRN,Truck,HybridDiesel,2024,590.7641385106323,604.5947370710819,97.7124183006536,Land Transport Dept BRN; small commercial fleet; Tier A
+Brunei Darussalam,BRN,Truck,Hydrogen,2024,0.0,604.5947370710819,0.0,Land Transport Dept BRN; small commercial fleet; Tier A
+Brunei Darussalam,BRN,Truck,NaturalGas,2024,0.0,604.5947370710819,0.0,Land Transport Dept BRN; small commercial fleet; Tier A
+Cambodia,KHM,2W,Electric,2024,9.78727865549336,589290.6496645901,0.0016608576194215,MPWT Cambodia; Tier B
+Cambodia,KHM,2W,Gasoline,2024,589280.8623859347,589290.6496645901,99.99833914238056,MPWT Cambodia; Tier B
+Cambodia,KHM,Bus,Electric,2024,18.548824543592776,6372.846146762946,0.2910602910602911,MPWT Cambodia; Tier B
+Cambodia,KHM,Bus,Gasoline,2024,317.9798493187333,6372.846146762946,4.98960498960499,MPWT Cambodia; Tier B
+Cambodia,KHM,Bus,HybridDiesel,2024,6036.3174729006205,6372.846146762946,94.71933471933473,MPWT Cambodia; Tier B
+Cambodia,KHM,Bus,Hydrogen,2024,0.0,6372.846146762946,0.0,MPWT Cambodia; Tier B
+Cambodia,KHM,Bus,NaturalGas,2024,0.0,6372.846146762946,0.0,MPWT Cambodia; Tier B
+Cambodia,KHM,LDV,Electric,2024,1083.7809815068576,16980.624839737575,6.382456427460928,MPWT Cambodia; Tier B; used-import dominated
+Cambodia,KHM,LDV,Gasoline,2024,9151.001979748928,16980.624839737575,53.890843629817525,MPWT Cambodia; Tier B; used-import dominated
+Cambodia,KHM,LDV,HybridDiesel,2024,4793.64664897264,16980.624839737575,28.23009573684641,MPWT Cambodia; Tier B; used-import dominated
+Cambodia,KHM,LDV,NaturalGas,2024,1952.195229509148,16980.624839737575,11.496604205875132,MPWT Cambodia; Tier B; used-import dominated
+Cambodia,KHM,Truck,Electric,2024,0.0,9159.134928542757,0.0,MPWT Cambodia; Tier B
+Cambodia,KHM,Truck,Gasoline,2024,0.0,9159.134928542757,0.0,MPWT Cambodia; Tier B
+Cambodia,KHM,Truck,HybridDiesel,2024,9159.134928542757,9159.134928542757,100.0,MPWT Cambodia; Tier B
+Cambodia,KHM,Truck,Hydrogen,2024,0.0,9159.134928542757,0.0,MPWT Cambodia; Tier B
+Cambodia,KHM,Truck,NaturalGas,2024,0.0,9159.134928542757,0.0,MPWT Cambodia; Tier B
+Indonesia,IDN,2W,Electric,2024,157068.95908625878,12725712.082038954,1.234264598111925,AISI wholesales; Tier A
+Indonesia,IDN,2W,Gasoline,2024,12568643.122952696,12725712.082038954,98.76573540188808,AISI wholesales; Tier A
+Indonesia,IDN,Bus,Electric,2024,633.5314305073339,28784.50054510072,2.2009464069549907,GAIKINDO commercial-vehicle (bus segment); Tier A
+Indonesia,IDN,Bus,Gasoline,2024,0.0,28784.50054510072,0.0,GAIKINDO commercial-vehicle (bus segment); Tier A
+Indonesia,IDN,Bus,HybridDiesel,2024,26231.36888015616,28784.50054510072,91.1301859799714,GAIKINDO commercial-vehicle (bus segment); Tier A
+Indonesia,IDN,Bus,Hydrogen,2024,0.0,28784.50054510072,0.0,GAIKINDO commercial-vehicle (bus segment); Tier A
+Indonesia,IDN,Bus,NaturalGas,2024,1919.6002344372216,28784.50054510072,6.668867613073622,GAIKINDO commercial-vehicle (bus segment); Tier A
+Indonesia,IDN,LDV,Electric,2024,58622.51642387618,2269036.2239359133,2.5835866261398177,GAIKINDO wholesales x 0.826 LDV-share factor (ICCT/GAIKINDO 2024 segment composition); Tier A
+Indonesia,IDN,LDV,Gasoline,2024,2137997.6578119546,2269036.2239359133,94.22492401215806,GAIKINDO wholesales x 0.826 LDV-share factor (ICCT/GAIKINDO 2024 segment composition); Tier A
+Indonesia,IDN,LDV,HybridDiesel,2024,72416.04970008234,2269036.2239359133,3.191489361702128,GAIKINDO wholesales x 0.826 LDV-share factor (ICCT/GAIKINDO 2024 segment composition); Tier A
+Indonesia,IDN,LDV,NaturalGas,2024,0.0,2269036.2239359133,0.0,GAIKINDO wholesales x 0.826 LDV-share factor (ICCT/GAIKINDO 2024 segment composition); Tier A
+Indonesia,IDN,Truck,Electric,2024,0.0,684596.3250055052,0.0,GAIKINDO commercial-vehicle (truck segment); Tier A
+Indonesia,IDN,Truck,Gasoline,2024,0.0,684596.3250055052,0.0,GAIKINDO commercial-vehicle (truck segment); Tier A
+Indonesia,IDN,Truck,HybridDiesel,2024,684596.3250055052,684596.3250055052,100.0,GAIKINDO commercial-vehicle (truck segment); Tier A
+Indonesia,IDN,Truck,Hydrogen,2024,0.0,684596.3250055052,0.0,GAIKINDO commercial-vehicle (truck segment); Tier A
+Indonesia,IDN,Truck,NaturalGas,2024,0.0,684596.3250055052,0.0,GAIKINDO commercial-vehicle (truck segment); Tier A
+Lao PDR,LAO,2W,Electric,2024,13.180085482394643,198305.6832987552,0.0066463478318663,MPWT Lao PDR; Tier B
+Lao PDR,LAO,2W,Gasoline,2024,198292.5032132728,198305.6832987552,99.99335365216814,MPWT Lao PDR; Tier B
+Lao PDR,LAO,Bus,Electric,2024,6.815283496724786,5428.860111105343,0.1255380200860832,MPWT Lao PDR; Tier B; peer-AMS sales-growth floor applied for low-magnitude years (v15)
+Lao PDR,LAO,Bus,Gasoline,2024,0.0,5428.860111105343,0.0,MPWT Lao PDR; Tier B; peer-AMS sales-growth floor applied for low-magnitude years (v15)
+Lao PDR,LAO,Bus,HybridDiesel,2024,5422.044827608618,5428.860111105343,99.87446197991392,MPWT Lao PDR; Tier B; peer-AMS sales-growth floor applied for low-magnitude years (v15)
+Lao PDR,LAO,Bus,Hydrogen,2024,0.0,5428.860111105343,0.0,MPWT Lao PDR; Tier B; peer-AMS sales-growth floor applied for low-magnitude years (v15)
+Lao PDR,LAO,Bus,NaturalGas,2024,0.0,5428.860111105343,0.0,MPWT Lao PDR; Tier B; peer-AMS sales-growth floor applied for low-magnitude years (v15)
+Lao PDR,LAO,LDV,Electric,2024,13.570515272849944,23236.59943719706,0.0584014683797764,MPWT Lao PDR; Tier B
+Lao PDR,LAO,LDV,Gasoline,2024,16955.389510906512,23236.59943719706,72.96846320707492,MPWT Lao PDR; Tier B
+Lao PDR,LAO,LDV,HybridDiesel,2024,6267.639411017695,23236.59943719706,26.973135324545304,MPWT Lao PDR; Tier B
+Lao PDR,LAO,LDV,NaturalGas,2024,0.0,23236.59943719706,0.0,MPWT Lao PDR; Tier B
+Lao PDR,LAO,Truck,Electric,2024,0.0,6631.1768957640015,0.0,MPWT Lao PDR; Tier B; KHM peer-AMS floor (7.48% CAGR) applied for zero-sales years (v15)
+Lao PDR,LAO,Truck,Gasoline,2024,0.0,6631.1768957640015,0.0,MPWT Lao PDR; Tier B; KHM peer-AMS floor (7.48% CAGR) applied for zero-sales years (v15)
+Lao PDR,LAO,Truck,HybridDiesel,2024,6631.1768957640015,6631.1768957640015,100.0,MPWT Lao PDR; Tier B; KHM peer-AMS floor (7.48% CAGR) applied for zero-sales years (v15)
+Lao PDR,LAO,Truck,Hydrogen,2024,0.0,6631.1768957640015,0.0,MPWT Lao PDR; Tier B; KHM peer-AMS floor (7.48% CAGR) applied for zero-sales years (v15)
+Lao PDR,LAO,Truck,NaturalGas,2024,0.0,6631.1768957640015,0.0,MPWT Lao PDR; Tier B; KHM peer-AMS floor (7.48% CAGR) applied for zero-sales years (v15)
+Malaysia,MYS,2W,Electric,2024,56394.29759279408,1409857.439819852,4.0,MAA + JPJ; Tier A
+Malaysia,MYS,2W,Gasoline,2024,1353463.1422270578,1409857.439819852,96.0,MAA + JPJ; Tier A
+Malaysia,MYS,Bus,Electric,2024,1920.5573390947616,8838.120347500895,21.73038229376257,MAA + JPJ (data.gov.my); Tier A
+Malaysia,MYS,Bus,Gasoline,2024,80.02322246228175,8838.120347500895,0.9054325955734408,MAA + JPJ (data.gov.my); Tier A
+Malaysia,MYS,Bus,HybridDiesel,2024,6633.035995206909,8838.120347500895,75.0503018108652,MAA + JPJ (data.gov.my); Tier A
+Malaysia,MYS,Bus,Hydrogen,2024,0.0,8838.120347500895,0.0,MAA + JPJ (data.gov.my); Tier A
+Malaysia,MYS,Bus,NaturalGas,2024,204.50379073694225,8838.120347500895,2.3138832997987926,MAA + JPJ (data.gov.my); Tier A
+Malaysia,MYS,LDV,Electric,2024,39634.84806196184,1557620.970061656,2.5445759156923105,MAA + JPJ (data.gov.my); Tier A; possible LCV inclusion flagged
+Malaysia,MYS,LDV,Gasoline,2024,1417175.4707722892,1557620.970061656,90.9833327883479,MAA + JPJ (data.gov.my); Tier A; possible LCV inclusion flagged
+Malaysia,MYS,LDV,HybridDiesel,2024,100810.65122740487,1557620.970061656,6.47209129595979,MAA + JPJ (data.gov.my); Tier A; possible LCV inclusion flagged
+Malaysia,MYS,LDV,NaturalGas,2024,0.0,1557620.970061656,0.0,MAA + JPJ (data.gov.my); Tier A; possible LCV inclusion flagged
+Malaysia,MYS,Truck,Electric,2024,0.0,149663.18561642477,0.0,MAA + JPJ (data.gov.my) goods-vehicle; Tier A
+Malaysia,MYS,Truck,Gasoline,2024,25668.008693287047,149663.18561642477,17.150516065502025,MAA + JPJ (data.gov.my) goods-vehicle; Tier A
+Malaysia,MYS,Truck,HybridDiesel,2024,123370.19297940964,149663.18561642477,82.43189029505088,MAA + JPJ (data.gov.my) goods-vehicle; Tier A
+Malaysia,MYS,Truck,Hydrogen,2024,0.0,149663.18561642477,0.0,MAA + JPJ (data.gov.my) goods-vehicle; Tier A
+Malaysia,MYS,Truck,NaturalGas,2024,624.9839437280949,149663.18561642477,0.4175936394470987,MAA + JPJ (data.gov.my) goods-vehicle; Tier A
+Myanmar,MMR,2W,Electric,2024,0.0,421890.723718185,0.0,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,2W,Gasoline,2024,421890.723718185,421890.723718185,100.0,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Bus,Electric,2024,35.71439204951032,2474.4971634303583,1.443298969072165,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Bus,Gasoline,2024,0.0,2474.4971634303583,0.0,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Bus,HybridDiesel,2024,1704.0867063623498,2474.4971634303583,68.8659793814433,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Bus,Hydrogen,2024,0.0,2474.4971634303583,0.0,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Bus,NaturalGas,2024,734.6960650184982,2474.4971634303583,29.690721649484537,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,LDV,Electric,2024,15.566267944406531,47443.76094198762,0.0328099367236934,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,LDV,Gasoline,2024,18999.74190242992,47443.76094198762,40.04687133817671,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,LDV,HybridDiesel,2024,23709.64983189464,47443.76094198762,49.974220764002816,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,LDV,NaturalGas,2024,4718.802939718666,47443.76094198762,9.94609796109679,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Truck,Electric,2024,0.0,82058.24313736829,0.0,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Truck,Gasoline,2024,8210.251410085404,82058.24313736829,10.005395065966942,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Truck,HybridDiesel,2024,57431.51354015623,82058.24313736829,69.98871940752366,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Truck,Hydrogen,2024,0.0,82058.24313736829,0.0,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Myanmar,MMR,Truck,NaturalGas,2024,16416.47818712665,82058.24313736829,20.005885526509392,ACE-internal fill for post-2021 RTAD disruption; Tier B
+Philippines,PHL,2W,Electric,2024,13.23230502830594,1203436.5550800506,0.0010995432183315,MDPPA + LTO; Tier A
+Philippines,PHL,2W,Gasoline,2024,1203423.3227750224,1203436.5550800506,99.99890045678168,MDPPA + LTO; Tier A
+Philippines,PHL,Bus,Electric,2024,720.0534645736528,4320.320787441917,16.666666666666668,LTO + DOTr CREVI; 2024 override applied (B-AUDIT-1); pre-2024 magnitudes LOW confidence
+Philippines,PHL,Bus,Gasoline,2024,0.0,4320.320787441917,0.0,LTO + DOTr CREVI; 2024 override applied (B-AUDIT-1); pre-2024 magnitudes LOW confidence
+Philippines,PHL,Bus,HybridDiesel,2024,3600.267322868264,4320.320787441917,83.33333333333333,LTO + DOTr CREVI; 2024 override applied (B-AUDIT-1); pre-2024 magnitudes LOW confidence
+Philippines,PHL,Bus,Hydrogen,2024,0.0,4320.320787441917,0.0,LTO + DOTr CREVI; 2024 override applied (B-AUDIT-1); pre-2024 magnitudes LOW confidence
+Philippines,PHL,Bus,NaturalGas,2024,0.0,4320.320787441917,0.0,LTO + DOTr CREVI; 2024 override applied (B-AUDIT-1); pre-2024 magnitudes LOW confidence
+Philippines,PHL,LDV,Electric,2024,33.125012096840095,490576.6970096165,0.0067522595954431,CAMPI-TMA; passenger-car only (narrower than some sources); Tier A
+Philippines,PHL,LDV,Gasoline,2024,229963.29826543448,490576.6970096165,46.87611532859389,CAMPI-TMA; passenger-car only (narrower than some sources); Tier A
+Philippines,PHL,LDV,HybridDiesel,2024,260580.2737320852,490576.6970096165,53.117132411810665,CAMPI-TMA; passenger-car only (narrower than some sources); Tier A
+Philippines,PHL,LDV,NaturalGas,2024,0.0,490576.6970096165,0.0,CAMPI-TMA; passenger-car only (narrower than some sources); Tier A
+Philippines,PHL,Truck,Electric,2024,0.0,86970.80737862212,0.0,LTO truck statistics; Tier B
+Philippines,PHL,Truck,Gasoline,2024,1044.70622162798,86970.80737862212,1.2012148134717375,LTO truck statistics; Tier B
+Philippines,PHL,Truck,HybridDiesel,2024,85926.10115699413,86970.80737862212,98.79878518652826,LTO truck statistics; Tier B
+Philippines,PHL,Truck,Hydrogen,2024,0.0,86970.80737862212,0.0,LTO truck statistics; Tier B
+Philippines,PHL,Truck,NaturalGas,2024,0.0,86970.80737862212,0.0,LTO truck statistics; Tier B
+Singapore,SGP,2W,Electric,2024,1070.442449799902,10704.424497999018,10.0,LTA; Tier A
+Singapore,SGP,2W,Gasoline,2024,9633.982048199116,10704.424497999018,90.0,LTA; Tier A
+Singapore,SGP,Bus,Electric,2024,190.16912533737957,1622.1426391278474,11.72332942555686,LTA bus population; 2024 override applied (B-AUDIT-1); MVP01-4 pull queued to lift to HIGH confidence
+Singapore,SGP,Bus,Gasoline,2024,5.705073760121385,1622.1426391278474,0.3516998827667057,LTA bus population; 2024 override applied (B-AUDIT-1); MVP01-4 pull queued to lift to HIGH confidence
+Singapore,SGP,Bus,HybridDiesel,2024,1426.2684400303465,1622.1426391278474,87.92497069167644,LTA bus population; 2024 override applied (B-AUDIT-1); MVP01-4 pull queued to lift to HIGH confidence
+Singapore,SGP,Bus,Hydrogen,2024,0.0,1622.1426391278474,0.0,LTA bus population; 2024 override applied (B-AUDIT-1); MVP01-4 pull queued to lift to HIGH confidence
+Singapore,SGP,Bus,NaturalGas,2024,0.0,1622.1426391278474,0.0,LTA bus population; 2024 override applied (B-AUDIT-1); MVP01-4 pull queued to lift to HIGH confidence
+Singapore,SGP,LDV,Electric,2024,16769.378792305157,50816.29937062168,33.0,"LTA; value may include re-registrations, 2x LTA first-registration flagged for diagnosis"
+Singapore,SGP,LDV,Gasoline,2024,10163.259874124336,50816.29937062168,20.0,"LTA; value may include re-registrations, 2x LTA first-registration flagged for diagnosis"
+Singapore,SGP,LDV,HybridDiesel,2024,23883.66070419219,50816.29937062168,47.0,"LTA; value may include re-registrations, 2x LTA first-registration flagged for diagnosis"
+Singapore,SGP,LDV,NaturalGas,2024,0.0,50816.29937062168,0.0,"LTA; value may include re-registrations, 2x LTA first-registration flagged for diagnosis"
+Singapore,SGP,Truck,Electric,2024,0.0,16732.010974463075,0.0,LTA goods-vehicle PLACEHOLDER series (count=1 across 2006-2025); Tier C; data.gov.sg 2018+ extension queued
+Singapore,SGP,Truck,Gasoline,2024,836.6005487231538,16732.010974463075,5.0,LTA goods-vehicle PLACEHOLDER series (count=1 across 2006-2025); Tier C; data.gov.sg 2018+ extension queued
+Singapore,SGP,Truck,HybridDiesel,2024,15895.41042573992,16732.010974463075,95.0,LTA goods-vehicle PLACEHOLDER series (count=1 across 2006-2025); Tier C; data.gov.sg 2018+ extension queued
+Singapore,SGP,Truck,Hydrogen,2024,0.0,16732.010974463075,0.0,LTA goods-vehicle PLACEHOLDER series (count=1 across 2006-2025); Tier C; data.gov.sg 2018+ extension queued
+Singapore,SGP,Truck,NaturalGas,2024,0.0,16732.010974463075,0.0,LTA goods-vehicle PLACEHOLDER series (count=1 across 2006-2025); Tier C; data.gov.sg 2018+ extension queued
+Thailand,THA,2W,Electric,2024,34642.94643588634,2326145.0844240226,1.4892857142857143,FTI / DLT; fuel-mix historical depth 2018+ only; Tier A for recent years
+Thailand,THA,2W,Gasoline,2024,2291502.137988136,2326145.0844240226,98.51071428571429,FTI / DLT; fuel-mix historical depth 2018+ only; Tier A for recent years
+Thailand,THA,Bus,Electric,2024,4928.130278234517,19362.46862251376,25.451972960226374,FTI / DLT bus segment; Tier A for recent years
+Thailand,THA,Bus,Gasoline,2024,490.07348659404414,19362.46862251376,2.5310485772677254,FTI / DLT bus segment; Tier A for recent years
+Thailand,THA,Bus,HybridDiesel,2024,10754.221292774895,19362.46862251376,55.54158151234083,FTI / DLT bus segment; Tier A for recent years
+Thailand,THA,Bus,Hydrogen,2024,0.0,19362.46862251376,0.0,FTI / DLT bus segment; Tier A for recent years
+Thailand,THA,Bus,NaturalGas,2024,3190.0435649103,19362.46862251376,16.47539695016507,FTI / DLT bus segment; Tier A for recent years
+Thailand,THA,LDV,Electric,2024,146648.59729343696,1253462.4694778956,11.699480508141615,FTI / DLT; fuel-mix historical depth 2015+ only; Tier A for recent years
+Thailand,THA,LDV,Gasoline,2024,455013.3880559529,1253462.4694778956,36.30051949185838,FTI / DLT; fuel-mix historical depth 2015+ only; Tier A for recent years
+Thailand,THA,LDV,HybridDiesel,2024,651800.4841285058,1253462.4694778956,52.0,FTI / DLT; fuel-mix historical depth 2015+ only; Tier A for recent years
+Thailand,THA,LDV,NaturalGas,2024,0.0,1253462.4694778956,0.0,FTI / DLT; fuel-mix historical depth 2015+ only; Tier A for recent years
+Thailand,THA,Truck,Electric,2024,0.0,181398.6082824166,0.0,FTI / DLT truck segment; Tier A for recent years
+Thailand,THA,Truck,Gasoline,2024,1296.0999797888696,181398.6082824166,0.7145038167938931,FTI / DLT truck segment; Tier A for recent years
+Thailand,THA,Truck,HybridDiesel,2024,161037.6530443658,181398.6082824166,88.77557251908397,FTI / DLT truck segment; Tier A for recent years
+Thailand,THA,Truck,Hydrogen,2024,0.0,181398.6082824166,0.0,FTI / DLT truck segment; Tier A for recent years
+Thailand,THA,Truck,NaturalGas,2024,19064.855258261923,181398.6082824166,10.509923664122136,FTI / DLT truck segment; Tier A for recent years
+Viet Nam,VNM,2W,Electric,2024,508494.0035602501,6425444.034788117,7.913756633894921,VAMM; Tier A
+Viet Nam,VNM,2W,Gasoline,2024,5916950.031227867,6425444.034788117,92.08624336610508,VAMM; Tier A
+Viet Nam,VNM,Bus,Electric,2024,0.0,20665.29749982408,0.0,VAMA bus segment; Tier B
+Viet Nam,VNM,Bus,Gasoline,2024,0.0,20665.29749982408,0.0,VAMA bus segment; Tier B
+Viet Nam,VNM,Bus,HybridDiesel,2024,14466.439247312295,20665.29749982408,70.00353731871242,VAMA bus segment; Tier B
+Viet Nam,VNM,Bus,Hydrogen,2024,0.0,20665.29749982408,0.0,VAMA bus segment; Tier B
+Viet Nam,VNM,Bus,NaturalGas,2024,6198.858252511787,20665.29749982408,29.996462681287586,VAMA bus segment; Tier B
+Viet Nam,VNM,LDV,Electric,2024,216590.97357386263,846447.4829323366,25.58823529411765,VAMA + VinFast + Hyundai Thanh Cong supplement (non-VAMA brands 2022-2024 merged); Tier A
+Viet Nam,VNM,LDV,Gasoline,2024,580065.4809506895,846447.4829323366,68.52941176470588,VAMA + VinFast + Hyundai Thanh Cong supplement (non-VAMA brands 2022-2024 merged); Tier A
+Viet Nam,VNM,LDV,HybridDiesel,2024,49791.02840778451,846447.4829323366,5.882352941176471,VAMA + VinFast + Hyundai Thanh Cong supplement (non-VAMA brands 2022-2024 merged); Tier A
+Viet Nam,VNM,LDV,NaturalGas,2024,0.0,846447.4829323366,0.0,VAMA + VinFast + Hyundai Thanh Cong supplement (non-VAMA brands 2022-2024 merged); Tier A
+Viet Nam,VNM,Truck,Electric,2024,0.0,197853.42085649143,0.0,VAMA truck segment; peer-AMS floor applied for undershoot years (v15); Tier B
+Viet Nam,VNM,Truck,Gasoline,2024,0.0,197853.42085649143,0.0,VAMA truck segment; peer-AMS floor applied for undershoot years (v15); Tier B
+Viet Nam,VNM,Truck,HybridDiesel,2024,197853.42085649143,197853.42085649143,100.0,VAMA truck segment; peer-AMS floor applied for undershoot years (v15); Tier B
+Viet Nam,VNM,Truck,Hydrogen,2024,0.0,197853.42085649143,0.0,VAMA truck segment; peer-AMS floor applied for undershoot years (v15); Tier B
+Viet Nam,VNM,Truck,NaturalGas,2024,0.0,197853.42085649143,0.0,VAMA truck segment; peer-AMS floor applied for undershoot years (v15); Tier B

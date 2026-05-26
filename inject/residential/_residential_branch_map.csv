@@ -1,0 +1,441 @@
+branch,branch_type,branch_type_label,n_variables,variable_index,variable,variable_id,unit,unit_attempted
+Demand\Residential\Projections\Lighting,1,Demand Category,22,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,5,End Year Penetration,1555,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,6,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,7,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,8,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,9,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,10,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,11,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,12,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,13,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,14,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,15,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,16,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,17,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,18,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,19,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,20,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,21,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting,1,Demand Category,22,22,Social Costs,5,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,5,BulbsPerHH,1543,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,6,LightingHours,1544,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,7,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,8,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,9,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,10,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,11,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,12,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,13,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,14,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,15,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,16,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,17,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,18,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,19,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,20,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,21,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,22,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting\Electricity,1,Demand Category,23,23,Social Costs,5,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,6,Bulb Wattage,1545,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,7,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,8,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,9,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,10,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,11,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,12,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,13,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,14,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,15,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,16,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,17,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,18,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,19,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,20,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,21,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,22,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,4,Demand Technology,23,23,Social Costs,5,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,6,Bulb Wattage,1545,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,7,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,8,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,9,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,10,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,11,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,12,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,13,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,14,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,15,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,16,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,17,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,18,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,19,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,20,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,21,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,22,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting\Electricity\CFL,4,Demand Technology,23,23,Social Costs,5,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,6,Bulb Wattage,1545,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,7,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,8,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,9,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,10,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,11,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,12,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,13,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,14,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,15,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,16,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,17,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,18,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,19,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,20,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,21,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,22,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,4,Demand Technology,23,23,Social Costs,5,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,6,Bulb Wattage,1545,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,7,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,8,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,9,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,10,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,11,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,12,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,13,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,14,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,15,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,16,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,17,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,18,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,19,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,20,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,21,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,22,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting\Electricity\Halogen,4,Demand Technology,23,23,Social Costs,5,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,6,Bulb Wattage,1545,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,7,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,8,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,9,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,10,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,11,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,12,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,13,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,14,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,15,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,16,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,17,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,18,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,19,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,20,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,21,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,22,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting\Electricity\LED,4,Demand Technology,23,23,Social Costs,5,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,5,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,6,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,7,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,8,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,9,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,10,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,11,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,12,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,13,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,14,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,15,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,16,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,17,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,18,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,19,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,20,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting\Other,1,Demand Category,21,21,Social Costs,5,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,6,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,7,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,8,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,9,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,10,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,11,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,12,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,13,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,14,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,15,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,16,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,17,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,18,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,19,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,20,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,21,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,4,Demand Technology,22,22,Social Costs,5,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,1,Demand Cost,776,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,3,Total Activity,1604,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,4,Activity Level,2027,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,6,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,7,Final Energy Demand,30,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,8,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,9,Demand Coproduction,33,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,10,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,11,Demand Devices,63,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,12,Investment Costs,103,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,13,Power Load Shape,78,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,14,Energy Load Shape,79,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,15,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,16,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,17,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,18,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,19,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,20,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,21,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,4,Demand Technology,22,22,Social Costs,5,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,1,Demand Cost,776,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,3,Total Activity,1604,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,4,Activity Level,2027,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,5,Useful Energy Intensity,318,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,6,Load Shape,2223,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,7,ACHH,1205,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,8,End Year Penetration,1555,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,9,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,10,Final Energy Demand,30,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,11,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,12,Demand Coproduction,33,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,13,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,14,Demand Devices,63,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,15,Investment Costs,103,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,16,Power Load Shape,78,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,17,Energy Load Shape,79,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,18,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,19,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,20,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,21,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,22,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,23,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,24,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Air Conditioning,1,Demand Category,25,25,Social Costs,5,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,1,Demand Cost,776,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,3,Total Activity,1604,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,4,Efficiency,2039,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,5,Activity Level,2027,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,6,ACHH,1205,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,7,!EER,1546,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,8,Uncalibrated Final Intensity,1554,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,9,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,10,Final Energy Demand,30,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,11,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,12,Demand Coproduction,33,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,13,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,14,Demand Devices,63,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,15,Investment Costs,103,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,16,Power Load Shape,78,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,17,Energy Load Shape,79,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,18,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,19,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,20,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,21,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,22,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,23,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,24,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,4,Demand Technology,25,25,Social Costs,5,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,1,Demand Cost,776,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,3,Total Activity,1604,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,4,Efficiency,2039,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,5,Activity Level,2027,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,6,ACHH,1205,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,7,!EER,1546,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,8,Uncalibrated Final Intensity,1554,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,9,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,10,Final Energy Demand,30,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,11,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,12,Demand Coproduction,33,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,13,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,14,Demand Devices,63,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,15,Investment Costs,103,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,16,Power Load Shape,78,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,17,Energy Load Shape,79,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,18,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,19,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,20,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,21,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,22,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,23,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,24,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,4,Demand Technology,25,25,Social Costs,5,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,1,Demand Cost,776,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,3,Total Activity,1604,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,4,Efficiency,2039,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,5,Activity Level,2027,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,6,ACHH,1205,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,7,!EER,1546,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,8,Uncalibrated Final Intensity,1554,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,9,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,10,Final Energy Demand,30,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,11,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,12,Demand Coproduction,33,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,13,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,14,Demand Devices,63,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,15,Investment Costs,103,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,16,Power Load Shape,78,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,17,Energy Load Shape,79,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,18,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,19,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,20,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,21,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,22,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,23,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,24,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Air Conditioning\Efficient,4,Demand Technology,25,25,Social Costs,5,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,1,Demand Cost,776,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,3,Total Activity,1604,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,4,Efficiency,2039,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,5,Activity Level,2027,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,6,ACHH,1205,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,7,!EER,1546,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,8,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,9,Final Energy Demand,30,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,10,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,11,Demand Coproduction,33,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,12,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,13,Demand Devices,63,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,14,Investment Costs,103,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,15,Power Load Shape,78,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,16,Energy Load Shape,79,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,17,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,18,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,19,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,20,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,21,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,22,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,23,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Air Conditioning\Best Practice,4,Demand Technology,24,24,Social Costs,5,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,1,Demand Cost,776,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,3,Total Activity,1604,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,4,Activity Level,2027,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,5,End Year Penetration,1555,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,6,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,7,Final Energy Demand,30,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,8,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,9,Demand Coproduction,33,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,10,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,11,Demand Devices,63,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,12,Investment Costs,103,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,13,Power Load Shape,78,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,14,Energy Load Shape,79,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,15,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,16,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,17,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,18,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,19,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,20,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,21,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Refrigeration,1,Demand Category,22,22,Social Costs,5,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,1,Demand Cost,776,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,3,Total Activity,1604,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,4,Activity Level,2027,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,6,Uncalibrated Final Intensity,1554,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,7,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,8,Final Energy Demand,30,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,9,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,10,Demand Coproduction,33,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,11,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,12,Demand Devices,63,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,13,Investment Costs,103,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,14,Power Load Shape,78,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,15,Energy Load Shape,79,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,16,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,17,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,18,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,19,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,20,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,21,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,22,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Refrigeration\High,4,Demand Technology,23,23,Social Costs,5,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,1,Demand Cost,776,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,3,Total Activity,1604,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,4,Activity Level,2027,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,6,Uncalibrated Final Intensity,1554,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,7,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,8,Final Energy Demand,30,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,9,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,10,Demand Coproduction,33,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,11,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,12,Demand Devices,63,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,13,Investment Costs,103,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,14,Power Load Shape,78,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,15,Energy Load Shape,79,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,16,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,17,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,18,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,19,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,20,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,21,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,22,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Refrigeration\Medium,4,Demand Technology,23,23,Social Costs,5,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,1,Demand Cost,776,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,2,Total Final Energy Consumption,1669,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,3,Total Activity,1604,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,4,Activity Level,2027,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,5,Final Energy Intensity,2040,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,6,Uncalibrated Final Intensity,1554,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,7,Share_of_Industry,1569,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,8,Final Energy Demand,30,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,9,Useful Energy Demand,31,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,10,Demand Coproduction,33,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,11,Primary Energy Requirements Allocated to Demands,35,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,12,Demand Devices,63,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,13,Investment Costs,103,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,14,Power Load Shape,78,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,15,Energy Load Shape,79,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,16,One_Hundred Year GWP Direct and Indirect Allocated to Demands,104,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,17,One_Hundred Year GWP Indirect Allocated to Demands,105,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,18,Gross Energy Consumption,125,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,19,One_Hundred Year GWP Direct At Point of Emissions,41,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,20,Twenty Year GWP Direct At Point of Emissions,20,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,21,Five_Hundred Year GWP Direct At Point of Emissions,21,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,22,Pollutant Loadings,40,,False
+Demand\Residential\Projections\Refrigeration\Low,4,Demand Technology,23,23,Social Costs,5,,False

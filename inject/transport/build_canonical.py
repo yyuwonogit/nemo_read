@@ -145,7 +145,7 @@ KA_SALES_SHARE_FUELS_PER_VEHICLE = {
 
 
 HERE = Path(__file__).parent
-INPUT_DIR = HERE / "20260519"
+INPUT_DIR = HERE / "20260521"
 OUTPUT_CSV = HERE / "canonical_leap_inputs.csv"
 
 

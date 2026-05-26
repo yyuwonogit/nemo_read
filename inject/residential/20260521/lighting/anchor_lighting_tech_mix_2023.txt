@@ -1,0 +1,124 @@
+METHOD SIDECAR — anchor_lighting_tech_mix_2023.py
+==================================================
+Per-AMS 2023 residential-lighting technology-mix anchor for the LEAP
+electricity-lighting five-technology tree (LEAP-tree remap, 2026-05-20).
+
+Output: Outputs/lighting_tech_mix_2023.csv (10 rows, ASEAN-10).
+
+
+1. WHY THIS ARTEFACT EXISTS
+---------------------------
+The LEAP Lighting sub-tree (Demand\Residential\Projections\Lighting\
+Electricity\<Tech>) is authored as a FIVE-technology stack:
+Incandescent, CFL, Fluorescent, Halogen, LED. Each tech leaf carries an
+`Activity Level` = the % of grid-lit households using that technology;
+the five shares sum to ~100% per (region, year). LEAP then derives
+`Final Energy Intensity` itself from BulbsPerHH x Bulb Wattage x
+LightingHours (ref: .mailbox/LIGHTING_TEAM_HANDOVER_20260520.md §2-§4).
+
+Our upstream catalogue (Raw/lighting_catalogue_v1.csv) is LED-only
+(LED_L / LED_T / LED_SL ~ 99% of rows) classified into efficacy bands.
+It can describe the efficacy distribution WITHIN LED but cannot, on its
+own, produce a five-technology penetration split. The base-year mix is
+therefore an EXTERNAL input, encoded declaratively in this script and
+evolved by build_lighting_tech_shares.py.
+
+
+2. DATA SOURCES (triangulation, descending priority)
+----------------------------------------------------
+1. UNEP U4E — ASEAN Regional Lighting Market Assessment.
+   - 2020 edition live; 2026 refresh pending (user flagged 2026-04-22).
+   - Primary technology-penetration source (lamp-stock shares).
+   - URL: https://united4efficiency.org/resources/  (ASEAN regional
+     lighting assessment under U4E country/regional assessments).
+2. IEA — Southeast Asia Energy Outlook 2022.
+   - Directional sanity: region-wide LED scale-up narrative.
+   - URL: https://www.iea.org/reports/southeast-asia-energy-outlook-2022
+3. AEO-8 (ASEAN Energy Outlook 8th Edition, ACE 2023) + ACE (2026)
+   lighting product compilation.
+   - Sanity ballpark for LED dominance; the ACE 2026 *supply* base is
+     LED-dominant (the residential catalogue this sector ingests).
+   - URL: https://aseanenergy.org/publications/the-7th-asean-energy-outlook/
+     (AEO-8 successor index; replace with AEO-8 direct link on file).
+
+Per-AMS national-statistics secondaries used as plausibility checks
+(same set as the kWh/HH anchor, anchor_lighting_intensity_2023.txt):
+PLN (IDN), Suruhanjaya Tenaga / ST (MYS), EGAT / DEDE (THA), EMA (SGP),
+DOE LEEP (PHL), EVN (VNM), EdC (KHM), EDL (LAO), DoS (MMR).
+
+
+3. METHOD
+---------
+Declarative: per-AMS five-technology base-year shares (fractions, sum
+to 1.0) encoded in the TECH_MIX dict. No computation from the catalogue
+— the catalogue cannot yield non-LED shares.
+
+Mix logic (income / urbanisation gradient):
+- LED is the single largest share in every AMS (LED-dominant supply
+  base since ~2020).
+- Richer / more-urbanised AMS sit higher on the LED-adoption S-curve:
+  SGP 80% > BRN 72% > MYS 65% > THA 62% > VNM 55% = PHL 55% >
+  IDN 52% > KHM 45% > LAO 42% > MMR 40%.
+- Residual non-LED stock is CFL + linear fluorescent (T8 tubes,
+  historically dominant in kitchens / corridors), with a small
+  declining incandescent tail and a small halogen share (directional
+  spots; never large in residential ASEAN).
+
+Every row: source_tier = "triangulated-placeholder", refresh_needed =
+True. These are defensible placeholders bracketed by the three sources,
+NOT survey-direct values. The U4E-2026 refresh is a values-only update
+(swap shares + source_primary, flip refresh_needed; no schema change).
+
+
+4. KEY ASSUMPTIONS
+------------------
+- LED-dominant base: consistent with DESIGN.md §5.1 (the residential
+  product-supply base is already LED-dominant by 2025).
+- Halogen small everywhere (2-4%): residential ASEAN uses little
+  halogen; mostly directional / decorative.
+- Population-weighted for heterogeneous AMS (esp. IDN: urban LED
+  majority, rural retains more CFL / incandescent).
+- MMR on a pre-2021 baseline; post-2021 disruption not reflected
+  (widest uncertainty; mirrors the kWh/HH anchor caveat).
+
+
+5. VALIDATION REGIME (hard-fail unless noted)
+---------------------------------------------
+- Required columns present.
+- ASEAN-10 exact coverage (no extra, none missing).
+- Five shares sum to 1.0 per AMS (|sum-1| < 1e-9).
+- Each share in [0, 1].
+- LED is the single largest share per AMS (mix design rule).
+- source_tier in {U4E-direct, U4E-interpolated, triangulated-placeholder}.
+- refresh_needed non-null bool.
+- Non-empty source_primary per row.
+
+Cross-checked downstream by Residential/Lighting/_sanity.py Level 6
+(tech_mix:*).
+
+
+6. RUN SUMMARY (2026-05-20)
+---------------------------
+Saved lighting_tech_mix_2023.csv (10 rows).
+LED share: min 40% (Myanmar) -> max 80% (Singapore).
+refresh_needed = True on 10/10 rows (U4E-2026 pending).
+
+
+7. REFRESH PROCEDURE (when U4E-2026 lands)
+------------------------------------------
+1. Replace the per-AMS share_* values in TECH_MIX with the U4E-2026
+   penetration numbers.
+2. Update source_primary to cite the 2026 edition; set source_tier to
+   "U4E-direct" (or "U4E-interpolated" for interpolated AMS).
+3. Flip refresh_needed to False per refreshed AMS.
+4. Re-run anchor -> build_lighting_tech_shares -> _sanity.
+5. Commit as a tech-mix v2 update (values-only; no schema change).
+
+
+8. REFERENCES
+-------------
+- LIGHTING_TEAM_HANDOVER_20260520.md (LEAP branch taxonomy + §4 spec).
+- Residential/DESIGN.md §5 (Lighting subsector methodology).
+- Residential/Lighting/anchor_lighting_intensity_2023.txt (sibling
+  kWh/HH anchor; shares the U4E/IEA/AEO-8 triangulation hierarchy).
+- 00Guide/ref_curves.py (blend_shares; used by the trajectory builder).

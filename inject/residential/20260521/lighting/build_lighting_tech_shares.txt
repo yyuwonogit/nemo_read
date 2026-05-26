@@ -1,0 +1,104 @@
+METHOD SIDECAR — build_lighting_tech_shares.py
+==============================================
+Per-AMS x year x scenario residential-lighting technology-share
+trajectory (2025-2060) for the LEAP electricity-lighting tree.
+
+Output: ../LEAP Input/lighting_tech_shares.csv
+  long format: Country, Year, Scenario, Tech, share_percent, source
+  10 AMS x 36 yr (2025-2060) x 3 scenarios x 5 techs = 5,400 rows.
+
+
+1. WHAT THE INJECT TEAM RECEIVES
+--------------------------------
+The five LEAP tech leaves (Demand\Residential\Projections\Lighting\
+Electricity\{Incandescent, CFL, Fluorescent, Halogen, LED}) each take an
+`Activity Level` = % of grid-lit households on that technology. This CSV
+supplies that share per (AMS, year, scenario). The five Tech rows for a
+given (Country, Year, Scenario) sum to 100.
+
+Drop-shape mapping (handover §4.3): this file = `lighting_tech_shares.csv`
+in the team's `inject/residential/<YYYYMMDD>/lighting/` folder. We add a
+`Scenario` column (BAS/ATS/RAS) the handover skeleton omits, matching the
+AC/Fridge inject convention; the team filters by Scenario per LEAP run.
+
+This SUPERSEDES lighting_kwh_hh.csv for LEAP ingestion: LEAP computes
+Final Energy Intensity itself (it is a LEAP formula) from the tech mix +
+BulbsPerHH + Bulb Wattage + LightingHours. The kWh/HH pipeline is kept
+as an internal efficacy-mix diagnostic, not a paste target.
+
+
+2. DATA SOURCE
+--------------
+- Outputs/lighting_tech_mix_2023.csv — per-AMS base-year five-technology
+  mix (from anchor_lighting_tech_mix_2023.py; U4E-triangulated
+  placeholder, refresh pending). See anchor_lighting_tech_mix_2023.txt
+  for the technology-penetration sourcing.
+
+
+3. METHOD
+---------
+For each AMS, blend the base-year mix toward the scenario target with
+blend_shares() from 00Guide/ref_curves.py (NEVER re-implemented locally;
+shares auto-normalise to 1.0 at every timestep).
+
+Target at convergence = 100% LED ({LED: 1.0, all others: 0.0}).
+
+Scenario windows (mirror the Lighting kWh/HH trajectory §2.2 lock; the
+target differs — 100% LED here vs 100% High_eff there — but the curve
+windows are identical so the BAS/ATS/RAS story stays consistent across
+the two Lighting deliverables):
+  - BAS — target == base mix => frozen 2023 mix across the horizon.
+  - ATS — logistic_transition(2025, 2040, steepness 0.30); frozen at
+    100% LED after 2040.
+  - RAS — logistic_transition(2025, 2035, steepness 0.35); 5 yr earlier
+    convergence. CSV scenario string is plain "RAS" per DESIGN.md §2.2.
+
+share_percent = blended fraction x 100, rounded to 4 dp.
+
+
+4. KEY ASSUMPTIONS
+------------------
+- Single-lever architecture (DESIGN.md §2.2): RAS-vs-ATS divergence is
+  the LED-transition acceleration only. No BulbsPerHH or LightingHours
+  change (those stay at LEAP defaults this pass per user direction
+  2026-05-20 + handover open Q1/Q2). The clean BAS->ATS->RAS gap reads
+  as a pure technology-switch story.
+- 100% LED is the realistic ceiling for all scenarios by horizon end
+  (incandescent / CFL / fluorescent / halogen are phased out of supply).
+- Linear blend preserves sum-to-1 because base and target each sum to 1;
+  blend_shares normalisation is then a no-op (verified by sum-to-100).
+
+
+5. VALIDATION REGIME
+--------------------
+HARD-FAIL:
+- Row count == 5,400.
+- ASEAN-10 / Year(2025-2060) / Scenario(BAS,ATS,RAS) / Tech(5) coverage.
+- share_percent in [0, 100].
+- Tech shares sum to 100 per (Country, Year, Scenario) (|sum-100|<1e-3).
+- BAS frozen == base mix for every (Country, Tech, Year).
+WARN (non-blocking):
+- LED monotone non-decreasing under ATS / RAS per AMS.
+- End-year LED saturation: ATS@2040 / RAS@2035 LED >= 99.9%.
+- BAS LED <= ATS LED <= RAS LED per (Country, Year).
+
+Cross-checked by Residential/Lighting/_sanity.py Level 7 (tech_shares:*).
+
+
+6. RUN SUMMARY (2026-05-20)
+---------------------------
+Saved lighting_tech_shares.csv (5,400 rows, no WARN).
+ASEAN-mean LED share by scenario:
+  2025: BAS 56.8 / ATS 56.8 / RAS 56.8
+  2035: BAS 56.8 / ATS 88.0 / RAS 100.0
+  2040: BAS 56.8 / ATS 100.0 / RAS 100.0
+  2060: BAS 56.8 / ATS 100.0 / RAS 100.0
+2025 base LED per AMS (BAS, frozen): MMR 40 .. SGP 80.
+
+
+7. REFERENCES
+-------------
+- LIGHTING_TEAM_HANDOVER_20260520.md §1-§4 (LEAP tree + inject spec).
+- Residential/DESIGN.md §2.2 (RAS naming/window lock), §5 (Lighting).
+- 00Guide/ref_curves.py (blend_shares / logistic_transition).
+- anchor_lighting_tech_mix_2023.txt (base-year mix sourcing).
