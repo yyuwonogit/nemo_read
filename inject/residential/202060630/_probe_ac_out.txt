@@ -1,0 +1,113 @@
+ActiveArea: 'aeo9_v0.64' | ActiveScenario: 'Regional Aspiration Scenario'
+set scenario -> 'Regional Aspiration Scenario'
+Branches.Count = 10161  (collecting FullNames, ~1-3 min)...
+collected 10161 fullnames
+
+=== Demand AC branches ===
+   Demand\Residential\Projections\Air Conditioning
+   Demand\Residential\Projections\Air Conditioning\Best Practice
+   Demand\Residential\Projections\Air Conditioning\Current_Sales Average
+   Demand\Residential\Projections\Air Conditioning\Current_Stock Average
+   Demand\Residential\Projections\Air Conditioning\Efficient
+   Demand\Residential\Projections\Air Conditioning_
+   Demand\Residential\Projections\Air Conditioning_\Large
+   Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+   Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+   Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+   Demand\Residential\Projections\Air Conditioning_\Medium
+   Demand\Residential\Projections\Air Conditioning_\Medium\High_eff
+   Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff
+   Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff
+   Demand\Residential\Projections\Air Conditioning_\Small
+   Demand\Residential\Projections\Air Conditioning_\Small\High_eff
+   Demand\Residential\Projections\Air Conditioning_\Small\Low_eff
+   Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff
+   Demand\Residential\Projections\Water Heating\Heat Pump Outside Air
+
+=== Key AC branches ===
+   Key\Residential\Air Conditioning
+   Key\Residential\Air Conditioning\Efficiency_Share
+   Key\Residential\Air Conditioning\Efficiency_Share\Large_High
+   Key\Residential\Air Conditioning\Efficiency_Share\Large_Low
+   Key\Residential\Air Conditioning\Efficiency_Share\Large_Mid
+   Key\Residential\Air Conditioning\Efficiency_Share\Medium_High
+   Key\Residential\Air Conditioning\Efficiency_Share\Medium_Low
+   Key\Residential\Air Conditioning\Efficiency_Share\Medium_Mid
+   Key\Residential\Air Conditioning\Efficiency_Share\Small_High
+   Key\Residential\Air Conditioning\Efficiency_Share\Small_Low
+   Key\Residential\Air Conditioning\Efficiency_Share\Small_Mid
+   Key\Residential\Air Conditioning\Percent Ownership
+   Key\Residential\Air Conditioning\Size_Share
+   Key\Residential\Air Conditioning\Size_Share\Large
+   Key\Residential\Air Conditioning\Size_Share\Medium
+   Key\Residential\Air Conditioning\Size_Share\Small
+   Key\Residential\Air Conditioning\Useful_EI
+   Key\Residential\Air Conditioning\Useful_EI\Large
+   Key\Residential\Air Conditioning\Useful_EI\Medium
+   Key\Residential\Air Conditioning\Useful_EI\Small
+
+=== AC leaf variables (names only): Demand\Residential\Projections\Air Conditioning_\Large\High_eff ===
+   1: 'Minimum Share'
+   2: 'Lifetime'
+   3: 'Interest Rate'
+   4: 'Exogenous Devices'
+   5: 'Minimum Device Additions'
+   6: 'Minimum Utilization'
+   7: 'Maximum Availability'
+   8: 'Maximum Device Additions'
+   9: 'Minimum Devices'
+  10: 'Maximum Devices'
+  11: 'Unit Capacity'
+  12: 'Capital Cost'
+  13: 'Variable OM Cost'
+  14: 'Fixed OM Cost'
+  15: 'Total Final Energy Consumption'
+  16: 'Total Activity'
+  17: 'Efficiency'
+  18: 'Activity Level'
+  19: 'RefHH'
+  20: 'Final Energy Demand'
+  21: 'Useful Energy Demand'
+  22: 'Demand Coproduction'
+  23: 'Primary Energy Requirements Allocated to Demands'
+  24: 'Demand Devices'
+  25: 'Investment Costs'
+  26: 'Power Load Shape'
+  27: 'Energy Load Shape'
+  28: 'One_Hundred Year GWP Direct and Indirect Allocated to Demands'
+  29: 'One_Hundred Year GWP Indirect Allocated to Demands'
+  30: 'Gross Energy Consumption'
+  31: 'One_Hundred Year GWP Direct At Point of Emissions'
+  32: 'Twenty Year GWP Direct At Point of Emissions'
+  33: 'Five_Hundred Year GWP Direct At Point of Emissions'
+  34: 'Pollutant Loadings'
+  35: 'Social Costs'
+
+=== AC parent variables (names only): Demand\Residential\Projections\Air Conditioning ===
+   1: 'Demand Cost'
+   2: 'Total Final Energy Consumption'
+   3: 'Total Activity'
+   4: 'Activity Level'
+   5: 'Useful Energy Intensity'
+   6: 'Load Shape'
+   7: 'ACHH'
+   8: 'RefHH'
+   9: 'End Year Penetration'
+  10: 'Final Energy Demand'
+  11: 'Useful Energy Demand'
+  12: 'Demand Coproduction'
+  13: 'Primary Energy Requirements Allocated to Demands'
+  14: 'Demand Devices'
+  15: 'Investment Costs'
+  16: 'Power Load Shape'
+  17: 'Energy Load Shape'
+  18: 'One_Hundred Year GWP Direct and Indirect Allocated to Demands'
+  19: 'One_Hundred Year GWP Indirect Allocated to Demands'
+  20: 'Gross Energy Consumption'
+  21: 'One_Hundred Year GWP Direct At Point of Emissions'
+  22: 'Twenty Year GWP Direct At Point of Emissions'
+  23: 'Five_Hundred Year GWP Direct At Point of Emissions'
+  24: 'Pollutant Loadings'
+  25: 'Social Costs'
+
+=== probe done ===

@@ -1,0 +1,5041 @@
+Country,Year,Size_group,Efficiency_level,device_thousand
+Brunei Darussalam,2005,Large,High_eff,37.0969
+Brunei Darussalam,2006,Large,High_eff,37.713
+Brunei Darussalam,2007,Large,High_eff,38.3139
+Brunei Darussalam,2008,Large,High_eff,38.9026
+Brunei Darussalam,2009,Large,High_eff,39.4832
+Brunei Darussalam,2010,Large,High_eff,40.0639
+Brunei Darussalam,2011,Large,High_eff,40.6162
+Brunei Darussalam,2012,Large,High_eff,41.1342
+Brunei Darussalam,2013,Large,High_eff,41.647
+Brunei Darussalam,2014,Large,High_eff,42.1488
+Brunei Darussalam,2015,Large,High_eff,42.2679
+Brunei Darussalam,2016,Large,High_eff,42.1718
+Brunei Darussalam,2017,Large,High_eff,42.5965
+Brunei Darussalam,2018,Large,High_eff,42.8038
+Brunei Darussalam,2019,Large,High_eff,43.7445
+Brunei Darussalam,2020,Large,High_eff,44.1119
+Brunei Darussalam,2021,Large,High_eff,44.0904
+Brunei Darussalam,2022,Large,High_eff,43.8674
+Brunei Darussalam,2023,Large,High_eff,44.407
+Brunei Darussalam,2024,Large,High_eff,45.3259
+Brunei Darussalam,2025,Large,High_eff,46.04
+Brunei Darussalam,2026,Large,High_eff,43.2197
+Brunei Darussalam,2027,Large,High_eff,40.3796
+Brunei Darussalam,2028,Large,High_eff,37.5252
+Brunei Darussalam,2029,Large,High_eff,34.6652
+Brunei Darussalam,2030,Large,High_eff,31.8115
+Brunei Darussalam,2031,Large,High_eff,28.9791
+Brunei Darussalam,2032,Large,High_eff,26.1853
+Brunei Darussalam,2033,Large,High_eff,23.4503
+Brunei Darussalam,2034,Large,High_eff,20.7956
+Brunei Darussalam,2035,Large,High_eff,18.2443
+Brunei Darussalam,2036,Large,High_eff,15.8194
+Brunei Darussalam,2037,Large,High_eff,13.543
+Brunei Darussalam,2038,Large,High_eff,11.4352
+Brunei Darussalam,2039,Large,High_eff,9.5125
+Brunei Darussalam,2040,Large,High_eff,7.7872
+Brunei Darussalam,2041,Large,High_eff,6.266
+Brunei Darussalam,2042,Large,High_eff,4.9502
+Brunei Darussalam,2043,Large,High_eff,3.8348
+Brunei Darussalam,2044,Large,High_eff,2.9095
+Brunei Darussalam,2045,Large,High_eff,2.1593
+Brunei Darussalam,2046,Large,High_eff,1.5656
+Brunei Darussalam,2047,Large,High_eff,1.1075
+Brunei Darussalam,2048,Large,High_eff,0.7635
+Brunei Darussalam,2049,Large,High_eff,0.5122
+Brunei Darussalam,2050,Large,High_eff,0.3339
+Brunei Darussalam,2051,Large,High_eff,0.2113
+Brunei Darussalam,2052,Large,High_eff,0.1297
+Brunei Darussalam,2053,Large,High_eff,0.077
+Brunei Darussalam,2054,Large,High_eff,0.0442
+Brunei Darussalam,2055,Large,High_eff,0.0245
+Brunei Darussalam,2056,Large,High_eff,0.0131
+Brunei Darussalam,2057,Large,High_eff,0.0067
+Brunei Darussalam,2058,Large,High_eff,0.0033
+Brunei Darussalam,2059,Large,High_eff,0.0016
+Brunei Darussalam,2060,Large,High_eff,0.0007
+Brunei Darussalam,2005,Large,Low_eff,27.1781
+Brunei Darussalam,2006,Large,Low_eff,27.6294
+Brunei Darussalam,2007,Large,Low_eff,28.0696
+Brunei Darussalam,2008,Large,Low_eff,28.501
+Brunei Darussalam,2009,Large,Low_eff,28.9264
+Brunei Darussalam,2010,Large,Low_eff,29.3518
+Brunei Darussalam,2011,Large,Low_eff,29.7564
+Brunei Darussalam,2012,Large,Low_eff,30.1359
+Brunei Darussalam,2013,Large,Low_eff,30.5116
+Brunei Darussalam,2014,Large,Low_eff,30.8792
+Brunei Darussalam,2015,Large,Low_eff,30.9665
+Brunei Darussalam,2016,Large,Low_eff,30.8961
+Brunei Darussalam,2017,Large,Low_eff,31.2072
+Brunei Darussalam,2018,Large,Low_eff,31.3591
+Brunei Darussalam,2019,Large,Low_eff,32.0482
+Brunei Darussalam,2020,Large,Low_eff,32.3175
+Brunei Darussalam,2021,Large,Low_eff,32.3017
+Brunei Darussalam,2022,Large,Low_eff,32.1383
+Brunei Darussalam,2023,Large,Low_eff,32.5336
+Brunei Darussalam,2024,Large,Low_eff,33.2069
+Brunei Darussalam,2025,Large,Low_eff,33.73
+Brunei Darussalam,2026,Large,Low_eff,31.6638
+Brunei Darussalam,2027,Large,Low_eff,29.583
+Brunei Darussalam,2028,Large,Low_eff,27.4918
+Brunei Darussalam,2029,Large,Low_eff,25.3965
+Brunei Darussalam,2030,Large,Low_eff,23.3059
+Brunei Darussalam,2031,Large,Low_eff,21.2308
+Brunei Darussalam,2032,Large,Low_eff,19.184
+Brunei Darussalam,2033,Large,Low_eff,17.1802
+Brunei Darussalam,2034,Large,Low_eff,15.2354
+Brunei Darussalam,2035,Large,Low_eff,13.3662
+Brunei Darussalam,2036,Large,Low_eff,11.5897
+Brunei Darussalam,2037,Large,Low_eff,9.9219
+Brunei Darussalam,2038,Large,Low_eff,8.3777
+Brunei Darussalam,2039,Large,Low_eff,6.9691
+Brunei Darussalam,2040,Large,Low_eff,5.705
+Brunei Darussalam,2041,Large,Low_eff,4.5906
+Brunei Darussalam,2042,Large,Low_eff,3.6266
+Brunei Darussalam,2043,Large,Low_eff,2.8094
+Brunei Darussalam,2044,Large,Low_eff,2.1316
+Brunei Darussalam,2045,Large,Low_eff,1.5819
+Brunei Darussalam,2046,Large,Low_eff,1.147
+Brunei Darussalam,2047,Large,Low_eff,0.8114
+Brunei Darussalam,2048,Large,Low_eff,0.5593
+Brunei Darussalam,2049,Large,Low_eff,0.3752
+Brunei Darussalam,2050,Large,Low_eff,0.2447
+Brunei Darussalam,2051,Large,Low_eff,0.1548
+Brunei Darussalam,2052,Large,Low_eff,0.095
+Brunei Darussalam,2053,Large,Low_eff,0.0564
+Brunei Darussalam,2054,Large,Low_eff,0.0324
+Brunei Darussalam,2055,Large,Low_eff,0.018
+Brunei Darussalam,2056,Large,Low_eff,0.0096
+Brunei Darussalam,2057,Large,Low_eff,0.0049
+Brunei Darussalam,2058,Large,Low_eff,0.0024
+Brunei Darussalam,2059,Large,Low_eff,0.0012
+Brunei Darussalam,2060,Large,Low_eff,0.0005
+Brunei Darussalam,2005,Large,Mid_eff,38.8373
+Brunei Darussalam,2006,Large,Mid_eff,39.4823
+Brunei Darussalam,2007,Large,Mid_eff,40.1114
+Brunei Darussalam,2008,Large,Mid_eff,40.7277
+Brunei Darussalam,2009,Large,Mid_eff,41.3356
+Brunei Darussalam,2010,Large,Mid_eff,41.9435
+Brunei Darussalam,2011,Large,Mid_eff,42.5218
+Brunei Darussalam,2012,Large,Mid_eff,43.064
+Brunei Darussalam,2013,Large,Mid_eff,43.6009
+Brunei Darussalam,2014,Large,Mid_eff,44.1262
+Brunei Darussalam,2015,Large,Mid_eff,44.251
+Brunei Darussalam,2016,Large,Mid_eff,44.1503
+Brunei Darussalam,2017,Large,Mid_eff,44.595
+Brunei Darussalam,2018,Large,Mid_eff,44.8119
+Brunei Darussalam,2019,Large,Mid_eff,45.7968
+Brunei Darussalam,2020,Large,Mid_eff,46.1815
+Brunei Darussalam,2021,Large,Mid_eff,46.1589
+Brunei Darussalam,2022,Large,Mid_eff,45.9255
+Brunei Darussalam,2023,Large,Mid_eff,46.4903
+Brunei Darussalam,2024,Large,Mid_eff,47.4524
+Brunei Darussalam,2025,Large,Mid_eff,48.2
+Brunei Darussalam,2026,Large,Mid_eff,45.2474
+Brunei Darussalam,2027,Large,Mid_eff,42.274
+Brunei Darussalam,2028,Large,Mid_eff,39.2857
+Brunei Darussalam,2029,Large,Mid_eff,36.2915
+Brunei Darussalam,2030,Large,Mid_eff,33.304
+Brunei Darussalam,2031,Large,Mid_eff,30.3386
+Brunei Darussalam,2032,Large,Mid_eff,27.4138
+Brunei Darussalam,2033,Large,Mid_eff,24.5504
+Brunei Darussalam,2034,Large,Mid_eff,21.7713
+Brunei Darussalam,2035,Large,Mid_eff,19.1003
+Brunei Darussalam,2036,Large,Mid_eff,16.5616
+Brunei Darussalam,2037,Large,Mid_eff,14.1784
+Brunei Darussalam,2038,Large,Mid_eff,11.9717
+Brunei Darussalam,2039,Large,Mid_eff,9.9588
+Brunei Darussalam,2040,Large,Mid_eff,8.1525
+Brunei Darussalam,2041,Large,Mid_eff,6.56
+Brunei Darussalam,2042,Large,Mid_eff,5.1824
+Brunei Darussalam,2043,Large,Mid_eff,4.0147
+Brunei Darussalam,2044,Large,Mid_eff,3.046
+Brunei Darussalam,2045,Large,Mid_eff,2.2606
+Brunei Darussalam,2046,Large,Mid_eff,1.639
+Brunei Darussalam,2047,Large,Mid_eff,1.1595
+Brunei Darussalam,2048,Large,Mid_eff,0.7993
+Brunei Darussalam,2049,Large,Mid_eff,0.5362
+Brunei Darussalam,2050,Large,Mid_eff,0.3496
+Brunei Darussalam,2051,Large,Mid_eff,0.2213
+Brunei Darussalam,2052,Large,Mid_eff,0.1357
+Brunei Darussalam,2053,Large,Mid_eff,0.0806
+Brunei Darussalam,2054,Large,Mid_eff,0.0463
+Brunei Darussalam,2055,Large,Mid_eff,0.0257
+Brunei Darussalam,2056,Large,Mid_eff,0.0137
+Brunei Darussalam,2057,Large,Mid_eff,0.0071
+Brunei Darussalam,2058,Large,Mid_eff,0.0035
+Brunei Darussalam,2059,Large,Mid_eff,0.0017
+Brunei Darussalam,2060,Large,Mid_eff,0.0008
+Brunei Darussalam,2005,Medium,High_eff,15.5108
+Brunei Darussalam,2006,Medium,High_eff,15.7683
+Brunei Darussalam,2007,Medium,High_eff,16.0196
+Brunei Darussalam,2008,Medium,High_eff,16.2657
+Brunei Darussalam,2009,Medium,High_eff,16.5085
+Brunei Darussalam,2010,Medium,High_eff,16.7513
+Brunei Darussalam,2011,Medium,High_eff,16.9822
+Brunei Darussalam,2012,Medium,High_eff,17.1988
+Brunei Darussalam,2013,Medium,High_eff,17.4132
+Brunei Darussalam,2014,Medium,High_eff,17.623
+Brunei Darussalam,2015,Medium,High_eff,17.6728
+Brunei Darussalam,2016,Medium,High_eff,17.6327
+Brunei Darussalam,2017,Medium,High_eff,17.8102
+Brunei Darussalam,2018,Medium,High_eff,17.8969
+Brunei Darussalam,2019,Medium,High_eff,18.2902
+Brunei Darussalam,2020,Medium,High_eff,18.4439
+Brunei Darussalam,2021,Medium,High_eff,18.4348
+Brunei Darussalam,2022,Medium,High_eff,18.3416
+Brunei Darussalam,2023,Medium,High_eff,18.5672
+Brunei Darussalam,2024,Medium,High_eff,18.9514
+Brunei Darussalam,2025,Medium,High_eff,19.25
+Brunei Darussalam,2026,Medium,High_eff,18.0708
+Brunei Darussalam,2027,Medium,High_eff,16.8833
+Brunei Darussalam,2028,Medium,High_eff,15.6898
+Brunei Darussalam,2029,Medium,High_eff,14.494
+Brunei Darussalam,2030,Medium,High_eff,13.3009
+Brunei Darussalam,2031,Medium,High_eff,12.1166
+Brunei Darussalam,2032,Medium,High_eff,10.9485
+Brunei Darussalam,2033,Medium,High_eff,9.8049
+Brunei Darussalam,2034,Medium,High_eff,8.695
+Brunei Darussalam,2035,Medium,High_eff,7.6282
+Brunei Darussalam,2036,Medium,High_eff,6.6143
+Brunei Darussalam,2037,Medium,High_eff,5.6625
+Brunei Darussalam,2038,Medium,High_eff,4.7812
+Brunei Darussalam,2039,Medium,High_eff,3.9773
+Brunei Darussalam,2040,Medium,High_eff,3.2559
+Brunei Darussalam,2041,Medium,High_eff,2.6199
+Brunei Darussalam,2042,Medium,High_eff,2.0697
+Brunei Darussalam,2043,Medium,High_eff,1.6034
+Brunei Darussalam,2044,Medium,High_eff,1.2165
+Brunei Darussalam,2045,Medium,High_eff,0.9028
+Brunei Darussalam,2046,Medium,High_eff,0.6546
+Brunei Darussalam,2047,Medium,High_eff,0.4631
+Brunei Darussalam,2048,Medium,High_eff,0.3192
+Brunei Darussalam,2049,Medium,High_eff,0.2141
+Brunei Darussalam,2050,Medium,High_eff,0.1396
+Brunei Darussalam,2051,Medium,High_eff,0.0884
+Brunei Darussalam,2052,Medium,High_eff,0.0542
+Brunei Darussalam,2053,Medium,High_eff,0.0322
+Brunei Darussalam,2054,Medium,High_eff,0.0185
+Brunei Darussalam,2055,Medium,High_eff,0.0102
+Brunei Darussalam,2056,Medium,High_eff,0.0055
+Brunei Darussalam,2057,Medium,High_eff,0.0028
+Brunei Darussalam,2058,Medium,High_eff,0.0014
+Brunei Darussalam,2059,Medium,High_eff,0.0007
+Brunei Darussalam,2060,Medium,High_eff,0.0003
+Brunei Darussalam,2005,Medium,Low_eff,20.2808
+Brunei Darussalam,2006,Medium,Low_eff,20.6176
+Brunei Darussalam,2007,Medium,Low_eff,20.9461
+Brunei Darussalam,2008,Medium,Low_eff,21.268
+Brunei Darussalam,2009,Medium,Low_eff,21.5854
+Brunei Darussalam,2010,Medium,Low_eff,21.9029
+Brunei Darussalam,2011,Medium,Low_eff,22.2048
+Brunei Darussalam,2012,Medium,Low_eff,22.488
+Brunei Darussalam,2013,Medium,Low_eff,22.7684
+Brunei Darussalam,2014,Medium,Low_eff,23.0427
+Brunei Darussalam,2015,Medium,Low_eff,23.1078
+Brunei Darussalam,2016,Medium,Low_eff,23.0553
+Brunei Darussalam,2017,Medium,Low_eff,23.2874
+Brunei Darussalam,2018,Medium,Low_eff,23.4008
+Brunei Darussalam,2019,Medium,Low_eff,23.915
+Brunei Darussalam,2020,Medium,Low_eff,24.1159
+Brunei Darussalam,2021,Medium,Low_eff,24.1041
+Brunei Darussalam,2022,Medium,Low_eff,23.9823
+Brunei Darussalam,2023,Medium,Low_eff,24.2772
+Brunei Darussalam,2024,Medium,Low_eff,24.7796
+Brunei Darussalam,2025,Medium,Low_eff,25.17
+Brunei Darussalam,2026,Medium,Low_eff,23.6281
+Brunei Darussalam,2027,Medium,Low_eff,22.0755
+Brunei Darussalam,2028,Medium,Low_eff,20.515
+Brunei Darussalam,2029,Medium,Low_eff,18.9514
+Brunei Darussalam,2030,Medium,Low_eff,17.3913
+Brunei Darussalam,2031,Medium,Low_eff,15.8428
+Brunei Darussalam,2032,Medium,Low_eff,14.3155
+Brunei Darussalam,2033,Medium,Low_eff,12.8202
+Brunei Darussalam,2034,Medium,Low_eff,11.3689
+Brunei Darussalam,2035,Medium,Low_eff,9.9741
+Brunei Darussalam,2036,Medium,Low_eff,8.6485
+Brunei Darussalam,2037,Medium,Low_eff,7.404
+Brunei Darussalam,2038,Medium,Low_eff,6.2516
+Brunei Darussalam,2039,Medium,Low_eff,5.2005
+Brunei Darussalam,2040,Medium,Low_eff,4.2572
+Brunei Darussalam,2041,Medium,Low_eff,3.4256
+Brunei Darussalam,2042,Medium,Low_eff,2.7063
+Brunei Darussalam,2043,Medium,Low_eff,2.0965
+Brunei Darussalam,2044,Medium,Low_eff,1.5906
+Brunei Darussalam,2045,Medium,Low_eff,1.1805
+Brunei Darussalam,2046,Medium,Low_eff,0.8559
+Brunei Darussalam,2047,Medium,Low_eff,0.6055
+Brunei Darussalam,2048,Medium,Low_eff,0.4174
+Brunei Darussalam,2049,Medium,Low_eff,0.28
+Brunei Darussalam,2050,Medium,Low_eff,0.1826
+Brunei Darussalam,2051,Medium,Low_eff,0.1155
+Brunei Darussalam,2052,Medium,Low_eff,0.0709
+Brunei Darussalam,2053,Medium,Low_eff,0.0421
+Brunei Darussalam,2054,Medium,Low_eff,0.0242
+Brunei Darussalam,2055,Medium,Low_eff,0.0134
+Brunei Darussalam,2056,Medium,Low_eff,0.0072
+Brunei Darussalam,2057,Medium,Low_eff,0.0037
+Brunei Darussalam,2058,Medium,Low_eff,0.0018
+Brunei Darussalam,2059,Medium,Low_eff,0.0009
+Brunei Darussalam,2060,Medium,Low_eff,0.0004
+Brunei Darussalam,2005,Medium,Mid_eff,15.7686
+Brunei Darussalam,2006,Medium,Mid_eff,16.0305
+Brunei Darussalam,2007,Medium,Mid_eff,16.2859
+Brunei Darussalam,2008,Medium,Mid_eff,16.5361
+Brunei Darussalam,2009,Medium,Mid_eff,16.783
+Brunei Darussalam,2010,Medium,Mid_eff,17.0298
+Brunei Darussalam,2011,Medium,Mid_eff,17.2645
+Brunei Darussalam,2012,Medium,Mid_eff,17.4847
+Brunei Darussalam,2013,Medium,Mid_eff,17.7027
+Brunei Darussalam,2014,Medium,Mid_eff,17.916
+Brunei Darussalam,2015,Medium,Mid_eff,17.9666
+Brunei Darussalam,2016,Medium,Mid_eff,17.9258
+Brunei Darussalam,2017,Medium,Mid_eff,18.1063
+Brunei Darussalam,2018,Medium,Mid_eff,18.1944
+Brunei Darussalam,2019,Medium,Mid_eff,18.5942
+Brunei Darussalam,2020,Medium,Mid_eff,18.7505
+Brunei Darussalam,2021,Medium,Mid_eff,18.7413
+Brunei Darussalam,2022,Medium,Mid_eff,18.6465
+Brunei Darussalam,2023,Medium,Mid_eff,18.8758
+Brunei Darussalam,2024,Medium,Mid_eff,19.2665
+Brunei Darussalam,2025,Medium,Mid_eff,19.57
+Brunei Darussalam,2026,Medium,Mid_eff,18.3712
+Brunei Darussalam,2027,Medium,Mid_eff,17.164
+Brunei Darussalam,2028,Medium,Mid_eff,15.9506
+Brunei Darussalam,2029,Medium,Mid_eff,14.735
+Brunei Darussalam,2030,Medium,Mid_eff,13.522
+Brunei Darussalam,2031,Medium,Mid_eff,12.318
+Brunei Darussalam,2032,Medium,Mid_eff,11.1305
+Brunei Darussalam,2033,Medium,Mid_eff,9.9679
+Brunei Darussalam,2034,Medium,Mid_eff,8.8395
+Brunei Darussalam,2035,Medium,Mid_eff,7.755
+Brunei Darussalam,2036,Medium,Mid_eff,6.7243
+Brunei Darussalam,2037,Medium,Mid_eff,5.7567
+Brunei Darussalam,2038,Medium,Mid_eff,4.8607
+Brunei Darussalam,2039,Medium,Mid_eff,4.0434
+Brunei Darussalam,2040,Medium,Mid_eff,3.31
+Brunei Darussalam,2041,Medium,Mid_eff,2.6635
+Brunei Darussalam,2042,Medium,Mid_eff,2.1042
+Brunei Darussalam,2043,Medium,Mid_eff,1.63
+Brunei Darussalam,2044,Medium,Mid_eff,1.2367
+Brunei Darussalam,2045,Medium,Mid_eff,0.9178
+Brunei Darussalam,2046,Medium,Mid_eff,0.6655
+Brunei Darussalam,2047,Medium,Mid_eff,0.4708
+Brunei Darussalam,2048,Medium,Mid_eff,0.3245
+Brunei Darussalam,2049,Medium,Mid_eff,0.2177
+Brunei Darussalam,2050,Medium,Mid_eff,0.1419
+Brunei Darussalam,2051,Medium,Mid_eff,0.0898
+Brunei Darussalam,2052,Medium,Mid_eff,0.0551
+Brunei Darussalam,2053,Medium,Mid_eff,0.0327
+Brunei Darussalam,2054,Medium,Mid_eff,0.0188
+Brunei Darussalam,2055,Medium,Mid_eff,0.0104
+Brunei Darussalam,2056,Medium,Mid_eff,0.0056
+Brunei Darussalam,2057,Medium,Mid_eff,0.0029
+Brunei Darussalam,2058,Medium,Mid_eff,0.0014
+Brunei Darussalam,2059,Medium,Mid_eff,0.0007
+Brunei Darussalam,2060,Medium,Mid_eff,0.0003
+Brunei Darussalam,2005,Small,High_eff,13.585
+Brunei Darussalam,2006,Small,High_eff,13.8106
+Brunei Darussalam,2007,Small,High_eff,14.0307
+Brunei Darussalam,2008,Small,High_eff,14.2463
+Brunei Darussalam,2009,Small,High_eff,14.4589
+Brunei Darussalam,2010,Small,High_eff,14.6715
+Brunei Darussalam,2011,Small,High_eff,14.8738
+Brunei Darussalam,2012,Small,High_eff,15.0635
+Brunei Darussalam,2013,Small,High_eff,15.2513
+Brunei Darussalam,2014,Small,High_eff,15.435
+Brunei Darussalam,2015,Small,High_eff,15.4787
+Brunei Darussalam,2016,Small,High_eff,15.4435
+Brunei Darussalam,2017,Small,High_eff,15.599
+Brunei Darussalam,2018,Small,High_eff,15.6749
+Brunei Darussalam,2019,Small,High_eff,16.0194
+Brunei Darussalam,2020,Small,High_eff,16.1539
+Brunei Darussalam,2021,Small,High_eff,16.146
+Brunei Darussalam,2022,Small,High_eff,16.0644
+Brunei Darussalam,2023,Small,High_eff,16.262
+Brunei Darussalam,2024,Small,High_eff,16.5985
+Brunei Darussalam,2025,Small,High_eff,16.86
+Brunei Darussalam,2026,Small,High_eff,15.8272
+Brunei Darussalam,2027,Small,High_eff,14.7871
+Brunei Darussalam,2028,Small,High_eff,13.7418
+Brunei Darussalam,2029,Small,High_eff,12.6945
+Brunei Darussalam,2030,Small,High_eff,11.6495
+Brunei Darussalam,2031,Small,High_eff,10.6122
+Brunei Darussalam,2032,Small,High_eff,9.5892
+Brunei Darussalam,2033,Small,High_eff,8.5876
+Brunei Darussalam,2034,Small,High_eff,7.6154
+Brunei Darussalam,2035,Small,High_eff,6.6811
+Brunei Darussalam,2036,Small,High_eff,5.7931
+Brunei Darussalam,2037,Small,High_eff,4.9595
+Brunei Darussalam,2038,Small,High_eff,4.1876
+Brunei Darussalam,2039,Small,High_eff,3.4835
+Brunei Darussalam,2040,Small,High_eff,2.8517
+Brunei Darussalam,2041,Small,High_eff,2.2946
+Brunei Darussalam,2042,Small,High_eff,1.8128
+Brunei Darussalam,2043,Small,High_eff,1.4043
+Brunei Darussalam,2044,Small,High_eff,1.0655
+Brunei Darussalam,2045,Small,High_eff,0.7907
+Brunei Darussalam,2046,Small,High_eff,0.5733
+Brunei Darussalam,2047,Small,High_eff,0.4056
+Brunei Darussalam,2048,Small,High_eff,0.2796
+Brunei Darussalam,2049,Small,High_eff,0.1876
+Brunei Darussalam,2050,Small,High_eff,0.1223
+Brunei Darussalam,2051,Small,High_eff,0.0774
+Brunei Darussalam,2052,Small,High_eff,0.0475
+Brunei Darussalam,2053,Small,High_eff,0.0282
+Brunei Darussalam,2054,Small,High_eff,0.0162
+Brunei Darussalam,2055,Small,High_eff,0.009
+Brunei Darussalam,2056,Small,High_eff,0.0048
+Brunei Darussalam,2057,Small,High_eff,0.0025
+Brunei Darussalam,2058,Small,High_eff,0.0012
+Brunei Darussalam,2059,Small,High_eff,0.0006
+Brunei Darussalam,2060,Small,High_eff,0.0003
+Brunei Darussalam,2005,Small,Low_eff,21.6909
+Brunei Darussalam,2006,Small,Low_eff,22.0511
+Brunei Darussalam,2007,Small,Low_eff,22.4025
+Brunei Darussalam,2008,Small,Low_eff,22.7467
+Brunei Darussalam,2009,Small,Low_eff,23.0862
+Brunei Darussalam,2010,Small,Low_eff,23.4257
+Brunei Darussalam,2011,Small,Low_eff,23.7487
+Brunei Darussalam,2012,Small,Low_eff,24.0515
+Brunei Darussalam,2013,Small,Low_eff,24.3514
+Brunei Darussalam,2014,Small,Low_eff,24.6448
+Brunei Darussalam,2015,Small,Low_eff,24.7144
+Brunei Darussalam,2016,Small,Low_eff,24.6582
+Brunei Darussalam,2017,Small,Low_eff,24.9066
+Brunei Darussalam,2018,Small,Low_eff,25.0277
+Brunei Darussalam,2019,Small,Low_eff,25.5778
+Brunei Darussalam,2020,Small,Low_eff,25.7926
+Brunei Darussalam,2021,Small,Low_eff,25.78
+Brunei Darussalam,2022,Small,Low_eff,25.6497
+Brunei Darussalam,2023,Small,Low_eff,25.9651
+Brunei Darussalam,2024,Small,Low_eff,26.5025
+Brunei Darussalam,2025,Small,Low_eff,26.92
+Brunei Darussalam,2026,Small,Low_eff,25.2709
+Brunei Darussalam,2027,Small,Low_eff,23.6103
+Brunei Darussalam,2028,Small,Low_eff,21.9413
+Brunei Darussalam,2029,Small,Low_eff,20.269
+Brunei Darussalam,2030,Small,Low_eff,18.6005
+Brunei Darussalam,2031,Small,Low_eff,16.9443
+Brunei Darussalam,2032,Small,Low_eff,15.3108
+Brunei Darussalam,2033,Small,Low_eff,13.7116
+Brunei Darussalam,2034,Small,Low_eff,12.1594
+Brunei Darussalam,2035,Small,Low_eff,10.6676
+Brunei Darussalam,2036,Small,Low_eff,9.2498
+Brunei Darussalam,2037,Small,Low_eff,7.9187
+Brunei Darussalam,2038,Small,Low_eff,6.6863
+Brunei Darussalam,2039,Small,Low_eff,5.562
+Brunei Darussalam,2040,Small,Low_eff,4.5532
+Brunei Darussalam,2041,Small,Low_eff,3.6638
+Brunei Darussalam,2042,Small,Low_eff,2.8944
+Brunei Darussalam,2043,Small,Low_eff,2.2422
+Brunei Darussalam,2044,Small,Low_eff,1.7012
+Brunei Darussalam,2045,Small,Low_eff,1.2626
+Brunei Darussalam,2046,Small,Low_eff,0.9154
+Brunei Darussalam,2047,Small,Low_eff,0.6476
+Brunei Darussalam,2048,Small,Low_eff,0.4464
+Brunei Darussalam,2049,Small,Low_eff,0.2995
+Brunei Darussalam,2050,Small,Low_eff,0.1953
+Brunei Darussalam,2051,Small,Low_eff,0.1236
+Brunei Darussalam,2052,Small,Low_eff,0.0758
+Brunei Darussalam,2053,Small,Low_eff,0.045
+Brunei Darussalam,2054,Small,Low_eff,0.0259
+Brunei Darussalam,2055,Small,Low_eff,0.0143
+Brunei Darussalam,2056,Small,Low_eff,0.0077
+Brunei Darussalam,2057,Small,Low_eff,0.0039
+Brunei Darussalam,2058,Small,Low_eff,0.002
+Brunei Darussalam,2059,Small,Low_eff,0.0009
+Brunei Darussalam,2060,Small,Low_eff,0.0004
+Brunei Darussalam,2005,Small,Mid_eff,24.6641
+Brunei Darussalam,2006,Small,Mid_eff,25.0737
+Brunei Darussalam,2007,Small,Mid_eff,25.4732
+Brunei Darussalam,2008,Small,Mid_eff,25.8647
+Brunei Darussalam,2009,Small,Mid_eff,26.2507
+Brunei Darussalam,2010,Small,Mid_eff,26.6367
+Brunei Darussalam,2011,Small,Mid_eff,27.004
+Brunei Darussalam,2012,Small,Mid_eff,27.3483
+Brunei Darussalam,2013,Small,Mid_eff,27.6893
+Brunei Darussalam,2014,Small,Mid_eff,28.0229
+Brunei Darussalam,2015,Small,Mid_eff,28.1021
+Brunei Darussalam,2016,Small,Mid_eff,28.0382
+Brunei Darussalam,2017,Small,Mid_eff,28.3206
+Brunei Darussalam,2018,Small,Mid_eff,28.4584
+Brunei Darussalam,2019,Small,Mid_eff,29.0838
+Brunei Darussalam,2020,Small,Mid_eff,29.3281
+Brunei Darussalam,2021,Small,Mid_eff,29.3138
+Brunei Darussalam,2022,Small,Mid_eff,29.1655
+Brunei Darussalam,2023,Small,Mid_eff,29.5243
+Brunei Darussalam,2024,Small,Mid_eff,30.1352
+Brunei Darussalam,2025,Small,Mid_eff,30.61
+Brunei Darussalam,2026,Small,Mid_eff,28.7349
+Brunei Darussalam,2027,Small,Mid_eff,26.8466
+Brunei Darussalam,2028,Small,Mid_eff,24.9489
+Brunei Darussalam,2029,Small,Mid_eff,23.0474
+Brunei Darussalam,2030,Small,Mid_eff,21.1501
+Brunei Darussalam,2031,Small,Mid_eff,19.2669
+Brunei Darussalam,2032,Small,Mid_eff,17.4095
+Brunei Darussalam,2033,Small,Mid_eff,15.5911
+Brunei Darussalam,2034,Small,Mid_eff,13.8261
+Brunei Darussalam,2035,Small,Mid_eff,12.1299
+Brunei Darussalam,2036,Small,Mid_eff,10.5176
+Brunei Darussalam,2037,Small,Mid_eff,9.0042
+Brunei Darussalam,2038,Small,Mid_eff,7.6028
+Brunei Darussalam,2039,Small,Mid_eff,6.3244
+Brunei Darussalam,2040,Small,Mid_eff,5.1773
+Brunei Darussalam,2041,Small,Mid_eff,4.166
+Brunei Darussalam,2042,Small,Mid_eff,3.2912
+Brunei Darussalam,2043,Small,Mid_eff,2.5496
+Brunei Darussalam,2044,Small,Mid_eff,1.9344
+Brunei Darussalam,2045,Small,Mid_eff,1.4356
+Brunei Darussalam,2046,Small,Mid_eff,1.0409
+Brunei Darussalam,2047,Small,Mid_eff,0.7363
+Brunei Darussalam,2048,Small,Mid_eff,0.5076
+Brunei Darussalam,2049,Small,Mid_eff,0.3405
+Brunei Darussalam,2050,Small,Mid_eff,0.222
+Brunei Darussalam,2051,Small,Mid_eff,0.1405
+Brunei Darussalam,2052,Small,Mid_eff,0.0862
+Brunei Darussalam,2053,Small,Mid_eff,0.0512
+Brunei Darussalam,2054,Small,Mid_eff,0.0294
+Brunei Darussalam,2055,Small,Mid_eff,0.0163
+Brunei Darussalam,2056,Small,Mid_eff,0.0087
+Brunei Darussalam,2057,Small,Mid_eff,0.0045
+Brunei Darussalam,2058,Small,Mid_eff,0.0022
+Brunei Darussalam,2059,Small,Mid_eff,0.0011
+Brunei Darussalam,2060,Small,Mid_eff,0.0005
+Cambodia,2005,Large,High_eff,10.8935
+Cambodia,2006,Large,High_eff,12.1761
+Cambodia,2007,Large,High_eff,13.6114
+Cambodia,2008,Large,High_eff,15.2027
+Cambodia,2009,Large,High_eff,16.9548
+Cambodia,2010,Large,High_eff,18.8993
+Cambodia,2011,Large,High_eff,21.0661
+Cambodia,2012,Large,High_eff,23.4802
+Cambodia,2013,Large,High_eff,26.1661
+Cambodia,2014,Large,High_eff,29.1497
+Cambodia,2015,Large,High_eff,29.5458
+Cambodia,2016,Large,High_eff,35.9311
+Cambodia,2017,Large,High_eff,42.4726
+Cambodia,2018,Large,High_eff,42.9945
+Cambodia,2019,Large,High_eff,49.6962
+Cambodia,2020,Large,High_eff,43.9916
+Cambodia,2021,Large,High_eff,50.8653
+Cambodia,2022,Large,High_eff,51.4136
+Cambodia,2023,Large,High_eff,58.4508
+Cambodia,2024,Large,High_eff,65.6238
+Cambodia,2025,Large,High_eff,72.91
+Cambodia,2026,Large,High_eff,70.0592
+Cambodia,2027,Large,High_eff,66.9662
+Cambodia,2028,Large,High_eff,63.6311
+Cambodia,2029,Large,High_eff,60.0643
+Cambodia,2030,Large,High_eff,56.2859
+Cambodia,2031,Large,High_eff,52.3252
+Cambodia,2032,Large,High_eff,48.2203
+Cambodia,2033,Large,High_eff,44.0168
+Cambodia,2034,Large,High_eff,39.7668
+Cambodia,2035,Large,High_eff,35.5272
+Cambodia,2036,Large,High_eff,31.3574
+Cambodia,2037,Large,High_eff,27.3173
+Cambodia,2038,Large,High_eff,23.4645
+Cambodia,2039,Large,High_eff,19.8515
+Cambodia,2040,Large,High_eff,16.5234
+Cambodia,2041,Large,High_eff,13.5151
+Cambodia,2042,Large,High_eff,10.8501
+Cambodia,2043,Large,High_eff,8.5388
+Cambodia,2044,Large,High_eff,6.5789
+Cambodia,2045,Large,High_eff,4.9561
+Cambodia,2046,Large,High_eff,3.6458
+Cambodia,2047,Large,High_eff,2.6153
+Cambodia,2048,Large,High_eff,1.827
+Cambodia,2049,Large,High_eff,1.2414
+Cambodia,2050,Large,High_eff,0.8192
+Cambodia,2051,Large,High_eff,0.5243
+Cambodia,2052,Large,High_eff,0.3251
+Cambodia,2053,Large,High_eff,0.195
+Cambodia,2054,Large,High_eff,0.113
+Cambodia,2055,Large,High_eff,0.0632
+Cambodia,2056,Large,High_eff,0.034
+Cambodia,2057,Large,High_eff,0.0177
+Cambodia,2058,Large,High_eff,0.0088
+Cambodia,2059,Large,High_eff,0.0042
+Cambodia,2060,Large,High_eff,0.0019
+Cambodia,2005,Large,Low_eff,3.4275
+Cambodia,2006,Large,Low_eff,3.831
+Cambodia,2007,Large,Low_eff,4.2826
+Cambodia,2008,Large,Low_eff,4.7833
+Cambodia,2009,Large,Low_eff,5.3346
+Cambodia,2010,Large,Low_eff,5.9464
+Cambodia,2011,Large,Low_eff,6.6281
+Cambodia,2012,Large,Low_eff,7.3877
+Cambodia,2013,Large,Low_eff,8.2328
+Cambodia,2014,Large,Low_eff,9.1715
+Cambodia,2015,Large,Low_eff,9.2961
+Cambodia,2016,Large,Low_eff,11.3052
+Cambodia,2017,Large,Low_eff,13.3633
+Cambodia,2018,Large,Low_eff,13.5276
+Cambodia,2019,Large,Low_eff,15.6361
+Cambodia,2020,Large,Low_eff,13.8413
+Cambodia,2021,Large,Low_eff,16.004
+Cambodia,2022,Large,Low_eff,16.1765
+Cambodia,2023,Large,Low_eff,18.3906
+Cambodia,2024,Large,Low_eff,20.6475
+Cambodia,2025,Large,Low_eff,22.94
+Cambodia,2026,Large,Low_eff,22.0431
+Cambodia,2027,Large,Low_eff,21.0699
+Cambodia,2028,Large,Low_eff,20.0205
+Cambodia,2029,Large,Low_eff,18.8983
+Cambodia,2030,Large,Low_eff,17.7095
+Cambodia,2031,Large,Low_eff,16.4633
+Cambodia,2032,Large,Low_eff,15.1718
+Cambodia,2033,Large,Low_eff,13.8492
+Cambodia,2034,Large,Low_eff,12.512
+Cambodia,2035,Large,Low_eff,11.1781
+Cambodia,2036,Large,Low_eff,9.8661
+Cambodia,2037,Large,Low_eff,8.595
+Cambodia,2038,Large,Low_eff,7.3827
+Cambodia,2039,Large,Low_eff,6.246
+Cambodia,2040,Large,Low_eff,5.1988
+Cambodia,2041,Large,Low_eff,4.2523
+Cambodia,2042,Large,Low_eff,3.4138
+Cambodia,2043,Large,Low_eff,2.6866
+Cambodia,2044,Large,Low_eff,2.0699
+Cambodia,2045,Large,Low_eff,1.5594
+Cambodia,2046,Large,Low_eff,1.1471
+Cambodia,2047,Large,Low_eff,0.8229
+Cambodia,2048,Large,Low_eff,0.5749
+Cambodia,2049,Large,Low_eff,0.3906
+Cambodia,2050,Large,Low_eff,0.2577
+Cambodia,2051,Large,Low_eff,0.165
+Cambodia,2052,Large,Low_eff,0.1023
+Cambodia,2053,Large,Low_eff,0.0614
+Cambodia,2054,Large,Low_eff,0.0356
+Cambodia,2055,Large,Low_eff,0.0199
+Cambodia,2056,Large,Low_eff,0.0107
+Cambodia,2057,Large,Low_eff,0.0056
+Cambodia,2058,Large,Low_eff,0.0028
+Cambodia,2059,Large,Low_eff,0.0013
+Cambodia,2060,Large,Low_eff,0.0006
+Cambodia,2005,Large,Mid_eff,6.713
+Cambodia,2006,Large,Mid_eff,7.5034
+Cambodia,2007,Large,Mid_eff,8.3879
+Cambodia,2008,Large,Mid_eff,9.3685
+Cambodia,2009,Large,Mid_eff,10.4482
+Cambodia,2010,Large,Mid_eff,11.6465
+Cambodia,2011,Large,Mid_eff,12.9818
+Cambodia,2012,Large,Mid_eff,14.4694
+Cambodia,2013,Large,Mid_eff,16.1246
+Cambodia,2014,Large,Mid_eff,17.9632
+Cambodia,2015,Large,Mid_eff,18.2073
+Cambodia,2016,Large,Mid_eff,22.1421
+Cambodia,2017,Large,Mid_eff,26.1733
+Cambodia,2018,Large,Mid_eff,26.4949
+Cambodia,2019,Large,Mid_eff,30.6248
+Cambodia,2020,Large,Mid_eff,27.1093
+Cambodia,2021,Large,Mid_eff,31.3452
+Cambodia,2022,Large,Mid_eff,31.6831
+Cambodia,2023,Large,Mid_eff,36.0197
+Cambodia,2024,Large,Mid_eff,40.44
+Cambodia,2025,Large,Mid_eff,44.93
+Cambodia,2026,Large,Mid_eff,43.1732
+Cambodia,2027,Large,Mid_eff,41.2672
+Cambodia,2028,Large,Mid_eff,39.212
+Cambodia,2029,Large,Mid_eff,37.014
+Cambodia,2030,Large,Mid_eff,34.6856
+Cambodia,2031,Large,Mid_eff,32.2448
+Cambodia,2032,Large,Mid_eff,29.7152
+Cambodia,2033,Large,Mid_eff,27.1249
+Cambodia,2034,Large,Mid_eff,24.5058
+Cambodia,2035,Large,Mid_eff,21.8932
+Cambodia,2036,Large,Mid_eff,19.3236
+Cambodia,2037,Large,Mid_eff,16.834
+Cambodia,2038,Large,Mid_eff,14.4597
+Cambodia,2039,Large,Mid_eff,12.2333
+Cambodia,2040,Large,Mid_eff,10.1824
+Cambodia,2041,Large,Mid_eff,8.3286
+Cambodia,2042,Large,Mid_eff,6.6862
+Cambodia,2043,Large,Mid_eff,5.2619
+Cambodia,2044,Large,Mid_eff,4.0542
+Cambodia,2045,Large,Mid_eff,3.0541
+Cambodia,2046,Large,Mid_eff,2.2467
+Cambodia,2047,Large,Mid_eff,1.6116
+Cambodia,2048,Large,Mid_eff,1.1259
+Cambodia,2049,Large,Mid_eff,0.765
+Cambodia,2050,Large,Mid_eff,0.5048
+Cambodia,2051,Large,Mid_eff,0.3231
+Cambodia,2052,Large,Mid_eff,0.2003
+Cambodia,2053,Large,Mid_eff,0.1202
+Cambodia,2054,Large,Mid_eff,0.0696
+Cambodia,2055,Large,Mid_eff,0.0389
+Cambodia,2056,Large,Mid_eff,0.021
+Cambodia,2057,Large,Mid_eff,0.0109
+Cambodia,2058,Large,Mid_eff,0.0054
+Cambodia,2059,Large,Mid_eff,0.0026
+Cambodia,2060,Large,Mid_eff,0.0012
+Cambodia,2005,Medium,High_eff,10.8801
+Cambodia,2006,Medium,High_eff,12.161
+Cambodia,2007,Medium,High_eff,13.5946
+Cambodia,2008,Medium,High_eff,15.1839
+Cambodia,2009,Medium,High_eff,16.9339
+Cambodia,2010,Medium,High_eff,18.876
+Cambodia,2011,Medium,High_eff,21.0401
+Cambodia,2012,Medium,High_eff,23.4512
+Cambodia,2013,Medium,High_eff,26.1338
+Cambodia,2014,Medium,High_eff,29.1137
+Cambodia,2015,Medium,High_eff,29.5093
+Cambodia,2016,Medium,High_eff,35.8867
+Cambodia,2017,Medium,High_eff,42.4202
+Cambodia,2018,Medium,High_eff,42.9415
+Cambodia,2019,Medium,High_eff,49.6349
+Cambodia,2020,Medium,High_eff,43.9373
+Cambodia,2021,Medium,High_eff,50.8025
+Cambodia,2022,Medium,High_eff,51.3501
+Cambodia,2023,Medium,High_eff,58.3787
+Cambodia,2024,Medium,High_eff,65.5428
+Cambodia,2025,Medium,High_eff,72.82
+Cambodia,2026,Medium,High_eff,69.9728
+Cambodia,2027,Medium,High_eff,66.8835
+Cambodia,2028,Medium,High_eff,63.5525
+Cambodia,2029,Medium,High_eff,59.9902
+Cambodia,2030,Medium,High_eff,56.2164
+Cambodia,2031,Medium,High_eff,52.2606
+Cambodia,2032,Medium,High_eff,48.1608
+Cambodia,2033,Medium,High_eff,43.9624
+Cambodia,2034,Medium,High_eff,39.7177
+Cambodia,2035,Medium,High_eff,35.4833
+Cambodia,2036,Medium,High_eff,31.3186
+Cambodia,2037,Medium,High_eff,27.2835
+Cambodia,2038,Medium,High_eff,23.4355
+Cambodia,2039,Medium,High_eff,19.827
+Cambodia,2040,Medium,High_eff,16.503
+Cambodia,2041,Medium,High_eff,13.4985
+Cambodia,2042,Medium,High_eff,10.8367
+Cambodia,2043,Medium,High_eff,8.5282
+Cambodia,2044,Medium,High_eff,6.5708
+Cambodia,2045,Medium,High_eff,4.95
+Cambodia,2046,Medium,High_eff,3.6413
+Cambodia,2047,Medium,High_eff,2.6121
+Cambodia,2048,Medium,High_eff,1.8248
+Cambodia,2049,Medium,High_eff,1.2398
+Cambodia,2050,Medium,High_eff,0.8182
+Cambodia,2051,Medium,High_eff,0.5237
+Cambodia,2052,Medium,High_eff,0.3247
+Cambodia,2053,Medium,High_eff,0.1948
+Cambodia,2054,Medium,High_eff,0.1129
+Cambodia,2055,Medium,High_eff,0.0631
+Cambodia,2056,Medium,High_eff,0.034
+Cambodia,2057,Medium,High_eff,0.0176
+Cambodia,2058,Medium,High_eff,0.0088
+Cambodia,2059,Medium,High_eff,0.0042
+Cambodia,2060,Medium,High_eff,0.0019
+Cambodia,2005,Medium,Low_eff,6.3993
+Cambodia,2006,Medium,Low_eff,7.1527
+Cambodia,2007,Medium,Low_eff,7.9958
+Cambodia,2008,Medium,Low_eff,8.9306
+Cambodia,2009,Medium,Low_eff,9.9599
+Cambodia,2010,Medium,Low_eff,11.1021
+Cambodia,2011,Medium,Low_eff,12.375
+Cambodia,2012,Medium,Low_eff,13.7931
+Cambodia,2013,Medium,Low_eff,15.3709
+Cambodia,2014,Medium,Low_eff,17.1236
+Cambodia,2015,Medium,Low_eff,17.3563
+Cambodia,2016,Medium,Low_eff,21.1072
+Cambodia,2017,Medium,Low_eff,24.9499
+Cambodia,2018,Medium,Low_eff,25.2566
+Cambodia,2019,Medium,Low_eff,29.1934
+Cambodia,2020,Medium,Low_eff,25.8423
+Cambodia,2021,Medium,Low_eff,29.8801
+Cambodia,2022,Medium,Low_eff,30.2022
+Cambodia,2023,Medium,Low_eff,34.3361
+Cambodia,2024,Medium,Low_eff,38.5498
+Cambodia,2025,Medium,Low_eff,42.83
+Cambodia,2026,Medium,Low_eff,41.1554
+Cambodia,2027,Medium,Low_eff,39.3384
+Cambodia,2028,Medium,Low_eff,37.3792
+Cambodia,2029,Medium,Low_eff,35.284
+Cambodia,2030,Medium,Low_eff,33.0644
+Cambodia,2031,Medium,Low_eff,30.7378
+Cambodia,2032,Medium,Low_eff,28.3264
+Cambodia,2033,Medium,Low_eff,25.8571
+Cambodia,2034,Medium,Low_eff,23.3605
+Cambodia,2035,Medium,Low_eff,20.8699
+Cambodia,2036,Medium,Low_eff,18.4205
+Cambodia,2037,Medium,Low_eff,16.0472
+Cambodia,2038,Medium,Low_eff,13.7839
+Cambodia,2039,Medium,Low_eff,11.6615
+Cambodia,2040,Medium,Low_eff,9.7064
+Cambodia,2041,Medium,Low_eff,7.9393
+Cambodia,2042,Medium,Low_eff,6.3737
+Cambodia,2043,Medium,Low_eff,5.016
+Cambodia,2044,Medium,Low_eff,3.8647
+Cambodia,2045,Medium,Low_eff,2.9114
+Cambodia,2046,Medium,Low_eff,2.1417
+Cambodia,2047,Medium,Low_eff,1.5363
+Cambodia,2048,Medium,Low_eff,1.0733
+Cambodia,2049,Medium,Low_eff,0.7292
+Cambodia,2050,Medium,Low_eff,0.4812
+Cambodia,2051,Medium,Low_eff,0.308
+Cambodia,2052,Medium,Low_eff,0.191
+Cambodia,2053,Medium,Low_eff,0.1146
+Cambodia,2054,Medium,Low_eff,0.0664
+Cambodia,2055,Medium,Low_eff,0.0371
+Cambodia,2056,Medium,Low_eff,0.02
+Cambodia,2057,Medium,Low_eff,0.0104
+Cambodia,2058,Medium,Low_eff,0.0052
+Cambodia,2059,Medium,Low_eff,0.0025
+Cambodia,2060,Medium,Low_eff,0.0011
+Cambodia,2005,Medium,Mid_eff,7.9636
+Cambodia,2006,Medium,Mid_eff,8.9012
+Cambodia,2007,Medium,Mid_eff,9.9504
+Cambodia,2008,Medium,Mid_eff,11.1138
+Cambodia,2009,Medium,Mid_eff,12.3946
+Cambodia,2010,Medium,Mid_eff,13.8161
+Cambodia,2011,Medium,Mid_eff,15.4001
+Cambodia,2012,Medium,Mid_eff,17.1649
+Cambodia,2013,Medium,Mid_eff,19.1284
+Cambodia,2014,Medium,Mid_eff,21.3095
+Cambodia,2015,Medium,Mid_eff,21.5991
+Cambodia,2016,Medium,Mid_eff,26.267
+Cambodia,2017,Medium,Mid_eff,31.0491
+Cambodia,2018,Medium,Mid_eff,31.4307
+Cambodia,2019,Medium,Mid_eff,36.3298
+Cambodia,2020,Medium,Mid_eff,32.1595
+Cambodia,2021,Medium,Mid_eff,37.1845
+Cambodia,2022,Medium,Mid_eff,37.5853
+Cambodia,2023,Medium,Mid_eff,42.7298
+Cambodia,2024,Medium,Mid_eff,47.9735
+Cambodia,2025,Medium,Mid_eff,53.3
+Cambodia,2026,Medium,Mid_eff,51.216
+Cambodia,2027,Medium,Mid_eff,48.9548
+Cambodia,2028,Medium,Mid_eff,46.5168
+Cambodia,2029,Medium,Mid_eff,43.9093
+Cambodia,2030,Medium,Mid_eff,41.1471
+Cambodia,2031,Medium,Mid_eff,38.2517
+Cambodia,2032,Medium,Mid_eff,35.2509
+Cambodia,2033,Medium,Mid_eff,32.178
+Cambodia,2034,Medium,Mid_eff,29.071
+Cambodia,2035,Medium,Mid_eff,25.9717
+Cambodia,2036,Medium,Mid_eff,22.9234
+Cambodia,2037,Medium,Mid_eff,19.97
+Cambodia,2038,Medium,Mid_eff,17.1534
+Cambodia,2039,Medium,Mid_eff,14.5122
+Cambodia,2040,Medium,Mid_eff,12.0792
+Cambodia,2041,Medium,Mid_eff,9.8801
+Cambodia,2042,Medium,Mid_eff,7.9318
+Cambodia,2043,Medium,Mid_eff,6.2422
+Cambodia,2044,Medium,Mid_eff,4.8094
+Cambodia,2045,Medium,Mid_eff,3.6231
+Cambodia,2046,Medium,Mid_eff,2.6652
+Cambodia,2047,Medium,Mid_eff,1.9119
+Cambodia,2048,Medium,Mid_eff,1.3356
+Cambodia,2049,Medium,Mid_eff,0.9075
+Cambodia,2050,Medium,Mid_eff,0.5989
+Cambodia,2051,Medium,Mid_eff,0.3833
+Cambodia,2052,Medium,Mid_eff,0.2377
+Cambodia,2053,Medium,Mid_eff,0.1426
+Cambodia,2054,Medium,Mid_eff,0.0826
+Cambodia,2055,Medium,Mid_eff,0.0462
+Cambodia,2056,Medium,Mid_eff,0.0249
+Cambodia,2057,Medium,Mid_eff,0.0129
+Cambodia,2058,Medium,Mid_eff,0.0064
+Cambodia,2059,Medium,Mid_eff,0.0031
+Cambodia,2060,Medium,Mid_eff,0.0014
+Cambodia,2005,Small,High_eff,6.834
+Cambodia,2006,Small,High_eff,7.6386
+Cambodia,2007,Small,High_eff,8.5391
+Cambodia,2008,Small,High_eff,9.5374
+Cambodia,2009,Small,High_eff,10.6366
+Cambodia,2010,Small,High_eff,11.8565
+Cambodia,2011,Small,High_eff,13.2158
+Cambodia,2012,Small,High_eff,14.7303
+Cambodia,2013,Small,High_eff,16.4153
+Cambodia,2014,Small,High_eff,18.287
+Cambodia,2015,Small,High_eff,18.5355
+Cambodia,2016,Small,High_eff,22.5413
+Cambodia,2017,Small,High_eff,26.6451
+Cambodia,2018,Small,High_eff,26.9726
+Cambodia,2019,Small,High_eff,31.1769
+Cambodia,2020,Small,High_eff,27.5981
+Cambodia,2021,Small,High_eff,31.9103
+Cambodia,2022,Small,High_eff,32.2542
+Cambodia,2023,Small,High_eff,36.669
+Cambodia,2024,Small,High_eff,41.169
+Cambodia,2025,Small,High_eff,45.74
+Cambodia,2026,Small,High_eff,43.9516
+Cambodia,2027,Small,High_eff,42.0111
+Cambodia,2028,Small,High_eff,39.9189
+Cambodia,2029,Small,High_eff,37.6813
+Cambodia,2030,Small,High_eff,35.3109
+Cambodia,2031,Small,High_eff,32.8262
+Cambodia,2032,Small,High_eff,30.2509
+Cambodia,2033,Small,High_eff,27.6139
+Cambodia,2034,Small,High_eff,24.9477
+Cambodia,2035,Small,High_eff,22.2879
+Cambodia,2036,Small,High_eff,19.672
+Cambodia,2037,Small,High_eff,17.1375
+Cambodia,2038,Small,High_eff,14.7204
+Cambodia,2039,Small,High_eff,12.4538
+Cambodia,2040,Small,High_eff,10.3659
+Cambodia,2041,Small,High_eff,8.4787
+Cambodia,2042,Small,High_eff,6.8068
+Cambodia,2043,Small,High_eff,5.3568
+Cambodia,2044,Small,High_eff,4.1273
+Cambodia,2045,Small,High_eff,3.1092
+Cambodia,2046,Small,High_eff,2.2872
+Cambodia,2047,Small,High_eff,1.6407
+Cambodia,2048,Small,High_eff,1.1462
+Cambodia,2049,Small,High_eff,0.7788
+Cambodia,2050,Small,High_eff,0.5139
+Cambodia,2051,Small,High_eff,0.3289
+Cambodia,2052,Small,High_eff,0.204
+Cambodia,2053,Small,High_eff,0.1223
+Cambodia,2054,Small,High_eff,0.0709
+Cambodia,2055,Small,High_eff,0.0396
+Cambodia,2056,Small,High_eff,0.0214
+Cambodia,2057,Small,High_eff,0.0111
+Cambodia,2058,Small,High_eff,0.0055
+Cambodia,2059,Small,High_eff,0.0026
+Cambodia,2060,Small,High_eff,0.0012
+Cambodia,2005,Small,Low_eff,5.2339
+Cambodia,2006,Small,Low_eff,5.8501
+Cambodia,2007,Small,Low_eff,6.5397
+Cambodia,2008,Small,Low_eff,7.3042
+Cambodia,2009,Small,Low_eff,8.146
+Cambodia,2010,Small,Low_eff,9.0803
+Cambodia,2011,Small,Low_eff,10.1213
+Cambodia,2012,Small,Low_eff,11.2812
+Cambodia,2013,Small,Low_eff,12.5716
+Cambodia,2014,Small,Low_eff,14.0051
+Cambodia,2015,Small,Low_eff,14.1954
+Cambodia,2016,Small,Low_eff,17.2633
+Cambodia,2017,Small,Low_eff,20.4062
+Cambodia,2018,Small,Low_eff,20.657
+Cambodia,2019,Small,Low_eff,23.8768
+Cambodia,2020,Small,Low_eff,21.136
+Cambodia,2021,Small,Low_eff,24.4385
+Cambodia,2022,Small,Low_eff,24.7019
+Cambodia,2023,Small,Low_eff,28.083
+Cambodia,2024,Small,Low_eff,31.5293
+Cambodia,2025,Small,Low_eff,35.03
+Cambodia,2026,Small,Low_eff,33.6603
+Cambodia,2027,Small,Low_eff,32.1743
+Cambodia,2028,Small,Low_eff,30.5719
+Cambodia,2029,Small,Low_eff,28.8582
+Cambodia,2030,Small,Low_eff,27.0429
+Cambodia,2031,Small,Low_eff,25.1399
+Cambodia,2032,Small,Low_eff,23.1677
+Cambodia,2033,Small,Low_eff,21.1481
+Cambodia,2034,Small,Low_eff,19.1062
+Cambodia,2035,Small,Low_eff,17.0692
+Cambodia,2036,Small,Low_eff,15.0658
+Cambodia,2037,Small,Low_eff,13.1247
+Cambodia,2038,Small,Low_eff,11.2736
+Cambodia,2039,Small,Low_eff,9.5378
+Cambodia,2040,Small,Low_eff,7.9388
+Cambodia,2041,Small,Low_eff,6.4934
+Cambodia,2042,Small,Low_eff,5.213
+Cambodia,2043,Small,Low_eff,4.1025
+Cambodia,2044,Small,Low_eff,3.1609
+Cambodia,2045,Small,Low_eff,2.3812
+Cambodia,2046,Small,Low_eff,1.7516
+Cambodia,2047,Small,Low_eff,1.2565
+Cambodia,2048,Small,Low_eff,0.8778
+Cambodia,2049,Small,Low_eff,0.5964
+Cambodia,2050,Small,Low_eff,0.3936
+Cambodia,2051,Small,Low_eff,0.2519
+Cambodia,2052,Small,Low_eff,0.1562
+Cambodia,2053,Small,Low_eff,0.0937
+Cambodia,2054,Small,Low_eff,0.0543
+Cambodia,2055,Small,Low_eff,0.0304
+Cambodia,2056,Small,Low_eff,0.0164
+Cambodia,2057,Small,Low_eff,0.0085
+Cambodia,2058,Small,Low_eff,0.0042
+Cambodia,2059,Small,Low_eff,0.002
+Cambodia,2060,Small,Low_eff,0.0009
+Cambodia,2005,Small,Mid_eff,9.4846
+Cambodia,2006,Small,Mid_eff,10.6012
+Cambodia,2007,Small,Mid_eff,11.8509
+Cambodia,2008,Small,Mid_eff,13.2364
+Cambodia,2009,Small,Mid_eff,14.7619
+Cambodia,2010,Small,Mid_eff,16.4549
+Cambodia,2011,Small,Mid_eff,18.3415
+Cambodia,2012,Small,Mid_eff,20.4434
+Cambodia,2013,Small,Mid_eff,22.7818
+Cambodia,2014,Small,Mid_eff,25.3795
+Cambodia,2015,Small,Mid_eff,25.7244
+Cambodia,2016,Small,Mid_eff,31.2838
+Cambodia,2017,Small,Mid_eff,36.9793
+Cambodia,2018,Small,Mid_eff,37.4337
+Cambodia,2019,Small,Mid_eff,43.2686
+Cambodia,2020,Small,Mid_eff,38.3018
+Cambodia,2021,Small,Mid_eff,44.2865
+Cambodia,2022,Small,Mid_eff,44.7639
+Cambodia,2023,Small,Mid_eff,50.8909
+Cambodia,2024,Small,Mid_eff,57.1362
+Cambodia,2025,Small,Mid_eff,63.48
+Cambodia,2026,Small,Mid_eff,60.9979
+Cambodia,2027,Small,Mid_eff,58.3049
+Cambodia,2028,Small,Mid_eff,55.4012
+Cambodia,2029,Small,Mid_eff,52.2957
+Cambodia,2030,Small,Mid_eff,49.006
+Cambodia,2031,Small,Mid_eff,45.5576
+Cambodia,2032,Small,Mid_eff,41.9836
+Cambodia,2033,Small,Mid_eff,38.3238
+Cambodia,2034,Small,Mid_eff,34.6235
+Cambodia,2035,Small,Mid_eff,30.9322
+Cambodia,2036,Small,Mid_eff,27.3017
+Cambodia,2037,Small,Mid_eff,23.7841
+Cambodia,2038,Small,Mid_eff,20.4296
+Cambodia,2039,Small,Mid_eff,17.284
+Cambodia,2040,Small,Mid_eff,14.3863
+Cambodia,2041,Small,Mid_eff,11.7671
+Cambodia,2042,Small,Mid_eff,9.4468
+Cambodia,2043,Small,Mid_eff,7.4344
+Cambodia,2044,Small,Mid_eff,5.728
+Cambodia,2045,Small,Mid_eff,4.3151
+Cambodia,2046,Small,Mid_eff,3.1742
+Cambodia,2047,Small,Mid_eff,2.277
+Cambodia,2048,Small,Mid_eff,1.5907
+Cambodia,2049,Small,Mid_eff,1.0808
+Cambodia,2050,Small,Mid_eff,0.7132
+Cambodia,2051,Small,Mid_eff,0.4565
+Cambodia,2052,Small,Mid_eff,0.2831
+Cambodia,2053,Small,Mid_eff,0.1698
+Cambodia,2054,Small,Mid_eff,0.0984
+Cambodia,2055,Small,Mid_eff,0.055
+Cambodia,2056,Small,Mid_eff,0.0296
+Cambodia,2057,Small,Mid_eff,0.0154
+Cambodia,2058,Small,Mid_eff,0.0077
+Cambodia,2059,Small,Mid_eff,0.0037
+Cambodia,2060,Small,Mid_eff,0.0017
+Indonesia,2005,Large,High_eff,402.3985
+Indonesia,2006,Large,High_eff,434.47
+Indonesia,2007,Large,High_eff,469.1564
+Indonesia,2008,Large,High_eff,506.5629
+Indonesia,2009,Large,High_eff,546.7844
+Indonesia,2010,Large,High_eff,590.0814
+Indonesia,2011,Large,High_eff,636.8338
+Indonesia,2012,Large,High_eff,687.2917
+Indonesia,2013,Large,High_eff,741.4278
+Indonesia,2014,Large,High_eff,799.4017
+Indonesia,2015,Large,High_eff,858.8521
+Indonesia,2016,Large,High_eff,919.0537
+Indonesia,2017,Large,High_eff,1005.7126
+Indonesia,2018,Large,High_eff,1067.5527
+Indonesia,2019,Large,High_eff,1156.4597
+Indonesia,2020,Large,High_eff,1113.2094
+Indonesia,2021,Large,High_eff,1174.3495
+Indonesia,2022,Large,High_eff,1262.4293
+Indonesia,2023,Large,High_eff,1352.9193
+Indonesia,2024,Large,High_eff,1473.0719
+Indonesia,2025,Large,High_eff,1567.17
+Indonesia,2026,Large,High_eff,1497.2797
+Indonesia,2027,Large,High_eff,1423.0114
+Indonesia,2028,Large,High_eff,1344.4868
+Indonesia,2029,Large,High_eff,1262.0144
+Indonesia,2030,Large,High_eff,1176.081
+Indonesia,2031,Large,High_eff,1087.342
+Indonesia,2032,Large,High_eff,996.608
+Indonesia,2033,Large,High_eff,904.8266
+Indonesia,2034,Large,High_eff,813.0574
+Indonesia,2035,Large,High_eff,722.4403
+Indonesia,2036,Large,High_eff,634.1546
+Indonesia,2037,Large,High_eff,549.3719
+Indonesia,2038,Large,High_eff,469.2023
+Indonesia,2039,Large,High_eff,394.6397
+Indonesia,2040,Large,High_eff,326.5087
+Indonesia,2041,Large,High_eff,265.4189
+Indonesia,2042,Large,High_eff,211.7327
+Indonesia,2043,Large,High_eff,165.549
+Indonesia,2044,Large,High_eff,126.7074
+Indonesia,2045,Large,High_eff,94.8114
+Indonesia,2046,Large,High_eff,69.2695
+Indonesia,2047,Large,High_eff,49.3497
+Indonesia,2048,Large,High_eff,34.2391
+Indonesia,2049,Large,High_eff,23.104
+Indonesia,2050,Large,High_eff,15.1431
+Indonesia,2051,Large,High_eff,9.6281
+Indonesia,2052,Large,High_eff,5.9306
+Indonesia,2053,Large,High_eff,3.5345
+Indonesia,2054,Large,High_eff,2.0355
+Indonesia,2055,Large,High_eff,1.1312
+Indonesia,2056,Large,High_eff,0.6059
+Indonesia,2057,Large,High_eff,0.3124
+Indonesia,2058,Large,High_eff,0.1549
+Indonesia,2059,Large,High_eff,0.0737
+Indonesia,2060,Large,High_eff,0.0336
+Indonesia,2005,Large,Low_eff,451.3256
+Indonesia,2006,Large,Low_eff,487.2966
+Indonesia,2007,Large,Low_eff,526.2004
+Indonesia,2008,Large,Low_eff,568.1552
+Indonesia,2009,Large,Low_eff,613.2672
+Indonesia,2010,Large,Low_eff,661.8286
+Indonesia,2011,Large,Low_eff,714.2655
+Indonesia,2012,Large,Low_eff,770.8586
+Indonesia,2013,Large,Low_eff,831.5769
+Indonesia,2014,Large,Low_eff,896.5998
+Indonesia,2015,Large,Low_eff,963.2787
+Indonesia,2016,Large,Low_eff,1030.8001
+Indonesia,2017,Large,Low_eff,1127.9958
+Indonesia,2018,Large,Low_eff,1197.355
+Indonesia,2019,Large,Low_eff,1297.072
+Indonesia,2020,Large,Low_eff,1248.563
+Indonesia,2021,Large,Low_eff,1317.137
+Indonesia,2022,Large,Low_eff,1415.9264
+Indonesia,2023,Large,Low_eff,1517.4189
+Indonesia,2024,Large,Low_eff,1652.1807
+Indonesia,2025,Large,Low_eff,1757.72
+Indonesia,2026,Large,Low_eff,1679.3319
+Indonesia,2027,Large,Low_eff,1596.0334
+Indonesia,2028,Large,Low_eff,1507.9611
+Indonesia,2029,Large,Low_eff,1415.4609
+Indonesia,2030,Large,Low_eff,1319.079
+Indonesia,2031,Large,Low_eff,1219.5504
+Indonesia,2032,Large,Low_eff,1117.7842
+Indonesia,2033,Large,Low_eff,1014.8432
+Indonesia,2034,Large,Low_eff,911.9159
+Indonesia,2035,Large,Low_eff,810.2808
+Indonesia,2036,Large,Low_eff,711.2606
+Indonesia,2037,Large,Low_eff,616.1692
+Indonesia,2038,Large,Low_eff,526.2519
+Indonesia,2039,Large,Low_eff,442.6234
+Indonesia,2040,Large,Low_eff,366.2084
+Indonesia,2041,Large,Low_eff,297.6908
+Indonesia,2042,Large,Low_eff,237.477
+Indonesia,2043,Large,Low_eff,185.6779
+Indonesia,2044,Large,Low_eff,142.1136
+Indonesia,2045,Large,Low_eff,106.3393
+Indonesia,2046,Large,Low_eff,77.6919
+Indonesia,2047,Large,Low_eff,55.3501
+Indonesia,2048,Large,Low_eff,38.4022
+Indonesia,2049,Large,Low_eff,25.9132
+Indonesia,2050,Large,Low_eff,16.9844
+Indonesia,2051,Large,Low_eff,10.7988
+Indonesia,2052,Large,Low_eff,6.6517
+Indonesia,2053,Large,Low_eff,3.9642
+Indonesia,2054,Large,Low_eff,2.2829
+Indonesia,2055,Large,Low_eff,1.2688
+Indonesia,2056,Large,Low_eff,0.6796
+Indonesia,2057,Large,Low_eff,0.3504
+Indonesia,2058,Large,Low_eff,0.1737
+Indonesia,2059,Large,Low_eff,0.0827
+Indonesia,2060,Large,Low_eff,0.0377
+Indonesia,2005,Large,Mid_eff,585.3532
+Indonesia,2006,Large,Mid_eff,632.0063
+Indonesia,2007,Large,Mid_eff,682.4631
+Indonesia,2008,Large,Mid_eff,736.877
+Indonesia,2009,Large,Mid_eff,795.3856
+Indonesia,2010,Large,Mid_eff,858.368
+Indonesia,2011,Large,Mid_eff,926.3768
+Indonesia,2012,Large,Mid_eff,999.776
+Indonesia,2013,Large,Mid_eff,1078.5256
+Indonesia,2014,Large,Mid_eff,1162.8579
+Indonesia,2015,Large,Mid_eff,1249.3381
+Indonesia,2016,Large,Mid_eff,1336.9109
+Indonesia,2017,Large,Mid_eff,1462.9702
+Indonesia,2018,Large,Mid_eff,1552.9266
+Indonesia,2019,Large,Mid_eff,1682.256
+Indonesia,2020,Large,Mid_eff,1619.3415
+Indonesia,2021,Large,Mid_eff,1708.2796
+Indonesia,2022,Large,Mid_eff,1836.4059
+Indonesia,2023,Large,Mid_eff,1968.038
+Indonesia,2024,Large,Mid_eff,2142.8193
+Indonesia,2025,Large,Mid_eff,2279.7
+Indonesia,2026,Large,Mid_eff,2178.0334
+Indonesia,2027,Large,Mid_eff,2069.9982
+Indonesia,2028,Large,Mid_eff,1955.7716
+Indonesia,2029,Large,Mid_eff,1835.8022
+Indonesia,2030,Large,Mid_eff,1710.7983
+Indonesia,2031,Large,Mid_eff,1581.7133
+Indonesia,2032,Large,Mid_eff,1449.7262
+Indonesia,2033,Large,Mid_eff,1316.2153
+Indonesia,2034,Large,Mid_eff,1182.7223
+Indonesia,2035,Large,Mid_eff,1050.9052
+Indonesia,2036,Large,Mid_eff,922.4796
+Indonesia,2037,Large,Mid_eff,799.1495
+Indonesia,2038,Large,Mid_eff,682.53
+Indonesia,2039,Large,Mid_eff,574.0668
+Indonesia,2040,Large,Mid_eff,474.9592
+Indonesia,2041,Large,Mid_eff,386.0943
+Indonesia,2042,Large,Mid_eff,307.9991
+Indonesia,2043,Large,Mid_eff,240.8176
+Indonesia,2044,Large,Mid_eff,184.3163
+Indonesia,2045,Large,Mid_eff,137.9183
+Indonesia,2046,Large,Mid_eff,100.7637
+Indonesia,2047,Large,Mid_eff,71.7871
+Indonesia,2048,Large,Mid_eff,49.8062
+Indonesia,2049,Large,Mid_eff,33.6085
+Indonesia,2050,Large,Mid_eff,22.0281
+Indonesia,2051,Large,Mid_eff,14.0056
+Indonesia,2052,Large,Mid_eff,8.627
+Indonesia,2053,Large,Mid_eff,5.1415
+Indonesia,2054,Large,Mid_eff,2.9609
+Indonesia,2055,Large,Mid_eff,1.6456
+Indonesia,2056,Large,Mid_eff,0.8814
+Indonesia,2057,Large,Mid_eff,0.4545
+Indonesia,2058,Large,Mid_eff,0.2253
+Indonesia,2059,Large,Mid_eff,0.1072
+Indonesia,2060,Large,Mid_eff,0.0489
+Indonesia,2005,Medium,High_eff,460.5436
+Indonesia,2006,Medium,High_eff,497.2492
+Indonesia,2007,Medium,High_eff,536.9476
+Indonesia,2008,Medium,High_eff,579.7593
+Indonesia,2009,Medium,High_eff,625.7927
+Indonesia,2010,Medium,High_eff,675.3459
+Indonesia,2011,Medium,High_eff,728.8538
+Indonesia,2012,Medium,High_eff,786.6027
+Indonesia,2013,Medium,High_eff,848.5612
+Indonesia,2014,Medium,High_eff,914.9121
+Indonesia,2015,Medium,High_eff,982.9529
+Indonesia,2016,Medium,High_eff,1051.8534
+Indonesia,2017,Medium,High_eff,1151.0342
+Indonesia,2018,Medium,High_eff,1221.81
+Indonesia,2019,Medium,High_eff,1323.5636
+Indonesia,2020,Medium,High_eff,1274.0639
+Indonesia,2021,Medium,High_eff,1344.0385
+Indonesia,2022,Medium,High_eff,1444.8455
+Indonesia,2023,Medium,High_eff,1548.4109
+Indonesia,2024,Medium,High_eff,1685.9251
+Indonesia,2025,Medium,High_eff,1793.62
+Indonesia,2026,Medium,High_eff,1713.6309
+Indonesia,2027,Medium,High_eff,1628.6311
+Indonesia,2028,Medium,High_eff,1538.76
+Indonesia,2029,Medium,High_eff,1444.3706
+Indonesia,2030,Medium,High_eff,1346.0201
+Indonesia,2031,Medium,High_eff,1244.4587
+Indonesia,2032,Medium,High_eff,1140.614
+Indonesia,2033,Medium,High_eff,1035.5705
+Indonesia,2034,Medium,High_eff,930.5411
+Indonesia,2035,Medium,High_eff,826.8301
+Indonesia,2036,Medium,High_eff,725.7875
+Indonesia,2037,Medium,High_eff,628.754
+Indonesia,2038,Medium,High_eff,537.0002
+Indonesia,2039,Medium,High_eff,451.6637
+Indonesia,2040,Medium,High_eff,373.6879
+Indonesia,2041,Medium,High_eff,303.7709
+Indonesia,2042,Medium,High_eff,242.3272
+Indonesia,2043,Medium,High_eff,189.4702
+Indonesia,2044,Medium,High_eff,145.0162
+Indonesia,2045,Medium,High_eff,108.5112
+Indonesia,2046,Medium,High_eff,79.2787
+Indonesia,2047,Medium,High_eff,56.4806
+Indonesia,2048,Medium,High_eff,39.1865
+Indonesia,2049,Medium,High_eff,26.4425
+Indonesia,2050,Medium,High_eff,17.3313
+Indonesia,2051,Medium,High_eff,11.0193
+Indonesia,2052,Medium,High_eff,6.7875
+Indonesia,2053,Medium,High_eff,4.0452
+Indonesia,2054,Medium,High_eff,2.3296
+Indonesia,2055,Medium,High_eff,1.2947
+Indonesia,2056,Medium,High_eff,0.6935
+Indonesia,2057,Medium,High_eff,0.3576
+Indonesia,2058,Medium,High_eff,0.1772
+Indonesia,2059,Medium,High_eff,0.0844
+Indonesia,2060,Medium,High_eff,0.0385
+Indonesia,2005,Medium,Low_eff,891.4998
+Indonesia,2006,Medium,Low_eff,962.553
+Indonesia,2007,Medium,Low_eff,1039.3994
+Indonesia,2008,Medium,Low_eff,1122.2723
+Indonesia,2009,Medium,Low_eff,1211.3816
+Indonesia,2010,Medium,Low_eff,1307.3046
+Indonesia,2011,Medium,Low_eff,1410.8828
+Indonesia,2012,Medium,Low_eff,1522.6706
+Indonesia,2013,Medium,Low_eff,1642.6071
+Indonesia,2014,Medium,Low_eff,1771.0463
+Indonesia,2015,Medium,Low_eff,1902.7566
+Indonesia,2016,Medium,Low_eff,2036.1311
+Indonesia,2017,Medium,Low_eff,2228.1209
+Indonesia,2018,Medium,Low_eff,2365.1255
+Indonesia,2019,Medium,Low_eff,2562.0957
+Indonesia,2020,Medium,Low_eff,2466.2763
+Indonesia,2021,Medium,Low_eff,2601.73
+Indonesia,2022,Medium,Low_eff,2796.8678
+Indonesia,2023,Medium,Low_eff,2997.3451
+Indonesia,2024,Medium,Low_eff,3263.539
+Indonesia,2025,Medium,Low_eff,3472.01
+Indonesia,2026,Medium,Low_eff,3317.1706
+Indonesia,2027,Medium,Low_eff,3152.6317
+Indonesia,2028,Medium,Low_eff,2978.6633
+Indonesia,2029,Medium,Low_eff,2795.9485
+Indonesia,2030,Medium,Low_eff,2605.566
+Indonesia,2031,Medium,Low_eff,2408.968
+Indonesia,2032,Medium,Low_eff,2207.9501
+Indonesia,2033,Medium,Low_eff,2004.6115
+Indonesia,2034,Medium,Low_eff,1801.3001
+Indonesia,2035,Medium,Low_eff,1600.541
+Indonesia,2036,Medium,Low_eff,1404.9472
+Indonesia,2037,Medium,Low_eff,1217.1141
+Indonesia,2038,Medium,Low_eff,1039.5012
+Indonesia,2039,Medium,Low_eff,874.3105
+Indonesia,2040,Medium,Low_eff,723.3685
+Indonesia,2041,Medium,Low_eff,588.0262
+Indonesia,2042,Medium,Low_eff,469.0863
+Indonesia,2043,Medium,Low_eff,366.7681
+Indonesia,2044,Medium,Low_eff,280.7158
+Indonesia,2045,Medium,Low_eff,210.0512
+Indonesia,2046,Medium,Low_eff,153.4642
+Indonesia,2047,Medium,Low_eff,109.3326
+Indonesia,2048,Medium,Low_eff,75.8555
+Indonesia,2049,Medium,Low_eff,51.1862
+Indonesia,2050,Medium,Low_eff,33.5491
+Indonesia,2051,Medium,Low_eff,21.3307
+Indonesia,2052,Medium,Low_eff,13.139
+Indonesia,2053,Medium,Low_eff,7.8305
+Indonesia,2054,Medium,Low_eff,4.5095
+Indonesia,2055,Medium,Low_eff,2.5062
+Indonesia,2056,Medium,Low_eff,1.3424
+Indonesia,2057,Medium,Low_eff,0.6922
+Indonesia,2058,Medium,Low_eff,0.3431
+Indonesia,2059,Medium,Low_eff,0.1633
+Indonesia,2060,Medium,Low_eff,0.0745
+Indonesia,2005,Medium,Mid_eff,571.783
+Indonesia,2006,Medium,Mid_eff,617.3545
+Indonesia,2007,Medium,Mid_eff,666.6417
+Indonesia,2008,Medium,Mid_eff,719.794
+Indonesia,2009,Medium,Mid_eff,776.9463
+Indonesia,2010,Medium,Mid_eff,838.4686
+Indonesia,2011,Medium,Mid_eff,904.9007
+Indonesia,2012,Medium,Mid_eff,976.5983
+Indonesia,2013,Medium,Mid_eff,1053.5222
+Indonesia,2014,Medium,Mid_eff,1135.8995
+Indonesia,2015,Medium,Mid_eff,1220.3748
+Indonesia,2016,Medium,Mid_eff,1305.9175
+Indonesia,2017,Medium,Mid_eff,1429.0544
+Indonesia,2018,Medium,Mid_eff,1516.9253
+Indonesia,2019,Medium,Mid_eff,1643.2565
+Indonesia,2020,Medium,Mid_eff,1581.8006
+Indonesia,2021,Medium,Mid_eff,1668.6768
+Indonesia,2022,Medium,Mid_eff,1793.8327
+Indonesia,2023,Medium,Mid_eff,1922.4132
+Indonesia,2024,Medium,Mid_eff,2093.1425
+Indonesia,2025,Medium,Mid_eff,2226.85
+Indonesia,2026,Medium,Mid_eff,2127.5403
+Indonesia,2027,Medium,Mid_eff,2022.0097
+Indonesia,2028,Medium,Mid_eff,1910.4312
+Indonesia,2029,Medium,Mid_eff,1793.2431
+Indonesia,2030,Medium,Mid_eff,1671.1371
+Indonesia,2031,Medium,Mid_eff,1545.0446
+Indonesia,2032,Medium,Mid_eff,1416.1173
+Indonesia,2033,Medium,Mid_eff,1285.7017
+Indonesia,2034,Medium,Mid_eff,1155.3034
+Indonesia,2035,Medium,Mid_eff,1026.5422
+Indonesia,2036,Medium,Mid_eff,901.0938
+Indonesia,2037,Medium,Mid_eff,780.6229
+Indonesia,2038,Medium,Mid_eff,666.707
+Indonesia,2039,Medium,Mid_eff,560.7582
+Indonesia,2040,Medium,Mid_eff,463.9483
+Indonesia,2041,Medium,Mid_eff,377.1436
+Indonesia,2042,Medium,Mid_eff,300.8588
+Indonesia,2043,Medium,Mid_eff,235.2348
+Indonesia,2044,Medium,Mid_eff,180.0433
+Indonesia,2045,Medium,Mid_eff,134.721
+Indonesia,2046,Medium,Mid_eff,98.4277
+Indonesia,2047,Medium,Mid_eff,70.1228
+Indonesia,2048,Medium,Mid_eff,48.6516
+Indonesia,2049,Medium,Mid_eff,32.8294
+Indonesia,2050,Medium,Mid_eff,21.5175
+Indonesia,2051,Medium,Mid_eff,13.6809
+Indonesia,2052,Medium,Mid_eff,8.427
+Indonesia,2053,Medium,Mid_eff,5.0223
+Indonesia,2054,Medium,Mid_eff,2.8923
+Indonesia,2055,Medium,Mid_eff,1.6074
+Indonesia,2056,Medium,Mid_eff,0.861
+Indonesia,2057,Medium,Mid_eff,0.4439
+Indonesia,2058,Medium,Mid_eff,0.22
+Indonesia,2059,Medium,Mid_eff,0.1047
+Indonesia,2060,Medium,Mid_eff,0.0478
+Indonesia,2005,Small,High_eff,1228.3251
+Indonesia,2006,Small,High_eff,1326.2234
+Indonesia,2007,Small,High_eff,1432.1038
+Indonesia,2008,Small,High_eff,1546.2877
+Indonesia,2009,Small,High_eff,1669.0642
+Indonesia,2010,Small,High_eff,1801.2286
+Indonesia,2011,Small,High_eff,1943.9406
+Indonesia,2012,Small,High_eff,2097.9639
+Indonesia,2013,Small,High_eff,2263.2147
+Indonesia,2014,Small,High_eff,2440.1805
+Indonesia,2015,Small,High_eff,2621.6535
+Indonesia,2016,Small,High_eff,2805.4194
+Indonesia,2017,Small,High_eff,3069.9465
+Indonesia,2018,Small,High_eff,3258.7139
+Indonesia,2019,Small,High_eff,3530.1032
+Indonesia,2020,Small,High_eff,3398.0814
+Indonesia,2021,Small,High_eff,3584.7121
+Indonesia,2022,Small,High_eff,3853.5765
+Indonesia,2023,Small,High_eff,4129.7979
+Indonesia,2024,Small,High_eff,4496.5648
+Indonesia,2025,Small,High_eff,4783.8
+Indonesia,2026,Small,High_eff,4570.4593
+Indonesia,2027,Small,High_eff,4343.7547
+Indonesia,2028,Small,High_eff,4104.0577
+Indonesia,2029,Small,High_eff,3852.3098
+Indonesia,2030,Small,High_eff,3589.9973
+Indonesia,2031,Small,High_eff,3319.1209
+Indonesia,2032,Small,High_eff,3042.1547
+Indonesia,2033,Small,High_eff,2761.991
+Indonesia,2034,Small,High_eff,2481.8648
+Indonesia,2035,Small,High_eff,2205.2552
+Indonesia,2036,Small,High_eff,1935.7624
+Indonesia,2037,Small,High_eff,1676.9624
+Indonesia,2038,Small,High_eff,1432.2441
+Indonesia,2039,Small,High_eff,1204.6412
+Indonesia,2040,Small,High_eff,996.6706
+Indonesia,2041,Small,High_eff,810.1935
+Indonesia,2042,Small,High_eff,646.3159
+Indonesia,2043,Small,High_eff,505.3399
+Indonesia,2044,Small,High_eff,386.7755
+Indonesia,2045,Small,High_eff,289.4125
+Indonesia,2046,Small,High_eff,211.4459
+Indonesia,2047,Small,High_eff,150.6404
+Indonesia,2048,Small,High_eff,104.5151
+Indonesia,2049,Small,High_eff,70.5253
+Indonesia,2050,Small,High_eff,46.2246
+Indonesia,2051,Small,High_eff,29.3899
+Indonesia,2052,Small,High_eff,18.1032
+Indonesia,2053,Small,High_eff,10.789
+Indonesia,2054,Small,High_eff,6.2133
+Indonesia,2055,Small,High_eff,3.4531
+Indonesia,2056,Small,High_eff,1.8496
+Indonesia,2057,Small,High_eff,0.9537
+Indonesia,2058,Small,High_eff,0.4727
+Indonesia,2059,Small,High_eff,0.225
+Indonesia,2060,Small,High_eff,0.1027
+Indonesia,2005,Small,Low_eff,2967.2814
+Indonesia,2006,Small,Low_eff,3203.7757
+Indonesia,2007,Small,Low_eff,3459.5525
+Indonesia,2008,Small,Low_eff,3735.3879
+Indonesia,2009,Small,Low_eff,4031.9808
+Indonesia,2010,Small,Low_eff,4351.2522
+Indonesia,2011,Small,Low_eff,4696.0035
+Indonesia,2012,Small,Low_eff,5068.0797
+Indonesia,2013,Small,Low_eff,5467.2782
+Indonesia,2014,Small,Low_eff,5894.777
+Indonesia,2015,Small,Low_eff,6333.1635
+Indonesia,2016,Small,Low_eff,6777.0893
+Indonesia,2017,Small,Low_eff,7416.1111
+Indonesia,2018,Small,Low_eff,7872.1191
+Indonesia,2019,Small,Low_eff,8527.7177
+Indonesia,2020,Small,Low_eff,8208.7908
+Indonesia,2021,Small,Low_eff,8659.6372
+Indonesia,2022,Small,Low_eff,9309.1366
+Indonesia,2023,Small,Low_eff,9976.4084
+Indonesia,2024,Small,Low_eff,10862.4121
+Indonesia,2025,Small,Low_eff,11556.29
+Indonesia,2026,Small,Low_eff,11040.9201
+Indonesia,2027,Small,Low_eff,10493.2666
+Indonesia,2028,Small,Low_eff,9914.2274
+Indonesia,2029,Small,Low_eff,9306.0767
+Indonesia,2030,Small,Low_eff,8672.4049
+Indonesia,2031,Small,Low_eff,8018.045
+Indonesia,2032,Small,Low_eff,7348.974
+Indonesia,2033,Small,Low_eff,6672.1788
+Indonesia,2034,Small,Low_eff,5995.4741
+Indonesia,2035,Small,Low_eff,5327.2646
+Indonesia,2036,Small,Low_eff,4676.2474
+Indonesia,2037,Small,Low_eff,4051.0606
+Indonesia,2038,Small,Low_eff,3459.8913
+Indonesia,2039,Small,Low_eff,2910.068
+Indonesia,2040,Small,Low_eff,2407.6705
+Indonesia,2041,Small,Low_eff,1957.1953
+Indonesia,2042,Small,Low_eff,1561.3139
+Indonesia,2043,Small,Low_eff,1220.7563
+Indonesia,2044,Small,Low_eff,934.3388
+Indonesia,2045,Small,Low_eff,699.1377
+Indonesia,2046,Small,Low_eff,510.7926
+Indonesia,2047,Small,Low_eff,363.9041
+Indonesia,2048,Small,Low_eff,252.4785
+Indonesia,2049,Small,Low_eff,170.3689
+Indonesia,2050,Small,Low_eff,111.6653
+Indonesia,2051,Small,Low_eff,70.9975
+Indonesia,2052,Small,Low_eff,43.7321
+Indonesia,2053,Small,Low_eff,26.0632
+Indonesia,2054,Small,Low_eff,15.0095
+Indonesia,2055,Small,Low_eff,8.3417
+Indonesia,2056,Small,Low_eff,4.4682
+Indonesia,2057,Small,Low_eff,2.3038
+Indonesia,2058,Small,Low_eff,1.142
+Indonesia,2059,Small,Low_eff,0.5435
+Indonesia,2060,Small,Low_eff,0.248
+Indonesia,2005,Small,Mid_eff,2764.0498
+Indonesia,2006,Small,Mid_eff,2984.3464
+Indonesia,2007,Small,Mid_eff,3222.6048
+Indonesia,2008,Small,Mid_eff,3479.5481
+Indonesia,2009,Small,Mid_eff,3755.827
+Indonesia,2010,Small,Mid_eff,4053.2313
+Indonesia,2011,Small,Mid_eff,4374.3702
+Indonesia,2012,Small,Mid_eff,4720.9627
+Indonesia,2013,Small,Mid_eff,5092.8197
+Indonesia,2014,Small,Mid_eff,5491.0388
+Indonesia,2015,Small,Mid_eff,5899.3998
+Indonesia,2016,Small,Mid_eff,6312.9208
+Indonesia,2017,Small,Mid_eff,6908.1754
+Indonesia,2018,Small,Mid_eff,7332.951
+Indonesia,2019,Small,Mid_eff,7943.6472
+Indonesia,2020,Small,Mid_eff,7646.5639
+Indonesia,2021,Small,Mid_eff,8066.5313
+Indonesia,2022,Small,Mid_eff,8671.546
+Indonesia,2023,Small,Mid_eff,9293.1158
+Indonesia,2024,Small,Mid_eff,10118.4363
+Indonesia,2025,Small,Mid_eff,10764.79
+Indonesia,2026,Small,Mid_eff,10284.7182
+Indonesia,2027,Small,Mid_eff,9774.5739
+Indonesia,2028,Small,Mid_eff,9235.1936
+Indonesia,2029,Small,Mid_eff,8668.6957
+Indonesia,2030,Small,Mid_eff,8078.4246
+Indonesia,2031,Small,Mid_eff,7468.8823
+Indonesia,2032,Small,Mid_eff,6845.6366
+Indonesia,2033,Small,Mid_eff,6215.1957
+Indonesia,2034,Small,Mid_eff,5584.8391
+Indonesia,2035,Small,Mid_eff,4962.3957
+Indonesia,2036,Small,Mid_eff,4355.9673
+Indonesia,2037,Small,Mid_eff,3773.6001
+Indonesia,2038,Small,Mid_eff,3222.9205
+Indonesia,2039,Small,Mid_eff,2710.755
+Indonesia,2040,Small,Mid_eff,2242.7671
+Indonesia,2041,Small,Mid_eff,1823.1454
+Indonesia,2042,Small,Mid_eff,1454.3782
+Indonesia,2043,Small,Mid_eff,1137.1457
+Indonesia,2044,Small,Mid_eff,870.3451
+Indonesia,2045,Small,Mid_eff,651.2532
+Indonesia,2046,Small,Mid_eff,475.808
+Indonesia,2047,Small,Mid_eff,338.98
+Indonesia,2048,Small,Mid_eff,235.186
+Indonesia,2049,Small,Mid_eff,158.7002
+Indonesia,2050,Small,Mid_eff,104.0173
+Indonesia,2051,Small,Mid_eff,66.1349
+Indonesia,2052,Small,Mid_eff,40.7369
+Indonesia,2053,Small,Mid_eff,24.2781
+Indonesia,2054,Small,Mid_eff,13.9814
+Indonesia,2055,Small,Mid_eff,7.7703
+Indonesia,2056,Small,Mid_eff,4.1622
+Indonesia,2057,Small,Mid_eff,2.146
+Indonesia,2058,Small,Mid_eff,1.0637
+Indonesia,2059,Small,Mid_eff,0.5062
+Indonesia,2060,Small,Mid_eff,0.231
+Lao PDR,2005,Large,High_eff,4.3758
+Lao PDR,2006,Large,High_eff,4.8664
+Lao PDR,2007,Large,High_eff,5.4117
+Lao PDR,2008,Large,High_eff,6.0163
+Lao PDR,2009,Large,High_eff,6.6865
+Lao PDR,2010,Large,High_eff,7.4289
+Lao PDR,2011,Large,High_eff,8.2512
+Lao PDR,2012,Large,High_eff,9.162
+Lao PDR,2013,Large,High_eff,10.1705
+Lao PDR,2014,Large,High_eff,11.2857
+Lao PDR,2015,Large,High_eff,13.083
+Lao PDR,2016,Large,High_eff,14.1135
+Lao PDR,2017,Large,High_eff,16.0178
+Lao PDR,2018,Large,High_eff,17.9748
+Lao PDR,2019,Large,High_eff,19.1145
+Lao PDR,2020,Large,High_eff,20.2808
+Lao PDR,2021,Large,High_eff,20.5735
+Lao PDR,2022,Large,High_eff,22.677
+Lao PDR,2023,Large,High_eff,23.9108
+Lao PDR,2024,Large,High_eff,25.1651
+Lao PDR,2025,Large,High_eff,26.44
+Lao PDR,2026,Large,High_eff,25.2907
+Lao PDR,2027,Large,High_eff,24.0442
+Lao PDR,2028,Large,High_eff,22.7047
+Lao PDR,2029,Large,High_eff,21.2802
+Lao PDR,2030,Large,High_eff,19.783
+Lao PDR,2031,Large,High_eff,18.2286
+Lao PDR,2032,Large,High_eff,16.6358
+Lao PDR,2033,Large,High_eff,15.0258
+Lao PDR,2034,Large,High_eff,13.4212
+Lao PDR,2035,Large,High_eff,11.8454
+Lao PDR,2036,Large,High_eff,10.3215
+Lao PDR,2037,Large,High_eff,8.8712
+Lao PDR,2038,Large,High_eff,7.5139
+Lao PDR,2039,Large,High_eff,6.2656
+Lao PDR,2040,Large,High_eff,5.1384
+Lao PDR,2041,Large,High_eff,4.1402
+Lao PDR,2042,Large,High_eff,3.2737
+Lao PDR,2043,Large,High_eff,2.5375
+Lao PDR,2044,Large,High_eff,1.9258
+Lao PDR,2045,Large,High_eff,1.4294
+Lao PDR,2046,Large,High_eff,1.0362
+Lao PDR,2047,Large,High_eff,0.7328
+Lao PDR,2048,Large,High_eff,0.5049
+Lao PDR,2049,Large,High_eff,0.3385
+Lao PDR,2050,Large,High_eff,0.2206
+Lao PDR,2051,Large,High_eff,0.1395
+Lao PDR,2052,Large,High_eff,0.0855
+Lao PDR,2053,Large,High_eff,0.0507
+Lao PDR,2054,Large,High_eff,0.0291
+Lao PDR,2055,Large,High_eff,0.0161
+Lao PDR,2056,Large,High_eff,0.0086
+Lao PDR,2057,Large,High_eff,0.0044
+Lao PDR,2058,Large,High_eff,0.0022
+Lao PDR,2059,Large,High_eff,0.001
+Lao PDR,2060,Large,High_eff,0.0005
+Lao PDR,2005,Large,Low_eff,7.7685
+Lao PDR,2006,Large,Low_eff,8.6395
+Lao PDR,2007,Large,Low_eff,9.6075
+Lao PDR,2008,Large,Low_eff,10.681
+Lao PDR,2009,Large,Low_eff,11.8708
+Lao PDR,2010,Large,Low_eff,13.1889
+Lao PDR,2011,Large,Low_eff,14.6487
+Lao PDR,2012,Large,Low_eff,16.2657
+Lao PDR,2013,Large,Low_eff,18.0561
+Lao PDR,2014,Large,Low_eff,20.036
+Lao PDR,2015,Large,Low_eff,23.2267
+Lao PDR,2016,Large,Low_eff,25.0563
+Lao PDR,2017,Large,Low_eff,28.4371
+Lao PDR,2018,Large,Low_eff,31.9115
+Lao PDR,2019,Large,Low_eff,33.9347
+Lao PDR,2020,Large,Low_eff,36.0053
+Lao PDR,2021,Large,Low_eff,36.525
+Lao PDR,2022,Large,Low_eff,40.2594
+Lao PDR,2023,Large,Low_eff,42.4498
+Lao PDR,2024,Large,Low_eff,44.6767
+Lao PDR,2025,Large,Low_eff,46.94
+Lao PDR,2026,Large,Low_eff,44.8996
+Lao PDR,2027,Large,Low_eff,42.6867
+Lao PDR,2028,Large,Low_eff,40.3085
+Lao PDR,2029,Large,Low_eff,37.7796
+Lao PDR,2030,Large,Low_eff,35.1215
+Lao PDR,2031,Large,Low_eff,32.362
+Lao PDR,2032,Large,Low_eff,29.5343
+Lao PDR,2033,Large,Low_eff,26.6759
+Lao PDR,2034,Large,Low_eff,23.8272
+Lao PDR,2035,Large,Low_eff,21.0296
+Lao PDR,2036,Large,Low_eff,18.3242
+Lao PDR,2037,Large,Low_eff,15.7494
+Lao PDR,2038,Large,Low_eff,13.3396
+Lao PDR,2039,Large,Low_eff,11.1235
+Lao PDR,2040,Large,Low_eff,9.1225
+Lao PDR,2041,Large,Low_eff,7.3502
+Lao PDR,2042,Large,Low_eff,5.812
+Lao PDR,2043,Large,Low_eff,4.505
+Lao PDR,2044,Large,Low_eff,3.419
+Lao PDR,2045,Large,Low_eff,2.5376
+Lao PDR,2046,Large,Low_eff,1.8396
+Lao PDR,2047,Large,Low_eff,1.301
+Lao PDR,2048,Large,Low_eff,0.8964
+Lao PDR,2049,Large,Low_eff,0.601
+Lao PDR,2050,Large,Low_eff,0.3916
+Lao PDR,2051,Large,Low_eff,0.2476
+Lao PDR,2052,Large,Low_eff,0.1518
+Lao PDR,2053,Large,Low_eff,0.0901
+Lao PDR,2054,Large,Low_eff,0.0517
+Lao PDR,2055,Large,Low_eff,0.0286
+Lao PDR,2056,Large,Low_eff,0.0153
+Lao PDR,2057,Large,Low_eff,0.0079
+Lao PDR,2058,Large,Low_eff,0.0039
+Lao PDR,2059,Large,Low_eff,0.0018
+Lao PDR,2060,Large,Low_eff,0.0008
+Lao PDR,2005,Large,Mid_eff,9.3209
+Lao PDR,2006,Large,Mid_eff,10.3659
+Lao PDR,2007,Large,Mid_eff,11.5274
+Lao PDR,2008,Large,Mid_eff,12.8154
+Lao PDR,2009,Large,Mid_eff,14.2429
+Lao PDR,2010,Large,Mid_eff,15.8244
+Lao PDR,2011,Large,Mid_eff,17.576
+Lao PDR,2012,Large,Mid_eff,19.5161
+Lao PDR,2013,Large,Mid_eff,21.6643
+Lao PDR,2014,Large,Mid_eff,24.0398
+Lao PDR,2015,Large,Mid_eff,27.8681
+Lao PDR,2016,Large,Mid_eff,30.0633
+Lao PDR,2017,Large,Mid_eff,34.1197
+Lao PDR,2018,Large,Mid_eff,38.2883
+Lao PDR,2019,Large,Mid_eff,40.7159
+Lao PDR,2020,Large,Mid_eff,43.2002
+Lao PDR,2021,Large,Mid_eff,43.8238
+Lao PDR,2022,Large,Mid_eff,48.3045
+Lao PDR,2023,Large,Mid_eff,50.9325
+Lao PDR,2024,Large,Mid_eff,53.6044
+Lao PDR,2025,Large,Mid_eff,56.32
+Lao PDR,2026,Large,Mid_eff,53.8718
+Lao PDR,2027,Large,Mid_eff,51.2167
+Lao PDR,2028,Large,Mid_eff,48.3634
+Lao PDR,2029,Large,Mid_eff,45.3291
+Lao PDR,2030,Large,Mid_eff,42.1398
+Lao PDR,2031,Large,Mid_eff,38.8288
+Lao PDR,2032,Large,Mid_eff,35.4361
+Lao PDR,2033,Large,Mid_eff,32.0065
+Lao PDR,2034,Large,Mid_eff,28.5886
+Lao PDR,2035,Large,Mid_eff,25.232
+Lao PDR,2036,Large,Mid_eff,21.9859
+Lao PDR,2037,Large,Mid_eff,18.8966
+Lao PDR,2038,Large,Mid_eff,16.0053
+Lao PDR,2039,Large,Mid_eff,13.3463
+Lao PDR,2040,Large,Mid_eff,10.9454
+Lao PDR,2041,Large,Mid_eff,8.819
+Lao PDR,2042,Large,Mid_eff,6.9734
+Lao PDR,2043,Large,Mid_eff,5.4052
+Lao PDR,2044,Large,Mid_eff,4.1022
+Lao PDR,2045,Large,Mid_eff,3.0447
+Lao PDR,2046,Large,Mid_eff,2.2072
+Lao PDR,2047,Large,Mid_eff,1.561
+Lao PDR,2048,Large,Mid_eff,1.0756
+Lao PDR,2049,Large,Mid_eff,0.7211
+Lao PDR,2050,Large,Mid_eff,0.4699
+Lao PDR,2051,Large,Mid_eff,0.2971
+Lao PDR,2052,Large,Mid_eff,0.1821
+Lao PDR,2053,Large,Mid_eff,0.1081
+Lao PDR,2054,Large,Mid_eff,0.062
+Lao PDR,2055,Large,Mid_eff,0.0343
+Lao PDR,2056,Large,Mid_eff,0.0183
+Lao PDR,2057,Large,Mid_eff,0.0094
+Lao PDR,2058,Large,Mid_eff,0.0047
+Lao PDR,2059,Large,Mid_eff,0.0022
+Lao PDR,2060,Large,Mid_eff,0.001
+Lao PDR,2005,Medium,High_eff,3.2074
+Lao PDR,2006,Medium,High_eff,3.567
+Lao PDR,2007,Medium,High_eff,3.9666
+Lao PDR,2008,Medium,High_eff,4.4098
+Lao PDR,2009,Medium,High_eff,4.9011
+Lao PDR,2010,Medium,High_eff,5.4452
+Lao PDR,2011,Medium,High_eff,6.048
+Lao PDR,2012,Medium,High_eff,6.7156
+Lao PDR,2013,Medium,High_eff,7.4548
+Lao PDR,2014,Medium,High_eff,8.2722
+Lao PDR,2015,Medium,High_eff,9.5895
+Lao PDR,2016,Medium,High_eff,10.3449
+Lao PDR,2017,Medium,High_eff,11.7408
+Lao PDR,2018,Medium,High_eff,13.1752
+Lao PDR,2019,Medium,High_eff,14.0105
+Lao PDR,2020,Medium,High_eff,14.8654
+Lao PDR,2021,Medium,High_eff,15.08
+Lao PDR,2022,Medium,High_eff,16.6218
+Lao PDR,2023,Medium,High_eff,17.5261
+Lao PDR,2024,Medium,High_eff,18.4456
+Lao PDR,2025,Medium,High_eff,19.38
+Lao PDR,2026,Medium,High_eff,18.5376
+Lao PDR,2027,Medium,High_eff,17.6239
+Lao PDR,2028,Medium,High_eff,16.6421
+Lao PDR,2029,Medium,High_eff,15.598
+Lao PDR,2030,Medium,High_eff,14.5005
+Lao PDR,2031,Medium,High_eff,13.3612
+Lao PDR,2032,Medium,High_eff,12.1937
+Lao PDR,2033,Medium,High_eff,11.0136
+Lao PDR,2034,Medium,High_eff,9.8375
+Lao PDR,2035,Medium,High_eff,8.6825
+Lao PDR,2036,Medium,High_eff,7.5655
+Lao PDR,2037,Medium,High_eff,6.5024
+Lao PDR,2038,Medium,High_eff,5.5075
+Lao PDR,2039,Medium,High_eff,4.5925
+Lao PDR,2040,Medium,High_eff,3.7664
+Lao PDR,2041,Medium,High_eff,3.0347
+Lao PDR,2042,Medium,High_eff,2.3996
+Lao PDR,2043,Medium,High_eff,1.86
+Lao PDR,2044,Medium,High_eff,1.4116
+Lao PDR,2045,Medium,High_eff,1.0477
+Lao PDR,2046,Medium,High_eff,0.7595
+Lao PDR,2047,Medium,High_eff,0.5371
+Lao PDR,2048,Medium,High_eff,0.3701
+Lao PDR,2049,Medium,High_eff,0.2481
+Lao PDR,2050,Medium,High_eff,0.1617
+Lao PDR,2051,Medium,High_eff,0.1022
+Lao PDR,2052,Medium,High_eff,0.0627
+Lao PDR,2053,Medium,High_eff,0.0372
+Lao PDR,2054,Medium,High_eff,0.0213
+Lao PDR,2055,Medium,High_eff,0.0118
+Lao PDR,2056,Medium,High_eff,0.0063
+Lao PDR,2057,Medium,High_eff,0.0032
+Lao PDR,2058,Medium,High_eff,0.0016
+Lao PDR,2059,Medium,High_eff,0.0008
+Lao PDR,2060,Medium,High_eff,0.0003
+Lao PDR,2005,Medium,Low_eff,9.4599
+Lao PDR,2006,Medium,Low_eff,10.5205
+Lao PDR,2007,Medium,Low_eff,11.6993
+Lao PDR,2008,Medium,Low_eff,13.0065
+Lao PDR,2009,Medium,Low_eff,14.4553
+Lao PDR,2010,Medium,Low_eff,16.0604
+Lao PDR,2011,Medium,Low_eff,17.8381
+Lao PDR,2012,Medium,Low_eff,19.8072
+Lao PDR,2013,Medium,Low_eff,21.9874
+Lao PDR,2014,Medium,Low_eff,24.3983
+Lao PDR,2015,Medium,Low_eff,28.2837
+Lao PDR,2016,Medium,Low_eff,30.5116
+Lao PDR,2017,Medium,Low_eff,34.6286
+Lao PDR,2018,Medium,Low_eff,38.8594
+Lao PDR,2019,Medium,Low_eff,41.3231
+Lao PDR,2020,Medium,Low_eff,43.8445
+Lao PDR,2021,Medium,Low_eff,44.4774
+Lao PDR,2022,Medium,Low_eff,49.0249
+Lao PDR,2023,Medium,Low_eff,51.6922
+Lao PDR,2024,Medium,Low_eff,54.4039
+Lao PDR,2025,Medium,Low_eff,57.16
+Lao PDR,2026,Medium,Low_eff,54.6753
+Lao PDR,2027,Medium,Low_eff,51.9806
+Lao PDR,2028,Medium,Low_eff,49.0847
+Lao PDR,2029,Medium,Low_eff,46.0052
+Lao PDR,2030,Medium,Low_eff,42.7683
+Lao PDR,2031,Medium,Low_eff,39.408
+Lao PDR,2032,Medium,Low_eff,35.9646
+Lao PDR,2033,Medium,Low_eff,32.4839
+Lao PDR,2034,Medium,Low_eff,29.015
+Lao PDR,2035,Medium,Low_eff,25.6083
+Lao PDR,2036,Medium,Low_eff,22.3138
+Lao PDR,2037,Medium,Low_eff,19.1785
+Lao PDR,2038,Medium,Low_eff,16.244
+Lao PDR,2039,Medium,Low_eff,13.5453
+Lao PDR,2040,Medium,Low_eff,11.1087
+Lao PDR,2041,Medium,Low_eff,8.9505
+Lao PDR,2042,Medium,Low_eff,7.0774
+Lao PDR,2043,Medium,Low_eff,5.4858
+Lao PDR,2044,Medium,Low_eff,4.1634
+Lao PDR,2045,Medium,Low_eff,3.0901
+Lao PDR,2046,Medium,Low_eff,2.2401
+Lao PDR,2047,Medium,Low_eff,1.5843
+Lao PDR,2048,Medium,Low_eff,1.0916
+Lao PDR,2049,Medium,Low_eff,0.7319
+Lao PDR,2050,Medium,Low_eff,0.4769
+Lao PDR,2051,Medium,Low_eff,0.3016
+Lao PDR,2052,Medium,Low_eff,0.1848
+Lao PDR,2053,Medium,Low_eff,0.1097
+Lao PDR,2054,Medium,Low_eff,0.0629
+Lao PDR,2055,Medium,Low_eff,0.0348
+Lao PDR,2056,Medium,Low_eff,0.0186
+Lao PDR,2057,Medium,Low_eff,0.0096
+Lao PDR,2058,Medium,Low_eff,0.0047
+Lao PDR,2059,Medium,Low_eff,0.0022
+Lao PDR,2060,Medium,Low_eff,0.001
+Lao PDR,2005,Medium,Mid_eff,5.2182
+Lao PDR,2006,Medium,Mid_eff,5.8032
+Lao PDR,2007,Medium,Mid_eff,6.4535
+Lao PDR,2008,Medium,Mid_eff,7.1745
+Lao PDR,2009,Medium,Mid_eff,7.9737
+Lao PDR,2010,Medium,Mid_eff,8.8591
+Lao PDR,2011,Medium,Mid_eff,9.8397
+Lao PDR,2012,Medium,Mid_eff,10.9258
+Lao PDR,2013,Medium,Mid_eff,12.1284
+Lao PDR,2014,Medium,Mid_eff,13.4583
+Lao PDR,2015,Medium,Mid_eff,15.6016
+Lao PDR,2016,Medium,Mid_eff,16.8305
+Lao PDR,2017,Medium,Mid_eff,19.1014
+Lao PDR,2018,Medium,Mid_eff,21.4352
+Lao PDR,2019,Medium,Mid_eff,22.7942
+Lao PDR,2020,Medium,Mid_eff,24.185
+Lao PDR,2021,Medium,Mid_eff,24.5342
+Lao PDR,2022,Medium,Mid_eff,27.0426
+Lao PDR,2023,Medium,Mid_eff,28.5139
+Lao PDR,2024,Medium,Mid_eff,30.0097
+Lao PDR,2025,Medium,Mid_eff,31.53
+Lao PDR,2026,Medium,Mid_eff,30.1594
+Lao PDR,2027,Medium,Mid_eff,28.673
+Lao PDR,2028,Medium,Mid_eff,27.0756
+Lao PDR,2029,Medium,Mid_eff,25.3769
+Lao PDR,2030,Medium,Mid_eff,23.5914
+Lao PDR,2031,Medium,Mid_eff,21.7378
+Lao PDR,2032,Medium,Mid_eff,19.8384
+Lao PDR,2033,Medium,Mid_eff,17.9184
+Lao PDR,2034,Medium,Mid_eff,16.0049
+Lao PDR,2035,Medium,Mid_eff,14.1258
+Lao PDR,2036,Medium,Mid_eff,12.3085
+Lao PDR,2037,Medium,Mid_eff,10.579
+Lao PDR,2038,Medium,Mid_eff,8.9604
+Lao PDR,2039,Medium,Mid_eff,7.4717
+Lao PDR,2040,Medium,Mid_eff,6.1276
+Lao PDR,2041,Medium,Mid_eff,4.9372
+Lao PDR,2042,Medium,Mid_eff,3.9039
+Lao PDR,2043,Medium,Mid_eff,3.026
+Lao PDR,2044,Medium,Mid_eff,2.2966
+Lao PDR,2045,Medium,Mid_eff,1.7045
+Lao PDR,2046,Medium,Mid_eff,1.2357
+Lao PDR,2047,Medium,Mid_eff,0.8739
+Lao PDR,2048,Medium,Mid_eff,0.6021
+Lao PDR,2049,Medium,Mid_eff,0.4037
+Lao PDR,2050,Medium,Mid_eff,0.2631
+Lao PDR,2051,Medium,Mid_eff,0.1663
+Lao PDR,2052,Medium,Mid_eff,0.102
+Lao PDR,2053,Medium,Mid_eff,0.0605
+Lao PDR,2054,Medium,Mid_eff,0.0347
+Lao PDR,2055,Medium,Mid_eff,0.0192
+Lao PDR,2056,Medium,Mid_eff,0.0103
+Lao PDR,2057,Medium,Mid_eff,0.0053
+Lao PDR,2058,Medium,Mid_eff,0.0026
+Lao PDR,2059,Medium,Mid_eff,0.0012
+Lao PDR,2060,Medium,Mid_eff,0.0006
+Lao PDR,2005,Small,High_eff,6.802
+Lao PDR,2006,Small,High_eff,7.5646
+Lao PDR,2007,Small,High_eff,8.4122
+Lao PDR,2008,Small,High_eff,9.3521
+Lao PDR,2009,Small,High_eff,10.3939
+Lao PDR,2010,Small,High_eff,11.548
+Lao PDR,2011,Small,High_eff,12.8262
+Lao PDR,2012,Small,High_eff,14.242
+Lao PDR,2013,Small,High_eff,15.8097
+Lao PDR,2014,Small,High_eff,17.5432
+Lao PDR,2015,Small,High_eff,20.337
+Lao PDR,2016,Small,High_eff,21.9389
+Lao PDR,2017,Small,High_eff,24.8991
+Lao PDR,2018,Small,High_eff,27.9412
+Lao PDR,2019,Small,High_eff,29.7127
+Lao PDR,2020,Small,High_eff,31.5257
+Lao PDR,2021,Small,High_eff,31.9808
+Lao PDR,2022,Small,High_eff,35.2506
+Lao PDR,2023,Small,High_eff,37.1684
+Lao PDR,2024,Small,High_eff,39.1183
+Lao PDR,2025,Small,High_eff,41.1
+Lao PDR,2026,Small,High_eff,39.3134
+Lao PDR,2027,Small,High_eff,37.3759
+Lao PDR,2028,Small,High_eff,35.2936
+Lao PDR,2029,Small,High_eff,33.0793
+Lao PDR,2030,Small,High_eff,30.7519
+Lao PDR,2031,Small,High_eff,28.3357
+Lao PDR,2032,Small,High_eff,25.8598
+Lao PDR,2033,Small,High_eff,23.357
+Lao PDR,2034,Small,High_eff,20.8628
+Lao PDR,2035,Small,High_eff,18.4133
+Lao PDR,2036,Small,High_eff,16.0444
+Lao PDR,2037,Small,High_eff,13.79
+Lao PDR,2038,Small,High_eff,11.68
+Lao PDR,2039,Small,High_eff,9.7396
+Lao PDR,2040,Small,High_eff,7.9875
+Lao PDR,2041,Small,High_eff,6.4357
+Lao PDR,2042,Small,High_eff,5.0889
+Lao PDR,2043,Small,High_eff,3.9445
+Lao PDR,2044,Small,High_eff,2.9936
+Lao PDR,2045,Small,High_eff,2.2219
+Lao PDR,2046,Small,High_eff,1.6107
+Lao PDR,2047,Small,High_eff,1.1391
+Lao PDR,2048,Small,High_eff,0.7849
+Lao PDR,2049,Small,High_eff,0.5263
+Lao PDR,2050,Small,High_eff,0.3429
+Lao PDR,2051,Small,High_eff,0.2168
+Lao PDR,2052,Small,High_eff,0.1329
+Lao PDR,2053,Small,High_eff,0.0789
+Lao PDR,2054,Small,High_eff,0.0452
+Lao PDR,2055,Small,High_eff,0.0251
+Lao PDR,2056,Small,High_eff,0.0134
+Lao PDR,2057,Small,High_eff,0.0069
+Lao PDR,2058,Small,High_eff,0.0034
+Lao PDR,2059,Small,High_eff,0.0016
+Lao PDR,2060,Small,High_eff,0.0007
+Lao PDR,2005,Small,Low_eff,25.0399
+Lao PDR,2006,Small,Low_eff,27.8473
+Lao PDR,2007,Small,Low_eff,30.9676
+Lao PDR,2008,Small,Low_eff,34.4277
+Lao PDR,2009,Small,Low_eff,38.2626
+Lao PDR,2010,Small,Low_eff,42.5111
+Lao PDR,2011,Small,Low_eff,47.2168
+Lao PDR,2012,Small,Low_eff,52.4288
+Lao PDR,2013,Small,Low_eff,58.1996
+Lao PDR,2014,Small,Low_eff,64.5813
+Lao PDR,2015,Small,Low_eff,74.8657
+Lao PDR,2016,Small,Low_eff,80.763
+Lao PDR,2017,Small,Low_eff,91.6602
+Lao PDR,2018,Small,Low_eff,102.859
+Lao PDR,2019,Small,Low_eff,109.3805
+Lao PDR,2020,Small,Low_eff,116.0544
+Lao PDR,2021,Small,Low_eff,117.7298
+Lao PDR,2022,Small,Low_eff,129.7668
+Lao PDR,2023,Small,Low_eff,136.8269
+Lao PDR,2024,Small,Low_eff,144.0048
+Lao PDR,2025,Small,Low_eff,151.3
+Lao PDR,2026,Small,Low_eff,144.7231
+Lao PDR,2027,Small,Low_eff,137.5904
+Lao PDR,2028,Small,Low_eff,129.925
+Lao PDR,2029,Small,Low_eff,121.7737
+Lao PDR,2030,Small,Low_eff,113.2059
+Lao PDR,2031,Small,Low_eff,104.3112
+Lao PDR,2032,Small,Low_eff,95.1968
+Lao PDR,2033,Small,Low_eff,85.9835
+Lao PDR,2034,Small,Low_eff,76.8013
+Lao PDR,2035,Small,Low_eff,67.7841
+Lao PDR,2036,Small,Low_eff,59.0637
+Lao PDR,2037,Small,Low_eff,50.7645
+Lao PDR,2038,Small,Low_eff,42.9972
+Lao PDR,2039,Small,Low_eff,35.8539
+Lao PDR,2040,Small,Low_eff,29.4041
+Lao PDR,2041,Small,Low_eff,23.6916
+Lao PDR,2042,Small,Low_eff,18.7335
+Lao PDR,2043,Small,Low_eff,14.5207
+Lao PDR,2044,Small,Low_eff,11.0203
+Lao PDR,2045,Small,Low_eff,8.1793
+Lao PDR,2046,Small,Low_eff,5.9296
+Lao PDR,2047,Small,Low_eff,4.1935
+Lao PDR,2048,Small,Low_eff,2.8894
+Lao PDR,2049,Small,Low_eff,1.9373
+Lao PDR,2050,Small,Low_eff,1.2623
+Lao PDR,2051,Small,Low_eff,0.7982
+Lao PDR,2052,Small,Low_eff,0.4893
+Lao PDR,2053,Small,Low_eff,0.2903
+Lao PDR,2054,Small,Low_eff,0.1665
+Lao PDR,2055,Small,Low_eff,0.0922
+Lao PDR,2056,Small,Low_eff,0.0493
+Lao PDR,2057,Small,Low_eff,0.0253
+Lao PDR,2058,Small,Low_eff,0.0125
+Lao PDR,2059,Small,Low_eff,0.006
+Lao PDR,2060,Small,Low_eff,0.0027
+Lao PDR,2005,Small,Mid_eff,19.825
+Lao PDR,2006,Small,Mid_eff,22.0478
+Lao PDR,2007,Small,Mid_eff,24.5183
+Lao PDR,2008,Small,Mid_eff,27.2577
+Lao PDR,2009,Small,Mid_eff,30.294
+Lao PDR,2010,Small,Mid_eff,33.6577
+Lao PDR,2011,Small,Mid_eff,37.3833
+Lao PDR,2012,Small,Mid_eff,41.5099
+Lao PDR,2013,Small,Mid_eff,46.0789
+Lao PDR,2014,Small,Mid_eff,51.1315
+Lao PDR,2015,Small,Mid_eff,59.2741
+Lao PDR,2016,Small,Mid_eff,63.9431
+Lao PDR,2017,Small,Mid_eff,72.5709
+Lao PDR,2018,Small,Mid_eff,81.4374
+Lao PDR,2019,Small,Mid_eff,86.6007
+Lao PDR,2020,Small,Mid_eff,91.8847
+Lao PDR,2021,Small,Mid_eff,93.2112
+Lao PDR,2022,Small,Mid_eff,102.7413
+Lao PDR,2023,Small,Mid_eff,108.3311
+Lao PDR,2024,Small,Mid_eff,114.0141
+Lao PDR,2025,Small,Mid_eff,119.79
+Lao PDR,2026,Small,Mid_eff,114.5828
+Lao PDR,2027,Small,Mid_eff,108.9356
+Lao PDR,2028,Small,Mid_eff,102.8666
+Lao PDR,2029,Small,Mid_eff,96.4129
+Lao PDR,2030,Small,Mid_eff,89.6294
+Lao PDR,2031,Small,Mid_eff,82.5872
+Lao PDR,2032,Small,Mid_eff,75.3709
+Lao PDR,2033,Small,Mid_eff,68.0764
+Lao PDR,2034,Small,Mid_eff,60.8065
+Lao PDR,2035,Small,Mid_eff,53.6672
+Lao PDR,2036,Small,Mid_eff,46.763
+Lao PDR,2037,Small,Mid_eff,40.1922
+Lao PDR,2038,Small,Mid_eff,34.0425
+Lao PDR,2039,Small,Mid_eff,28.3869
+Lao PDR,2040,Small,Mid_eff,23.2804
+Lao PDR,2041,Small,Mid_eff,18.7576
+Lao PDR,2042,Small,Mid_eff,14.832
+Lao PDR,2043,Small,Mid_eff,11.4966
+Lao PDR,2044,Small,Mid_eff,8.7252
+Lao PDR,2045,Small,Mid_eff,6.4759
+Lao PDR,2046,Small,Mid_eff,4.6947
+Lao PDR,2047,Small,Mid_eff,3.3201
+Lao PDR,2048,Small,Mid_eff,2.2877
+Lao PDR,2049,Small,Mid_eff,1.5338
+Lao PDR,2050,Small,Mid_eff,0.9994
+Lao PDR,2051,Small,Mid_eff,0.632
+Lao PDR,2052,Small,Mid_eff,0.3874
+Lao PDR,2053,Small,Mid_eff,0.2299
+Lao PDR,2054,Small,Mid_eff,0.1318
+Lao PDR,2055,Small,Mid_eff,0.073
+Lao PDR,2056,Small,Mid_eff,0.039
+Lao PDR,2057,Small,Mid_eff,0.0201
+Lao PDR,2058,Small,Mid_eff,0.0099
+Lao PDR,2059,Small,Mid_eff,0.0047
+Lao PDR,2060,Small,Mid_eff,0.0021
+Malaysia,2005,Large,High_eff,1130.0047
+Malaysia,2006,Large,High_eff,1198.0964
+Malaysia,2007,Large,High_eff,1269.545
+Malaysia,2008,Large,High_eff,1344.0729
+Malaysia,2009,Large,High_eff,1421.4212
+Malaysia,2010,Large,High_eff,1499.9084
+Malaysia,2011,Large,High_eff,1580.4003
+Malaysia,2012,Large,High_eff,1665.33
+Malaysia,2013,Large,High_eff,1754.2855
+Malaysia,2014,Large,High_eff,1847.3562
+Malaysia,2015,Large,High_eff,1942.8412
+Malaysia,2016,Large,High_eff,2040.0283
+Malaysia,2017,Large,High_eff,2173.4324
+Malaysia,2018,Large,High_eff,2272.6863
+Malaysia,2019,Large,High_eff,2372.4293
+Malaysia,2020,Large,High_eff,2238.5882
+Malaysia,2021,Large,High_eff,2300.3108
+Malaysia,2022,Large,High_eff,2509.8198
+Malaysia,2023,Large,High_eff,2593.1729
+Malaysia,2024,Large,High_eff,2714.9054
+Malaysia,2025,Large,High_eff,2818.98
+Malaysia,2026,Large,High_eff,2672.2289
+Malaysia,2027,Large,High_eff,2519.7011
+Malaysia,2028,Large,High_eff,2361.9245
+Malaysia,2029,Large,High_eff,2199.7003
+Malaysia,2030,Large,High_eff,2034.0763
+Malaysia,2031,Large,High_eff,1866.3205
+Malaysia,2032,Large,High_eff,1697.8907
+Malaysia,2033,Large,High_eff,1530.3996
+Malaysia,2034,Large,High_eff,1365.5733
+Malaysia,2035,Large,High_eff,1205.1998
+Malaysia,2036,Large,High_eff,1051.0683
+Malaysia,2037,Large,High_eff,904.8991
+Malaysia,2038,Large,High_eff,768.2682
+Malaysia,2039,Large,High_eff,642.5298
+Malaysia,2040,Large,High_eff,528.7442
+Malaysia,2041,Large,High_eff,427.6183
+Malaysia,2042,Large,High_eff,339.4662
+Malaysia,2043,Large,High_eff,264.195
+Malaysia,2044,Large,High_eff,201.3208
+Malaysia,2045,Large,High_eff,150.0133
+Malaysia,2046,Large,High_eff,109.1649
+Malaysia,2047,Large,High_eff,77.4784
+Malaysia,2048,Large,High_eff,53.5615
+Malaysia,2049,Large,High_eff,36.0189
+Malaysia,2050,Large,High_eff,23.5313
+Malaysia,2051,Large,High_eff,14.9153
+Malaysia,2052,Large,High_eff,9.1606
+Malaysia,2053,Large,High_eff,5.4445
+Malaysia,2054,Large,High_eff,3.1273
+Malaysia,2055,Large,High_eff,1.7339
+Malaysia,2056,Large,High_eff,0.9267
+Malaysia,2057,Large,High_eff,0.4768
+Malaysia,2058,Large,High_eff,0.2359
+Malaysia,2059,Large,High_eff,0.1121
+Malaysia,2060,Large,High_eff,0.0511
+Malaysia,2005,Large,Low_eff,126.8348
+Malaysia,2006,Large,Low_eff,134.4776
+Malaysia,2007,Large,Low_eff,142.4972
+Malaysia,2008,Large,Low_eff,150.8624
+Malaysia,2009,Large,Low_eff,159.5442
+Malaysia,2010,Large,Low_eff,168.3538
+Malaysia,2011,Large,Low_eff,177.3884
+Malaysia,2012,Large,Low_eff,186.9212
+Malaysia,2013,Large,Low_eff,196.9058
+Malaysia,2014,Large,Low_eff,207.3523
+Malaysia,2015,Large,Low_eff,218.0698
+Malaysia,2016,Large,Low_eff,228.9783
+Malaysia,2017,Large,Low_eff,243.952
+Malaysia,2018,Large,Low_eff,255.0925
+Malaysia,2019,Large,Low_eff,266.2879
+Malaysia,2020,Large,Low_eff,251.2652
+Malaysia,2021,Large,Low_eff,258.1932
+Malaysia,2022,Large,Low_eff,281.709
+Malaysia,2023,Large,Low_eff,291.0648
+Malaysia,2024,Large,Low_eff,304.7284
+Malaysia,2025,Large,Low_eff,316.41
+Malaysia,2026,Large,Low_eff,299.9383
+Malaysia,2027,Large,Low_eff,282.8181
+Malaysia,2028,Large,Low_eff,265.1088
+Malaysia,2029,Large,Low_eff,246.9004
+Malaysia,2030,Large,Low_eff,228.3103
+Malaysia,2031,Large,Low_eff,209.4809
+Malaysia,2032,Large,Low_eff,190.5759
+Malaysia,2033,Large,Low_eff,171.7762
+Malaysia,2034,Large,Low_eff,153.2757
+Malaysia,2035,Large,Low_eff,135.2749
+Malaysia,2036,Large,Low_eff,117.9748
+Malaysia,2037,Large,Low_eff,101.5683
+Malaysia,2038,Large,Low_eff,86.2325
+Malaysia,2039,Large,Low_eff,72.1193
+Malaysia,2040,Large,Low_eff,59.3477
+Malaysia,2041,Large,Low_eff,47.997
+Malaysia,2042,Large,Low_eff,38.1026
+Malaysia,2043,Large,Low_eff,29.654
+Malaysia,2044,Large,Low_eff,22.5968
+Malaysia,2045,Large,Low_eff,16.8379
+Malaysia,2046,Large,Low_eff,12.253
+Malaysia,2047,Large,Low_eff,8.6964
+Malaysia,2048,Large,Low_eff,6.0119
+Malaysia,2049,Large,Low_eff,4.0429
+Malaysia,2050,Large,Low_eff,2.6412
+Malaysia,2051,Large,Low_eff,1.6741
+Malaysia,2052,Large,Low_eff,1.0282
+Malaysia,2053,Large,Low_eff,0.6111
+Malaysia,2054,Large,Low_eff,0.351
+Malaysia,2055,Large,Low_eff,0.1946
+Malaysia,2056,Large,Low_eff,0.104
+Malaysia,2057,Large,Low_eff,0.0535
+Malaysia,2058,Large,Low_eff,0.0265
+Malaysia,2059,Large,Low_eff,0.0126
+Malaysia,2060,Large,Low_eff,0.0057
+Malaysia,2005,Large,Mid_eff,459.1564
+Malaysia,2006,Large,Mid_eff,486.8241
+Malaysia,2007,Large,Mid_eff,515.856
+Malaysia,2008,Large,Mid_eff,546.139
+Malaysia,2009,Large,Mid_eff,577.568
+Malaysia,2010,Large,Mid_eff,609.4598
+Malaysia,2011,Large,Mid_eff,642.1662
+Malaysia,2012,Large,Mid_eff,676.6758
+Malaysia,2013,Large,Mid_eff,712.8212
+Malaysia,2014,Large,Mid_eff,750.6388
+Malaysia,2015,Large,Mid_eff,789.4373
+Malaysia,2016,Large,Mid_eff,828.9275
+Malaysia,2017,Large,Mid_eff,883.1338
+Malaysia,2018,Large,Mid_eff,923.4637
+Malaysia,2019,Large,Mid_eff,963.9924
+Malaysia,2020,Large,Mid_eff,909.6086
+Malaysia,2021,Large,Mid_eff,934.6884
+Malaysia,2022,Large,Mid_eff,1019.8185
+Malaysia,2023,Large,Mid_eff,1053.6875
+Malaysia,2024,Large,Mid_eff,1103.1512
+Malaysia,2025,Large,Mid_eff,1145.44
+Malaysia,2026,Large,Mid_eff,1085.8104
+Malaysia,2027,Large,Mid_eff,1023.8336
+Malaysia,2028,Large,Mid_eff,959.724
+Malaysia,2029,Large,Mid_eff,893.8072
+Malaysia,2030,Large,Mid_eff,826.509
+Malaysia,2031,Large,Mid_eff,758.3446
+Malaysia,2032,Large,Mid_eff,689.9062
+Malaysia,2033,Large,Mid_eff,621.8494
+Malaysia,2034,Large,Mid_eff,554.8753
+Malaysia,2035,Large,Mid_eff,489.7105
+Malaysia,2036,Large,Mid_eff,427.082
+Malaysia,2037,Large,Mid_eff,367.6889
+Malaysia,2038,Large,Mid_eff,312.1715
+Malaysia,2039,Large,Mid_eff,261.08
+Malaysia,2040,Large,Mid_eff,214.8454
+Malaysia,2041,Large,Mid_eff,173.7548
+Malaysia,2042,Large,Mid_eff,137.9358
+Malaysia,2043,Large,Mid_eff,107.3507
+Malaysia,2044,Large,Mid_eff,81.803
+Malaysia,2045,Large,Mid_eff,60.9551
+Malaysia,2046,Large,Mid_eff,44.3571
+Malaysia,2047,Large,Mid_eff,31.4819
+Malaysia,2048,Large,Mid_eff,21.7637
+Malaysia,2049,Large,Mid_eff,14.6356
+Malaysia,2050,Large,Mid_eff,9.5615
+Malaysia,2051,Large,Mid_eff,6.0605
+Malaysia,2052,Large,Mid_eff,3.7222
+Malaysia,2053,Large,Mid_eff,2.2123
+Malaysia,2054,Large,Mid_eff,1.2707
+Malaysia,2055,Large,Mid_eff,0.7045
+Malaysia,2056,Large,Mid_eff,0.3765
+Malaysia,2057,Large,Mid_eff,0.1938
+Malaysia,2058,Large,Mid_eff,0.0959
+Malaysia,2059,Large,Mid_eff,0.0455
+Malaysia,2060,Large,Mid_eff,0.0208
+Malaysia,2005,Medium,High_eff,793.6626
+Malaysia,2006,Medium,High_eff,841.487
+Malaysia,2007,Medium,High_eff,891.6692
+Malaysia,2008,Medium,High_eff,944.0141
+Malaysia,2009,Medium,High_eff,998.3399
+Malaysia,2010,Medium,High_eff,1053.4656
+Malaysia,2011,Medium,High_eff,1109.9994
+Malaysia,2012,Medium,High_eff,1169.6501
+Malaysia,2013,Medium,High_eff,1232.1283
+Malaysia,2014,Medium,High_eff,1297.4968
+Malaysia,2015,Medium,High_eff,1364.561
+Malaysia,2016,Medium,High_eff,1432.8207
+Malaysia,2017,Medium,High_eff,1526.5175
+Malaysia,2018,Medium,High_eff,1596.2288
+Malaysia,2019,Medium,High_eff,1666.2836
+Malaysia,2020,Medium,High_eff,1572.2799
+Malaysia,2021,Medium,High_eff,1615.6309
+Malaysia,2022,Medium,High_eff,1762.7803
+Malaysia,2023,Medium,High_eff,1821.3236
+Malaysia,2024,Medium,High_eff,1906.8229
+Malaysia,2025,Medium,High_eff,1979.92
+Malaysia,2026,Medium,High_eff,1876.8489
+Malaysia,2027,Medium,High_eff,1769.7205
+Malaysia,2028,Medium,High_eff,1658.9056
+Malaysia,2029,Medium,High_eff,1544.9668
+Malaysia,2030,Medium,High_eff,1428.6403
+Malaysia,2031,Medium,High_eff,1310.8165
+Malaysia,2032,Medium,High_eff,1192.5192
+Malaysia,2033,Medium,High_eff,1074.8813
+Malaysia,2034,Medium,High_eff,959.115
+Malaysia,2035,Medium,High_eff,846.4761
+Malaysia,2036,Medium,High_eff,738.2213
+Malaysia,2037,Medium,High_eff,635.5589
+Malaysia,2038,Medium,High_eff,539.5958
+Malaysia,2039,Medium,High_eff,451.283
+Malaysia,2040,Medium,High_eff,371.3653
+Malaysia,2041,Medium,High_eff,300.3392
+Malaysia,2042,Medium,High_eff,238.4252
+Malaysia,2043,Medium,High_eff,185.5582
+Malaysia,2044,Medium,High_eff,141.3984
+Malaysia,2045,Medium,High_eff,105.3623
+Malaysia,2046,Medium,High_eff,76.6723
+Malaysia,2047,Medium,High_eff,54.4172
+Malaysia,2048,Medium,High_eff,37.6191
+Malaysia,2049,Medium,High_eff,25.298
+Malaysia,2050,Medium,High_eff,16.5273
+Malaysia,2051,Medium,High_eff,10.4758
+Malaysia,2052,Medium,High_eff,6.434
+Malaysia,2053,Medium,High_eff,3.824
+Malaysia,2054,Medium,High_eff,2.1965
+Malaysia,2055,Medium,High_eff,1.2178
+Malaysia,2056,Medium,High_eff,0.6509
+Malaysia,2057,Medium,High_eff,0.3349
+Malaysia,2058,Medium,High_eff,0.1657
+Malaysia,2059,Medium,High_eff,0.0787
+Malaysia,2060,Medium,High_eff,0.0359
+Malaysia,2005,Medium,Low_eff,188.0094
+Malaysia,2006,Medium,Low_eff,199.3385
+Malaysia,2007,Medium,Low_eff,211.226
+Malaysia,2008,Medium,Low_eff,223.626
+Malaysia,2009,Medium,Low_eff,236.4951
+Malaysia,2010,Medium,Low_eff,249.5537
+Malaysia,2011,Medium,Low_eff,262.9459
+Malaysia,2012,Medium,Low_eff,277.0765
+Malaysia,2013,Medium,Low_eff,291.8768
+Malaysia,2014,Medium,Low_eff,307.3619
+Malaysia,2015,Medium,Low_eff,323.2486
+Malaysia,2016,Medium,Low_eff,339.4185
+Malaysia,2017,Medium,Low_eff,361.6142
+Malaysia,2018,Medium,Low_eff,378.128
+Malaysia,2019,Medium,Low_eff,394.7232
+Malaysia,2020,Medium,Low_eff,372.4548
+Malaysia,2021,Medium,Low_eff,382.7242
+Malaysia,2022,Medium,Low_eff,417.5821
+Malaysia,2023,Medium,Low_eff,431.4504
+Malaysia,2024,Medium,Low_eff,451.7041
+Malaysia,2025,Medium,Low_eff,469.02
+Malaysia,2026,Medium,Low_eff,444.6036
+Malaysia,2027,Medium,Low_eff,419.2262
+Malaysia,2028,Medium,Low_eff,392.9754
+Malaysia,2029,Medium,Low_eff,365.9847
+Malaysia,2030,Medium,Low_eff,338.4283
+Malaysia,2031,Medium,Low_eff,310.5172
+Malaysia,2032,Medium,Low_eff,282.4939
+Malaysia,2033,Medium,Low_eff,254.6269
+Malaysia,2034,Medium,Low_eff,227.2032
+Malaysia,2035,Medium,Low_eff,200.5203
+Malaysia,2036,Medium,Low_eff,174.876
+Malaysia,2037,Medium,Low_eff,150.5565
+Malaysia,2038,Medium,Low_eff,127.824
+Malaysia,2039,Medium,Low_eff,106.9037
+Malaysia,2040,Medium,Low_eff,87.9721
+Malaysia,2041,Medium,Low_eff,71.1469
+Malaysia,2042,Medium,Low_eff,56.4802
+Malaysia,2043,Medium,Low_eff,43.9566
+Malaysia,2044,Medium,Low_eff,33.4956
+Malaysia,2045,Medium,Low_eff,24.9591
+Malaysia,2046,Medium,Low_eff,18.1628
+Malaysia,2047,Medium,Low_eff,12.8908
+Malaysia,2048,Medium,Low_eff,8.9115
+Malaysia,2049,Medium,Low_eff,5.9928
+Malaysia,2050,Medium,Low_eff,3.9151
+Malaysia,2051,Medium,Low_eff,2.4816
+Malaysia,2052,Medium,Low_eff,1.5241
+Malaysia,2053,Medium,Low_eff,0.9059
+Malaysia,2054,Medium,Low_eff,0.5203
+Malaysia,2055,Medium,Low_eff,0.2885
+Malaysia,2056,Medium,Low_eff,0.1542
+Malaysia,2057,Medium,Low_eff,0.0793
+Malaysia,2058,Medium,Low_eff,0.0393
+Malaysia,2059,Medium,Low_eff,0.0186
+Malaysia,2060,Medium,Low_eff,0.0085
+Malaysia,2005,Medium,Mid_eff,475.2988
+Malaysia,2006,Medium,Mid_eff,503.9393
+Malaysia,2007,Medium,Mid_eff,533.9918
+Malaysia,2008,Medium,Mid_eff,565.3395
+Malaysia,2009,Medium,Mid_eff,597.8735
+Malaysia,2010,Medium,Mid_eff,630.8865
+Malaysia,2011,Medium,Mid_eff,664.7427
+Malaysia,2012,Medium,Mid_eff,700.4656
+Malaysia,2013,Medium,Mid_eff,737.8817
+Malaysia,2014,Medium,Mid_eff,777.0288
+Malaysia,2015,Medium,Mid_eff,817.1914
+Malaysia,2016,Medium,Mid_eff,858.0699
+Malaysia,2017,Medium,Mid_eff,914.1819
+Malaysia,2018,Medium,Mid_eff,955.9298
+Malaysia,2019,Medium,Mid_eff,997.8833
+Malaysia,2020,Medium,Mid_eff,941.5875
+Malaysia,2021,Medium,Mid_eff,967.5491
+Malaysia,2022,Medium,Mid_eff,1055.672
+Malaysia,2023,Medium,Mid_eff,1090.7318
+Malaysia,2024,Medium,Mid_eff,1141.9345
+Malaysia,2025,Medium,Mid_eff,1185.71
+Malaysia,2026,Medium,Mid_eff,1123.984
+Malaysia,2027,Medium,Mid_eff,1059.8283
+Malaysia,2028,Medium,Mid_eff,993.4649
+Malaysia,2029,Medium,Mid_eff,925.2306
+Malaysia,2030,Medium,Mid_eff,855.5664
+Malaysia,2031,Medium,Mid_eff,785.0056
+Malaysia,2032,Medium,Mid_eff,714.1611
+Malaysia,2033,Medium,Mid_eff,643.7116
+Malaysia,2034,Medium,Mid_eff,574.3829
+Malaysia,2035,Medium,Mid_eff,506.9271
+Malaysia,2036,Medium,Mid_eff,442.0968
+Malaysia,2037,Medium,Mid_eff,380.6156
+Malaysia,2038,Medium,Mid_eff,323.1464
+Malaysia,2039,Medium,Mid_eff,270.2588
+Malaysia,2040,Medium,Mid_eff,222.3986
+Malaysia,2041,Medium,Mid_eff,179.8634
+Malaysia,2042,Medium,Mid_eff,142.7851
+Malaysia,2043,Medium,Mid_eff,111.1248
+Malaysia,2044,Medium,Mid_eff,84.6789
+Malaysia,2045,Medium,Mid_eff,63.0981
+Malaysia,2046,Medium,Mid_eff,45.9166
+Malaysia,2047,Medium,Mid_eff,32.5887
+Malaysia,2048,Medium,Mid_eff,22.5289
+Malaysia,2049,Medium,Mid_eff,15.1502
+Malaysia,2050,Medium,Mid_eff,9.8977
+Malaysia,2051,Medium,Mid_eff,6.2736
+Malaysia,2052,Medium,Mid_eff,3.8531
+Malaysia,2053,Medium,Mid_eff,2.29
+Malaysia,2054,Medium,Mid_eff,1.3154
+Malaysia,2055,Medium,Mid_eff,0.7293
+Malaysia,2056,Medium,Mid_eff,0.3898
+Malaysia,2057,Medium,Mid_eff,0.2006
+Malaysia,2058,Medium,Mid_eff,0.0992
+Malaysia,2059,Medium,Mid_eff,0.0471
+Malaysia,2060,Medium,Mid_eff,0.0215
+Malaysia,2005,Small,High_eff,821.2735
+Malaysia,2006,Small,High_eff,870.7617
+Malaysia,2007,Small,High_eff,922.6897
+Malaysia,2008,Small,High_eff,976.8557
+Malaysia,2009,Small,High_eff,1033.0715
+Malaysia,2010,Small,High_eff,1090.1149
+Malaysia,2011,Small,High_eff,1148.6155
+Malaysia,2012,Small,High_eff,1210.3414
+Malaysia,2013,Small,High_eff,1274.9931
+Malaysia,2014,Small,High_eff,1342.6358
+Malaysia,2015,Small,High_eff,1412.0331
+Malaysia,2016,Small,High_eff,1482.6675
+Malaysia,2017,Small,High_eff,1579.6239
+Malaysia,2018,Small,High_eff,1651.7605
+Malaysia,2019,Small,High_eff,1724.2524
+Malaysia,2020,Small,High_eff,1626.9784
+Malaysia,2021,Small,High_eff,1671.8376
+Malaysia,2022,Small,High_eff,1824.1061
+Malaysia,2023,Small,High_eff,1884.6862
+Malaysia,2024,Small,High_eff,1973.1599
+Malaysia,2025,Small,High_eff,2048.8
+Malaysia,2026,Small,High_eff,1942.1431
+Malaysia,2027,Small,High_eff,1831.2878
+Malaysia,2028,Small,High_eff,1716.6177
+Malaysia,2029,Small,High_eff,1598.7151
+Malaysia,2030,Small,High_eff,1478.3417
+Malaysia,2031,Small,High_eff,1356.4188
+Malaysia,2032,Small,High_eff,1234.0061
+Malaysia,2033,Small,High_eff,1112.2756
+Malaysia,2034,Small,High_eff,992.4819
+Malaysia,2035,Small,High_eff,875.9244
+Malaysia,2036,Small,High_eff,763.9035
+Malaysia,2037,Small,High_eff,657.6695
+Malaysia,2038,Small,High_eff,558.3679
+Malaysia,2039,Small,High_eff,466.9828
+Malaysia,2040,Small,High_eff,384.2848
+Malaysia,2041,Small,High_eff,310.7878
+Malaysia,2042,Small,High_eff,246.7198
+Malaysia,2043,Small,High_eff,192.0136
+Malaysia,2044,Small,High_eff,146.3175
+Malaysia,2045,Small,High_eff,109.0278
+Malaysia,2046,Small,High_eff,79.3397
+Malaysia,2047,Small,High_eff,56.3103
+Malaysia,2048,Small,High_eff,38.9279
+Malaysia,2049,Small,High_eff,26.1781
+Malaysia,2050,Small,High_eff,17.1023
+Malaysia,2051,Small,High_eff,10.8402
+Malaysia,2052,Small,High_eff,6.6578
+Malaysia,2053,Small,High_eff,3.957
+Malaysia,2054,Small,High_eff,2.2729
+Malaysia,2055,Small,High_eff,1.2602
+Malaysia,2056,Small,High_eff,0.6735
+Malaysia,2057,Small,High_eff,0.3466
+Malaysia,2058,Small,High_eff,0.1715
+Malaysia,2059,Small,High_eff,0.0815
+Malaysia,2060,Small,High_eff,0.0371
+Malaysia,2005,Small,Low_eff,263.2461
+Malaysia,2006,Small,Low_eff,279.1087
+Malaysia,2007,Small,Low_eff,295.7534
+Malaysia,2008,Small,Low_eff,313.1154
+Malaysia,2009,Small,Low_eff,331.1345
+Malaysia,2010,Small,Low_eff,349.4189
+Malaysia,2011,Small,Low_eff,368.1703
+Malaysia,2012,Small,Low_eff,387.9555
+Malaysia,2013,Small,Low_eff,408.6786
+Malaysia,2014,Small,Low_eff,430.3604
+Malaysia,2015,Small,Low_eff,452.6046
+Malaysia,2016,Small,Low_eff,475.2453
+Malaysia,2017,Small,Low_eff,506.3231
+Malaysia,2018,Small,Low_eff,529.4453
+Malaysia,2019,Small,Low_eff,552.6815
+Malaysia,2020,Small,Low_eff,521.5018
+Malaysia,2021,Small,Low_eff,535.8807
+Malaysia,2022,Small,Low_eff,584.688
+Malaysia,2023,Small,Low_eff,604.1059
+Malaysia,2024,Small,Low_eff,632.4648
+Malaysia,2025,Small,Low_eff,656.71
+Malaysia,2026,Small,Low_eff,622.5228
+Malaysia,2027,Small,Low_eff,586.9899
+Malaysia,2028,Small,Low_eff,550.2343
+Malaysia,2029,Small,Low_eff,512.4425
+Malaysia,2030,Small,Low_eff,473.8587
+Malaysia,2031,Small,Low_eff,434.7783
+Malaysia,2032,Small,Low_eff,395.5409
+Malaysia,2033,Small,Low_eff,356.5221
+Malaysia,2034,Small,Low_eff,318.1242
+Malaysia,2035,Small,Low_eff,280.7635
+Malaysia,2036,Small,Low_eff,244.857
+Malaysia,2037,Small,Low_eff,210.8054
+Malaysia,2038,Small,Low_eff,178.9759
+Malaysia,2039,Small,Low_eff,149.6839
+Malaysia,2040,Small,Low_eff,123.1763
+Malaysia,2041,Small,Low_eff,99.618
+Malaysia,2042,Small,Low_eff,79.0821
+Malaysia,2043,Small,Low_eff,61.5469
+Malaysia,2044,Small,Low_eff,46.8997
+Malaysia,2045,Small,Low_eff,34.9471
+Malaysia,2046,Small,Low_eff,25.4311
+Malaysia,2047,Small,Low_eff,18.0494
+Malaysia,2048,Small,Low_eff,12.4777
+Malaysia,2049,Small,Low_eff,8.391
+Malaysia,2050,Small,Low_eff,5.4819
+Malaysia,2051,Small,Low_eff,3.4747
+Malaysia,2052,Small,Low_eff,2.134
+Malaysia,2053,Small,Low_eff,1.2683
+Malaysia,2054,Small,Low_eff,0.7285
+Malaysia,2055,Small,Low_eff,0.4039
+Malaysia,2056,Small,Low_eff,0.2159
+Malaysia,2057,Small,Low_eff,0.1111
+Malaysia,2058,Small,Low_eff,0.055
+Malaysia,2059,Small,Low_eff,0.0261
+Malaysia,2060,Small,Low_eff,0.0119
+Malaysia,2005,Small,Mid_eff,946.4288
+Malaysia,2006,Small,Mid_eff,1003.4585
+Malaysia,2007,Small,Mid_eff,1063.2999
+Malaysia,2008,Small,Mid_eff,1125.7203
+Malaysia,2009,Small,Mid_eff,1190.5029
+Malaysia,2010,Small,Mid_eff,1256.2394
+Malaysia,2011,Small,Mid_eff,1323.6549
+Malaysia,2012,Small,Mid_eff,1394.7873
+Malaysia,2013,Small,Mid_eff,1469.2914
+Malaysia,2014,Small,Mid_eff,1547.2423
+Malaysia,2015,Small,Mid_eff,1627.2151
+Malaysia,2016,Small,Mid_eff,1708.6136
+Malaysia,2017,Small,Mid_eff,1820.3454
+Malaysia,2018,Small,Mid_eff,1903.475
+Malaysia,2019,Small,Mid_eff,1987.0141
+Malaysia,2020,Small,Mid_eff,1874.9163
+Malaysia,2021,Small,Mid_eff,1926.6117
+Malaysia,2022,Small,Mid_eff,2102.0847
+Malaysia,2023,Small,Mid_eff,2171.8966
+Malaysia,2024,Small,Mid_eff,2273.8529
+Malaysia,2025,Small,Mid_eff,2361.02
+Malaysia,2026,Small,Mid_eff,2238.1095
+Malaysia,2027,Small,Mid_eff,2110.3607
+Malaysia,2028,Small,Mid_eff,1978.2159
+Malaysia,2029,Small,Mid_eff,1842.3459
+Malaysia,2030,Small,Mid_eff,1703.6286
+Malaysia,2031,Small,Mid_eff,1563.1257
+Malaysia,2032,Small,Mid_eff,1422.0583
+Malaysia,2033,Small,Mid_eff,1281.7771
+Malaysia,2034,Small,Mid_eff,1143.7278
+Malaysia,2035,Small,Mid_eff,1009.408
+Malaysia,2036,Small,Mid_eff,880.316
+Malaysia,2037,Small,Mid_eff,757.8929
+Malaysia,2038,Small,Mid_eff,643.4585
+Malaysia,2039,Small,Mid_eff,538.1471
+Malaysia,2040,Small,Mid_eff,442.8466
+Malaysia,2041,Small,Mid_eff,358.1492
+Malaysia,2042,Small,Mid_eff,284.3179
+Malaysia,2043,Small,Mid_eff,221.2749
+Malaysia,2044,Small,Mid_eff,168.6151
+Malaysia,2045,Small,Mid_eff,125.6428
+Malaysia,2046,Small,Mid_eff,91.4304
+Malaysia,2047,Small,Mid_eff,64.8916
+Malaysia,2048,Small,Mid_eff,44.8601
+Malaysia,2049,Small,Mid_eff,30.1674
+Malaysia,2050,Small,Mid_eff,19.7085
+Malaysia,2051,Small,Mid_eff,12.4922
+Malaysia,2052,Small,Mid_eff,7.6724
+Malaysia,2053,Small,Mid_eff,4.56
+Malaysia,2054,Small,Mid_eff,2.6193
+Malaysia,2055,Small,Mid_eff,1.4522
+Malaysia,2056,Small,Mid_eff,0.7761
+Malaysia,2057,Small,Mid_eff,0.3994
+Malaysia,2058,Small,Mid_eff,0.1976
+Malaysia,2059,Small,Mid_eff,0.0939
+Malaysia,2060,Small,Mid_eff,0.0428
+Myanmar,2005,Large,High_eff,23.2506
+Myanmar,2006,Large,High_eff,25.4068
+Myanmar,2007,Large,High_eff,27.7577
+Myanmar,2008,Large,High_eff,30.2788
+Myanmar,2009,Large,High_eff,33.0295
+Myanmar,2010,Large,High_eff,36.0937
+Myanmar,2011,Large,High_eff,39.4624
+Myanmar,2012,Large,High_eff,43.16
+Myanmar,2013,Large,High_eff,47.2067
+Myanmar,2014,Large,High_eff,51.623
+Myanmar,2015,Large,High_eff,52.039
+Myanmar,2016,Large,High_eff,61.1937
+Myanmar,2017,Large,High_eff,70.4694
+Myanmar,2018,Large,High_eff,70.9784
+Myanmar,2019,Large,High_eff,80.418
+Myanmar,2020,Large,High_eff,89.9985
+Myanmar,2021,Large,High_eff,81.5671
+Myanmar,2022,Large,High_eff,82.1451
+Myanmar,2023,Large,High_eff,82.7496
+Myanmar,2024,Large,High_eff,83.3358
+Myanmar,2025,Large,High_eff,83.9
+Myanmar,2026,Large,High_eff,79.1455
+Myanmar,2027,Large,High_eff,74.1079
+Myanmar,2028,Large,High_eff,68.8298
+Myanmar,2029,Large,High_eff,63.3673
+Myanmar,2030,Large,High_eff,57.7874
+Myanmar,2031,Large,High_eff,52.1655
+Myanmar,2032,Large,High_eff,46.5822
+Myanmar,2033,Large,High_eff,41.1195
+Myanmar,2034,Large,High_eff,35.8568
+Myanmar,2035,Large,High_eff,30.8675
+Myanmar,2036,Large,High_eff,26.2148
+Myanmar,2037,Large,High_eff,21.9491
+Myanmar,2038,Large,High_eff,18.106
+Myanmar,2039,Large,High_eff,14.7053
+Myanmar,2040,Large,High_eff,11.751
+Myanmar,2041,Large,High_eff,9.2324
+Myanmar,2042,Large,High_eff,7.1264
+Myanmar,2043,Large,High_eff,5.4
+Myanmar,2044,Large,High_eff,4.0135
+Myanmar,2045,Large,High_eff,2.9231
+Myanmar,2046,Large,High_eff,2.0841
+Myanmar,2047,Large,High_eff,1.453
+Myanmar,2048,Large,High_eff,0.9895
+Myanmar,2049,Large,High_eff,0.6573
+Myanmar,2050,Large,High_eff,0.4253
+Myanmar,2051,Large,High_eff,0.2677
+Myanmar,2052,Large,High_eff,0.1637
+Myanmar,2053,Large,High_eff,0.0971
+Myanmar,2054,Large,High_eff,0.0557
+Myanmar,2055,Large,High_eff,0.031
+Myanmar,2056,Large,High_eff,0.0166
+Myanmar,2057,Large,High_eff,0.0086
+Myanmar,2058,Large,High_eff,0.0043
+Myanmar,2059,Large,High_eff,0.002
+Myanmar,2060,Large,High_eff,0.0009
+Myanmar,2005,Large,Low_eff,29.1145
+Myanmar,2006,Large,Low_eff,31.8145
+Myanmar,2007,Large,Low_eff,34.7584
+Myanmar,2008,Large,Low_eff,37.9153
+Myanmar,2009,Large,Low_eff,41.3597
+Myanmar,2010,Large,Low_eff,45.1967
+Myanmar,2011,Large,Low_eff,49.415
+Myanmar,2012,Large,Low_eff,54.0452
+Myanmar,2013,Large,Low_eff,59.1125
+Myanmar,2014,Large,Low_eff,64.6426
+Myanmar,2015,Large,Low_eff,65.1635
+Myanmar,2016,Large,Low_eff,76.6271
+Myanmar,2017,Large,Low_eff,88.2421
+Myanmar,2018,Large,Low_eff,88.8795
+Myanmar,2019,Large,Low_eff,100.6998
+Myanmar,2020,Large,Low_eff,112.6966
+Myanmar,2021,Large,Low_eff,102.1387
+Myanmar,2022,Large,Low_eff,102.8625
+Myanmar,2023,Large,Low_eff,103.6194
+Myanmar,2024,Large,Low_eff,104.3536
+Myanmar,2025,Large,Low_eff,105.06
+Myanmar,2026,Large,Low_eff,99.1064
+Myanmar,2027,Large,Low_eff,92.7982
+Myanmar,2028,Large,Low_eff,86.1891
+Myanmar,2029,Large,Low_eff,79.3489
+Myanmar,2030,Large,Low_eff,72.3617
+Myanmar,2031,Large,Low_eff,65.3219
+Myanmar,2032,Large,Low_eff,58.3305
+Myanmar,2033,Large,Low_eff,51.49
+Myanmar,2034,Large,Low_eff,44.9001
+Myanmar,2035,Large,Low_eff,38.6524
+Myanmar,2036,Large,Low_eff,32.8262
+Myanmar,2037,Large,Low_eff,27.4847
+Myanmar,2038,Large,Low_eff,22.6724
+Myanmar,2039,Large,Low_eff,18.4141
+Myanmar,2040,Large,Low_eff,14.7146
+Myanmar,2041,Large,Low_eff,11.5608
+Myanmar,2042,Large,Low_eff,8.9237
+Myanmar,2043,Large,Low_eff,6.7619
+Myanmar,2044,Large,Low_eff,5.0257
+Myanmar,2045,Large,Low_eff,3.6603
+Myanmar,2046,Large,Low_eff,2.6097
+Myanmar,2047,Large,Low_eff,1.8195
+Myanmar,2048,Large,Low_eff,1.239
+Myanmar,2049,Large,Low_eff,0.823
+Myanmar,2050,Large,Low_eff,0.5326
+Myanmar,2051,Large,Low_eff,0.3352
+Myanmar,2052,Large,Low_eff,0.205
+Myanmar,2053,Large,Low_eff,0.1215
+Myanmar,2054,Large,Low_eff,0.0698
+Myanmar,2055,Large,Low_eff,0.0388
+Myanmar,2056,Large,Low_eff,0.0208
+Myanmar,2057,Large,Low_eff,0.0107
+Myanmar,2058,Large,Low_eff,0.0053
+Myanmar,2059,Large,Low_eff,0.0026
+Myanmar,2060,Large,Low_eff,0.0012
+Myanmar,2005,Large,Mid_eff,36.9626
+Myanmar,2006,Large,Mid_eff,40.3905
+Myanmar,2007,Large,Mid_eff,44.1278
+Myanmar,2008,Large,Mid_eff,48.1358
+Myanmar,2009,Large,Mid_eff,52.5086
+Myanmar,2010,Large,Mid_eff,57.38
+Myanmar,2011,Large,Mid_eff,62.7354
+Myanmar,2012,Large,Mid_eff,68.6136
+Myanmar,2013,Large,Mid_eff,75.0468
+Myanmar,2014,Large,Mid_eff,82.0677
+Myanmar,2015,Large,Mid_eff,82.7289
+Myanmar,2016,Large,Mid_eff,97.2827
+Myanmar,2017,Large,Mid_eff,112.0287
+Myanmar,2018,Large,Mid_eff,112.8378
+Myanmar,2019,Large,Mid_eff,127.8445
+Myanmar,2020,Large,Mid_eff,143.0752
+Myanmar,2021,Large,Mid_eff,129.6712
+Myanmar,2022,Large,Mid_eff,130.5901
+Myanmar,2023,Large,Mid_eff,131.5511
+Myanmar,2024,Large,Mid_eff,132.4831
+Myanmar,2025,Large,Mid_eff,133.38
+Myanmar,2026,Large,Mid_eff,125.8215
+Myanmar,2027,Large,Mid_eff,117.813
+Myanmar,2028,Large,Mid_eff,109.4222
+Myanmar,2029,Large,Mid_eff,100.7382
+Myanmar,2030,Large,Mid_eff,91.8675
+Myanmar,2031,Large,Mid_eff,82.9301
+Myanmar,2032,Large,Mid_eff,74.0541
+Myanmar,2033,Large,Mid_eff,65.3697
+Myanmar,2034,Large,Mid_eff,57.0034
+Myanmar,2035,Large,Mid_eff,49.0716
+Myanmar,2036,Large,Mid_eff,41.6749
+Myanmar,2037,Large,Mid_eff,34.8935
+Myanmar,2038,Large,Mid_eff,28.784
+Myanmar,2039,Large,Mid_eff,23.3778
+Myanmar,2040,Large,Mid_eff,18.6811
+Myanmar,2041,Large,Mid_eff,14.6772
+Myanmar,2042,Large,Mid_eff,11.3291
+Myanmar,2043,Large,Mid_eff,8.5847
+Myanmar,2044,Large,Mid_eff,6.3804
+Myanmar,2045,Large,Mid_eff,4.647
+Myanmar,2046,Large,Mid_eff,3.3132
+Myanmar,2047,Large,Mid_eff,2.31
+Myanmar,2048,Large,Mid_eff,1.573
+Myanmar,2049,Large,Mid_eff,1.0449
+Myanmar,2050,Large,Mid_eff,0.6761
+Myanmar,2051,Large,Mid_eff,0.4256
+Myanmar,2052,Large,Mid_eff,0.2602
+Myanmar,2053,Large,Mid_eff,0.1543
+Myanmar,2054,Large,Mid_eff,0.0886
+Myanmar,2055,Large,Mid_eff,0.0492
+Myanmar,2056,Large,Mid_eff,0.0264
+Myanmar,2057,Large,Mid_eff,0.0136
+Myanmar,2058,Large,Mid_eff,0.0068
+Myanmar,2059,Large,Mid_eff,0.0032
+Myanmar,2060,Large,Mid_eff,0.0015
+Myanmar,2005,Medium,High_eff,22.5883
+Myanmar,2006,Medium,High_eff,24.6831
+Myanmar,2007,Medium,High_eff,26.967
+Myanmar,2008,Medium,High_eff,29.4163
+Myanmar,2009,Medium,High_eff,32.0886
+Myanmar,2010,Medium,High_eff,35.0655
+Myanmar,2011,Medium,High_eff,38.3383
+Myanmar,2012,Medium,High_eff,41.9305
+Myanmar,2013,Medium,High_eff,45.862
+Myanmar,2014,Medium,High_eff,50.1525
+Myanmar,2015,Medium,High_eff,50.5566
+Myanmar,2016,Medium,High_eff,59.4506
+Myanmar,2017,Medium,High_eff,68.462
+Myanmar,2018,Medium,High_eff,68.9565
+Myanmar,2019,Medium,High_eff,78.1272
+Myanmar,2020,Medium,High_eff,87.4348
+Myanmar,2021,Medium,High_eff,79.2435
+Myanmar,2022,Medium,High_eff,79.8051
+Myanmar,2023,Medium,High_eff,80.3923
+Myanmar,2024,Medium,High_eff,80.9619
+Myanmar,2025,Medium,High_eff,81.51
+Myanmar,2026,Medium,High_eff,76.8909
+Myanmar,2027,Medium,High_eff,71.9968
+Myanmar,2028,Medium,High_eff,66.8691
+Myanmar,2029,Medium,High_eff,61.5622
+Myanmar,2030,Medium,High_eff,56.1413
+Myanmar,2031,Medium,High_eff,50.6795
+Myanmar,2032,Medium,High_eff,45.2553
+Myanmar,2033,Medium,High_eff,39.9481
+Myanmar,2034,Medium,High_eff,34.8354
+Myanmar,2035,Medium,High_eff,29.9882
+Myanmar,2036,Medium,High_eff,25.468
+Myanmar,2037,Medium,High_eff,21.3238
+Myanmar,2038,Medium,High_eff,17.5902
+Myanmar,2039,Medium,High_eff,14.2864
+Myanmar,2040,Medium,High_eff,11.4162
+Myanmar,2041,Medium,High_eff,8.9694
+Myanmar,2042,Medium,High_eff,6.9234
+Myanmar,2043,Medium,High_eff,5.2462
+Myanmar,2044,Medium,High_eff,3.8991
+Myanmar,2045,Medium,High_eff,2.8398
+Myanmar,2046,Medium,High_eff,2.0247
+Myanmar,2047,Medium,High_eff,1.4117
+Myanmar,2048,Medium,High_eff,0.9613
+Myanmar,2049,Medium,High_eff,0.6385
+Myanmar,2050,Medium,High_eff,0.4132
+Myanmar,2051,Medium,High_eff,0.2601
+Myanmar,2052,Medium,High_eff,0.159
+Myanmar,2053,Medium,High_eff,0.0943
+Myanmar,2054,Medium,High_eff,0.0542
+Myanmar,2055,Medium,High_eff,0.0301
+Myanmar,2056,Medium,High_eff,0.0161
+Myanmar,2057,Medium,High_eff,0.0083
+Myanmar,2058,Medium,High_eff,0.0041
+Myanmar,2059,Medium,High_eff,0.002
+Myanmar,2060,Medium,High_eff,0.0009
+Myanmar,2005,Medium,Low_eff,48.5352
+Myanmar,2006,Medium,Low_eff,53.0363
+Myanmar,2007,Medium,Low_eff,57.9438
+Myanmar,2008,Medium,Low_eff,63.2066
+Myanmar,2009,Medium,Low_eff,68.9486
+Myanmar,2010,Medium,Low_eff,75.3451
+Myanmar,2011,Medium,Low_eff,82.3772
+Myanmar,2012,Medium,Low_eff,90.0958
+Myanmar,2013,Medium,Low_eff,98.5433
+Myanmar,2014,Medium,Low_eff,107.7623
+Myanmar,2015,Medium,Low_eff,108.6306
+Myanmar,2016,Medium,Low_eff,127.741
+Myanmar,2017,Medium,Low_eff,147.1038
+Myanmar,2018,Medium,Low_eff,148.1663
+Myanmar,2019,Medium,Low_eff,167.8714
+Myanmar,2020,Medium,Low_eff,187.8706
+Myanmar,2021,Medium,Low_eff,170.27
+Myanmar,2022,Medium,Low_eff,171.4766
+Myanmar,2023,Medium,Low_eff,172.7385
+Myanmar,2024,Medium,Low_eff,173.9623
+Myanmar,2025,Medium,Low_eff,175.14
+Myanmar,2026,Medium,Low_eff,165.2151
+Myanmar,2027,Medium,Low_eff,154.6991
+Myanmar,2028,Medium,Low_eff,143.6813
+Myanmar,2029,Medium,Low_eff,132.2784
+Myanmar,2030,Medium,Low_eff,120.6304
+Myanmar,2031,Medium,Low_eff,108.8948
+Myanmar,2032,Medium,Low_eff,97.2397
+Myanmar,2033,Medium,Low_eff,85.8363
+Myanmar,2034,Medium,Low_eff,74.8506
+Myanmar,2035,Medium,Low_eff,64.4355
+Myanmar,2036,Medium,Low_eff,54.7229
+Myanmar,2037,Medium,Low_eff,45.8183
+Myanmar,2038,Medium,Low_eff,37.796
+Myanmar,2039,Medium,Low_eff,30.6971
+Myanmar,2040,Medium,Low_eff,24.53
+Myanmar,2041,Medium,Low_eff,19.2724
+Myanmar,2042,Medium,Low_eff,14.8762
+Myanmar,2043,Medium,Low_eff,11.2724
+Myanmar,2044,Medium,Low_eff,8.3781
+Myanmar,2045,Medium,Low_eff,6.1019
+Myanmar,2046,Medium,Low_eff,4.3505
+Myanmar,2047,Medium,Low_eff,3.0332
+Myanmar,2048,Medium,Low_eff,2.0655
+Myanmar,2049,Medium,Low_eff,1.372
+Myanmar,2050,Medium,Low_eff,0.8878
+Myanmar,2051,Medium,Low_eff,0.5589
+Myanmar,2052,Medium,Low_eff,0.3417
+Myanmar,2053,Medium,Low_eff,0.2026
+Myanmar,2054,Medium,Low_eff,0.1164
+Myanmar,2055,Medium,Low_eff,0.0646
+Myanmar,2056,Medium,Low_eff,0.0346
+Myanmar,2057,Medium,Low_eff,0.0179
+Myanmar,2058,Medium,Low_eff,0.0089
+Myanmar,2059,Medium,Low_eff,0.0043
+Myanmar,2060,Medium,Low_eff,0.0019
+Myanmar,2005,Medium,Mid_eff,29.8599
+Myanmar,2006,Medium,Mid_eff,32.6291
+Myanmar,2007,Medium,Mid_eff,35.6483
+Myanmar,2008,Medium,Mid_eff,38.8861
+Myanmar,2009,Medium,Mid_eff,42.4187
+Myanmar,2010,Medium,Mid_eff,46.354
+Myanmar,2011,Medium,Mid_eff,50.6803
+Myanmar,2012,Medium,Mid_eff,55.429
+Myanmar,2013,Medium,Mid_eff,60.626
+Myanmar,2014,Medium,Mid_eff,66.2977
+Myanmar,2015,Medium,Mid_eff,66.8319
+Myanmar,2016,Medium,Mid_eff,78.5891
+Myanmar,2017,Medium,Mid_eff,90.5015
+Myanmar,2018,Medium,Mid_eff,91.1552
+Myanmar,2019,Medium,Mid_eff,103.2782
+Myanmar,2020,Medium,Mid_eff,115.5822
+Myanmar,2021,Medium,Mid_eff,104.7539
+Myanmar,2022,Medium,Mid_eff,105.4962
+Myanmar,2023,Medium,Mid_eff,106.2725
+Myanmar,2024,Medium,Mid_eff,107.0255
+Myanmar,2025,Medium,Mid_eff,107.75
+Myanmar,2026,Medium,Mid_eff,101.644
+Myanmar,2027,Medium,Mid_eff,95.1743
+Myanmar,2028,Medium,Mid_eff,88.3959
+Myanmar,2029,Medium,Mid_eff,81.3806
+Myanmar,2030,Medium,Mid_eff,74.2145
+Myanmar,2031,Medium,Mid_eff,66.9945
+Myanmar,2032,Medium,Mid_eff,59.824
+Myanmar,2033,Medium,Mid_eff,52.8084
+Myanmar,2034,Medium,Mid_eff,46.0498
+Myanmar,2035,Medium,Mid_eff,39.6421
+Myanmar,2036,Medium,Mid_eff,33.6667
+Myanmar,2037,Medium,Mid_eff,28.1884
+Myanmar,2038,Medium,Mid_eff,23.2529
+Myanmar,2039,Medium,Mid_eff,18.8856
+Myanmar,2040,Medium,Mid_eff,15.0914
+Myanmar,2041,Medium,Mid_eff,11.8568
+Myanmar,2042,Medium,Mid_eff,9.1522
+Myanmar,2043,Medium,Mid_eff,6.935
+Myanmar,2044,Medium,Mid_eff,5.1544
+Myanmar,2045,Medium,Mid_eff,3.754
+Myanmar,2046,Medium,Mid_eff,2.6765
+Myanmar,2047,Medium,Mid_eff,1.8661
+Myanmar,2048,Medium,Mid_eff,1.2707
+Myanmar,2049,Medium,Mid_eff,0.8441
+Myanmar,2050,Medium,Mid_eff,0.5462
+Myanmar,2051,Medium,Mid_eff,0.3438
+Myanmar,2052,Medium,Mid_eff,0.2102
+Myanmar,2053,Medium,Mid_eff,0.1247
+Myanmar,2054,Medium,Mid_eff,0.0716
+Myanmar,2055,Medium,Mid_eff,0.0397
+Myanmar,2056,Medium,Mid_eff,0.0213
+Myanmar,2057,Medium,Mid_eff,0.011
+Myanmar,2058,Medium,Mid_eff,0.0055
+Myanmar,2059,Medium,Mid_eff,0.0026
+Myanmar,2060,Medium,Mid_eff,0.0012
+Myanmar,2005,Small,High_eff,26.3266
+Myanmar,2006,Small,High_eff,28.7681
+Myanmar,2007,Small,High_eff,31.4301
+Myanmar,2008,Small,High_eff,34.2847
+Myanmar,2009,Small,High_eff,37.3993
+Myanmar,2010,Small,High_eff,40.8689
+Myanmar,2011,Small,High_eff,44.6833
+Myanmar,2012,Small,High_eff,48.8701
+Myanmar,2013,Small,High_eff,53.4522
+Myanmar,2014,Small,High_eff,58.4528
+Myanmar,2015,Small,High_eff,58.9237
+Myanmar,2016,Small,High_eff,69.2897
+Myanmar,2017,Small,High_eff,79.7925
+Myanmar,2018,Small,High_eff,80.3688
+Myanmar,2019,Small,High_eff,91.0573
+Myanmar,2020,Small,High_eff,101.9054
+Myanmar,2021,Small,High_eff,92.3584
+Myanmar,2022,Small,High_eff,93.0129
+Myanmar,2023,Small,High_eff,93.6974
+Myanmar,2024,Small,High_eff,94.3612
+Myanmar,2025,Small,High_eff,95.0
+Myanmar,2026,Small,High_eff,89.6165
+Myanmar,2027,Small,High_eff,83.9124
+Myanmar,2028,Small,High_eff,77.9361
+Myanmar,2029,Small,High_eff,71.7509
+Myanmar,2030,Small,High_eff,65.4327
+Myanmar,2031,Small,High_eff,59.067
+Myanmar,2032,Small,High_eff,52.7451
+Myanmar,2033,Small,High_eff,46.5596
+Myanmar,2034,Small,High_eff,40.6007
+Myanmar,2035,Small,High_eff,34.9513
+Myanmar,2036,Small,High_eff,29.683
+Myanmar,2037,Small,High_eff,24.8529
+Myanmar,2038,Small,High_eff,20.5014
+Myanmar,2039,Small,High_eff,16.6508
+Myanmar,2040,Small,High_eff,13.3056
+Myanmar,2041,Small,High_eff,10.4538
+Myanmar,2042,Small,High_eff,8.0692
+Myanmar,2043,Small,High_eff,6.1144
+Myanmar,2044,Small,High_eff,4.5444
+Myanmar,2045,Small,High_eff,3.3098
+Myanmar,2046,Small,High_eff,2.3598
+Myanmar,2047,Small,High_eff,1.6453
+Myanmar,2048,Small,High_eff,1.1204
+Myanmar,2049,Small,High_eff,0.7442
+Myanmar,2050,Small,High_eff,0.4816
+Myanmar,2051,Small,High_eff,0.3031
+Myanmar,2052,Small,High_eff,0.1853
+Myanmar,2053,Small,High_eff,0.1099
+Myanmar,2054,Small,High_eff,0.0631
+Myanmar,2055,Small,High_eff,0.035
+Myanmar,2056,Small,High_eff,0.0188
+Myanmar,2057,Small,High_eff,0.0097
+Myanmar,2058,Small,High_eff,0.0048
+Myanmar,2059,Small,High_eff,0.0023
+Myanmar,2060,Small,High_eff,0.0011
+Myanmar,2005,Small,Low_eff,70.148
+Myanmar,2006,Small,Low_eff,76.6534
+Myanmar,2007,Small,Low_eff,83.7463
+Myanmar,2008,Small,Low_eff,91.3526
+Myanmar,2009,Small,Low_eff,99.6515
+Myanmar,2010,Small,Low_eff,108.8963
+Myanmar,2011,Small,Low_eff,119.0598
+Myanmar,2012,Small,Low_eff,130.2156
+Myanmar,2013,Small,Low_eff,142.4247
+Myanmar,2014,Small,Low_eff,155.7489
+Myanmar,2015,Small,Low_eff,157.0039
+Myanmar,2016,Small,Low_eff,184.6242
+Myanmar,2017,Small,Low_eff,212.6092
+Myanmar,2018,Small,Low_eff,214.1448
+Myanmar,2019,Small,Low_eff,242.6247
+Myanmar,2020,Small,Low_eff,271.5296
+Myanmar,2021,Small,Low_eff,246.0914
+Myanmar,2022,Small,Low_eff,247.8353
+Myanmar,2023,Small,Low_eff,249.6591
+Myanmar,2024,Small,Low_eff,251.4279
+Myanmar,2025,Small,Low_eff,253.13
+Myanmar,2026,Small,Low_eff,238.7855
+Myanmar,2027,Small,Low_eff,223.5867
+Myanmar,2028,Small,Low_eff,207.6627
+Myanmar,2029,Small,Low_eff,191.1821
+Myanmar,2030,Small,Low_eff,174.3472
+Myanmar,2031,Small,Low_eff,157.3857
+Myanmar,2032,Small,Low_eff,140.5406
+Myanmar,2033,Small,Low_eff,124.0593
+Myanmar,2034,Small,Low_eff,108.1817
+Myanmar,2035,Small,Low_eff,93.1286
+Myanmar,2036,Small,Low_eff,79.0911
+Myanmar,2037,Small,Low_eff,66.2213
+Myanmar,2038,Small,Low_eff,54.6266
+Myanmar,2039,Small,Low_eff,44.3666
+Myanmar,2040,Small,Low_eff,35.4532
+Myanmar,2041,Small,Low_eff,27.8545
+Myanmar,2042,Small,Low_eff,21.5006
+Myanmar,2043,Small,Low_eff,16.2921
+Myanmar,2044,Small,Low_eff,12.1088
+Myanmar,2045,Small,Low_eff,8.8191
+Myanmar,2046,Small,Low_eff,6.2878
+Myanmar,2047,Small,Low_eff,4.3839
+Myanmar,2048,Small,Low_eff,2.9853
+Myanmar,2049,Small,Low_eff,1.983
+Myanmar,2050,Small,Low_eff,1.2832
+Myanmar,2051,Small,Low_eff,0.8077
+Myanmar,2052,Small,Low_eff,0.4939
+Myanmar,2053,Small,Low_eff,0.2929
+Myanmar,2054,Small,Low_eff,0.1682
+Myanmar,2055,Small,Low_eff,0.0934
+Myanmar,2056,Small,Low_eff,0.0501
+Myanmar,2057,Small,Low_eff,0.0259
+Myanmar,2058,Small,Low_eff,0.0129
+Myanmar,2059,Small,Low_eff,0.0061
+Myanmar,2060,Small,Low_eff,0.0028
+Myanmar,2005,Small,Mid_eff,62.6768
+Myanmar,2006,Small,Mid_eff,68.4893
+Myanmar,2007,Small,Mid_eff,74.8267
+Myanmar,2008,Small,Mid_eff,81.6229
+Myanmar,2009,Small,Mid_eff,89.0379
+Myanmar,2010,Small,Mid_eff,97.2981
+Myanmar,2011,Small,Mid_eff,106.3792
+Myanmar,2012,Small,Mid_eff,116.3468
+Myanmar,2013,Small,Mid_eff,127.2556
+Myanmar,2014,Small,Mid_eff,139.1607
+Myanmar,2015,Small,Mid_eff,140.2819
+Myanmar,2016,Small,Mid_eff,164.9605
+Myanmar,2017,Small,Mid_eff,189.9649
+Myanmar,2018,Small,Mid_eff,191.337
+Myanmar,2019,Small,Mid_eff,216.7836
+Myanmar,2020,Small,Mid_eff,242.6099
+Myanmar,2021,Small,Mid_eff,219.8811
+Myanmar,2022,Small,Mid_eff,221.4392
+Myanmar,2023,Small,Mid_eff,223.0687
+Myanmar,2024,Small,Mid_eff,224.6492
+Myanmar,2025,Small,Mid_eff,226.17
+Myanmar,2026,Small,Mid_eff,213.3532
+Myanmar,2027,Small,Mid_eff,199.7733
+Myanmar,2028,Small,Mid_eff,185.5452
+Myanmar,2029,Small,Mid_eff,170.8199
+Myanmar,2030,Small,Mid_eff,155.7781
+Myanmar,2031,Small,Mid_eff,140.6231
+Myanmar,2032,Small,Mid_eff,125.5721
+Myanmar,2033,Small,Mid_eff,110.8462
+Myanmar,2034,Small,Mid_eff,96.6596
+Myanmar,2035,Small,Mid_eff,83.2098
+Myanmar,2036,Small,Mid_eff,70.6674
+Myanmar,2037,Small,Mid_eff,59.1683
+Myanmar,2038,Small,Mid_eff,48.8085
+Myanmar,2039,Small,Mid_eff,39.6413
+Myanmar,2040,Small,Mid_eff,31.6772
+Myanmar,2041,Small,Mid_eff,24.8878
+Myanmar,2042,Small,Mid_eff,19.2106
+Myanmar,2043,Small,Mid_eff,14.5568
+Myanmar,2044,Small,Mid_eff,10.8191
+Myanmar,2045,Small,Mid_eff,7.8798
+Myanmar,2046,Small,Mid_eff,5.6182
+Myanmar,2047,Small,Mid_eff,3.917
+Myanmar,2048,Small,Mid_eff,2.6673
+Myanmar,2049,Small,Mid_eff,1.7718
+Myanmar,2050,Small,Mid_eff,1.1465
+Myanmar,2051,Small,Mid_eff,0.7217
+Myanmar,2052,Small,Mid_eff,0.4413
+Myanmar,2053,Small,Mid_eff,0.2617
+Myanmar,2054,Small,Mid_eff,0.1503
+Myanmar,2055,Small,Mid_eff,0.0834
+Myanmar,2056,Small,Mid_eff,0.0447
+Myanmar,2057,Small,Mid_eff,0.0231
+Myanmar,2058,Small,Mid_eff,0.0115
+Myanmar,2059,Small,Mid_eff,0.0055
+Myanmar,2060,Small,Mid_eff,0.0025
+Philippines,2005,Large,High_eff,276.0612
+Philippines,2006,Large,High_eff,305.0745
+Philippines,2007,Large,High_eff,337.0908
+Philippines,2008,Large,High_eff,372.4675
+Philippines,2009,Large,High_eff,411.4317
+Philippines,2010,Large,High_eff,454.2976
+Philippines,2011,Large,High_eff,501.5293
+Philippines,2012,Large,High_eff,553.4605
+Philippines,2013,Large,High_eff,610.4235
+Philippines,2014,Large,High_eff,672.7773
+Philippines,2015,Large,High_eff,722.1118
+Philippines,2016,Large,High_eff,812.4072
+Philippines,2017,Large,High_eff,905.5873
+Philippines,2018,Large,High_eff,1001.2133
+Philippines,2019,Large,High_eff,1099.3568
+Philippines,2020,Large,High_eff,910.4624
+Philippines,2021,Large,High_eff,966.1798
+Philippines,2022,Large,High_eff,1108.3031
+Philippines,2023,Large,High_eff,1211.9251
+Philippines,2024,Large,High_eff,1318.0658
+Philippines,2025,Large,High_eff,1426.69
+Philippines,2026,Large,High_eff,1363.6815
+Philippines,2027,Large,High_eff,1296.2246
+Philippines,2028,Large,High_eff,1224.5207
+Philippines,2029,Large,High_eff,1148.9575
+Philippines,2030,Large,High_eff,1070.0932
+Philippines,2031,Large,High_eff,988.6382
+Philippines,2032,Large,High_eff,905.4335
+Philippines,2033,Large,High_eff,821.4244
+Philippines,2034,Large,High_eff,737.6314
+Philippines,2035,Large,High_eff,655.1166
+Philippines,2036,Large,High_eff,574.9466
+Philippines,2037,Large,High_eff,498.1531
+Philippines,2038,Large,High_eff,425.6914
+Philippines,2039,Large,High_eff,358.3994
+Philippines,2040,Large,High_eff,296.9604
+Philippines,2041,Large,High_eff,241.8704
+Philippines,2042,Large,High_eff,193.416
+Philippines,2043,Large,High_eff,151.6635
+Philippines,2044,Large,High_eff,116.4625
+Philippines,2045,Large,High_eff,87.4647
+Philippines,2046,Large,High_eff,64.1561
+Philippines,2047,Large,High_eff,45.8998
+Philippines,2048,Large,High_eff,31.9859
+Philippines,2049,Large,High_eff,21.6814
+Philippines,2050,Large,High_eff,14.276
+Philippines,2051,Large,High_eff,9.1186
+Philippines,2052,Large,High_eff,5.6424
+Philippines,2053,Large,High_eff,3.3778
+Philippines,2054,Large,High_eff,1.9537
+Philippines,2055,Large,High_eff,1.0904
+Philippines,2056,Large,High_eff,0.5864
+Philippines,2057,Large,High_eff,0.3036
+Philippines,2058,Large,High_eff,0.151
+Philippines,2059,Large,High_eff,0.0721
+Philippines,2060,Large,High_eff,0.033
+Philippines,2005,Large,Low_eff,90.3518
+Philippines,2006,Large,Low_eff,99.8475
+Philippines,2007,Large,Low_eff,110.3261
+Philippines,2008,Large,Low_eff,121.9045
+Philippines,2009,Large,Low_eff,134.6571
+Philippines,2010,Large,Low_eff,148.6866
+Philippines,2011,Large,Low_eff,164.1451
+Philippines,2012,Large,Low_eff,181.1416
+Philippines,2013,Large,Low_eff,199.7849
+Philippines,2014,Large,Low_eff,220.1927
+Philippines,2015,Large,Low_eff,236.3393
+Philippines,2016,Large,Low_eff,265.892
+Philippines,2017,Large,Low_eff,296.3888
+Philippines,2018,Large,Low_eff,327.6861
+Philippines,2019,Large,Low_eff,359.8074
+Philippines,2020,Large,Low_eff,297.9844
+Philippines,2021,Large,Low_eff,316.22
+Philippines,2022,Large,Low_eff,362.7355
+Philippines,2023,Large,Low_eff,396.6498
+Philippines,2024,Large,Low_eff,431.3885
+Philippines,2025,Large,Low_eff,466.94
+Philippines,2026,Large,Low_eff,446.318
+Philippines,2027,Large,Low_eff,424.2401
+Philippines,2028,Large,Low_eff,400.7722
+Philippines,2029,Large,Low_eff,376.0412
+Philippines,2030,Large,Low_eff,350.2298
+Philippines,2031,Large,Low_eff,323.5705
+Philippines,2032,Large,Low_eff,296.3385
+Philippines,2033,Large,Low_eff,268.8432
+Philippines,2034,Large,Low_eff,241.4187
+Philippines,2035,Large,Low_eff,214.4125
+Philippines,2036,Large,Low_eff,188.1737
+Philippines,2037,Large,Low_eff,163.0401
+Philippines,2038,Large,Low_eff,139.3241
+Philippines,2039,Large,Low_eff,117.3002
+Philippines,2040,Large,Low_eff,97.1919
+Philippines,2041,Large,Low_eff,79.1615
+Philippines,2042,Large,Low_eff,63.3029
+Philippines,2043,Large,Low_eff,49.6378
+Philippines,2044,Large,Low_eff,38.1169
+Philippines,2045,Large,Low_eff,28.6263
+Philippines,2046,Large,Low_eff,20.9976
+Philippines,2047,Large,Low_eff,15.0225
+Philippines,2048,Large,Low_eff,10.4686
+Philippines,2049,Large,Low_eff,7.0961
+Philippines,2050,Large,Low_eff,4.6724
+Philippines,2051,Large,Low_eff,2.9844
+Philippines,2052,Large,Low_eff,1.8467
+Philippines,2053,Large,Low_eff,1.1055
+Philippines,2054,Large,Low_eff,0.6394
+Philippines,2055,Large,Low_eff,0.3569
+Philippines,2056,Large,Low_eff,0.1919
+Philippines,2057,Large,Low_eff,0.0993
+Philippines,2058,Large,Low_eff,0.0494
+Philippines,2059,Large,Low_eff,0.0236
+Philippines,2060,Large,Low_eff,0.0108
+Philippines,2005,Large,Mid_eff,173.8635
+Philippines,2006,Large,Mid_eff,192.136
+Philippines,2007,Large,Mid_eff,212.2999
+Philippines,2008,Large,Mid_eff,234.5802
+Philippines,2009,Large,Mid_eff,259.1199
+Philippines,2010,Large,Mid_eff,286.1168
+Philippines,2011,Large,Mid_eff,315.8634
+Philippines,2012,Large,Mid_eff,348.5697
+Philippines,2013,Large,Mid_eff,384.445
+Philippines,2014,Large,Mid_eff,423.7155
+Philippines,2015,Large,Mid_eff,454.7864
+Philippines,2016,Large,Mid_eff,511.6544
+Philippines,2017,Large,Mid_eff,570.3393
+Philippines,2018,Large,Mid_eff,630.5646
+Philippines,2019,Large,Mid_eff,692.3754
+Philippines,2020,Large,Mid_eff,573.4096
+Philippines,2021,Large,Mid_eff,608.5004
+Philippines,2022,Large,Mid_eff,698.0098
+Philippines,2023,Large,Mid_eff,763.2709
+Philippines,2024,Large,Mid_eff,830.1184
+Philippines,2025,Large,Mid_eff,898.53
+Philippines,2026,Large,Mid_eff,858.8472
+Philippines,2027,Large,Mid_eff,816.3628
+Philippines,2028,Large,Mid_eff,771.2037
+Philippines,2029,Large,Mid_eff,723.6139
+Philippines,2030,Large,Mid_eff,673.9451
+Philippines,2031,Large,Mid_eff,622.6448
+Philippines,2032,Large,Mid_eff,570.2424
+Philippines,2033,Large,Mid_eff,517.3335
+Philippines,2034,Large,Mid_eff,464.5606
+Philippines,2035,Large,Mid_eff,412.5927
+Philippines,2036,Large,Mid_eff,362.1016
+Philippines,2037,Large,Mid_eff,313.7371
+Philippines,2038,Large,Mid_eff,268.1006
+Philippines,2039,Large,Mid_eff,225.7201
+Philippines,2040,Large,Mid_eff,187.0258
+Philippines,2041,Large,Mid_eff,152.3301
+Philippines,2042,Large,Mid_eff,121.8135
+Philippines,2043,Large,Mid_eff,95.5177
+Philippines,2044,Large,Mid_eff,73.3481
+Philippines,2045,Large,Mid_eff,55.0853
+Philippines,2046,Large,Mid_eff,40.4055
+Philippines,2047,Large,Mid_eff,28.9077
+Philippines,2048,Large,Mid_eff,20.1447
+Philippines,2049,Large,Mid_eff,13.655
+Philippines,2050,Large,Mid_eff,8.991
+Philippines,2051,Large,Mid_eff,5.7429
+Philippines,2052,Large,Mid_eff,3.5536
+Philippines,2053,Large,Mid_eff,2.1273
+Philippines,2054,Large,Mid_eff,1.2305
+Philippines,2055,Large,Mid_eff,0.6867
+Philippines,2056,Large,Mid_eff,0.3693
+Philippines,2057,Large,Mid_eff,0.1912
+Philippines,2058,Large,Mid_eff,0.0951
+Philippines,2059,Large,Mid_eff,0.0454
+Philippines,2060,Large,Mid_eff,0.0208
+Philippines,2005,Medium,High_eff,179.711
+Philippines,2006,Medium,High_eff,198.5981
+Philippines,2007,Medium,High_eff,219.4402
+Philippines,2008,Medium,High_eff,242.4697
+Philippines,2009,Medium,High_eff,267.8348
+Philippines,2010,Medium,High_eff,295.7397
+Philippines,2011,Medium,High_eff,326.4868
+Philippines,2012,Medium,High_eff,360.293
+Philippines,2013,Medium,High_eff,397.3749
+Philippines,2014,Medium,High_eff,437.9662
+Philippines,2015,Medium,High_eff,470.082
+Philippines,2016,Medium,High_eff,528.8627
+Philippines,2017,Medium,High_eff,589.5213
+Philippines,2018,Medium,High_eff,651.7721
+Philippines,2019,Medium,High_eff,715.6619
+Philippines,2020,Medium,High_eff,592.6949
+Philippines,2021,Medium,High_eff,628.966
+Philippines,2022,Medium,High_eff,721.4857
+Philippines,2023,Medium,High_eff,788.9418
+Philippines,2024,Medium,High_eff,858.0375
+Philippines,2025,Medium,High_eff,928.75
+Philippines,2026,Medium,High_eff,887.7326
+Philippines,2027,Medium,High_eff,843.8193
+Philippines,2028,Medium,High_eff,797.1414
+Philippines,2029,Medium,High_eff,747.951
+Philippines,2030,Medium,High_eff,696.6118
+Philippines,2031,Medium,High_eff,643.586
+Philippines,2032,Medium,High_eff,589.4212
+Philippines,2033,Medium,High_eff,534.7328
+Philippines,2034,Medium,High_eff,480.185
+Philippines,2035,Medium,High_eff,426.4693
+Philippines,2036,Medium,High_eff,374.2801
+Philippines,2037,Medium,High_eff,324.2889
+Philippines,2038,Medium,High_eff,277.1176
+Philippines,2039,Medium,High_eff,233.3117
+Philippines,2040,Medium,High_eff,193.316
+Philippines,2041,Medium,High_eff,157.4534
+Philippines,2042,Medium,High_eff,125.9104
+Philippines,2043,Medium,High_eff,98.7302
+Philippines,2044,Medium,High_eff,75.815
+Philippines,2045,Medium,High_eff,56.938
+Philippines,2046,Medium,High_eff,41.7645
+Philippines,2047,Medium,High_eff,29.8799
+Philippines,2048,Medium,High_eff,20.8222
+Philippines,2049,Medium,High_eff,14.1142
+Philippines,2050,Medium,High_eff,9.2934
+Philippines,2051,Medium,High_eff,5.936
+Philippines,2052,Medium,High_eff,3.6731
+Philippines,2053,Medium,High_eff,2.1989
+Philippines,2054,Medium,High_eff,1.2718
+Philippines,2055,Medium,High_eff,0.7098
+Philippines,2056,Medium,High_eff,0.3818
+Philippines,2057,Medium,High_eff,0.1976
+Philippines,2058,Medium,High_eff,0.0983
+Philippines,2059,Medium,High_eff,0.047
+Philippines,2060,Medium,High_eff,0.0215
+Philippines,2005,Medium,Low_eff,109.4055
+Philippines,2006,Medium,Low_eff,120.9037
+Philippines,2007,Medium,Low_eff,133.5921
+Philippines,2008,Medium,Low_eff,147.6122
+Philippines,2009,Medium,Low_eff,163.0541
+Philippines,2010,Medium,Low_eff,180.0422
+Philippines,2011,Medium,Low_eff,198.7606
+Philippines,2012,Medium,Low_eff,219.3414
+Philippines,2013,Medium,Low_eff,241.9163
+Philippines,2014,Medium,Low_eff,266.6277
+Philippines,2015,Medium,Low_eff,286.1794
+Philippines,2016,Medium,Low_eff,321.9642
+Philippines,2017,Medium,Low_eff,358.8923
+Philippines,2018,Medium,Low_eff,396.7898
+Philippines,2019,Medium,Low_eff,435.6849
+Philippines,2020,Medium,Low_eff,360.8244
+Philippines,2021,Medium,Low_eff,382.9057
+Philippines,2022,Medium,Low_eff,439.2304
+Philippines,2023,Medium,Low_eff,480.2967
+Philippines,2024,Medium,Low_eff,522.3612
+Philippines,2025,Medium,Low_eff,565.41
+Philippines,2026,Medium,Low_eff,540.4392
+Philippines,2027,Medium,Low_eff,513.7054
+Philippines,2028,Medium,Low_eff,485.2885
+Philippines,2029,Medium,Low_eff,455.3421
+Philippines,2030,Medium,Low_eff,424.0875
+Philippines,2031,Medium,Low_eff,391.8062
+Philippines,2032,Medium,Low_eff,358.8314
+Philippines,2033,Medium,Low_eff,325.5378
+Philippines,2034,Medium,Low_eff,292.3299
+Philippines,2035,Medium,Low_eff,259.6286
+Philippines,2036,Medium,Low_eff,227.8565
+Philippines,2037,Medium,Low_eff,197.4226
+Philippines,2038,Medium,Low_eff,168.7053
+Philippines,2039,Medium,Low_eff,142.0369
+Philippines,2040,Medium,Low_eff,117.6881
+Philippines,2041,Medium,Low_eff,95.8554
+Philippines,2042,Medium,Low_eff,76.6525
+Philippines,2043,Medium,Low_eff,60.1056
+Philippines,2044,Medium,Low_eff,46.1551
+Philippines,2045,Medium,Low_eff,34.6631
+Philippines,2046,Medium,Low_eff,25.4256
+Philippines,2047,Medium,Low_eff,18.1905
+Philippines,2048,Medium,Low_eff,12.6763
+Philippines,2049,Medium,Low_eff,8.5925
+Philippines,2050,Medium,Low_eff,5.6577
+Philippines,2051,Medium,Low_eff,3.6138
+Philippines,2052,Medium,Low_eff,2.2361
+Philippines,2053,Medium,Low_eff,1.3386
+Philippines,2054,Medium,Low_eff,0.7743
+Philippines,2055,Medium,Low_eff,0.4321
+Philippines,2056,Medium,Low_eff,0.2324
+Philippines,2057,Medium,Low_eff,0.1203
+Philippines,2058,Medium,Low_eff,0.0599
+Philippines,2059,Medium,Low_eff,0.0286
+Philippines,2060,Medium,Low_eff,0.0131
+Philippines,2005,Medium,Mid_eff,132.9019
+Philippines,2006,Medium,Mid_eff,146.8696
+Philippines,2007,Medium,Mid_eff,162.2829
+Philippines,2008,Medium,Mid_eff,179.314
+Philippines,2009,Medium,Mid_eff,198.0723
+Philippines,2010,Medium,Mid_eff,218.7089
+Philippines,2011,Medium,Mid_eff,241.4473
+Philippines,2012,Medium,Mid_eff,266.4481
+Philippines,2013,Medium,Mid_eff,293.8713
+Philippines,2014,Medium,Mid_eff,323.8898
+Philippines,2015,Medium,Mid_eff,347.6405
+Philippines,2016,Medium,Mid_eff,391.1107
+Philippines,2017,Medium,Mid_eff,435.9697
+Philippines,2018,Medium,Mid_eff,482.0061
+Philippines,2019,Medium,Mid_eff,529.2546
+Philippines,2020,Medium,Mid_eff,438.3166
+Philippines,2021,Medium,Mid_eff,465.1402
+Philippines,2022,Medium,Mid_eff,533.5615
+Philippines,2023,Medium,Mid_eff,583.4474
+Philippines,2024,Medium,Mid_eff,634.5459
+Philippines,2025,Medium,Mid_eff,686.84
+Philippines,2026,Medium,Mid_eff,656.5063
+Philippines,2027,Medium,Mid_eff,624.0311
+Philippines,2028,Medium,Mid_eff,589.5113
+Philippines,2029,Medium,Mid_eff,553.1335
+Philippines,2030,Medium,Mid_eff,515.1664
+Philippines,2031,Medium,Mid_eff,475.9522
+Philippines,2032,Medium,Mid_eff,435.8956
+Philippines,2033,Medium,Mid_eff,395.4518
+Philippines,2034,Medium,Mid_eff,355.112
+Philippines,2035,Medium,Mid_eff,315.3876
+Philippines,2036,Medium,Mid_eff,276.792
+Philippines,2037,Medium,Mid_eff,239.8219
+Philippines,2038,Medium,Mid_eff,204.9372
+Philippines,2039,Medium,Mid_eff,172.5414
+Philippines,2040,Medium,Mid_eff,142.9633
+Philippines,2041,Medium,Mid_eff,116.4418
+Philippines,2042,Medium,Mid_eff,93.1147
+Philippines,2043,Medium,Mid_eff,73.0141
+Philippines,2044,Medium,Mid_eff,56.0676
+Philippines,2045,Medium,Mid_eff,42.1075
+Philippines,2046,Medium,Mid_eff,30.8861
+Philippines,2047,Medium,Mid_eff,22.0972
+Philippines,2048,Medium,Mid_eff,15.3987
+Philippines,2049,Medium,Mid_eff,10.4379
+Philippines,2050,Medium,Mid_eff,6.8728
+Philippines,2051,Medium,Mid_eff,4.3899
+Philippines,2052,Medium,Mid_eff,2.7164
+Philippines,2053,Medium,Mid_eff,1.6261
+Philippines,2054,Medium,Mid_eff,0.9406
+Philippines,2055,Medium,Mid_eff,0.5249
+Philippines,2056,Medium,Mid_eff,0.2823
+Philippines,2057,Medium,Mid_eff,0.1461
+Philippines,2058,Medium,Mid_eff,0.0727
+Philippines,2059,Medium,Mid_eff,0.0347
+Philippines,2060,Medium,Mid_eff,0.0159
+Philippines,2005,Small,High_eff,285.709
+Philippines,2006,Small,High_eff,315.7362
+Philippines,2007,Small,High_eff,348.8715
+Philippines,2008,Small,High_eff,385.4845
+Philippines,2009,Small,High_eff,425.8104
+Philippines,2010,Small,High_eff,470.1744
+Philippines,2011,Small,High_eff,519.0568
+Philippines,2012,Small,High_eff,572.8029
+Philippines,2013,Small,High_eff,631.7566
+Philippines,2014,Small,High_eff,696.2896
+Philippines,2015,Small,High_eff,747.3482
+Philippines,2016,Small,High_eff,840.7992
+Philippines,2017,Small,High_eff,937.2358
+Philippines,2018,Small,High_eff,1036.2037
+Philippines,2019,Small,High_eff,1137.7772
+Philippines,2020,Small,High_eff,942.2812
+Philippines,2021,Small,High_eff,999.9458
+Philippines,2022,Small,High_eff,1147.0361
+Philippines,2023,Small,High_eff,1254.2794
+Philippines,2024,Small,High_eff,1364.1296
+Philippines,2025,Small,High_eff,1476.55
+Philippines,2026,Small,High_eff,1411.3395
+Philippines,2027,Small,High_eff,1341.5251
+Philippines,2028,Small,High_eff,1267.3153
+Philippines,2029,Small,High_eff,1189.1113
+Philippines,2030,Small,High_eff,1107.4908
+Philippines,2031,Small,High_eff,1023.1892
+Philippines,2032,Small,High_eff,937.0766
+Philippines,2033,Small,High_eff,850.1316
+Philippines,2034,Small,High_eff,763.4102
+Philippines,2035,Small,High_eff,678.0116
+Philippines,2036,Small,High_eff,595.0399
+Philippines,2037,Small,High_eff,515.5626
+Philippines,2038,Small,High_eff,440.5685
+Philippines,2039,Small,High_eff,370.9248
+Philippines,2040,Small,High_eff,307.3386
+Philippines,2041,Small,High_eff,250.3233
+Philippines,2042,Small,High_eff,200.1755
+Philippines,2043,Small,High_eff,156.9638
+Philippines,2044,Small,High_eff,120.5326
+Philippines,2045,Small,High_eff,90.5215
+Philippines,2046,Small,High_eff,66.3982
+Philippines,2047,Small,High_eff,47.5039
+Philippines,2048,Small,High_eff,33.1037
+Philippines,2049,Small,High_eff,22.4391
+Philippines,2050,Small,High_eff,14.7749
+Philippines,2051,Small,High_eff,9.4372
+Philippines,2052,Small,High_eff,5.8396
+Philippines,2053,Small,High_eff,3.4958
+Philippines,2054,Small,High_eff,2.022
+Philippines,2055,Small,High_eff,1.1285
+Philippines,2056,Small,High_eff,0.6069
+Philippines,2057,Small,High_eff,0.3142
+Philippines,2058,Small,High_eff,0.1563
+Philippines,2059,Small,High_eff,0.0746
+Philippines,2060,Small,High_eff,0.0342
+Philippines,2005,Small,Low_eff,222.3443
+Philippines,2006,Small,Low_eff,245.7121
+Philippines,2007,Small,Low_eff,271.4986
+Philippines,2008,Small,Low_eff,299.9915
+Philippines,2009,Small,Low_eff,331.374
+Philippines,2010,Small,Low_eff,365.8989
+Philippines,2011,Small,Low_eff,403.9401
+Philippines,2012,Small,Low_eff,445.7664
+Philippines,2013,Small,Low_eff,491.6453
+Philippines,2014,Small,Low_eff,541.8661
+Philippines,2015,Small,Low_eff,581.6009
+Philippines,2016,Small,Low_eff,654.3264
+Philippines,2017,Small,Low_eff,729.3751
+Philippines,2018,Small,Low_eff,806.3939
+Philippines,2019,Small,Low_eff,885.4404
+Philippines,2020,Small,Low_eff,733.3016
+Philippines,2021,Small,Low_eff,778.1773
+Philippines,2022,Small,Low_eff,892.6459
+Philippines,2023,Small,Low_eff,976.1047
+Philippines,2024,Small,Low_eff,1061.5922
+Philippines,2025,Small,Low_eff,1149.08
+Philippines,2026,Small,Low_eff,1098.3319
+Philippines,2027,Small,Low_eff,1044.001
+Philippines,2028,Small,Low_eff,986.2495
+Philippines,2029,Small,Low_eff,925.3896
+Philippines,2030,Small,Low_eff,861.8709
+Philippines,2031,Small,Low_eff,796.2658
+Philippines,2032,Small,Low_eff,729.2513
+Philippines,2033,Small,Low_eff,661.589
+Philippines,2034,Small,Low_eff,594.1007
+Philippines,2035,Small,Low_eff,527.6419
+Philippines,2036,Small,Low_eff,463.0716
+Philippines,2037,Small,Low_eff,401.2209
+Philippines,2038,Small,Low_eff,342.859
+Philippines,2039,Small,Low_eff,288.6609
+Philippines,2040,Small,Low_eff,239.1769
+Philippines,2041,Small,Low_eff,194.8065
+Philippines,2042,Small,Low_eff,155.7805
+Philippines,2043,Small,Low_eff,122.1523
+Philippines,2044,Small,Low_eff,93.8008
+Philippines,2045,Small,Low_eff,70.4456
+Philippines,2046,Small,Low_eff,51.6724
+Philippines,2047,Small,Low_eff,36.9684
+Philippines,2048,Small,Low_eff,25.762
+Philippines,2049,Small,Low_eff,17.4626
+Philippines,2050,Small,Low_eff,11.4981
+Philippines,2051,Small,Low_eff,7.3442
+Philippines,2052,Small,Low_eff,4.5445
+Philippines,2053,Small,Low_eff,2.7205
+Philippines,2054,Small,Low_eff,1.5736
+Philippines,2055,Small,Low_eff,0.8782
+Philippines,2056,Small,Low_eff,0.4723
+Philippines,2057,Small,Low_eff,0.2445
+Philippines,2058,Small,Low_eff,0.1216
+Philippines,2059,Small,Low_eff,0.0581
+Philippines,2060,Small,Low_eff,0.0266
+Philippines,2005,Small,Mid_eff,397.808
+Philippines,2006,Small,Mid_eff,439.6165
+Philippines,2007,Small,Mid_eff,485.7525
+Philippines,2008,Small,Mid_eff,536.7308
+Philippines,2009,Small,Mid_eff,592.8788
+Philippines,2010,Small,Mid_eff,654.6492
+Philippines,2011,Small,Mid_eff,722.7107
+Philippines,2012,Small,Mid_eff,797.5443
+Philippines,2013,Small,Mid_eff,879.6288
+Philippines,2014,Small,Mid_eff,969.4814
+Philippines,2015,Small,Mid_eff,1040.5731
+Philippines,2016,Small,Mid_eff,1170.69
+Philippines,2017,Small,Mid_eff,1304.9638
+Philippines,2018,Small,Mid_eff,1442.7621
+Philippines,2019,Small,Mid_eff,1584.1884
+Philippines,2020,Small,Mid_eff,1311.9889
+Philippines,2021,Small,Mid_eff,1392.2784
+Philippines,2022,Small,Mid_eff,1597.0801
+Philippines,2023,Small,Mid_eff,1746.4007
+Philippines,2024,Small,Mid_eff,1899.351
+Philippines,2025,Small,Mid_eff,2055.88
+Philippines,2026,Small,Mid_eff,1965.0839
+Philippines,2027,Small,Mid_eff,1867.8775
+Philippines,2028,Small,Mid_eff,1764.5513
+Philippines,2029,Small,Mid_eff,1655.6636
+Philippines,2030,Small,Mid_eff,1542.019
+Philippines,2031,Small,Mid_eff,1424.6413
+Philippines,2032,Small,Mid_eff,1304.7422
+Philippines,2033,Small,Mid_eff,1183.6839
+Philippines,2034,Small,Mid_eff,1062.9371
+Philippines,2035,Small,Mid_eff,944.032
+Philippines,2036,Small,Mid_eff,828.506
+Philippines,2037,Small,Mid_eff,717.8456
+Philippines,2038,Small,Mid_eff,613.4272
+Philippines,2039,Small,Mid_eff,516.4586
+Philippines,2040,Small,Mid_eff,427.9241
+Philippines,2041,Small,Mid_eff,348.5386
+Philippines,2042,Small,Mid_eff,278.7151
+Philippines,2043,Small,Mid_eff,218.5491
+Philippines,2044,Small,Mid_eff,167.8241
+Philippines,2045,Small,Mid_eff,126.0379
+Philippines,2046,Small,Mid_eff,92.4498
+Philippines,2047,Small,Mid_eff,66.1422
+Philippines,2048,Small,Mid_eff,46.0921
+Philippines,2049,Small,Mid_eff,31.2432
+Philippines,2050,Small,Mid_eff,20.5719
+Philippines,2051,Small,Mid_eff,13.14
+Philippines,2052,Small,Mid_eff,8.1307
+Philippines,2053,Small,Mid_eff,4.8674
+Philippines,2054,Small,Mid_eff,2.8153
+Philippines,2055,Small,Mid_eff,1.5713
+Philippines,2056,Small,Mid_eff,0.8451
+Philippines,2057,Small,Mid_eff,0.4374
+Philippines,2058,Small,Mid_eff,0.2176
+Philippines,2059,Small,Mid_eff,0.1039
+Philippines,2060,Small,Mid_eff,0.0476
+Singapore,2005,Large,High_eff,534.4879
+Singapore,2006,Large,High_eff,559.8391
+Singapore,2007,Large,High_eff,592.5013
+Singapore,2008,Large,High_eff,634.3581
+Singapore,2009,Large,High_eff,663.6908
+Singapore,2010,Large,High_eff,685.7956
+Singapore,2011,Large,High_eff,710.859
+Singapore,2012,Large,High_eff,739.5581
+Singapore,2013,Large,High_eff,763.0241
+Singapore,2014,Large,High_eff,784.7133
+Singapore,2015,Large,High_eff,806.4861
+Singapore,2016,Large,High_eff,829.5873
+Singapore,2017,Large,High_eff,846.0484
+Singapore,2018,Large,High_eff,862.6727
+Singapore,2019,Large,High_eff,882.1893
+Singapore,2020,Large,High_eff,873.0696
+Singapore,2021,Large,High_eff,858.8022
+Singapore,2022,Large,High_eff,881.373
+Singapore,2023,Large,High_eff,887.1143
+Singapore,2024,Large,High_eff,895.9538
+Singapore,2025,Large,High_eff,907.88
+Singapore,2026,Large,High_eff,851.1749
+Singapore,2027,Large,High_eff,793.6859
+Singapore,2028,Large,High_eff,735.7117
+Singapore,2029,Large,High_eff,677.6
+Singapore,2030,Large,High_eff,619.7355
+Singapore,2031,Large,High_eff,562.5305
+Singapore,2032,Large,High_eff,506.4159
+Singapore,2033,Large,High_eff,451.8337
+Singapore,2034,Large,High_eff,399.2271
+Singapore,2035,Large,High_eff,349.031
+Singapore,2036,Large,High_eff,301.6583
+Singapore,2037,Large,High_eff,257.4851
+Singapore,2038,Large,High_eff,216.8344
+Singapore,2039,Large,High_eff,179.9594
+Singapore,2040,Large,High_eff,147.0287
+Singapore,2041,Large,High_eff,118.1145
+Singapore,2042,Large,High_eff,93.1868
+Singapore,2043,Large,High_eff,72.1139
+Singapore,2044,Large,High_eff,54.6699
+Singapore,2045,Large,High_eff,40.5495
+Singapore,2046,Large,High_eff,29.3876
+Singapore,2047,Large,High_eff,20.7834
+Singapore,2048,Large,High_eff,14.3241
+Singapore,2049,Large,High_eff,9.6082
+Singapore,2050,Large,High_eff,6.2641
+Singapore,2051,Large,High_eff,3.9641
+Singapore,2052,Large,High_eff,2.4318
+Singapore,2053,Large,High_eff,1.4442
+Singapore,2054,Large,High_eff,0.8292
+Singapore,2055,Large,High_eff,0.4597
+Singapore,2056,Large,High_eff,0.2457
+Singapore,2057,Large,High_eff,0.1265
+Singapore,2058,Large,High_eff,0.0626
+Singapore,2059,Large,High_eff,0.0298
+Singapore,2060,Large,High_eff,0.0136
+Singapore,2005,Large,Low_eff,56.6467
+Singapore,2006,Large,Low_eff,59.3335
+Singapore,2007,Large,Low_eff,62.7952
+Singapore,2008,Large,Low_eff,67.2313
+Singapore,2009,Large,Low_eff,70.3401
+Singapore,2010,Large,Low_eff,72.6828
+Singapore,2011,Large,Low_eff,75.3391
+Singapore,2012,Large,Low_eff,78.3807
+Singapore,2013,Large,Low_eff,80.8677
+Singapore,2014,Large,Low_eff,83.1664
+Singapore,2015,Large,Low_eff,85.474
+Singapore,2016,Large,Low_eff,87.9223
+Singapore,2017,Large,Low_eff,89.6669
+Singapore,2018,Large,Low_eff,91.4288
+Singapore,2019,Large,Low_eff,93.4972
+Singapore,2020,Large,Low_eff,92.5307
+Singapore,2021,Large,Low_eff,91.0186
+Singapore,2022,Large,Low_eff,93.4107
+Singapore,2023,Large,Low_eff,94.0192
+Singapore,2024,Large,Low_eff,94.956
+Singapore,2025,Large,Low_eff,96.22
+Singapore,2026,Large,Low_eff,90.2102
+Singapore,2027,Large,Low_eff,84.1173
+Singapore,2028,Large,Low_eff,77.9731
+Singapore,2029,Large,Low_eff,71.8142
+Singapore,2030,Large,Low_eff,65.6815
+Singapore,2031,Large,Low_eff,59.6188
+Singapore,2032,Large,Low_eff,53.6716
+Singapore,2033,Large,Low_eff,47.8868
+Singapore,2034,Large,Low_eff,42.3114
+Singapore,2035,Large,Low_eff,36.9914
+Singapore,2036,Large,Low_eff,31.9707
+Singapore,2037,Large,Low_eff,27.2891
+Singapore,2038,Large,Low_eff,22.9808
+Singapore,2039,Large,Low_eff,19.0727
+Singapore,2040,Large,Low_eff,15.5826
+Singapore,2041,Large,Low_eff,12.5182
+Singapore,2042,Large,Low_eff,9.8762
+Singapore,2043,Large,Low_eff,7.6429
+Singapore,2044,Large,Low_eff,5.7941
+Singapore,2045,Large,Low_eff,4.2976
+Singapore,2046,Large,Low_eff,3.1146
+Singapore,2047,Large,Low_eff,2.2027
+Singapore,2048,Large,Low_eff,1.5181
+Singapore,2049,Large,Low_eff,1.0183
+Singapore,2050,Large,Low_eff,0.6639
+Singapore,2051,Large,Low_eff,0.4201
+Singapore,2052,Large,Low_eff,0.2577
+Singapore,2053,Large,Low_eff,0.1531
+Singapore,2054,Large,Low_eff,0.0879
+Singapore,2055,Large,Low_eff,0.0487
+Singapore,2056,Large,Low_eff,0.026
+Singapore,2057,Large,Low_eff,0.0134
+Singapore,2058,Large,Low_eff,0.0066
+Singapore,2059,Large,Low_eff,0.0032
+Singapore,2060,Large,Low_eff,0.0014
+Singapore,2005,Large,Mid_eff,213.8588
+Singapore,2006,Large,Mid_eff,224.0022
+Singapore,2007,Large,Mid_eff,237.071
+Singapore,2008,Large,Mid_eff,253.8187
+Singapore,2009,Large,Mid_eff,265.5553
+Singapore,2010,Large,Mid_eff,274.3998
+Singapore,2011,Large,Mid_eff,284.4282
+Singapore,2012,Large,Mid_eff,295.9112
+Singapore,2013,Large,Mid_eff,305.3004
+Singapore,2014,Large,Mid_eff,313.9787
+Singapore,2015,Large,Mid_eff,322.6904
+Singapore,2016,Large,Mid_eff,331.9336
+Singapore,2017,Large,Mid_eff,338.52
+Singapore,2018,Large,Mid_eff,345.1717
+Singapore,2019,Large,Mid_eff,352.9807
+Singapore,2020,Large,Mid_eff,349.3317
+Singapore,2021,Large,Mid_eff,343.623
+Singapore,2022,Large,Mid_eff,352.654
+Singapore,2023,Large,Mid_eff,354.9512
+Singapore,2024,Large,Mid_eff,358.4881
+Singapore,2025,Large,Mid_eff,363.26
+Singapore,2026,Large,Mid_eff,340.5712
+Singapore,2027,Large,Mid_eff,317.5688
+Singapore,2028,Large,Mid_eff,294.3722
+Singapore,2029,Large,Mid_eff,271.1206
+Singapore,2030,Large,Mid_eff,247.9679
+Singapore,2031,Large,Mid_eff,225.0791
+Singapore,2032,Large,Mid_eff,202.6266
+Singapore,2033,Large,Mid_eff,180.7872
+Singapore,2034,Large,Mid_eff,159.7384
+Singapore,2035,Large,Mid_eff,139.6539
+Singapore,2036,Large,Mid_eff,120.6992
+Singapore,2037,Large,Mid_eff,103.0247
+Singapore,2038,Large,Mid_eff,86.7596
+Singapore,2039,Large,Mid_eff,72.0052
+Singapore,2040,Large,Mid_eff,58.829
+Singapore,2041,Large,Mid_eff,47.2599
+Singapore,2042,Large,Mid_eff,37.2858
+Singapore,2043,Large,Mid_eff,28.8541
+Singapore,2044,Large,Mid_eff,21.8745
+Singapore,2045,Large,Mid_eff,16.2246
+Singapore,2046,Large,Mid_eff,11.7586
+Singapore,2047,Large,Mid_eff,8.3158
+Singapore,2048,Large,Mid_eff,5.7314
+Singapore,2049,Large,Mid_eff,3.8444
+Singapore,2050,Large,Mid_eff,2.5064
+Singapore,2051,Large,Mid_eff,1.5861
+Singapore,2052,Large,Mid_eff,0.973
+Singapore,2053,Large,Mid_eff,0.5778
+Singapore,2054,Large,Mid_eff,0.3318
+Singapore,2055,Large,Mid_eff,0.1839
+Singapore,2056,Large,Mid_eff,0.0983
+Singapore,2057,Large,Mid_eff,0.0506
+Singapore,2058,Large,Mid_eff,0.0251
+Singapore,2059,Large,Mid_eff,0.0119
+Singapore,2060,Large,Mid_eff,0.0054
+Singapore,2005,Medium,High_eff,458.4429
+Singapore,2006,Medium,High_eff,480.1871
+Singapore,2007,Medium,High_eff,508.2023
+Singapore,2008,Medium,High_eff,544.1038
+Singapore,2009,Medium,High_eff,569.2632
+Singapore,2010,Medium,High_eff,588.223
+Singapore,2011,Medium,High_eff,609.7204
+Singapore,2012,Medium,High_eff,634.3363
+Singapore,2013,Medium,High_eff,654.4637
+Singapore,2014,Medium,High_eff,673.067
+Singapore,2015,Medium,High_eff,691.7421
+Singapore,2016,Medium,High_eff,711.5565
+Singapore,2017,Medium,High_eff,725.6756
+Singapore,2018,Medium,High_eff,739.9346
+Singapore,2019,Medium,High_eff,756.6745
+Singapore,2020,Medium,High_eff,748.8523
+Singapore,2021,Medium,High_eff,736.6148
+Singapore,2022,Medium,High_eff,755.9743
+Singapore,2023,Medium,High_eff,760.8988
+Singapore,2024,Medium,High_eff,768.4806
+Singapore,2025,Medium,High_eff,778.71
+Singapore,2026,Medium,High_eff,730.0727
+Singapore,2027,Medium,High_eff,680.7631
+Singapore,2028,Medium,High_eff,631.0372
+Singapore,2029,Medium,High_eff,581.1934
+Singapore,2030,Medium,High_eff,531.5617
+Singapore,2031,Medium,High_eff,482.4956
+Singapore,2032,Medium,High_eff,434.3649
+Singapore,2033,Medium,High_eff,387.5483
+Singapore,2034,Medium,High_eff,342.4265
+Singapore,2035,Medium,High_eff,299.3721
+Singapore,2036,Medium,High_eff,258.7394
+Singapore,2037,Medium,High_eff,220.851
+Singapore,2038,Medium,High_eff,185.9839
+Singapore,2039,Medium,High_eff,154.3554
+Singapore,2040,Medium,High_eff,126.11
+Singapore,2041,Medium,High_eff,101.3096
+Singapore,2042,Medium,High_eff,79.9285
+Singapore,2043,Medium,High_eff,61.8538
+Singapore,2044,Medium,High_eff,46.8917
+Singapore,2045,Medium,High_eff,34.7802
+Singapore,2046,Medium,High_eff,25.2065
+Singapore,2047,Medium,High_eff,17.8264
+Singapore,2048,Medium,High_eff,12.2861
+Singapore,2049,Medium,High_eff,8.2412
+Singapore,2050,Medium,High_eff,5.3729
+Singapore,2051,Medium,High_eff,3.4001
+Singapore,2052,Medium,High_eff,2.0858
+Singapore,2053,Medium,High_eff,1.2387
+Singapore,2054,Medium,High_eff,0.7112
+Singapore,2055,Medium,High_eff,0.3943
+Singapore,2056,Medium,High_eff,0.2108
+Singapore,2057,Medium,High_eff,0.1085
+Singapore,2058,Medium,High_eff,0.0537
+Singapore,2059,Medium,High_eff,0.0255
+Singapore,2060,Medium,High_eff,0.0116
+Singapore,2005,Medium,Low_eff,103.6443
+Singapore,2006,Medium,Low_eff,108.5602
+Singapore,2007,Medium,Low_eff,114.8939
+Singapore,2008,Medium,Low_eff,123.0105
+Singapore,2009,Medium,Low_eff,128.6985
+Singapore,2010,Medium,Low_eff,132.9849
+Singapore,2011,Medium,Low_eff,137.845
+Singapore,2012,Medium,Low_eff,143.4101
+Singapore,2013,Medium,Low_eff,147.9605
+Singapore,2014,Medium,Low_eff,152.1663
+Singapore,2015,Medium,Low_eff,156.3884
+Singapore,2016,Medium,Low_eff,160.868
+Singapore,2017,Medium,Low_eff,164.06
+Singapore,2018,Medium,Low_eff,167.2837
+Singapore,2019,Medium,Low_eff,171.0682
+Singapore,2020,Medium,Low_eff,169.2998
+Singapore,2021,Medium,Low_eff,166.5332
+Singapore,2022,Medium,Low_eff,170.9099
+Singapore,2023,Medium,Low_eff,172.0233
+Singapore,2024,Medium,Low_eff,173.7374
+Singapore,2025,Medium,Low_eff,176.05
+Singapore,2026,Medium,Low_eff,165.0541
+Singapore,2027,Medium,Low_eff,153.9063
+Singapore,2028,Medium,Low_eff,142.6643
+Singapore,2029,Medium,Low_eff,131.3957
+Singapore,2030,Medium,Low_eff,120.175
+Singapore,2031,Medium,Low_eff,109.0821
+Singapore,2032,Medium,Low_eff,98.2008
+Singapore,2033,Medium,Low_eff,87.6166
+Singapore,2034,Medium,Low_eff,77.4154
+Singapore,2035,Medium,Low_eff,67.6818
+Singapore,2036,Medium,Low_eff,58.4956
+Singapore,2037,Medium,Low_eff,49.9298
+Singapore,2038,Medium,Low_eff,42.0471
+Singapore,2039,Medium,Low_eff,34.8965
+Singapore,2040,Medium,Low_eff,28.5108
+Singapore,2041,Medium,Low_eff,22.904
+Singapore,2042,Medium,Low_eff,18.0702
+Singapore,2043,Medium,Low_eff,13.9838
+Singapore,2044,Medium,Low_eff,10.6012
+Singapore,2045,Medium,Low_eff,7.8631
+Singapore,2046,Medium,Low_eff,5.6987
+Singapore,2047,Medium,Low_eff,4.0302
+Singapore,2048,Medium,Low_eff,2.7776
+Singapore,2049,Medium,Low_eff,1.8632
+Singapore,2050,Medium,Low_eff,1.2147
+Singapore,2051,Medium,Low_eff,0.7687
+Singapore,2052,Medium,Low_eff,0.4716
+Singapore,2053,Medium,Low_eff,0.28
+Singapore,2054,Medium,Low_eff,0.1608
+Singapore,2055,Medium,Low_eff,0.0891
+Singapore,2056,Medium,Low_eff,0.0476
+Singapore,2057,Medium,Low_eff,0.0245
+Singapore,2058,Medium,Low_eff,0.0121
+Singapore,2059,Medium,Low_eff,0.0058
+Singapore,2060,Medium,Low_eff,0.0026
+Singapore,2005,Medium,Mid_eff,272.7014
+Singapore,2006,Medium,Mid_eff,285.6358
+Singapore,2007,Medium,Mid_eff,302.3005
+Singapore,2008,Medium,Mid_eff,323.6562
+Singapore,2009,Medium,Mid_eff,338.6221
+Singapore,2010,Medium,Mid_eff,349.9002
+Singapore,2011,Medium,Mid_eff,362.6878
+Singapore,2012,Medium,Mid_eff,377.3304
+Singapore,2013,Medium,Mid_eff,389.303
+Singapore,2014,Medium,Mid_eff,400.369
+Singapore,2015,Medium,Mid_eff,411.4778
+Singapore,2016,Medium,Mid_eff,423.2642
+Singapore,2017,Medium,Mid_eff,431.6629
+Singapore,2018,Medium,Mid_eff,440.1447
+Singapore,2019,Medium,Mid_eff,450.1023
+Singapore,2020,Medium,Mid_eff,445.4493
+Singapore,2021,Medium,Mid_eff,438.17
+Singapore,2022,Medium,Mid_eff,449.6858
+Singapore,2023,Medium,Mid_eff,452.6151
+Singapore,2024,Medium,Mid_eff,457.1251
+Singapore,2025,Medium,Mid_eff,463.21
+Singapore,2026,Medium,Mid_eff,434.2785
+Singapore,2027,Medium,Mid_eff,404.947
+Singapore,2028,Medium,Mid_eff,375.3679
+Singapore,2029,Medium,Mid_eff,345.7187
+Singapore,2030,Medium,Mid_eff,316.1956
+Singapore,2031,Medium,Mid_eff,287.009
+Singapore,2032,Medium,Mid_eff,258.3788
+Singapore,2033,Medium,Mid_eff,230.5303
+Singapore,2034,Medium,Mid_eff,203.6899
+Singapore,2035,Medium,Mid_eff,178.0794
+Singapore,2036,Medium,Mid_eff,153.9093
+Singapore,2037,Medium,Mid_eff,131.3716
+Singapore,2038,Medium,Mid_eff,110.6312
+Singapore,2039,Medium,Mid_eff,91.8172
+Singapore,2040,Medium,Mid_eff,75.0156
+Singapore,2041,Medium,Mid_eff,60.2633
+Singapore,2042,Medium,Mid_eff,47.5449
+Singapore,2043,Medium,Mid_eff,36.7933
+Singapore,2044,Medium,Mid_eff,27.8932
+Singapore,2045,Medium,Mid_eff,20.6888
+Singapore,2046,Medium,Mid_eff,14.9939
+Singapore,2047,Medium,Mid_eff,10.6039
+Singapore,2048,Medium,Mid_eff,7.3083
+Singapore,2049,Medium,Mid_eff,4.9022
+Singapore,2050,Medium,Mid_eff,3.196
+Singapore,2051,Medium,Mid_eff,2.0225
+Singapore,2052,Medium,Mid_eff,1.2407
+Singapore,2053,Medium,Mid_eff,0.7368
+Singapore,2054,Medium,Mid_eff,0.4231
+Singapore,2055,Medium,Mid_eff,0.2345
+Singapore,2056,Medium,Mid_eff,0.1254
+Singapore,2057,Medium,Mid_eff,0.0645
+Singapore,2058,Medium,Mid_eff,0.0319
+Singapore,2059,Medium,Mid_eff,0.0152
+Singapore,2060,Medium,Mid_eff,0.0069
+Singapore,2005,Small,High_eff,301.5782
+Singapore,2006,Small,High_eff,315.8822
+Singapore,2007,Small,High_eff,334.3115
+Singapore,2008,Small,High_eff,357.9287
+Singapore,2009,Small,High_eff,374.4793
+Singapore,2010,Small,High_eff,386.9516
+Singapore,2011,Small,High_eff,401.0933
+Singapore,2012,Small,High_eff,417.2865
+Singapore,2013,Small,High_eff,430.5269
+Singapore,2014,Small,High_eff,442.7647
+Singapore,2015,Small,High_eff,455.0498
+Singapore,2016,Small,High_eff,468.0843
+Singapore,2017,Small,High_eff,477.3723
+Singapore,2018,Small,High_eff,486.7523
+Singapore,2019,Small,High_eff,497.7644
+Singapore,2020,Small,High_eff,492.6186
+Singapore,2021,Small,High_eff,484.5685
+Singapore,2022,Small,High_eff,497.3037
+Singapore,2023,Small,High_eff,500.5432
+Singapore,2024,Small,High_eff,505.5308
+Singapore,2025,Small,High_eff,512.26
+Singapore,2026,Small,High_eff,480.2649
+Singapore,2027,Small,High_eff,447.8274
+Singapore,2028,Small,High_eff,415.1162
+Singapore,2029,Small,High_eff,382.3274
+Singapore,2030,Small,High_eff,349.6781
+Singapore,2031,Small,High_eff,317.4008
+Singapore,2032,Small,High_eff,285.7389
+Singapore,2033,Small,High_eff,254.9415
+Singapore,2034,Small,High_eff,225.259
+Singapore,2035,Small,High_eff,196.9364
+Singapore,2036,Small,High_eff,170.2069
+Singapore,2037,Small,High_eff,145.2828
+Singapore,2038,Small,High_eff,122.3461
+Singapore,2039,Small,High_eff,101.5399
+Singapore,2040,Small,High_eff,82.9591
+Singapore,2041,Small,High_eff,66.6446
+Singapore,2042,Small,High_eff,52.5795
+Singapore,2043,Small,High_eff,40.6894
+Singapore,2044,Small,High_eff,30.8468
+Singapore,2045,Small,High_eff,22.8795
+Singapore,2046,Small,High_eff,16.5816
+Singapore,2047,Small,High_eff,11.7268
+Singapore,2048,Small,High_eff,8.0822
+Singapore,2049,Small,High_eff,5.4213
+Singapore,2050,Small,High_eff,3.5345
+Singapore,2051,Small,High_eff,2.2367
+Singapore,2052,Small,High_eff,1.3721
+Singapore,2053,Small,High_eff,0.8148
+Singapore,2054,Small,High_eff,0.4679
+Singapore,2055,Small,High_eff,0.2594
+Singapore,2056,Small,High_eff,0.1386
+Singapore,2057,Small,High_eff,0.0714
+Singapore,2058,Small,High_eff,0.0353
+Singapore,2059,Small,High_eff,0.0168
+Singapore,2060,Small,High_eff,0.0077
+Singapore,2005,Small,Low_eff,93.8245
+Singapore,2006,Small,Low_eff,98.2746
+Singapore,2007,Small,Low_eff,104.0082
+Singapore,2008,Small,Low_eff,111.3557
+Singapore,2009,Small,Low_eff,116.5048
+Singapore,2010,Small,Low_eff,120.3851
+Singapore,2011,Small,Low_eff,124.7848
+Singapore,2012,Small,Low_eff,129.8226
+Singapore,2013,Small,Low_eff,133.9419
+Singapore,2014,Small,Low_eff,137.7492
+Singapore,2015,Small,Low_eff,141.5712
+Singapore,2016,Small,Low_eff,145.6264
+Singapore,2017,Small,Low_eff,148.516
+Singapore,2018,Small,Low_eff,151.4343
+Singapore,2019,Small,Low_eff,154.8602
+Singapore,2020,Small,Low_eff,153.2593
+Singapore,2021,Small,Low_eff,150.7548
+Singapore,2022,Small,Low_eff,154.7169
+Singapore,2023,Small,Low_eff,155.7248
+Singapore,2024,Small,Low_eff,157.2765
+Singapore,2025,Small,Low_eff,159.37
+Singapore,2026,Small,Low_eff,149.4159
+Singapore,2027,Small,Low_eff,139.3243
+Singapore,2028,Small,Low_eff,129.1474
+Singapore,2029,Small,Low_eff,118.9465
+Singapore,2030,Small,Low_eff,108.7889
+Singapore,2031,Small,Low_eff,98.7471
+Singapore,2032,Small,Low_eff,88.8967
+Singapore,2033,Small,Low_eff,79.3153
+Singapore,2034,Small,Low_eff,70.0807
+Singapore,2035,Small,Low_eff,61.2692
+Singapore,2036,Small,Low_eff,52.9534
+Singapore,2037,Small,Low_eff,45.1991
+Singapore,2038,Small,Low_eff,38.0633
+Singapore,2039,Small,Low_eff,31.5902
+Singapore,2040,Small,Low_eff,25.8095
+Singapore,2041,Small,Low_eff,20.7339
+Singapore,2042,Small,Low_eff,16.3581
+Singapore,2043,Small,Low_eff,12.6589
+Singapore,2044,Small,Low_eff,9.5968
+Singapore,2045,Small,Low_eff,7.1181
+Singapore,2046,Small,Low_eff,5.1587
+Singapore,2047,Small,Low_eff,3.6483
+Singapore,2048,Small,Low_eff,2.5145
+Singapore,2049,Small,Low_eff,1.6866
+Singapore,2050,Small,Low_eff,1.0996
+Singapore,2051,Small,Low_eff,0.6959
+Singapore,2052,Small,Low_eff,0.4269
+Singapore,2053,Small,Low_eff,0.2535
+Singapore,2054,Small,Low_eff,0.1456
+Singapore,2055,Small,Low_eff,0.0807
+Singapore,2056,Small,Low_eff,0.0431
+Singapore,2057,Small,Low_eff,0.0222
+Singapore,2058,Small,Low_eff,0.011
+Singapore,2059,Small,Low_eff,0.0052
+Singapore,2060,Small,Low_eff,0.0024
+Singapore,2005,Small,Mid_eff,346.0089
+Singapore,2006,Small,Mid_eff,362.4204
+Singapore,2007,Small,Mid_eff,383.5648
+Singapore,2008,Small,Mid_eff,410.6614
+Singapore,2009,Small,Mid_eff,429.6504
+Singapore,2010,Small,Mid_eff,443.9603
+Singapore,2011,Small,Mid_eff,460.1854
+Singapore,2012,Small,Mid_eff,478.7642
+Singapore,2013,Small,Mid_eff,493.9553
+Singapore,2014,Small,Mid_eff,507.9961
+Singapore,2015,Small,Mid_eff,522.0911
+Singapore,2016,Small,Mid_eff,537.046
+Singapore,2017,Small,Mid_eff,547.7024
+Singapore,2018,Small,Mid_eff,558.4643
+Singapore,2019,Small,Mid_eff,571.0987
+Singapore,2020,Small,Mid_eff,565.1949
+Singapore,2021,Small,Mid_eff,555.9587
+Singapore,2022,Small,Mid_eff,570.5703
+Singapore,2023,Small,Mid_eff,574.287
+Singapore,2024,Small,Mid_eff,580.0094
+Singapore,2025,Small,Mid_eff,587.73
+Singapore,2026,Small,Mid_eff,551.0211
+Singapore,2027,Small,Mid_eff,513.8047
+Singapore,2028,Small,Mid_eff,476.2743
+Singapore,2029,Small,Mid_eff,438.6547
+Singapore,2030,Small,Mid_eff,401.1953
+Singapore,2031,Small,Mid_eff,364.1627
+Singapore,2032,Small,Mid_eff,327.8361
+Singapore,2033,Small,Mid_eff,292.5014
+Singapore,2034,Small,Mid_eff,258.4458
+Singapore,2035,Small,Mid_eff,225.9506
+Singapore,2036,Small,Mid_eff,195.2831
+Singapore,2037,Small,Mid_eff,166.6869
+Singapore,2038,Small,Mid_eff,140.3711
+Singapore,2039,Small,Mid_eff,116.4995
+Singapore,2040,Small,Mid_eff,95.1813
+Singapore,2041,Small,Mid_eff,76.4632
+Singapore,2042,Small,Mid_eff,60.3259
+Singapore,2043,Small,Mid_eff,46.684
+Singapore,2044,Small,Mid_eff,35.3914
+Singapore,2045,Small,Mid_eff,26.2503
+Singapore,2046,Small,Mid_eff,19.0245
+Singapore,2047,Small,Mid_eff,13.4545
+Singapore,2048,Small,Mid_eff,9.2729
+Singapore,2049,Small,Mid_eff,6.22
+Singapore,2050,Small,Mid_eff,4.0552
+Singapore,2051,Small,Mid_eff,2.5662
+Singapore,2052,Small,Mid_eff,1.5743
+Singapore,2053,Small,Mid_eff,0.9349
+Singapore,2054,Small,Mid_eff,0.5368
+Singapore,2055,Small,Mid_eff,0.2976
+Singapore,2056,Small,Mid_eff,0.1591
+Singapore,2057,Small,Mid_eff,0.0819
+Singapore,2058,Small,Mid_eff,0.0405
+Singapore,2059,Small,Mid_eff,0.0193
+Singapore,2060,Small,Mid_eff,0.0088
+Thailand,2005,Large,High_eff,1909.9201
+Thailand,2006,Large,High_eff,2004.8321
+Thailand,2007,Large,High_eff,2104.627
+Thailand,2008,Large,High_eff,2209.074
+Thailand,2009,Large,High_eff,2318.0262
+Thailand,2010,Large,High_eff,2431.2099
+Thailand,2011,Large,High_eff,2549.2687
+Thailand,2012,Large,High_eff,2673.0196
+Thailand,2013,Large,High_eff,2801.7526
+Thailand,2014,Large,High_eff,2934.9313
+Thailand,2015,Large,High_eff,3038.2815
+Thailand,2016,Large,High_eff,3186.4325
+Thailand,2017,Large,High_eff,3379.8299
+Thailand,2018,Large,High_eff,3571.6166
+Thailand,2019,Large,High_eff,3671.3026
+Thailand,2020,Large,High_eff,3361.9269
+Thailand,2021,Large,High_eff,3413.3383
+Thailand,2022,Large,High_eff,3554.6279
+Thailand,2023,Large,High_eff,3651.0732
+Thailand,2024,Large,High_eff,3746.7553
+Thailand,2025,Large,High_eff,3933.2
+Thailand,2026,Large,High_eff,3708.688
+Thailand,2027,Large,High_eff,3477.8905
+Thailand,2028,Large,High_eff,3241.9458
+Thailand,2029,Large,High_eff,3002.3289
+Thailand,2030,Large,High_eff,2760.7891
+Thailand,2031,Large,High_eff,2519.2878
+Thailand,2032,Large,High_eff,2279.9352
+Thailand,2033,Large,High_eff,2044.9274
+Thailand,2034,Large,High_eff,1816.4827
+Thailand,2035,Large,High_eff,1596.7765
+Thailand,2036,Large,High_eff,1387.8744
+Thailand,2037,Large,High_eff,1191.6643
+Thailand,2038,Large,High_eff,1009.7881
+Thailand,2039,Large,High_eff,843.5767
+Thailand,2040,Large,High_eff,693.9912
+Thailand,2041,Large,High_eff,561.5766
+Thailand,2042,Large,High_eff,446.4332
+Thailand,2043,Large,High_eff,348.2111
+Thailand,2044,Large,High_eff,266.1315
+Thailand,2045,Large,High_eff,199.0366
+Thailand,2046,Large,High_eff,145.4651
+Thailand,2047,Large,High_eff,103.7465
+Thailand,2048,Large,High_eff,72.1064
+Thailand,2049,Large,High_eff,48.7703
+Thailand,2050,Large,High_eff,32.0565
+Thailand,2051,Large,High_eff,20.4483
+Thailand,2052,Large,High_eff,12.6411
+Thailand,2053,Large,High_eff,7.5632
+Thailand,2054,Large,High_eff,4.3736
+Thailand,2055,Large,High_eff,2.4412
+Thailand,2056,Large,High_eff,1.3135
+Thailand,2057,Large,High_eff,0.6803
+Thailand,2058,Large,High_eff,0.3388
+Thailand,2059,Large,High_eff,0.162
+Thailand,2060,Large,High_eff,0.0743
+Thailand,2005,Large,Low_eff,580.8766
+Thailand,2006,Large,Low_eff,609.7428
+Thailand,2007,Large,Low_eff,640.094
+Thailand,2008,Large,Low_eff,671.8602
+Thailand,2009,Large,Low_eff,704.9966
+Thailand,2010,Large,Low_eff,739.4199
+Thailand,2011,Large,Low_eff,775.3259
+Thailand,2012,Large,Low_eff,812.963
+Thailand,2013,Large,Low_eff,852.1154
+Thailand,2014,Large,Low_eff,892.62
+Thailand,2015,Large,Low_eff,924.0526
+Thailand,2016,Large,Low_eff,969.1107
+Thailand,2017,Large,Low_eff,1027.9299
+Thailand,2018,Large,Low_eff,1086.2593
+Thailand,2019,Large,Low_eff,1116.5774
+Thailand,2020,Large,Low_eff,1022.485
+Thailand,2021,Large,Low_eff,1038.121
+Thailand,2022,Large,Low_eff,1081.0924
+Thailand,2023,Large,Low_eff,1110.4249
+Thailand,2024,Large,Low_eff,1139.5254
+Thailand,2025,Large,Low_eff,1196.23
+Thailand,2026,Large,Low_eff,1127.9477
+Thailand,2027,Large,Low_eff,1057.7537
+Thailand,2028,Large,Low_eff,985.9943
+Thailand,2029,Large,Low_eff,913.118
+Thailand,2030,Large,Low_eff,839.657
+Thailand,2031,Large,Low_eff,766.2076
+Thailand,2032,Large,Low_eff,693.4117
+Thailand,2033,Large,Low_eff,621.9372
+Thailand,2034,Large,Low_eff,552.4588
+Thailand,2035,Large,Low_eff,485.6381
+Thailand,2036,Large,Low_eff,422.1034
+Thailand,2037,Large,Low_eff,362.4287
+Thailand,2038,Large,Low_eff,307.1135
+Thailand,2039,Large,Low_eff,256.5625
+Thailand,2040,Large,Low_eff,211.0681
+Thailand,2041,Large,Low_eff,170.796
+Thailand,2042,Large,Low_eff,135.7767
+Thailand,2043,Large,Low_eff,105.9037
+Thailand,2044,Large,Low_eff,80.9403
+Thailand,2045,Large,Low_eff,60.5343
+Thailand,2046,Large,Low_eff,44.2413
+Thailand,2047,Large,Low_eff,31.5531
+Thailand,2048,Large,Low_eff,21.9302
+Thailand,2049,Large,Low_eff,14.8328
+Thailand,2050,Large,Low_eff,9.7495
+Thailand,2051,Large,Low_eff,6.2191
+Thailand,2052,Large,Low_eff,3.8446
+Thailand,2053,Large,Low_eff,2.3002
+Thailand,2054,Large,Low_eff,1.3302
+Thailand,2055,Large,Low_eff,0.7425
+Thailand,2056,Large,Low_eff,0.3995
+Thailand,2057,Large,Low_eff,0.2069
+Thailand,2058,Large,Low_eff,0.103
+Thailand,2059,Large,Low_eff,0.0493
+Thailand,2060,Large,Low_eff,0.0226
+Thailand,2005,Large,Mid_eff,1156.7953
+Thailand,2006,Large,Mid_eff,1214.2813
+Thailand,2007,Large,Mid_eff,1274.7248
+Thailand,2008,Large,Mid_eff,1337.986
+Thailand,2009,Large,Mid_eff,1403.9759
+Thailand,2010,Large,Mid_eff,1472.5287
+Thailand,2011,Large,Mid_eff,1544.0342
+Thailand,2012,Large,Mid_eff,1618.9873
+Thailand,2013,Large,Mid_eff,1696.958
+Thailand,2014,Large,Mid_eff,1777.6213
+Thailand,2015,Large,Mid_eff,1840.2182
+Thailand,2016,Large,Mid_eff,1929.9499
+Thailand,2017,Large,Mid_eff,2047.0863
+Thailand,2018,Large,Mid_eff,2163.2472
+Thailand,2019,Large,Mid_eff,2223.6247
+Thailand,2020,Large,Mid_eff,2036.2428
+Thailand,2021,Large,Mid_eff,2067.3815
+Thailand,2022,Large,Mid_eff,2152.9574
+Thailand,2023,Large,Mid_eff,2211.3722
+Thailand,2024,Large,Mid_eff,2269.3247
+Thailand,2025,Large,Mid_eff,2382.25
+Thailand,2026,Large,Mid_eff,2246.2682
+Thailand,2027,Large,Mid_eff,2106.4794
+Thailand,2028,Large,Mid_eff,1963.573
+Thailand,2029,Large,Mid_eff,1818.4425
+Thailand,2030,Large,Mid_eff,1672.1473
+Thailand,2031,Large,Mid_eff,1525.8755
+Thailand,2032,Large,Mid_eff,1380.905
+Thailand,2033,Large,Mid_eff,1238.5661
+Thailand,2034,Large,Mid_eff,1100.2024
+Thailand,2035,Large,Mid_eff,967.1313
+Thailand,2036,Large,Mid_eff,840.604
+Thailand,2037,Large,Mid_eff,721.764
+Thailand,2038,Large,Mid_eff,611.6057
+Thailand,2039,Large,Mid_eff,510.9353
+Thailand,2040,Large,Mid_eff,420.3347
+Thailand,2041,Large,Mid_eff,340.1342
+Thailand,2042,Large,Mid_eff,270.3945
+Thailand,2043,Large,Mid_eff,210.9035
+Thailand,2044,Large,Mid_eff,161.1898
+Thailand,2045,Large,Mid_eff,120.552
+Thailand,2046,Large,Mid_eff,88.1049
+Thailand,2047,Large,Mid_eff,62.8369
+Thailand,2048,Large,Mid_eff,43.6732
+Thailand,2049,Large,Mid_eff,29.539
+Thailand,2050,Large,Mid_eff,19.4159
+Thailand,2051,Large,Mid_eff,12.3851
+Thailand,2052,Large,Mid_eff,7.6564
+Thailand,2053,Large,Mid_eff,4.5809
+Thailand,2054,Large,Mid_eff,2.649
+Thailand,2055,Large,Mid_eff,1.4786
+Thailand,2056,Large,Mid_eff,0.7955
+Thailand,2057,Large,Mid_eff,0.4121
+Thailand,2058,Large,Mid_eff,0.2052
+Thailand,2059,Large,Mid_eff,0.0981
+Thailand,2060,Large,Mid_eff,0.045
+Thailand,2005,Medium,High_eff,948.4872
+Thailand,2006,Medium,High_eff,995.6215
+Thailand,2007,Medium,High_eff,1045.1807
+Thailand,2008,Medium,High_eff,1097.0502
+Thailand,2009,Medium,High_eff,1151.1571
+Thailand,2010,Medium,High_eff,1207.3654
+Thailand,2011,Medium,High_eff,1265.9946
+Thailand,2012,Medium,High_eff,1327.4507
+Thailand,2013,Medium,High_eff,1391.3809
+Thailand,2014,Medium,High_eff,1457.5189
+Thailand,2015,Medium,High_eff,1508.8437
+Thailand,2016,Medium,High_eff,1582.4171
+Thailand,2017,Medium,High_eff,1678.4604
+Thailand,2018,Medium,High_eff,1773.7038
+Thailand,2019,Medium,High_eff,1823.2089
+Thailand,2020,Medium,High_eff,1669.5695
+Thailand,2021,Medium,High_eff,1695.101
+Thailand,2022,Medium,High_eff,1765.2669
+Thailand,2023,Medium,High_eff,1813.1628
+Thailand,2024,Medium,High_eff,1860.6795
+Thailand,2025,Medium,High_eff,1953.27
+Thailand,2026,Medium,High_eff,1841.7749
+Thailand,2027,Medium,High_eff,1727.1584
+Thailand,2028,Medium,High_eff,1609.9856
+Thailand,2029,Medium,High_eff,1490.9892
+Thailand,2030,Medium,High_eff,1371.038
+Thailand,2031,Medium,High_eff,1251.1058
+Thailand,2032,Medium,High_eff,1132.2407
+Thailand,2033,Medium,High_eff,1015.5333
+Thailand,2034,Medium,High_eff,902.0851
+Thailand,2035,Medium,High_eff,792.9766
+Thailand,2036,Medium,High_eff,689.2335
+Thailand,2037,Medium,High_eff,591.7935
+Thailand,2038,Medium,High_eff,501.4718
+Thailand,2039,Medium,High_eff,418.9294
+Thailand,2040,Medium,High_eff,344.6436
+Thailand,2041,Medium,High_eff,278.8851
+Thailand,2042,Medium,High_eff,221.7036
+Thailand,2043,Medium,High_eff,172.9254
+Thailand,2044,Medium,High_eff,132.1638
+Thailand,2045,Medium,High_eff,98.8438
+Thailand,2046,Medium,High_eff,72.2396
+Thailand,2047,Medium,High_eff,51.5217
+Thailand,2048,Medium,High_eff,35.8088
+Thailand,2049,Medium,High_eff,24.2198
+Thailand,2050,Medium,High_eff,15.9196
+Thailand,2051,Medium,High_eff,10.1548
+Thailand,2052,Medium,High_eff,6.2777
+Thailand,2053,Medium,High_eff,3.756
+Thailand,2054,Medium,High_eff,2.172
+Thailand,2055,Medium,High_eff,1.2123
+Thailand,2056,Medium,High_eff,0.6523
+Thailand,2057,Medium,High_eff,0.3379
+Thailand,2058,Medium,High_eff,0.1683
+Thailand,2059,Medium,High_eff,0.0805
+Thailand,2060,Medium,High_eff,0.0369
+Thailand,2005,Medium,Low_eff,539.5384
+Thailand,2006,Medium,Low_eff,566.3503
+Thailand,2007,Medium,Low_eff,594.5416
+Thailand,2008,Medium,Low_eff,624.0471
+Thailand,2009,Medium,Low_eff,654.8253
+Thailand,2010,Medium,Low_eff,686.7989
+Thailand,2011,Medium,Low_eff,720.1496
+Thailand,2012,Medium,Low_eff,755.1083
+Thailand,2013,Medium,Low_eff,791.4744
+Thailand,2014,Medium,Low_eff,829.0965
+Thailand,2015,Medium,Low_eff,858.2921
+Thailand,2016,Medium,Low_eff,900.1437
+Thailand,2017,Medium,Low_eff,954.777
+Thailand,2018,Medium,Low_eff,1008.9554
+Thailand,2019,Medium,Low_eff,1037.1159
+Thailand,2020,Medium,Low_eff,949.7196
+Thailand,2021,Medium,Low_eff,964.2429
+Thailand,2022,Medium,Low_eff,1004.1562
+Thailand,2023,Medium,Low_eff,1031.4013
+Thailand,2024,Medium,Low_eff,1058.4308
+Thailand,2025,Medium,Low_eff,1111.1
+Thailand,2026,Medium,Low_eff,1047.677
+Thailand,2027,Medium,Low_eff,982.4784
+Thailand,2028,Medium,Low_eff,915.8258
+Thailand,2029,Medium,Low_eff,848.1358
+Thailand,2030,Medium,Low_eff,779.9026
+Thailand,2031,Medium,Low_eff,711.6802
+Thailand,2032,Medium,Low_eff,644.0649
+Thailand,2033,Medium,Low_eff,577.6769
+Thailand,2034,Medium,Low_eff,513.143
+Thailand,2035,Medium,Low_eff,451.0776
+Thailand,2036,Medium,Low_eff,392.0643
+Thailand,2037,Medium,Low_eff,336.6364
+Thailand,2038,Medium,Low_eff,285.2577
+Thailand,2039,Medium,Low_eff,238.3042
+Thailand,2040,Medium,Low_eff,196.0474
+Thailand,2041,Medium,Low_eff,158.6412
+Thailand,2042,Medium,Low_eff,126.1141
+Thailand,2043,Medium,Low_eff,98.3671
+Thailand,2044,Medium,Low_eff,75.1802
+Thailand,2045,Medium,Low_eff,56.2264
+Thailand,2046,Medium,Low_eff,41.0928
+Thailand,2047,Medium,Low_eff,29.3076
+Thailand,2048,Medium,Low_eff,20.3695
+Thailand,2049,Medium,Low_eff,13.7772
+Thailand,2050,Medium,Low_eff,9.0557
+Thailand,2051,Medium,Low_eff,5.7765
+Thailand,2052,Medium,Low_eff,3.571
+Thailand,2053,Medium,Low_eff,2.1365
+Thailand,2054,Medium,Low_eff,1.2355
+Thailand,2055,Medium,Low_eff,0.6896
+Thailand,2056,Medium,Low_eff,0.371
+Thailand,2057,Medium,Low_eff,0.1922
+Thailand,2058,Medium,Low_eff,0.0957
+Thailand,2059,Medium,Low_eff,0.0458
+Thailand,2060,Medium,Low_eff,0.021
+Thailand,2005,Medium,Mid_eff,687.1624
+Thailand,2006,Medium,Mid_eff,721.3104
+Thailand,2007,Medium,Mid_eff,757.2152
+Thailand,2008,Medium,Mid_eff,794.7937
+Thailand,2009,Medium,Mid_eff,833.9932
+Thailand,2010,Medium,Mid_eff,874.7151
+Thailand,2011,Medium,Mid_eff,917.191
+Thailand,2012,Medium,Mid_eff,961.7148
+Thailand,2013,Medium,Mid_eff,1008.0311
+Thailand,2014,Medium,Mid_eff,1055.947
+Thailand,2015,Medium,Mid_eff,1093.1309
+Thailand,2016,Medium,Mid_eff,1146.4336
+Thailand,2017,Medium,Mid_eff,1216.0152
+Thailand,2018,Medium,Mid_eff,1285.0174
+Thailand,2019,Medium,Mid_eff,1320.883
+Thailand,2020,Medium,Mid_eff,1209.574
+Thailand,2021,Medium,Mid_eff,1228.0711
+Thailand,2022,Medium,Mid_eff,1278.9051
+Thailand,2023,Medium,Mid_eff,1313.6048
+Thailand,2024,Medium,Mid_eff,1348.0298
+Thailand,2025,Medium,Mid_eff,1415.11
+Thailand,2026,Medium,Mid_eff,1334.3337
+Thailand,2027,Medium,Mid_eff,1251.2961
+Thailand,2028,Medium,Mid_eff,1166.4065
+Thailand,2029,Medium,Mid_eff,1080.1957
+Thailand,2030,Medium,Mid_eff,993.2931
+Thailand,2031,Medium,Mid_eff,906.4043
+Thailand,2032,Medium,Mid_eff,820.2886
+Thailand,2033,Medium,Mid_eff,735.7361
+Thailand,2034,Medium,Mid_eff,653.5449
+Thailand,2035,Medium,Mid_eff,574.4977
+Thailand,2036,Medium,Mid_eff,499.3377
+Thailand,2037,Medium,Mid_eff,428.744
+Thailand,2038,Medium,Mid_eff,363.3075
+Thailand,2039,Medium,Mid_eff,303.507
+Thailand,2040,Medium,Mid_eff,249.6882
+Thailand,2041,Medium,Mid_eff,202.0473
+Thailand,2042,Medium,Mid_eff,160.6204
+Thailand,2043,Medium,Mid_eff,125.2814
+Thailand,2044,Medium,Mid_eff,95.7503
+Thailand,2045,Medium,Mid_eff,71.6106
+Thailand,2046,Medium,Mid_eff,52.3363
+Thailand,2047,Medium,Mid_eff,37.3265
+Thailand,2048,Medium,Mid_eff,25.9429
+Thailand,2049,Medium,Mid_eff,17.5469
+Thailand,2050,Medium,Mid_eff,11.5335
+Thailand,2051,Medium,Mid_eff,7.357
+Thailand,2052,Medium,Mid_eff,4.5481
+Thailand,2053,Medium,Mid_eff,2.7211
+Thailand,2054,Medium,Mid_eff,1.5736
+Thailand,2055,Medium,Mid_eff,0.8783
+Thailand,2056,Medium,Mid_eff,0.4726
+Thailand,2057,Medium,Mid_eff,0.2448
+Thailand,2058,Medium,Mid_eff,0.1219
+Thailand,2059,Medium,Mid_eff,0.0583
+Thailand,2060,Medium,Mid_eff,0.0267
+Thailand,2005,Small,High_eff,533.3665
+Thailand,2006,Small,High_eff,559.8717
+Thailand,2007,Small,High_eff,587.7406
+Thailand,2008,Small,High_eff,616.9086
+Thailand,2009,Small,High_eff,647.3347
+Thailand,2010,Small,High_eff,678.9425
+Thailand,2011,Small,High_eff,711.9117
+Thailand,2012,Small,High_eff,746.4706
+Thailand,2013,Small,High_eff,782.4207
+Thailand,2014,Small,High_eff,819.6123
+Thailand,2015,Small,High_eff,848.474
+Thailand,2016,Small,High_eff,889.8468
+Thailand,2017,Small,High_eff,943.8552
+Thailand,2018,Small,High_eff,997.4138
+Thailand,2019,Small,High_eff,1025.2522
+Thailand,2020,Small,High_eff,938.8556
+Thailand,2021,Small,High_eff,953.2128
+Thailand,2022,Small,High_eff,992.6695
+Thailand,2023,Small,High_eff,1019.603
+Thailand,2024,Small,High_eff,1046.3232
+Thailand,2025,Small,High_eff,1098.39
+Thailand,2026,Small,High_eff,1035.6925
+Thailand,2027,Small,High_eff,971.2398
+Thailand,2028,Small,High_eff,905.3496
+Thailand,2029,Small,High_eff,838.4338
+Thailand,2030,Small,High_eff,770.9812
+Thailand,2031,Small,High_eff,703.5393
+Thailand,2032,Small,High_eff,636.6974
+Thailand,2033,Small,High_eff,571.0688
+Thailand,2034,Small,High_eff,507.2731
+Thailand,2035,Small,High_eff,445.9177
+Thailand,2036,Small,High_eff,387.5794
+Thailand,2037,Small,High_eff,332.7856
+Thailand,2038,Small,High_eff,281.9946
+Thailand,2039,Small,High_eff,235.5782
+Thailand,2040,Small,High_eff,193.8048
+Thailand,2041,Small,High_eff,156.8265
+Thailand,2042,Small,High_eff,124.6715
+Thailand,2043,Small,High_eff,97.2418
+Thailand,2044,Small,High_eff,74.3202
+Thailand,2045,Small,High_eff,55.5832
+Thailand,2046,Small,High_eff,40.6228
+Thailand,2047,Small,High_eff,28.9724
+Thailand,2048,Small,High_eff,20.1365
+Thailand,2049,Small,High_eff,13.6196
+Thailand,2050,Small,High_eff,8.9521
+Thailand,2051,Small,High_eff,5.7104
+Thailand,2052,Small,High_eff,3.5302
+Thailand,2053,Small,High_eff,2.1121
+Thailand,2054,Small,High_eff,1.2214
+Thailand,2055,Small,High_eff,0.6817
+Thailand,2056,Small,High_eff,0.3668
+Thailand,2057,Small,High_eff,0.19
+Thailand,2058,Small,High_eff,0.0946
+Thailand,2059,Small,High_eff,0.0452
+Thailand,2060,Small,High_eff,0.0207
+Thailand,2005,Small,Low_eff,387.1895
+Thailand,2006,Small,Low_eff,406.4306
+Thailand,2007,Small,Low_eff,426.6616
+Thailand,2008,Small,Low_eff,447.8357
+Thailand,2009,Small,Low_eff,469.9231
+Thailand,2010,Small,Low_eff,492.8683
+Thailand,2011,Small,Low_eff,516.8018
+Thailand,2012,Small,Low_eff,541.8893
+Thailand,2013,Small,Low_eff,567.9867
+Thailand,2014,Small,Low_eff,594.9855
+Thailand,2015,Small,Low_eff,615.9372
+Thailand,2016,Small,Low_eff,645.9712
+Thailand,2017,Small,Low_eff,685.1778
+Thailand,2018,Small,Low_eff,724.0578
+Thailand,2019,Small,Low_eff,744.2667
+Thailand,2020,Small,Low_eff,681.5484
+Thailand,2021,Small,Low_eff,691.9708
+Thailand,2022,Small,Low_eff,720.6138
+Thailand,2023,Small,Low_eff,740.1657
+Thailand,2024,Small,Low_eff,759.5629
+Thailand,2025,Small,Low_eff,797.36
+Thailand,2026,Small,Low_eff,751.8457
+Thailand,2027,Small,Low_eff,705.0572
+Thailand,2028,Small,Low_eff,657.2251
+Thailand,2029,Small,Low_eff,608.6487
+Thailand,2030,Small,Low_eff,559.6824
+Thailand,2031,Small,Low_eff,510.7239
+Thailand,2032,Small,Low_eff,462.201
+Thailand,2033,Small,Low_eff,414.559
+Thailand,2034,Small,Low_eff,368.2474
+Thailand,2035,Small,Low_eff,323.7073
+Thailand,2036,Small,Low_eff,281.3575
+Thailand,2037,Small,Low_eff,241.5808
+Thailand,2038,Small,Low_eff,204.7098
+Thailand,2039,Small,Low_eff,171.0145
+Thailand,2040,Small,Low_eff,140.6897
+Thailand,2041,Small,Low_eff,113.8459
+Thailand,2042,Small,Low_eff,90.5034
+Thailand,2043,Small,Low_eff,70.5913
+Thailand,2044,Small,Low_eff,53.9516
+Thailand,2045,Small,Low_eff,40.3498
+Thailand,2046,Small,Low_eff,29.4895
+Thailand,2047,Small,Low_eff,21.0321
+Thailand,2048,Small,Low_eff,14.6178
+Thailand,2049,Small,Low_eff,9.887
+Thailand,2050,Small,Low_eff,6.4987
+Thailand,2051,Small,Low_eff,4.1454
+Thailand,2052,Small,Low_eff,2.5627
+Thailand,2053,Small,Low_eff,1.5333
+Thailand,2054,Small,Low_eff,0.8866
+Thailand,2055,Small,Low_eff,0.4949
+Thailand,2056,Small,Low_eff,0.2663
+Thailand,2057,Small,Low_eff,0.1379
+Thailand,2058,Small,Low_eff,0.0687
+Thailand,2059,Small,Low_eff,0.0328
+Thailand,2060,Small,Low_eff,0.0151
+Thailand,2005,Small,Mid_eff,728.0005
+Thailand,2006,Small,Mid_eff,764.1779
+Thailand,2007,Small,Mid_eff,802.2165
+Thailand,2008,Small,Mid_eff,842.0283
+Thailand,2009,Small,Mid_eff,883.5574
+Thailand,2010,Small,Mid_eff,926.6994
+Thailand,2011,Small,Mid_eff,971.6997
+Thailand,2012,Small,Mid_eff,1018.8696
+Thailand,2013,Small,Mid_eff,1067.9384
+Thailand,2014,Small,Mid_eff,1118.7019
+Thailand,2015,Small,Mid_eff,1158.0957
+Thailand,2016,Small,Mid_eff,1214.5661
+Thailand,2017,Small,Mid_eff,1288.283
+Thailand,2018,Small,Mid_eff,1361.386
+Thailand,2019,Small,Mid_eff,1399.3831
+Thailand,2020,Small,Mid_eff,1281.459
+Thailand,2021,Small,Mid_eff,1301.0553
+Thailand,2022,Small,Mid_eff,1354.9104
+Thailand,2023,Small,Mid_eff,1391.6723
+Thailand,2024,Small,Mid_eff,1428.1433
+Thailand,2025,Small,Mid_eff,1499.21
+Thailand,2026,Small,Mid_eff,1413.6332
+Thailand,2027,Small,Mid_eff,1325.6606
+Thailand,2028,Small,Mid_eff,1235.726
+Thailand,2029,Small,Mid_eff,1144.3917
+Thailand,2030,Small,Mid_eff,1052.3245
+Thailand,2031,Small,Mid_eff,960.2719
+Thailand,2032,Small,Mid_eff,869.0384
+Thailand,2033,Small,Mid_eff,779.4609
+Thailand,2034,Small,Mid_eff,692.3851
+Thailand,2035,Small,Mid_eff,608.6401
+Thailand,2036,Small,Mid_eff,529.0133
+Thailand,2037,Small,Mid_eff,454.2243
+Thailand,2038,Small,Mid_eff,384.8989
+Thailand,2039,Small,Mid_eff,321.5444
+Thailand,2040,Small,Mid_eff,264.5272
+Thailand,2041,Small,Mid_eff,214.055
+Thailand,2042,Small,Mid_eff,170.1661
+Thailand,2043,Small,Mid_eff,132.7269
+Thailand,2044,Small,Mid_eff,101.4408
+Thailand,2045,Small,Mid_eff,75.8664
+Thailand,2046,Small,Mid_eff,55.4467
+Thailand,2047,Small,Mid_eff,39.5449
+Thailand,2048,Small,Mid_eff,27.4846
+Thailand,2049,Small,Mid_eff,18.5897
+Thailand,2050,Small,Mid_eff,12.2189
+Thailand,2051,Small,Mid_eff,7.7942
+Thailand,2052,Small,Mid_eff,4.8184
+Thailand,2053,Small,Mid_eff,2.8828
+Thailand,2054,Small,Mid_eff,1.6671
+Thailand,2055,Small,Mid_eff,0.9305
+Thailand,2056,Small,Mid_eff,0.5007
+Thailand,2057,Small,Mid_eff,0.2593
+Thailand,2058,Small,Mid_eff,0.1291
+Thailand,2059,Small,Mid_eff,0.0618
+Thailand,2060,Small,Mid_eff,0.0283
+Viet Nam,2005,Large,High_eff,215.3545
+Viet Nam,2006,Large,High_eff,240.8422
+Viet Nam,2007,Large,High_eff,269.3239
+Viet Nam,2008,Large,High_eff,301.2325
+Viet Nam,2009,Large,High_eff,337.0872
+Viet Nam,2010,Large,High_eff,377.353
+Viet Nam,2011,Large,High_eff,422.4289
+Viet Nam,2012,Large,High_eff,472.9106
+Viet Nam,2013,Large,High_eff,529.4481
+Viet Nam,2014,Large,High_eff,592.6857
+Viet Nam,2015,Large,High_eff,655.9331
+Viet Nam,2016,Large,High_eff,749.0108
+Viet Nam,2017,Large,High_eff,814.479
+Viet Nam,2018,Large,High_eff,910.1957
+Viet Nam,2019,Large,High_eff,1036.9775
+Viet Nam,2020,Large,High_eff,1076.316
+Viet Nam,2021,Large,High_eff,1115.5916
+Viet Nam,2022,Large,High_eff,1245.3131
+Viet Nam,2023,Large,High_eff,1345.5814
+Viet Nam,2024,Large,High_eff,1477.3912
+Viet Nam,2025,Large,High_eff,1610.26
+Viet Nam,2026,Large,High_eff,1549.3227
+Viet Nam,2027,Large,High_eff,1482.5091
+Viet Nam,2028,Large,High_eff,1409.7808
+Viet Nam,2029,Large,High_eff,1331.3449
+Viet Nam,2030,Large,High_eff,1247.6532
+Viet Nam,2031,Large,High_eff,1159.3961
+Viet Nam,2032,Large,High_eff,1067.4885
+Viet Nam,2033,Large,High_eff,973.0454
+Viet Nam,2034,Large,High_eff,877.3483
+Viet Nam,2035,Large,High_eff,781.7977
+Viet Nam,2036,Large,High_eff,687.8573
+Viet Nam,2037,Large,High_eff,596.9874
+Viet Nam,2038,Large,High_eff,510.5751
+Viet Nam,2039,Large,High_eff,429.8631
+Viet Nam,2040,Large,High_eff,355.885
+Viet Nam,2041,Large,High_eff,289.4116
+Viet Nam,2042,Large,High_eff,230.9157
+Viet Nam,2043,Large,High_eff,180.5568
+Viet Nam,2044,Large,High_eff,138.1902
+Viet Nam,2045,Large,High_eff,103.3986
+Viet Nam,2046,Large,High_eff,75.542
+Viet Nam,2047,Large,High_eff,53.8212
+Viet Nam,2048,Large,High_eff,37.3474
+Viet Nam,2049,Large,High_eff,25.2089
+Viet Nam,2050,Large,High_eff,16.5302
+Viet Nam,2051,Large,High_eff,10.5165
+Viet Nam,2052,Large,High_eff,6.4829
+Viet Nam,2053,Large,High_eff,3.8674
+Viet Nam,2054,Large,High_eff,2.2297
+Viet Nam,2055,Large,High_eff,1.2408
+Viet Nam,2056,Large,High_eff,0.6656
+Viet Nam,2057,Large,High_eff,0.3437
+Viet Nam,2058,Large,High_eff,0.1707
+Viet Nam,2059,Large,High_eff,0.0814
+Viet Nam,2060,Large,High_eff,0.0372
+Viet Nam,2005,Large,Low_eff,38.7776
+Viet Nam,2006,Large,Low_eff,43.367
+Viet Nam,2007,Large,Low_eff,48.4956
+Viet Nam,2008,Large,Low_eff,54.2412
+Viet Nam,2009,Large,Low_eff,60.6973
+Viet Nam,2010,Large,Low_eff,67.9477
+Viet Nam,2011,Large,Low_eff,76.0643
+Viet Nam,2012,Large,Low_eff,85.1542
+Viet Nam,2013,Large,Low_eff,95.3346
+Viet Nam,2014,Large,Low_eff,106.7214
+Viet Nam,2015,Large,Low_eff,118.11
+Viet Nam,2016,Large,Low_eff,134.8699
+Viet Nam,2017,Large,Low_eff,146.6584
+Viet Nam,2018,Large,Low_eff,163.8936
+Viet Nam,2019,Large,Low_eff,186.7224
+Viet Nam,2020,Large,Low_eff,193.8059
+Viet Nam,2021,Large,Low_eff,200.878
+Viet Nam,2022,Large,Low_eff,224.2362
+Viet Nam,2023,Large,Low_eff,242.2909
+Viet Nam,2024,Large,Low_eff,266.0251
+Viet Nam,2025,Large,Low_eff,289.95
+Viet Nam,2026,Large,Low_eff,278.9774
+Viet Nam,2027,Large,Low_eff,266.9467
+Viet Nam,2028,Large,Low_eff,253.8509
+Viet Nam,2029,Large,Low_eff,239.7274
+Viet Nam,2030,Large,Low_eff,224.6575
+Viet Nam,2031,Large,Low_eff,208.7656
+Viet Nam,2032,Large,Low_eff,192.2163
+Viet Nam,2033,Large,Low_eff,175.2105
+Viet Nam,2034,Large,Low_eff,157.9789
+Viet Nam,2035,Large,Low_eff,140.7737
+Viet Nam,2036,Large,Low_eff,123.8584
+Viet Nam,2037,Large,Low_eff,107.496
+Viet Nam,2038,Large,Low_eff,91.9362
+Viet Nam,2039,Large,Low_eff,77.4029
+Viet Nam,2040,Large,Low_eff,64.0821
+Viet Nam,2041,Large,Low_eff,52.1126
+Viet Nam,2042,Large,Low_eff,41.5796
+Viet Nam,2043,Large,Low_eff,32.5118
+Viet Nam,2044,Large,Low_eff,24.8831
+Viet Nam,2045,Large,Low_eff,18.6184
+Viet Nam,2046,Large,Low_eff,13.6024
+Viet Nam,2047,Large,Low_eff,9.6913
+Viet Nam,2048,Large,Low_eff,6.7249
+Viet Nam,2049,Large,Low_eff,4.5392
+Viet Nam,2050,Large,Low_eff,2.9765
+Viet Nam,2051,Large,Low_eff,1.8936
+Viet Nam,2052,Large,Low_eff,1.1673
+Viet Nam,2053,Large,Low_eff,0.6964
+Viet Nam,2054,Large,Low_eff,0.4015
+Viet Nam,2055,Large,Low_eff,0.2234
+Viet Nam,2056,Large,Low_eff,0.1199
+Viet Nam,2057,Large,Low_eff,0.0619
+Viet Nam,2058,Large,Low_eff,0.0307
+Viet Nam,2059,Large,Low_eff,0.0147
+Viet Nam,2060,Large,Low_eff,0.0067
+Viet Nam,2005,Large,Mid_eff,102.6834
+Viet Nam,2006,Large,Mid_eff,114.8363
+Viet Nam,2007,Large,Mid_eff,128.4167
+Viet Nam,2008,Large,Mid_eff,143.631
+Viet Nam,2009,Large,Mid_eff,160.7269
+Viet Nam,2010,Large,Mid_eff,179.9261
+Viet Nam,2011,Large,Mid_eff,201.4188
+Viet Nam,2012,Large,Mid_eff,225.4891
+Viet Nam,2013,Large,Mid_eff,252.4468
+Viet Nam,2014,Large,Mid_eff,282.5992
+Viet Nam,2015,Large,Mid_eff,312.7563
+Viet Nam,2016,Large,Mid_eff,357.1367
+Viet Nam,2017,Large,Mid_eff,388.3527
+Viet Nam,2018,Large,Mid_eff,433.9915
+Viet Nam,2019,Large,Mid_eff,494.4425
+Viet Nam,2020,Large,Mid_eff,513.1995
+Viet Nam,2021,Large,Mid_eff,531.9266
+Viet Nam,2022,Large,Mid_eff,593.7792
+Viet Nam,2023,Large,Mid_eff,641.5883
+Viet Nam,2024,Large,Mid_eff,704.4367
+Viet Nam,2025,Large,Mid_eff,767.79
+Viet Nam,2026,Large,Mid_eff,738.7344
+Viet Nam,2027,Large,Mid_eff,706.877
+Viet Nam,2028,Large,Mid_eff,672.1993
+Viet Nam,2029,Large,Mid_eff,634.8001
+Viet Nam,2030,Large,Mid_eff,594.895
+Viet Nam,2031,Large,Mid_eff,552.8131
+Viet Nam,2032,Large,Mid_eff,508.9904
+Viet Nam,2033,Large,Mid_eff,463.959
+Viet Nam,2034,Large,Mid_eff,418.3295
+Viet Nam,2035,Large,Mid_eff,372.7699
+Viet Nam,2036,Large,Mid_eff,327.978
+Viet Nam,2037,Large,Mid_eff,284.6503
+Viet Nam,2038,Large,Mid_eff,243.4479
+Viet Nam,2039,Large,Mid_eff,204.9635
+Viet Nam,2040,Large,Mid_eff,169.6899
+Viet Nam,2041,Large,Mid_eff,137.9947
+Viet Nam,2042,Large,Mid_eff,110.1032
+Viet Nam,2043,Large,Mid_eff,86.0915
+Viet Nam,2044,Large,Mid_eff,65.8906
+Viet Nam,2045,Large,Mid_eff,49.3016
+Viet Nam,2046,Large,Mid_eff,36.0193
+Viet Nam,2047,Large,Mid_eff,25.6626
+Viet Nam,2048,Large,Mid_eff,17.8077
+Viet Nam,2049,Large,Mid_eff,12.0199
+Viet Nam,2050,Large,Mid_eff,7.8818
+Viet Nam,2051,Large,Mid_eff,5.0144
+Viet Nam,2052,Large,Mid_eff,3.0911
+Viet Nam,2053,Large,Mid_eff,1.844
+Viet Nam,2054,Large,Mid_eff,1.0632
+Viet Nam,2055,Large,Mid_eff,0.5916
+Viet Nam,2056,Large,Mid_eff,0.3174
+Viet Nam,2057,Large,Mid_eff,0.1639
+Viet Nam,2058,Large,Mid_eff,0.0814
+Viet Nam,2059,Large,Mid_eff,0.0388
+Viet Nam,2060,Large,Mid_eff,0.0177
+Viet Nam,2005,Medium,High_eff,299.2355
+Viet Nam,2006,Medium,High_eff,334.6508
+Viet Nam,2007,Medium,High_eff,374.2262
+Viet Nam,2008,Medium,High_eff,418.5633
+Viet Nam,2009,Medium,High_eff,468.3834
+Viet Nam,2010,Medium,High_eff,524.3328
+Viet Nam,2011,Medium,High_eff,586.9659
+Viet Nam,2012,Medium,High_eff,657.1104
+Viet Nam,2013,Medium,High_eff,735.6694
+Viet Nam,2014,Medium,High_eff,823.5382
+Viet Nam,2015,Medium,High_eff,911.4206
+Viet Nam,2016,Medium,High_eff,1040.7523
+Viet Nam,2017,Medium,High_eff,1131.7204
+Viet Nam,2018,Medium,High_eff,1264.7191
+Viet Nam,2019,Medium,High_eff,1440.8826
+Viet Nam,2020,Medium,High_eff,1495.5436
+Viet Nam,2021,Medium,High_eff,1550.1171
+Viet Nam,2022,Medium,High_eff,1730.3654
+Viet Nam,2023,Medium,High_eff,1869.6885
+Viet Nam,2024,Medium,High_eff,2052.8385
+Viet Nam,2025,Medium,High_eff,2237.46
+Viet Nam,2026,Medium,High_eff,2152.7875
+Viet Nam,2027,Medium,High_eff,2059.9499
+Viet Nam,2028,Medium,High_eff,1958.8937
+Viet Nam,2029,Medium,High_eff,1849.9068
+Viet Nam,2030,Medium,High_eff,1733.617
+Viet Nam,2031,Medium,High_eff,1610.9836
+Viet Nam,2032,Medium,High_eff,1483.2777
+Viet Nam,2033,Medium,High_eff,1352.0489
+Viet Nam,2034,Medium,High_eff,1219.0775
+Viet Nam,2035,Medium,High_eff,1086.3098
+Viet Nam,2036,Medium,High_eff,955.7792
+Viet Nam,2037,Medium,High_eff,829.5153
+Viet Nam,2038,Medium,High_eff,709.4452
+Viet Nam,2039,Medium,High_eff,597.2958
+Viet Nam,2040,Medium,High_eff,494.503
+Viet Nam,2041,Medium,High_eff,402.1382
+Viet Nam,2042,Medium,High_eff,320.8579
+Viet Nam,2043,Medium,High_eff,250.884
+Viet Nam,2044,Medium,High_eff,192.0156
+Viet Nam,2045,Medium,High_eff,143.6726
+Viet Nam,2046,Medium,High_eff,104.9657
+Viet Nam,2047,Medium,High_eff,74.7847
+Viet Nam,2048,Medium,High_eff,51.8943
+Viet Nam,2049,Medium,High_eff,35.0278
+Viet Nam,2050,Medium,High_eff,22.9687
+Viet Nam,2051,Medium,High_eff,14.6127
+Viet Nam,2052,Medium,High_eff,9.008
+Viet Nam,2053,Medium,High_eff,5.3738
+Viet Nam,2054,Medium,High_eff,3.0982
+Viet Nam,2055,Medium,High_eff,1.7241
+Viet Nam,2056,Medium,High_eff,0.9249
+Viet Nam,2057,Medium,High_eff,0.4776
+Viet Nam,2058,Medium,High_eff,0.2372
+Viet Nam,2059,Medium,High_eff,0.1131
+Viet Nam,2060,Medium,High_eff,0.0517
+Viet Nam,2005,Medium,Low_eff,106.1192
+Viet Nam,2006,Medium,Low_eff,118.6787
+Viet Nam,2007,Medium,Low_eff,132.7134
+Viet Nam,2008,Medium,Low_eff,148.4369
+Viet Nam,2009,Medium,Low_eff,166.1048
+Viet Nam,2010,Medium,Low_eff,185.9464
+Viet Nam,2011,Medium,Low_eff,208.1582
+Viet Nam,2012,Medium,Low_eff,233.0339
+Viet Nam,2013,Medium,Low_eff,260.8936
+Viet Nam,2014,Medium,Low_eff,292.0549
+Viet Nam,2015,Medium,Low_eff,323.221
+Viet Nam,2016,Medium,Low_eff,369.0864
+Viet Nam,2017,Medium,Low_eff,401.3468
+Viet Nam,2018,Medium,Low_eff,448.5127
+Viet Nam,2019,Medium,Low_eff,510.9864
+Viet Nam,2020,Medium,Low_eff,530.371
+Viet Nam,2021,Medium,Low_eff,549.7246
+Viet Nam,2022,Medium,Low_eff,613.6469
+Viet Nam,2023,Medium,Low_eff,663.0556
+Viet Nam,2024,Medium,Low_eff,728.0069
+Viet Nam,2025,Medium,Low_eff,793.48
+Viet Nam,2026,Medium,Low_eff,763.4522
+Viet Nam,2027,Medium,Low_eff,730.5288
+Viet Nam,2028,Medium,Low_eff,694.6908
+Viet Nam,2029,Medium,Low_eff,656.0404
+Viet Nam,2030,Medium,Low_eff,614.8
+Viet Nam,2031,Medium,Low_eff,571.31
+Viet Nam,2032,Medium,Low_eff,526.0211
+Viet Nam,2033,Medium,Low_eff,479.4829
+Viet Nam,2034,Medium,Low_eff,432.3267
+Viet Nam,2035,Medium,Low_eff,385.2427
+Viet Nam,2036,Medium,Low_eff,338.9521
+Viet Nam,2037,Medium,Low_eff,294.1746
+Viet Nam,2038,Medium,Low_eff,251.5936
+Viet Nam,2039,Medium,Low_eff,211.8216
+Viet Nam,2040,Medium,Low_eff,175.3677
+Viet Nam,2041,Medium,Low_eff,142.612
+Viet Nam,2042,Medium,Low_eff,113.7872
+Viet Nam,2043,Medium,Low_eff,88.9721
+Viet Nam,2044,Medium,Low_eff,68.0953
+Viet Nam,2045,Medium,Low_eff,50.9512
+Viet Nam,2046,Medium,Low_eff,37.2244
+Viet Nam,2047,Medium,Low_eff,26.5212
+Viet Nam,2048,Medium,Low_eff,18.4035
+Viet Nam,2049,Medium,Low_eff,12.4221
+Viet Nam,2050,Medium,Low_eff,8.1455
+Viet Nam,2051,Medium,Low_eff,5.1822
+Viet Nam,2052,Medium,Low_eff,3.1946
+Viet Nam,2053,Medium,Low_eff,1.9057
+Viet Nam,2054,Medium,Low_eff,1.0987
+Viet Nam,2055,Medium,Low_eff,0.6114
+Viet Nam,2056,Medium,Low_eff,0.328
+Viet Nam,2057,Medium,Low_eff,0.1694
+Viet Nam,2058,Medium,Low_eff,0.0841
+Viet Nam,2059,Medium,Low_eff,0.0401
+Viet Nam,2060,Medium,Low_eff,0.0183
+Viet Nam,2005,Medium,Mid_eff,192.5546
+Viet Nam,2006,Medium,Mid_eff,215.344
+Viet Nam,2007,Medium,Mid_eff,240.8103
+Viet Nam,2008,Medium,Mid_eff,269.3407
+Viet Nam,2009,Medium,Mid_eff,301.3994
+Viet Nam,2010,Medium,Mid_eff,337.4022
+Viet Nam,2011,Medium,Mid_eff,377.7059
+Viet Nam,2012,Medium,Mid_eff,422.843
+Viet Nam,2013,Medium,Mid_eff,473.3949
+Viet Nam,2014,Medium,Mid_eff,529.9374
+Viet Nam,2015,Medium,Mid_eff,586.4888
+Viet Nam,2016,Medium,Mid_eff,669.7122
+Viet Nam,2017,Medium,Mid_eff,728.2492
+Viet Nam,2018,Medium,Mid_eff,813.8323
+Viet Nam,2019,Medium,Mid_eff,927.1915
+Viet Nam,2020,Medium,Mid_eff,962.3652
+Viet Nam,2021,Medium,Mid_eff,997.4827
+Viet Nam,2022,Medium,Mid_eff,1113.4704
+Viet Nam,2023,Medium,Mid_eff,1203.1232
+Viet Nam,2024,Medium,Mid_eff,1320.9782
+Viet Nam,2025,Medium,Mid_eff,1439.78
+Viet Nam,2026,Medium,Mid_eff,1385.2942
+Viet Nam,2027,Medium,Mid_eff,1325.5543
+Viet Nam,2028,Medium,Mid_eff,1260.5258
+Viet Nam,2029,Medium,Mid_eff,1190.3939
+Viet Nam,2030,Medium,Mid_eff,1115.5628
+Viet Nam,2031,Medium,Mid_eff,1036.6496
+Viet Nam,2032,Medium,Mid_eff,954.4723
+Viet Nam,2033,Medium,Mid_eff,870.0281
+Viet Nam,2034,Medium,Mid_eff,784.4625
+Viet Nam,2035,Medium,Mid_eff,699.028
+Viet Nam,2036,Medium,Mid_eff,615.0331
+Viet Nam,2037,Medium,Mid_eff,533.7837
+Viet Nam,2038,Medium,Mid_eff,456.5199
+Viet Nam,2039,Medium,Mid_eff,384.353
+Viet Nam,2040,Medium,Mid_eff,318.207
+Viet Nam,2041,Medium,Mid_eff,258.7713
+Viet Nam,2042,Medium,Mid_eff,206.4684
+Viet Nam,2043,Medium,Mid_eff,161.441
+Viet Nam,2044,Medium,Mid_eff,123.5599
+Viet Nam,2045,Medium,Mid_eff,92.4517
+Viet Nam,2046,Medium,Mid_eff,67.5443
+Viet Nam,2047,Medium,Mid_eff,48.1231
+Viet Nam,2048,Medium,Mid_eff,33.3934
+Viet Nam,2049,Medium,Mid_eff,22.54
+Viet Nam,2050,Medium,Mid_eff,14.7801
+Viet Nam,2051,Medium,Mid_eff,9.4031
+Viet Nam,2052,Medium,Mid_eff,5.7966
+Viet Nam,2053,Medium,Mid_eff,3.4579
+Viet Nam,2054,Medium,Mid_eff,1.9937
+Viet Nam,2055,Medium,Mid_eff,1.1094
+Viet Nam,2056,Medium,Mid_eff,0.5951
+Viet Nam,2057,Medium,Mid_eff,0.3073
+Viet Nam,2058,Medium,Mid_eff,0.1526
+Viet Nam,2059,Medium,Mid_eff,0.0728
+Viet Nam,2060,Medium,Mid_eff,0.0333
+Viet Nam,2005,Small,High_eff,290.2295
+Viet Nam,2006,Small,High_eff,324.579
+Viet Nam,2007,Small,High_eff,362.9633
+Viet Nam,2008,Small,High_eff,405.966
+Viet Nam,2009,Small,High_eff,454.2866
+Viet Nam,2010,Small,High_eff,508.5521
+Viet Nam,2011,Small,High_eff,569.3002
+Viet Nam,2012,Small,High_eff,637.3336
+Viet Nam,2013,Small,High_eff,713.5283
+Viet Nam,2014,Small,High_eff,798.7525
+Viet Nam,2015,Small,High_eff,883.9899
+Viet Nam,2016,Small,High_eff,1009.4291
+Viet Nam,2017,Small,High_eff,1097.6594
+Viet Nam,2018,Small,High_eff,1226.6553
+Viet Nam,2019,Small,High_eff,1397.5169
+Viet Nam,2020,Small,High_eff,1450.5327
+Viet Nam,2021,Small,High_eff,1503.4638
+Viet Nam,2022,Small,High_eff,1678.2872
+Viet Nam,2023,Small,High_eff,1813.4172
+Viet Nam,2024,Small,High_eff,1991.055
+Viet Nam,2025,Small,High_eff,2170.12
+Viet Nam,2026,Small,High_eff,2087.9959
+Viet Nam,2027,Small,High_eff,1997.9523
+Viet Nam,2028,Small,High_eff,1899.9376
+Viet Nam,2029,Small,High_eff,1794.2308
+Viet Nam,2030,Small,High_eff,1681.441
+Viet Nam,2031,Small,High_eff,1562.4985
+Viet Nam,2032,Small,High_eff,1438.636
+Viet Nam,2033,Small,High_eff,1311.3568
+Viet Nam,2034,Small,High_eff,1182.3874
+Viet Nam,2035,Small,High_eff,1053.6155
+Viet Nam,2036,Small,High_eff,927.0135
+Viet Nam,2037,Small,High_eff,804.5497
+Viet Nam,2038,Small,High_eff,688.0933
+Viet Nam,2039,Small,High_eff,579.3192
+Viet Nam,2040,Small,High_eff,479.6201
+Viet Nam,2041,Small,High_eff,390.0352
+Viet Nam,2042,Small,High_eff,311.2012
+Viet Nam,2043,Small,High_eff,243.3333
+Viet Nam,2044,Small,High_eff,186.2366
+Viet Nam,2045,Small,High_eff,139.3485
+Viet Nam,2046,Small,High_eff,101.8066
+Viet Nam,2047,Small,High_eff,72.5339
+Viet Nam,2048,Small,High_eff,50.3324
+Viet Nam,2049,Small,High_eff,33.9736
+Viet Nam,2050,Small,High_eff,22.2774
+Viet Nam,2051,Small,High_eff,14.1729
+Viet Nam,2052,Small,High_eff,8.7369
+Viet Nam,2053,Small,High_eff,5.212
+Viet Nam,2054,Small,High_eff,3.005
+Viet Nam,2055,Small,High_eff,1.6722
+Viet Nam,2056,Small,High_eff,0.897
+Viet Nam,2057,Small,High_eff,0.4632
+Viet Nam,2058,Small,High_eff,0.23
+Viet Nam,2059,Small,High_eff,0.1097
+Viet Nam,2060,Small,High_eff,0.0501
+Viet Nam,2005,Small,Low_eff,138.167
+Viet Nam,2006,Small,Low_eff,154.5195
+Viet Nam,2007,Small,Low_eff,172.7927
+Viet Nam,2008,Small,Low_eff,193.2647
+Viet Nam,2009,Small,Low_eff,216.2683
+Viet Nam,2010,Small,Low_eff,242.102
+Viet Nam,2011,Small,Low_eff,271.0218
+Viet Nam,2012,Small,Low_eff,303.4098
+Viet Nam,2013,Small,Low_eff,339.6831
+Viet Nam,2014,Small,Low_eff,380.2551
+Viet Nam,2015,Small,Low_eff,420.8333
+Viet Nam,2016,Small,Low_eff,480.5501
+Viet Nam,2017,Small,Low_eff,522.5531
+Viet Nam,2018,Small,Low_eff,583.963
+Viet Nam,2019,Small,Low_eff,665.3036
+Viet Nam,2020,Small,Low_eff,690.5424
+Viet Nam,2021,Small,Low_eff,715.7408
+Viet Nam,2022,Small,Low_eff,798.9675
+Viet Nam,2023,Small,Low_eff,863.2976
+Viet Nam,2024,Small,Low_eff,947.8641
+Viet Nam,2025,Small,Low_eff,1033.11
+Viet Nam,2026,Small,Low_eff,994.0139
+Viet Nam,2027,Small,Low_eff,951.1476
+Viet Nam,2028,Small,Low_eff,904.4866
+Viet Nam,2029,Small,Low_eff,854.1637
+Viet Nam,2030,Small,Low_eff,800.4689
+Viet Nam,2031,Small,Low_eff,743.8449
+Viet Nam,2032,Small,Low_eff,684.8788
+Viet Nam,2033,Small,Low_eff,624.2861
+Viet Nam,2034,Small,Low_eff,562.8888
+Viet Nam,2035,Small,Low_eff,501.5855
+Viet Nam,2036,Small,Low_eff,441.3152
+Viet Nam,2037,Small,Low_eff,383.0149
+Viet Nam,2038,Small,Low_eff,327.5746
+Viet Nam,2039,Small,Low_eff,275.7914
+Viet Nam,2040,Small,Low_eff,228.3285
+Viet Nam,2041,Small,Low_eff,185.6806
+Viet Nam,2042,Small,Low_eff,148.1508
+Viet Nam,2043,Small,Low_eff,115.8415
+Viet Nam,2044,Small,Low_eff,88.66
+Viet Nam,2045,Small,Low_eff,66.3384
+Viet Nam,2046,Small,Low_eff,48.4662
+Viet Nam,2047,Small,Low_eff,34.5306
+Viet Nam,2048,Small,Low_eff,23.9613
+Viet Nam,2049,Small,Low_eff,16.1735
+Viet Nam,2050,Small,Low_eff,10.6054
+Viet Nam,2051,Small,Low_eff,6.7472
+Viet Nam,2052,Small,Low_eff,4.1593
+Viet Nam,2053,Small,Low_eff,2.4812
+Viet Nam,2054,Small,Low_eff,1.4305
+Viet Nam,2055,Small,Low_eff,0.7961
+Viet Nam,2056,Small,Low_eff,0.427
+Viet Nam,2057,Small,Low_eff,0.2205
+Viet Nam,2058,Small,Low_eff,0.1095
+Viet Nam,2059,Small,Low_eff,0.0522
+Viet Nam,2060,Small,Low_eff,0.0239
+Viet Nam,2005,Small,Mid_eff,358.1234
+Viet Nam,2006,Small,Mid_eff,400.5083
+Viet Nam,2007,Small,Mid_eff,447.8719
+Viet Nam,2008,Small,Mid_eff,500.9343
+Viet Nam,2009,Small,Mid_eff,560.5587
+Viet Nam,2010,Small,Mid_eff,627.5187
+Viet Nam,2011,Small,Mid_eff,702.4776
+Viet Nam,2012,Small,Mid_eff,786.4261
+Viet Nam,2013,Small,Mid_eff,880.4452
+Viet Nam,2014,Small,Mid_eff,985.606
+Viet Nam,2015,Small,Mid_eff,1090.7832
+Viet Nam,2016,Small,Mid_eff,1245.5667
+Viet Nam,2017,Small,Mid_eff,1354.4368
+Viet Nam,2018,Small,Mid_eff,1513.6089
+Viet Nam,2019,Small,Mid_eff,1724.4405
+Viet Nam,2020,Small,Mid_eff,1789.8584
+Viet Nam,2021,Small,Mid_eff,1855.1717
+Viet Nam,2022,Small,Mid_eff,2070.8919
+Viet Nam,2023,Small,Mid_eff,2237.6331
+Viet Nam,2024,Small,Mid_eff,2456.826
+Viet Nam,2025,Small,Mid_eff,2677.78
+Viet Nam,2026,Small,Mid_eff,2576.4444
+Viet Nam,2027,Small,Mid_eff,2465.3368
+Viet Nam,2028,Small,Mid_eff,2344.3934
+Viet Nam,2029,Small,Mid_eff,2213.9584
+Viet Nam,2030,Small,Mid_eff,2074.7834
+Viet Nam,2031,Small,Mid_eff,1928.0165
+Viet Nam,2032,Small,Mid_eff,1775.1787
+Viet Nam,2033,Small,Mid_eff,1618.1248
+Viet Nam,2034,Small,Mid_eff,1458.9853
+Viet Nam,2035,Small,Mid_eff,1300.0896
+Viet Nam,2036,Small,Mid_eff,1143.8714
+Viet Nam,2037,Small,Mid_eff,992.7594
+Viet Nam,2038,Small,Mid_eff,849.0602
+Viet Nam,2039,Small,Mid_eff,714.8403
+Viet Nam,2040,Small,Mid_eff,591.8185
+Viet Nam,2041,Small,Mid_eff,481.2768
+Viet Nam,2042,Small,Mid_eff,384.001
+Viet Nam,2043,Small,Mid_eff,300.2567
+Viet Nam,2044,Small,Mid_eff,229.8032
+Viet Nam,2045,Small,Mid_eff,171.9466
+Viet Nam,2046,Small,Mid_eff,125.6224
+Viet Nam,2047,Small,Mid_eff,89.5019
+Viet Nam,2048,Small,Mid_eff,62.1068
+Viet Nam,2049,Small,Mid_eff,41.9211
+Viet Nam,2050,Small,Mid_eff,27.4888
+Viet Nam,2051,Small,Mid_eff,17.4884
+Viet Nam,2052,Small,Mid_eff,10.7808
+Viet Nam,2053,Small,Mid_eff,6.4313
+Viet Nam,2054,Small,Mid_eff,3.7079
+Viet Nam,2055,Small,Mid_eff,2.0634
+Viet Nam,2056,Small,Mid_eff,1.1069
+Viet Nam,2057,Small,Mid_eff,0.5716
+Viet Nam,2058,Small,Mid_eff,0.2838
+Viet Nam,2059,Small,Mid_eff,0.1353
+Viet Nam,2060,Small,Mid_eff,0.0619

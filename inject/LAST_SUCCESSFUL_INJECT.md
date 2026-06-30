@@ -8,54 +8,107 @@
 
 ---
 
-## Current reference: transport, 2026-05-20
+## Current reference: residential AC + fridge — FULL inject, 2026-06-30, `aeo9_v0.64`
 
-**Sector:** transport
-**Area:** `aeo9_v0.47`
-**Scope:** all 10 ASEAN AMS × 4 scenarios (Baseline / AMS Target /
-Regional Aspiration / Current Accounts)
-**Outcome:** 562 rows pushed, **40/40 per-scenario readbacks EXACT**
-(0 NORMALISED, 0 FAIL), ~4m30s. Scenario-isolation confirmed by UI
-eye-test across BAS/ATS/RAS/CA.
+**Sectors:** residential — **Air Conditioning + Refrigeration**, full set
+(Key drivers + leaf Efficiency + RAS device-stock block).
+**Area:** `aeo9_v0.64`
+**Scope:** 10 ASEAN AMS × 3 scenarios (Baseline Simulation / AMS Target
+Scenario / Regional Aspiration Scenario).
+**Outcome (each appliance):** BAS 250 + ATS 250 + RAS 790 = **1,290 writes**,
+**30/30 readbacks EXACT** (0 NORMALISED, 0 FAIL), `=== DONE === (clean)`.
+**2,580 writes total across both, 60/60 EXACT. User-confirmed.**
 
-### Function used
+### What was authored (both AC + fridge)
 
-- Class: `nemo_read.inject_base.CanonicalInjector` (method `.run()`),
-  subclassed as `TransportInjector`
-  ([inject/transport/inject_to_leap.py](transport/inject_to_leap.py))
-- Method profile: **blind mode** (default-on) + `--fail-fast` +
-  `--skip-dry-run`, multi-scenario in one COM session, per-scenario
-  readback. Full method: [docs/inject_sop.md](../docs/inject_sop.md).
+- **Key tree** `Key\Residential\<App>\` (variable `Activity Level`, `Interp`):
+  `Percent Ownership` (AC `units_per_hh_parent` units/HH; fridge
+  `ownership_parent_pct` %), `Size_Share\<Size>`, `Efficiency_Share\<Size>_<Eff>`,
+  `Useful_EI\<Size>`. Ownership + Useful_EI untagged (scenario-invariant);
+  Size_Share + Efficiency_Share per-scenario.
+- **Demand leaf** `Demand\Residential\Projections\<App>_\<Size>\<Eff_eff>`:
+  - `Efficiency` ← `efficiency_pct` — **all scenarios** (untagged).
+  - `Unit Capacity` ← `unit_capacity_kw` — **RAS-only**.
+  - `Capital Cost` ← **`price_usd`** (full capital; LEAP annualizes by Lifetime,
+    per LEAP doc) — RAS-only.
+  - `Variable OM Cost` ← `om_electricity_usd` — RAS-only.
+  - `Fixed OM Cost` ← `0` — RAS-only.
+  - `Lifetime` ← **15 (AC) / 12 (fridge)** — RAS-only.
+  - `Exogenous Devices` ← `<app>_exo_device.csv` × 1000, **2005→2060** retirement
+    series — RAS-only.
+  - `<App>` = `Air Conditioning` / `Refrigeration`.
 
-### Exact command
+The device-stock block is **RAS-only** (those vars don't exist under BAS/ATS),
+so it's force-tagged RAS in the canonical; the scenario filter routes it to RAS
+only. BAS/ATS therefore push Key + Efficiency (250); RAS pushes everything (790).
 
-```
-PYTHONPATH=. python inject/transport/inject_to_leap.py \
-    --csv inject/transport/canonical_leap_inputs_remainder_patched_20260520.csv \
-    --scenarios "Baseline Simulation,AMS Target Scenario,Regional Aspiration Scenario,Current Accounts" \
-    --exclude-timor-leste \
-    --expect-area "aeo9_v0.47" \
-    --blind --fail-fast --skip-dry-run -y
-```
+### >>> HOW TO REPEAT ON A NEW LEAP FILE <<<
 
-(Note: `--blind` shown explicitly here for the historical record; it is
-now DEFAULT ON, so future runs can omit it.)
+The canonicals are area-independent — **only the target area changes.** To
+repeat the exact success on a new `.leap` area:
 
-### Reference log (keep)
+1. Open ONLY the new area in LEAP; click into it (focused/active). Confirm its
+   regional decimal = period. It MUST already have the `Air Conditioning_` /
+   `Refrigeration_` 2-layer trees + `Key\Residential\{Air Conditioning,
+   Refrigeration}` stores (same structure as `aeo9_v0.64`; the inject does NOT
+   build branches).
+2. Run (from `inject/residential/202060630/`):
+   ```
+   python build_canonical_full.py --appliance ac       # -> canonical_ac_full.csv (1030 rows)
+   python build_canonical_full.py --appliance fridge    # -> canonical_fridge_full.csv (1030 rows)
 
-[inject/transport/_inject_log_blind_all_ams_remainder_patched_20260520.txt](transport/_inject_log_blind_all_ams_remainder_patched_20260520.txt)
+   python ../20260625/inject_fridge_leap.py --csv canonical_ac_full.csv \
+       --expect-area "<NEW AREA NAME>" \
+       --scenarios "Baseline Simulation,AMS Target Scenario,Regional Aspiration Scenario" --yes
+   python ../20260625/inject_fridge_leap.py --csv canonical_fridge_full.csv \
+       --expect-area "<NEW AREA NAME>" \
+       --scenarios "Baseline Simulation,AMS Target Scenario,Regional Aspiration Scenario" --yes
+   ```
+   (Rebuilding the canonical is optional if the source CSVs are unchanged — the
+   existing `canonical_{ac,fridge}_full.csv` can be reused as-is.)
+3. The dry-run gates each scenario (zero writes on any `branch_not_found` /
+   `var_not_found`); confirm `1290 writes, 30 EXACT, DONE (clean)` per appliance.
+4. **Save the new area** in LEAP.
 
-### Canonical injected
+> **Validated 2026-06-30:** this recipe was repeated clean to a second area,
+> `aeo9_v0.65_beta1` — AC + fridge, 1290 writes/appliance, 60/60 EXACT, only
+> `--expect-area` changed. The repeat is proven.
 
-[inject/transport/canonical_leap_inputs_remainder_patched_20260520.csv](transport/canonical_leap_inputs_remainder_patched_20260520.csv)
-(the 39 sales-share rows with CA→forward discontinuities re-expressed as
-`Remainder(100)` — see
-[author_handover_20260520/](transport/author_handover_20260520/) for the
-data-quality detail handed to the author).
+If the area name differs and the lock aborts (`ActiveArea is X, expected Y`),
+just set `--expect-area` to X. If `ActiveArea` comes back `''` (the §11.1
+spontaneous-blank), re-focus LEAP and rerun — the lock aborts with zero writes.
+
+### Method / function used — NOTE: not the framework
+
+Self-contained portable injector
+[inject/residential/20260625/inject_fridge_leap.py](residential/20260625/inject_fridge_leap.py)
+(pywin32 only, no `nemo_read` import). Reproduces inline: Interp comma/period
+chokepoint, area lock, per-scenario set+verify, scenario-column filter,
+per-region ActiveRegion, read-back EXACT. **Builds the FullName index ONCE**
+(area-wide), then hang-safe blind writes (existence-check then
+`leap.Branches(FullName)`). Dry → real → readback, all in ONE COM session.
+Adapter: [inject/residential/202060630/build_canonical_full.py](residential/202060630/build_canonical_full.py)
+(`--appliance ac|fridge`).
+
+### Logs (this run)
+
+[inject/residential/202060630/_inject_ac_full.log](residential/202060630/_inject_ac_full.log) ·
+[inject/residential/202060630/_inject_fridge_full.log](residential/202060630/_inject_fridge_full.log)
+(both 2712 lines, 1290 `[OK]` + 30 `[EXACT]`, zero failures).
+
+### Truth references
+
+[inject/residential/AC_ANATOMY.md](residential/AC_ANATOMY.md) ·
+[inject/residential/FRIDGE_ANATOMY.md](residential/FRIDGE_ANATOMY.md).
 
 ### Outstanding (does NOT block this being the reference)
 
-- Sales-share CA-2024 → forward-2025 discontinuities are an authoring
-  defect (interim-fixed with `Remainder(100)`); author to resolve in
-  source `sales_mix.csv`.
-- LEAP area was NOT saved after this inject pending the author's review.
+- **Save the LEAP area** to persist the writes.
+- **AC `Energy Load Shape`** — upload the 10 `<Country>_AC_Cooling` named shapes
+  to LEAP separately (not part of the inject), then the leaf references them.
+
+---
+
+*Previous reference: residential fridge Phase-1 Key + Phase-2 leaf
+(Efficiency + Exo), 2026-06-25→29, `aeo9_v0.64(_w_result)` — superseded by this
+full AC+fridge inject. Before that: transport, 2026-05-20, `aeo9_v0.47`.*

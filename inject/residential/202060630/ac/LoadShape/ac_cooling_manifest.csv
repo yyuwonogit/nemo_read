@@ -1,0 +1,11 @@
+Country,lat,lon,years,base_C,hours_used,fleh_hours,shape_name
+Brunei,4.89,114.94,2021-2023,24.0,26280,3583.7,Brunei_AC_Cooling
+Cambodia,11.56,104.92,2021-2023,24.0,26280,4333.6,Cambodia_AC_Cooling
+Indonesia,-6.21,106.85,2021-2023,24.0,26280,3331.8,Indonesia_AC_Cooling
+Laos,17.97,102.63,2021-2023,24.0,26280,3702.5,Laos_AC_Cooling
+Malaysia,3.14,101.69,2021-2023,24.0,26280,3978.9,Malaysia_AC_Cooling
+Myanmar,16.87,96.2,2021-2023,24.0,26280,3658.2,Myanmar_AC_Cooling
+Philippines,14.6,120.98,2021-2023,24.0,26280,4490.9,Philippines_AC_Cooling
+Singapore,1.35,103.82,2021-2023,24.0,26280,4321.7,Singapore_AC_Cooling
+Thailand,13.76,100.5,2021-2023,24.0,26280,4610.4,Thailand_AC_Cooling
+Vietnam,10.82,106.63,2021-2023,24.0,26280,3697.5,Vietnam_AC_Cooling

@@ -1,0 +1,10 @@
+# Fridge inject (2026-06-25) — dependencies
+#
+# build_canonical_fridge_keys.py  (the adapter)
+#   Python 3.8+  •  standard library only  •  runs on any OS (no LEAP).
+#
+# inject_fridge_leap.py  (the injector)
+#   Python 3.8+  •  Windows only  •  LEAP installed + the target area OPEN.
+#   Only third-party dependency:
+
+pywin32>=305
