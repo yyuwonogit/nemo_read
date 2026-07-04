@@ -91,6 +91,16 @@ probe + the 2026-06-29 dry-run):
 
 Author against whichever area is live. `aeo9_v0.64` → §1.3b.
 
+> **Canon update 2026-07-03** (`LEAP structure/LEAP_STRUCTURE_ANATOMY.md`
+> §2.1 + §10.2, Export Expressions from `aeo9_v0.67_w_results` 2026-07-02):
+> in the current live area the "results copy has no device-stock vars" split
+> above no longer holds. `aeo9_v0.67_w_results` carries the FULL device-stock
+> economics panel on the `Refrigeration_`/`Air Conditioning_` tiers — but
+> **scenario-scoped**: the panel rows exist only in 7 of 11 scenarios (Set up,
+> CNZ, RAS, LCO backup, RE LTRM ×3) and do not exist as rows in Current
+> Accounts, Baseline Simulation, AMS Target Scenario, or RAS test. The v0.64
+> two-area distinction below is kept as history for that area pair only.
+
 #### 1.3a Simple leaf — `aeo9_v0.64_w_result` (results copy)  [seen — 22 variable names via COM]
 
 | # | Variable | Role (input vs result) |

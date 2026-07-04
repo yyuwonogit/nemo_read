@@ -1,0 +1,696 @@
+branch_path,variable,units,scale,per
+Demand\Commercial,Activity Level,No data,,
+Demand\Commercial,Demand Cost,2020 USD,,
+Demand\Commercial,RefHH,Ref/hh,,
+Demand\Commercial\Data_Center,Activity Level,No data,,
+Demand\Commercial\Data_Center,Demand Cost,2020 USD,,No data
+Demand\Commercial\Data_Center,RefHH,Ref/hh,,
+Demand\Commercial\Data_Center\Colocation,Demand Cost,2020 USD,,
+Demand\Commercial\Data_Center\Colocation,Load Shape,Percent,%,
+Demand\Commercial\Data_Center\Colocation,RefHH,Ref/hh,,
+Demand\Commercial\Data_Center\Colocation,Total Energy,Gigawatt-Hour,,
+Demand\Commercial\Data_Center\Enterprise,Demand Cost,2020 USD,,
+Demand\Commercial\Data_Center\Enterprise,Load Shape,Percent,%,
+Demand\Commercial\Data_Center\Enterprise,RefHH,Ref/hh,,
+Demand\Commercial\Data_Center\Enterprise,Total Energy,Gigawatt-Hour,,
+Demand\Commercial\Data_Center\Hyperscale,Demand Cost,2020 USD,,
+Demand\Commercial\Data_Center\Hyperscale,Load Shape,Percent,%,
+Demand\Commercial\Data_Center\Hyperscale,RefHH,Ref/hh,,
+Demand\Commercial\Data_Center\Hyperscale,Total Energy,Gigawatt-Hour,,
+Demand\Commercial\Other Commercial,Activity Level,Square Meter,Thousand,
+Demand\Commercial\Other Commercial,Demand Cost,2020 USD,,
+Demand\Commercial\Other Commercial,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection,Activity Level,Saturation,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning,Activity Level,Saturation,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning,Commercial Uncalibrated Energy Intensity,kWh/m2,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing,Activity Level,Saturation,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing,Commercial Uncalibrated Energy Intensity,kWh/m2,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass,Commercial Cooking Efficiency_,prcnt eff,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal,Commercial Cooking Efficiency_,prcnt eff,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Charcoal\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Conventional Electric,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Conventional Electric,Commercial Cooking Efficiency_,prcnt eff,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Conventional Electric,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Conventional Electric,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Conventional Electric,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Conventional Electric,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Conventional Electric,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Induction Electric,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Induction Electric,Commercial Cooking Efficiency_,prcnt eff,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Induction Electric,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Induction Electric,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Induction Electric,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Induction Electric,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Induction Electric,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene,Commercial Cooking Efficiency_,prcnt eff,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Kerosene\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG,Commercial Cooking Efficiency_,prcnt eff,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\LPG\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas,Commercial Cooking Efficiency_,prcnt eff,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Natural Gas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Solar Heating,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Solar Heating,Commercial Cooking Efficiency_,prcnt eff,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Solar Heating,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Solar Heating,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Solar Heating,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Solar Heating,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood,Commercial Cooking Efficiency_,prcnt eff,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing\Wood\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting,Activity Level,Saturation,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting,Commercial Uncalibrated Energy Intensity,kWh/m2,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\CFL,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\CFL,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\CFL,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\CFL,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\CFL,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Fluorescent,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Fluorescent,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Fluorescent,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Fluorescent,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Fluorescent,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Halogen,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Halogen,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Halogen,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Halogen,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Halogen,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Incandescent,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Incandescent,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Incandescent,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Incandescent,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\Incandescent,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\LED,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\LED,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\LED,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\LED,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Electricity\LED,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles,Final Energy Intensity,Liter,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Kerosene and Candles\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Solar Lighting,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Solar Lighting,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Solar Lighting,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Lighting\Other\Solar Lighting,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other,Activity Level,Saturation,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other,Commercial Uncalibrated Energy Intensity,kWh/m2,,
+Demand\Commercial\Other Commercial\End Use Projection\Other,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biodiesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Coal Unspecified\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Diesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Other\Electricity,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Electricity,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Electricity,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Electricity,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Electricity,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Electricity,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Kerosene\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\LPG\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Natural Gas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Residual Fuel Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Other\Wood\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration,Activity Level,Saturation,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration,Commercial Uncalibrated Energy Intensity,kWh/m2,,
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Existing,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Existing,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Existing,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Existing,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Existing,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Existing,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating,Activity Level,Saturation,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating,Commercial Uncalibrated Energy Intensity,kWh/m2,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Existing,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Existing,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Existing,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Existing,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Existing,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Existing,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump Outside Air,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump Outside Air,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump Outside Air,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump Outside Air,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump Outside Air,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Heat Pump Outside Air,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating,Activity Level,Share,%,of Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating,Commercial Fuel Share_,%,,
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating,Final Energy Intensity,Kilowatt-Hour,,Square Meter
+Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical,Activity Level,Saturation,%,of Square Meter
+Demand\Commercial\Other Commercial\Historical,Demand Cost,U.S. Dollar,,Square Meter
+Demand\Commercial\Other Commercial\Historical,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical,TotalEnergy,TOE,Thousand,
+Demand\Commercial\Other Commercial\Historical\Biodiesel,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Biodiesel,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Biodiesel,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Biodiesel,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Biodiesel,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biodiesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Biomass,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Biomass,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Biomass,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Biomass,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Biomass,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Briquette,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Briquette,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Briquette,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Briquette,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Briquette,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Briquette\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Briquette\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Briquette\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Charcoal,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Charcoal,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Charcoal,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Charcoal,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Charcoal,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Charcoal\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Charcoal\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Charcoal\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Charcoal\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Charcoal\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Charcoal\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Charcoal\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Charcoal\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Charcoal\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Charcoal\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Charcoal\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Charcoal\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Charcoal\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Coal Unspecified\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Diesel,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Diesel,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Diesel,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Diesel,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Diesel,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Diesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Diesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Diesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Electricity,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Electricity,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Electricity,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Electricity,Load Shape,Percent,%,
+Demand\Commercial\Other Commercial\Historical\Electricity,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Electricity,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Ethanol,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Ethanol,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Ethanol,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Ethanol,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Ethanol,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Ethanol\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Ethanol\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Ethanol\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Gasoline,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Gasoline,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Gasoline,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Gasoline,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Gasoline,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Gasoline\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Gasoline\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Gasoline\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Kerosene,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Kerosene,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Kerosene,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Kerosene,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Kerosene,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Kerosene\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Kerosene\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Kerosene\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\LPG,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\LPG,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\LPG,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\LPG,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\LPG,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\LPG\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\LPG\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\LPG\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Natural Gas,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Natural Gas,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Natural Gas,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Natural Gas,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Natural Gas,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Natural Gas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Residual Fuel Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Commercial\Other Commercial\Historical\Solar Heating,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Solar Heating,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Solar Heating,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Solar Heating,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Solar Heating,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Wood,Demand Cost,2020 USD,,Square Meter
+Demand\Commercial\Other Commercial\Historical\Wood,Final Energy Intensity,Tonnes of Oil Equivalent,Thousand,Square Meter
+Demand\Commercial\Other Commercial\Historical\Wood,Fuel Share,Share,%,
+Demand\Commercial\Other Commercial\Historical\Wood,RefHH,Ref/hh,,
+Demand\Commercial\Other Commercial\Historical\Wood,UnscaledFuelShare,%,,
+Demand\Commercial\Other Commercial\Historical\Wood\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Commercial\Other Commercial\Historical\Wood\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule

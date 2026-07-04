@@ -1,0 +1,197 @@
+branch_path,variable,units,scale,per
+Resources\Primary\Biomass,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Biomass,Cost of Unmet Requirements,U.S. Dollar,,Metric Tonne
+Resources\Primary\Biomass,Export Benefit,U.S. Dollar,,Metric Tonne
+Resources\Primary\Biomass,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Biomass,Import Cost,2020 USD,,Metric Tonne
+Resources\Primary\Biomass,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Biomass,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Biomass,Maximum Imports,Gigajoule,,
+Resources\Primary\Biomass,Maximum Production,Terawatt-hour,,
+Resources\Primary\Biomass,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Biomass,Minimum Production,Gigajoule,,
+Resources\Primary\Biomass,Other Consumer Price,2011 USD / GJ,,
+Resources\Primary\Biomass,Production Cost,U.S. Dollar,,Metric Tonne
+Resources\Primary\Biomass,Residential Consumer Price,2011 USD / GJ,,
+Resources\Primary\Biomass,Unmet Requirements,Percent,,
+Resources\Primary\Coal Unspecified,Additions to Reserves,Metric Tonne,Thousand,
+Resources\Primary\Coal Unspecified,Base Year Reserves,Metric Tonne,Thousand,
+Resources\Primary\Coal Unspecified,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Coal Unspecified,Cost of Unmet Requirements,U.S. Dollar,,Metric Tonne
+Resources\Primary\Coal Unspecified,Export Benefit,U.S. Dollar,,Metric Tonne
+Resources\Primary\Coal Unspecified,Export Load Shape,Percent,,
+Resources\Primary\Coal Unspecified,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Coal Unspecified,Import Cost,2020 USD,,Metric Tonne
+Resources\Primary\Coal Unspecified,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Coal Unspecified,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Coal Unspecified,Maximum Imports,Gigajoule,,
+Resources\Primary\Coal Unspecified,Maximum Production,Gigajoule,,
+Resources\Primary\Coal Unspecified,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Coal Unspecified,Minimum Production,Gigajoule,,
+Resources\Primary\Coal Unspecified,Other Consumer Price,2011 USD / GJ,,
+Resources\Primary\Coal Unspecified,Production Cost,U.S. Dollar,,Metric Tonne
+Resources\Primary\Coal Unspecified,Residential Consumer Price,2011 USD / GJ,,
+Resources\Primary\Coal Unspecified,Unmet Requirements,Percent,,
+Resources\Primary\Crude Oil,Additions to Reserves,Barrel of Oil Equivalent,Billion,
+Resources\Primary\Crude Oil,Base Year Reserves,Barrel of Oil Equivalent,Billion,
+Resources\Primary\Crude Oil,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Crude Oil,Cost of Unmet Requirements,2020 USD,,Metric Tonne
+Resources\Primary\Crude Oil,Export Benefit,2020 USD,,Metric Tonne
+Resources\Primary\Crude Oil,Export Load Shape,Percent,,
+Resources\Primary\Crude Oil,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Crude Oil,Import Cost,2020 USD,,Barrel
+Resources\Primary\Crude Oil,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Crude Oil,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Crude Oil,Maximum Imports,Gigajoule,,
+Resources\Primary\Crude Oil,Maximum Production,Petajoule,,
+Resources\Primary\Crude Oil,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Crude Oil,Minimum Production,Gigajoule,,
+Resources\Primary\Crude Oil,Other Consumer Price,2011 USD / GJ,,
+Resources\Primary\Crude Oil,Production Cost,2020 USD,,Barrel
+Resources\Primary\Crude Oil,Residential Consumer Price,2011 USD / GJ,,
+Resources\Primary\Crude Oil,Unmet Requirements,Percent,,
+Resources\Primary\Natural Gas,Additions to Reserves,Cubic Meter,Trillion,
+Resources\Primary\Natural Gas,Base Year Reserves,Cubic Meter,Trillion,
+Resources\Primary\Natural Gas,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Natural Gas,Cost of Unmet Requirements,U.S. Dollar,,Cubic Meter
+Resources\Primary\Natural Gas,Export Benefit,U.S. Dollar,,Cubic Meter
+Resources\Primary\Natural Gas,Export Load Shape,Percent,,
+Resources\Primary\Natural Gas,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Natural Gas,Import Cost,2020 USD,,Million BTU
+Resources\Primary\Natural Gas,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Natural Gas,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Natural Gas,Maximum Imports,Gigajoule,,
+Resources\Primary\Natural Gas,Maximum Production,Gigajoule,,
+Resources\Primary\Natural Gas,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Natural Gas,Minimum Production,Gigajoule,,
+Resources\Primary\Natural Gas,Other Consumer Price,2011 USD / GJ,,
+Resources\Primary\Natural Gas,Production Cost,U.S. Dollar,,Million BTU
+Resources\Primary\Natural Gas,Residential Consumer Price,2011 USD / GJ,,
+Resources\Primary\Natural Gas,Unmet Requirements,Percent,,
+Resources\Primary\Wood,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Wood,Cost of Unmet Requirements,U.S. Dollar,,Metric Tonne
+Resources\Primary\Wood,Export Benefit,U.S. Dollar,,Metric Tonne
+Resources\Primary\Wood,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Wood,Import Cost,2020 USD,,Metric Tonne
+Resources\Primary\Wood,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Wood,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Primary\Wood,Maximum Imports,Gigajoule,,
+Resources\Primary\Wood,Maximum Production,Terawatt-hour,,
+Resources\Primary\Wood,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Primary\Wood,Minimum Production,Gigajoule,,
+Resources\Primary\Wood,Other Consumer Price,2011 USD / GJ,,
+Resources\Primary\Wood,Production Cost,U.S. Dollar,,Metric Tonne
+Resources\Primary\Wood,Residential Consumer Price,2011 USD / GJ,,
+Resources\Primary\Wood,Unmet Requirements,Percent,,
+Resources\Secondary\Charcoal,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Charcoal,Cost of Unmet Requirements,2020 USD,,Metric Tonne
+Resources\Secondary\Charcoal,Export Benefit,2020 USD,,Metric Tonne
+Resources\Secondary\Charcoal,Export Load Shape,Percent,,
+Resources\Secondary\Charcoal,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Charcoal,Import Cost,2020 USD,,Metric Tonne
+Resources\Secondary\Charcoal,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Charcoal,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Charcoal,Maximum Imports,Gigajoule,,
+Resources\Secondary\Charcoal,Maximum Production,Gigajoule,,
+Resources\Secondary\Charcoal,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Charcoal,Minimum Production,Gigajoule,,
+Resources\Secondary\Charcoal,Other Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Charcoal,Production Cost,2020 USD,,Metric Tonne
+Resources\Secondary\Charcoal,Residential Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Charcoal,Unmet Requirements,Percent,,
+Resources\Secondary\Diesel,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Diesel,Cost of Unmet Requirements,2020 USD,,Metric Tonne
+Resources\Secondary\Diesel,Export Benefit,2020 USD,,Metric Tonne
+Resources\Secondary\Diesel,Export Load Shape,Percent,,
+Resources\Secondary\Diesel,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Diesel,Import Cost,2020 USD,,Barrel
+Resources\Secondary\Diesel,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Diesel,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Diesel,Maximum Imports,Gigajoule,,
+Resources\Secondary\Diesel,Maximum Production,Gigajoule,,
+Resources\Secondary\Diesel,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Diesel,Minimum Production,Gigajoule,,
+Resources\Secondary\Diesel,Other Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Diesel,Production Cost,2020 USD,,Barrel
+Resources\Secondary\Diesel,Residential Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Diesel,Unmet Requirements,Percent,,
+Resources\Secondary\Electricity,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Electricity,Cost of Unmet Requirements,2020 USD,,Gigajoule
+Resources\Secondary\Electricity,Export Benefit,2020 USD,,Gigajoule
+Resources\Secondary\Electricity,Export Load Shape,Percent,,
+Resources\Secondary\Electricity,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Electricity,Import Cost,2020 USD,,Megawatt-Hour
+Resources\Secondary\Electricity,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Electricity,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Electricity,Maximum Imports,Gigajoule,,
+Resources\Secondary\Electricity,Maximum Production,Gigajoule,,
+Resources\Secondary\Electricity,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Electricity,Minimum Production,Gigajoule,,
+Resources\Secondary\Electricity,Other Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Electricity,Production Cost,2020 USD,,Gigajoule
+Resources\Secondary\Electricity,Residential Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Electricity,Unmet Requirements,Percent,,
+Resources\Secondary\Gasoline,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Gasoline,Cost of Unmet Requirements,2020 USD,,Metric Tonne
+Resources\Secondary\Gasoline,Export Benefit,2020 USD,,Metric Tonne
+Resources\Secondary\Gasoline,Export Load Shape,Percent,,
+Resources\Secondary\Gasoline,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Gasoline,Import Cost,2020 USD,,Barrel
+Resources\Secondary\Gasoline,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Gasoline,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Gasoline,Maximum Imports,Gigajoule,,
+Resources\Secondary\Gasoline,Maximum Production,Gigajoule,,
+Resources\Secondary\Gasoline,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Gasoline,Minimum Production,Gigajoule,,
+Resources\Secondary\Gasoline,Other Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Gasoline,Production Cost,2020 USD,,Barrel
+Resources\Secondary\Gasoline,Residential Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Gasoline,Unmet Requirements,Percent,,
+Resources\Secondary\Kerosene,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Kerosene,Cost of Unmet Requirements,2020 USD,,Metric Tonne
+Resources\Secondary\Kerosene,Export Benefit,2020 USD,,Metric Tonne
+Resources\Secondary\Kerosene,Export Load Shape,Percent,,
+Resources\Secondary\Kerosene,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Kerosene,Import Cost,2020 USD,,Barrel
+Resources\Secondary\Kerosene,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Kerosene,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Kerosene,Maximum Imports,Gigajoule,,
+Resources\Secondary\Kerosene,Maximum Production,Gigajoule,,
+Resources\Secondary\Kerosene,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Kerosene,Minimum Production,Gigajoule,,
+Resources\Secondary\Kerosene,Other Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Kerosene,Production Cost,2020 USD,,Barrel
+Resources\Secondary\Kerosene,Residential Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Kerosene,Unmet Requirements,Percent,,
+Resources\Secondary\LPG,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\LPG,Cost of Unmet Requirements,U.S. Dollar,,Metric Tonne
+Resources\Secondary\LPG,Export Benefit,U.S. Dollar,,Metric Tonne
+Resources\Secondary\LPG,Export Load Shape,Percent,,
+Resources\Secondary\LPG,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\LPG,Import Cost,2020 USD,,Million BTU
+Resources\Secondary\LPG,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\LPG,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\LPG,Maximum Imports,Gigajoule,,
+Resources\Secondary\LPG,Maximum Production,Gigajoule,,
+Resources\Secondary\LPG,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\LPG,Minimum Production,Gigajoule,,
+Resources\Secondary\LPG,Other Consumer Price,2011 USD / GJ,,
+Resources\Secondary\LPG,Production Cost,U.S. Dollar,,Million BTU
+Resources\Secondary\LPG,Residential Consumer Price,2011 USD / GJ,,
+Resources\Secondary\LPG,Unmet Requirements,Percent,,
+Resources\Secondary\Residual Fuel Oil,Commercial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Residual Fuel Oil,Cost of Unmet Requirements,2020 USD,,Metric Tonne
+Resources\Secondary\Residual Fuel Oil,Export Benefit,2020 USD,,Metric Tonne
+Resources\Secondary\Residual Fuel Oil,Export Load Shape,Percent,,
+Resources\Secondary\Residual Fuel Oil,Exports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Residual Fuel Oil,Import Cost,2020 USD,,Barrel
+Resources\Secondary\Residual Fuel Oil,Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Residual Fuel Oil,Industrial Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Residual Fuel Oil,Maximum Imports,Gigajoule,,
+Resources\Secondary\Residual Fuel Oil,Maximum Production,Gigajoule,,
+Resources\Secondary\Residual Fuel Oil,Minimum Imports,Tonnes of Oil Equivalent,Thousand,
+Resources\Secondary\Residual Fuel Oil,Minimum Production,Gigajoule,,
+Resources\Secondary\Residual Fuel Oil,Other Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Residual Fuel Oil,Production Cost,2020 USD,,Barrel
+Resources\Secondary\Residual Fuel Oil,Residential Consumer Price,2011 USD / GJ,,
+Resources\Secondary\Residual Fuel Oil,Unmet Requirements,Percent,,

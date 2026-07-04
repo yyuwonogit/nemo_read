@@ -1,0 +1,150 @@
+          Demand_electricity   [Key\Net Zero Measures\Transport\Navigation\Cold ironing\Demand_electricity]  vars: Activity Level
+          Method   [Key\Net Zero Measures\Transport\Navigation\Cold ironing\Method]  vars: Activity Level
+          Share_electricity   [Key\Net Zero Measures\Transport\Navigation\Cold ironing\Share_electricity]  vars: Activity Level
+        Aviation_efficiency   [Key\Net Zero Measures\Transport\Aviation\Aviation_efficiency]  vars: Activity Level
+        Blended Diesel   [Key\TransportDataStock\Vehicle_Stock_Share\Bus\Blended Diesel]  vars: Activity Level
+        Blended Diesel   [Key\TransportDataStock\Vehicle_Stock_Share\PassengerCar\Blended Diesel]  vars: Activity Level
+        Blended Diesel   [Key\TransportDataStock\Vehicle_Stock_Share\Truck\Blended Diesel]  vars: Activity Level
+        Blended Diesel   [Key\TransportDataStock\Vehicles_Sales_Share\Bus\Blended Diesel]  vars: Activity Level
+        Blended Diesel   [Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel]  vars: Activity Level
+        Blended Diesel   [Key\TransportDataStock\Vehicles_Sales_Share\Truck\Blended Diesel]  vars: Activity Level
+        CAPEX   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 1\CAPEX]  vars: Activity Level
+        CAPEX   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 2\CAPEX]  vars: Activity Level
+        CAPEX   [Key\Other Transport\EV Charging Infrastructure Costs\DC Fast Charger\CAPEX]  vars: Activity Level
+        Capital_Cost per Year per EV   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 1\Capital_Cost per Year per EV]  vars: Activity Level
+        Capital_Cost per Year per EV   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 2\Capital_Cost per Year per EV]  vars: Activity Level
+        Capital_Cost per Year per EV   [Key\Other Transport\EV Charging Infrastructure Costs\DC Fast Charger\Capital_Cost per Year per EV]  vars: Activity Level
+        Chargers per EV   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 1\Chargers per EV]  vars: Activity Level
+        Chargers per EV   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 2\Chargers per EV]  vars: Activity Level
+        Chargers per EV   [Key\Other Transport\EV Charging Infrastructure Costs\DC Fast Charger\Chargers per EV]  vars: Activity Level
+        Electric Taxiing   [Key\Net Zero Measures\Transport\Aviation\Electric Taxiing]  vars: Activity Level
+        Electric taxis with automation   [Key\Net Zero Measures\Transport\Road\Electric taxis with automation]  vars: Activity Level
+        Electricity   [Key\TransportDataStock\Vehicle_Stock_Share\Bus\Electricity]  vars: Activity Level
+        Electricity   [Key\TransportDataStock\Vehicle_Stock_Share\Motorcycle\Electricity]  vars: Activity Level
+        Electricity   [Key\TransportDataStock\Vehicle_Stock_Share\PassengerCar\Electricity]  vars: Activity Level
+        Electricity   [Key\TransportDataStock\Vehicle_Stock_Share\Truck\Electricity]  vars: Activity Level
+        Electricity   [Key\TransportDataStock\Vehicles_Sales_Share\Bus\Electricity]  vars: Activity Level
+        Electricity   [Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity]  vars: Activity Level
+        Electricity   [Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity]  vars: Activity Level
+        Electricity   [Key\TransportDataStock\Vehicles_Sales_Share\Truck\Electricity]  vars: Activity Level
+        Fixed_OM   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 1\Fixed_OM]  vars: Activity Level
+        Fixed_OM   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 2\Fixed_OM]  vars: Activity Level
+        Fixed_OM   [Key\Other Transport\EV Charging Infrastructure Costs\DC Fast Charger\Fixed_OM]  vars: Activity Level
+        Fixed_OM Cost per EV   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 1\Fixed_OM Cost per EV]  vars: Activity Level
+        Fixed_OM Cost per EV   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 2\Fixed_OM Cost per EV]  vars: Activity Level
+        Fixed_OM Cost per EV   [Key\Other Transport\EV Charging Infrastructure Costs\DC Fast Charger\Fixed_OM Cost per EV]  vars: Activity Level
+        Fuel_economy improvement   [Key\Net Zero Measures\Transport\Road\Fuel_economy improvement]  vars: Activity Level
+        Gasoline   [Key\TransportDataStock\Vehicle_Stock_Share\Bus\Gasoline]  vars: Activity Level
+        Gasoline   [Key\TransportDataStock\Vehicle_Stock_Share\Motorcycle\Gasoline]  vars: Activity Level
+        Gasoline   [Key\TransportDataStock\Vehicle_Stock_Share\PassengerCar\Gasoline]  vars: Activity Level
+        Gasoline   [Key\TransportDataStock\Vehicle_Stock_Share\Truck\Gasoline]  vars: Activity Level
+        Gasoline   [Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline]  vars: Activity Level
+        Gasoline   [Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline]  vars: Activity Level
+        Gasoline   [Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline]  vars: Activity Level
+        Gasoline   [Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline]  vars: Activity Level
+        Hull coatings   [Key\Net Zero Measures\Transport\Navigation\Hull coatings]  vars: Activity Level
+        Hydrogen   [Key\TransportDataStock\Vehicle_Stock_Share\Bus\Hydrogen]  vars: Activity Level
+        Hydrogen   [Key\TransportDataStock\Vehicle_Stock_Share\PassengerCar\Hydrogen]  vars: Activity Level
+        Hydrogen   [Key\TransportDataStock\Vehicle_Stock_Share\Truck\Hydrogen]  vars: Activity Level
+        Hydrogen   [Key\TransportDataStock\Vehicles_Sales_Share\Bus\Hydrogen]  vars: Activity Level
+        Hydrogen   [Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Hydrogen]  vars: Activity Level
+        Hydrogen   [Key\TransportDataStock\Vehicles_Sales_Share\Truck\Hydrogen]  vars: Activity Level
+        Hydrogen Fuel Cell   [Key\Net Zero Measures\Transport\Aviation\Hydrogen Fuel Cell]  vars: Activity Level
+        Installation   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 1\Installation]  vars: Activity Level
+        Installation   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 2\Installation]  vars: Activity Level
+        Installation   [Key\Other Transport\EV Charging Infrastructure Costs\DC Fast Charger\Installation]  vars: Activity Level
+        Kites   [Key\Net Zero Measures\Transport\Navigation\Kites]  vars: Activity Level
+        Life   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 1\Life]  vars: Activity Level
+        Life   [Key\Other Transport\EV Charging Infrastructure Costs\AC Level 2\Life]  vars: Activity Level
+        Life   [Key\Other Transport\EV Charging Infrastructure Costs\DC Fast Charger\Life]  vars: Activity Level
+        Natural Gas   [Key\TransportDataStock\Vehicle_Stock_Share\Bus\Natural Gas]  vars: Activity Level
+        Natural Gas   [Key\TransportDataStock\Vehicle_Stock_Share\PassengerCar\Natural Gas]  vars: Activity Level
+        Natural Gas   [Key\TransportDataStock\Vehicle_Stock_Share\Truck\Natural Gas]  vars: Activity Level
+        Natural Gas   [Key\TransportDataStock\Vehicles_Sales_Share\Bus\Natural Gas]  vars: Activity Level
+        Natural Gas   [Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Natural Gas]  vars: Activity Level
+        Natural Gas   [Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural Gas]  vars: Activity Level
+        Rudder bulb   [Key\Net Zero Measures\Transport\Navigation\Rudder bulb]  vars: Activity Level
+        Sustainable Aviation Fuel   [Key\Net Zero Measures\Transport\Aviation\Sustainable Aviation Fuel]  vars: Activity Level
+      a   [Key\Transport vehicle data_\Bus\a]  vars: Activity Level
+      a   [Key\Transport vehicle data_\Freight\a]  vars: Activity Level
+      a   [Key\Transport vehicle data_\Motorcycle\a]  vars: Activity Level
+      a   [Key\Transport vehicle data_\PPV\a]  vars: Activity Level
+      a   [Key\Transport vehicle data_\Taxi\a]  vars: Activity Level
+      add_year   [Key\Transport vehicle data_\Motorcycle\add_year]  vars: Activity Level
+      add_year   [Key\Transport vehicle data_\PPV\add_year]  vars: Activity Level
+      add_year   [Key\Transport vehicle data_\Taxi\add_year]  vars: Activity Level
+      Age   [Key\TransportDataStock\Year_\Age]  vars: Activity Level
+      b   [Key\Transport vehicle data_\Bus\b]  vars: Activity Level
+      b   [Key\Transport vehicle data_\Freight\b]  vars: Activity Level
+      b   [Key\Transport vehicle data_\Motorcycle\b]  vars: Activity Level
+      b   [Key\Transport vehicle data_\PPV\b]  vars: Activity Level
+      b   [Key\Transport vehicle data_\Taxi\b]  vars: Activity Level
+      Biodiesel   [Key\Cal\Transport\Biodiesel]  vars: Activity Level
+      Bus   [Key\TransportDataStock\BaseYear_StockData\Bus]  vars: Activity Level
+      Bus   [Key\TransportDataStock\Effective Operational_Stock\Bus]  vars: Activity Level
+      Bus   [Key\TransportDataStock\Vehicle_Sales\Bus]  vars: Activity Level
+      c   [Key\Transport vehicle data_\Bus\c]  vars: Activity Level
+      c   [Key\Transport vehicle data_\Freight\c]  vars: Activity Level
+      c   [Key\Transport vehicle data_\Motorcycle\c]  vars: Activity Level
+      c   [Key\Transport vehicle data_\PPV\c]  vars: Activity Level
+      c   [Key\Transport vehicle data_\Taxi\c]  vars: Activity Level
+      Capital_Cost per Year per EV   [Key\Other Transport\EV Charging Infrastructure Costs\Capital_Cost per Year per EV]  vars: Activity Level
+      CNG   [Key\Cal\Transport\CNG]  vars: Activity Level
+      Diesel   [Key\Cal\Transport\Diesel]  vars: Activity Level
+      Electricity   [Key\Cal\Transport\Electricity]  vars: Activity Level
+      Ethanol   [Key\Cal\Transport\Ethanol]  vars: Activity Level
+      Fixed_OM Cost per EV   [Key\Other Transport\EV Charging Infrastructure Costs\Fixed_OM Cost per EV]  vars: Activity Level
+      Gasoline   [Key\Cal\Transport\Gasoline]  vars: Activity Level
+      Historical Bus   [Key\Transport vehicle data_\Bus\Historical Bus]  vars: Activity Level
+      Historical Freight   [Key\Transport vehicle data_\Freight\Historical Freight]  vars: Activity Level
+      Historical Motorcycle   [Key\Transport vehicle data_\Motorcycle\Historical Motorcycle]  vars: Activity Level
+      Historical PPV   [Key\Transport vehicle data_\PPV\Historical PPV]  vars: Activity Level
+      Historical Taxi   [Key\Transport vehicle data_\Taxi\Historical Taxi]  vars: Activity Level
+      LPG   [Key\Cal\Transport\LPG]  vars: Activity Level
+      Motorcycle   [Key\TransportDataStock\BaseYear_StockData\Motorcycle]  vars: Activity Level
+      Motorcycle   [Key\TransportDataStock\Vehicle_Sales\Motorcycle]  vars: Activity Level
+      Motorcyle   [Key\TransportDataStock\Effective Operational_Stock\Motorcyle]  vars: Activity Level
+      Natural Gas   [Key\Cal\Transport\Natural Gas]  vars: Activity Level
+      Other Oil   [Key\Cal\Transport\Other Oil]  vars: Activity Level
+      Pandemic Correction   [Key\Cal\Transport\Pandemic Correction]  vars: Activity Level
+      PassengerCar   [Key\TransportDataStock\BaseYear_StockData\PassengerCar]  vars: Activity Level
+      PassengerCar   [Key\TransportDataStock\Effective Operational_Stock\PassengerCar]  vars: Activity Level
+      PassengerCar   [Key\TransportDataStock\Vehicle_Sales\PassengerCar]  vars: Activity Level
+      Truck   [Key\TransportDataStock\BaseYear_StockData\Truck]  vars: Activity Level
+      Truck   [Key\TransportDataStock\Effective Operational_Stock\Truck]  vars: Activity Level
+      Truck   [Key\TransportDataStock\Vehicle_Sales\Truck]  vars: Activity Level
+      year_   [Key\Transport vehicle data_\Bus\year_]  vars: Activity Level
+      year_   [Key\Transport vehicle data_\Freight\year_]  vars: Activity Level
+      year_   [Key\Transport vehicle data_\Motorcycle\year_]  vars: Activity Level
+      year_   [Key\Transport vehicle data_\PPV\year_]  vars: Activity Level
+      year_   [Key\Transport vehicle data_\Taxi\year_]  vars: Activity Level
+    Agriculture Fraction in GDP   [Key\Macroeconomic\Agriculture Fraction in GDP]  vars: Activity Level
+    Chemical   [Key\Annual EI Reduction\Chemical]  vars: Activity Level
+    Commercial   [Key\Annual EI Reduction\Commercial]  vars: Activity Level
+    Construction Fraction in Industry   [Key\Macroeconomic\Construction Fraction in Industry]  vars: Activity Level
+    EI Improvement_RAS   [Key\Annual EI Reduction\EI Improvement_RAS]  vars: Activity Level
+    EI_Improvement_RAS_2   [Key\Annual EI Reduction\EI_Improvement_RAS_2]  vars: Activity Level
+    Elasticity   [Key\Macroeconomic\Elasticity]  vars: Activity Level
+    Food and Beverages   [Key\Annual EI Reduction\Food and Beverages]  vars: Activity Level
+    FuelEco   [Key\Annual EI Reduction\FuelEco]  vars: Activity Level
+    Gross Fixed Capital Formation   [Key\Macroeconomic\Gross Fixed Capital Formation]  vars: Activity Level
+    Industry   [Key\Annual EI Reduction\Industry]  vars: Activity Level
+    Industry Fraction in GDP   [Key\Macroeconomic\Industry Fraction in GDP]  vars: Activity Level
+    Iron and Steel   [Key\Annual EI Reduction\Iron and Steel]  vars: Activity Level
+    Manufacturing Fraction in Industry   [Key\Macroeconomic\Manufacturing Fraction in Industry]  vars: Activity Level
+    Mining   [Key\Annual EI Reduction\Mining]  vars: Activity Level
+    Mining Fraction in Industry   [Key\Macroeconomic\Mining Fraction in Industry]  vars: Activity Level
+    Non Metallic Mineral   [Key\Annual EI Reduction\Non Metallic Mineral]  vars: Activity Level
+    Pulp Paper   [Key\Annual EI Reduction\Pulp Paper]  vars: Activity Level
+    Real GDP Agriculture   [Key\Macroeconomic\Real GDP Agriculture]  vars: Activity Level
+    Real GDP Industry   [Key\Macroeconomic\Real GDP Industry]  vars: Activity Level
+    Real GDP Manufacturing   [Key\Macroeconomic\Real GDP Manufacturing]  vars: Activity Level
+    Real GDP Per Capita   [Key\Macroeconomic\Real GDP Per Capita]  vars: Activity Level
+    Real GDP Per Capita_Growth   [Key\Macroeconomic\Real GDP Per Capita_Growth]  vars: Activity Level
+    Real GDP PPP   [Key\Macroeconomic\Real GDP PPP]  vars: Activity Level
+    Real GDP Service   [Key\Macroeconomic\Real GDP Service]  vars: Activity Level
+    Real GDP Service Per Capita   [Key\Macroeconomic\Real GDP Service Per Capita]  vars: Activity Level
+    Residential   [Key\Annual EI Reduction\Residential]  vars: Activity Level
+    Services Fraction in GDP   [Key\Macroeconomic\Services Fraction in GDP]  vars: Activity Level
+    Textile   [Key\Annual EI Reduction\Textile]  vars: Activity Level
+    Utilities Fraction in Industry   [Key\Macroeconomic\Utilities Fraction in Industry]  vars: Activity Level

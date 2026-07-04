@@ -14,7 +14,7 @@ unit-conversion registry), see [CSV_AUTHORING_GUIDE.md](CSV_AUTHORING_GUIDE.md).
 | | Value |
 |---|---|
 | File you author | [bioenergy_leap_input.csv](bioenergy_leap_input.csv) |
-| LEAP target area | `aeo9_v0.36` (was `aeo9_v0.33_bak` for the cycle-1 audit) |
+| LEAP target area | `aeo9_v0.67_w_results` (canon structure export 2026-07-02; earlier cycles targeted `aeo9_v0.36`, cycle-1 audit `aeo9_v0.33_bak`) |
 | Design | **Single-cap** — `Resources\Primary\<X>:Maximum Production` is the only crop-supply cap. No land tier. |
 | Distinct (branch, variable) pairs in source | **86 exactly** |
 | → that inject to LEAP | **58** (the INJECT column in §6) |
@@ -393,7 +393,8 @@ This will:
 
 ## 9. Open author-action items / cycle log
 
-**0 remaining** as of 2026-05-05 (post supply-cap basis correction).
+**1 open** as of 2026-07-03 (Cycle 4 below); previously 0 remaining as of
+2026-05-05 (post supply-cap basis correction).
 
 Each row below records a closed author-action cycle. New cycles get
 appended; nothing is rewritten in place.
@@ -490,6 +491,21 @@ LEAP variables can be scenario-scoped, so a `Variable() = None` on one
 scenario doesn't prove retirement — confirm against RAS (or whatever
 scenario the variable is meant to live in) before treating it as a
 schema change.
+
+### Cycle 4 — 2026-07-03: POME Import Cost repo/area drift (OPEN)
+
+The 2026-05-19 bioenergy "final unlock" fix authored a `Resources\Primary\
+Palm Oil Mill Effluent:Import Cost` trajectory directly in LEAP, and it is
+live in the area — the canon structure export of `aeo9_v0.67_w_results`
+(2026-07-02) shows it in RAS, e.g. `Interp(2025, 0.306, ..., 2060,
+0.377269)` in `2020 USD` per `Kilogramme` — but the row was never brought
+back into [bioenergy_leap_input.csv](bioenergy_leap_input.csv) or the
+canonical (POME carries only `Maximum Production` + `Production Cost`
+there). Author action: confirm/correct the POME Import Cost values (asked
+in `structure_handover_20260703/README_BIOENERGY_CANON_STRUCTURE.md` §7-8)
+and add the (branch, variable) pair to the source CSV next cycle so the
+fix survives future area rebuilds. Structural change per §1 — coordinate
+the new row with the modelling team.
 
 When the next item arises, it gets listed here with an explicit
 conversion specification.

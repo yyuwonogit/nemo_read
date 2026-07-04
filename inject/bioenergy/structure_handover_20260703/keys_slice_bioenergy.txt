@@ -1,0 +1,497 @@
+    Biodiesel   [Key\Biofuel Blending Targets\Biodiesel]  vars: Activity Level
+    Bioethanol   [Key\Biofuel Blending Targets\Bioethanol]  vars: Activity Level
+    Brunei_Cambodia Biodiesel   [Key\Optimized Trade\Brunei_Cambodia Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Cambodia Cassava   [Key\Optimized Trade\Brunei_Cambodia Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Cambodia Coconut Oil   [Key\Optimized Trade\Brunei_Cambodia Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Cambodia Corn   [Key\Optimized Trade\Brunei_Cambodia Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Cambodia Ethanol   [Key\Optimized Trade\Brunei_Cambodia Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Cambodia Molasses   [Key\Optimized Trade\Brunei_Cambodia Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Cambodia Palm Oil   [Key\Optimized Trade\Brunei_Cambodia Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Cambodia Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Cambodia Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Cambodia Sugarcane   [Key\Optimized Trade\Brunei_Cambodia Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Indonesia Biodiesel   [Key\Optimized Trade\Brunei_Indonesia Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Indonesia Cassava   [Key\Optimized Trade\Brunei_Indonesia Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Indonesia Coconut Oil   [Key\Optimized Trade\Brunei_Indonesia Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Indonesia Corn   [Key\Optimized Trade\Brunei_Indonesia Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Indonesia Ethanol   [Key\Optimized Trade\Brunei_Indonesia Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Indonesia Molasses   [Key\Optimized Trade\Brunei_Indonesia Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Indonesia Palm Oil   [Key\Optimized Trade\Brunei_Indonesia Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Indonesia Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Indonesia Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Indonesia Sugarcane   [Key\Optimized Trade\Brunei_Indonesia Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Laos Biodiesel   [Key\Optimized Trade\Brunei_Laos Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Laos Cassava   [Key\Optimized Trade\Brunei_Laos Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Laos Coconut Oil   [Key\Optimized Trade\Brunei_Laos Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Laos Corn   [Key\Optimized Trade\Brunei_Laos Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Laos Ethanol   [Key\Optimized Trade\Brunei_Laos Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Laos Molasses   [Key\Optimized Trade\Brunei_Laos Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Laos Palm Oil   [Key\Optimized Trade\Brunei_Laos Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Laos Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Laos Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Laos Sugarcane   [Key\Optimized Trade\Brunei_Laos Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Malaysia Biodiesel   [Key\Optimized Trade\Brunei_Malaysia Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Malaysia Cassava   [Key\Optimized Trade\Brunei_Malaysia Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Malaysia Coconut Oil   [Key\Optimized Trade\Brunei_Malaysia Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Malaysia Corn   [Key\Optimized Trade\Brunei_Malaysia Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Malaysia Ethanol   [Key\Optimized Trade\Brunei_Malaysia Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Malaysia Molasses   [Key\Optimized Trade\Brunei_Malaysia Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Malaysia Palm Oil   [Key\Optimized Trade\Brunei_Malaysia Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Malaysia Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Malaysia Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Malaysia Sugarcane   [Key\Optimized Trade\Brunei_Malaysia Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Myanmar Biodiesel   [Key\Optimized Trade\Brunei_Myanmar Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Myanmar Cassava   [Key\Optimized Trade\Brunei_Myanmar Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Myanmar Coconut Oil   [Key\Optimized Trade\Brunei_Myanmar Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Myanmar Corn   [Key\Optimized Trade\Brunei_Myanmar Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Myanmar Ethanol   [Key\Optimized Trade\Brunei_Myanmar Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Myanmar Molasses   [Key\Optimized Trade\Brunei_Myanmar Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Myanmar Palm Oil   [Key\Optimized Trade\Brunei_Myanmar Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Myanmar Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Myanmar Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Myanmar Sugarcane   [Key\Optimized Trade\Brunei_Myanmar Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Philippines Biodiesel   [Key\Optimized Trade\Brunei_Philippines Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Philippines Cassava   [Key\Optimized Trade\Brunei_Philippines Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Philippines Coconut Oil   [Key\Optimized Trade\Brunei_Philippines Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Philippines Corn   [Key\Optimized Trade\Brunei_Philippines Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Philippines Ethanol   [Key\Optimized Trade\Brunei_Philippines Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Philippines Molasses   [Key\Optimized Trade\Brunei_Philippines Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Philippines Palm Oil   [Key\Optimized Trade\Brunei_Philippines Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Philippines Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Philippines Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Philippines Sugarcane   [Key\Optimized Trade\Brunei_Philippines Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Singapore Biodiesel   [Key\Optimized Trade\Brunei_Singapore Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Singapore Cassava   [Key\Optimized Trade\Brunei_Singapore Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Singapore Coconut Oil   [Key\Optimized Trade\Brunei_Singapore Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Singapore Corn   [Key\Optimized Trade\Brunei_Singapore Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Singapore Ethanol   [Key\Optimized Trade\Brunei_Singapore Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Singapore Molasses   [Key\Optimized Trade\Brunei_Singapore Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Singapore Palm Oil   [Key\Optimized Trade\Brunei_Singapore Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Singapore Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Singapore Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Singapore Sugarcane   [Key\Optimized Trade\Brunei_Singapore Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Thailand Biodiesel   [Key\Optimized Trade\Brunei_Thailand Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Thailand Cassava   [Key\Optimized Trade\Brunei_Thailand Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Thailand Coconut Oil   [Key\Optimized Trade\Brunei_Thailand Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Thailand Corn   [Key\Optimized Trade\Brunei_Thailand Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Thailand Ethanol   [Key\Optimized Trade\Brunei_Thailand Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Thailand Molasses   [Key\Optimized Trade\Brunei_Thailand Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Thailand Palm Oil   [Key\Optimized Trade\Brunei_Thailand Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Thailand Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Thailand Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Thailand Sugarcane   [Key\Optimized Trade\Brunei_Thailand Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Timor Leste Biodiesel   [Key\Optimized Trade\Brunei_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Timor Leste Cassava   [Key\Optimized Trade\Brunei_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Timor Leste Coconut Oil   [Key\Optimized Trade\Brunei_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Timor Leste Corn   [Key\Optimized Trade\Brunei_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Timor Leste Ethanol   [Key\Optimized Trade\Brunei_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Timor Leste Molasses   [Key\Optimized Trade\Brunei_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Timor Leste Palm Oil   [Key\Optimized Trade\Brunei_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Timor Leste Sugarcane   [Key\Optimized Trade\Brunei_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Vietnam Biodiesel   [Key\Optimized Trade\Brunei_Vietnam Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Vietnam Cassava   [Key\Optimized Trade\Brunei_Vietnam Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Vietnam Coconut Oil   [Key\Optimized Trade\Brunei_Vietnam Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Vietnam Corn   [Key\Optimized Trade\Brunei_Vietnam Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Vietnam Ethanol   [Key\Optimized Trade\Brunei_Vietnam Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Vietnam Molasses   [Key\Optimized Trade\Brunei_Vietnam Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Vietnam Palm Oil   [Key\Optimized Trade\Brunei_Vietnam Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Vietnam Palm Oil Mill Effluent   [Key\Optimized Trade\Brunei_Vietnam Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Brunei_Vietnam Sugarcane   [Key\Optimized Trade\Brunei_Vietnam Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Indonesia Biodiesel   [Key\Optimized Trade\Cambodia_Indonesia Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Indonesia Cassava   [Key\Optimized Trade\Cambodia_Indonesia Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Indonesia Coconut Oil   [Key\Optimized Trade\Cambodia_Indonesia Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Indonesia Corn   [Key\Optimized Trade\Cambodia_Indonesia Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Indonesia Ethanol   [Key\Optimized Trade\Cambodia_Indonesia Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Indonesia Molasses   [Key\Optimized Trade\Cambodia_Indonesia Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Indonesia Palm Oil   [Key\Optimized Trade\Cambodia_Indonesia Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Indonesia Palm Oil Mill Effluent   [Key\Optimized Trade\Cambodia_Indonesia Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Indonesia Sugarcane   [Key\Optimized Trade\Cambodia_Indonesia Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Laos Biodiesel   [Key\Optimized Trade\Cambodia_Laos Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Laos Cassava   [Key\Optimized Trade\Cambodia_Laos Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Laos Coconut Oil   [Key\Optimized Trade\Cambodia_Laos Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Laos Corn   [Key\Optimized Trade\Cambodia_Laos Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Laos Ethanol   [Key\Optimized Trade\Cambodia_Laos Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Laos Molasses   [Key\Optimized Trade\Cambodia_Laos Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Laos Palm Oil   [Key\Optimized Trade\Cambodia_Laos Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Laos Palm Oil Mill Effluent   [Key\Optimized Trade\Cambodia_Laos Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Laos Sugarcane   [Key\Optimized Trade\Cambodia_Laos Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Malaysia Biodiesel   [Key\Optimized Trade\Cambodia_Malaysia Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Malaysia Cassava   [Key\Optimized Trade\Cambodia_Malaysia Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Malaysia Coconut Oil   [Key\Optimized Trade\Cambodia_Malaysia Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Malaysia Corn   [Key\Optimized Trade\Cambodia_Malaysia Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Malaysia Ethanol   [Key\Optimized Trade\Cambodia_Malaysia Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Malaysia Molasses   [Key\Optimized Trade\Cambodia_Malaysia Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Malaysia Palm Oil   [Key\Optimized Trade\Cambodia_Malaysia Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Malaysia Palm Oil Mill Effluent   [Key\Optimized Trade\Cambodia_Malaysia Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Malaysia Sugarcane   [Key\Optimized Trade\Cambodia_Malaysia Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Myanmar Biodiesel   [Key\Optimized Trade\Cambodia_Myanmar Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Myanmar Cassava   [Key\Optimized Trade\Cambodia_Myanmar Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Myanmar Coconut Oil   [Key\Optimized Trade\Cambodia_Myanmar Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Myanmar Corn   [Key\Optimized Trade\Cambodia_Myanmar Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Myanmar Ethanol   [Key\Optimized Trade\Cambodia_Myanmar Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Myanmar Molasses   [Key\Optimized Trade\Cambodia_Myanmar Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Myanmar Palm Oil   [Key\Optimized Trade\Cambodia_Myanmar Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Myanmar Palm Oil Mill Effluent   [Key\Optimized Trade\Cambodia_Myanmar Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Myanmar Sugarcane   [Key\Optimized Trade\Cambodia_Myanmar Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Philippines Biodiesel   [Key\Optimized Trade\Cambodia_Philippines Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Philippines Cassava   [Key\Optimized Trade\Cambodia_Philippines Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Philippines Coconut Oil   [Key\Optimized Trade\Cambodia_Philippines Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Philippines Corn   [Key\Optimized Trade\Cambodia_Philippines Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Philippines Ethanol   [Key\Optimized Trade\Cambodia_Philippines Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Philippines Molasses   [Key\Optimized Trade\Cambodia_Philippines Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Philippines Palm Oil   [Key\Optimized Trade\Cambodia_Philippines Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Philippines Palm Oil Mill Effluent   [Key\Optimized Trade\Cambodia_Philippines Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Philippines Sugarcane   [Key\Optimized Trade\Cambodia_Philippines Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Singapore Biodiesel   [Key\Optimized Trade\Cambodia_Singapore Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Singapore Cassava   [Key\Optimized Trade\Cambodia_Singapore Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Singapore Coconut Oil   [Key\Optimized Trade\Cambodia_Singapore Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Singapore Corn   [Key\Optimized Trade\Cambodia_Singapore Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Singapore Ethanol   [Key\Optimized Trade\Cambodia_Singapore Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Singapore Molasses   [Key\Optimized Trade\Cambodia_Singapore Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Singapore Palm Oil   [Key\Optimized Trade\Cambodia_Singapore Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Singapore Palm Oil Mill Effluent   [Key\Optimized Trade\Cambodia_Singapore Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Singapore Sugarcane   [Key\Optimized Trade\Cambodia_Singapore Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Thailand Biodiesel   [Key\Optimized Trade\Cambodia_Thailand Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Thailand Cassava   [Key\Optimized Trade\Cambodia_Thailand Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Thailand Coconut Oil   [Key\Optimized Trade\Cambodia_Thailand Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Thailand Corn   [Key\Optimized Trade\Cambodia_Thailand Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Thailand Ethanol   [Key\Optimized Trade\Cambodia_Thailand Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Thailand Molasses   [Key\Optimized Trade\Cambodia_Thailand Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Thailand Palm Oil   [Key\Optimized Trade\Cambodia_Thailand Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Thailand Palm Oil Mill Effluent   [Key\Optimized Trade\Cambodia_Thailand Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Thailand Sugarcane   [Key\Optimized Trade\Cambodia_Thailand Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Timor Leste Biodiesel   [Key\Optimized Trade\Cambodia_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Timor Leste Cassava   [Key\Optimized Trade\Cambodia_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Timor Leste Coconut Oil   [Key\Optimized Trade\Cambodia_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Timor Leste Corn   [Key\Optimized Trade\Cambodia_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Timor Leste Ethanol   [Key\Optimized Trade\Cambodia_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Timor Leste Molasses   [Key\Optimized Trade\Cambodia_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Timor Leste Palm Oil   [Key\Optimized Trade\Cambodia_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Cambodia_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Timor Leste Sugarcane   [Key\Optimized Trade\Cambodia_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Vietnam Biodiesel   [Key\Optimized Trade\Cambodia_Vietnam Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Vietnam Cassava   [Key\Optimized Trade\Cambodia_Vietnam Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Vietnam Coconut Oil   [Key\Optimized Trade\Cambodia_Vietnam Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Vietnam Corn   [Key\Optimized Trade\Cambodia_Vietnam Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Vietnam Ethanol   [Key\Optimized Trade\Cambodia_Vietnam Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Vietnam Molasses   [Key\Optimized Trade\Cambodia_Vietnam Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Vietnam Palm Oil   [Key\Optimized Trade\Cambodia_Vietnam Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Vietnam Palm Oil Mill Effluent   [Key\Optimized Trade\Cambodia_Vietnam Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Cambodia_Vietnam Sugarcane   [Key\Optimized Trade\Cambodia_Vietnam Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Laos Biodiesel   [Key\Optimized Trade\Indonesia_Laos Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Laos Cassava   [Key\Optimized Trade\Indonesia_Laos Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Laos Coconut Oil   [Key\Optimized Trade\Indonesia_Laos Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Laos Corn   [Key\Optimized Trade\Indonesia_Laos Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Laos Ethanol   [Key\Optimized Trade\Indonesia_Laos Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Laos Molasses   [Key\Optimized Trade\Indonesia_Laos Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Laos Palm Oil   [Key\Optimized Trade\Indonesia_Laos Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Laos Palm Oil Mill Effluent   [Key\Optimized Trade\Indonesia_Laos Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Laos Sugarcane   [Key\Optimized Trade\Indonesia_Laos Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Malaysia Biodiesel   [Key\Optimized Trade\Indonesia_Malaysia Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Malaysia Cassava   [Key\Optimized Trade\Indonesia_Malaysia Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Malaysia Coconut Oil   [Key\Optimized Trade\Indonesia_Malaysia Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Malaysia Corn   [Key\Optimized Trade\Indonesia_Malaysia Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Malaysia Ethanol   [Key\Optimized Trade\Indonesia_Malaysia Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Malaysia Molasses   [Key\Optimized Trade\Indonesia_Malaysia Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Malaysia Palm Oil   [Key\Optimized Trade\Indonesia_Malaysia Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Malaysia Palm Oil Mill Effluent   [Key\Optimized Trade\Indonesia_Malaysia Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Malaysia Sugarcane   [Key\Optimized Trade\Indonesia_Malaysia Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Myanmar Biodiesel   [Key\Optimized Trade\Indonesia_Myanmar Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Myanmar Cassava   [Key\Optimized Trade\Indonesia_Myanmar Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Myanmar Coconut Oil   [Key\Optimized Trade\Indonesia_Myanmar Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Myanmar Corn   [Key\Optimized Trade\Indonesia_Myanmar Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Myanmar Ethanol   [Key\Optimized Trade\Indonesia_Myanmar Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Myanmar Molasses   [Key\Optimized Trade\Indonesia_Myanmar Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Myanmar Palm Oil   [Key\Optimized Trade\Indonesia_Myanmar Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Myanmar Palm Oil Mill Effluent   [Key\Optimized Trade\Indonesia_Myanmar Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Myanmar Sugarcane   [Key\Optimized Trade\Indonesia_Myanmar Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Philippines Biodiesel   [Key\Optimized Trade\Indonesia_Philippines Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Philippines Cassava   [Key\Optimized Trade\Indonesia_Philippines Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Philippines Coconut Oil   [Key\Optimized Trade\Indonesia_Philippines Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Philippines Corn   [Key\Optimized Trade\Indonesia_Philippines Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Philippines Ethanol   [Key\Optimized Trade\Indonesia_Philippines Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Philippines Molasses   [Key\Optimized Trade\Indonesia_Philippines Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Philippines Palm Oil   [Key\Optimized Trade\Indonesia_Philippines Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Philippines Palm Oil Mill Effluent   [Key\Optimized Trade\Indonesia_Philippines Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Philippines Sugarcane   [Key\Optimized Trade\Indonesia_Philippines Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Singapore Biodiesel   [Key\Optimized Trade\Indonesia_Singapore Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Singapore Cassava   [Key\Optimized Trade\Indonesia_Singapore Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Singapore Coconut Oil   [Key\Optimized Trade\Indonesia_Singapore Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Singapore Corn   [Key\Optimized Trade\Indonesia_Singapore Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Singapore Ethanol   [Key\Optimized Trade\Indonesia_Singapore Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Singapore Molasses   [Key\Optimized Trade\Indonesia_Singapore Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Singapore Palm Oil   [Key\Optimized Trade\Indonesia_Singapore Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Singapore Palm Oil Mill Effluent   [Key\Optimized Trade\Indonesia_Singapore Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Singapore Sugarcane   [Key\Optimized Trade\Indonesia_Singapore Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Thailand Biodiesel   [Key\Optimized Trade\Indonesia_Thailand Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Thailand Cassava   [Key\Optimized Trade\Indonesia_Thailand Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Thailand Coconut Oil   [Key\Optimized Trade\Indonesia_Thailand Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Thailand Corn   [Key\Optimized Trade\Indonesia_Thailand Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Thailand Ethanol   [Key\Optimized Trade\Indonesia_Thailand Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Thailand Molasses   [Key\Optimized Trade\Indonesia_Thailand Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Thailand Palm Oil   [Key\Optimized Trade\Indonesia_Thailand Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Thailand Palm Oil Mill Effluent   [Key\Optimized Trade\Indonesia_Thailand Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Thailand Sugarcane   [Key\Optimized Trade\Indonesia_Thailand Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Timor Leste Biodiesel   [Key\Optimized Trade\Indonesia_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Timor Leste Cassava   [Key\Optimized Trade\Indonesia_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Timor Leste Coconut Oil   [Key\Optimized Trade\Indonesia_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Timor Leste Corn   [Key\Optimized Trade\Indonesia_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Timor Leste Ethanol   [Key\Optimized Trade\Indonesia_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Timor Leste Molasses   [Key\Optimized Trade\Indonesia_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Timor Leste Palm Oil   [Key\Optimized Trade\Indonesia_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Indonesia_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Timor Leste Sugarcane   [Key\Optimized Trade\Indonesia_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Vietnam Biodiesel   [Key\Optimized Trade\Indonesia_Vietnam Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Vietnam Cassava   [Key\Optimized Trade\Indonesia_Vietnam Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Vietnam Coconut Oil   [Key\Optimized Trade\Indonesia_Vietnam Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Vietnam Corn   [Key\Optimized Trade\Indonesia_Vietnam Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Vietnam Ethanol   [Key\Optimized Trade\Indonesia_Vietnam Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Vietnam Molasses   [Key\Optimized Trade\Indonesia_Vietnam Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Vietnam Palm Oil   [Key\Optimized Trade\Indonesia_Vietnam Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Vietnam Palm Oil Mill Effluent   [Key\Optimized Trade\Indonesia_Vietnam Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Indonesia_Vietnam Sugarcane   [Key\Optimized Trade\Indonesia_Vietnam Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Malaysia Biodiesel   [Key\Optimized Trade\Laos_Malaysia Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Malaysia Cassava   [Key\Optimized Trade\Laos_Malaysia Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Malaysia Coconut Oil   [Key\Optimized Trade\Laos_Malaysia Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Malaysia Corn   [Key\Optimized Trade\Laos_Malaysia Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Malaysia Ethanol   [Key\Optimized Trade\Laos_Malaysia Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Malaysia Molasses   [Key\Optimized Trade\Laos_Malaysia Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Malaysia Palm Oil   [Key\Optimized Trade\Laos_Malaysia Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Malaysia Palm Oil Mill Effluent   [Key\Optimized Trade\Laos_Malaysia Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Malaysia Sugarcane   [Key\Optimized Trade\Laos_Malaysia Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Myanmar Biodiesel   [Key\Optimized Trade\Laos_Myanmar Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Myanmar Cassava   [Key\Optimized Trade\Laos_Myanmar Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Myanmar Coconut Oil   [Key\Optimized Trade\Laos_Myanmar Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Myanmar Corn   [Key\Optimized Trade\Laos_Myanmar Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Myanmar Ethanol   [Key\Optimized Trade\Laos_Myanmar Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Myanmar Molasses   [Key\Optimized Trade\Laos_Myanmar Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Myanmar Palm Oil   [Key\Optimized Trade\Laos_Myanmar Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Myanmar Palm Oil Mill Effluent   [Key\Optimized Trade\Laos_Myanmar Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Myanmar Sugarcane   [Key\Optimized Trade\Laos_Myanmar Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Philippines Biodiesel   [Key\Optimized Trade\Laos_Philippines Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Philippines Cassava   [Key\Optimized Trade\Laos_Philippines Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Philippines Coconut Oil   [Key\Optimized Trade\Laos_Philippines Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Philippines Corn   [Key\Optimized Trade\Laos_Philippines Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Philippines Ethanol   [Key\Optimized Trade\Laos_Philippines Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Philippines Molasses   [Key\Optimized Trade\Laos_Philippines Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Philippines Palm Oil   [Key\Optimized Trade\Laos_Philippines Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Philippines Palm Oil Mill Effluent   [Key\Optimized Trade\Laos_Philippines Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Philippines Sugarcane   [Key\Optimized Trade\Laos_Philippines Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Singapore Biodiesel   [Key\Optimized Trade\Laos_Singapore Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Singapore Cassava   [Key\Optimized Trade\Laos_Singapore Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Singapore Coconut Oil   [Key\Optimized Trade\Laos_Singapore Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Singapore Corn   [Key\Optimized Trade\Laos_Singapore Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Singapore Ethanol   [Key\Optimized Trade\Laos_Singapore Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Singapore Molasses   [Key\Optimized Trade\Laos_Singapore Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Singapore Palm Oil   [Key\Optimized Trade\Laos_Singapore Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Singapore Palm Oil Mill Effluent   [Key\Optimized Trade\Laos_Singapore Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Singapore Sugarcane   [Key\Optimized Trade\Laos_Singapore Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Thailand Biodiesel   [Key\Optimized Trade\Laos_Thailand Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Thailand Cassava   [Key\Optimized Trade\Laos_Thailand Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Thailand Coconut Oil   [Key\Optimized Trade\Laos_Thailand Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Thailand Corn   [Key\Optimized Trade\Laos_Thailand Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Thailand Ethanol   [Key\Optimized Trade\Laos_Thailand Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Thailand Molasses   [Key\Optimized Trade\Laos_Thailand Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Thailand Palm Oil   [Key\Optimized Trade\Laos_Thailand Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Thailand Palm Oil Mill Effluent   [Key\Optimized Trade\Laos_Thailand Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Thailand Sugarcane   [Key\Optimized Trade\Laos_Thailand Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Timor Leste Biodiesel   [Key\Optimized Trade\Laos_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Timor Leste Cassava   [Key\Optimized Trade\Laos_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Timor Leste Coconut Oil   [Key\Optimized Trade\Laos_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Timor Leste Corn   [Key\Optimized Trade\Laos_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Timor Leste Ethanol   [Key\Optimized Trade\Laos_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Timor Leste Molasses   [Key\Optimized Trade\Laos_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Timor Leste Palm Oil   [Key\Optimized Trade\Laos_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Laos_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Timor Leste Sugarcane   [Key\Optimized Trade\Laos_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Vietnam Biodiesel   [Key\Optimized Trade\Laos_Vietnam Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Vietnam Cassava   [Key\Optimized Trade\Laos_Vietnam Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Vietnam Coconut Oil   [Key\Optimized Trade\Laos_Vietnam Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Vietnam Corn   [Key\Optimized Trade\Laos_Vietnam Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Vietnam Ethanol   [Key\Optimized Trade\Laos_Vietnam Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Vietnam Molasses   [Key\Optimized Trade\Laos_Vietnam Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Vietnam Palm Oil   [Key\Optimized Trade\Laos_Vietnam Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Vietnam Palm Oil Mill Effluent   [Key\Optimized Trade\Laos_Vietnam Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Laos_Vietnam Sugarcane   [Key\Optimized Trade\Laos_Vietnam Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Myanmar Biodiesel   [Key\Optimized Trade\Malaysia_Myanmar Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Myanmar Cassava   [Key\Optimized Trade\Malaysia_Myanmar Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Myanmar Coconut Oil   [Key\Optimized Trade\Malaysia_Myanmar Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Myanmar Corn   [Key\Optimized Trade\Malaysia_Myanmar Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Myanmar Ethanol   [Key\Optimized Trade\Malaysia_Myanmar Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Myanmar Molasses   [Key\Optimized Trade\Malaysia_Myanmar Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Myanmar Palm Oil   [Key\Optimized Trade\Malaysia_Myanmar Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Myanmar Palm Oil Mill Effluent   [Key\Optimized Trade\Malaysia_Myanmar Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Myanmar Sugarcane   [Key\Optimized Trade\Malaysia_Myanmar Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Philippines Biodiesel   [Key\Optimized Trade\Malaysia_Philippines Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Philippines Cassava   [Key\Optimized Trade\Malaysia_Philippines Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Philippines Coconut Oil   [Key\Optimized Trade\Malaysia_Philippines Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Philippines Corn   [Key\Optimized Trade\Malaysia_Philippines Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Philippines Ethanol   [Key\Optimized Trade\Malaysia_Philippines Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Philippines Molasses   [Key\Optimized Trade\Malaysia_Philippines Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Philippines Palm Oil   [Key\Optimized Trade\Malaysia_Philippines Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Philippines Palm Oil Mill Effluent   [Key\Optimized Trade\Malaysia_Philippines Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Philippines Sugarcane   [Key\Optimized Trade\Malaysia_Philippines Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Singapore Biodiesel   [Key\Optimized Trade\Malaysia_Singapore Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Singapore Cassava   [Key\Optimized Trade\Malaysia_Singapore Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Singapore Coconut Oil   [Key\Optimized Trade\Malaysia_Singapore Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Singapore Corn   [Key\Optimized Trade\Malaysia_Singapore Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Singapore Ethanol   [Key\Optimized Trade\Malaysia_Singapore Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Singapore Molasses   [Key\Optimized Trade\Malaysia_Singapore Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Singapore Palm Oil   [Key\Optimized Trade\Malaysia_Singapore Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Singapore Palm Oil Mill Effluent   [Key\Optimized Trade\Malaysia_Singapore Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Singapore Sugarcane   [Key\Optimized Trade\Malaysia_Singapore Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Thailand Biodiesel   [Key\Optimized Trade\Malaysia_Thailand Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Thailand Cassava   [Key\Optimized Trade\Malaysia_Thailand Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Thailand Coconut Oil   [Key\Optimized Trade\Malaysia_Thailand Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Thailand Corn   [Key\Optimized Trade\Malaysia_Thailand Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Thailand Ethanol   [Key\Optimized Trade\Malaysia_Thailand Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Thailand Molasses   [Key\Optimized Trade\Malaysia_Thailand Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Thailand Palm Oil   [Key\Optimized Trade\Malaysia_Thailand Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Thailand Palm Oil Mill Effluent   [Key\Optimized Trade\Malaysia_Thailand Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Thailand Sugarcane   [Key\Optimized Trade\Malaysia_Thailand Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Timor Leste Biodiesel   [Key\Optimized Trade\Malaysia_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Timor Leste Cassava   [Key\Optimized Trade\Malaysia_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Timor Leste Coconut Oil   [Key\Optimized Trade\Malaysia_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Timor Leste Corn   [Key\Optimized Trade\Malaysia_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Timor Leste Ethanol   [Key\Optimized Trade\Malaysia_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Timor Leste Molasses   [Key\Optimized Trade\Malaysia_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Timor Leste Palm Oil   [Key\Optimized Trade\Malaysia_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Malaysia_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Timor Leste Sugarcane   [Key\Optimized Trade\Malaysia_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Vietnam Biodiesel   [Key\Optimized Trade\Malaysia_Vietnam Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Vietnam Cassava   [Key\Optimized Trade\Malaysia_Vietnam Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Vietnam Coconut Oil   [Key\Optimized Trade\Malaysia_Vietnam Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Vietnam Corn   [Key\Optimized Trade\Malaysia_Vietnam Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Vietnam Ethanol   [Key\Optimized Trade\Malaysia_Vietnam Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Vietnam Molasses   [Key\Optimized Trade\Malaysia_Vietnam Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Vietnam Palm Oil   [Key\Optimized Trade\Malaysia_Vietnam Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Vietnam Palm Oil Mill Effluent   [Key\Optimized Trade\Malaysia_Vietnam Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Malaysia_Vietnam Sugarcane   [Key\Optimized Trade\Malaysia_Vietnam Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Philippines Biodiesel   [Key\Optimized Trade\Myanmar_Philippines Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Philippines Cassava   [Key\Optimized Trade\Myanmar_Philippines Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Philippines Coconut Oil   [Key\Optimized Trade\Myanmar_Philippines Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Philippines Corn   [Key\Optimized Trade\Myanmar_Philippines Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Philippines Ethanol   [Key\Optimized Trade\Myanmar_Philippines Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Philippines Molasses   [Key\Optimized Trade\Myanmar_Philippines Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Philippines Palm Oil   [Key\Optimized Trade\Myanmar_Philippines Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Philippines Palm Oil Mill Effluent   [Key\Optimized Trade\Myanmar_Philippines Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Philippines Sugarcane   [Key\Optimized Trade\Myanmar_Philippines Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Singapore Biodiesel   [Key\Optimized Trade\Myanmar_Singapore Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Singapore Cassava   [Key\Optimized Trade\Myanmar_Singapore Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Singapore Coconut Oil   [Key\Optimized Trade\Myanmar_Singapore Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Singapore Corn   [Key\Optimized Trade\Myanmar_Singapore Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Singapore Ethanol   [Key\Optimized Trade\Myanmar_Singapore Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Singapore Molasses   [Key\Optimized Trade\Myanmar_Singapore Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Singapore Palm Oil   [Key\Optimized Trade\Myanmar_Singapore Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Singapore Palm Oil Mill Effluent   [Key\Optimized Trade\Myanmar_Singapore Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Singapore Sugarcane   [Key\Optimized Trade\Myanmar_Singapore Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Thailand Biodiesel   [Key\Optimized Trade\Myanmar_Thailand Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Thailand Cassava   [Key\Optimized Trade\Myanmar_Thailand Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Thailand Coconut Oil   [Key\Optimized Trade\Myanmar_Thailand Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Thailand Corn   [Key\Optimized Trade\Myanmar_Thailand Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Thailand Ethanol   [Key\Optimized Trade\Myanmar_Thailand Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Thailand Molasses   [Key\Optimized Trade\Myanmar_Thailand Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Thailand Palm Oil   [Key\Optimized Trade\Myanmar_Thailand Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Thailand Palm Oil Mill Effluent   [Key\Optimized Trade\Myanmar_Thailand Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Thailand Sugarcane   [Key\Optimized Trade\Myanmar_Thailand Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Timor Leste Biodiesel   [Key\Optimized Trade\Myanmar_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Timor Leste Cassava   [Key\Optimized Trade\Myanmar_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Timor Leste Coconut Oil   [Key\Optimized Trade\Myanmar_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Timor Leste Corn   [Key\Optimized Trade\Myanmar_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Timor Leste Ethanol   [Key\Optimized Trade\Myanmar_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Timor Leste Molasses   [Key\Optimized Trade\Myanmar_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Timor Leste Palm Oil   [Key\Optimized Trade\Myanmar_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Myanmar_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Timor Leste Sugarcane   [Key\Optimized Trade\Myanmar_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Vietnam Biodiesel   [Key\Optimized Trade\Myanmar_Vietnam Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Vietnam Cassava   [Key\Optimized Trade\Myanmar_Vietnam Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Vietnam Coconut Oil   [Key\Optimized Trade\Myanmar_Vietnam Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Vietnam Corn   [Key\Optimized Trade\Myanmar_Vietnam Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Vietnam Ethanol   [Key\Optimized Trade\Myanmar_Vietnam Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Vietnam Molasses   [Key\Optimized Trade\Myanmar_Vietnam Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Vietnam Palm Oil   [Key\Optimized Trade\Myanmar_Vietnam Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Vietnam Palm Oil Mill Effluent   [Key\Optimized Trade\Myanmar_Vietnam Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Myanmar_Vietnam Sugarcane   [Key\Optimized Trade\Myanmar_Vietnam Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Singapore Biodiesel   [Key\Optimized Trade\Philippines_Singapore Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Singapore Cassava   [Key\Optimized Trade\Philippines_Singapore Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Singapore Coconut Oil   [Key\Optimized Trade\Philippines_Singapore Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Singapore Corn   [Key\Optimized Trade\Philippines_Singapore Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Singapore Ethanol   [Key\Optimized Trade\Philippines_Singapore Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Singapore Molasses   [Key\Optimized Trade\Philippines_Singapore Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Singapore Palm Oil   [Key\Optimized Trade\Philippines_Singapore Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Singapore Palm Oil Mill Effluent   [Key\Optimized Trade\Philippines_Singapore Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Singapore Sugarcane   [Key\Optimized Trade\Philippines_Singapore Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Thailand Biodiesel   [Key\Optimized Trade\Philippines_Thailand Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Thailand Cassava   [Key\Optimized Trade\Philippines_Thailand Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Thailand Coconut Oil   [Key\Optimized Trade\Philippines_Thailand Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Thailand Corn   [Key\Optimized Trade\Philippines_Thailand Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Thailand Ethanol   [Key\Optimized Trade\Philippines_Thailand Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Thailand Molasses   [Key\Optimized Trade\Philippines_Thailand Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Thailand Palm Oil   [Key\Optimized Trade\Philippines_Thailand Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Thailand Palm Oil Mill Effluent   [Key\Optimized Trade\Philippines_Thailand Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Thailand Sugarcane   [Key\Optimized Trade\Philippines_Thailand Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Timor Leste Biodiesel   [Key\Optimized Trade\Philippines_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Timor Leste Cassava   [Key\Optimized Trade\Philippines_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Timor Leste Coconut Oil   [Key\Optimized Trade\Philippines_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Timor Leste Corn   [Key\Optimized Trade\Philippines_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Timor Leste Ethanol   [Key\Optimized Trade\Philippines_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Timor Leste Molasses   [Key\Optimized Trade\Philippines_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Timor Leste Palm Oil   [Key\Optimized Trade\Philippines_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Philippines_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Timor Leste Sugarcane   [Key\Optimized Trade\Philippines_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Vietnam Biodiesel   [Key\Optimized Trade\Philippines_Vietnam Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Vietnam Cassava   [Key\Optimized Trade\Philippines_Vietnam Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Vietnam Coconut Oil   [Key\Optimized Trade\Philippines_Vietnam Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Vietnam Corn   [Key\Optimized Trade\Philippines_Vietnam Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Vietnam Ethanol   [Key\Optimized Trade\Philippines_Vietnam Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Vietnam Molasses   [Key\Optimized Trade\Philippines_Vietnam Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Vietnam Palm Oil   [Key\Optimized Trade\Philippines_Vietnam Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Vietnam Palm Oil Mill Effluent   [Key\Optimized Trade\Philippines_Vietnam Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Philippines_Vietnam Sugarcane   [Key\Optimized Trade\Philippines_Vietnam Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Thailand Biodiesel   [Key\Optimized Trade\Singapore_Thailand Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Thailand Cassava   [Key\Optimized Trade\Singapore_Thailand Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Thailand Coconut Oil   [Key\Optimized Trade\Singapore_Thailand Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Thailand Corn   [Key\Optimized Trade\Singapore_Thailand Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Thailand Ethanol   [Key\Optimized Trade\Singapore_Thailand Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Thailand Molasses   [Key\Optimized Trade\Singapore_Thailand Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Thailand Palm Oil   [Key\Optimized Trade\Singapore_Thailand Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Thailand Palm Oil Mill Effluent   [Key\Optimized Trade\Singapore_Thailand Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Thailand Sugarcane   [Key\Optimized Trade\Singapore_Thailand Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Timor Leste Biodiesel   [Key\Optimized Trade\Singapore_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Timor Leste Cassava   [Key\Optimized Trade\Singapore_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Timor Leste Coconut Oil   [Key\Optimized Trade\Singapore_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Timor Leste Corn   [Key\Optimized Trade\Singapore_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Timor Leste Ethanol   [Key\Optimized Trade\Singapore_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Timor Leste Molasses   [Key\Optimized Trade\Singapore_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Timor Leste Palm Oil   [Key\Optimized Trade\Singapore_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Singapore_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Timor Leste Sugarcane   [Key\Optimized Trade\Singapore_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Vietnam Biodiesel   [Key\Optimized Trade\Singapore_Vietnam Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Vietnam Cassava   [Key\Optimized Trade\Singapore_Vietnam Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Vietnam Coconut Oil   [Key\Optimized Trade\Singapore_Vietnam Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Vietnam Corn   [Key\Optimized Trade\Singapore_Vietnam Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Vietnam Ethanol   [Key\Optimized Trade\Singapore_Vietnam Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Vietnam Molasses   [Key\Optimized Trade\Singapore_Vietnam Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Vietnam Palm Oil   [Key\Optimized Trade\Singapore_Vietnam Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Vietnam Palm Oil Mill Effluent   [Key\Optimized Trade\Singapore_Vietnam Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Singapore_Vietnam Sugarcane   [Key\Optimized Trade\Singapore_Vietnam Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Timor Leste Biodiesel   [Key\Optimized Trade\Thailand_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Timor Leste Cassava   [Key\Optimized Trade\Thailand_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Timor Leste Coconut Oil   [Key\Optimized Trade\Thailand_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Timor Leste Corn   [Key\Optimized Trade\Thailand_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Timor Leste Ethanol   [Key\Optimized Trade\Thailand_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Timor Leste Molasses   [Key\Optimized Trade\Thailand_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Timor Leste Palm Oil   [Key\Optimized Trade\Thailand_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Thailand_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Timor Leste Sugarcane   [Key\Optimized Trade\Thailand_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Vietnam Biodiesel   [Key\Optimized Trade\Thailand_Vietnam Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Vietnam Cassava   [Key\Optimized Trade\Thailand_Vietnam Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Vietnam Coconut Oil   [Key\Optimized Trade\Thailand_Vietnam Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Vietnam Corn   [Key\Optimized Trade\Thailand_Vietnam Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Vietnam Ethanol   [Key\Optimized Trade\Thailand_Vietnam Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Vietnam Molasses   [Key\Optimized Trade\Thailand_Vietnam Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Vietnam Palm Oil   [Key\Optimized Trade\Thailand_Vietnam Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Vietnam Palm Oil Mill Effluent   [Key\Optimized Trade\Thailand_Vietnam Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Thailand_Vietnam Sugarcane   [Key\Optimized Trade\Thailand_Vietnam Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Vietnam_Timor Leste Biodiesel   [Key\Optimized Trade\Vietnam_Timor Leste Biodiesel]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Vietnam_Timor Leste Cassava   [Key\Optimized Trade\Vietnam_Timor Leste Cassava]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Vietnam_Timor Leste Coconut Oil   [Key\Optimized Trade\Vietnam_Timor Leste Coconut Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Vietnam_Timor Leste Corn   [Key\Optimized Trade\Vietnam_Timor Leste Corn]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Vietnam_Timor Leste Ethanol   [Key\Optimized Trade\Vietnam_Timor Leste Ethanol]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Vietnam_Timor Leste Molasses   [Key\Optimized Trade\Vietnam_Timor Leste Molasses]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Vietnam_Timor Leste Palm Oil   [Key\Optimized Trade\Vietnam_Timor Leste Palm Oil]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Vietnam_Timor Leste Palm Oil Mill Effluent   [Key\Optimized Trade\Vietnam_Timor Leste Palm Oil Mill Effluent]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel
+    Vietnam_Timor Leste Sugarcane   [Key\Optimized Trade\Vietnam_Timor Leste Sugarcane]  vars: Activity Level;Trade LEAP Fuel;Trade Region 1;Trade Region 2;Trade_NEMO Fuel

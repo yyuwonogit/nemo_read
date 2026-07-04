@@ -48,6 +48,9 @@ should produce.
 > palm and ~9× too small for sugarcane — which mechanically made
 > Indonesia/Malaysia/Thailand palm and Philippines/Thailand sugarcane
 > infeasible at B40-style demand. See §12.5.
+> (Canon-confirmed 2026-07-03: anatomy §13.6 — all 5 crops + Molasses +
+> POME cap in `Metric Tonne`; no fuel has mixed `Maximum Production`
+> units across regions.)
 
 **Out of scope (not authored, not injected):**
 - `Resources\Primary\Arable` and `Resources\Primary\Perennial` (land caps)
@@ -85,12 +88,126 @@ authoring spec.
 > **LEAP-side gap (build-time filter, dated 2026-04-29; re-verified
 > 2026-05-05 against the current inject target `aeo9_v0.36`):**
 > `Resources\Primary\Rice Straw` and `Resources\Primary\Used Cooking Oil`
-> branches still do not exist in LEAP. Until they're added (per §11.B.4
-> / §11.B.5), `build_canonical.py` filters their rows out of
+> branches still do not exist in LEAP — still absent in the canon
+> `aeo9_v0.67` Resources export (canon-confirmed 2026-07-03: neither is
+> among the 29 Primary fuels, anatomy §13.1). Until they're added (per
+> §11.B.4 / §11.B.5), `build_canonical.py` filters their rows out of
 > `canonical_leap_inputs.csv` and reports the skip count. The source
 > `bioenergy_leap_input.csv` keeps these rows as-is — once the LEAP
 > branches exist, drop the `LEAP_MISSING_BRANCHES` constant in the
 > adapter and re-run.
+
+---
+
+## Canon LEAP structure (aeo9_v0.67 exports, 2026-07-02)
+
+The user-declared **canon** for LEAP structure is
+[LEAP structure/LEAP_STRUCTURE_ANATOMY.md](../../LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md)
+plus the full branch trees under `LEAP structure/trees/` (this domain:
+`resources_tree.txt` + `keys_tree.txt`), digested from the six "Export
+Expressions" workbooks of the operating area `aeo9_v0.67_w_results`.
+**Branch paths, variable names, units, and scenario/region rosters for
+this domain come from canon — do not re-derive them by probing or by
+convention.** Expression *values* are not canon; author those per this
+guide. Where an older section of this guide contradicts canon structure,
+the canon-corrected wording (marked in place) wins.
+
+### Tree shape (anatomy §13.1)
+
+All 62 `Resources\` branches are flat depth-3 leaves
+(`Resources\Primary\<Fuel>` ×29, `Resources\Secondary\<Fuel>` ×33) —
+**no branch has children**. Every fuel carries a base 15-variable panel
+for all 12 regions; the 5 crops (Cassava, Coconut Oil, Corn, Palm Oil,
+Sugarcane) add `Area Harvested` + `Crop Yield` (17 vars). Molasses and
+Palm Oil Mill Effluent carry the base panel only. `Rice Straw` and
+`Used Cooking Oil` remain absent (see §0 gap note). Spelling trap for
+exact-match lookups: the Secondary fuel `Metalurgical Coke` is authored
+with a single "l" (branch name verbatim).
+
+### Units and derivation idioms on this domain's branches (anatomy §13.2)
+
+| Branch / variable | Canon fact |
+|---|---|
+| `Maximum Production` on the 5 crops + Molasses + POME | `Metric Tonne` — the raw-crop-tonnes convention (§0) is confirmed; no fuel has mixed MaxProd units across regions |
+| `Maximum Production` derivation on the 4 CSV-authored crops | `Area Harvested[Thousand ha] * 1000 * Crop Yield[t/ha]` (448 rows across regions) |
+| `Area Harvested` / `Crop Yield` | `Thousand ha` / `t/ha`, exist **only** on the 5 crop branches |
+| POME `Production Cost` | `2020 USD` per `Tonnes of Oil Equivalent` (confirms §12.1 row 7) |
+| POME `Import Cost` | `2020 USD` per `Kilogramme`, Interp trajectories in RAS |
+| Secondary `Import Cost` (Ethanol, Biodiesel) | `2020 USD/Liter` (settles §11.3) |
+| Secondary `Import Cost` (Methanol) | `2020 USD/Metric Tonne` (settles §11.3) |
+| Arable / Perennial `Maximum Production` | Arable `Thousand GJ`; Perennial unit-tagged `Cubic Meter` — unit drift on the same §2.4 1 GJ/ha anchor (out of authoring scope per §0, but see watch-item below) |
+
+### Scenario split (anatomy §13.5)
+
+The Resources variable set **splits by scenario bloc** — unique among
+the six exports: `Minimum Imports` + `Maximum Imports` exist only in
+the 7 optimization scenarios (Set up, Carbon Neutrality_ Net Zero
+Scenario, LCO backup, Regional Aspiration Scenario, RE LTRM ×3);
+`Imports` + `Cost of Unmet Requirements` exist only in the 4 accounting
+scenarios (Current Accounts, Baseline Simulation, AMS Target Scenario,
+Regional Aspiration Scenario test). Don't author an import-cap row into
+an accounting scenario or vice versa.
+
+### §A.11 Unlimited audit (anatomy §13.3)
+
+9,199 rows evaluate to literal `Unlimited` — **all upper-bound**
+(5,671 `Maximum Production` + 3,528 `Maximum Imports`), zero on any
+lower-bound variable (`Minimum Production` is literal `0` everywhere).
+In RAS, **505 Unlimited `Maximum Production` rows remain**, including
+`Natural Gas` and all five coals 12/12 regions (the fossil canonical
+authors costs but no caps). Fuels with zero Unlimited in RAS (9): the 4
+crops this domain caps (Cassava, Coconut Oil, Palm Oil, Sugarcane) plus
+Secondary Diesel/Gasoline/Kerosene/LPG/Residual Fuel Oil. Corn,
+Molasses, POME and Crude Oil each retain **2** Unlimited RAS rows —
+`Base Template` + `Timor Leste` (a live §A.18 item if TL is re-enabled).
+
+### Companion-cost audit — the POME lesson, quantified (anatomy §13.4)
+
+In RAS, **191 of 744 (fuel, region) pairs have an open production route
+(`Maximum Production ≠ 0`) with `Production Cost = 0`**, and **95 pairs
+have an open import route with `Import Cost = 0`**; a further **312
+`Import Cost = 0.001`** placeholder rows (counted across all 11
+scenarios; 27 of them in RAS) sit on Cassava, Ammonia, Blast
+Furnace Gas, Coke Oven Gas and Methanol. Cassava's `0.001` rows are in
+this domain's remit — replace with a real trajectory when authoring the
+next cycle. Every supply cap you author needs its companion cost row in
+the same canonical (see the 2026-05-19 POME burn record).
+
+**POME Import Cost drift (authoring item for the next cycle):** the
+2026-05-19 "final unlock" `Import Cost` on
+`Resources\Primary\Palm Oil Mill Effluent` exists in the area (RAS,
+Interp in 2020 USD/kg) but is **not** in
+[canonical_leap_inputs.csv](canonical_leap_inputs.csv) — the canonical
+carries only `Maximum Production` + `Production Cost` for POME
+(20 rows). Bring the POME `Import Cost` row into the canonical next
+cycle so the repo stops drifting from the area.
+
+**Arable/Perennial watch-item:** both land pseudo-fuels carry
+`Maximum Imports = Unlimited` at `Import Cost = 0` in the optimization
+scenarios — unlimited free "land imports" if trade routes ever cover
+them (§A.12 watch; they stay out of authoring scope per §0).
+
+### Key\ connections (anatomy §12.1, §12.4)
+
+- **`Key\Optimized Trade`** — 495 branches = 55 region-pairs (C(11,2)
+  over 10 AMS + Timor Leste) × **9 feedstock fuels: Ethanol, Biodiesel,
+  Coconut Oil, Palm Oil, Palm Oil Mill Effluent, Cassava, Molasses,
+  Sugarcane, Corn** — exactly this domain's §A.12 trade-route fuel
+  list. Leaf form: `Key\Optimized Trade\<RegionA>_<RegionB> <Fuel>`.
+  The `Activity Level` is a per-scenario **master switch: `1` in RAS
+  and CNZ only, `0` in the other nine scenarios** (all 495 routes flip
+  as one block).
+- **`Key\Biofuel Blending Targets\{Biodiesel, Bioethanol}`** — the
+  blend-mandate drivers. This is where the RE LTRM triplet diverges:
+  RE Coupling / Shared Energy Resources insert a 2030 intermediate
+  blend point absent from Policy Aligned (e.g. Indonesia Biodiesel
+  `InterpFSY(2023, 35, 2025, 40, 2050, 50)` → `…2030, 45…`). Note the
+  RE LTRM triplet and AMS Target carry non-zero blend targets while
+  trade routes are switched off — §A.12 feasibility watch (hypothesis;
+  Transformation wiring is not visible in the canon exports).
+- The Resources export itself contains **zero `Key\` references**
+  (anatomy §12.3) — drivers flow from Key into Transformation/demand,
+  never into `Resources\` expressions.
 
 ---
 
@@ -242,16 +359,21 @@ rows), grouped by the kind of LEAP branch they target.
 applies uniformly to all 9 (Palm Oil, Coconut Oil, Sugarcane, Cassava,
 Corn, Molasses, Palm Oil Mill Effluent, Rice Straw, Used Cooking Oil):
 
-- `Maximum Production` — `Million Tonnes/yr` (sole crop-supply cap;
-  probe-confirmed input variable)
+- `Maximum Production` — `Metric Tonne` (sole crop-supply cap;
+  probe-confirmed input variable; canon-corrected 2026-07-03 — the
+  LEAP-side unit is `Metric Tonne` per anatomy §13.2, matching the
+  §12.1 author-action that converted the source from
+  `Million Tonnes/yr` at ×1e6)
 - `Production Cost` — `USD/t <feedstock-specific>` (`USD/t grain`,
   `USD/t cane`, `USD/t POME wet`, `USD/t molasses`, `USD/t fresh root`,
   `USD/t nuts-in-shell`, `USD/t FFB`, `USD/t rice straw dry`, `USD/t UCO`)
 - `Import Cost` — `USD/t <feedstock-specific>`
 - `Area Harvested` — `Thousand ha` (probe-confirmed: input variable on
-  the Resource branch; only meaningful for the 5 main crops, optional
-  for byproducts)
-- `Crop Yield` — `t/ha` (same — 5 main crops)
+  the Resource branch; canon-corrected 2026-07-03 — exists **only** on
+  the 5 crop branches per anatomy §13.1; Molasses/POME and other
+  byproducts carry the base panel without it, so never author it there)
+- `Crop Yield` — `t/ha` (same — only the 5 crop branches;
+  canon-corrected 2026-07-03)
 
 **Resources\Secondary\\<Output\>** (Biodiesel, Ethanol, Methanol):
 
@@ -276,6 +398,10 @@ Corn, Molasses, Palm Oil Mill Effluent, Rice Straw, Used Cooking Oil):
 > [run_workflow.py](run_workflow.py)). Wherever your authored unit
 > differs from LEAP's, the audit step proposes a conversion factor or
 > flags the row as `MISMATCH unresolved` for you to override.
+> (Canon note 2026-07-03: for `Resources\` branches the LEAP-native
+> units are now settled by the canon section above — no re-probing
+> needed there. The probe remains the source for `Transformation\`
+> branches, which the canon exports do not cover.)
 
 ---
 
@@ -1055,11 +1181,28 @@ schedule shipped, but the choice changes inter-milestone behaviour.**
 
 ---
 
+## Cross-Domain Learnings
+
+- 2026-07-03 — from the LEAP-structure canon (`LEAP structure/
+  LEAP_STRUCTURE_ANATOMY.md`, aeo9_v0.67 exports): canon outranks every
+  other document for branch paths, variables, units, and
+  scenario/region rosters — re-derivation by probe or convention is a
+  fallback, not the source of truth. This domain: applied — §5 MaxProd
+  unit corrected to `Metric Tonne`, `Area Harvested`/`Crop Yield`
+  restricted to the 5 crop branches, §11.3 Secondary Import Cost units
+  settled, POME `Import Cost` repo/area drift flagged for the next
+  canonical cycle, Cassava `Import Cost = 0.001` placeholder flagged.
+  See the "Canon LEAP structure" section above and anatomy §13 for the
+  original.
+
+---
+
 *Generated to mirror the behaviour of `build_canonical.py` and the
 audit cycle as of nemo_read 0.6.4 against `aeo9_v0.33_bak`. Current
-inject target as of 2026-05-05 is `aeo9_v0.36` (unit strings verified
-identical to v0.33 for the 58 inject pairs). Last content update:
-2026-05-05 (§0 supply-basis convention, §12.5 supply-cap basis
-correction, §13 authoring gotchas, target-area migration to v0.36).
-If you change the adapter or extend the conversion registry, please
-update this guide in the same commit.*
+inject target as of 2026-05-05 was `aeo9_v0.36` (unit strings verified
+identical to v0.33 for the 58 inject pairs); canon-corrected
+2026-07-03: the operating area is now `aeo9_v0.67_w_results` — see the
+"Canon LEAP structure" section for its digest. Last content update:
+2026-07-03 (canon section, §5 unit corrections, Cross-Domain
+Learnings). If you change the adapter or extend the conversion
+registry, please update this guide in the same commit.*

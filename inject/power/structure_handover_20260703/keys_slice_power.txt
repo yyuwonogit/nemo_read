@@ -1,0 +1,129 @@
+    Chemical   [Key\Annual EI Reduction\Chemical]  vars: Activity Level
+    Commercial   [Key\Annual EI Reduction\Commercial]  vars: Activity Level
+    EI Improvement_RAS   [Key\Annual EI Reduction\EI Improvement_RAS]  vars: Activity Level
+    EI_Improvement_RAS_2   [Key\Annual EI Reduction\EI_Improvement_RAS_2]  vars: Activity Level
+    Food and Beverages   [Key\Annual EI Reduction\Food and Beverages]  vars: Activity Level
+    FuelEco   [Key\Annual EI Reduction\FuelEco]  vars: Activity Level
+    Industry   [Key\Annual EI Reduction\Industry]  vars: Activity Level
+    Iron and Steel   [Key\Annual EI Reduction\Iron and Steel]  vars: Activity Level
+    Mining   [Key\Annual EI Reduction\Mining]  vars: Activity Level
+    Non Metallic Mineral   [Key\Annual EI Reduction\Non Metallic Mineral]  vars: Activity Level
+    Pulp Paper   [Key\Annual EI Reduction\Pulp Paper]  vars: Activity Level
+    Residential   [Key\Annual EI Reduction\Residential]  vars: Activity Level
+    Textile   [Key\Annual EI Reduction\Textile]  vars: Activity Level
+      Biogas_eff   [Key\Cal\Transformation\Biogas_eff]  vars: Activity Level
+      biomass_eff   [Key\Cal\Transformation\biomass_eff]  vars: Activity Level
+      Coal_sub_eff   [Key\Cal\Transformation\Coal_sub_eff]  vars: Activity Level
+      domestic_biogas   [Key\Cal\Transformation\domestic_biogas]  vars: Activity Level
+      Gas processing   [Key\Cal\Transformation\Gas processing]  vars: Activity Level
+      Geothermal   [Key\Cal\Transformation\Geothermal]  vars: Activity Level
+      Hydropower   [Key\Cal\Transformation\Hydropower]  vars: Activity Level
+      LNG_regas   [Key\Cal\Transformation\LNG_regas]  vars: Activity Level
+      Natgas_losses   [Key\Cal\Transformation\Natgas_losses]  vars: Activity Level
+      Ngas_cc   [Key\Cal\Transformation\Ngas_cc]  vars: Activity Level
+      Oil refining   [Key\Cal\Transformation\Oil refining]  vars: Activity Level
+      oil_eff   [Key\Cal\Transformation\oil_eff]  vars: Activity Level
+      waste_eff   [Key\Cal\Transformation\waste_eff]  vars: Activity Level
+    Biomass   [Key\Capacity Additions Multiplier\Biomass]  vars: Activity Level
+    Biomass_EndYear   [Key\Capacity Additions Multiplier\Biomass_EndYear]  vars: Activity Level
+    Fossil Fuel Dispatch Reduction   [Key\Capacity Additions Multiplier\Fossil Fuel Dispatch Reduction]  vars: Activity Level
+    Geothermal   [Key\Capacity Additions Multiplier\Geothermal]  vars: Activity Level
+    Geothermal_EndYear   [Key\Capacity Additions Multiplier\Geothermal_EndYear]  vars: Activity Level
+    Hydro   [Key\Capacity Additions Multiplier\Hydro]  vars: Activity Level
+    Hydro_EndYear   [Key\Capacity Additions Multiplier\Hydro_EndYear]  vars: Activity Level
+    Solar   [Key\Capacity Additions Multiplier\Solar]  vars: Activity Level
+    Solar_EndYear   [Key\Capacity Additions Multiplier\Solar_EndYear]  vars: Activity Level
+    Wind   [Key\Capacity Additions Multiplier\Wind]  vars: Activity Level
+    Wind_EndYear   [Key\Capacity Additions Multiplier\Wind_EndYear]  vars: Activity Level
+    Ammonia   [Key\Emission Externality Costs\Ammonia]  vars: Activity Level
+    Black Carbon   [Key\Emission Externality Costs\Black Carbon]  vars: Activity Level
+    Carbon Dioxide   [Key\Emission Externality Costs\Carbon Dioxide]  vars: Activity Level
+    Carbon Monoxide   [Key\Emission Externality Costs\Carbon Monoxide]  vars: Activity Level
+    Methane   [Key\Emission Externality Costs\Methane]  vars: Activity Level
+    Nitrogen Oxides   [Key\Emission Externality Costs\Nitrogen Oxides]  vars: Activity Level
+    Nitrous Oxide   [Key\Emission Externality Costs\Nitrous Oxide]  vars: Activity Level
+    Organic Carbon   [Key\Emission Externality Costs\Organic Carbon]  vars: Activity Level
+    Sulfur Dioxide   [Key\Emission Externality Costs\Sulfur Dioxide]  vars: Activity Level
+    RE_Fraction   [Key\End_cap multip\RE_Fraction]  vars: Activity Level
+    Total_   [Key\End_cap multip\Total_]  vars: Activity Level
+    Geothermal_Declining Factor_CAPEX   [Key\Job creations\Geothermal_Declining Factor_CAPEX]  vars: Activity Level
+    Geothermal_Declining Factor_OPEX   [Key\Job creations\Geothermal_Declining Factor_OPEX]  vars: Activity Level
+    Geothermal_EF_Construction   [Key\Job creations\Geothermal_EF_Construction]  vars: Activity Level
+    Geothermal_EF_Manufacturing   [Key\Job creations\Geothermal_EF_Manufacturing]  vars: Activity Level
+    Geothermal_EF_OM   [Key\Job creations\Geothermal_EF_OM]  vars: Activity Level
+    Hydro_Declining Factor_CAPEX   [Key\Job creations\Hydro_Declining Factor_CAPEX]  vars: Activity Level
+    Hydro_Declining Factor_OPEX   [Key\Job creations\Hydro_Declining Factor_OPEX]  vars: Activity Level
+    Hydro_EF_Construction   [Key\Job creations\Hydro_EF_Construction]  vars: Activity Level
+    Hydro_EF_Manufacturing   [Key\Job creations\Hydro_EF_Manufacturing]  vars: Activity Level
+    Hydro_EF_OM   [Key\Job creations\Hydro_EF_OM]  vars: Activity Level
+    Local Manufacturing   [Key\Job creations\Local Manufacturing]  vars: Activity Level
+    Regionality Factor   [Key\Job creations\Regionality Factor]  vars: Activity Level
+    Solar_Declining Factor_CAPEX   [Key\Job creations\Solar_Declining Factor_CAPEX]  vars: Activity Level
+    Solar_Declining Factor_OPEX   [Key\Job creations\Solar_Declining Factor_OPEX]  vars: Activity Level
+    Solar_EF_Construction   [Key\Job creations\Solar_EF_Construction]  vars: Activity Level
+    Solar_EF_Manufacturing   [Key\Job creations\Solar_EF_Manufacturing]  vars: Activity Level
+    Solar_EF_OM   [Key\Job creations\Solar_EF_OM]  vars: Activity Level
+    Wind_Declining Factor_CAPEX   [Key\Job creations\Wind_Declining Factor_CAPEX]  vars: Activity Level
+    Wind_Declining Factor_OPEX   [Key\Job creations\Wind_Declining Factor_OPEX]  vars: Activity Level
+    Wind_EF_Construction   [Key\Job creations\Wind_EF_Construction]  vars: Activity Level
+    Wind_EF_Manufacturing   [Key\Job creations\Wind_EF_Manufacturing]  vars: Activity Level
+    Wind_EF_OM   [Key\Job creations\Wind_EF_OM]  vars: Activity Level
+    Batteries Lead Time   [Key\Modeling Assumptions\Batteries Lead Time]  vars: Activity Level
+    BECCS Lead Time   [Key\Modeling Assumptions\BECCS Lead Time]  vars: Activity Level
+    Biogas Lead Time   [Key\Modeling Assumptions\Biogas Lead Time]  vars: Activity Level
+    Biomass Combustion Lead Time   [Key\Modeling Assumptions\Biomass Combustion Lead Time]  vars: Activity Level
+    Coal and Gas CCS Lead Time   [Key\Modeling Assumptions\Coal and Gas CCS Lead Time]  vars: Activity Level
+    Coal Lead Time   [Key\Modeling Assumptions\Coal Lead Time]  vars: Activity Level
+    Gas Lead Time   [Key\Modeling Assumptions\Gas Lead Time]  vars: Activity Level
+    Geothermal Lead Time   [Key\Modeling Assumptions\Geothermal Lead Time]  vars: Activity Level
+    Incumbent Generator DIspatch Phaseout   [Key\Modeling Assumptions\Incumbent Generator DIspatch Phaseout]  vars: Activity Level
+    Large Hydro Lead Time   [Key\Modeling Assumptions\Large Hydro Lead Time]  vars: Activity Level
+    Nuclear Lead Time   [Key\Modeling Assumptions\Nuclear Lead Time]  vars: Activity Level
+    Oil Lead Time   [Key\Modeling Assumptions\Oil Lead Time]  vars: Activity Level
+    Small Hydro Lead Time   [Key\Modeling Assumptions\Small Hydro Lead Time]  vars: Activity Level
+    Solar PV Lead Time   [Key\Modeling Assumptions\Solar PV Lead Time]  vars: Activity Level
+    Tidal and Wave Lead time   [Key\Modeling Assumptions\Tidal and Wave Lead time]  vars: Activity Level
+    Wind Lead Time   [Key\Modeling Assumptions\Wind Lead Time]  vars: Activity Level
+    ASEAN All Regions Electricity   [Key\Region Group RE Targets\ASEAN All Regions Electricity]  vars: Activity Level;Fuel_RE Target;Region Group Set;Region Group Set Element
+      Brunei   [Key\Transmission\Demand Distribution\Brunei]  vars: Activity Level;Fuel_;Node_
+      Cambodia   [Key\Transmission\Demand Distribution\Cambodia]  vars: Activity Level;Fuel_;Node_
+      Indonesia   [Key\Transmission\Demand Distribution\Indonesia]  vars: Activity Level;Fuel_;Node_
+      Laos   [Key\Transmission\Demand Distribution\Laos]  vars: Activity Level;Fuel_;Node_
+      Malaysia   [Key\Transmission\Demand Distribution\Malaysia]  vars: Activity Level;Fuel_;Node_
+      Myanmar   [Key\Transmission\Demand Distribution\Myanmar]  vars: Activity Level;Fuel_;Node_
+      Philippines   [Key\Transmission\Demand Distribution\Philippines]  vars: Activity Level;Fuel_;Node_
+      Singapore   [Key\Transmission\Demand Distribution\Singapore]  vars: Activity Level;Fuel_;Node_
+      Thailand   [Key\Transmission\Demand Distribution\Thailand]  vars: Activity Level;Fuel_;Node_
+      Vietnam   [Key\Transmission\Demand Distribution\Vietnam]  vars: Activity Level;Fuel_;Node_
+      Laos_Cambodia_E   [Key\Transmission\Lines\Laos_Cambodia_E]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Laos_Cambodia_F   [Key\Transmission\Lines\Laos_Cambodia_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Laos_Myanmar_F   [Key\Transmission\Lines\Laos_Myanmar_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Laos_Vietnam_E   [Key\Transmission\Lines\Laos_Vietnam_E]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Laos_Vietnam_F   [Key\Transmission\Lines\Laos_Vietnam_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      P. Malaysia_Sumatra_F   [Key\Transmission\Lines\P. Malaysia_Sumatra_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      P.Malaysia_Singapore_E   [Key\Transmission\Lines\P.Malaysia_Singapore_E]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Philippines_Sabah_F   [Key\Transmission\Lines\Philippines_Sabah_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Sabah_Kalimantan_F   [Key\Transmission\Lines\Sabah_Kalimantan_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Sarawak_Brunei_C   [Key\Transmission\Lines\Sarawak_Brunei_C]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Sarawak_Kalimantan_E   [Key\Transmission\Lines\Sarawak_Kalimantan_E]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Sarawak_Kalimantan_F   [Key\Transmission\Lines\Sarawak_Kalimantan_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Sumatra_Singapore_F   [Key\Transmission\Lines\Sumatra_Singapore_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Thailand_Cambodia_E   [Key\Transmission\Lines\Thailand_Cambodia_E]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Thailand_Cambodia_F   [Key\Transmission\Lines\Thailand_Cambodia_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Thailand_Laos_E   [Key\Transmission\Lines\Thailand_Laos_E]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Thailand_Laos_F   [Key\Transmission\Lines\Thailand_Laos_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Thailand_Myanmar_F   [Key\Transmission\Lines\Thailand_Myanmar_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Thailand_P. Malaysia_E   [Key\Transmission\Lines\Thailand_P. Malaysia_E]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Thailand_P. Malaysia_F   [Key\Transmission\Lines\Thailand_P. Malaysia_F]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Vietnam_Cambodia_E   [Key\Transmission\Lines\Vietnam_Cambodia_E]  vars: !Construction Year;!Reactance;Activity Level;Capital Cost_;Efficiency_;Fixed OM Cost_;From Node;Fuel__;Interest Rate_;Lifetime_;Maximum Flow;To Node;Variable OM Cost_
+      Brunei   [Key\Transmission\Nodes\Brunei]  vars: Activity Level;Region_
+      Cambodia   [Key\Transmission\Nodes\Cambodia]  vars: Activity Level;Region_
+      Indonesia   [Key\Transmission\Nodes\Indonesia]  vars: Activity Level;Region_
+      Laos   [Key\Transmission\Nodes\Laos]  vars: Activity Level;Region_
+      Malaysia   [Key\Transmission\Nodes\Malaysia]  vars: Activity Level;Region_
+      Myanmar   [Key\Transmission\Nodes\Myanmar]  vars: Activity Level;Region_
+      Philippines   [Key\Transmission\Nodes\Philippines]  vars: Activity Level;Region_
+      Singapore   [Key\Transmission\Nodes\Singapore]  vars: Activity Level;Region_
+      Thailand   [Key\Transmission\Nodes\Thailand]  vars: Activity Level;Region_
+      Vietnam   [Key\Transmission\Nodes\Vietnam]  vars: Activity Level;Region_
+      Electricity_   [Key\Transmission\Transmission Enabled\Electricity_]  vars: Activity Level;Fuel___;Transmission Modeling Type

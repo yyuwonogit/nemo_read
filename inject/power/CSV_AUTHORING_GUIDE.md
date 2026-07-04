@@ -105,6 +105,69 @@ are no subnational variants outside ID/MY.
 
 ---
 
+## Canon LEAP structure (aeo9_v0.67 exports, 2026-07-02)
+
+The user-declared **canon** for LEAP structure is
+[`LEAP structure/LEAP_STRUCTURE_ANATOMY.md`](../../LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md)
+(digested from the six `aeo9_v0.67_w_results` "Export Expressions"
+workbooks) plus the full branch trees under `LEAP structure/trees/`
+(`keys_tree.txt`, `resources_tree.txt`, …). Branch paths, variable
+names, units, and scenario/region rosters for anything the canon
+covers come **from canon, not from re-derivation or COM re-probing**.
+Canon outranks this guide: if a claim here contradicts canon
+structure, canon wins and this guide gets fixed.
+
+**Boundary — power's inject targets are NOT in the canon exports.**
+Canon covers the 4 Demand sectors + the `Key\` tree + the
+`Resources\` tree. `Transformation\…\Processes\…` structure (this
+domain's entire §0 scope) is still **probe-derived** — the per-AMS
+tree-shape tables in §0 (confirmed against `aeo9_v0.38_yy`) remain
+the working reference until a Transformation export lands in canon.
+
+What canon DOES give power — the `Key\` groups this domain's
+expressions and results plumbing connect to (anatomy §12.1):
+
+| `Key\` group | Canon shape | Power relevance |
+|---|---|---|
+| `Capacity Additions Multiplier` | 11 branches: Solar / Wind / Hydro / Biomass / Geothermal (unit `factor`) + their 5 `_EndYear` knobs + `Fossil Fuel Dispatch Reduction` (unit `Percent`; `Interp(2023, 100%, 2030, 80%)` in RAS/CNZ, `0` in most others) | Scenario-differentiation levers on capacity build-out |
+| `Modeling Assumptions` | 16 branches: 15 technology `<Tech> Lead Time` knobs (all unit `years`) + `Incumbent Generator DIspatch Phaseout` — **real spelling has capital "DI"**; case-sensitive FullName lookups on "Dispatch" miss it. Value `50` everywhere except `35` in some CNZ regions | The Phaseout knob is consumed by Transformation `Minimum Utilization` phaseout formulas (§6 / CLAUDE.md §11.2c) |
+| `Job creations` | 22 branches: {Solar, Wind, Hydro, Geothermal} × {EF_Construction, EF_Manufacturing (`Job-Years`), EF_OM (`Jobs/MW`), Declining Factor_CAPEX/OPEX (`Factor`)} + `Local Manufacturing` + `Regionality Factor` | Results-side jobs factors per MW of power build |
+| `Emission Externality Costs` | 9 pollutant branches; 8 in `2020 USD/kg`, **Carbon Dioxide in `2020 USD/t`** | Externality pricing on power emissions |
+| `Transmission` | 21 `Lines\<A>_<B>_{E,F,C}` interconnectors, each a 13-variable panel (From/To Node, Maximum Flow, `Capital Cost_`/`Fixed OM Cost_`/`Variable OM Cost_`, `Lifetime_`, `Efficiency_`, `Interest Rate_`, `Fuel__` — those seven carry trailing underscores in canon — Activity Level + deactivated `!Reactance`, `!Construction Year`); 10 `Nodes\<AMS>`; 10 `Demand Distribution\<AMS>`. Sub-national names (P. Malaysia, Sarawak, Sabah, Sumatra, Kalimantan) live **only in the Line names** — the Node branches are country-level | Grid-interconnection model; the only place sub-national geography is named outside `_IDxx`/`_MYxx` process suffixes |
+| `Region Group RE Targets` | 1 branch (`ASEAN All Regions Electricity`), 4 variables, **all 528 expressions `0`** — plumbing present but disabled | RE-target stub; don't assume it's live |
+| `Cal\Transformation` | 13 per-fuel calibration branches (Hydropower, Geothermal, Ngas_cc, Coal_sub_eff, …) — invisible to the demand exports | Transformation calibration factors |
+
+`Resources\` facts power cares about (anatomy §13):
+
+- **Renewable/biomass `Maximum Production` caps are in Terawatt-hour**
+  on exactly 8 fuels: Bagasse, Biomass, Geothermal, Large Hydro,
+  Small Hydro, Solar, Wind, Wood.
+- **Resources→Transformation coupling on Geothermal**: Indonesia +
+  Philippines `Resources\Primary\Geothermal:Maximum Production` is
+  *derived from* `Transformation\Centralized Electricity Generation\
+  Processes\Geothermal Flash_*` process variables (Indonesia pulls
+  `Geothermal Flash_IDJW` `Maximum Availability` + `Process
+  Efficiency`; Philippines pulls `Geothermal Flash` `Process
+  Efficiency`) — 18 rows total. A power-side edit to those process
+  variables silently reshapes the Resources supply cap.
+- **Natural Gas + all five coals carry `Maximum Production =
+  Unlimited` in every scenario × region** (132 rows each) — the
+  benign upper-bound flavour of the §A.11 1e12 trap, but it means
+  fossil fuel supply to power is uncapped everywhere.
+- **`Key\Optimized Trade` master switch (`Activity Level`) is `1`
+  only in Regional Aspiration Scenario + Carbon Neutrality_ Net Zero
+  Scenario; `0` in the other nine scenarios** (all 495 routes flip as
+  one block). Relevant to CLAUDE.md §11.4 feasibility: inter-region
+  trade for blend-mandate feedstocks only exists in RAS/CNZ.
+
+If power ever authors rows on `Key\` branches (e.g. the Phaseout or
+Capacity Additions Multiplier knobs), remember the KA tree is
+blind-mode-mandatory territory (CLAUDE.md §A.20) and perfectly
+rectangular — every (branch, variable) exists in all 11 scenarios,
+so per-row scenario filter-routing matters.
+
+---
+
 ## 1. Owner format — what the input CSV looks like
 
 Files dropped into `inject/power/<YYYYMMDD>/` use **the LEAP-export
@@ -468,11 +531,14 @@ maintains one of these.
   |---|---|---|
   | `Min(<constant>, Maximum Availability)` | Static floor at a chosen capacity-factor | Vietnam Biomass Other: `Min(10.92, Maximum Availability)` |
   | `Min(Value(Historical Capacity Factor[percentage], LastHistoricalYear), Maximum Availability)` | Static floor at the tech's actual measured historical CF | Use when you want hydro / biomass to keep running at its historical CF indefinitely |
-  | `Min(Interp(FirstScenarioYear, Value(Historical Capacity Factor[percentage], LastHistoricalYear), FirstScenarioYear + Key\Modeling Assumptions\Incumbent Generator Dispatch Phaseout:Activity Level[years], 0), Maximum Availability)` | Phaseout trajectory: historical CF → 0 over the configured phaseout horizon | Malaysia subregional Biomass Other (`_MYPE`, `_MYSB`, `_MYSR`) and Large Hydro `_MY*` (set 2026-05-12) |
+  | `Min(Interp(FirstScenarioYear, Value(Historical Capacity Factor[percentage], LastHistoricalYear), FirstScenarioYear + Key\Modeling Assumptions\Incumbent Generator DIspatch Phaseout:Activity Level[years], 0), Maximum Availability)` | Phaseout trajectory: historical CF → 0 over the configured phaseout horizon | Malaysia subregional Biomass Other (`_MYPE`, `_MYSB`, `_MYSR`) and Large Hydro `_MY*` (set 2026-05-12) |
 
   The phaseout-trajectory pattern centralizes the phaseout horizon under
-  `Key\Modeling Assumptions\Incumbent Generator Dispatch Phaseout:Activity
-  Level` so one knob drives every incumbent must-run together. Apply it
+  `Key\Modeling Assumptions\Incumbent Generator DIspatch Phaseout:Activity
+  Level` — the branch name's capital "DI" is the real spelling in the
+  area (canon-corrected 2026-07-03, per anatomy §12.7; case-sensitive
+  FullName lookups on "Dispatch" miss it) — so one knob drives every
+  incumbent must-run together. Apply it
   to any tech whose dispatch should phase out on the same schedule;
   apply the static-floor or historical-CF-floor patterns to techs whose
   must-run is permanent.
@@ -489,3 +555,20 @@ maintains one of these.
   Min(10.92, …) pattern on Biomass Other is the safe template.
   **Does not apply to fossil** (thermal baseload MUs are intentional
   must-run anchors per modeller decision).
+
+- **2026-07-03 — from canon digestion (`LEAP structure/`):** the six
+  `aeo9_v0.67_w_results` Export Expressions workbooks are user-declared
+  CANON — branch paths, variables, units, and scenario/region rosters
+  come from
+  [`LEAP structure/LEAP_STRUCTURE_ANATOMY.md`](../../LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md)
+  + `LEAP structure/trees/`, not from re-derivation; canon outranks
+  every guide.
+  This domain: **applied** — new "Canon LEAP structure" section added
+  above (Key-tree power groups, Resources renewable caps + the
+  Geothermal Resources→Transformation coupling, Optimized Trade
+  RAS/CNZ-only master switch), and the
+  `Incumbent Generator DIspatch Phaseout` spelling (capital "DI")
+  canon-corrected in the 2026-05-12 entry's pattern table above.
+  Boundary noted: power's
+  Transformation inject targets are NOT in the canon exports and stay
+  probe-derived. See anatomy §12–§13 for the original.

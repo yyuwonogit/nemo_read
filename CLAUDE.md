@@ -689,7 +689,7 @@ A fresh session, in 60 seconds:
    note: where the previous session left off and what's not done yet.
    Read it before forming a plan; it tells you the in-flight cycle's
    state without needing to grep logs. (Harmless if absent.)
-2. **§2 — Hard rules (modeling).** Five modeling-specific standing
+2. **§2 — Hard rules (modeling).** Six modeling-specific standing
    rules. Don't violate them.
 3. **§3 — Repo layout.** Two halves: `nemo_read/` (library) +
    `mailbox/` (authoring pipeline + dated drops).
@@ -802,9 +802,9 @@ going to use."*)
 | NEMO side | LEAP side (verified) |
 |---|---|
 | `TotalTechnologyAnnualActivityUpperLimit` (on `S{NN}D` Domestic Production tech) | `Maximum Production` on `Resources\Primary\<Crop>` (raw-crop tonnes per §2.4) |
-| `TotalTechnologyAnnualActivityUpperLimit` (on `S{NN}I` Imports tech) | `Maximum Production` on `Resources\Secondary\<Fuel> Imports` (or equivalent imports sub-branch — verify per-fuel) |
+| `TotalTechnologyAnnualActivityUpperLimit` (on `S{NN}I` Imports tech) | `Maximum Imports` on the flat `Resources\Secondary\<Fuel>` leaf. **No `<Fuel> Imports` sub-branches exist** — canon (§2.6, anatomy §13) proves all 62 Resources branches are flat depth-3 leaves; `Maximum Imports` exists only in the 7 optimization-bloc scenarios. (Corrected 2026-07-02 against the Resources export; the old "Imports sub-branch" mapping was the §A.14(i) burn.) |
 | `VariableCost` (on `S{NN}D`) | `Production Cost` on `Resources\Primary\<Crop>` |
-| `VariableCost` (on `S{NN}I`) | `Import Cost` on `Resources\Primary\<Crop>` or `Resources\Secondary\<Fuel> Imports` |
+| `VariableCost` (on `S{NN}I`) | `Import Cost` on the flat `Resources\Primary\<Crop>` / `Resources\Secondary\<Fuel>` leaf (no Imports sub-branch — see row above) |
 | (LEAP land-cap building blocks — not directly NEMO-mapped, see §2.4): | `Area Harvested`, `Crop Yield`, `Additions to Reserves`, `Export Benefit` |
 
 **Demand and effects branches:**
@@ -870,6 +870,58 @@ The format to use when asking:
 If the user has named these in the current session, echo them back in
 your "about to run" line so they can correct you in one word if you've
 drifted.
+
+### 2.6 `LEAP structure/` is the canonical demand-tree structure — for ALL future LEAP versions
+
+The `LEAP structure/` folder at the repo root — the six
+`aeo9_v0.67_w_results` "Export Expressions" workbooks (four `Demand\`
+sectors + `Key\` assumption tree + `Resources\` supply tree),
+[LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md),
+and the full branch trees in [trees/](LEAP%20structure/trees/) — is the
+CANONICAL description of the LEAP demand, Key, and Resources trees. User
+directive
+2026-07-02: *"this leap structure we hold is canon ... this is the
+truth"*; *"all future leap structure will follow this, expression input
+might be different but structure will stay. thats the default."*
+
+**Supremacy.** Canon sits at the TOP of the truth hierarchy. User
+directive 2026-07-02: *"whatever we have on memory, and on everything
+else, that is contradict what we build from excel, should be replaced.
+as your excel tour hold the entire truth, top."* If any memory file,
+CLAUDE.md mapping table, doc, or prior probe finding contradicts what
+the six exports show, the OTHER source is wrong — correct or delete it
+in the same task (per §15.1 stale-memory cleanup), citing canon.
+Hierarchy: **canon exports > COM probes of a live area > repo
+canonicals/docs/memories > sector-team CSVs.** (A live-area COM probe
+can still legitimately differ on runtime STATE — ActiveScenario, open
+area, calculated results; canon governs STRUCTURE.) First corrections
+applied 2026-07-02: §2.3's `<Fuel> Imports` sub-branch mapping rows
+(no such sub-branches exist — flat leaves with `Maximum Imports` /
+`Import Cost` variables) and §11.2c's `DIspatch` spelling.
+
+How to apply:
+- **Structure is stable by default across future area versions**
+  (v0.68+): branch paths, branch typology, which variables attach to
+  which branches, units/scale/per, the 11-scenario roster (IDs 1–30),
+  the 12-region roster (sparse IDs, Base Template = 7). Author injects
+  and probes against these paths without re-deriving them — grep
+  `LEAP structure/trees/*.txt` and the anatomy doc BEFORE COM-probing
+  or extrapolating from convention (§A.1, §A.14).
+- **Expression content is NOT canon.** Authored values, trajectories,
+  and Interp series may change per area version and per scenario. Only
+  the structural skeleton is guaranteed.
+- If a future export shows the STRUCTURE itself changed (branch
+  added/renamed/moved, variable panel changed, roster changed), that is
+  an anomaly — flag it to the user; don't silently re-derive canon and
+  don't silently trust the old canon against the evidence.
+- These are `Demand\`/`Key\`-tree branches: blind-mode inject is
+  MANDATORY (§A.20).
+
+See also: `memory/project_leap_structure_canon.md` for the origin, and
+[docs/leap_structure_canon_sop.md](docs/leap_structure_canon_sop.md) for
+the full pipeline SOP (export → digest → verified analysis → canon →
+connection-audited team slices → handover packages; scripts in
+`LEAP structure/tools/`).
 
 ---
 
@@ -1499,6 +1551,8 @@ Worked example + stage-by-stage exit criteria in
 |---|---|
 | [docs/FLOWS.md](docs/FLOWS.md) | canonical step-by-step for inject / results harvest / infeasibility triage — quick reference for the three established flows |
 | [docs/inject_sop.md](docs/inject_sop.md) | **standard `CanonicalInjector` inject method (all sectors)** — blind-mode command, branch-structure decision matrix (KA/Demand REQUIRE blind), 3 framework guardrails, pitfalls catalogue. Generalised from the 2026-05-20 transport cycle |
+| [LEAP structure/LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md) | **CANONICAL tree anatomy (§2.6)** — Demand sectors + `Key\` assumption tree + `Resources\` supply tree: branch trees ([trees/](LEAP%20structure/trees/)), variable inventories, units, scenario/region rosters, expression idioms, §A.11 Unlimited audit, hygiene ledger. Structure = default for all future LEAP versions; expressions may vary |
+| [docs/leap_structure_canon_sop.md](docs/leap_structure_canon_sop.md) | **canon pipeline SOP** — how the canon is built and extended (export → digest → verified analysis → supremacy sweep → connection-audited team slices → handover packages), the package file-group roster, load-bearing lessons, next-cycle recipes. Scripts: `LEAP structure/tools/` |
 | [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md) | infeasibility pipeline + worked x435004 example + revised cN path (see §8) |
 | [docs/schema.md](docs/schema.md) | NEMO v11 column reference |
 | [docs/cookbook.md](docs/cookbook.md) | analysis recipes (capacity stack, demand by sector, …) |
@@ -1510,6 +1564,8 @@ Worked example + stage-by-stage exit criteria in
 | [docs/leap_area_wishlist.md](docs/leap_area_wishlist.md) | open-work backlog |
 | [inject/bioenergy/CSV_AUTHORING_GUIDE.md](inject/bioenergy/CSV_AUTHORING_GUIDE.md) | bioenergy mailbox column conventions |
 | [inject/bioenergy/BIOENERGY_CSV_SPEC.md](inject/bioenergy/BIOENERGY_CSV_SPEC.md) | bioenergy spec (single-cap design) |
+| [inject/residential/CSV_AUTHORING_GUIDE.md](inject/residential/CSV_AUTHORING_GUIDE.md) | residential unified authoring guide (canon §10 anatomy, device-stock 7-scenario scoping, unifies the per-appliance AC/fridge docs) — new 2026-07-03 |
+| [inject/fossil/CSV_AUTHORING_GUIDE.md](inject/fossil/CSV_AUTHORING_GUIDE.md) | fossil authoring guide (canon §13 fossil view, 9-raw-CSV adapter contract, costs-without-caps gap, §A.15 burn record) — new 2026-07-03 |
 | [result/20260505/RESULTS_HARVEST_SOP.md](result/20260505/RESULTS_HARVEST_SOP.md) | results-harvest A→B→C SOP + 9-pitfall postmortem (carry forward to next cycle) |
 
 When you write a new doc, put it in `docs/` and link it from README's
@@ -1740,13 +1796,16 @@ timeslice with no curtailment slack. Two failure modes:
   3. **Phaseout trajectory:** `Min(Interp(FirstScenarioYear,
      Value(Historical Capacity Factor[percentage], LastHistoricalYear),
      FirstScenarioYear + Key\Modeling Assumptions\Incumbent Generator
-     Dispatch Phaseout:Activity Level[years], 0), Maximum Availability)`
+     DIspatch Phaseout:Activity Level[years], 0), Maximum Availability)`
      — ramps historical CF down to 0 over the configured phaseout
      horizon. Used on Malaysia subregional Biomass Other and Large Hydro
      `_MY*` (set 2026-05-12). One centralized knob drives every
      incumbent must-run together — change the Modeling Assumptions
      `Activity Level[years]` value and every tech using this pattern
-     re-shapes simultaneously.
+     re-shapes simultaneously. NOTE: the Key branch's real name is
+     `…Incumbent Generator DIspatch Phaseout` with capital "DI"
+     (canon-verified 2026-07-02, anatomy §12.7) — a case-sensitive
+     lookup or grep on "Dispatch" misses it.
 - Never write the bare `Maximum Availability` as the MU expression on
   any process branch.
 

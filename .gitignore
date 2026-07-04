@@ -46,6 +46,10 @@ Thumbs.db
 # LEAP area exports (binary, large)
 *.leap
 
+# LEAP structure raw workbook exports (binary, ~185MB; the derived canon
+# artifacts under LEAP structure/ — anatomy, trees/, tools/, audit — ARE committed)
+LEAP structure/*.xlsx
+
 # Per-area working artifacts kept out of the package repo
 /residual_files/
 

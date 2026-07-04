@@ -1,0 +1,30 @@
+    EI_Improvement_RAS_2   [Key\Annual EI Reduction\EI_Improvement_RAS_2]  vars: Activity Level
+      Biodiesel   [Key\Cal\Commercial\Biodiesel]  vars: Activity Level
+      Biomass   [Key\Cal\Commercial\Biomass]  vars: Activity Level
+      Charcoal   [Key\Cal\Commercial\Charcoal]  vars: Activity Level
+      Coal   [Key\Cal\Commercial\Coal]  vars: Activity Level
+      Diesel   [Key\Cal\Commercial\Diesel]  vars: Activity Level
+      Electricity   [Key\Cal\Commercial\Electricity]  vars: Activity Level
+      Kerosene   [Key\Cal\Commercial\Kerosene]  vars: Activity Level
+      LPG   [Key\Cal\Commercial\LPG]  vars: Activity Level
+      Natural Gas   [Key\Cal\Commercial\Natural Gas]  vars: Activity Level
+      Residual Fuel Oil   [Key\Cal\Commercial\Residual Fuel Oil]  vars: Activity Level
+      Solar   [Key\Cal\Commercial\Solar]  vars: Activity Level
+      Wood   [Key\Cal\Commercial\Wood]  vars: Activity Level
+      Cook and Light Non Elec   [Key\Cal\Residential\Cook and Light Non Elec]  vars: Activity Level
+    Average Energy Intensity   [Key\Commercial\Average Energy Intensity]  vars: Activity Level
+    Commercial Energy Consumption   [Key\Commercial\Commercial Energy Consumption]  vars: Activity Level
+      Hospital   [Key\Commercial\Energy consumption per area\Hospital]  vars: Activity Level
+      Hotel   [Key\Commercial\Energy consumption per area\Hotel]  vars: Activity Level
+      Office   [Key\Commercial\Energy consumption per area\Office]  vars: Activity Level
+      Others   [Key\Commercial\Energy consumption per area\Others]  vars: Activity Level
+      Retailer   [Key\Commercial\Energy consumption per area\Retailer]  vars: Activity Level
+    Gross Floor_Area   [Key\Commercial\Gross Floor_Area]  vars: Activity Level
+      Hospital   [Key\Commercial\Share_ of Buildings\Hospital]  vars: Activity Level
+      Hotel   [Key\Commercial\Share_ of Buildings\Hotel]  vars: Activity Level
+      Office   [Key\Commercial\Share_ of Buildings\Office]  vars: Activity Level
+      Others   [Key\Commercial\Share_ of Buildings\Others]  vars: Activity Level
+      Retailer   [Key\Commercial\Share_ of Buildings\Retailer]  vars: Activity Level
+    Real GDP Service   [Key\Macroeconomic\Real GDP Service]  vars: Activity Level
+        Lighting Energy Savings   [Key\Net Zero Measures\Residential\Building Orientation\Lighting Energy Savings]  vars: Activity Level
+        Share_Households   [Key\Net Zero Measures\Residential\Building Orientation\Share_Households]  vars: Activity Level

@@ -1,0 +1,117 @@
+    Electrification Rate   [Key\Energy Access\Electrification Rate]  vars: Activity Level
+      Chemical   [Key\Industry\Appliances_share\Chemical]  vars: Activity Level
+      Construction   [Key\Industry\Appliances_share\Construction]  vars: Activity Level
+      Food Beverages and Tobacco   [Key\Industry\Appliances_share\Food Beverages and Tobacco]  vars: Activity Level
+      Iron and Steel   [Key\Industry\Appliances_share\Iron and Steel]  vars: Activity Level
+      Non Metallic Minerals   [Key\Industry\Appliances_share\Non Metallic Minerals]  vars: Activity Level
+      Other Industry   [Key\Industry\Appliances_share\Other Industry]  vars: Activity Level
+      Pulp and Paper   [Key\Industry\Appliances_share\Pulp and Paper]  vars: Activity Level
+      Textile and Leather   [Key\Industry\Appliances_share\Textile and Leather]  vars: Activity Level
+      Cement   [Key\Industry\Cal\Cement]  vars: Activity Level
+      Electricity   [Key\Industry\Cal\Electricity]  vars: Activity Level
+      Iron and Steel   [Key\Industry\Cal\Iron and Steel]  vars: Activity Level
+      Liquid FF   [Key\Industry\Cal\Liquid FF]  vars: Activity Level
+      Others   [Key\Industry\Cal\Others]  vars: Activity Level
+      Total_   [Key\Industry\Cal\Total_]  vars: Activity Level
+      CCS Adoption   [Key\Industry\Cement RAS Measures\CCS Adoption]  vars: Activity Level
+      Clinker Fraction   [Key\Industry\Cement RAS Measures\Clinker Fraction]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Cement\Cement Kiln CCS\Electricity]  vars: Activity Level
+          Heat   [Key\Industry\Intensity\Cement\Cement Kiln CCS\Heat]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Cement\Cement Kiln Conventional\Electricity]  vars: Activity Level
+          Heat   [Key\Industry\Intensity\Cement\Cement Kiln Conventional\Heat]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Cement\Oxyfuel Biomass CCS\Electricity]  vars: Activity Level
+          Heat   [Key\Industry\Intensity\Cement\Oxyfuel Biomass CCS\Heat]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Cement\Oxyfuel Gas CCS\Electricity]  vars: Activity Level
+          Heat   [Key\Industry\Intensity\Cement\Oxyfuel Gas CCS\Heat]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Chemical\Direct Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Chemical\Direct Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Chemical\Direct Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Chemical\Indirect Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Chemical\Indirect Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Chemical\Indirect Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Construction\Direct Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Construction\Direct Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Construction\Direct Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Construction\Indirect Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Construction\Indirect Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Construction\Indirect Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Food Beverages and Tobacco\Direct Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Food Beverages and Tobacco\Direct Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Food Beverages and Tobacco\Direct Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Food Beverages and Tobacco\Indirect Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Food Beverages and Tobacco\Indirect Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Food Beverages and Tobacco\Indirect Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Iron and Steel\Casting\Electricity]  vars: Activity Level
+          Natural Gas   [Key\Industry\Intensity\Iron and Steel\Casting\Natural Gas]  vars: Activity Level
+              Coal Bituminous   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF CCS\Coal Bituminous]  vars: Activity Level
+              Electricity   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF CCS\Electricity]  vars: Activity Level
+              Iron Ore   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF CCS\Iron Ore]  vars: Activity Level
+              Metalurgical Coke   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF CCS\Metalurgical Coke]  vars: Activity Level
+              Natural Gas   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF CCS\Natural Gas]  vars: Activity Level
+              Residual Fuel Oil   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF CCS\Residual Fuel Oil]  vars: Activity Level
+              Scrap   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF CCS\Scrap]  vars: Activity Level
+              Coal Bituminous   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF\Coal Bituminous]  vars: Activity Level
+              Electricity   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF\Electricity]  vars: Activity Level
+              Iron Ore   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF\Iron Ore]  vars: Activity Level
+              Metalurgical Coke   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF\Metalurgical Coke]  vars: Activity Level
+              Natural Gas   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF\Natural Gas]  vars: Activity Level
+              Residual Fuel Oil   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF\Residual Fuel Oil]  vars: Activity Level
+              Scrap   [Key\Industry\Intensity\Iron and Steel\Crude Steel\BOF\BF\Scrap]  vars: Activity Level
+              Electricity   [Key\Industry\Intensity\Iron and Steel\Crude Steel\EAF\DRI H2\Electricity]  vars: Activity Level
+              Hydrogen   [Key\Industry\Intensity\Iron and Steel\Crude Steel\EAF\DRI H2\Hydrogen]  vars: Activity Level
+              Iron Ore   [Key\Industry\Intensity\Iron and Steel\Crude Steel\EAF\DRI H2\Iron Ore]  vars: Activity Level
+              Natural Gas   [Key\Industry\Intensity\Iron and Steel\Crude Steel\EAF\DRI H2\Natural Gas]  vars: Activity Level
+              Electricity   [Key\Industry\Intensity\Iron and Steel\Crude Steel\EAF\DRI\Electricity]  vars: Activity Level
+              Iron Ore   [Key\Industry\Intensity\Iron and Steel\Crude Steel\EAF\DRI\Iron Ore]  vars: Activity Level
+              Natural Gas   [Key\Industry\Intensity\Iron and Steel\Crude Steel\EAF\DRI\Natural Gas]  vars: Activity Level
+              Electricity   [Key\Industry\Intensity\Iron and Steel\Crude Steel\EAF\Scrap\Electricity]  vars: Activity Level
+              Scrap   [Key\Industry\Intensity\Iron and Steel\Crude Steel\EAF\Scrap\Scrap]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Iron and Steel\Hot Rolling\Electricity]  vars: Activity Level
+          Natural Gas   [Key\Industry\Intensity\Iron and Steel\Hot Rolling\Natural Gas]  vars: Activity Level
+          Residual Fuel Oil   [Key\Industry\Intensity\Iron and Steel\Hot Rolling\Residual Fuel Oil]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Mining\Direct Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Mining\Direct Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Mining\Direct Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Mining\Indirect Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Mining\Indirect Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Mining\Indirect Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Non Metallic Minerals\Direct Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Non Metallic Minerals\Direct Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Non Metallic Minerals\Direct Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Non Metallic Minerals\Indirect Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Non Metallic Minerals\Indirect Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Non Metallic Minerals\Indirect Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Other Industry\Direct Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Other Industry\Direct Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Other Industry\Direct Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Other Industry\Indirect Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Other Industry\Indirect Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Other Industry\Indirect Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Pulp and Paper\Direct Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Pulp and Paper\Direct Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Pulp and Paper\Direct Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Pulp and Paper\Indirect Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Pulp and Paper\Indirect Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Pulp and Paper\Indirect Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Textile and Leather\Direct Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Textile and Leather\Direct Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Textile and Leather\Direct Process Heating\Others]  vars: Activity Level
+          Electricity   [Key\Industry\Intensity\Textile and Leather\Indirect Process Heating\Electricity]  vars: Activity Level
+          Liquid FF   [Key\Industry\Intensity\Textile and Leather\Indirect Process Heating\Liquid FF]  vars: Activity Level
+          Others   [Key\Industry\Intensity\Textile and Leather\Indirect Process Heating\Others]  vars: Activity Level
+        BOF_share   [Key\Industry\Steel RAS Measures\BOF\BOF_share]  vars: Activity Level
+        CCS_uptake_share   [Key\Industry\Steel RAS Measures\BOF\CCS_uptake_share]  vars: Activity Level
+        Hydrogen Adoption Rate   [Key\Industry\Steel RAS Measures\EAF\Hydrogen Adoption Rate]  vars: Activity Level
+        Scrap_share   [Key\Industry\Steel RAS Measures\EAF\Scrap_share]  vars: Activity Level
+      Chemical   [Key\Industry\Subsector_share\Chemical]  vars: Activity Level
+      Construction   [Key\Industry\Subsector_share\Construction]  vars: Activity Level
+      Food Beverages and Tobacco   [Key\Industry\Subsector_share\Food Beverages and Tobacco]  vars: Activity Level
+      Iron and Steel   [Key\Industry\Subsector_share\Iron and Steel]  vars: Activity Level
+      Mining   [Key\Industry\Subsector_share\Mining]  vars: Activity Level
+      Non Metallic Minerals   [Key\Industry\Subsector_share\Non Metallic Minerals]  vars: Activity Level
+      Other Industry   [Key\Industry\Subsector_share\Other Industry]  vars: Activity Level
+      Pulp and Paper   [Key\Industry\Subsector_share\Pulp and Paper]  vars: Activity Level
+      Textile and Leather   [Key\Industry\Subsector_share\Textile and Leather]  vars: Activity Level
+    Gross Fixed Capital Formation   [Key\Macroeconomic\Gross Fixed Capital Formation]  vars: Activity Level
+    Manufacturing Fraction in Industry   [Key\Macroeconomic\Manufacturing Fraction in Industry]  vars: Activity Level
+    Real GDP Industry   [Key\Macroeconomic\Real GDP Industry]  vars: Activity Level

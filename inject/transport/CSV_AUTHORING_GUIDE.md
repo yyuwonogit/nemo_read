@@ -37,6 +37,107 @@ add a CLI flag — see §6 below).
 
 ---
 
+## Canon LEAP structure (aeo9_v0.67 exports, 2026-07-02)
+
+The user-declared CANON for this domain's branch paths, variable
+names, units, and scenario/region rosters is the "Export Expressions"
+workbook set under `LEAP structure/`, digested in
+[LEAP structure/LEAP_STRUCTURE_ANATOMY.md](../../LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md)
+(transport: §9; Key tree: §12; hygiene ledger: §14), with full branch
+trees in `LEAP structure/trees/transport_tree.txt` +
+`LEAP structure/trees/keys_tree.txt` and full-path domain slices
+(branch × variable × units CSVs + the Key-tree transport slice) in
+[structure_handover_20260703/](structure_handover_20260703/).
+**Structure comes FROM canon** — refresh the availability map and
+branch targets by grepping the trees/slices, not by COM probe and not
+by trusting team CSVs or older guide text when they disagree.
+Expression *values* are not canon — only structure.
+
+### Domain digest
+
+Tree split (anatomy §9.1) — the sector is methodologically two models:
+
+| Subsector | Branches | Methodology |
+|---|---|---|
+| Domestic Air | 30 | intensity-per-GDP chain |
+| Inland Waterways | 69 | intensity-per-GDP chain |
+| Rail | 28 | intensity-per-GDP chain |
+| Road | 37 | **vehicle stock-turnover** — this adapter's target |
+
+Road runs depth-4 vehicle classes (Bus, `Motorcyle` [sic],
+PassengerCar, Truck) → depth-5 fuel/powertrain branches carrying
+`Stock` / `Sales` / `Scrappage` / `First Sales Year` → depth-6
+same-named device leaves carrying `Fuel Economy` / `Mileage` /
+`Device Share` etc.
+
+**Two-tree naming matrix** (the load-bearing gotcha for this adapter —
+the Demand tree and the Key tree disagree):
+
+| | `Demand\Transport\Road` (Mileage + device vars) | `Key\TransportDataStock` (shares/sales/stock) |
+|---|---|---|
+| Motorcycle class name | `Motorcyle` [sic] | `Motorcycle` (correct) — except `Effective Operational_Stock\Motorcyle`, which carries the typo |
+| Gasoline powertrain name | `Blended Gasoline` (there is NO plain `Gasoline` child under any Road vehicle) | `Gasoline` |
+| PassengerCar × Hydrogen | absent | present (`Vehicle_Stock_Share` and `Vehicles_Sales_Share` both carry `PassengerCar\Hydrogen`) |
+
+Demand Road fuel roster (16 depth-5 branches, anatomy §9.1): Bus and
+Truck = {Blended Diesel, Blended Gasoline, Electricity, Hydrogen,
+Natural Gas}; PassengerCar = same minus Hydrogen; Motorcyle =
+{Blended Gasoline, Electricity}.
+
+Canon facts the adapter/authors must respect:
+
+- **CA-only variables** (anatomy §2.1): `Stock` (192 rows),
+  `First Sales Year` (192), `Share_FossilFuels` (48) exist ONLY under
+  Current Accounts. Don't author them into forward scenarios.
+- **Units** (transport_rows.csv): `Sales` = `Vehicle`, `Mileage` =
+  `Kilometer`, `Fuel Economy` = `MPG Gasoline US eq.` for ALL
+  powertrains **including EV and H2** (anatomy §9.2); policy scenarios
+  apply `Growth(Key\Annual EI Reduction\FuelEco…)` on top.
+- **Stock authoring** (anatomy §9.2): `Data(…)` historical
+  registration series for most regions; the Key-formula form
+  `Vehicle_Stock_Share × BaseYear_StockData` for Base Template /
+  Timor Leste (+ scattered single branches elsewhere).
+- **Scenario blocs** (anatomy §2 / §9.4): {RAS ≡ LCO backup ≡ Set up ≡
+  RE LTRM ×3}, {Baseline ≡ RAS test}; AMS Target sits 4 rows off RAS
+  (SAF fuel-share edits); CNZ sits 130 rows off RAS.
+- **Hygiene flags** (anatomy §14): Road has **zero** pollutant effect
+  leaves while Air/IW/Rail carry 12–13 species each (#11);
+  Truck Natural Gas `Fuel Economy` reads CA=12 vs 5 in all 10
+  projection scenarios — Indonesia only, likely authoring slip (#15);
+  `Demand\Transport_` (underscore) self-references appear in 180
+  `TotShare_AltFuels`/`Share_FossilFuels` rows (#13).
+
+### Key\ / Resources\ structures this domain connects to
+
+The team's sales/stock data lands in **`Key\TransportDataStock`**
+(47 branches, anatomy §12.1) — a KA tree, so **blind-mode inject is
+mandatory** (§A.20; the Demand-tree Mileage targets are equally
+blind-mandatory):
+
+| Subtree | Branches | Holds |
+|---|---|---|
+| `Vehicle_Stock_Share` | 17 | stock share % per vehicle × fuel |
+| `Vehicles_Sales_Share` | 17 | sales share % per vehicle × fuel (adapter target) |
+| `Vehicle_Sales` | 4 | total sales per vehicle (adapter target) |
+| `BaseYear_StockData` | 4 | 2024 fleet stock per vehicle (adapter target, §4b) |
+| `Effective Operational_Stock` | 4 | note the `Motorcyle` typo here |
+| `Year_` | 1 | `Year_\Age` |
+
+Adjacent transport Key trees (anatomy §12.1): `Key\Transport vehicle
+data_` (28 — a/b/c regression-coefficient + `Historical
+Bus/Freight/Motorcycle/PPV/Taxi` panels); `Key\Other Transport` (23 —
+EV charging-infrastructure cost stack for AC Level 1 / AC Level 2 /
+DC Fast Charger); `Key\Net Zero Measures\Transport` (12 — the CNZ
+overlay); `Key\Cal\Transport` (10 — invisible to the demand exports,
+consumed elsewhere).
+
+`Resources\`: transport authors **nothing** there. The connection to
+fuel supply (Blended Gasoline / Blended Diesel feedstocks, blend
+mandates) runs through Transformation and the §A.12 trade-route fuel
+list, which is not visible in the demand exports (inference).
+
+---
+
 ## 1. Canonical schema produced
 
 The output `canonical_leap_inputs.csv` has the standard
@@ -48,12 +149,24 @@ src_csv, data_confidence, scenario
 ```
 
 One row per `(ams, branch, variable, scenario)` tuple. The adapter
-emits two variable families:
+emits four row families (canon-corrected 2026-07-03 — the sales-side
+rows land on `Key\TransportDataStock\…` as **`Activity Level`**, the
+only assumption variable on Key branches per anatomy §12.2; the
+demand-tree `Sales` variable holds LEAP-side formulas wired to these
+Key branches — `Vehicles_Sales_Share × Vehicle_Sales`, anatomy §9.3 —
+and is not written by this adapter):
 
-- **`Sales`** — one row per `(ams, vehicle, fuel, scenario)`. The
-  `expression` is an `Interp(year, value, ...)` series across all
-  Years present in `sales_mix.csv` for that group.
-- **`Mileage`** — one row per `(ams, vehicle, fuel)` replicated across
+- **`Vehicles_Sales_Share`** — `Activity Level` on
+  `Key\TransportDataStock\Vehicles_Sales_Share\<Vehicle>\<Fuel>`, one
+  row per `(ams, vehicle, fuel, scenario)`. The `expression` is an
+  `Interp(year, value, ...)` series across all Years present in
+  `sales_mix.csv` for that group.
+- **`Vehicle_Sales`** — `Activity Level` on
+  `Key\TransportDataStock\Vehicle_Sales\<Vehicle>`, per-vehicle totals.
+- **`BaseYear_StockData`** — `Activity Level` on
+  `Key\TransportDataStock\BaseYear_StockData\<Vehicle>` (see §4b).
+- **`Mileage`** — on the `Demand\Transport\Road\<Vehicle>\<Fuel>\<Fuel>`
+  device leaves, one row per `(ams, vehicle, fuel)` replicated across
   every LEAP-available fuel under the vehicle. Flat `Interp()` 2025–
   2060 holding the anchor value. Scenario tag is `Current Accounts`
   (mileage is treated as structural input, not scenario-differentiated
@@ -122,15 +235,36 @@ LEAP_AVAILABLE_FUELS_PER_VEHICLE = {
 LEAP branch taxonomy is the source of truth (see Cross-Domain Learnings
 §9). The sector team's source CSV is the *proposal*. When the source
 includes a (vehicle, fuel) combination LEAP doesn't model, we filter
-toward LEAP and log the dropped signatures. The next probe of a new
-LEAP version refreshes this map.
+toward LEAP and log the dropped signatures. Refreshing this map no
+longer needs a COM probe (canon-corrected 2026-07-03): grep
+`LEAP structure/trees/transport_tree.txt` (Demand tree) and
+[structure_handover_20260703/keys_slice_transport.txt](structure_handover_20260703/keys_slice_transport.txt)
+(Key tree — `keys_tree.txt` lists only variable-carrying branches
+without container names, so `TransportDataStock` is not greppable
+there) and read the fuel children directly.
 
 Dropped 2026-05-19: `Motorcyle × Natural Gas`, `PassengerCar × Hydrogen`.
 
+> **Canon correction 2026-07-03** (from the `aeo9_v0.67_w_results`
+> structure export, `LEAP structure/trees/transport_tree.txt`): the
+> Demand-tree Road fuel branches are named `Blended Gasoline`, not
+> `Gasoline`. Canon fuel children — Bus/Truck `{Blended Diesel,
+> Blended Gasoline, Electricity, Hydrogen, Natural Gas}`, PassengerCar
+> `{Blended Diesel, Blended Gasoline, Electricity, Natural Gas}`,
+> Motorcyle `{Blended Gasoline, Electricity}`. The dict above (and
+> [build_canonical.py](build_canonical.py)) still carries the
+> v0.46-era `"Gasoline"` — update it before the next Demand-tree
+> Sales/Mileage push, or blind-mode writes to
+> `Road\<Vehicle>\Gasoline\…` will target a FullName that no longer
+> exists. The `Key\TransportDataStock` share trees DO still use plain
+> `Gasoline` — the rename applies to the Demand tree only.
+
 **When LEAP adds a new tech** (e.g. Motorcyle gets a Hydrogen child
-in `aeo9_v0.47`): re-run the Phase 1 mapping probe, update the dict
-in this file, and re-run the adapter. The filter is a one-line edit;
-the burden is the COM probe to verify.
+in a future area version): re-check the canon trees (or request a
+fresh Export Expressions drop if canon predates the area version),
+update the dict in this file, and re-run the adapter. The filter is a
+one-line edit; verification is a grep of the canon trees, not a COM
+probe (canon-corrected 2026-07-03).
 
 ---
 
@@ -171,6 +305,13 @@ The actuals are 30-100× larger and are bare numbers (not `Interp()`
 expressions), consistent with `BaseYear_StockData` storing the
 **2024 fleet stock** — the number of vehicles on the road in the
 year before the first modelling year — rather than annual sales.
+
+Canon-corrected 2026-07-03: this is no longer a hypothesis. The
+aeo9_v0.67 canon (anatomy §9.2) shows the demand-tree `Stock`
+Key-formula form is `Vehicle_Stock_Share × BaseYear_StockData` —
+a percentage share times this branch. That only yields a fleet if
+`BaseYear_StockData` holds the **total fleet stock**, settling the
+semantics.
 
 **Current adapter behaviour** (`_build_baseyear_stock_rows`):
 sums `starting_year_sales.csv:sales_count` across fuels per
@@ -316,7 +457,11 @@ chokepoint, placeholder gate, Timor Leste decision §A.18) come from
 the framework. The subclass owns only:
 - `SECTOR_NAME = "transport"`
 - `DEFAULT_CSV = ...`
-- `EXPECT_AREA = "aeo9_v0.46"`
+- `EXPECT_AREA = "aeo9_v0.46"` — stale (canon-corrected 2026-07-03):
+  the current area is `aeo9_v0.67_w_results`, the version the canon
+  structure exports were taken from. Update `EXPECT_AREA` (here and in
+  [inject_to_leap.py](inject_to_leap.py)) and re-confirm with the user
+  (§A.9) before the next push.
 
 Push command:
 ```bash
@@ -391,6 +536,20 @@ members where transport-pipeline data is available).
   This domain: applied via `normalize_interp()` calls at row
   construction time and at write time. `tests/test_interp_separator.py`
   scans the committed canonical CSV.
+
+- **2026-07-03 — from canon (`LEAP structure/`, aeo9_v0.67 exports):
+  the Export Expressions workbooks are the top of the truth hierarchy —
+  branch paths, variables, units, and scenario/region rosters come from
+  canon, not from COM probes, team CSVs, or older guide text.**
+  This domain: applied — the availability-map refresh procedure now
+  greps the canon trees instead of re-running the Phase 1 COM probe;
+  the Demand-vs-Key naming split (`Blended Gasoline`/`Motorcyle` [sic]
+  in `Demand\Transport\Road` vs `Gasoline`/`Motorcycle` in
+  `Key\TransportDataStock`), the CA-only variable roster (`Stock`,
+  `First Sales Year`, `Share_FossilFuels`), the `MPG Gasoline US eq.`
+  Fuel Economy unit, and the `BaseYear_StockData` fleet-stock semantics
+  were all settled from canon (see "Canon LEAP structure" section
+  above). See `LEAP structure/LEAP_STRUCTURE_ANATOMY.md` §9 + §12.
 
 ---
 

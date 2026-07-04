@@ -10,6 +10,13 @@
 >
 > Sources: [`ac_leap_input_mapping.md`](202060630/ac/ac_leap_input_mapping.md),
 > [`ac/`](202060630/ac/) CSVs, [`LoadShape/`](202060630/ac/LoadShape/).
+>
+> **Canon update 2026-07-03:** the live area is now `aeo9_v0.67_w_results`
+> (canon: `LEAP structure/LEAP_STRUCTURE_ANATOMY.md` §2.1 + §10.2). There the
+> `Air Conditioning_` device-stock panel exists but is **scenario-scoped to 7
+> of 11 scenarios** (Set up, CNZ, RAS, LCO backup, RE LTRM ×3) — rows absent
+> in CA / Baseline / AMS Target / RAS test. v0.64 claims below are history
+> for that area.
 
 ---
 

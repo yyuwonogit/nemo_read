@@ -40,6 +40,58 @@ every `CanonicalInjector` subclass.
   §4c — mandatory CA-last-year → forward-first-year continuity check
   for time-series share data (an authoring defect the inject faithfully
   reproduces; ships `_check_ca_to_fwd_continuity.py`).
+- **`LEAP structure/` canon** (2026-07-02):
+  [LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md)
+  — verified anatomy of six `aeo9_v0.67_w_results` exports (four Demand
+  sectors + `Key\` assumption tree + `Resources\` supply tree; 1,858,572
+  rows digested offline; every claim adversarially re-verified) + full
+  branch trees in [LEAP structure/trees/](LEAP%20structure/trees/).
+  Declared CANON by the user and codified as CLAUDE.md §2.6: structure
+  (branch paths, variable attachment, units, scenario/region rosters) is
+  the default for all future LEAP versions; expression content is not
+  canon and may vary per version/scenario. Includes the §A.11 audit of
+  Resources (9,199 Unlimited rows, all upper-bound; NG + coals uncapped
+  in every scenario) and the Key-tree ground truth (Optimized Trade
+  master switch RAS/CNZ-only; RE LTRM triplet differentiated only in
+  Key/Resources).
+- **Canon supremacy sweep + guide updates** (2026-07-03): canon
+  outranks all other sources per user directive (CLAUDE.md §2.6);
+  corrected §2.3 (`<Fuel> Imports` sub-branches don't exist — flat
+  leaves with `Maximum Imports`/`Import Cost` variables), §11.2c
+  (`DIspatch` spelling), and stale memories. Bioenergy / power /
+  transport `CSV_AUTHORING_GUIDE.md` each gained a "Canon LEAP
+  structure" section + canon-corrections + a Cross-Domain Learnings
+  entry (adjacent spec/anatomy docs corrected in the same pass).
+  Residential and fossil still lack a unified authoring guide (gap
+  flagged).
+- **Team structure-handover packages** (2026-07-03):
+  `inject/{bioenergy,transport,residential}/structure_handover_20260703/`
+  — self-contained packages for the sector teams: team README, branch
+  tree, branch×variable×units CSVs, the connected `Key\`/`Resources\`
+  structure slices, and `current_expressions_*_4scenarios.csv` dumps of
+  what is currently authored in the model (scoped per user directive to
+  Current Accounts / Baseline Simulation / AMS Target / RAS only,
+  region-deduplicated). All content adversarially fact-checked against
+  the canon digests (79/79 claims confirmed after fixes).
+- **Wave 2: all-teams coverage + canon pipeline SOP** (2026-07-03 PM):
+  four more handover packages
+  (`inject/{commercial,keys,fossil,power}/structure_handover_20260703/`
+  — file-group roster user-confirmed; power/fossil/bioenergy carry
+  explicit "pending Transformation export" markers), two new authoring
+  guides (`inject/residential/CSV_AUTHORING_GUIDE.md`,
+  `inject/fossil/CSV_AUTHORING_GUIDE.md` — first guides for both
+  domains), mechanical connection audit (slices = owner groups ∪
+  live-code references, `?`-comments stripped; shipped packages
+  audited at zero gaps; fossil↔Key = zero connections, verified),
+  [docs/leap_structure_canon_sop.md](docs/leap_structure_canon_sop.md)
+  (the canon pipeline SOP) + pipeline scripts committed to
+  `LEAP structure/tools/`. Author→verifier→completeness-critic pass on
+  every artifact. Notable defect surfaced by verification: the fossil
+  Baseline/ATS `Additions to Reserves` layer holds a stale
+  semicolon-form set with value/note pairs permuted across regions
+  (only Brunei correct; RAS matches the authored CSV) — documented in
+  the fossil guide §7.3 as an §A.19-class-drift hypothesis with a
+  next-cycle action item.
 
 ### Tests
 - `tests/test_inject_base.py`: `TestFilterRowsForScenario` (6),

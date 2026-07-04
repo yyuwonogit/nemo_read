@@ -1,0 +1,489 @@
+branch_path,variable,units,scale,per
+Demand\Transport,Demand Cost,2020 USD,,Device
+Demand\Transport,RefHH,Ref/hh,,
+Demand\Transport\Domestic Air,Activity Level,U.S. Dollar,Million,
+Demand\Transport\Domestic Air,Demand Cost,2020 USD,,
+Demand\Transport\Domestic Air,Final Energy Intensity,Tonnes of Oil Equivalent,,
+Demand\Transport\Domestic Air,RefHH,Ref/hh,,
+Demand\Transport\Domestic Air\Aviation Gasoline,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Domestic Air\Aviation Gasoline,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Domestic Air\Aviation Gasoline,Fuel Share,Share,%,
+Demand\Transport\Domestic Air\Aviation Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Domestic Air\Electricity,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Domestic Air\Electricity,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Domestic Air\Electricity,Fuel Share,Share,%,
+Demand\Transport\Domestic Air\Electricity,Load Shape,Percent,%,
+Demand\Transport\Domestic Air\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Domestic Air\Hydrogen Fuel Cell,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Domestic Air\Hydrogen Fuel Cell,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Domestic Air\Hydrogen Fuel Cell,Fuel Share,Share,%,
+Demand\Transport\Domestic Air\Hydrogen Fuel Cell,RefHH,Ref/hh,,
+Demand\Transport\Domestic Air\Jet Kerosene,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Domestic Air\Jet Kerosene,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Domestic Air\Jet Kerosene,Fuel Share,Share,%,
+Demand\Transport\Domestic Air\Jet Kerosene,RefHH,Ref/hh,,
+Demand\Transport\Domestic Air\Jet Kerosene,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Domestic Air\Jet Kerosene\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\Jet Kerosene\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\Jet Kerosene\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Transport\Domestic Air\Jet Kerosene\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\Jet Kerosene\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\Jet Kerosene\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\Jet Kerosene\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\Jet Kerosene\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\Jet Kerosene\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\Jet Kerosene\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\Jet Kerosene\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\Jet Kerosene\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Transport\Domestic Air\SAF,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Domestic Air\SAF,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Domestic Air\SAF,Fuel Share,Share,%,
+Demand\Transport\Domestic Air\SAF,RefHH,Ref/hh,,
+Demand\Transport\Domestic Air\SAF,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Domestic Air\SAF\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\SAF\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\SAF\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Transport\Domestic Air\SAF\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\SAF\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\SAF\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\SAF\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\SAF\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Domestic Air\SAF\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\SAF\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\SAF\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Domestic Air\SAF\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Transport\Inland Waterways,Activity Level,U.S. Dollar,Million,
+Demand\Transport\Inland Waterways,Demand Cost,2020 USD,,
+Demand\Transport\Inland Waterways,Final Energy Intensity,Tonnes of Oil Equivalent,,
+Demand\Transport\Inland Waterways,RefHH,Ref/hh,,
+Demand\Transport\Inland Waterways,TotShare_AltFuels,%,,
+Demand\Transport\Inland Waterways\Biodiesel,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Inland Waterways\Biodiesel,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Inland Waterways\Biodiesel,Fuel Share,Share,%,
+Demand\Transport\Inland Waterways\Biodiesel,RefHH,Ref/hh,,
+Demand\Transport\Inland Waterways\Biodiesel,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Inland Waterways\Biodiesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Biodiesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Biodiesel\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Transport\Inland Waterways\Biodiesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Biodiesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Biodiesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Biodiesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Biodiesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Biodiesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Biodiesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Biodiesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Biodiesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Transport\Inland Waterways\Diesel,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Inland Waterways\Diesel,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Inland Waterways\Diesel,Fuel Share,Share,%,
+Demand\Transport\Inland Waterways\Diesel,RefHH,Ref/hh,,
+Demand\Transport\Inland Waterways\Diesel,Share_FossilFuels,%,,
+Demand\Transport\Inland Waterways\Diesel,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Inland Waterways\Diesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Diesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Diesel\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Transport\Inland Waterways\Diesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Diesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Diesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Diesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Diesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Diesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Diesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Diesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Diesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Transport\Inland Waterways\Electricity,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Inland Waterways\Electricity,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Inland Waterways\Electricity,Fuel Share,Share,%,
+Demand\Transport\Inland Waterways\Electricity,Load Shape,Percent,%,
+Demand\Transport\Inland Waterways\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Inland Waterways\Electricity,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Inland Waterways\Gasoline,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Inland Waterways\Gasoline,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Inland Waterways\Gasoline,Fuel Share,Share,%,
+Demand\Transport\Inland Waterways\Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Inland Waterways\Gasoline,Share_FossilFuels,%,,
+Demand\Transport\Inland Waterways\Gasoline,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Inland Waterways\Gasoline\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Gasoline\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Gasoline\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Transport\Inland Waterways\Gasoline\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Gasoline\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Gasoline\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Gasoline\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Gasoline\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Gasoline\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Gasoline\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Gasoline\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Gasoline\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Transport\Inland Waterways\Hydrogen Fuel Cell,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Inland Waterways\Hydrogen Fuel Cell,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Inland Waterways\Hydrogen Fuel Cell,Fuel Share,Share,%,
+Demand\Transport\Inland Waterways\Hydrogen Fuel Cell,RefHH,Ref/hh,,
+Demand\Transport\Inland Waterways\Hydrogen Fuel Cell,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Inland Waterways\Kerosene,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Inland Waterways\Kerosene,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Inland Waterways\Kerosene,Fuel Share,Share,%,
+Demand\Transport\Inland Waterways\Kerosene,RefHH,Ref/hh,,
+Demand\Transport\Inland Waterways\Kerosene,Share_FossilFuels,%,,
+Demand\Transport\Inland Waterways\Kerosene,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Inland Waterways\Kerosene\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Kerosene\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Transport\Inland Waterways\Residual Fuel Oil,Demand Cost,2020 USD,,U.S. Dollar
+Demand\Transport\Inland Waterways\Residual Fuel Oil,Final Energy Intensity,Tonnes of Oil Equivalent,,U.S. Dollar
+Demand\Transport\Inland Waterways\Residual Fuel Oil,Fuel Share,Share,%,
+Demand\Transport\Inland Waterways\Residual Fuel Oil,RefHH,Ref/hh,,
+Demand\Transport\Inland Waterways\Residual Fuel Oil,Share_FossilFuels,%,,
+Demand\Transport\Inland Waterways\Residual Fuel Oil,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Inland Waterways\Residual Fuel Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Transport\Rail,Activity Level,2020 USD,Million,
+Demand\Transport\Rail,Demand Cost,U.S. Dollar,,
+Demand\Transport\Rail,RefHH,Ref/hh,,
+Demand\Transport\Rail\Biodiesel,Activity Level,Saturation,%,of 2020 USD
+Demand\Transport\Rail\Biodiesel,Demand Cost,2020 USD,,2020 USD
+Demand\Transport\Rail\Biodiesel,Final Energy Intensity,Tonnes of Oil Equivalent,,2020 USD
+Demand\Transport\Rail\Biodiesel,RefHH,Ref/hh,,
+Demand\Transport\Rail\Biodiesel,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Rail\Biodiesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Biodiesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Biodiesel\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Transport\Rail\Biodiesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Biodiesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Rail\Biodiesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Biodiesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Rail\Biodiesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Biodiesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Biodiesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Biodiesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Biodiesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Transport\Rail\Diesel,Activity Level,Saturation,%,of 2020 USD
+Demand\Transport\Rail\Diesel,Demand Cost,2020 USD,,2020 USD
+Demand\Transport\Rail\Diesel,Final Energy Intensity,Tonnes of Oil Equivalent,,2020 USD
+Demand\Transport\Rail\Diesel,RefHH,Ref/hh,,
+Demand\Transport\Rail\Diesel,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Rail\Diesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Diesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Diesel\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Transport\Rail\Diesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Diesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Rail\Diesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Diesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Transport\Rail\Diesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Diesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Diesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Diesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Transport\Rail\Diesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Transport\Rail\Electricity,Activity Level,Saturation,%,of 2020 USD
+Demand\Transport\Rail\Electricity,Demand Cost,2020 USD,,2020 USD
+Demand\Transport\Rail\Electricity,Final Energy Intensity,Tonnes of Oil Equivalent,,2020 USD
+Demand\Transport\Rail\Electricity,Load Shape,Percent,%,
+Demand\Transport\Rail\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Rail\Electricity,TotalEnergyTran,TOE,Thousand,
+Demand\Transport\Road,Demand Cost,2020 USD,,Device
+Demand\Transport\Road,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus,Demand Cost,2020 USD,,Device
+Demand\Transport\Road\Bus,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Blended Diesel,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Bus\Blended Diesel,First Sales Year,Years,,
+Demand\Transport\Road\Bus\Blended Diesel,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Bus\Blended Diesel,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Bus\Blended Diesel,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Blended Diesel,Sales,Vehicle,,
+Demand\Transport\Road\Bus\Blended Diesel,Scrappage,Vehicle,,
+Demand\Transport\Road\Bus\Blended Diesel,Stock,Vehicle,,
+Demand\Transport\Road\Bus\Blended Diesel\Blended Diesel,Average Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Blended Diesel\Blended Diesel,Device Share,Share,%,
+Demand\Transport\Road\Bus\Blended Diesel\Blended Diesel,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Bus\Blended Diesel\Blended Diesel,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Blended Diesel\Blended Diesel,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Bus\Blended Diesel\Blended Diesel,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Blended Diesel\Blended Diesel,Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Blended Diesel\Blended Diesel,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Blended Diesel\Blended Diesel,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Blended Gasoline,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Bus\Blended Gasoline,First Sales Year,Years,,
+Demand\Transport\Road\Bus\Blended Gasoline,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Bus\Blended Gasoline,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Bus\Blended Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Blended Gasoline,Sales,Vehicle,,
+Demand\Transport\Road\Bus\Blended Gasoline,Scrappage,Vehicle,,
+Demand\Transport\Road\Bus\Blended Gasoline,Stock,Vehicle,,
+Demand\Transport\Road\Bus\Blended Gasoline\Blended Gasoline,Average Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Blended Gasoline\Blended Gasoline,Device Share,Share,%,
+Demand\Transport\Road\Bus\Blended Gasoline\Blended Gasoline,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Bus\Blended Gasoline\Blended Gasoline,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Blended Gasoline\Blended Gasoline,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Bus\Blended Gasoline\Blended Gasoline,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Blended Gasoline\Blended Gasoline,Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Blended Gasoline\Blended Gasoline,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Blended Gasoline\Blended Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Electricity,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Bus\Electricity,First Sales Year,Years,,
+Demand\Transport\Road\Bus\Electricity,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Bus\Electricity,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Bus\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Electricity,Sales,Vehicle,,
+Demand\Transport\Road\Bus\Electricity,Scrappage,Vehicle,,
+Demand\Transport\Road\Bus\Electricity,Stock,Vehicle,,
+Demand\Transport\Road\Bus\Electricity\Electricity,Average Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Electricity\Electricity,Device Share,Share,%,
+Demand\Transport\Road\Bus\Electricity\Electricity,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Bus\Electricity\Electricity,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Electricity\Electricity,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Bus\Electricity\Electricity,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Electricity\Electricity,Load Shape,Percent,,
+Demand\Transport\Road\Bus\Electricity\Electricity,Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Electricity\Electricity,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Electricity\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Hydrogen,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Bus\Hydrogen,First Sales Year,Years,,
+Demand\Transport\Road\Bus\Hydrogen,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Bus\Hydrogen,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Bus\Hydrogen,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Hydrogen,Sales,Vehicle,,
+Demand\Transport\Road\Bus\Hydrogen,Scrappage,Vehicle,,
+Demand\Transport\Road\Bus\Hydrogen,Stock,Vehicle,,
+Demand\Transport\Road\Bus\Hydrogen\Hydrogen,Average Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Hydrogen\Hydrogen,Device Share,Share,%,
+Demand\Transport\Road\Bus\Hydrogen\Hydrogen,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Bus\Hydrogen\Hydrogen,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Hydrogen\Hydrogen,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Bus\Hydrogen\Hydrogen,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Hydrogen\Hydrogen,Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Hydrogen\Hydrogen,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Hydrogen\Hydrogen,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Natural Gas,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Bus\Natural Gas,First Sales Year,Years,,
+Demand\Transport\Road\Bus\Natural Gas,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Bus\Natural Gas,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Bus\Natural Gas,RefHH,Ref/hh,,
+Demand\Transport\Road\Bus\Natural Gas,Sales,Vehicle,,
+Demand\Transport\Road\Bus\Natural Gas,Scrappage,Vehicle,,
+Demand\Transport\Road\Bus\Natural Gas,Stock,Vehicle,,
+Demand\Transport\Road\Bus\Natural Gas\Natural Gas,Average Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Natural Gas\Natural Gas,Device Share,Share,%,
+Demand\Transport\Road\Bus\Natural Gas\Natural Gas,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Bus\Natural Gas\Natural Gas,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Natural Gas\Natural Gas,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Bus\Natural Gas\Natural Gas,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Natural Gas\Natural Gas,Mileage,Kilometer,,
+Demand\Transport\Road\Bus\Natural Gas\Natural Gas,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Bus\Natural Gas\Natural Gas,RefHH,Ref/hh,,
+Demand\Transport\Road\Motorcyle,Demand Cost,2020 USD,,Device
+Demand\Transport\Road\Motorcyle,RefHH,Ref/hh,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Motorcyle\Blended Gasoline,First Sales Year,Years,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Motorcyle\Blended Gasoline,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Motorcyle\Blended Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline,Sales,Vehicle,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline,Scrappage,Vehicle,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline,Stock,Vehicle,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline\Blended Gasoline,Average Mileage,Kilometer,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline\Blended Gasoline,Device Share,Share,%,
+Demand\Transport\Road\Motorcyle\Blended Gasoline\Blended Gasoline,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline\Blended Gasoline,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline\Blended Gasoline,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline\Blended Gasoline,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline\Blended Gasoline,Mileage,Kilometer,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline\Blended Gasoline,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Motorcyle\Blended Gasoline\Blended Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Road\Motorcyle\Electricity,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Motorcyle\Electricity,First Sales Year,Years,,
+Demand\Transport\Road\Motorcyle\Electricity,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Motorcyle\Electricity,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Motorcyle\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Road\Motorcyle\Electricity,Sales,Vehicle,,
+Demand\Transport\Road\Motorcyle\Electricity,Scrappage,Vehicle,,
+Demand\Transport\Road\Motorcyle\Electricity,Stock,Vehicle,,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,Average Mileage,Kilometer,,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,Device Share,Share,%,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,Load Shape,Percent,,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,Mileage,Kilometer,,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Motorcyle\Electricity\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Road\PassengerCar,Demand Cost,2020 USD,,Device
+Demand\Transport\Road\PassengerCar,RefHH,Ref/hh,,
+Demand\Transport\Road\PassengerCar\Blended Diesel,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\PassengerCar\Blended Diesel,First Sales Year,Years,,
+Demand\Transport\Road\PassengerCar\Blended Diesel,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\PassengerCar\Blended Diesel,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\PassengerCar\Blended Diesel,RefHH,Ref/hh,,
+Demand\Transport\Road\PassengerCar\Blended Diesel,Sales,Vehicle,,
+Demand\Transport\Road\PassengerCar\Blended Diesel,Scrappage,Vehicle,,
+Demand\Transport\Road\PassengerCar\Blended Diesel,Stock,Vehicle,,
+Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel,Average Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel,Device Share,Share,%,
+Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel,Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel,RefHH,Ref/hh,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\PassengerCar\Blended Gasoline,First Sales Year,Years,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\PassengerCar\Blended Gasoline,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\PassengerCar\Blended Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline,Sales,Vehicle,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline,Scrappage,Vehicle,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline,Stock,Vehicle,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline\Blended Gasoline,Average Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline\Blended Gasoline,Device Share,Share,%,
+Demand\Transport\Road\PassengerCar\Blended Gasoline\Blended Gasoline,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline\Blended Gasoline,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline\Blended Gasoline,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline\Blended Gasoline,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline\Blended Gasoline,Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline\Blended Gasoline,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\PassengerCar\Blended Gasoline\Blended Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Road\PassengerCar\Electricity,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\PassengerCar\Electricity,First Sales Year,Years,,
+Demand\Transport\Road\PassengerCar\Electricity,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\PassengerCar\Electricity,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\PassengerCar\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Road\PassengerCar\Electricity,Sales,Vehicle,,
+Demand\Transport\Road\PassengerCar\Electricity,Scrappage,Vehicle,,
+Demand\Transport\Road\PassengerCar\Electricity,Stock,Vehicle,,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,Average Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,Device Share,Share,%,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,Load Shape,Percent,,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\PassengerCar\Electricity\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Road\PassengerCar\Natural Gas,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\PassengerCar\Natural Gas,First Sales Year,Years,,
+Demand\Transport\Road\PassengerCar\Natural Gas,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\PassengerCar\Natural Gas,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\PassengerCar\Natural Gas,RefHH,Ref/hh,,
+Demand\Transport\Road\PassengerCar\Natural Gas,Sales,Vehicle,,
+Demand\Transport\Road\PassengerCar\Natural Gas,Scrappage,Vehicle,,
+Demand\Transport\Road\PassengerCar\Natural Gas,Stock,Vehicle,,
+Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas,Average Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas,Device Share,Share,%,
+Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas,Mileage,Kilometer,,
+Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck,Demand Cost,2020 USD,,Device
+Demand\Transport\Road\Truck,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Blended Diesel,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Truck\Blended Diesel,First Sales Year,Years,,
+Demand\Transport\Road\Truck\Blended Diesel,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Truck\Blended Diesel,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Truck\Blended Diesel,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Blended Diesel,Sales,Vehicle,,
+Demand\Transport\Road\Truck\Blended Diesel,Scrappage,Vehicle,,
+Demand\Transport\Road\Truck\Blended Diesel,Stock,Vehicle,,
+Demand\Transport\Road\Truck\Blended Diesel\Blended Diesel,Average Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Blended Diesel\Blended Diesel,Device Share,Share,%,
+Demand\Transport\Road\Truck\Blended Diesel\Blended Diesel,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Truck\Blended Diesel\Blended Diesel,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Blended Diesel\Blended Diesel,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Truck\Blended Diesel\Blended Diesel,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Blended Diesel\Blended Diesel,Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Blended Diesel\Blended Diesel,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Blended Diesel\Blended Diesel,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Blended Gasoline,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Truck\Blended Gasoline,First Sales Year,Years,,
+Demand\Transport\Road\Truck\Blended Gasoline,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Truck\Blended Gasoline,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Truck\Blended Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Blended Gasoline,Sales,Vehicle,,
+Demand\Transport\Road\Truck\Blended Gasoline,Scrappage,Vehicle,,
+Demand\Transport\Road\Truck\Blended Gasoline,Stock,Vehicle,,
+Demand\Transport\Road\Truck\Blended Gasoline\Blended Gasoline,Average Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Blended Gasoline\Blended Gasoline,Device Share,Share,%,
+Demand\Transport\Road\Truck\Blended Gasoline\Blended Gasoline,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Truck\Blended Gasoline\Blended Gasoline,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Blended Gasoline\Blended Gasoline,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Truck\Blended Gasoline\Blended Gasoline,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Blended Gasoline\Blended Gasoline,Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Blended Gasoline\Blended Gasoline,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Blended Gasoline\Blended Gasoline,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Electricity,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Truck\Electricity,First Sales Year,Years,,
+Demand\Transport\Road\Truck\Electricity,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Truck\Electricity,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Truck\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Electricity,Sales,Vehicle,,
+Demand\Transport\Road\Truck\Electricity,Scrappage,Vehicle,,
+Demand\Transport\Road\Truck\Electricity,Stock,Vehicle,,
+Demand\Transport\Road\Truck\Electricity\Electricity,Average Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Electricity\Electricity,Device Share,Share,%,
+Demand\Transport\Road\Truck\Electricity\Electricity,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Truck\Electricity\Electricity,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Electricity\Electricity,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Truck\Electricity\Electricity,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Electricity\Electricity,Load Shape,Percent,,
+Demand\Transport\Road\Truck\Electricity\Electricity,Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Electricity\Electricity,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Electricity\Electricity,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Hydrogen,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Truck\Hydrogen,First Sales Year,Years,,
+Demand\Transport\Road\Truck\Hydrogen,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Truck\Hydrogen,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Truck\Hydrogen,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Hydrogen,Sales,Vehicle,,
+Demand\Transport\Road\Truck\Hydrogen,Scrappage,Vehicle,,
+Demand\Transport\Road\Truck\Hydrogen,Stock,Vehicle,,
+Demand\Transport\Road\Truck\Hydrogen\Hydrogen,Average Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Hydrogen\Hydrogen,Device Share,Share,%,
+Demand\Transport\Road\Truck\Hydrogen\Hydrogen,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Truck\Hydrogen\Hydrogen,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Hydrogen\Hydrogen,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Truck\Hydrogen\Hydrogen,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Hydrogen\Hydrogen,Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Hydrogen\Hydrogen,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Hydrogen\Hydrogen,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Natural Gas,Demand Cost,2020 USD,,Vehicle
+Demand\Transport\Road\Truck\Natural Gas,First Sales Year,Years,,
+Demand\Transport\Road\Truck\Natural Gas,Fraction of Scrapped Replaced,Percent,%,
+Demand\Transport\Road\Truck\Natural Gas,Max Scrappage Fraction,Percent,%,
+Demand\Transport\Road\Truck\Natural Gas,RefHH,Ref/hh,,
+Demand\Transport\Road\Truck\Natural Gas,Sales,Vehicle,,
+Demand\Transport\Road\Truck\Natural Gas,Scrappage,Vehicle,,
+Demand\Transport\Road\Truck\Natural Gas,Stock,Vehicle,,
+Demand\Transport\Road\Truck\Natural Gas\Natural Gas,Average Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Natural Gas\Natural Gas,Device Share,Share,%,
+Demand\Transport\Road\Truck\Natural Gas\Natural Gas,Final On-Road Fuel Economy,Percent,,
+Demand\Transport\Road\Truck\Natural Gas\Natural Gas,Final On-Road Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Natural Gas\Natural Gas,Fuel Economy,MPG Gasoline US eq.,,
+Demand\Transport\Road\Truck\Natural Gas\Natural Gas,Fuel Economy Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Natural Gas\Natural Gas,Mileage,Kilometer,,
+Demand\Transport\Road\Truck\Natural Gas\Natural Gas,Mileage Correction Factor,Percent,,
+Demand\Transport\Road\Truck\Natural Gas\Natural Gas,RefHH,Ref/hh,,

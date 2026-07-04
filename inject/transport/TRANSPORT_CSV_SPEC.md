@@ -174,7 +174,7 @@ disabled in LEAP calc per operational state 2026-05-18).
 | Source | LEAP | Notes |
 |---|---|---|
 | `Electric` | `Electricity` | |
-| `Gasoline` | `Gasoline` | |
+| `Gasoline` | `Blended Gasoline` | canon-corrected 2026-07-03: the `aeo9_v0.67_w_results` structure export names the Road branch `Blended Gasoline`, not `Gasoline` |
 | `NaturalGas` | `Natural Gas` | |
 | `Hydrogen` | `Hydrogen` | |
 | `Hydrogen FCEV` | `Hydrogen` | collapsed |
@@ -208,10 +208,21 @@ LEAP branches in `aeo9_v0.46`. The canonical map:
 
 | Vehicle | Available fuels (LEAP) |
 |---|---|
-| Bus | Blended Diesel, Electricity, Gasoline, Hydrogen, Natural Gas |
-| Motorcyle | Electricity, Gasoline |
-| PassengerCar | Blended Diesel, Electricity, Gasoline, Natural Gas |
-| Truck | Blended Diesel, Electricity, Gasoline, Hydrogen, Natural Gas |
+| Bus | Blended Diesel, Blended Gasoline, Electricity, Hydrogen, Natural Gas |
+| Motorcyle | Blended Gasoline, Electricity |
+| PassengerCar | Blended Diesel, Blended Gasoline, Electricity, Natural Gas |
+| Truck | Blended Diesel, Blended Gasoline, Electricity, Hydrogen, Natural Gas |
+
+> **Canon correction 2026-07-03.** Per the `aeo9_v0.67_w_results`
+> structure export (`LEAP structure/trees/transport_tree.txt`), the
+> gasoline branch on all four vehicle classes is named
+> `Blended Gasoline` — the v0.46-era name `Gasoline` used in earlier
+> revisions of this table does not exist in the exported Demand tree.
+> The `Key\TransportDataStock` share trees still use plain `Gasoline`
+> (the two trees disagree on this name, same as the
+> `Motorcyle`/`Motorcycle` spelling split). The adapter's
+> `LEAP_AVAILABLE_FUELS_PER_VEHICLE` map still says `Gasoline` and
+> must be updated before the next Demand-tree push.
 
 Rows dropped 2026-05-19: `Motorcyle × Natural Gas`,
 `PassengerCar × Hydrogen`. If your source data needs these

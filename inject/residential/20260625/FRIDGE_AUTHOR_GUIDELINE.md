@@ -45,6 +45,17 @@ RAS-optimisation block in the inbound mapping doc) therefore have **no slot
 here** and are dropped. They belong to the §1.3b device-stock leaf variant,
 which is a different area version.
 
+> **Canon update 2026-07-03 — the paragraph above is superseded on the
+> current area.** Per the canon structure export
+> (`LEAP structure/LEAP_STRUCTURE_ANATOMY.md` §2.1 + §10.2, from
+> `aeo9_v0.67_w_results` 2026-07-02), the live area now carries the full
+> device-stock panel (`Unit Capacity`, `Exogenous Devices`, `Capital Cost`,
+> `Fixed/Variable OM Cost`, `Lifetime`, `Maximum Devices`, …) on the
+> `Refrigeration_` tiers — authorable, but **only in the 7 scenarios that
+> host the panel** (Set up, CNZ, RAS, LCO backup, RE LTRM ×3); the rows do
+> not exist in CA / Baseline Simulation / AMS Target Scenario / RAS test.
+> See `../structure_handover_20260703/README_RESIDENTIAL_CANON_STRUCTURE.md`.
+
 Informational / derived (never injected): `leaf_ownership_pct`, `kwh_unit`,
 `crf`, `tariff_usd_per_kwh`, `om_electricity_usd`, `price_usd`,
 `annualized_capital_usd`.
