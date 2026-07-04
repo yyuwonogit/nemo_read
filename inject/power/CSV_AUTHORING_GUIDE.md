@@ -117,12 +117,22 @@ covers come **from canon, not from re-derivation or COM re-probing**.
 Canon outranks this guide: if a claim here contradicts canon
 structure, canon wins and this guide gets fixed.
 
-**Boundary — power's inject targets are NOT in the canon exports.**
-Canon covers the 4 Demand sectors + the `Key\` tree + the
-`Resources\` tree. `Transformation\…\Processes\…` structure (this
-domain's entire §0 scope) is still **probe-derived** — the per-AMS
-tree-shape tables in §0 (confirmed against `aeo9_v0.38_yy`) remain
-the working reference until a Transformation export lands in canon.
+**Power's inject targets are NOW canon (Transformation exported
+2026-07-04, anatomy §14).** Canon covers all seven trees: the 4 Demand
+sectors + `Key\` + `Resources\` + `Transformation\`.
+`Transformation\…\Processes\…` structure — this domain's entire §0
+scope — is now **canon-verified**: the power slice (Centralized 1,093
+br + Distributed + Electricity T&D + storage = 1,100 branches) ships in
+this package as `transformation_slice_tree.txt` +
+`transformation_slice_branch_variables_units.csv` +
+`current_expressions_transformation_slice_4scenarios.csv`. Author
+against those, not the old probe-derived §0 tables. Canon confirmed the
+Unmet Load slack (18 branches priced 500/500 per §11.4), the 61-node
+fleet, and storage (Pumped Hydro/CAES/Li-Ion/VRB). **Audit watch-item:**
+the §11.2c must-run trap is LIVE — 494 rows author bare `Minimum
+Utilization = Maximum Availability` on variable renewables (27 in RAS,
+full-12-region in the RE-policy scenarios). §11.1 exported-view caveat:
+several tech families appear only as Malaysia `_MY*` variants here.
 
 What canon DOES give power — the `Key\` groups this domain's
 expressions and results plumbing connect to (anatomy §12.1):

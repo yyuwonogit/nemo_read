@@ -1,0 +1,679 @@
+branch_path,variable,units,scale,per
+Transformation\Anthracite Coal Production,Module Costs,U.S. Dollar,,
+Transformation\Anthracite Coal Production,Optimize,None,,
+Transformation\Anthracite Coal Production,Use Addition Size,None,,
+Transformation\Anthracite Coal Production\Output Fuels\Coal Anthracite,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Anthracite Coal Production\Output Fuels\Coal Anthracite,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Anthracite Coal Production\Output Fuels\Coal Anthracite,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Anthracite Coal Production\Output Fuels\Coal Anthracite,Output Share,Share,%,
+Transformation\Anthracite Coal Production\Processes\All Mines,Dispatch Rule,None,,
+Transformation\Anthracite Coal Production\Processes\All Mines,Lifetime,Years,,
+Transformation\Anthracite Coal Production\Processes\All Mines,Losses,Percent,,
+Transformation\Anthracite Coal Production\Processes\All Mines,Maximum Production,Gigajoule,,
+Transformation\Anthracite Coal Production\Processes\All Mines,Maximum_Share_of_Production,%,,
+Transformation\Anthracite Coal Production\Processes\All Mines,Minimum Production,Gigajoule,,
+Transformation\Anthracite Coal Production\Processes\All Mines,Minimum Share of Production,Percent,,
+Transformation\Anthracite Coal Production\Processes\All Mines,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Anthracite Coal Production\Processes\All Mines,Process Share,Share,%,
+Transformation\Anthracite Coal Production\Processes\All Mines,Variable OM Cost,U.S. Dollar,,Gigajoule
+Transformation\Anthracite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Anthracite,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Anthracite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Anthracite,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Anthracite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Anthracite,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Anthracite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Anthracite\Methane,Avg Environmental Loading,Kilogramme,,Tonnes of Coal Equivalent
+Transformation\Bituminous Coal Production,Module Costs,U.S. Dollar,,
+Transformation\Bituminous Coal Production,Optimize,None,,
+Transformation\Bituminous Coal Production,Use Addition Size,None,,
+Transformation\Bituminous Coal Production\Output Fuels\Coal Bituminous,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Bituminous Coal Production\Output Fuels\Coal Bituminous,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Bituminous Coal Production\Output Fuels\Coal Bituminous,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Bituminous Coal Production\Output Fuels\Coal Bituminous,Output Share,Share,%,
+Transformation\Bituminous Coal Production\Processes\All Mines,Dispatch Rule,None,,
+Transformation\Bituminous Coal Production\Processes\All Mines,Lifetime,Years,,
+Transformation\Bituminous Coal Production\Processes\All Mines,Losses,Percent,,
+Transformation\Bituminous Coal Production\Processes\All Mines,Maximum Production,Gigajoule,,
+Transformation\Bituminous Coal Production\Processes\All Mines,Maximum_Share_of_Production,%,,
+Transformation\Bituminous Coal Production\Processes\All Mines,Minimum Production,Gigajoule,,
+Transformation\Bituminous Coal Production\Processes\All Mines,Minimum Share of Production,Percent,,
+Transformation\Bituminous Coal Production\Processes\All Mines,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Bituminous Coal Production\Processes\All Mines,Process Share,Share,%,
+Transformation\Bituminous Coal Production\Processes\All Mines,Variable OM Cost,U.S. Dollar,,Gigajoule
+Transformation\Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Bituminous,Feedstock Fuel Share,U.S. Dollar,,Metric Tonne
+Transformation\Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Bituminous,Fuel Cost,U.S. Dollar,,Metric Tonne
+Transformation\Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Bituminous,Fuel Source,U.S. Dollar,,Metric Tonne
+Transformation\Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Bituminous\Methane,Avg Environmental Loading,Kilogramme,,Tonnes of Coal Equivalent
+Transformation\Crude Oil Production,Module Costs,2020 USD,,
+Transformation\Crude Oil Production,Optimize,None,,
+Transformation\Crude Oil Production,Use Addition Size,None,,
+Transformation\Crude Oil Production\Output Fuels\Crude Oil,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Crude Oil Production\Output Fuels\Crude Oil,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Crude Oil Production\Output Fuels\Crude Oil,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Crude Oil Production\Output Fuels\Crude Oil,Output Share,Share,%,
+Transformation\Crude Oil Production\Processes\Crude Oil,Dispatch Rule,None,,
+Transformation\Crude Oil Production\Processes\Crude Oil,Lifetime,Years,,
+Transformation\Crude Oil Production\Processes\Crude Oil,Losses,Percent,,
+Transformation\Crude Oil Production\Processes\Crude Oil,Maximum Production,Gigajoule,,
+Transformation\Crude Oil Production\Processes\Crude Oil,Maximum_Share_of_Production,%,,
+Transformation\Crude Oil Production\Processes\Crude Oil,Minimum Production,Gigajoule,,
+Transformation\Crude Oil Production\Processes\Crude Oil,Minimum Share of Production,Percent,,
+Transformation\Crude Oil Production\Processes\Crude Oil,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Crude Oil Production\Processes\Crude Oil,Process Share,Share,%,
+Transformation\Crude Oil Production\Processes\Crude Oil,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Tonnes of Oil Equivalent
+Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Methane,Avg Environmental Loading,Kilogramme,,Tonnes of Oil Equivalent
+Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Tonnes of Oil Equivalent
+Transformation\Diesel Blending,Optimize,None,,
+Transformation\Diesel Blending,Peak Load Ratio,Percent,,
+Transformation\Diesel Blending,Planning Reserve Margin,Percent,,
+Transformation\Diesel Blending,Renewable Target,Percent,,
+Transformation\Diesel Blending,Use Addition Size,None,,
+Transformation\Diesel Blending\Output Fuels\Blended Diesel,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Diesel Blending\Output Fuels\Blended Diesel,Import Target,Tonnes of Oil Equivalent,,
+Transformation\Diesel Blending\Output Fuels\Blended Diesel,Output Share,Share,%,
+Transformation\Diesel Blending\Output Fuels\Blended Diesel,Shortfall Rule,None,,
+Transformation\Diesel Blending\Output Fuels\Blended Diesel,Surplus Rule,None,,
+Transformation\Diesel Blending\Output Fuels\Blended Diesel,Usage Rule,None,,
+Transformation\Diesel Blending\Processes\Biodiesel,Capacity Credit,Percent,,
+Transformation\Diesel Blending\Processes\Biodiesel,Dispatch Rule,None,,
+Transformation\Diesel Blending\Processes\Biodiesel,Dispatchable,Yes/No,,
+Transformation\Diesel Blending\Processes\Biodiesel,Endogenous Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Biodiesel,Exogenous Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Biodiesel,First Simulation Year,Years,,
+Transformation\Diesel Blending\Processes\Biodiesel,Interest Rate,Percent,,
+Transformation\Diesel Blending\Processes\Biodiesel,Lifetime,Years,,
+Transformation\Diesel Blending\Processes\Biodiesel,Maximum Availability,Percent,,
+Transformation\Diesel Blending\Processes\Biodiesel,Maximum Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Biodiesel,Maximum Capacity Addition,Megawatt,,
+Transformation\Diesel Blending\Processes\Biodiesel,Maximum Production,Gigajoule,,
+Transformation\Diesel Blending\Processes\Biodiesel,Maximum_Share_of_Production,%,,
+Transformation\Diesel Blending\Processes\Biodiesel,Merit Order,Merit Order,,
+Transformation\Diesel Blending\Processes\Biodiesel,Minimum Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Biodiesel,Minimum Capacity Addition,Megawatt,,
+Transformation\Diesel Blending\Processes\Biodiesel,Minimum Production,Gigajoule,,
+Transformation\Diesel Blending\Processes\Biodiesel,Minimum Share of Production,Percent,,
+Transformation\Diesel Blending\Processes\Biodiesel,Minimum Utilization,Percent,,
+Transformation\Diesel Blending\Processes\Biodiesel,Optimized New Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Biodiesel,Process Efficiency,Percent,,
+Transformation\Diesel Blending\Processes\Biodiesel,Process Share,Share,%,
+Transformation\Diesel Blending\Processes\Biodiesel,Renewable Qualified,Percent,,
+Transformation\Diesel Blending\Processes\Biodiesel\Feedstock Fuels\Biodiesel,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Diesel Blending\Processes\Biodiesel\Feedstock Fuels\Biodiesel,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Diesel Blending\Processes\Diesel,Capacity Credit,Percent,,
+Transformation\Diesel Blending\Processes\Diesel,Dispatch Rule,None,,
+Transformation\Diesel Blending\Processes\Diesel,Dispatchable,Yes/No,,
+Transformation\Diesel Blending\Processes\Diesel,Endogenous Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Diesel,Exogenous Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Diesel,First Simulation Year,Years,,
+Transformation\Diesel Blending\Processes\Diesel,Interest Rate,Percent,,
+Transformation\Diesel Blending\Processes\Diesel,Lifetime,Years,,
+Transformation\Diesel Blending\Processes\Diesel,Maximum Availability,Percent,,
+Transformation\Diesel Blending\Processes\Diesel,Maximum Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Diesel,Maximum Capacity Addition,Megawatt,,
+Transformation\Diesel Blending\Processes\Diesel,Maximum Production,Gigajoule,,
+Transformation\Diesel Blending\Processes\Diesel,Maximum_Share_of_Production,%,,
+Transformation\Diesel Blending\Processes\Diesel,Merit Order,Merit Order,,
+Transformation\Diesel Blending\Processes\Diesel,Minimum Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Diesel,Minimum Capacity Addition,Megawatt,,
+Transformation\Diesel Blending\Processes\Diesel,Minimum Production,Gigajoule,,
+Transformation\Diesel Blending\Processes\Diesel,Minimum Share of Production,Percent,,
+Transformation\Diesel Blending\Processes\Diesel,Minimum Utilization,Percent,,
+Transformation\Diesel Blending\Processes\Diesel,Optimized New Capacity,Megawatt,,
+Transformation\Diesel Blending\Processes\Diesel,Process Efficiency,Percent,,
+Transformation\Diesel Blending\Processes\Diesel,Process Share,Share,%,
+Transformation\Diesel Blending\Processes\Diesel,Renewable Qualified,Percent,,
+Transformation\Diesel Blending\Processes\Diesel\Feedstock Fuels\Diesel,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Diesel Blending\Processes\Diesel\Feedstock Fuels\Diesel,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use,Module Costs,U.S. Dollar,,
+Transformation\Energy Sector Own Use\Processes\Crude Oil,Lifetime,Years,,
+Transformation\Energy Sector Own Use\Processes\Crude Oil,Losses,Percent,,
+Transformation\Energy Sector Own Use\Processes\Crude Oil,Maximum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\Crude Oil,Maximum_Share_of_Production,%,,
+Transformation\Energy Sector Own Use\Processes\Crude Oil,Minimum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\Crude Oil,Minimum Share of Production,Percent,,
+Transformation\Energy Sector Own Use\Processes\Crude Oil,Optimized New Capacity,Megawatt,,
+Transformation\Energy Sector Own Use\Processes\Crude Oil,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Transformation\Energy Sector Own Use\Processes\Electricity,Lifetime,Years,,
+Transformation\Energy Sector Own Use\Processes\Electricity,Losses,Percent,,
+Transformation\Energy Sector Own Use\Processes\Electricity,Maximum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\Electricity,Maximum_Share_of_Production,%,,
+Transformation\Energy Sector Own Use\Processes\Electricity,Minimum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\Electricity,Minimum Share of Production,Percent,,
+Transformation\Energy Sector Own Use\Processes\Electricity,Optimized New Capacity,Megawatt,,
+Transformation\Energy Sector Own Use\Processes\Electricity,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Energy Sector Own Use\Processes\Electricity\Feedstock Fuels\Electricity,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\Electricity\Feedstock Fuels\Electricity,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\Electricity\Feedstock Fuels\Electricity,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\LNG,Lifetime,Years,,
+Transformation\Energy Sector Own Use\Processes\LNG,Losses,Percent,,
+Transformation\Energy Sector Own Use\Processes\LNG,Maximum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\LNG,Maximum_Share_of_Production,%,,
+Transformation\Energy Sector Own Use\Processes\LNG,Minimum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\LNG,Minimum Share of Production,Percent,,
+Transformation\Energy Sector Own Use\Processes\LNG,Optimized New Capacity,Megawatt,,
+Transformation\Energy Sector Own Use\Processes\LNG,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Transformation\Energy Sector Own Use\Processes\LPG,Lifetime,Years,,
+Transformation\Energy Sector Own Use\Processes\LPG,Losses,Percent,,
+Transformation\Energy Sector Own Use\Processes\LPG,Maximum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\LPG,Maximum_Share_of_Production,%,,
+Transformation\Energy Sector Own Use\Processes\LPG,Minimum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\LPG,Minimum Share of Production,Percent,,
+Transformation\Energy Sector Own Use\Processes\LPG,Optimized New Capacity,Megawatt,,
+Transformation\Energy Sector Own Use\Processes\LPG,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Transformation\Energy Sector Own Use\Processes\Natural Gas,Lifetime,Years,,
+Transformation\Energy Sector Own Use\Processes\Natural Gas,Losses,Percent,,
+Transformation\Energy Sector Own Use\Processes\Natural Gas,Maximum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\Natural Gas,Maximum_Share_of_Production,%,,
+Transformation\Energy Sector Own Use\Processes\Natural Gas,Minimum Production,Gigajoule,,
+Transformation\Energy Sector Own Use\Processes\Natural Gas,Minimum Share of Production,Percent,,
+Transformation\Energy Sector Own Use\Processes\Natural Gas,Optimized New Capacity,Megawatt,,
+Transformation\Energy Sector Own Use\Processes\Natural Gas,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Transformation\Gas Processing,Module Costs,2020 USD,,
+Transformation\Gas Processing,Optimize,None,,
+Transformation\Gas Processing,Peak Load Ratio,Percent,,
+Transformation\Gas Processing,Planning Reserve Margin,Percent,,
+Transformation\Gas Processing,Renewable Target,Percent,,
+Transformation\Gas Processing,Use Addition Size,None,,
+Transformation\Gas Processing\Output Fuels\Diesel,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\Diesel,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\Diesel,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Gas Processing\Output Fuels\Diesel,Output Share,Share,%,
+Transformation\Gas Processing\Output Fuels\Diesel,Shortfall Rule,None,,
+Transformation\Gas Processing\Output Fuels\Diesel,Surplus Rule,None,,
+Transformation\Gas Processing\Output Fuels\Diesel,Usage Rule,None,,
+Transformation\Gas Processing\Output Fuels\Kerosene,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\Kerosene,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\Kerosene,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Gas Processing\Output Fuels\Kerosene,Output Share,Share,%,
+Transformation\Gas Processing\Output Fuels\Kerosene,Shortfall Rule,None,,
+Transformation\Gas Processing\Output Fuels\Kerosene,Surplus Rule,None,,
+Transformation\Gas Processing\Output Fuels\Kerosene,Usage Rule,None,,
+Transformation\Gas Processing\Output Fuels\LNG,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\LNG,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\LNG,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Gas Processing\Output Fuels\LNG,Output Share,Share,%,
+Transformation\Gas Processing\Output Fuels\LNG,Shortfall Rule,None,,
+Transformation\Gas Processing\Output Fuels\LNG,Surplus Rule,None,,
+Transformation\Gas Processing\Output Fuels\LNG,Usage Rule,None,,
+Transformation\Gas Processing\Output Fuels\LPG,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\LPG,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\LPG,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Gas Processing\Output Fuels\LPG,Output Share,Share,%,
+Transformation\Gas Processing\Output Fuels\LPG,Shortfall Rule,None,,
+Transformation\Gas Processing\Output Fuels\LPG,Surplus Rule,None,,
+Transformation\Gas Processing\Output Fuels\LPG,Usage Rule,None,,
+Transformation\Gas Processing\Output Fuels\Natural Gas Liquids,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\Natural Gas Liquids,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\Natural Gas Liquids,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Gas Processing\Output Fuels\Natural Gas Liquids,Output Share,Share,%,
+Transformation\Gas Processing\Output Fuels\Natural Gas Liquids,Shortfall Rule,None,,
+Transformation\Gas Processing\Output Fuels\Natural Gas Liquids,Surplus Rule,None,,
+Transformation\Gas Processing\Output Fuels\Natural Gas Liquids,Usage Rule,None,,
+Transformation\Gas Processing\Output Fuels\Oil,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\Oil,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Output Fuels\Oil,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Gas Processing\Output Fuels\Oil,Output Share,Share,%,
+Transformation\Gas Processing\Output Fuels\Oil,Shortfall Rule,None,,
+Transformation\Gas Processing\Output Fuels\Oil,Surplus Rule,None,,
+Transformation\Gas Processing\Output Fuels\Oil,Usage Rule,None,,
+Transformation\Gas Processing\Processes\Natural Gas,Capacity Credit,Percent,,
+Transformation\Gas Processing\Processes\Natural Gas,Capital Cost,2020 USD,,Tonnes Oil Equiv/Year
+Transformation\Gas Processing\Processes\Natural Gas,Dispatch Rule,None,,
+Transformation\Gas Processing\Processes\Natural Gas,Dispatchable,Yes/No,,
+Transformation\Gas Processing\Processes\Natural Gas,Endogenous Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Gas Processing\Processes\Natural Gas,Exogenous Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Gas Processing\Processes\Natural Gas,First Simulation Year,Years,,
+Transformation\Gas Processing\Processes\Natural Gas,Fixed OM Cost,2020 USD,,Tonnes Oil Equiv/Year
+Transformation\Gas Processing\Processes\Natural Gas,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Gas Processing\Processes\Natural Gas,Interest Rate,Percent,,
+Transformation\Gas Processing\Processes\Natural Gas,Lifetime,Years,,
+Transformation\Gas Processing\Processes\Natural Gas,Maximum Availability,Percent,,
+Transformation\Gas Processing\Processes\Natural Gas,Maximum Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Gas Processing\Processes\Natural Gas,Maximum Capacity Addition,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Gas Processing\Processes\Natural Gas,Maximum Production,Gigajoule,,
+Transformation\Gas Processing\Processes\Natural Gas,Maximum_Share_of_Production,%,,
+Transformation\Gas Processing\Processes\Natural Gas,Merit Order,Merit Order,,
+Transformation\Gas Processing\Processes\Natural Gas,Minimum Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Gas Processing\Processes\Natural Gas,Minimum Capacity Addition,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Gas Processing\Processes\Natural Gas,Minimum Production,Gigajoule,,
+Transformation\Gas Processing\Processes\Natural Gas,Minimum Share of Production,Percent,,
+Transformation\Gas Processing\Processes\Natural Gas,Minimum Utilization,Percent,,
+Transformation\Gas Processing\Processes\Natural Gas,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Gas Processing\Processes\Natural Gas,Process Efficiency,Percent,,
+Transformation\Gas Processing\Processes\Natural Gas,Process Share,Share,%,
+Transformation\Gas Processing\Processes\Natural Gas,Renewable Qualified,Percent,,
+Transformation\Gas Processing\Processes\Natural Gas,Salvage Value,2020 USD,,Tonnes Oil Equiv/Year
+Transformation\Gas Processing\Processes\Natural Gas,Stranded Cost,2020 USD,,
+Transformation\Gas Processing\Processes\Natural Gas,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Gasoline Blending,Optimize,None,,
+Transformation\Gasoline Blending,Peak Load Ratio,Percent,,
+Transformation\Gasoline Blending,Planning Reserve Margin,Percent,,
+Transformation\Gasoline Blending,Renewable Target,Percent,,
+Transformation\Gasoline Blending,Use Addition Size,None,,
+Transformation\Gasoline Blending\Output Fuels\Blended Gasoline,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Gasoline Blending\Output Fuels\Blended Gasoline,Import Target,Tonnes of Oil Equivalent,,
+Transformation\Gasoline Blending\Output Fuels\Blended Gasoline,Output Share,Share,%,
+Transformation\Gasoline Blending\Output Fuels\Blended Gasoline,Shortfall Rule,None,,
+Transformation\Gasoline Blending\Output Fuels\Blended Gasoline,Surplus Rule,None,,
+Transformation\Gasoline Blending\Output Fuels\Blended Gasoline,Usage Rule,None,,
+Transformation\Gasoline Blending\Processes\Ethanol,Capacity Credit,Percent,,
+Transformation\Gasoline Blending\Processes\Ethanol,Dispatch Rule,None,,
+Transformation\Gasoline Blending\Processes\Ethanol,Dispatchable,Yes/No,,
+Transformation\Gasoline Blending\Processes\Ethanol,Endogenous Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Ethanol,Exogenous Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Ethanol,First Simulation Year,Years,,
+Transformation\Gasoline Blending\Processes\Ethanol,Interest Rate,Percent,,
+Transformation\Gasoline Blending\Processes\Ethanol,Lifetime,Years,,
+Transformation\Gasoline Blending\Processes\Ethanol,Maximum Availability,Percent,,
+Transformation\Gasoline Blending\Processes\Ethanol,Maximum Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Ethanol,Maximum Capacity Addition,Megawatt,,
+Transformation\Gasoline Blending\Processes\Ethanol,Maximum Production,Gigajoule,,
+Transformation\Gasoline Blending\Processes\Ethanol,Maximum_Share_of_Production,%,,
+Transformation\Gasoline Blending\Processes\Ethanol,Merit Order,Merit Order,,
+Transformation\Gasoline Blending\Processes\Ethanol,Minimum Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Ethanol,Minimum Capacity Addition,Megawatt,,
+Transformation\Gasoline Blending\Processes\Ethanol,Minimum Production,Gigajoule,,
+Transformation\Gasoline Blending\Processes\Ethanol,Minimum Share of Production,Percent,,
+Transformation\Gasoline Blending\Processes\Ethanol,Minimum Utilization,Percent,,
+Transformation\Gasoline Blending\Processes\Ethanol,Optimized New Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Ethanol,Process Efficiency,Percent,,
+Transformation\Gasoline Blending\Processes\Ethanol,Process Share,Share,%,
+Transformation\Gasoline Blending\Processes\Ethanol,Renewable Qualified,Percent,,
+Transformation\Gasoline Blending\Processes\Ethanol\Feedstock Fuels\Ethanol,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Gasoline Blending\Processes\Ethanol\Feedstock Fuels\Ethanol,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Gasoline Blending\Processes\Gasoline,Capacity Credit,Percent,,
+Transformation\Gasoline Blending\Processes\Gasoline,Dispatch Rule,None,,
+Transformation\Gasoline Blending\Processes\Gasoline,Dispatchable,Yes/No,,
+Transformation\Gasoline Blending\Processes\Gasoline,Endogenous Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Gasoline,Exogenous Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Gasoline,First Simulation Year,Years,,
+Transformation\Gasoline Blending\Processes\Gasoline,Interest Rate,Percent,,
+Transformation\Gasoline Blending\Processes\Gasoline,Lifetime,Years,,
+Transformation\Gasoline Blending\Processes\Gasoline,Maximum Availability,Percent,,
+Transformation\Gasoline Blending\Processes\Gasoline,Maximum Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Gasoline,Maximum Capacity Addition,Megawatt,,
+Transformation\Gasoline Blending\Processes\Gasoline,Maximum Production,Gigajoule,,
+Transformation\Gasoline Blending\Processes\Gasoline,Maximum_Share_of_Production,%,,
+Transformation\Gasoline Blending\Processes\Gasoline,Merit Order,Merit Order,,
+Transformation\Gasoline Blending\Processes\Gasoline,Minimum Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Gasoline,Minimum Capacity Addition,Megawatt,,
+Transformation\Gasoline Blending\Processes\Gasoline,Minimum Production,Gigajoule,,
+Transformation\Gasoline Blending\Processes\Gasoline,Minimum Share of Production,Percent,,
+Transformation\Gasoline Blending\Processes\Gasoline,Minimum Utilization,Percent,,
+Transformation\Gasoline Blending\Processes\Gasoline,Optimized New Capacity,Megawatt,,
+Transformation\Gasoline Blending\Processes\Gasoline,Process Efficiency,Percent,,
+Transformation\Gasoline Blending\Processes\Gasoline,Process Share,Share,%,
+Transformation\Gasoline Blending\Processes\Gasoline,Renewable Qualified,Percent,,
+Transformation\Gasoline Blending\Processes\Gasoline\Feedstock Fuels\Gasoline,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Gasoline Blending\Processes\Gasoline\Feedstock Fuels\Gasoline,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Gasoline Distribution and Handling,Module Costs,2020 USD,,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline,Lifetime,Years,,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline,Maximum Production,Gigajoule,,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline,Maximum_Share_of_Production,%,,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline,Minimum Production,Gigajoule,,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline,Minimum Share of Production,Percent,,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline,Optimized New Capacity,Megawatt,,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline,Process Efficiency,Percent,,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline\Feedstock Fuels\Gasoline,Annual Avg Ambient Temp,Degrees Celsius,,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline\Feedstock Fuels\Gasoline,Annual Avg Reid Vapour Pressure,Pascals,Thousand,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline\Feedstock Fuels\Gasoline,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline\Feedstock Fuels\Gasoline,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline\Feedstock Fuels\Gasoline,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline\Feedstock Fuels\Gasoline,TVP,Pascals,Thousand,
+Transformation\Gasoline Distribution and Handling\Processes\Gasoline\Feedstock Fuels\Gasoline\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\LNG Regasification,Module Costs,2020 USD,,
+Transformation\LNG Regasification,Optimize,None,,
+Transformation\LNG Regasification,Use Addition Size,None,,
+Transformation\LNG Regasification\Output Fuels\Natural Gas,Export Target,Tonnes of Oil Equivalent,,
+Transformation\LNG Regasification\Output Fuels\Natural Gas,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\LNG Regasification\Output Fuels\Natural Gas,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\LNG Regasification\Output Fuels\Natural Gas,Output Share,Share,%,
+Transformation\LNG Regasification\Processes\LNG,Dispatch Rule,None,,
+Transformation\LNG Regasification\Processes\LNG,Lifetime,Years,,
+Transformation\LNG Regasification\Processes\LNG,Maximum Production,Gigajoule,,
+Transformation\LNG Regasification\Processes\LNG,Maximum_Share_of_Production,%,,
+Transformation\LNG Regasification\Processes\LNG,Minimum Production,Gigajoule,,
+Transformation\LNG Regasification\Processes\LNG,Minimum Share of Production,Percent,,
+Transformation\LNG Regasification\Processes\LNG,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\LNG Regasification\Processes\LNG,Process Efficiency,Percent,,
+Transformation\LNG Regasification\Processes\LNG,Process Share,Share,%,
+Transformation\LNG Regasification\Processes\LNG,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Lignite Coal Production,Module Costs,U.S. Dollar,,
+Transformation\Lignite Coal Production,Optimize,None,,
+Transformation\Lignite Coal Production,Use Addition Size,None,,
+Transformation\Lignite Coal Production\Output Fuels\Coal Lignite,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Lignite Coal Production\Output Fuels\Coal Lignite,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Lignite Coal Production\Output Fuels\Coal Lignite,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Lignite Coal Production\Output Fuels\Coal Lignite,Output Share,Share,%,
+Transformation\Lignite Coal Production\Processes\All Mines,Dispatch Rule,None,,
+Transformation\Lignite Coal Production\Processes\All Mines,Lifetime,Years,,
+Transformation\Lignite Coal Production\Processes\All Mines,Losses,Percent,,
+Transformation\Lignite Coal Production\Processes\All Mines,Maximum Production,Gigajoule,,
+Transformation\Lignite Coal Production\Processes\All Mines,Maximum_Share_of_Production,%,,
+Transformation\Lignite Coal Production\Processes\All Mines,Minimum Production,Gigajoule,,
+Transformation\Lignite Coal Production\Processes\All Mines,Minimum Share of Production,Percent,,
+Transformation\Lignite Coal Production\Processes\All Mines,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Lignite Coal Production\Processes\All Mines,Process Share,Share,%,
+Transformation\Lignite Coal Production\Processes\All Mines,Variable OM Cost,U.S. Dollar,,Gigajoule
+Transformation\Lignite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Lignite,Feedstock Fuel Share,U.S. Dollar,,Metric Tonne
+Transformation\Lignite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Lignite,Fuel Cost,U.S. Dollar,,Metric Tonne
+Transformation\Lignite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Lignite,Fuel Source,U.S. Dollar,,Metric Tonne
+Transformation\Lignite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Lignite\Methane,Avg Environmental Loading,Kilogramme,,Tonnes of Coal Equivalent
+Transformation\Natural Gas Production,Module Costs,2020 USD,,
+Transformation\Natural Gas Production,Optimize,None,,
+Transformation\Natural Gas Production,Use Addition Size,None,,
+Transformation\Natural Gas Production\Output Fuels\Natural Gas,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Natural Gas Production\Output Fuels\Natural Gas,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Natural Gas Production\Output Fuels\Natural Gas,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Natural Gas Production\Output Fuels\Natural Gas,Output Share,Share,%,
+Transformation\Natural Gas Production\Processes\Natural Gas,Dispatch Rule,None,,
+Transformation\Natural Gas Production\Processes\Natural Gas,Lifetime,Years,,
+Transformation\Natural Gas Production\Processes\Natural Gas,Losses,Percent,,
+Transformation\Natural Gas Production\Processes\Natural Gas,Maximum Production,Gigajoule,,
+Transformation\Natural Gas Production\Processes\Natural Gas,Maximum_Share_of_Production,%,,
+Transformation\Natural Gas Production\Processes\Natural Gas,Minimum Production,Gigajoule,,
+Transformation\Natural Gas Production\Processes\Natural Gas,Minimum Share of Production,Percent,,
+Transformation\Natural Gas Production\Processes\Natural Gas,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Natural Gas Production\Processes\Natural Gas,Process Share,Share,%,
+Transformation\Natural Gas Production\Processes\Natural Gas,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Natural Gas Transmission and Distribution,Module Costs,2020 USD,,
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas,Lifetime,Years,,
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas,Losses,Percent,,
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas,Maximum Production,Gigajoule,,
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas,Maximum_Share_of_Production,%,,
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas,Minimum Production,Gigajoule,,
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas,Minimum Share of Production,Percent,,
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas,Optimized New Capacity,Megawatt,,
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Oil Refining,Module Costs,2020 USD,,
+Transformation\Oil Refining,Optimize,None,,
+Transformation\Oil Refining,Peak Load Ratio,Percent,,
+Transformation\Oil Refining,Planning Reserve Margin,Percent,,
+Transformation\Oil Refining,Renewable Target,Percent,,
+Transformation\Oil Refining,Use Addition Size,None,,
+Transformation\Oil Refining\Output Fuels\Avgas,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Avgas,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Avgas,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Avgas,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Avgas,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Avgas,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Avgas,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Avgas,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Bitumen,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Bitumen,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Bitumen,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Bitumen,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Bitumen,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Bitumen,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Bitumen,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Bitumen,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Diesel,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Diesel,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Diesel,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Diesel,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Diesel,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Diesel,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Diesel,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Diesel,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Gasoline,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Gasoline,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Gasoline,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Gasoline,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Gasoline,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Gasoline,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Gasoline,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Gasoline,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Jet Kerosene,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Jet Kerosene,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Jet Kerosene,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Jet Kerosene,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Jet Kerosene,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Jet Kerosene,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Jet Kerosene,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Jet Kerosene,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Kerosene,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Kerosene,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Kerosene,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Kerosene,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Kerosene,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Kerosene,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Kerosene,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Kerosene,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\LPG,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\LPG,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\LPG,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\LPG,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\LPG,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\LPG,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\LPG,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\LPG,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Lubricants,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Lubricants,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Lubricants,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Lubricants,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Lubricants,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Lubricants,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Lubricants,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Lubricants,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Naphtha,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Naphtha,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Naphtha,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Naphtha,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Naphtha,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Naphtha,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Naphtha,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Naphtha,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Oil,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Oil,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Oil,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Oil,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Oil,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Oil,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Oil,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Oil,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Petroleum Coke,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Petroleum Coke,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Petroleum Coke,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Petroleum Coke,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Petroleum Coke,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Petroleum Coke,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Petroleum Coke,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Petroleum Coke,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Refinery Feedstocks,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Refinery Feedstocks,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Refinery Feedstocks,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Refinery Feedstocks,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Refinery Feedstocks,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Refinery Feedstocks,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Refinery Feedstocks,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Refinery Feedstocks,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Refinery Gas,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Refinery Gas,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Refinery Gas,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Refinery Gas,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Refinery Gas,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Refinery Gas,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Refinery Gas,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Refinery Gas,Usage Rule,None,,
+Transformation\Oil Refining\Output Fuels\Residual Fuel Oil,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Residual Fuel Oil,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Output Fuels\Residual Fuel Oil,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Oil Refining\Output Fuels\Residual Fuel Oil,Output Share,Share,%,
+Transformation\Oil Refining\Output Fuels\Residual Fuel Oil,Priority Output,None,,
+Transformation\Oil Refining\Output Fuels\Residual Fuel Oil,Shortfall Rule,None,,
+Transformation\Oil Refining\Output Fuels\Residual Fuel Oil,Surplus Rule,None,,
+Transformation\Oil Refining\Output Fuels\Residual Fuel Oil,Usage Rule,None,,
+Transformation\Oil Refining\Processes\All Refineries,Capacity Credit,Percent,,
+Transformation\Oil Refining\Processes\All Refineries,Capital Cost,2020 USD,,Gigajoules/Year
+Transformation\Oil Refining\Processes\All Refineries,Dispatch Rule,None,,
+Transformation\Oil Refining\Processes\All Refineries,Dispatchable,Yes/No,,
+Transformation\Oil Refining\Processes\All Refineries,Endogenous Capacity,Gigajoules/Year,Thousand,
+Transformation\Oil Refining\Processes\All Refineries,Exogenous Capacity,Gigajoules/Year,Thousand,
+Transformation\Oil Refining\Processes\All Refineries,First Simulation Year,Years,,
+Transformation\Oil Refining\Processes\All Refineries,Fixed OM Cost,2020 USD,,Gigajoules/Year
+Transformation\Oil Refining\Processes\All Refineries,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Oil Refining\Processes\All Refineries,Interest Rate,Percent,,
+Transformation\Oil Refining\Processes\All Refineries,Lifetime,Years,,
+Transformation\Oil Refining\Processes\All Refineries,Maximum Availability,Percent,,
+Transformation\Oil Refining\Processes\All Refineries,Maximum Capacity,Gigajoules/Year,Thousand,
+Transformation\Oil Refining\Processes\All Refineries,Maximum Capacity Addition,Gigajoules/Year,Thousand,
+Transformation\Oil Refining\Processes\All Refineries,Maximum Production,Gigajoule,,
+Transformation\Oil Refining\Processes\All Refineries,Maximum_Share_of_Production,%,,
+Transformation\Oil Refining\Processes\All Refineries,Merit Order,Merit Order,,
+Transformation\Oil Refining\Processes\All Refineries,Minimum Capacity,Gigajoules/Year,Thousand,
+Transformation\Oil Refining\Processes\All Refineries,Minimum Capacity Addition,Gigajoules/Year,Thousand,
+Transformation\Oil Refining\Processes\All Refineries,Minimum Production,Gigajoule,,
+Transformation\Oil Refining\Processes\All Refineries,Minimum Share of Production,Percent,,
+Transformation\Oil Refining\Processes\All Refineries,Minimum Utilization,Percent,,
+Transformation\Oil Refining\Processes\All Refineries,Optimized New Capacity,Gigajoules/Year,Thousand,
+Transformation\Oil Refining\Processes\All Refineries,Process Efficiency,Percent,,
+Transformation\Oil Refining\Processes\All Refineries,Process Share,Share,%,
+Transformation\Oil Refining\Processes\All Refineries,Renewable Qualified,Percent,,
+Transformation\Oil Refining\Processes\All Refineries,Salvage Value,2020 USD,,Gigajoules/Year
+Transformation\Oil Refining\Processes\All Refineries,Stranded Cost,2020 USD,,
+Transformation\Oil Refining\Processes\All Refineries,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas,Feedstock Fuel Share,U.S. Dollar,,Cubic Meter
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Cubic Meter
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Cubic Meter
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Sub Bituminous Coal Production,Module Costs,U.S. Dollar,,
+Transformation\Sub Bituminous Coal Production,Optimize,None,,
+Transformation\Sub Bituminous Coal Production,Use Addition Size,None,,
+Transformation\Sub Bituminous Coal Production\Output Fuels\Coal Sub bituminous,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Sub Bituminous Coal Production\Output Fuels\Coal Sub bituminous,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Sub Bituminous Coal Production\Output Fuels\Coal Sub bituminous,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Sub Bituminous Coal Production\Output Fuels\Coal Sub bituminous,Output Share,Share,%,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Dispatch Rule,None,,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Lifetime,Years,,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Losses,Percent,,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Maximum Production,Gigajoule,,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Maximum_Share_of_Production,%,,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Minimum Production,Gigajoule,,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Minimum Share of Production,Percent,,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Process Share,Share,%,
+Transformation\Sub Bituminous Coal Production\Processes\All Mines,Variable OM Cost,U.S. Dollar,,Gigajoule
+Transformation\Sub Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Sub bituminous,Feedstock Fuel Share,2020 USD,,Metric Tonne
+Transformation\Sub Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Sub bituminous,Fuel Cost,2020 USD,,Metric Tonne
+Transformation\Sub Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Sub bituminous,Fuel Source,2020 USD,,Metric Tonne
+Transformation\Sub Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Sub bituminous\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Unspecified Coal Production,Module Costs,U.S. Dollar,,
+Transformation\Unspecified Coal Production,Optimize,None,,
+Transformation\Unspecified Coal Production,Use Addition Size,None,,
+Transformation\Unspecified Coal Production\Output Fuels\Coal Unspecified,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Unspecified Coal Production\Output Fuels\Coal Unspecified,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Unspecified Coal Production\Output Fuels\Coal Unspecified,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Unspecified Coal Production\Output Fuels\Coal Unspecified,Output Share,Share,%,
+Transformation\Unspecified Coal Production\Processes\All Mines,Dispatch Rule,None,,
+Transformation\Unspecified Coal Production\Processes\All Mines,Lifetime,Years,,
+Transformation\Unspecified Coal Production\Processes\All Mines,Losses,Percent,,
+Transformation\Unspecified Coal Production\Processes\All Mines,Maximum Production,Gigajoule,,
+Transformation\Unspecified Coal Production\Processes\All Mines,Maximum_Share_of_Production,%,,
+Transformation\Unspecified Coal Production\Processes\All Mines,Minimum Production,Gigajoule,,
+Transformation\Unspecified Coal Production\Processes\All Mines,Minimum Share of Production,Percent,,
+Transformation\Unspecified Coal Production\Processes\All Mines,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Unspecified Coal Production\Processes\All Mines,Process Share,Share,%,
+Transformation\Unspecified Coal Production\Processes\All Mines,Variable OM Cost,U.S. Dollar,,Gigajoule
+Transformation\Unspecified Coal Production\Processes\All Mines\Feedstock Fuels\Coal Unspecified,Feedstock Fuel Share,U.S. Dollar,,Metric Tonne
+Transformation\Unspecified Coal Production\Processes\All Mines\Feedstock Fuels\Coal Unspecified,Fuel Cost,U.S. Dollar,,Metric Tonne
+Transformation\Unspecified Coal Production\Processes\All Mines\Feedstock Fuels\Coal Unspecified,Fuel Source,U.S. Dollar,,Metric Tonne
+Transformation\Unspecified Coal Production\Processes\All Mines\Feedstock Fuels\Coal Unspecified\Methane,Avg Environmental Loading,Kilogramme,,Tonnes of Coal Equivalent

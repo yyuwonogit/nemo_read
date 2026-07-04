@@ -249,15 +249,51 @@ but you are the right people to judge the ones on bioenergy fuels.
    imports" if trade routes ever covered them. If you have a view on what
    these caps should be, we'll take it; otherwise we handle it.
 
-## 7b. Coming next: the Transformation slice
+## 7b. The Transformation slice — now delivered
 
 The biodiesel / bioethanol / biogas **production processes** your feedstocks
-feed (under LEAP's `Transformation\` tree) are not in this package yet — that
-tree's export is in progress. You'll receive a follow-up drop with the same
-file shapes (tree + branch×variable×units + current expressions, same four
-scenarios) covering your conversion processes. Until then, keep authoring
-Transformation-side data (process efficiencies, capacities) in the existing
-CSV shape you've been using — nothing changes there.
+feed (under LEAP's `Transformation\` tree) are now in this package, in the same
+file shapes as the Resources slice. Together they cover **325 branches across
+10 module groups** — every conversion process bioenergy owns:
+
+| Module group | Branches |
+|---|---|
+| Hydrogen Production for Energy Use | 138 |
+| Biodiesel Production (CME / FAME / POME) | 40 |
+| Bioethanol Production (Cassava / Corn / Molasses / Sugarcane) | 31 |
+| Charcoal Production | 27 |
+| Renewable Diesel Production (HVO) | 21 |
+| Sustainable Aviation Fuel Production (HVO) | 21 |
+| Biomethane Production (Anaerobic Digestion with Methanation / with Upgrading) | 20 |
+| Methanol Production for Energy Use | 12 |
+| Domestic Biogas Production | 10 |
+| Ammonia Production for Energy Use | 5 |
+| **Total** | **325** |
+
+Files in this drop (same shapes as §1 — tree + branch×variable×units + current
+expressions, same four scenarios):
+
+| File | What it is |
+|---|---|
+| `transformation_slice_tree.txt` | The full `Transformation\` bioenergy branch list — one line per branch with every variable that exists on it, indented by depth. **325 branches** (10 module groups above). Includes the process nodes (`\Processes\<tech>`), their `Feedstock Fuels\<fuel>` and `Auxiliary Fuels\<fuel>` sub-branches, the per-fuel emission-factor pollutant leaves (`Avg Environmental Loading`), and the module-level `Output Fuels\<product>`. |
+| `transformation_slice_branch_variables_units.csv` | The same branches flattened to one row per (branch, variable) with the exact `units`, `scale`, and `per` LEAP holds. **This is your unit reference** for the conversion side (Capital Cost, Fixed / Variable OM Cost, Process Efficiency, Maximum Production / Capacity, Feedstock Fuel Share, emission factors, …). |
+| `current_expressions_transformation_slice_4scenarios.csv` | **What is currently written in the model** for every Transformation bioenergy branch — the live expressions, scoped to the same four scenarios (`Current Accounts`, `Baseline Simulation`, `AMS Target Scenario`, `Regional Aspiration Scenario`). Columns: `branch_path, variable, scenario, region, expression, units, scale, per`. `? comments` inside expressions cite the current source. |
+
+**Structural notes worth knowing before you author these rows:**
+
+- **The process skeleton** is `Transformation\<Group>\{Output Fuels\<fuel>[\Land Use], Processes\<tech>}`, and each process nests `Processes\<tech>\{Feedstock Fuels\<fuel>\<pollutant>, Auxiliary Fuels\<fuel>\<pollutant>}`. Emission factors (`Avg Environmental Loading`) hang on the pollutant leaves under Feedstock / Auxiliary Fuels; the yield split and land footprint hang on the module-level `Output Fuels`. This matches canon anatomy [§14](../../../LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md); structure is canon (default across future model versions), expression content is not.
+- **Two panel sizes.** The 9 liquid-biofuel + H2 plants that are capacity-planned carry a full ~29-variable process panel (Capital Cost, Exogenous Capacity, Lifetime, Maximum Capacity / Addition, etc.); the **7 lite-panel processes** (Charcoal `All Biomass`, Domestic Biogas `Anaerobic Digestion`, both Biomethane AD variants, both Methanol processes, Ammonia `Hydrogen`) carry a short panel where `Maximum Production` is the only quantity cap.
+- **Same authoring rules as §4** apply on this side too — `Interp(year, value, …)` with commas + periods, `?` source comments, **never the literal `Unlimited`**, and **every cap needs a companion cost**. The current model breaks the last rule in several places on the conversion side (feedstock `Fuel Cost = 0` deferring to near-zero Resources prices; `Fixed OM Cost = 0`; `Variable OM Cost = 0` on the H2 plants) — those are yours to confirm or price.
+
+**Anomaly audit for this slice:** the accompanying
+[`ANOMALY_AUDIT_BIOENERGY_20260704.md`](ANOMALY_AUDIT_BIOENERGY_20260704.md)
+now carries a **"Transformation anomalies"** section — verifier-checked, **no
+🔴** on bioenergy's own branches, graded **4 🟡 + 2 🟢**, plus the
+incorrectly-inputted class (placeholder Cassava/Molasses costs, the HVO twin
+`Capital Cost = 0`, the Biomass Gasification with CCS `-203882` biogenic-CO2
+credit, the Corn free-and-unlimited feedstock trace, the solver-writeback
+`Optimized New Capacity`). Read it alongside these files when deciding what to
+keep, correct, or replace on the conversion side.
 
 ## 8. What to send back, and in what shape
 

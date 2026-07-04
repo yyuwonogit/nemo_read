@@ -42,7 +42,7 @@ this document closes. It is written against:
 | Crude supply | `Resources\Primary\Crude Oil` | Maximum Production, Production Cost, Import Cost, Additions to Reserves, Export Benefit |
 | Petroleum products | `Resources\Secondary\Gasoline`, `Diesel`, `Kerosene`, `Residual Fuel Oil` | Import Cost, Maximum Production (=0), Export Benefit |
 | LPG | `Resources\Secondary\LPG` | Maximum Production (=0) only |
-| Refining | `Transformation\Oil Refining\Processes\All Refineries` | Exogenous Capacity (§8 — pending Transformation export) |
+| Refining | `Transformation\Oil Refining\Processes\All Refineries` | Exogenous Capacity (§8 — Transformation now canon §14; id 2544 confirmed) |
 
 **Where it lands:** the inject payload lives in **Regional Aspiration
 Scenario (RAS)** and Carbon Neutrality_ Net Zero Scenario (CNZ) — canon
@@ -559,31 +559,35 @@ Baseline/ATS `Additions to Reserves` values for Crude Oil.
 
 ---
 
-## 8. Refinery / extraction processes — **pending Transformation export**
+## 8. Refinery / extraction processes — **Transformation now CANON (§14)**
 
-The canon exports cover the four Demand sectors, `Key\`, and
-`Resources\` only. **The `Transformation\` tree is not yet exported —
-nothing under `Transformation\` is canon-verified.** Do not derive
-Transformation branch names from convention or memory (§A.1).
+The `Transformation\` tree was exported and digested 2026-07-04 — it is
+now the seventh canon export (anatomy §14, tree
+[LEAP structure/trees/transformation_tree.txt]). The fossil-owned slice
+(Oil Refining + the 5 coal-production groups + Crude Oil / Natural Gas
+Production + Gas Processing + LNG Regasification + NG T&D + Diesel/
+Gasoline Blending + Gasoline Distribution + Energy Sector Own Use — 168
+branches) ships in this domain's handover package as
+`transformation_slice_tree.txt` +
+`transformation_slice_branch_variables_units.csv` +
+`current_expressions_transformation_slice_4scenarios.csv`.
 
-What this domain currently touches there — one branch, grandfathered:
+**`All Refineries` CONFIRMED against canon:** id 2544 resolves exactly
+to `Transformation\Oil Refining\Processes\All Refineries` (the blind
+authoring was correct), with `Output Fuels\{Avgas, Bitumen, Diesel,
+Gasoline, Jet Kerosene, Kerosene, LPG, …}` present. The
+`Exogenous Capacity` unit displaying as `Thousand Gigajoules/Year` and
+the ×1000 PJ/year factor ([unit_audit.csv](unit_audit.csv)) stand.
 
-- `Transformation\Oil Refining\Processes\All Refineries:Exogenous
-  Capacity` (from
-  [refinery_exogenous_capacity.csv](refinery_exogenous_capacity.csv)).
-  The branch path was COM-verified during authoring (a single
-  aggregated process, id=2544 — adapter docstring), and LEAP-side the
-  variable displays in `Thousand Gigajoules/Year` (= TJ/year), hence
-  the ×1000 factor from PJ/year in [unit_audit.csv](unit_audit.csv).
-
-**Frozen until the Transformation slice lands:** any *extension* of
-process-side fossil authoring — refinery `Process Efficiency` / output
-shares / OM costs / `Maximum Availability`, coal-mine or gas-extraction
-processes, per-refinery disaggregation. When the Transformation export
-arrives, add its digest to §1 (branch roster, variable panel, units),
-re-verify the `All Refineries` path against it, and only then extend
-the authoring surface. Until then the run_workflow step-2 COM units
-probe remains the only unit source for this one branch.
+**The freeze is lifted** — process-side fossil authoring may now extend
+against the canon slice: refinery `Process Efficiency` / output shares /
+OM costs / `Maximum Availability`, the coal/crude/gas production
+processes, LNG regas, gas processing, and the blending pseudo-techs.
+Author branch paths / variable names / units from the Transformation
+slice, not from convention (§A.1). Watch-items from the anomaly audit
+(see this package's audit slice): the blending pseudo-techs carry
+`Exogenous Capacity = Unlimited` (§A.11 1e12 forced-floor risk) and many
+Transformation processes carry all-`Unlimited` `Maximum Production`.
 
 ---
 

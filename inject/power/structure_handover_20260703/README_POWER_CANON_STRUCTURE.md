@@ -4,16 +4,20 @@ For the power data team. You don't need LEAP, our repo, or any database
 to use this package — everything referenced here is a plain text/CSV
 file sitting next to this README.
 
-> **READ THIS FIRST — your main tree is not in this package.** The
-> `Transformation` electricity-generation tree (the power plants, their
-> capacities, costs, efficiencies) has **not yet been exported** from
-> the live model; its export is pending and will follow as a separate
-> "Transformation slice" drop. What this package ships is the two trees
-> your sector ALREADY wires into — the `Key\` assumptions tree (dispatch
-> levers, transmission lines, lead times, job factors) and the
-> `Resources\` fuel-supply tree (renewable potentials, fuel caps and
-> costs). Both are exported directly from the live model. See §2 for
-> what the follow-up Transformation drop will contain.
+> **READ THIS FIRST — your CORE tree is now in this package.** The
+> `Transformation\Centralized Electricity Generation` tree (the power
+> plants themselves — their capacities, costs, efficiencies,
+> availability and dispatch floors) has now been exported from the live
+> model and ships here as the three `transformation_slice_*` files (see
+> §2b). This is your sector's **core generation tree, not a peripheral
+> slice** — it is where every power technology carries its plant-level
+> data. It sits alongside the two supporting trees your sector also
+> wires into: the `Key\` assumptions tree (dispatch levers, transmission
+> lines, lead times, job factors) and the `Resources\` fuel-supply tree
+> (renewable potentials, fuel caps and costs). All three are exported
+> directly from the live model. The Transformation tree was also
+> anomaly-audited — see `ANOMALY_AUDIT_POWER_20260704.md` §"Transformation
+> anomalies" for the graded findings.
 
 ## 1. What this package is
 
@@ -34,6 +38,9 @@ Files in this package:
 | `resources_slice_power_units.csv` | Units for the Resources variables, per fuel |
 | `current_expressions_keys_slice_4scenarios.csv` | **What is currently written in the model** for every branch in the power Key slice — the live expressions, scoped to the 4 scenarios that matter (see §6b) |
 | `current_expressions_resources_4scenarios.csv` | Same, for the full Resources tree |
+| `transformation_slice_tree.txt` | **Your core generation tree** — the `Transformation\Centralized Electricity Generation` (+ Distributed) tree, 1,100 branches, indented, with each branch's variables listed (see §2b) |
+| `transformation_slice_branch_variables_units.csv` | One row per (branch, variable) in the Transformation slice: units, scale, per — the authoritative unit reference for plant-level variables |
+| `current_expressions_transformation_slice_4scenarios.csv` | **What is currently written in the model** for every Transformation-slice branch — the live plant-level expressions, scoped to the same 4 scenarios |
 
 How to read them: in `keys_slice_power.txt`, each line shows the
 branch's full LEAP path in square brackets and its variables after
@@ -44,22 +51,43 @@ split, so take each fuel's full path from the `branch_path` column of
 full LEAP path (backslash-separated), and `units`/`scale`/`per`
 together give the unit (e.g. units=`MW`, or units=`2020 USD`, per=`t`).
 
-## 2. Your trees in brief — and the one that follows later
+## 2. Your trees in brief
 
-**Pending: the Transformation slice.** The follow-up drop will cover
-`Transformation\Centralized Electricity Generation` (and the
-distributed-generation counterpart) — the process branches where each
-power technology carries its plant-level data: exogenous/existing
-capacity, capacity limits, capital and O&M costs, lifetime, process
-efficiency, availability, and dispatch floors. (That list comes from
-our injection records for this model, not from an export — treat exact
-branch and variable names as to-be-confirmed until the slice arrives.)
-Two Transformation branch names ARE already confirmed, because the live
-Resources tree quotes them by formula: `Transformation\Centralized
-Electricity Generation\Processes\Geothermal Flash_IDJW` (Indonesia) and
-`...\Processes\Geothermal Flash` (Philippines) — see §6.
+Three trees ship in this package, exported directly from the live
+model: your **core** `Transformation` generation tree (§2b), and the two
+supporting trees your sector wires into — the `Key\` assumptions tree
+and the `Resources\` fuel-supply tree. All three are real exports, not
+injection-record reconstructions.
 
 What IS in this package:
+
+### 2b. The Transformation slice (1,100 branches) — your core generation tree
+
+This is the heart of your sector: `Transformation\Centralized Electricity
+Generation` plus its distributed-generation counterpart and the
+`Electricity Transmission and Distribution` module. It ships as three
+files — `transformation_slice_tree.txt` (the indented 1,100-branch tree
+with each branch's variables), `transformation_slice_branch_variables_units.csv`
+(3,943 branch×variable unit rows), and
+`current_expressions_transformation_slice_4scenarios.csv` (32,645 live
+expression rows over the same 4 scenarios). Structure:
+
+| Level | Branch shape | What it holds |
+|---|---|---|
+| Module | `Transformation\Centralized Electricity Generation` (and Distributed) | Module-level knobs: `Planning Reserve Margin`, `Peak Load Ratio`, `PRM for Simulated Scenarios`, `Renewable Target`, `Optimize`, `Use Addition Size`, and the `ASEANRenewableCapacityTarget__NEMOcc` / `RenewableCapacityTarget__NEMOcc` custom-constraint hosts |
+| Output fuel | `...\Output Fuels\Electricity` | Output price/share and shortfall/surplus/usage rules |
+| **Process (plant)** | `...\Processes\<Technology>` | **The plant-level panel you own** — `Capital Cost`, `Fixed OM Cost`, `Variable OM Cost`, `Exogenous Capacity`, `Existing Capacity`, `Capacity Additions`, `Capacity Retirement`, `Endogenous Capacity`, `Optimized New Capacity`, `Maximum/Minimum Capacity`, `Maximum Capacity Addition`, `Process Efficiency`, `Maximum Availability`, `Minimum Utilization`, `Lifetime`, `Interest Rate`, `Capacity Credit`, `Merit Order`, `Dispatchable`, `Historical Capacity Factor`, and more (~40 variables per process) |
+| Feedstock | `...\Processes\<Tech>\Feedstock Fuels\<Fuel>` | `Feedstock Fuel Share`, `Fuel Cost`, `Fuel Source`; each fuel then carries pollutant leaves (`\<Fuel>\<Pollutant>:Avg Environmental Loading`) |
+| Nodes | `...\Processes\<Tech>\Transmission Nodes\<node>` | `Nodal Distribution` — the sub-national `_MY*` / `_ID*` split |
+| Transmission | `...\Transmission Lines\<A>_to_<B>_<n>` | Interconnector `Capital Cost` etc. (the ASEAN Power Grid lines) |
+| T&D | `Transformation\Electricity Transmission and Distribution\Processes\Electricity` | `Losses` |
+
+The sub-national node variants (`_MYPE`, `_MYSB`, `_MYSR`, `_IDJW`, …)
+are separate `Processes\` branches, and several inherit LEAP defaults
+rather than real regional data — that is the source of the RED
+free-build finding in the companion `ANOMALY_AUDIT_POWER_20260704.md`
+(§"Transformation anomalies", item T1). Read that audit before treating
+any `_MY*` plant-level number as authored.
 
 **The Key slice (129 branches)** — the assumption tree your sector's
 levers live in:
@@ -104,8 +132,9 @@ In Resources, the panel that matters to power:
 | Maximum Production | Gigajoule on Natural Gas, the 5 coals, Nuclear, and all 33 Secondary fuels; Petajoule on Crude Oil; Metric Tonne on the bio-crops | Fossil fuel supply context — currently uncapped (§6, §7) |
 | Production Cost / Import Cost | various $ per unit | Every open supply route needs a companion cost — a cap with no cost lets the optimizer treat that supply as free (a real bug class we have already been burned by) |
 
-Plant-level variables (capacity, plant costs, efficiency, availability)
-are Transformation-side and arrive with the pending slice.
+Plant-level variables (capacity, plant costs, efficiency, availability,
+dispatch floors) are Transformation-side and ship in the Transformation
+slice — see §2b for the branch/variable panel.
 
 ## 4. Expression conventions (non-negotiable)
 
@@ -181,8 +210,10 @@ Your sector sits at the junction of all three trees:
 
 2. **Key → Transformation.** The Capacity Additions Multipliers, Lead
    Times, and the Incumbent Generator DIspatch Phaseout knob are
-   consumed by Transformation-side formulas (per our operating records;
-   the consuming expressions themselves arrive with the pending slice).
+   consumed by Transformation-side formulas — the consuming expressions
+   are now in `current_expressions_transformation_slice_4scenarios.csv`
+   (e.g. the `Endogenous Capacity` build-ramps that read
+   `Key\Capacity Additions Multiplier\Biomass:Activity Level`).
 
 3. **Resources as fuel supply.** Natural Gas and all five coal types
    currently have `Maximum Production = Unlimited` in every country and
@@ -250,8 +281,11 @@ Review requests, not blame — most of these predate everyone involved:
    carry positive Variable OM Cost + Fixed OM Cost (typically 500,
    including the node-specific Indonesia/Malaysia variants) so that
    unmet electricity demand becomes an expensive result instead of a
-   solver failure. When the Transformation slice arrives, please review
-   these branches with us rather than zeroing or hiding them.
+   solver failure. Now that the Transformation slice is here, please
+   review these branches with us rather than zeroing or hiding them —
+   note the `Unmet Load_*` processes are visible in
+   `transformation_slice_tree.txt` under Centralized Electricity
+   Generation.
 
 ## 8. What to send back, and in what shape
 

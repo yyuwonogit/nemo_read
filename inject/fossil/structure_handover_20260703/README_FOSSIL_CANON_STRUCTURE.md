@@ -21,6 +21,9 @@ Files in this package:
 | `resources_tree.txt` | The full `Resources\` branch tree (62 fuels: 29 Primary + 33 Secondary), with each fuel's variables listed |
 | `resources_slice_fossil_units.csv` | One row per (fuel, variable): units, scale, per — the authoritative unit reference. Covers the whole Resources tree; your fossil fuels are a subset of it |
 | `current_expressions_resources_4scenarios.csv` | **What is currently written in the model** for every Resources fuel — the live expressions, scoped to the 4 scenarios that matter (see §6b) |
+| `transformation_slice_tree.txt` | The fossil-owned slice of the `Transformation\` conversion tree — **168 branches** across the 15 fossil groups: Oil Refining, Gas Processing, Crude Oil / Natural Gas Production, LNG Regasification, Natural Gas T&D, the 5 coal-production groups, Diesel/Gasoline Blending, Gasoline Distribution and Handling, and Energy Sector Own Use. One line per branch with its `[vars: …]` panel (see §9) |
+| `transformation_slice_branch_variables_units.csv` | One row per (branch, variable): units, scale, per for the Transformation slice — the authoritative unit reference for the process/conversion side |
+| `current_expressions_transformation_slice_4scenarios.csv` | **What is currently written in the model** for every fossil Transformation branch — the live expressions, scoped to the same 4 scenarios (see §9) |
 
 How to read them: the `.txt` tree is a flat list — one line per fuel,
 with the `[vars: ...]` suffix listing the variables carried on that
@@ -31,12 +34,18 @@ fossil fuels' assignments are also in the §2 table). In the CSVs,
 `units`/`scale`/`per` together give the unit (e.g. units=`Metric
 Tonne`, scale=`Thousand`; or units=`2020 USD`, per=`Barrel`).
 
-One boundary to know up front: this package covers the **Resources
-tree only** — the supply caps, reserves, and cost/price layer. The
-`Transformation` tree (refineries, extraction/processing plants, power
-plants) has **not yet been exported** — anywhere this README says
-"pending Transformation export", that content will come in a follow-up
-package. Do not guess Transformation branch names in your files.
+Scope, updated 2026-07-04: this package now covers **two** trees. The
+**Resources** tree (supply caps, reserves, cost/price layer) is the
+primary review target — §2–§8 below. The **Transformation** tree
+(refineries, extraction/processing plants, blending, own-use) has now
+been exported and digested — it is **canon (anatomy §14)** as of
+2026-07-04, and the fossil-owned slice ships in this package (see the
+three `transformation_slice_*` / `current_expressions_transformation_*`
+files above and §9). The **fossil guide §8 "freeze" on process-side
+authoring is therefore lifted** — process/conversion branch names,
+variables, and units are now known and canonical; you no longer have to
+guess them. (The power-plant Transformation branches that burn your
+fuels remain a power-team slice, not fossil.)
 
 ## 2. Your tree in brief — a flat grid of fuels
 
@@ -146,8 +155,9 @@ assumption. What your fuels DO connect to:
   and gas) — mostly resolving to zero today, see §7.6.
 - **Transformation** (refineries turning Crude Oil into Diesel,
   Gasoline, Kerosene, LPG, Residual Fuel Oil; extraction processes;
-  power plants burning your fuels) — *pending Transformation export*;
-  the process-level detail will come in a follow-up package.
+  power plants burning your fuels) — **now exported and canonical
+  (anatomy §14)**; the fossil-owned process-level slice ships in this
+  package (§9).
 - A handful of cross-fuel pulls inside Resources itself (e.g. some
   Import Cost rows reference `Coal Bituminous:Import Cost[2020
   USD/Tonne]` from another coal grade).
@@ -234,9 +244,10 @@ Review requests, not blame — some of these predate everyone involved:
    refined-product supply is meant to come from refinery processes in
    the Transformation tree (fed by your Crude Oil), not from a
    free-standing cap on the product fuel. Please confirm your data
-   model agrees — i.e. send refinery capacities/yields when the
-   Transformation package arrives (*pending Transformation export*),
-   and do NOT send production caps for these five products.
+   model agrees — i.e. send refinery capacities/yields on the now-canon
+   Transformation refinery branch (`Transformation\Oil Refining\
+   Processes\All Refineries`, §9), and do NOT send production caps for
+   these five products.
 5. **Comma-decimal expressions on Philippines gas prices.** 9 rows in
    the extract read `Production Cost[USD/MMBTU]*1,0551` (Philippines
    Natural Gas Industrial / Residential / Other Consumer Price, in
@@ -264,11 +275,11 @@ Review requests, not blame — some of these predate everyone involved:
    Cost does carry a real historical series). That is exactly the
    free-energy shape that has mis-routed the optimizer before. It may
    be deliberate — nuclear fuel-cycle costs may be intended to sit on
-   the power-plant processes instead (*pending Transformation export*,
-   so we can't confirm yet) — but please tell us: should Nuclear
-   production stay effectively uncapped, and if so, what Production
-   Cost should accompany it? Any finite answer beats the current
-   `Unlimited` + `0`.
+   the power-plant processes instead (those Nuclear generation branches
+   are power-team Transformation, not in your fossil slice) — but please
+   tell us: should Nuclear production stay effectively uncapped, and if
+   so, what Production Cost should accompany it? Any finite answer beats
+   the current `Unlimited` + `0`.
 
 ## 8. What to send back, and in what shape
 
@@ -300,3 +311,55 @@ cover note and we'll raise it as a model-structure request instead.
 Questions → yudiandra.y@gmail.com. Please reference fuel and variable
 names as they appear in `resources_tree.txt` when reporting structure
 issues.
+
+## 9. The Transformation slice — refinery / extraction / blending / own-use
+
+Added 2026-07-04. The `Transformation\` conversion tree — the process
+side that turns your Resources fuels into refined products, blended
+road fuels, and processed gas — has been exported, digested, and made
+**canon (anatomy §14)**. The **fossil guide §8 process-side authoring
+freeze is lifted**: branch names, variable panels, and units are now
+known and canonical, so you may author process-level fossil data
+(starting with the refinery `Exogenous Capacity` trajectory) without
+guessing paths.
+
+Three files ship the fossil-owned slice — the same read pattern as the
+Resources files (§1):
+
+| File | What it is |
+|---|---|
+| `transformation_slice_tree.txt` | The flat branch tree — **168 branches** across the 15 fossil groups (below). One line per branch with its `[vars: …]` panel. |
+| `transformation_slice_branch_variables_units.csv` | One row per (branch, variable): `units`, `scale`, `per` — the authoritative unit reference for the process side. |
+| `current_expressions_transformation_slice_4scenarios.csv` | The live expressions currently authored for every fossil Transformation branch, scoped to the same 4 scenarios (Current Accounts / Baseline / AMS Target / RAS). |
+
+**Your 15 Transformation groups (168 branches).** Two full
+capacity-planned conversion plants — `Oil Refining\Processes\All
+Refineries` and `Gas Processing\Processes\Natural Gas` — plus the
+extraction / T&D / passthrough groups: the 5 coal-production groups
+(Anthracite / Bituminous / Lignite / Sub Bituminous / Unspecified Coal
+Production), `Crude Oil Production`, `Natural Gas Production`, `LNG
+Regasification`, `Natural Gas Transmission and Distribution`, `Diesel
+Blending` + `Gasoline Blending` (the biofuel-mandate blending
+pseudo-techs), `Gasoline Distribution and Handling`, and `Energy Sector
+Own Use`. The power-plant Transformation groups (Centralized/Distributed
+Electricity Generation) burn your fuels but are a **power-team** slice,
+not fossil.
+
+**Design note (why most process nodes are zero-cost).** Fossil supply
+**cost** is authored on the Resources tree (Production/Import Cost), so
+the extraction / T&D / own-use Transformation nodes are deliberately
+zero-cost passthroughs (`Variable OM Cost = 0`, `Maximum Production =
+Unlimited`); only the two full plants carry a Capital + OM cost panel.
+This couples the LP's fossil price signal to the Resources side being
+correctly authored — see the Transformation anomaly audit for the
+graded findings.
+
+**Anomalies found in this slice** are written up in
+`ANOMALY_AUDIT_FOSSIL_20260704.md` → **"Transformation anomalies"**
+section (the audit's second half). The load-bearing ones: the four
+blending processes carry `Exogenous Capacity = Unlimited` (a §A.11 1e12
+forced-floor landmine, 🔴); both full plants carry `Maximum Capacity =
+Unlimited` in RAS with `Fixed OM Cost = 0`; a Vietnam Oil Refining
+efficiency point overshoots 100%; and Sub Bituminous coal-mine Methane
+and `Annual Avg Ambient Temp` are un-authored placeholders. Review those
+alongside the Resources gaps in §7.

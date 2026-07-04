@@ -1,20 +1,23 @@
 # Canon anomaly audit — `aeo9_v0.67_w_results`
 
-> Full-corpus anomaly sweep over all six canon exports, scoped to the four
-> scenarios that matter (**Current Accounts, Baseline Simulation, AMS Target
-> Scenario, Regional Aspiration Scenario**). Generated 2026-07-04 by running
-> systematic detectors over the flat digests (offline; no LEAP COM). Two
-> parts, as requested: **(a) incorrectly inputted** — anomalies in what is
-> authored; **(b) empty but important** — missing/placeholder values, graded
+> Full-corpus anomaly sweep over all seven canon exports (the six Demand/
+> Key/Resources trees in Parts A–B, plus the `Transformation\` tree added
+> 2026-07-04 in **Part C**), scoped to the four scenarios that matter
+> (**Current Accounts, Baseline Simulation, AMS Target Scenario, Regional
+> Aspiration Scenario**). Generated 2026-07-04 by running systematic
+> detectors over the flat digests (offline; no LEAP COM). Two parts, as
+> requested: **(a) incorrectly inputted** — anomalies in what is authored;
+> **(b) empty but important** — missing/placeholder values, graded
 > 🔴 red / 🟡 yellow / 🟢 green. Every item flags **NEW** vs **KNOWN** (already
-> in the anatomy §14 hygiene ledger) and **VERIFIED DEFECT** vs
+> in the anatomy §14/§15 hygiene ledger) and **VERIFIED DEFECT** vs
 > **SUSPICIOUS — needs human judgment**. Counts are rows in the 4 scenarios.
 >
 > Methodology note: transport / residential / resources came from the
 > multi-agent hunt (self-verified, ledger-cross-checked); keys / commercial /
 > industry were detected directly in this session after the agent run hit
-> model limits. Where an item says "needs a LEAP UI check" it cannot be
-> settled from the export alone.
+> model limits; Transformation (Part C) from a 3-domain hunt + verifiers.
+> Where an item says "needs a LEAP UI check" it cannot be settled from the
+> export alone.
 
 ---
 
@@ -338,3 +341,431 @@
    authoring errors with clear correct values.
 5. Resolve the **SAF-FEI-evaluates-to-zero** ambiguity (🟡) — a LEAP UI check
    that determines whether the flagship SAF policy does anything at all.
+
+---
+
+## Part C — Transformation anomalies (`Transformation\` tree)
+
+> The **seventh and largest canon export** (`LEAP Input Transformation.xlsx` —
+> 1,593 branches, the `Resources → Transformation → Demand` hub, anatomy §14),
+> swept over the **same four scenarios** (Current Accounts, Baseline Simulation,
+> AMS Target Scenario, Regional Aspiration Scenario) across its three owners —
+> **power** (Centralized/Distributed/ETD, 1,100 branches), **fossil**
+> (mining/refining/blending, 168 branches) and **bioenergy** (H2/biofuel
+> converters, 325 branches). Findings come from the per-owner hunt, then a
+> second verifier pass; **where the verifier issued a PARTIAL/REFUTED correction
+> the corrected count is used here, not the original**. One scenario fact governs
+> the whole grading: among the four scopes **only RAS is NEMO/CPLEX-optimized**
+> (Baseline + AMS Target carry `Optimize='No'`, Current Accounts is pure
+> accounting), so every "the LP exploits this" mechanism lands in RAS — and RAS
+> is a *solved* (`_w_results`) area, so it also carries the solver's own capacity
+> decisions stamped back into the authoring layer. Tags mirror Parts A/B: **NEW**
+> vs **KNOWN** (already in the anatomy §14 ledger, esp. #33/#34/#35), **VERIFIED**
+> vs **SUSPICIOUS — needs human judgment**. Counts are rows in the 4 scenarios.
+
+### Part C · A — Incorrectly inputted (anomalies in authored values)
+
+#### C-A1. Solver output written back into authored input cells (input/output conflation)
+
+- **KNOWN · VERIFIED — power `Optimized New Capacity` holds CPLEX build stamped
+  `?Optimized on 07/02/2026 11:41 (NEMO/CPLEX)`.** 379 rows read `0 ?Optimized…`
+  and 47 read `Data(2040, 160529) ?Optimized…`. This is a solved area with
+  endogenous capacity-expansion written into the authoring layer; re-injecting
+  these cells would overwrite solver decisions, and any consumer reading them as
+  pure inputs conflates exogenous authoring with endogenous results. (The
+  identical 426 also exist in Carbon Neutrality, out of scope; power total across
+  both optimization scenarios = 852.) Anatomy §14 §1.1 documents the idiom;
+  ledger #8 is the residential analogue. *426 rows, RAS. Power.*
+- **KNOWN · VERIFIED — bioenergy `Optimized New Capacity` same writeback**, on all
+  24 bio conversion processes × 12 regions (23 carry a non-zero `Data(…)` series,
+  e.g. SAF/HVO Renewable Diesel Indonesia = `Data(2030, 11424.48, 2040,
+  67293.74, 2050, 198133.2, 2060, 244866.9) ?Optimized…`). Documented in §14 §1.1
+  / §14 §4 as the supply-side face of the same artefact. *288 rows, RAS.
+  Bioenergy.*
+- **KNOWN · VERIFIED (NOT conflated) — fossil writeback lives on the *right*
+  variable.** `Optimized New Capacity` carries 247 `?Optimized…` rows (RAS), while
+  the 6 Cambodia/Laos Oil Refining `Exogenous Capacity = Data(2024, 0, …, 2060, 0)
+  ? IEA Oil Info 2024` rows are *authored* explicit zeros (non-refiners), not
+  solver writeback. Input `Exogenous Capacity` is untouched by CPLEX — no
+  conflation in fossil. *253 rows (247 + 6), RAS. Fossil.*
+
+#### C-A2. Dangling references / corrupted tokens
+
+- **NEW · SUSPICIOUS — power `ScenarioValue(Bad Scenario [2])` dangling scenario
+  reference inside `Endogenous Capacity`.** The intended capacity-additions-ramp
+  logic (clean-coal / geothermal / biomass / hydro build) resolves against a
+  deleted/renamed scenario, e.g. `Step(2020, 0, 2026, ScenarioValue(Bad Scenario
+  [2])*50%)` and `Interp(2020, ScenarioValue(Bad Scenario [2]), 2025,
+  ScenarioValue(Bad Scenario [2]) * Key\Capacity Additions Multiplier\Biomass:
+  Activity Level[factor], …)`. **AMS Target Scenario only**; regions Philippines
+  8 / Vietnam 5 / Thailand 4 / Indonesia 3; techs Coal Ultrasupercritical(+CCS),
+  Coal Subcritical_MYPE/_MYSR, Biomass Gasification, Biomass Other_MYPE/_MYSB/
+  _MYSR, Large Hydro_MYSB/_MYSR, Geothermal Flash. **RED if LEAP errors on the
+  dangling ref (breaks the AMS Target calc); YELLOW if it silently evaluates 0
+  (the endogenous build is zeroed)** — graded SUSPICIOUS in Part C · B pending a
+  LEAP UI check. Distinct from ledger #2 (a separate 19-row Industry AMS Target
+  instance); this 20-row power occurrence is not in the ledger. *20 rows, AMS
+  Target. Power.*
+- **KNOWN · VERIFIED (clean sweep) — the fossil tree is broken-token clean.** A
+  negative-result scan for `!Missing Branch` / `Bad Scenario` / `Bad Unit` /
+  `#REF` across expression **and** unit columns returned 0 in fossil (contrast
+  the Industry/Commercial hits in Part A · A8). *0 rows. Fossil.*
+
+#### C-A3. Placeholder-comment confessions surviving into live scenarios
+
+- **NEW · VERIFIED — power ASEAN-Power-Grid interconnector `Capital Cost = 315 ?
+  Placeholder cost`** on 6 Sarawak/Sabah/Thailand lines (Sarawak_to_Brunei_8a,
+  Sarawak_to_Peninsular_3, Sarawak_to_Borneo_6, Thailand_to_Peninsular Malaysia_2,
+  Sarawak_to_Sabah_8b, East Sabah_to_Borneo_15) — a confessed guess driving RAS
+  interconnector build economics. 42 rows across all 7 optimization scenarios;
+  only RAS in scope. *6 rows, RAS. Power.*
+- **NEW · VERIFIED — power Wind Offshore `Maximum Availability = 44 ? Placeholder
+  from NREL ATB 2023 - average for all wind classes (moderate)`** applied
+  uniformly to every region, including those with no offshore-wind resource — a
+  placeholder capacity factor shaping Wind Offshore output/economics. *48 rows
+  (12 regions × 4 scenarios). Power.*
+- **NEW · VERIFIED — bioenergy Cassava and Molasses bioethanol carry no real
+  cost.** Both `Capital Cost` and `Variable OM Cost` are authored as a branch-ref
+  to Sugarcane's cost tagged `? Placeholder pending data for this process`
+  (`Sugarcane:Variable OM Cost[2020 USD/GJ] ? Placeholder pending data…`). By
+  scenario: CA 48 / Baseline 48 / AMS Target 48 / RAS 8. Caveat: in RAS the
+  placeholder survives only in the two disabled regions (Base Template + Timor
+  Leste), and CA/Baseline/AMS are accounting runs — so live LP exposure across
+  the four scopes is minimal; a data-hygiene confession regardless. *152 rows.
+  Bioenergy.*
+
+#### C-A4. Sibling-variant inconsistency (`_MY*` / twin processes authored differently)
+
+- **KNOWN · SUSPICIOUS — Malaysia `_MYPE`/`_MYSB`/`_MYSR` variants diverge on the
+  same (region, scenario, variable).** Wind Onshore: `_MYPE`/`_MYSB` carry the
+  bare-MU must-run trap + real Capital Cost, while `_MYSR` carries MU=0 +
+  Capital Cost=0 + `Maximum Capacity Addition=Unlimited` (the free-build copy that
+  actually got built). Large Hydro: `_MYPE` is the zero-cost / Capacity-Credit-100
+  / Efficiency-100 default while `_MYSB`/`_MYSR` carry real cost, availability and
+  efficiency. Also Nuclear SFR/SMR and Solar PV `Maximum Capacity Addition`. The
+  stated **count 12 is a divergence-span descriptor (12 regions × 4 scenarios for
+  the Large Hydro / Wind Onshore variables), not a defect-row tally.** Rooted in
+  the §11.1 Malaysia-decomposed export view (§14 §1.1). Canon ledger #35. *≈12
+  regions × 4 scen. Power.*
+- **NEW · VERIFIED (latent) — bioenergy HVO Renewable Diesel twin is free under one
+  module, costed under the other.** The byte-identical process carries full
+  `Capital Cost` under Sustainable Aviation Fuel Production but `Capital Cost=0`
+  AND `Variable OM Cost=0` under Renewable Diesel Production in 11 of 12 regions
+  (only Indonesia authored) — 44 + 44 rows. HVO RD is capacity-planned and builds
+  only from optimization, so $0 capex makes new Renewable Diesel capacity free to
+  the LP in real regions (Malaysia/Thailand/Vietnam/Philippines). Latent: the
+  RD-module `Optimized New Capacity=0` everywhere in the current RAS solution, so
+  not yet exploited, but the cost landscape is distorted. *88 rows. Bioenergy.*
+
+#### C-A5. Cross-region cost-representation inconsistency / outlier
+
+- **NEW · SUSPICIOUS — fossil Oil Refining capital cost authored under two
+  incompatible conventions.** 8 regions use `Capital Cost = Mean(2.6, 3.05)*…`
+  (coef 2.825); Indonesia `Mean(0.53, 1.62)` (1.075, ~2.6× cheaper) and Malaysia
+  `Mean(0.87, 0.96)` (0.915, ~3× cheaper) — the two largest refiners cheapest —
+  while Singapore and Thailand author `Capital Cost = 0 ? All costs in Variable OM
+  Cost` and instead carry an inflated VOM lead-coefficient (Singapore 18.17,
+  Thailand 22.70 vs the 0.425 = `Mean(0.34, 0.51)` baseline, ~43–53×). Each
+  convention is self-consistent per region (comment truthful), but any per-region
+  total-cost comparison must reconcile both, and the 3×-cheaper Indonesia/Malaysia
+  capex needs a human intent check. *16 rows (8 Capital Cost + 8 VOM), all 4
+  scenarios. Fossil.*
+
+#### C-A6. Physical-bound violation (efficiency > 100 %)
+
+- **NEW · VERIFIED — fossil Vietnam Oil Refining `Process Efficiency` overshoots
+  100 % at 2017** (`Interp(2005, 100.00, …, 2017, 101.91, 2018, 86.73, …) *
+  Key\Cal\Transformation\Oil refining:Activity Level[Factor]`) — thermodynamically
+  impossible for crude refining, the only fossil Process-Efficiency point in
+  (100.5, 300). Low LP impact (historical year × a Cal factor) but a data-quality
+  blip. *4 rows (1 expression × 4 scenarios). Fossil.*
+
+#### C-A7. Emission-factor inconsistency
+
+- **NEW · SUSPICIOUS — bioenergy Biomass Gasification with CCS over-credits
+  sequestration and books it on a fossil feedstock.** Gross feedstock CO2 is
+  zeroed (`0 * …:Process Efficiency/100`) on **both** the Biomass and the (fossil)
+  Natural Gas leaves, then a flat `Sequestered Carbon Dioxide = -203882 *
+  …:Process Efficiency/100` is booked — **66.2×** the non-CCS twin's gross biomass
+  CO2 (3,079.624), and authored unlike the fossil-CCS siblings which keep gross
+  and subtract 95 % (SMR-CCS −82467×95 %, Coal-Gas-CCS −151157.9×95 %). Applying
+  −203882 to the **fossil Natural Gas** leaf turns fossil gas use into apparent
+  net carbon removal — the real red flag; could be intentional BECCS
+  net-negative accounting, so human review is needed. *192 rows (96 CO2 + 96
+  Sequestered CO2). Bioenergy.*
+- **NEW · SUSPICIOUS — bioenergy `Methane = 0` on three crop feedstock leaves that
+  carry an authored CO2 factor** (CME Biodiesel\Coconut Oil, Bioethanol\Cassava,
+  Bioethanol\Sugarcane) — `Avg Environmental Loading = 0` on `…\Methane` while the
+  same-branch Carbon Dioxide is non-zero (e.g. 24.95). These are the only
+  `Methane==0` feedstock leaves in bioenergy in scope; plausibly deliberate
+  (minor agricultural CH4) but inconsistent across crops. *144 rows (48 each).
+  Bioenergy.*
+
+#### C-A8. Sibling-wiring asymmetry (feedstock cost wiring)
+
+- **NEW · SUSPICIOUS — fossil Feedstock `Fuel Cost` wiring differs across the coal
+  grades.** Sub Bituminous Coal Production wires `Fuel Cost = Resources\Primary\
+  Coal Sub bituminous:Production Cost` in all 12 regions (48 rows); Bituminous /
+  Lignite / Unspecified wire it Indonesia-only (4 each), Anthracite none, and Oil
+  Refining's Natural Gas feedstock cost is Indonesia-only (4). **Verifier
+  correction: the true nonzero count is 64, not the 60 originally stated** (the
+  original dropped the 4 Oil Refining Natural Gas rows); 800/864 `Fuel Cost` rows
+  are `0`. Likely tracks which grade each country actually produces, but the
+  asymmetry reads as inconsistent authoring. *64 rows. Fossil.*
+
+#### C-A9. Separator / style inconsistency (period decimals preserved — NOT §A.15 defects)
+
+- **NEW · VERIFIED (cosmetic) — fossil no-space `Interp()` list style**,
+  `Interp(2007,8.5,2008,9.48,…)` deviating from the canon comma-space form.
+  Decimals are periods, so **not** a §A.15 decimal violation — cosmetic. **Verifier
+  correction to scope label:** the 7 Brunei rows are under `Transformation\Gas
+  Processing\Processes\Natural Gas` (4 Exogenous Capacity + 3 Historical
+  Production), *not* the "Natural Gas Production" group the finding named; the
+  other 32 are Indonesia Oil Refining Output Share. Count 39 is correct. *39 rows.
+  Fossil.*
+- **NEW · VERIFIED (clean) — fossil semicolons are all in the `?`-comment tail.**
+  The 18 fossil expressions containing `;` (all Oil Refining Exogenous Capacity)
+  place every semicolon *after* the `?` comment marker as a citation separator; a
+  parenthesis-depth scan found 0 inside any Interp/Data argument list — no §A.15
+  separator violation. *18 rows (clean). Fossil.* (The bioenergy tree is likewise
+  clean: 88 bio rows with `;` all sit in the trailing `?` citation comment, 0
+  inside an Interp arg list.)
+
+#### C-A10. Zero-cost open feedstock route (POME-lesson shape)
+
+- **NEW · VERIFIED (cross-tree; low LP impact now) — bioenergy Corn Ethanol
+  feedstock is free AND unlimited in 3 of 4 scenarios.** `Resources\Primary\Corn:
+  Production Cost = 0` and `Maximum Production = Unlimited` in Current Accounts,
+  Baseline and AMS Target (12 regions each) — Corn is the **only** bioethanol crop
+  left at literal 0, while Cassava/Coconut Oil/Molasses/Palm Oil/Sugarcane all
+  carry the guard `0.001 ? Very small cost to avoid arbitrary production in
+  optimization`. RAS fixes it (real Interp cost + capped Maximum Production).
+  Because the three free+unlimited scenarios are accounting runs (no LP) and RAS
+  is repaired, live exploitation is minimal — but it is the same POME-lesson class
+  as ledger #24 (Corn/guard-omission not separately named there). *72 rows (36
+  Production Cost=0 + 36 Maximum Production=Unlimited across CA/Baseline/AMS ×12).
+  Bioenergy/Resources.*
+
+#### C-A11. `_x000D_` carriage-return artifacts inside live code (cosmetic)
+
+- **KNOWN · VERIFIED — power `_x000D_` CR artifacts** in the post-`?` provenance
+  comment portions of cost/efficiency expressions (Capital Cost 708, CCS VOM 576,
+  CCS Capital 576, Fixed OM 328, CCS FOM 288, Variable OM 280, Process Efficiency
+  108, Maximum Availability 77, plus ~53 others). Cosmetic — in the comment, does
+  not corrupt the numeric expression. Full-roster power total = 8,302. Ledger #14
+  / quirk #27. *2,994 rows. Power.*
+- **NEW · VERIFIED (load-bearing placement) — fossil `_x000D_` mid-formula.** On
+  the 48 Gasoline Distribution and Handling `Avg Environmental Loading`
+  evaporative-loss rows the `_x000D_` sits **inside** the load-bearing TVP formula
+  (char 44, before the first `?` at char 105: `…668/0.739/1000_x000D_\n+ ((9*
+  Gasoline:TVP…`); the other 8 (Myanmar NG T&D + Thailand NG Production Losses)
+  are in the comment tail. Likely an export-digest artifact but should be
+  confirmed benign in the live area given the placement. *56 rows. Fossil.*
+- **NEW · VERIFIED (cosmetic) — bioenergy `_x000D_` in `Process Efficiency`**
+  (Anaerobic Digestion + FAME Biodiesel). A hygiene defect the original bio hunt
+  **missed**; ledger #14 records `_x000D_` only for Commercial/Residential/
+  Transport, not Transformation. 143 rows across all scenarios, 52 in the 4-scope.
+  *52 rows (143 all-scenario). Bioenergy.*
+
+---
+
+### Part C · B — Empty but important (graded)
+
+#### 🔴 RED — actively distorts the RAS LP / results now
+
+1. **Free, unlimited firm capacity on six Malaysia `_MY*` generators.** *(KNOWN
+   #35, sharpened · VERIFIED · Power)* `Capital Cost = 0` **and** `Fixed OM Cost =
+   0` **and** `Variable OM Cost = 0` on Gas Turbine_MYPE, Large Hydro_MYPE, Solar
+   PV_MYPE/_MYSB/_MYSR and Wind Onshore_MYSR (LEAP default-inheritance on
+   un-authored `_MY*` copies): 288/288 CapCost=0, 288/288 FOM=0, 284/288 VOM=0.
+   Combined with `Capacity Credit = 100` (276 rows) and `Maximum Capacity Addition
+   = Unlimited` (70 rows, Part C · A) the generator is **free to build, free to
+   keep, free to run, credited fully firm, and uncapped**. **Mechanism, directly
+   verified in the solve:** RAS `Optimized New Capacity` built **160,529 MW of Gas
+   Turbine_MYPE (Malaysia, 2040)** — against Malaysia's ~20 GW peak demand — plus
+   19,163 MW of Wind Onshore_MYSR, at zero investment/O&M cost, collapsing
+   Malaysia's optimal capacity mix and system cost. *(Correction to the original
+   framing: this is the largest genuine **generator** build, not the largest build
+   overall — the ETD pass-through `Electricity` node carries larger `Optimized New
+   Capacity`: Indonesia 507,671, Vietnam 227,642, Malaysia 169,110 MW.)* Ledger #35
+   logged CapCost=0/Cap-Credit-100 as a benign export-view artefact; the
+   solver-build evidence sharpens it to a live RED exploit. *288 rows (+70 Max Cap
+   Addition, +276 Cap Credit), RAS. Power.*
+2. **Blending pseudo-techs carry `Exogenous Capacity = Unlimited` (units
+   Megawatt).** *(KNOWN #34 · VERIFIED · Fossil)* On all four biofuel-mandate
+   blenders — `Diesel Blending\Processes\{Biodiesel, Diesel}` and `Gasoline
+   Blending\Processes\{Ethanol, Gasoline}`. `Exogenous Capacity` maps to NEMO
+   `ResidualCapacity`, and LEAP→NEMO export turns the literal `Unlimited` into a
+   **1.0e+12 forced FLOOR** (§A.11 lower-bound landmine, the 2026-05-12 p9 shape) —
+   1e12 MW of forced residual blending capacity enters the LP basis as a hard
+   floor and breaches CPLEX's ~1e9 conditioning tolerance even when non-binding;
+   also a nonsensical MW capacity on a fuel-passthrough blender. Lands in RAS (the
+   only optimized scope). **Faithful caveat:** canon ledger #34 **and** project
+   memory (`project_aeo9_v042_RAS_resolved`) both record this exact shape was
+   judged a **red herring** in the 2026-05-12 aeo9_v0.42 probe and never
+   remediated — i.e. empirically it did not break that solve, so "breaks the calc
+   now" is the in-principle §A.11 mechanism, not an observed break. It survives
+   unchanged in aeo9_v0.67. *192 rows (4 procs × 12 regions × 4 scen; 48 in RAS).
+   Fossil.*
+
+- **SUSPICIOUS (RED-or-YELLOW) — AMS Target `ScenarioValue(Bad Scenario [2])`
+  dangling ref** (20 rows, Part C · A2). RED if LEAP errors on the dangling
+  scenario, YELLOW if it silently evaluates 0 and merely zeroes the intended
+  endogenous build. One LEAP UI check settles it.
+
+#### 🟡 YELLOW — placeholder/template/default values silently shaping results
+
+- **§11.2c must-run trap authored but VERIFIED INERT (downgraded from RED).**
+  *(KNOWN #33 · Power)* 28 RAS rows author the bare `Minimum Utilization =
+  Maximum Availability` must-run hazard on variable renewables — 22 Wind
+  Onshore_MYPE/_MYSB across the 11 non-Malaysia regions + 6 Base Template (Solar
+  CSP / Solar Floating / Tidal / Wave / Wind Offshore + Distributed Solar PV
+  Rooftop). **Caveat / why not RED:** every trap branch has `Optimized New
+  Capacity = 0`, and effective capacity is 0 (the 22 Wind Onshore inheritance
+  copies read `Exogenous Capacity=0` / Node=0; the 6 Base Template techs carry an
+  `Existing Capacity + Capacity Additions` formula that evaluates to 0 in a
+  non-calculated placeholder region) — so the constraint **binds nothing and
+  cannot infeasible the solve today**. It is an authored hazard that *would* bite
+  if any of those `_MY*` branches ever receive capacity. Absent in CA/Baseline/AMS
+  Target. Reconciles canon #33's RAS 27 (+1 Distributed Solar PV Rooftop). *28
+  rows, RAS. Power.*
+- **Capacity Credit = 100 on the same `_MY*` default copies** — 276 of 288 rows
+  (the other 12 = Solar PV_MY* at `18.8737644659 ? AEO7`). Intermittent Solar/Wind
+  crediting as fully firm against the Planning Reserve Margin; compounds RED #1.
+  Contrast correctly-authored VRE credits (Wind Offshore 20, Solar Floating 18.61).
+  Ledger #35. *276 rows. Power.*
+- **Process Efficiency = 100 on Gas Turbine_MYPE** — the only combustion `_MY*`
+  tech left lossless (base Gas Turbine = `Interp(2021, 33, 2030, 36, 2040, 39)`,
+  Gas Combined Cycle_MY* ≈ 42–60 %, Diesel_MY* ≈ 45–47 %). At 100 % the 160 GW
+  free build burns ~⅓ the gas a real 33–39 % turbine would, understating its only
+  genuine cost (fuel) ~3× and understating power-sector gas demand + CO2 in RAS.
+  Not in the ledger. *48 rows. Power.*
+- **Electricity T&D Losses = 0 on Indonesia and Singapore** — lossless
+  transmission on the single largest ASEAN grid; understates the generation and
+  installed capacity needed to serve demand in every scenario. Contrast Vietnam
+  ≈11 %, Myanmar ≈27 %. 16 rows across Indonesia/Singapore/Base Template/Timor
+  Leste; **8 are load-bearing** (Indonesia + Singapore × 4 scen; Base Template +
+  TL are non-calculated). Quirk #14. *16 rows (8 load-bearing). Power.*
+- **Maximum Production = Unlimited on all fossil processes in RAS** — the benign
+  §A.11 **upper-bound** 1e12 sentinel un-caps every fossil supply/conversion route
+  and degrades CPLEX conditioning (not a forced floor). Ties to Resources ledger
+  #24: fossil supply *cost* is authored on the Resources tree, so an un-capped
+  Transformation route is bounded only by whatever Resources caps + costs exist.
+  §14 §1.3 / ledger #34. *252 rows (21 proc nodes × 12 regions), RAS. Fossil.*
+- **SUSPICIOUS — Fixed OM Cost = 0 on the only two capacity-planned fossil plants**
+  (Oil Refining\All Refineries, Gas Processing\Natural Gas) in every region and
+  scenario, though these are the archetype that canon says carries the full
+  capacity-planning panel. Combined with RAS `Maximum Capacity=Unlimited` (Part C ·
+  A1/INC-1) the RAS optimizer prices new refinery/gas-processing capacity on
+  capital + VOM only, understating the fixed carrying cost of domestic conversion
+  vs imports. Not explicitly flagged as always-zero in canon. *96 rows. Fossil.*
+- **SUSPICIOUS — coal-mine Methane EF = plain uncommented `0` on Sub Bituminous
+  Coal Production** across all 12 regions × 4 scenarios, while the four sibling
+  grades carry the real `12.06 ?a) … IPCC (2006) … Tier 1` where produced or a
+  *commented* `0 ? No indigenous production…` where not. Sub-bituminous is the
+  actively-produced grade region-wide (it alone wires Fuel Cost→Resources in all
+  12 regions; Indonesia's dominant thermal coal). The plain zero reads as a
+  forgotten leaf and understates coal-mine CH4 (high-GWP) — chiefly for genuine
+  producers. Methane is the only GHG species on coal-mine branches (no CO2 leaf).
+  Not specifically in canon. *48 rows. Fossil.*
+- **Annual Avg Ambient Temp = `15 ? Fill in country-specific value`** — a
+  template-uniform placeholder across all 12 regions including equatorial ASEAN
+  (~27–28 °C), driving the Gasoline Distribution TVP evaporative-loss model. A
+  15 °C value well below tropical ambient understates TVP and hence the
+  gasoline-handling evaporative-loss emission factor for every AMS. §14 §1.3
+  (verbatim). *48 rows. Fossil.*
+- **Variable OM Cost = 0 on the 6 capacity-planned Hydrogen plants** (SMR / SMR
+  with CCS, Coal Gasification ±CCS, Biomass Gasification ±CCS) — these carry
+  Capital + feedstock cost but zero per-unit operating cost, understating marginal
+  H2 cost and biasing dispatch/build toward them vs PEM Electrolysis (which pays
+  for electricity). **Mechanism is LIVE, not latent:** in RAS SMR builds in 4
+  regions and Biomass Gasification in 2 (PEM in 3), so the zero VOM understates an
+  exercised route. *288 rows. Bioenergy.*
+- **Fixed OM Cost = 0 across all 9 liquid-biofuel plants** (CME/FAME/POME
+  Biodiesel, Cassava/Corn/Molasses/Sugarcane Ethanol, HVO Renewable Diesel + HVO
+  SAF) in every region and scenario — systematically understates annual carrying
+  cost, making biofuels look cheaper to keep operating than reality. HVO
+  contributes 96 (RD 48 + SAF 48). *432 rows. Bioenergy.*
+- **Biofuel feedstock effectively free** — 1,337 of 1,824 in-scope feedstock
+  `Fuel Cost` rows = 0 (cost deferred to Resources), and the Resources crops they
+  defer to carry only `0.001 ? Very small cost…` (Palm Oil/Coconut Oil/Cassava/
+  Molasses/Sugarcane) with Corn at literal 0 — the exact POME-lesson exposure
+  (every supply cap needs a real companion cost). All-scenario figure 3,715/5,016
+  matches §14 §1.4. Caveat: in RAS the deferred Resources cost is real (Interp)
+  for the 10 real regions, so the near-free values dominate the accounting
+  scenarios rather than RAS. Ledger #24. *1,337 rows. Bioenergy.*
+- **Lite-panel conversion is free AND uncapped** — Charcoal (All Biomass),
+  Domestic Biogas (Anaerobic Digestion), Methanol (CO2 Utilization for Iron and
+  Steel + Production from Hydrogen) and Ammonia (Hydrogen) have **no** Capital Cost
+  variable, VOM = 0 or absent, and Maximum Production = Unlimited — the only brake
+  is feedstock cost/supply, so the LP can convert at zero process cost and distort
+  the merit order. (Correctly excludes the two Biomethane AD variants, which carry
+  non-zero VOM.) *5 processes. Bioenergy.*
+
+#### 🟢 GREEN — cosmetic, disabled plumbing, or plausibly-intentional zeros
+
+- **Power Maximum Production = Unlimited on 63 processes (756 rows, RAS)** — the
+  benign upper-bound sentinel only. **Critical cross-check confirmed: `Exogenous
+  Capacity` containing `Unlimited` = 0 rows in the entire power domain** — the
+  catastrophic §A.11 lower-bound forced-floor flavour (ledger #34's fossil-blending
+  shape) is **ABSENT in power**; only LP-conditioning noise + an appropriate
+  pass-through Unlimited on ETD Electricity remain. Ledger #34 / §1.1. *756 rows,
+  RAS. Power.*
+- **Power Renewable Target = 0** — the module-level RE-target knob is inert; RE
+  ambition is enforced via blend mandates, per-tech Minimum Share of Production and
+  the `__NEMOcc` RenewableCapacityTarget constraints. Within the 4-scope only RAS
+  actually materializes the variable. §1.2. *24 rows, RAS. Power.*
+- **Fossil Variable OM Cost = 0 + Maximum Production = Unlimited on all extraction /
+  T&D / own-use processes** (5 coal All Mines, Crude Oil, NG Production, LNG Regas,
+  NG T&D, Gasoline Distribution, 5 ESO) — **intentional by design** (§14 §1.3:
+  fossil supply cost lives on Resources; the Transformation node is a zero-cost
+  passthrough). Benign in isolation but the whole fossil price signal is
+  load-bearing on Resources being correctly authored — directly coupled to
+  Resources ledger #24. 720 of 816 VOM rows are 0; only the two full plants carry
+  non-zero VOM. *720 rows. Fossil.*
+- **Fossil module-level grid/market knobs uniformly zero** — Module Costs 624,
+  Output Price 1,344 (1,340 zero + 4 `Remainder(100)`), Import Target 1,080, Export
+  Target 1,080, Renewable Qualified 72 (RAS). **Verifier correction: the aggregate
+  is 4,200 rows (4,196 zero), not the 3,600 originally stated** — an
+  empty-by-design inventory so a future author does not mistake the empty panels
+  for missing data (trade + RE ambition are enforced elsewhere). *4,200 rows
+  (4,196 zero). Fossil.*
+- **Bioenergy template-uniform FAME Biodiesel Capital Cost** — one identical
+  `Interp(2025, 3.2422, … 2060, 2.2807)` across all 10 real AMS (Base Template &
+  Timor Leste = 0); plausibly an intentional single assumption, but the export
+  carries no regional capex signal for these plants. *10 regions. Bioenergy.*
+- **Bioenergy zeroed accounting block** — Salvage Value, Stranded Cost, Module
+  Costs and Output Price are literal 0 on 100 % of bio rows (816 + 816 + 384 +
+  384). Cosmetic for a levelised-cost read; removes salvage/stranded terms from any
+  total-system-cost or asset-stranding analysis. *2,400 rows. Bioenergy.*
+- **`_x000D_` CR artifacts (all three owners)** — cosmetic where they sit in the
+  post-`?` comment (Part C · A11); the one placement worth a live-area confirm is
+  the 48 fossil Gasoline Distribution rows where the token is mid-formula.
+- **Clean sweeps** — the fossil tree carries **0** broken tokens, **0** bare-MU
+  §11.2c traps (all 288 fossil MU = 0, MaxAvail all 100), **0** Maximum
+  Availability > 100, and 480/480 non-zero combustion CO2 EF leaves; the bioenergy
+  tree carries **0** `Exogenous Capacity=Unlimited` and **0** bare-MU traps — so no
+  RED §A.11/§11.2c finding was fabricated for either domain.
+
+---
+
+### Highest-leverage fixes for Transformation
+
+1. **Author real cost + build caps on the six Malaysia `_MY*` generators**
+   (🔴 C-B1) — the LP demonstrably built 160.5 GW of free Gas Turbine_MYPE against
+   Malaysia's ~20 GW peak; fixing Capital/Fixed/Variable OM + `Maximum Capacity
+   Addition` on Gas Turbine_MYPE, Large Hydro_MYPE, Solar PV_MY*, Wind Onshore_MYSR
+   is the single biggest RAS distortion.
+2. **Replace the 4 blending pseudo-techs' `Exogenous Capacity=Unlimited` (MW) with
+   a finite value** (🔴 C-B2) — per §A.11 use finite-but-large, **never 0** (the
+   failed 2026-05-12 p9). Historically judged a red herring, but it pollutes CPLEX
+   conditioning and is the textbook lower-bound landmine.
+3. **Settle the AMS Target `ScenarioValue(Bad Scenario [2])` dangling ref** (20
+   rows) — one LEAP UI check decides RED (calc error) vs YELLOW (endogenous build
+   silently zeroed).
+4. **Fix the Biomass Gasification with CCS `-203882` sequestration on the fossil
+   Natural Gas leaf** — as authored it turns fossil gas use into apparent carbon
+   removal (66× the non-CCS biomass gross).
+5. **Correct the Vietnam Oil Refining 101.91 % efficiency point** and re-author the
+   two full-plant `Maximum Capacity=Unlimited` + `Fixed OM=0` rows (fossil INC-1 +
+   EBI-3) — committed authoring errors with clear intended forms.

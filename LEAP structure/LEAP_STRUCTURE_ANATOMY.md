@@ -1,11 +1,13 @@
-# LEAP Demand-Tree Anatomy — `aeo9_v0.67_w_results`
+# LEAP Structure Anatomy — `aeo9_v0.67_w_results`
 
-> **What this is.** A structural digest of the six export workbooks in this
+> **What this is.** A structural digest of the seven export workbooks in this
 > folder — `LEAP Input {Commercial, Transport, Residential, Industry}.xlsx`
 > (the `Demand\` subtrees), `LEAP Input Keys.xlsx` (the `Key\` assumption
-> tree), and `LEAP Input Resources.xlsx` (the `Resources\` supply tree) — all
-> exported from LEAP area **`aeo9_v0.67_w_results`**. Generated 2026-07-02 by
-> converting all 1,858,572 export rows to flat CSVs offline and analysing
+> tree), `LEAP Input Resources.xlsx` (the `Resources\` supply tree), and
+> `LEAP Input Transformation.xlsx` (the `Transformation\` conversion tree —
+> power generation, refining, biofuel/clean-fuel production, blending) — all
+> exported from LEAP area **`aeo9_v0.67_w_results`**. Generated 2026-07-02/04
+> by converting all 2,435,820 export rows to flat CSVs offline and analysing
 > them (no LEAP COM was touched). Every quantitative claim was produced by a
 > query against the export data and independently re-verified by a second
 > pass; claims that could not be verified are marked as inference. Full
@@ -35,6 +37,7 @@ Sector sizes at a glance:
 | Industry | 1,008,012 | 5,859 | 10 | 10 | 11 | 12 |
 | Keys (`Key\`) | 440,220 | 1,064 | 8 | 26 | 11 | 12 |
 | Resources | 113,760 | 62 | 3 | 20 | 11 | 12 |
+| Transformation | 577,248 | 1,593 | 7 | 80 | 11 | 12 |
 
 One row = one (branch, variable, scenario, region). The row space is sparse —
 each branch carries only its own variable set (commercial has 695
@@ -1158,7 +1161,853 @@ layers.
 
 ---
 
-## 14. Data-hygiene ledger
+## 14. The `Transformation\` conversion tree
+
+`LEAP Input Transformation.xlsx` — **577,248 rows, 1,593 branches, 80
+variables, max depth 7.** Same 11-scenario / 12-region roster as the other
+exports. This is the **hub tree** of the whole area: `Resources →
+Transformation → fuels/electricity → Demand`. Every generator, refinery,
+mine, blending pseudo-tech and biofuel converter lives here; the tree pulls
+feedstocks and cost signals up from `Resources\`, takes its policy levers and
+its transmission-node binding from `Key\`, and emits the secondary fuels and
+electricity the four demand sectors consume. It is the single largest export
+by row count and the only one that references *both* of the other two
+input-side trees. Structure is canon (§2.6); expression content is not.
+
+---
+
+### 1. Tree shape
+
+**Depth census** (branches only carry-through when they hold ≥1 variable, so
+the pure `Processes\` / `Output Fuels\` container nodes do not export — same
+convention as the Key tree §12): `{L2: 28, L3: 1, L4: 163, L5: 4, L6: 431,
+L7: 966}` = 1,593. The lone L3 branch is `Transformation\Centralized
+Electricity Generation\Transmission Lines`; the four L5 branches are the crop
+biofuel `Output Fuels\<Product>\Land Use` leaves (§1.3). The 966 L7 leaves are
+the emission-factor (`Avg Environmental Loading`) pollutant leaves.
+
+**Sub-branch anatomy census** (whole tree, from `transformation_branches.csv`):
+
+| Kind | Count | Where |
+|---|---|---|
+| Feedstock pollutant leaf (L7) | 939 | `Processes\<tech>\Feedstock Fuels\<fuel>\<pollutant>` |
+| Transmission Node leaf | 248 | `Processes\<tech>\Transmission Nodes\<node>` (Centralized only) |
+| Feedstock fuel leaf (L6) | 173 | `Processes\<tech>\Feedstock Fuels\<fuel>` |
+| **Process node (L4)** | **108** | `Processes\<tech>` — power 63, fossil 21, bioenergy 24 |
+| Output fuel leaf (L4) | 42 | `<Group>\Output Fuels\<fuel>` — **module-level, a sibling of `Processes`, not a per-process child** |
+| L2 group root | 28 | `Transformation\<Group>` |
+| Auxiliary pollutant leaf (L7) | 27 | `Processes\<tech>\Auxiliary Fuels\<fuel>\<pollutant>` |
+| Auxiliary fuel leaf (L6) | 14 | `Processes\<tech>\Auxiliary Fuels\<fuel>` |
+| Transmission Lines container/leaf | 10 | `Centralized…\Transmission Lines\<line>` (intra-fleet DC/AC lines, distinct from `Key\Transmission\Lines`) |
+| Output Fuel Land Use (L5) | 4 | crop biofuel land-footprint (§1.3) |
+
+**Process skeleton.** A module is `Transformation\<Group>\{Output
+Fuels\<fuel>[\Land Use], Processes\<tech>}`; a process nests
+`Processes\<tech>\{Feedstock Fuels\<fuel>\<pollutant>, Auxiliary
+Fuels\<fuel>\<pollutant>, Transmission Nodes\<node>}`. Emission factors hang
+on the pollutant leaves under Feedstock/Auxiliary Fuels; the yield split and
+land footprint hang on the module-level Output Fuels.
+
+**The 28 level-2 groups by owner** (branch counts from
+`transformation_summary.json`; owner sum = 1,593):
+
+| Owner | Groups (branches) | Σ br |
+|---|---|---|
+| **Power** (3 groups) | Centralized Electricity Generation 1,093; Distributed Electricity Generation 4; Electricity Transmission and Distribution 3 | 1,100 |
+| **Fossil** (15 groups) | Energy Sector Own Use 59; Oil Refining 29; Gas Processing 12; Crude Oil Production 7; Natural Gas Production 7; LNG Regasification 7; Natural Gas Transmission and Distribution 6; Diesel Blending 6; Gasoline Blending 6; Gasoline Distribution and Handling 4; five coal-production groups (Anthracite / Bituminous / Lignite / Sub Bituminous / Unspecified) × 5 = 25 | 168 |
+| **Bioenergy** (10 groups) | Hydrogen Production for Energy Use 138; Biodiesel Production 40; Bioethanol Production 31; Charcoal Production 27; Renewable Diesel Production 21; Sustainable Aviation Fuel Production 21; Biomethane Production 20; Methanol Production for Energy Use 12; Domestic Biogas Production 10; Ammonia Production for Energy Use 5 | 325 |
+
+The Centralized fleet is 69% of the tree. Its **61 process nodes** (60 at the
+41-var storage-capable panel + 1 at 36 vars) span the full generation stack —
+coal (Subcritical/Supercritical/Ultrasupercritical ± CCS, IGCC ± CCS), gas
+(Combined Cycle ± CCS, Turbine, Engine, Steam), Fuel Oil/Diesel, nuclear
+(LWR/SFR/SMR), geothermal (Flash/ORC), hydro (Large/Pumped), variable
+renewables (Solar PV/CSP/Floating, Wind On/Offshore, Tidal, Wave), bioenergy
+(Biomass Gasification, Bioenergy with CCS, Biogas, Waste), H2 Fuel Cell,
+Direct Air Capture, four storage techs, and the `Unmet Load_*` slack processes
+(§11.4). **Load-bearing structural caveat:** for the sub-nationally-decomposed
+families (Solar PV, Wind Onshore, Coal Subcritical, Gas Combined Cycle, Large
+Hydro, Nuclear LWR/SFR/SMR, Diesel, Biomass Other, Unmet Load) the exported
+tree materialises **only the Malaysia `_MYPE/_MYSB/_MYSR` node variants — there
+is no base branch** (verified: `…\Processes\Solar PV` ABSENT, `…\Solar
+PV_MYPE` present, in both the branch digest and `transformation_tree.txt`).
+Indonesia's `_IDxx` variants (e.g. `Geothermal Flash_IDJW`, referenced 22× by
+the Resources geothermal back-edge) are **referenced but not materialised as
+separate branches in this export view** — a region-scoped branch-visibility
+artefact (§11.1). So the 61-node Centralized roster is the *exported-view*
+count, not a globally-uniform per-region roster; treat it as such when
+authoring per-region injects.
+
+The three sibling owner writeups (verified, verifier-corrected) fold in below.
+
+---
+
+#### 1.1 Power owner — the Centralized Electricity Generation fleet
+
+`Transformation\Centralized Electricity Generation` is the single largest module in the Transformation export: **1,093 branches** (of 1,593 in the whole sector) and **396,228 expression rows**. It resolves to **61 process nodes** grouped into **39 tech families**, one shared output fuel (`Output Fuels\Electricity`), 9 international `Transmission Lines`, and 4 module-level `Transmission Nodes`. Branch reconciliation: 1 root + 1 `Transmission Lines` bucket + 75 depth-4 nodes (61 processes + Electricity + 9 lines + 4 nodes) + 351 depth-6 fuel/node sub-branches + 665 depth-7 emission leaves = 1,093.
+
+> **§11.1 exported-view caveat.** This export is Malaysia-decomposed. Several tech families are materialized **only** as Malaysia sub-national node variants (`_MYPE` = Peninsular, `_MYSB` = Sabah, `_MYSR` = Sarawak) with **no un-suffixed base branch** — there is no `Processes\Solar PV`, `Processes\Wind Onshore`, `Processes\Large Hydro`, `Processes\Nuclear LWR`, `Processes\Diesel`, or `Processes\Gas Combined Cycle`; only the `_MY*` variants exist. Each `_MY*` node is nonetheless replicated across all 12 regions in the inheritance tree, so a "Solar PV_MYPE" row exists for Indonesia, Vietnam, etc. — but the fully-authored cost/availability data for those regions lives on their own regional branches, which this Malaysia view does not surface. **`Small Hydro` does not appear anywhere in the Centralized Electricity Generation export** (nor elsewhere in Transformation); if it is modelled it sits in `Distributed Electricity Generation`. Treat the 61-node roster as the exported-view count, not the full physical fleet.
+
+**Generation tech-family roster (61 process nodes, 39 families):**
+
+| Category | Families (materialized process nodes) |
+|---|---|
+| **Coal thermal** | Coal Subcritical (`_MYPE`,`_MYSR` — no `_MYSB`), Coal Supercritical, Coal Ultrasupercritical, Coal IGCC; **+CCS**: Coal Supercritical CCS, Coal Ultrasupercritical CCS, Coal IGCC with CCS |
+| **Gas thermal** | Gas Combined Cycle (`_MYPE`/`_MYSB`/`_MYSR`), Gas Combined Cycle with CCS, Gas Turbine (base + `_MYPE`), Gas Engine, Gas Steam |
+| **Oil / diesel** | Diesel (`_MYPE`/`_MYSB`/`_MYSR`), Fuel Oil |
+| **Nuclear** | Nuclear LWR, Nuclear SFR, Nuclear SMR — each as `_MYPE`/`_MYSB`/`_MYSR` (9 nodes) |
+| **Variable renewables** | Solar PV (`_MY*`), Solar CSP, Solar Floating, Wind Onshore (`_MY*`), Wind Offshore, Tidal, Wave |
+| **Firm / dispatchable renewables** | Large Hydro (`_MY*`), Geothermal Flash, Geothermal ORC, Biogas, Biomass Gasification, Biomass Other (`_MY*`), Bioenergy with CCS, Waste |
+| **Storage** | Lithium Ion Batteries, VRB Flow Batteries, Pumped Hydro, CAES |
+| **Other / slack / CDR** | H2 Fuel Cell, Direct Air Capture, Unmet Load (`_MYPE`/`_MYSB`/`_MYSR` slack) |
+
+The sub-national decomposition is **asymmetric**: some families are `_MY*`-only (Solar PV, Wind Onshore, Large Hydro, Nuclear ×3, Diesel, Gas Combined Cycle, Biomass Other, Unmet Load), Coal Subcritical is `_MYPE`+`_MYSR` (no `_MYSB`), Gas Turbine has **both** a base node and `_MYPE`, and the remaining families are base-only.
+
+**Process variable panel.** Each generator node carries a full LEAP process panel — 41 distinct variables in the union, ~31 populated for a typical thermal node. Every core variable is present at **61 nodes × 11 scenarios × 12 regions = 8,052 rows**. Sub-branch anatomy is limited to **`Feedstock Fuels\<fuel>`** (129,768 rows; each fuel carries `Feedstock Fuel Share`, `Fuel Cost`, `Fuel Source`, plus emission-species children) and **`Transmission Nodes\<node>`** (20,496 rows, `Nodal Distribution`). There are **no per-process `Auxiliary Fuels` or `Output Fuels` buckets** — electricity output attaches once at module level, and combustion emission factors (`Avg Environmental Loading`, 87,780 rows across 665 emission leaves) hang off the `Feedstock Fuels` sub-branches.
+
+| LEAP variable | NEMO param (§2.3) | Units (scale \| unit \| per) | Verbatim example |
+|---|---|---|---|
+| `Capital Cost` | `CapitalCost` | Thousand \| USD \| MW | `Interp(2020, 1814, 2030, 1776) ? Vietnam PDP8` (Coal Supercritical, RAS) |
+| `Fixed OM Cost` | `FixedCost` | Thousand \| USD \| MW | `Interp(2020, 32.2, 2030, 31.50)` |
+| `Variable OM Cost` | `VariableCost` | USD \| MWh | `500` (Unmet Load); `0` (Solar PV_MYPE) |
+| `Lifetime` | `OperationalLife` | Years | `40` (Coal Supercritical) |
+| `Exogenous Capacity` | `ResidualCapacity` | MW | `Existing Capacity[MW] + Capacity Additions[MW]` |
+| `Maximum Availability` | `AvailabilityFactor` | Percent | `61 ? NREL ATB 2023` (Solar CSP); `95` (Nuclear LWR) |
+| `Minimum Utilization` | `MinimumUtilization` | Percent | see dispatch discipline below |
+| `Capacity Credit` | `ReserveMarginTagTechnology` | Percent | see reserve-margin below |
+| `Optimized New Capacity` | endogenous NEMO build | MW | `Data(2050, 96627.3, 2060, 119320.3) ?Optimized on 07/02/2026 (NEMO/CPLEX)` |
+
+`Optimized New Capacity` rows carry **solver-written** `Data(...)` series stamped `?Optimized on 07/02/2026 11:41 (NEMO/CPLEX)` — this is a *solved* area recording CPLEX's endogenous capacity-expansion decisions. `Exogenous Capacity` (= NEMO `ResidualCapacity`) is the building-block sum `Existing Capacity + Capacity Additions`.
+
+**Dispatch discipline — the §11.2c must-run check (load-bearing).** `Minimum Utilization` (8,052 rows) splits three ways:
+- **Curtailable variable renewables (`MU = 0`)** in Current Accounts, Baseline, and AMS Target — every VRE process (132 rows each) is `0`, the §11.2c-correct shape. No trap in those three.
+- **Incumbent must-run phaseout (guarded `Min()`):** 2,620 rows use `Min(Interp(FirstScenarioYear, Value(Historical Capacity Factor, LastHistoricalYear), FSY + Key\Modeling Assumptions\Incumbent Generator DIspatch Phaseout:Activity Level, 0), Maximum Availability)` across 35 incumbent families; **2,522 reference the `Incumbent Generator DIspatch Phaseout` key** (capital "DI"). The outer `Min(…, Maximum Availability)` is the §11.2c guard.
+- **⚠ Bare `Minimum Utilization = Maximum Availability` (the §11.2c TRAP) — 494 rows** (474 variable renewables + 20 Biogas/Waste/Large Hydro_MYSB/MYSR). **Absent in CA/Baseline/AMS Target; present in RAS + every RE-policy scenario.** RAS: 27 trap rows — `Wind Onshore_MYPE`/`_MYSB` in 11 of 12 regions (all except Malaysia, which reads `0`); `Wind Onshore_MYSR` is `0` (sibling inconsistency). Set up / LCO backup / RE LTRM ×3: full 12-region trap on Solar CSP/Floating, Tidal, Wave, Wind Offshore, Wind Onshore. **Hypothesis, not proven (§A.13):** may not bind if those `_MY*` branches carry zero capacity outside Malaysia — verify against `Exogenous Capacity`/`Optimized New Capacity` before treating as a live infeasibility root cause. But this is exactly the §11.2c authoring pattern and should be scrubbed to `0` or a `Min(...,Maximum Availability)` guard in the affected scenarios.
+
+**Unmet Load slack (§11.4).** The **18 Unmet Load branches** (3 slack nodes `_MYPE`/`_MYSB`/`_MYSR` × {process + `Feedstock Fuels\Non Energy` + 4 `Transmission Nodes`}) are unhidden and **priced**: `Variable OM Cost = 500` + `Fixed OM Cost = 500` (+ deterrent `Capital Cost = 100000`) on all 396 rows — unmet demand resolves as expensive slack, not LP-infeasible. (Only Malaysia `_MY*` slack materialized here; other AMS carry it on their own regional branches per §11.1.)
+
+**Capacity Credit / reserve-margin tagging (`ReserveMarginTagTechnology`, from CA/Indonesia):** storage & CDR = 0 (CAES, Li-Ion, VRB, Pumped Hydro, DAC, H2 Fuel Cell); firm thermal explicit % (Coal Subcritical 92.50, Coal Supercritical 81.23, Gas CC 85, Gas Turbine/Steam 92, Diesel/Fuel Oil 50.67); branch-ref inheritance (Coal IGCC/Ultrasupercritical → Coal Supercritical; Gas Engine → Gas Turbine); `= Maximum Availability` on all Nuclear, Biogas, Biomass, Geothermal, Waste, Solar CSP, Tidal, Wave, Large Hydro_MYSB/MYSR **and Unmet Load**. Variable-renewable credits are mixed and worth flagging: Wind Offshore `20`, Solar Floating `18.61`, but `Solar PV_MY* = 100`, `Wind Onshore_MYSR = 100`, `Large Hydro_MYPE = 100`, `Gas Turbine_MYPE = 100` — these read as LEAP defaults on un-authored inheritance copies (same six carry `Capital Cost = 0`), not deliberate firm-capacity credits (hedged pending a per-region probe).
+
+Representative paths: `…\Processes\Coal Supercritical\Feedstock Fuels\Coal Bituminous\Carbon Dioxide` (emission factor); `…\Processes\Solar PV_MYPE\Transmission Nodes\Malaysia Sarawak` (Nodal Distribution); `…\Processes\Unmet Load_MYSR` (Variable OM Cost = 500); module-level constraint hosts on the CEG root: `RenewableCapacityTarget__NEMOcc`, `ASEANRenewableCapacityTarget__NEMOcc`, `Planning Reserve Margin`, `PRM for Simulated Scenarios`.
+
+#### 1.2 Power owner — the grid layer: distributed generation, T&D, storage & the nodal network
+
+The central thermal-and-renewable fleet is described above (Centralized
+Electricity Generation, 61 processes). This subsection covers the rest of the
+electricity system: the **behind-the-meter fleet** (`Distributed Electricity
+Generation`, 4 branches), the **grid itself** (`Electricity Transmission and
+Distribution`, 3 branches), the **energy-storage fleet** (5 techs), and the
+**sub-national nodal wiring** binding every generator to the ASEAN Power Grid
+modelled in `Key\Transmission`. The wiring is carried by three cross-cutting
+variables — `Node` (8,052 rows), `Nodal Distribution` (20,832 rows), and the
+storage/dispatch panel (`Full Load Hours`, `Minimum Charge`, storage-carryover
+flags, `Merit Order`, `Dispatch Rule`) — plus the module-level grid knobs
+`Planning Reserve Margin`, `Peak Load Ratio`, `Module Costs`, `Renewable
+Target`.
+
+##### Tree shape
+
+| Branch | Depth | Shape |
+|---|---|---|
+| `…\Distributed Electricity Generation` | 2 (module) | one process: `…\Processes\Solar PV Rooftop` (33 vars) → `…\Feedstock Fuels\Solar`; output leaf `…\Output Fuels\Electricity` |
+| `…\Electricity Transmission and Distribution` | 2 (module) | one process: `…\Processes\Electricity` (8 vars) → `…\Feedstock Fuels\Electricity`. No pollutant leaves |
+| Storage fleet | L4 under `Centralized…\Processes` | `Pumped Hydro`, `CAES`, `Lithium Ion Batteries`, `VRB Flow Batteries`; plus `Pressurized H2 Gas` under `Hydrogen Production for Energy Use\Processes` |
+| Nodal decomposition | L4 + L6 | `Centralized…\Transmission Nodes\{Malaysia, Malaysia Peninsular, Malaysia Sabah, Malaysia Sarawak}` (4 module-level) + the same 4 node leaves repeated under 61 Centralized processes = **248** `Transmission Nodes` branches, each carrying only `Nodal Distribution` |
+
+`Natural Gas Transmission and Distribution` (6 branches, 1 process `Natural
+Gas` with 3 pollutant leaves) mirrors the ETD shape on the gas side but sits
+outside the electricity grid.
+
+##### The nodal wiring — how generation reaches `Key\Transmission`
+
+Every Centralized generator is bound to a transmission node by its **`Node`**
+variable (units `ID`, 8,052 rows across 61 process branches). The value is a
+branch pointer: `Node = BranchID(Key\Transmission\Nodes\Malaysia:Activity
+Level[NA])`. This is the most-referenced Key link out of Transformation —
+`Malaysia` 605, every other ASEAN country 561, the top rows of the export's
+`top_key_refs`. Of the 8,052 `Node` rows, 5,654 are wired `BranchID(...)` and
+2,398 are `0`: **Base Template and Timor Leste carry Node=0 for all 61
+processes** (unwired — consistent with Timor Leste disabled from calc), and
+each real region zeroes the ~110 process rows for techs it does not host (the
+`_MYxx` sub-node techs are Node=0 everywhere but Malaysia). Per-region
+BranchID-assigned/total: Base Template 0/671, Timor Leste 0/671, Malaysia
+605/671, all nine other ASEAN 561/671 (671 = 61 branches × 11 scenarios).
+
+The target `Key\Transmission` tree is a compact NEMO transmission network:
+**10 country Nodes** (`Region_ = RegionID(<country>)` + `Activity Level = 0
+? existence required`; **no Timor Leste node**); **21 Lines**
+(`Lines\<Corridor>_<E|F|C>` with `From Node`/`To Node` = `BranchID(…Nodes\…)`,
+`Maximum Flow` MW, `Capital Cost_`, `Efficiency_`, `Lifetime_`, plus
+deactivated `!Reactance`/`!Construction Year`); **10 Demand Distribution**
+branches routing 100% of each country's electricity demand to its single
+national node (`Node_`, `Fuel_ = FuelID(electricity)`, `Activity Level = 1`).
+Verbatim CA capacities: `P.Malaysia_Singapore_E` 1050, `P. Malaysia_Sumatra_F`
+2000, `Sumatra_Singapore_F` 1200, `Thailand_Myanmar_F` 1250, `Thailand_Laos_E`
+700 (+`_F` 600), `Laos_Vietnam_E` 570, `Thailand_Cambodia_F` 770,
+`Sarawak_Brunei_C` 100 MW. The `_E`/`_F` suffix splits existing vs.
+future/planned corridors.
+
+##### Sub-national balancing — Malaysia only
+
+**`Nodal Distribution`** (units `Percent`, 20,832 rows / 248 branches) splits
+a process's generation across sub-national nodes — but only for **Malaysia**.
+20,223 of 20,832 rows are `0`; every one of the 609 non-zero rows sits in the
+Malaysia region (Peninsular 322, Sabah 140, aggregate Malaysia 84, Sarawak
+63), splitting output across its three non-synchronous grids: `Malaysia
+Peninsular ≈ Interp(2020, 87.15, …, 2024, 80.75)`, `Malaysia Sabah ≈
+Interp(2020, 12.85, …, 2024, 19.25)` (complementary), with Sarawak and the
+aggregate carrying the remainder / `100`. No other country carries a nodal
+split — the other nine ASEAN systems are single copper-plate nodes.
+
+##### Storage fleet
+
+Five processes are true energy storage, identified by a non-zero **`Full Load
+Hours`** (units `Hours` — the energy-to-power duration ratio):
+
+| Tech | Full Load Hours | Module | Seasonal carryover |
+|---|---|---|---|
+| CAES | `10 ? DEA Technology Catalogue` | Centralized | Yes |
+| Pumped Hydro | `8 ? Electrochemical Energy Storage…` | Centralized | Yes |
+| VRB Flow Batteries | `4 ? DEA Technology Catalogue` | Centralized | No |
+| Lithium Ion Batteries | `2` | Centralized | No |
+| Pressurized H2 Gas | `16.7 / Interp(2019, 0.1, …, 2050, 0.08) ? DEA Energy Storage 2025` | Hydrogen Production | (H2 chain) |
+
+The four Centralized storage techs share a uniform signature: `Dispatchable =
+Yes`, `Dispatch Rule = PercentShare`, `Merit Order = 1`, `Minimum Charge = 0`,
+`Starting Charge = 0`, `Hourly Storage Carryover = Yes`, `Annual Storage
+Carryover = No`. Duration class is encoded in the carryover flags:
+**long-duration** Pumped Hydro + CAES set `Seasonal Storage Carryover = Yes`;
+**short-duration** Li-Ion + VRB set it `No`. The full storage panel is attached
+to **69 process branches** (61 Centralized + 8 Hydrogen-production) but is
+inert (`Full Load Hours = 0`) on the 64 non-storage techs — LEAP hangs the
+panel on every dispatchable process and only the 5 real storage techs populate
+it. Dispatch across the Centralized fleet resolves to three `Dispatch Rule`
+values: `MeritOrderDispatch` (1,968 rows — merit-order thermal), `PercentShare`
+(616 — storage/share-dispatched), `FullCapacity` (344 — run-at-availability
+baseload/VRE); `Merit Order` is mostly `1` (2,256), with `2`/`3`/`4` loading
+tiers and `<parent>:Merit Order` branch-refs on `_MYxx` variants.
+
+##### Module-level grid knobs
+
+- **`Planning Reserve Margin`** — Centralized = `PRM for Simulated
+  Scenarios[percent]`, a reference to a **user-defined local variable** on the
+  module holding a per-region PRM trajectory, **identical across all 11
+  scenarios**, sourced from national plans: Indonesia `Interp(2023, 17, 2024,
+  20, …, 2036, 42) ? RUPTL 2021-2030`; **Cambodia `25 ? AEO6 assumption`**;
+  Brunei `Interp(2023, 21.00, …, 2027, 25.00) ? assumed value`; distinct forms
+  for Philippines (`Philippine Energy Plan 2020-2040`), Singapore (`Electricity
+  Market Outlook 2023`), Myanmar (`30 ? Myanmar PDP`). Distributed PRM = `0`.
+  *(Corrected: `25 ? AEO6` is Cambodia's, not Brunei's.)*
+- **`Peak Load Ratio`** — Centralized = `PeakLoadRatioFromYearlyShape
+  (<Country>_Hourly)` for 9 of 10 ASEAN countries. **Myanmar** falls back to
+  flat `100` (no `Myanmar_Hourly` shape), as do Base Template and Timor Leste.
+  Distributed = flat `100`.
+- **`Renewable Target`** — `0` in every region and every policy-bloc scenario
+  (module-level RE-target knob unused; renewable ambition is enforced via blend
+  mandates + per-tech shares + the `__NEMOcc` custom constraints).
+
+##### T&D losses; distributed rooftop bypass
+
+The single ETD process `Electricity` carries per-region grid **`Losses`**
+(units `Percent`): Vietnam `≈11%`, Myanmar `≈27%` declining, Cambodia rising
+to `27%`, Brunei/Philippines `≈9-12%`. **Indonesia, Singapore, Timor Leste and
+Base Template carry Losses = 0** (Indonesia zero despite being the largest
+system); Laos/Malaysia/Thailand are single-point `Interp(2022, 10.55)` /
+`Interp(2022, 4.48)` / `Interp(2022, 11.389)` constants dressed as time series.
+`Maximum Production = Unlimited` (the §A.11 upper-bound 1e12 sentinel),
+`Lifetime = 30`. **Distributed** holds exactly one process, **Solar PV
+Rooftop**, deliberately *not* nodally wired (**no `Node` variable, no
+`Transmission Nodes` children**): behind-the-meter, `Dispatch Rule =
+FullCapacity`, `Maximum Availability = YearlyShape(<Country>_Solar
+Availability)`, `Minimum Utilization = 0` (fully curtailable per §11.2c),
+`Capacity Credit = 18.61 ? last historical availability`, `Exogenous Capacity =
+Existing Capacity[MW] + Capacity Additions[MW]`, with `Usage Rule =
+DomesticPriority`, `Surplus Rule = SurplusExported`, `Shortfall Rule =
+RequirementsRemainUnmet` on its output.
+
+##### Scenario & regional pattern (grid layer)
+
+Almost entirely scenario-invariant: of the 350 (branch, variable) combos in
+Distributed / ETD / Pumped Hydro / Transmission Nodes, only **13 diverge**
+across scenarios (those 13 carry 2 or 3 distinct expressions — *not* 1), and
+`Nodal Distribution` carries a **single distinct expression across the 7
+scenarios it appears in** (`n_distinct_expr = 1`). Regional variation is
+concentrated exactly where physics demands it — per-country PRM, per-country
+hourly-shape Peak Load Ratios, per-country ETD losses, the Malaysia-only nodal
+split — while the storage-fleet dispatch panel and interconnector topology are
+template-uniform. *(Corrected: the earlier claim that the 13 diverging combos
+"carry a single distinct expression" was self-contradictory; `n_distinct = 1`
+describes only the 248 scenario-flat Nodal Distribution combos.)*
+
+---
+
+#### 1.3 Fossil owner — Oil Refining, coal/oil/gas production, blending & ESO
+
+**Group inventory:** Oil Refining 29 (crude → 14 refined products,
+multi-output); the five coal-production groups (`All Mines`, 5 br each); Crude
+Oil Production 7; Natural Gas Production 7; Gas Processing 12 (raw NG →
+LPG/NGL/Oil/…, full plant); LNG Regasification 7; Natural Gas T&D 6; Diesel
+Blending / Gasoline Blending 6 each (biofuel-mandate pseudo-techs); Gasoline
+Distribution and Handling 4 (evaporative-loss handling); Energy Sector Own Use
+59 (refinery/LNG/power self-consumption + emissions).
+
+##### Three process archetypes
+
+| Archetype | n-vars | Carries | Members |
+|---|---|---|---|
+| **Full capacity-planning plant** | 29 | Exogenous Capacity + Capital + Fixed/Variable OM + Maximum Availability + Capacity Credit + Merit Order + … | `Oil Refining\…\All Refineries`, `Gas Processing\…\Natural Gas` |
+| **Zero-cost blending pseudo-tech** | 23 | Exogenous Capacity + Maximum Availability + share-of-production vars, **no** Capital/Fixed/Variable OM Cost | `Diesel Blending\{Biodiesel, Diesel}`, `Gasoline Blending\{Ethanol, Gasoline}` |
+| **Simple conversion/extraction** | 8–10 | Dispatch Rule, Lifetime, Losses / Process Efficiency, Maximum Production, share pair, Variable OM Cost — **no Exogenous Capacity, no Capital Cost** | coal `All Mines`, Crude Oil / NG Production, LNG Regas, NG T&D, ESO, Gasoline Distribution |
+
+##### Exogenous Capacity, and the RAS/CNZ inject
+
+Only the two full-plant processes and the blending pseudo-techs carry
+`Exogenous Capacity` (= `ResidualCapacity`). **The refinery unit is `Thousand
+Gigajoules/Year`** (`scale=Thousand`, `units=Gigajoules/Year`; 132 rows = 12
+regions × 11 scenarios) — Indonesia CA `Interp(2005, 1675956.78, …)`; **RAS +
+CNZ only** carry the forward capacity-expansion inject `Interp(2024,
+2.4426e+06, 2026, 2.6549e+06, 2030, 2.6549e+06, …)` (≈2,443 → 2,655 PJ/yr,
+byte-identical between RAS and CNZ). `Gas Processing\…\Natural Gas` capacity is
+in **`Thousand Tonnes Oil Equiv/Year`**. Refinery `Maximum Availability = 100`,
+`Lifetime = 30`.
+
+##### Costs live on Resources; Transformation caps at Unlimited
+
+Extraction/T&D/ESO processes carry **`Variable OM Cost = 0` and `Maximum
+Production = Unlimited`** — the fossil supply *cost* is authored entirely on
+the `Resources\` tree (Import/Production Cost), the mirror of §13.4's
+costs-without-caps gap. Feedstock `Fuel Cost = 0` too (`Fuel Source =
+SourceBelow`). **The two full-plant processes are the exceptions that carry
+real conversion cost** *(corrected — it is NOT only Gas Processing)*:
+
+- `Gas Processing\…\Natural Gas:Variable OM Cost` = `1.72 * ConvUnits(2023
+  usd, 2020 usd) * ConvFuelUnits(toe, mmbtu, natural gas) / (Process
+  Efficiency/100)` [2020 USD/TOE] (Indonesia; 1.25 elsewhere); 132/132 rows
+  non-zero.
+- `Oil Refining\…\All Refineries:Variable OM Cost` = `Mean(0.34, 0.51) *
+  ConvUnits(2018 usd, 2020 usd) * ConvFuelUnits(toe, barrel, crude oil) /
+  (Process Efficiency/100)` [per TOE], 132/132 non-zero; its `Capital Cost`
+  uses `Mean(0.53, 1.62) …` [per Gigajoules/Year] — Indonesia `Mean(0.53,
+  1.62)` vs Base Template `Mean(2.6, 3.05)`. *(Corrected: `Mean(0.53, 1.62)`
+  is the Capital-Cost coefficient, not the VOM coefficient.)*
+
+Across the tree **all 9,072 `Maximum Production` rows are literally `Unlimited`
+(Gigajoule)** — 108 processes × 12 regions × the 7 optimization scenarios — the
+benign §A.11 upper-bound flavour (silent-parse / LP-conditioning risk, not a
+forced floor).
+
+##### Output Fuels — the refinery yield split
+
+The refinery distributes throughput via `Output Fuels\<fuel>:Output Share`
+across **14 refined products** (Avgas, Bitumen, Diesel, Gasoline, Jet Kerosene,
+Kerosene, LPG, Lubricants, Naphtha, Oil, Petroleum Coke, Refinery Feedstocks,
+Refinery Gas, Residual Fuel Oil), with Gasoline tagged `Remainder(100)`. Yields
+constant across CA and RAS (Indonesia): `Diesel = Interp(2007, 28.49, …,
+33.98)`, `Kerosene = Interp(…)` declining, `Jet Kerosene = Interp(…)` rising,
+`Avgas/Bitumen/Petroleum Coke/Refinery Feedstocks/Refinery Gas = 0`. Gas
+Processing Indonesia: `LPG = 100`, `Oil = Remainder(100)`, rest `0 ? EBT`.
+*(Corrected: the refinery has 14 Output Fuels leaves, not 7 — the "7" was a
+truncated audit sample.)*
+
+##### Feedstock, emissions, own-use
+
+`Feedstock Fuel Share` sets the input mix (refinery crude `Interp(2005, 99.2,
+…, 2017, 97.6)`; single-feedstock = `100`). Mining/extraction emission factors
+hang on `Feedstock Fuels\<fuel>\<pollutant>:Avg Environmental Loading` — e.g.
+`Crude Oil Production\…\Crude Oil\Carbon Dioxide = 4.67 ?a` [kg/TOE]; coal-mine
+`Methane = 0 ? no indigenous production`. **Energy Sector Own Use** uses the
+`\Processes\` wrapper (hidden by the collapsed tree-view — real path
+`…\Energy Sector Own Use\Processes\Crude Oil\…`, not `…\Energy Sector Own
+Use\Crude Oil`) and carries the widest pollutant panels (12 species: Ammonia,
+Black Carbon, CO2, CO, CH4, NOx, N2O, NMVOC, Organic Carbon, PM10, PM2pt5,
+SO2); its Electricity own-use has ~30% losses (`Interp(2005, 0, …, 2007,
+29.97, …)`). Electricity-T&D **`Losses`** are non-zero on **88 of 132 rows** (8
+regions × 11 scenarios — Brunei, Cambodia, Laos, Malaysia, Myanmar,
+Philippines, Thailand, Vietnam; Indonesia/Singapore/Timor Leste/Base Template
+all-zero). *(Corrected: 88 non-zero / 132 total, not "99 rows".)*
+
+##### The blending pseudo-tech mechanism (Min/Max Share of Production)
+
+`Diesel Blending` and `Gasoline Blending` each host two zero-cost processes
+(`Biodiesel`+`Diesel`, `Ethanol`+`Gasoline`) feeding one `Output Fuels\Blended
+Diesel|Blended Gasoline` (`Output Share = 100`). The split is
+**scenario-mode-switched**: **accounting** scenarios (CA, Baseline, AMS Target,
+RAS test) simulate via `Process Share` (renewable = computed share, fossil =
+`Remainder(100)`; 96 branch-ref rows); **optimization** scenarios (Set up, CNZ,
+LCO backup, RAS, RE LTRM ×3) enforce a `Minimum Share of Production` floor (168
+branch-ref rows) with `Maximum_Share_of_Production = 100` and fossil Min Share
+= `0`. The share expression converts a **volumetric** blend mandate into an
+**energy-basis** floor, verbatim (Indonesia biodiesel, RAS):
+
+```
+Key\Biofuel Blending Targets\Biodiesel:Activity Level[Volume %]/100 * 38.997
+  ~/~ (…/100 * 38.997 ~+ (1 - …/100) * 43.330) ~* 100
+  ? Energy contents taken from Fuels database
+```
+
+i.e. `v·E_bio / (v·E_bio + (1−v)·E_fossil) · 100`, energy densities biodiesel
+`38.997` / fossil diesel `43.330`, ethanol `26.744` / gasoline `44.8`. The
+driver is `Key\Biofuel Blending Targets\{Biodiesel, Bioethanol}:Activity
+Level`. `Minimum Utilization = 0` on all four. **§A.11 lower-bound landmine —
+present in canon:** all four blending processes carry `Exogenous Capacity =
+Unlimited` (`Megawatt`) — **528 rows** (4 × 12 × 11). Since Exogenous Capacity
+= `ResidualCapacity`, LEAP→NEMO export turns each into a `1.0e+12` forced
+floor. This is the exact shape flagged in §A.11 / the 2026-05-12 aeo9_v0.42
+investigation (there judged a red herring, never remediated); it survives
+unchanged in aeo9_v0.67. In RAS the blending processes additionally show
+`Maximum Capacity = Unlimited` (upper-bound flavour).
+
+The `Gasoline Distribution and Handling` module implements an evaporative-loss
+model via three custom vars — `Annual Avg Reid Vapour Pressure` (80 kPa),
+`Annual Avg Ambient Temp` (`15 ? Fill in country-specific value`), and `TVP`
+(true vapour pressure, a closed-form function of the two) — the only place
+these three variables appear.
+
+---
+
+#### 1.4 Bioenergy owner — clean-fuel & biofuel conversion
+
+The ten clean-fuel/biofuel conversion sectors (Hydrogen 138, Biodiesel 40,
+Bioethanol 31, Charcoal 27, Renewable Diesel 21, SAF 21, Biomethane 20,
+Methanol 12, Domestic Biogas 10, Ammonia 5 = **325 branches / 112,164 rows**)
+are the conversion stage of the hub: each takes a Resources feedstock and emits
+a Resources secondary fuel.
+
+##### Two process families
+
+There are **24 conversion processes**, splitting into two variable-panel
+families:
+
+| Family | Count | Panel | Members |
+|---|---|---|---|
+| **Full-panel** (capacity-planned) | 17 | 29-var (`Exogenous Capacity`, Capital/Fixed/Variable OM, Lifetime, Maximum Availability, Minimum Utilization, Capacity Credit, Maximum Capacity(+Addition), Process Efficiency, Process Share…) | Biodiesel (CME/FAME/POME), Bioethanol (Cassava/Corn/Molasses/Sugarcane), Renewable Diesel (HVO), SAF (HVO), all 8 Hydrogen |
+| **Lite-panel** (share-dispatched, no fleet) | 7 | 9–10 vars (`Dispatch Rule`, Lifetime, Max/Min Production, Max/Min Share of Production, Optimized New Capacity, Process Efficiency, Process Share, ±VOM) — **no Exogenous Capacity, no Capital Cost** | Ammonia (`Hydrogen`), Biomethane (2 AD variants), Charcoal (All Biomass), Domestic Biogas (Anaerobic Digestion), Methanol (CO2 Utilization / from Hydrogen) |
+
+The 8 **Hydrogen** processes carry an extended **35-var panel** adding a storage
+sub-panel (`Full Load Hours`, `Minimum/Starting Charge`, `Annual/Seasonal/
+Hourly Storage Carryover`) — modelled as dispatchable storage-capable
+generators. `Pressurized H2 Gas` carries the full storage panel but **zero
+feedstock/auxiliary fuels** (an H2 compression/storage pseudo-process). Biofuel
+capacity is energy-flow, not electrical: FAME Biodiesel `Exogenous Capacity` in
+**Million GJ/Year**, `Capital Cost` in **2020 USD/(GJ/Year)** — distinct from
+the power tree's MW / Thousand USD/MW.
+
+##### Feedstock → product map
+
+| Sector | Process | Feedstock fuel(s) | Auxiliary fuel(s) |
+|---|---|---|---|
+| Biodiesel | CME | Coconut Oil | Electricity, Methanol |
+| Biodiesel | FAME | Palm Oil (95.99%) + Methanol (rem.) | Biodiesel, Electricity, Natural Gas |
+| Biodiesel | POME | Palm Oil Mill Effluent | — |
+| Bioethanol | Cassava / Corn / Molasses / Sugarcane | same-named crop | — |
+| Renewable Diesel | HVO | Palm Oil (95.67%) + Hydrogen (rem.) | Biodiesel, Electricity |
+| SAF | **HVO Renewable Diesel** | Palm Oil + Hydrogen | Biodiesel, Electricity |
+| Biomethane | AD w/ Methanation / w/ Upgrading | Biomass | Hydrogen / Electricity |
+| Domestic Biogas | Anaerobic Digestion | Biomass | — |
+| Charcoal | All Biomass | Biomass + Wood | — |
+| Hydrogen | Biomass Gasification (±CCS) | Biomass (rem.) + Electricity + Natural Gas | — |
+| Hydrogen | Coal Gasification (±CCS) | Coal grade (one active/region) + Electricity | — |
+| Hydrogen | PEM Electrolysis | Electricity | — |
+| Hydrogen | SMR (±CCS) | Natural Gas (rem.) + Electricity | — |
+| Methanol | CO2 Utilization for Iron and Steel | Blast Furnace Gas + Coke Oven Gas | Electricity |
+| Methanol | Production from Hydrogen | Hydrogen | Electricity |
+| Ammonia | **Hydrogen** | Hydrogen | Electricity |
+
+##### Conversion arithmetic
+
+**`Feedstock Fuel Share`** uses an explicit-primary + `Remainder(100)`
+idiom: single-feed = `100`; FAME Palm Oil `95.99` / Methanol `Remainder(100)`;
+HVO Palm Oil `95.67` / Hydrogen `Remainder(100)`; Biomass Gasification Biomass
+`Remainder(100)` with Electricity/Natural Gas GREET mass ratios; **Coal
+Gasification routes exactly one coal grade per region** (Indonesia Lignite
+`Remainder(100)`, other three grades `0`). **`Process Efficiency`** mixes three
+idioms: sourced constants (CME `95`, FAME `78.9 ? GREET1`, HVO `52.1 ? GREET1`,
+SMR `71.8`, SMR-CCS `65.7`, Coal Gas `58.9`), GREET mass-balance ratios
+(Biomass Gasification `1000000/(2198017+51874+13304+94280)*100`), and
+unit-physics chains (Domestic Biogas via `ConvFuelUnits(…) *
+Key\Cal\Transformation\domestic_biogas:Activity Level[factor]`; Molasses via a
+liter→GJ ethanol chain). **Passthrough** processes (POME, Cassava, Sugarcane,
+Charcoal All Biomass) author `100` — real conversion loss lives in the Land
+Use yield / Resources crop yield, not here. Only the 3 Hydrogen calibration
+knobs and Domestic Biogas reach into `Key\Cal\Transformation\*`.
+
+##### The `Land Use` sub-branch (crop biofuels)
+
+Exactly **4 sectors** carry `…\Output Fuels\<Product>\Land Use` — Biodiesel,
+Bioethanol, Renewable Diesel, SAF (gas/hydrogen/charcoal have none). It holds
+`CropYield` [tonne/ha], `BioProdYield` [litre/tonne], and `Avg Environmental
+Loading` [Hectare/Gigajoule] = land intensity `1 / (CropYield · BioProdYield ·
+ConvFuelUnits(Liter, GJ, <fuel>))`. `CropYield` is regionalised: oil-palm
+`17.8 ? Indonesia`, `20.6 ? Malaysia`, `(20.6+17.8)/2` (=19.2) for the other
+10; `BioProdYield = 230`. **SAF is a derived piggyback**: its `CropYield`/
+`BioProdYield = 0` and its Land Use `Avg Environmental Loading` = a branch-ref
+to `Renewable Diesel Production\Output Fuels\Renewable Diesel\Land Use:Avg
+Environmental Loading[ha/GJ]` — SAF shares the HVO pathway.
+
+##### Emissions (incl. biogenic & sequestered CO2)
+
+`Avg Environmental Loading` is the domain's largest variable (29,700 rows).
+Combustion-heavy **Charcoal** carries the full 11-species set including
+**Organic Carbon** — which appears on only 2 leaves in the whole domain, **both
+in Charcoal** (Biomass + Wood). Hydrogen Biomass Gasification's Biomass
+feedstock carries 10 species (Black Carbon + PM10/PM2pt5 but **no Organic
+Carbon**); coal-grade feedstocks carry 5. *(Corrected: Hydrogen gasification
+does NOT carry the full 11-species set; only Charcoal does.)* Fossil-feedstock
+CO2 scales with process efficiency and is sequestered under CCS: `SMR with
+CCS\…\Natural Gas\Carbon Dioxide = 82467 * …Process Efficiency/100` [g/MMBTU],
+paired `Sequestered Carbon Dioxide = -82467 * 95% * …/100` (negative, 95%
+capture). **8 Sequestered CO2 leaves** exist, all in Hydrogen (7) + Methanol
+(1). Biogenic CO2 is tracked on a **separate** `Carbon Dioxide Biogenic` leaf
+(5 total): FAME aux Biodiesel `79.6` [t/TJ], Charcoal Biomass `542 ?a`
+[kg/tonne] — tagging is **not uniform**: crop-feedstock combustion CO2 is filed
+under fossil `Carbon Dioxide` (FAME Palm Oil `3.16 ?bioenergydat`, near-zero).
+
+##### Costing
+
+Feedstock `Fuel Cost` is `0` in 3,715 of 5,016 rows (crops — costed on
+`Resources\Primary\<Crop>`). Of the 1,301 non-zero feedstock costs: **1,188 are
+branch-refs to `Resources\Secondary\{Electricity (792), Hydrogen (264),
+Methanol (132)}:Production Cost`; the remaining 113 = 102 `Interp(...)` constant
+cost trajectories + 11 `Resources\Primary\Biomass:Production Cost` refs.**
+*(Corrected: 792+264+132 = 1,188, not 1,301.)* Auxiliary electricity pulls the
+same Electricity Production Cost (660 rows). Full-panel biofuel processes author
+their own `Capital Cost` (FAME `Interp(2025, 5.3074, …, 2060, 4.1052)`) and
+inherit VOM cross-region (`RegionValue(Malaysia)` for Indonesia). `Maximum
+Availability = 100` on the 9 liquid-biofuel processes (all 1,188 rows).
+**`Minimum Utilization` is *not* uniformly 0**: 50 of 2,244 process-level MU
+rows are non-zero — 5 liquid-biofuel processes (FAME, Molasses, Sugarcane, CME,
+Cassava) carry `Interp(2023, X, 2030, 100)` must-run ramps in the 5
+optimization scenarios Set up / LCO backup / RE LTRM ×3, for
+Indonesia/Malaysia/Philippines/Thailand; MU=0 holds in CA/Baseline/AMS/RAS/RAS
+test/CNZ. *(Corrected from "MU=0 on all biofuel processes".)*
+
+> **Boundary note.** These ten sectors *produce* the fuel; **zero** domain rows
+> reference `Key\Biofuel Blending Targets`. The B/E blend mandate is applied
+> downstream on the fossil-owner `Diesel/Gasoline Blending` pseudo-techs (§1.2),
+> consistent with §11.4 and the connection audit.
+
+---
+
+### 2. Variable inventory — the 80-variable process panel
+
+80 variables (full roster in `transformation_variables.csv`). The heavy hitters
+are emissions (`Avg Environmental Loading` 128,040 rows / 970 branches — the
+single biggest variable in any export) and fuel routing (`Fuel Cost` 23,232,
+`Feedstock Fuel Share` 22,836, `Fuel Source` 15,708, `Nodal Distribution`
+20,832). The §2.3 NEMO↔LEAP process-panel mapping, verified against this export:
+
+| NEMO side | LEAP variable (rows / branches, top units) | Class |
+|---|---|---|
+| `ResidualCapacity` | **Exogenous Capacity** (11,220 / 85; MW, Million/Thousand GJ/Yr, Tonne Coal/Oil Equiv/Yr) | capacity |
+| — (LEAP fleet building blocks feeding Exogenous Capacity) | Existing Capacity, Capacity Additions, Capacity Retirement (8,052 each; MW), Endogenous Capacity (4,080), Real Investment Cost (8,052; Million USD), Historical Capacity Factor (8,052), Historical Production (3,888; GWh / Thousand TOE) | capacity |
+| `TotalAnnualMaxCapacity` | **Maximum Capacity** (7,140 / 85; MW etc.); Minimum Capacity, Maximum/Minimum Capacity Addition (7,140 each); Optimized New Capacity (9,072); Use Addition Size (2,016) | capacity |
+| `CapitalCost` | **Capital Cost** (11,448 / 90; Thousand USD/MW, USD/(GJ/Yr), USD/Tonne-Coal/Oil-Equiv/Yr) | cost |
+| `VariableCost` (process) | **Variable OM Cost** (14,088 / 110; USD/MWh, USD/TOE, USD/GJ) | cost |
+| `VariableCost` (feedstock) | **Fuel Cost** on `Feedstock Fuels\<fuel>` (23,232 / 176) | cost |
+| `FixedCost` | **Fixed OM Cost** (11,448 / 90) | cost |
+| `InterestRateTechnology` | **Interest Rate** (11,976 / 94; mostly `DiscountRate`) | cost |
+| — (CCS custom costs) | CCS VOM / CCS Capital / CCS FOM (1,584 each / 12; USD/MWh & Thousand USD/MW, refs `Coal Supercritical CCS:Process Efficiency`) | cost |
+| — (zeroed accounting) | Stranded Cost, Salvage Value, Module Costs (all literal 0); Output Price (5,016, ~all 0) | cost |
+| `OperationalLife` | **Lifetime** (13,908 / 117; Years) | dispatch |
+| `AvailabilityFactor` | **Maximum Availability** (11,220 / 85; Percent) | dispatch |
+| `MinimumUtilization` | **Minimum Utilization** (11,220 / 85; Percent) — 1:1 | dispatch |
+| `ReserveMarginTagTechnology` | **Capacity Credit** (11,220 / 85; Percent) | dispatch |
+| — (dispatch controls) | Dispatch Rule (4,800), Merit Order (4,080), Dispatchable (1,020), First Simulation Year (4,080), Priority Output (672) | dispatch |
+| — (storage panel) | Full Load Hours, Minimum Charge (9,108 each), Starting Charge (828), Annual/Seasonal/Hourly Storage Carryover (828 each) | dispatch |
+| `Input/OutputActivityRatio` | **Process Efficiency** (12,408 / 94; Percent) | conversion |
+| — (fuel routing) | Feedstock Fuel Share (22,836), Fuel Source (15,708; SourceBelow / SourceModule), Auxiliary Fuel Use (1,848), Output Share (4,200), Losses (1,848) | conversion |
+| `TotalTechnologyAnnualActivityUpperLimit` | **Maximum Production** (9,072 / 108; Gigajoule; **all `Unlimited`**) | production |
+| — (activity bounds/shares) | Minimum Production (9,072, all 0), Maximum_Share_of_Production (12,960, all 100), Minimum Share of Production (9,072), Process Share (4,752), Renewable Qualified (7,140), Renewable Target (924, all 0), Optimize (864), Import/Export Target (2,016 each, ~all 0) | production |
+| `EmissionActivityRatio` | **Avg Environmental Loading** (128,040 / 970) on Feedstock/Auxiliary pollutant leaves (kg/TJ, g/MMBTU, t/TJ, ha/GJ) — CO2, CH4, N2O, NOx, SO2, NH3, Black/Organic Carbon, PM10/PM2.5, "Carbon Dioxide Biogenic", "Sequestered Carbon Dioxide" | emission |
+| — (grid / nodal) | Node (8,052 / 61; ID), Nodal Distribution (20,832 / 248; Percent), Peak Load Ratio (1,452), Planning Reserve Margin (1,404), PRM for Simulated Scenarios (132; local var), Shortfall/Surplus/Usage Rule (1,392 each) | grid |
+| — (intra-fleet transmission lines, 9 br) | Transmission_Line_ID, Transmission Efficiency/Capacity/Availability, Construction Year, Maximum_Capacity_Addition, Simulation Type (`NetworkSimulation(Pipeline)`) | grid |
+| — (bioenergy land) | CropYield, BioProdYield (528 each / 4) | land |
+| — (gasoline evaporative) | Annual Avg Reid Vapour Pressure, Annual Avg Ambient Temp, TVP (132 each / 1) | conversion |
+| — (NEMO custom constraints) | ASEANRenewableCapacityTarget__NEMOcc, RenewableCapacityTarget__NEMOcc (120 each / 1) | production |
+
+**Panel note.** `Exogenous Capacity` / `Maximum Availability` / `Minimum
+Utilization` / `Capacity Credit` each sit on 85 branches; the storage panel on
+69; `Node` on 61 (the Centralized fleet); `Maximum Production` / `Minimum
+Production` / `Optimized New Capacity` on 108 (every process). Cost/capacity
+variables are near-fully-populated on the full-panel plants and sparse-to-absent
+on the lite/extraction techs (§1). The `__NEMOcc` custom-constraint variables
+(RE capacity targets) are the tree's only `__NEMOcc` presence — the §8-retired
+`__NEMOcc` diagnostic angle, real data that must be preserved.
+
+---
+
+### 3. Connection map (CONFIRMED cross-tree edges, from the audit)
+
+This tree is the hub; the audit resolved every cross-tree edge as CONFIRMED.
+
+- **Transformation ← Resources (feedstock/cost pulls): 14,311 reference-rows.**
+  *(Verified: rows-query count = 14,311, matching the summary's per-target
+  occurrence sum exactly.)* Feedstock and auxiliary fuels and their `Fuel Cost`
+  pull from `Resources\Primary\*` and `Resources\Secondary\*`: Natural Gas
+  1,463, Electricity 1,452, Biomass 1,199, Coal Sub bituminous 1,188, Nuclear
+  1,188, the other coals 1,056–1,067, Hydrogen 792, Ammonia 660, Bagasse 660,
+  Biodiesel/Diesel 396 each, Methanol 264, Residual Fuel Oil / Biomethane /
+  MSW 132 each. This is how the conversion stage inherits the §13.4 Resources
+  cost layer instead of re-authoring it.
+- **Transformation ← Key: 12,650 reference-occurrences across 11,778 rows.**
+  *(Verified: 11,778 distinct rows carry ≥1 `Key\` reference; the 12,650 total
+  is the audit's occurrence count — rows reference multiple Key branches.)* Top
+  edges: **`Key\Modeling Assumptions\Incumbent Generator DIspatch Phaseout`
+  2,522** — the §11.2c incumbent must-run phaseout knob, consumed inside
+  `Minimum Utilization = Min(Interp(FirstScenarioYear, Value(Historical
+  Capacity Factor…), FirstScenarioYear + …DIspatch Phaseout:Activity
+  Level[years], 0), Maximum Availability)`; `Capacity Additions Multiplier\
+  Fossil Fuel Dispatch Reduction` 672; **the `Key\Transmission\Nodes\<Country>`
+  binding** (Malaysia 605, each other ASEAN 561 — the `Node` BranchID edges);
+  **`Key\Biofuel Blending Targets\{Biodiesel, Bioethanol}` 396 each** (the blend
+  mandate → energy-share floor on the Blending pseudo-techs); the 13
+  `Key\Cal\Transformation\*` per-conversion calibration factors (biomass_eff
+  308, Coal_sub_eff 275, Hydropower 264, Ngas_cc 231, domestic_biogas 132,
+  Geothermal 121, LNG_regas 121, Biogas_eff 110, waste_eff 110, Oil refining 99,
+  Gas processing 99); and `Key\Modeling Assumptions\* Lead Time` construction
+  lead-times embedded in capacity-addition Interp formulas (Coal 279, Nuclear
+  210, Gas 101, Oil 99, Solar PV 86…). The Node + Biofuel-Blending edges are
+  exactly the §11.4 policy-feasibility couplings (nodal binding + blend
+  mandate).
+- **Resources ← Transformation (the one back-edge into Resources): the
+  geothermal capacity-factor loop.** Indonesia + Philippines `Resources\Primary\
+  Geothermal:Maximum Production` is derived from `Transformation\Centralized
+  Electricity Generation\Processes\Geothermal Flash[_IDJW]:Maximum Availability`
+  (audit: 18 rows; occurrences `Geothermal Flash_IDJW` 22 + `Geothermal Flash`
+  7 = 29). This is the sole place Resources reads back from Transformation, and
+  the reference to `_IDJW` is the evidence that region-scoped `_IDxx` node
+  variants exist beyond the exported branch view (§1).
+- **Demand sectors connect via shared FUELS, not references.** The four demand
+  exports contain **zero** Transformation branch references (as the Resources
+  export contains zero Key references, §13). The chain `Resources →
+  Transformation → fuels/electricity → Demand` is a NEMO commodity-balance
+  connection — Transformation's `Output Fuels` become the secondary fuels the
+  demand sectors consume — resolved at solve time, not by LEAP expression
+  wiring.
+
+---
+
+### 4. Scenario logic
+
+Eleven scenarios in the standard roster (CA=1, Set up=11, CNZ=12, Baseline=18,
+AMS Target=20, RAS=25, LCO backup=26, RE LTRM ×3 = 27/28/29, RAS test=30). Two
+live axes, both shared with the Resources tree (§13.5):
+
+1. **The accounting↔optimization variable-set switch.** The 4 accounting
+   scenarios (CA, Baseline, AMS Target, RAS test) carry the LEAP-simulation
+   panel — `Process Share`, `Dispatch Rule`, `Merit Order`, `Historical
+   Production`, storage-carryover flags, `First Simulation Year`,
+   `Shortfall/Surplus/Usage Rule`, `Endogenous Capacity`, `Import/Export
+   Target`. The 7 optimization scenarios (Set up, CNZ, LCO backup, RAS, RE LTRM
+   ×3) carry the NEMO panel — `Maximum/Minimum Production`, `Maximum/Minimum
+   Capacity(+Addition)`, `Optimized New Capacity`, `Minimum Share of
+   Production`, `Fuel Source`, `Output Share`, `Renewable Qualified`. **`Process
+   Share` (accounting) and `Minimum Share of Production` (optimization) never
+   coexist** on a branch; `Maximum_Share_of_Production = 100` appears in every
+   scenario except CA; `Maximum Production = Unlimited` and `Fuel Source` exist
+   only in the 7 optimization scenarios (invisible in accounting runs).
+2. **The RAS+CNZ inject.** The refinery capacity-expansion `Exogenous Capacity`
+   (§1.2) and the biofuel blend floors land forward in **RAS + CNZ only**
+   (`CNZ = RAS` byte-for-byte); the other 9 scenarios keep historical series.
+
+Expression blocs match the rest of the area: `CNZ = RAS`, `Baseline = RAS
+test`, `Set up = LCO backup = RE LTRM Policy Aligned` on the shared cells;
+`Regional Aspiration Scenario test` (id 30) is the stale accounting-mode
+prototype (= Baseline). Scenario churn is low per owner — grid layer 13 of 350
+combos diverge, bioenergy 87 of 1,098 (~7.9%), fossil largely invariant outside
+the mode switch + RAS/CNZ inject. NEMO/CPLEX solver output is written back into
+`Optimized New Capacity` expressions (`?Optimized on 07/02/2026 11:41
+(NEMO/CPLEX)`) in the optimization scenarios — the §14-ledger artefact, here on
+the supply side.
+
+---
+
+### 5. Regional / nodal pattern
+
+Twelve regions; **Base Template and Timor Leste are special** — both fully
+unwired from the grid (`Node = 0` for all 61 Centralized processes), Timor
+Leste with no `Key\Transmission\Nodes\Timor Leste` at all (consistent with TL
+disabled from calc). Regional variation is concentrated where physics demands
+it and template-uniform elsewhere:
+
+- **Sub-national nodal decomposition — Malaysia only.** 248 `Transmission
+  Nodes` sub-branches, all naming Malaysia's three non-synchronous grids
+  (Peninsular/Sabah/Sarawak) + an aggregate; 97% of `Nodal Distribution` rows
+  are 0, every non-zero row in Malaysia. The nine other ASEAN systems are
+  single copper-plate nodes.
+- **`_MYxx` / `_IDxx` process variants.** The decomposed technology families
+  are materialised as Malaysia `_MYPE/_MYSB/_MYSR` node variants (no base
+  branch); Indonesia's `_IDxx` variants (e.g. Geothermal Flash_IDJW) are
+  region-scoped and referenced but absent from the exported branch view (§1,
+  §3). CLAUDE.md §A.12's IDJW/IDSA/IDKA/IDEast and MYPE/MYSB/MYSR node sets are
+  the ground truth for these.
+- **Per-country physical layers:** PRM trajectories (national capacity plans —
+  RUPTL, PEP, EMO, PDP, AEO6), Peak Load Ratios (from `<Country>_Hourly`
+  shapes; Myanmar + Base Template + Timor Leste fall back to flat 100), ETD loss
+  curves (Indonesia/Singapore = 0).
+- **Bioenergy crop layer:** `CropYield`/`BioProdYield` regionalised to real
+  agronomy (oil-palm Indonesia 17.8, Malaysia 20.6, others 19.2); Coal
+  Gasification routes each region's local coal grade. Process efficiencies and
+  emission factors are one expression across all 12 regions; feedstock costs
+  vary only through the Resources references they inherit.
+- **Fossil:** the refinery Capital Cost is the main per-region divergence
+  (Indonesia `Mean(0.53,1.62)` vs Base Template `Mean(2.6,3.05)`); everything
+  else is template-uniform outside the RAS/CNZ inject.
+
+---
+
+### 6. Drivers
+
+Transformation is driven almost entirely from `Key\`, with a few local knobs:
+
+- **`Key\Modeling Assumptions\Incumbent Generator DIspatch Phaseout`** (note
+  the capital "DI" — canon-verified, case-sensitive) — the single centralized
+  incumbent-must-run phaseout knob, consumed by 2,522 `Minimum Utilization`
+  formulas (§11.2c pattern 3); change its `Activity Level[years]` and every
+  incumbent generator re-shapes together.
+- **`Key\Transmission\Nodes\<Country>`** — the nodal binding target of every
+  generator's `Node` variable; wires the fleet to the ASEAN Power Grid.
+- **`Key\Biofuel Blending Targets\{Biodiesel, Bioethanol}`** — the volumetric
+  blend mandate the Blending pseudo-techs convert to energy-share floors.
+- **`Key\Cal\Transformation\*`** (13 factors: biomass_eff, Coal_sub_eff,
+  Hydropower, Ngas_cc, Geothermal, LNG_regas, domestic_biogas, Biogas_eff,
+  waste_eff, `Oil refining`, `Gas processing`, oil_eff, Natgas_losses) — the
+  per-conversion calibration layer (invisible to the demand exports, §12.2).
+- **`Key\Modeling Assumptions\* Lead Time`** — construction lead times embedded
+  in `Capacity Additions` Interp formulas (`Interp(BaseYear, 0, 2023+1, 200,
+  2023 + Key\Modeling Assumptions\Coal Lead Time:Activity Level, 220)`).
+- **`Key\Capacity Additions Multiplier\Fossil Fuel Dispatch Reduction`** (672)
+  and **`Key\End_cap multip\{Total_, RE_Fraction}`** — endogenous
+  capacity-fraction levers on `Endogenous Capacity`.
+- **`PRM for Simulated Scenarios`** — the module-local Planning-Reserve-Margin
+  variable (a two-hop indirection; §1.1) — and `DiscountRate` on Interest Rate.
+
+---
+
+### 7. Quirks & hygiene (merged, verifier-corrected)
+
+**Structural / region-scoping**
+
+1. **Sub-national decomposition is exported as `_MYxx` only.** The decomposed
+   families (Solar PV, Wind Onshore, Coal Subcritical, Gas Combined Cycle,
+   Large Hydro, Nuclear LWR/SFR/SMR, Diesel, Biomass Other, Unmet Load)
+   materialise **only** as Malaysia `_MYPE/_MYSB/_MYSR` node variants — no base
+   branch. Indonesia's `_IDxx` variants are referenced (Resources geothermal
+   back-edge) but absent from this export view — region-scoped branch-visibility
+   (§11.1). The 61-node Centralized roster is the exported-view count, not a
+   globally-uniform per-region roster.
+2. **Nodal decomposition is Malaysia-alone** (248 Transmission Nodes, 97%
+   zero); the Key node set has only 10 country nodes (no Peninsular/Sabah/
+   Sarawak node) yet Lines carry finer corridor names (P.Malaysia_Sumatra,
+   Sarawak_Kalimantan) whose endpoints both resolve to the single Malaysia node
+   — line geography is finer than the modelled node set.
+3. **Timor Leste + Base Template are entirely unwired** (Node=0 across all 61
+   processes); no `Key\Transmission\Nodes\Timor Leste` at all.
+4. **Distributed rooftop solar bypasses transmission** — no `Node`, no
+   `Transmission Nodes` children, `Dispatch Rule = FullCapacity`; never enters
+   the nodal LP.
+5. **Energy Sector Own Use hides its `\Processes\` wrapper** in the collapsed
+   tree-view — the real path is `…\Energy Sector Own Use\Processes\<fuel>\…`; a
+   naive path guess misses.
+6. **Output Fuels is module-level** (a sibling of `Processes`), not a per-process
+   child — 42 leaves across 28 modules, with the 4 crop-biofuel Output Fuels
+   carrying a `Land Use` grandchild.
+
+**§A.11 landmines (all present in canon)**
+
+7. **Blending pseudo-tech `Exogenous Capacity = Unlimited`** — 528 rows (4
+   techs × 12 × 11), the lower-bound `1.0e+12` forced-floor landmine,
+   unremediated since the 2026-05-12 aeo9_v0.42 investigation and still present
+   in aeo9_v0.67. In RAS they also show `Maximum Capacity = Unlimited`.
+8. **Every process-level `Maximum Production = Unlimited`** — 9,072 rows
+   (Gigajoule), the benign upper-bound sentinel on 100% of production techs
+   (pollutes LP conditioning per §A.11). Plus ETD `Maximum Production =
+   Unlimited` on the transmission process.
+9. **Fossil supply carries caps but no costs** (`Maximum Production=Unlimited`,
+   `Variable OM=0` on extraction) — the mirror of the Resources costs-without-
+   caps gap (§13.4). The two full-plant processes (Gas Processing **and** Oil
+   Refining All Refineries) are the exceptions that carry real conversion cost
+   *(corrected — not Gas Processing alone; the LP does have a cost signal on the
+   refinery route)*.
+
+**Dead weight / unused knobs**
+
+10. **Storage/dispatch panel is inert on 64 of 69 techs** (`Full Load Hours=0`);
+    only the 5 real storage techs use it.
+11. **Renewable Target = 0** on both electricity modules in every region/scenario
+    — authored but unused (RE ambition enforced elsewhere).
+12. **Planning Reserve Margin is a two-hop indirection** (`PRM for Simulated
+    Scenarios[percent]` → a module-local variable), scenario-invariant across
+    all 11 scenarios.
+13. **Myanmar Peak Load Ratio silently falls back to flat 100** (missing
+    `Myanmar_Hourly` shape) while the other nine derive from
+    `PeakLoadRatioFromYearlyShape`.
+14. **ETD Losses = 0 for Indonesia, Singapore, Timor Leste, Base Template**
+    (Indonesia zero despite being the largest system); Laos/Malaysia/Thailand
+    losses are single-point `Interp(2022, X)` constants dressed as time series;
+    non-zero on 88 of 132 rows *(corrected from "99 rows")*.
+
+**Naming / modelling oddities**
+
+15. **SAF piggybacks on Renewable Diesel** — its only process is literally
+    `HVO Renewable Diesel`, `CropYield=BioProdYield=0`, land-footprint EF
+    branch-refs the RD Land Use.
+16. **Ammonia's process is named `Hydrogen`** (after its feedstock, not its
+    product) — a process→feedstock naming inversion.
+17. **`Pressurized H2 Gas`** carries the full 35-var storage panel but zero
+    feedstock/aux fuels — an H2 compression/storage pseudo-process, not a
+    converter. (Note: this is the 5th storage tech, living under Hydrogen
+    Production, not the electricity fleet — a grep for storage under Centralized
+    alone misses it.)
+18. **Self-referential module loop:** FAME Biodiesel + HVO Renewable Diesel
+    consume Biodiesel as an auxiliary fuel via `Fuel Source =
+    SourceModule(Biodiesel Production)` (84 rows) — all other feedstocks draw
+    `SourceBelow` from Resources.
+19. **Two capacity ontologies:** biofuel full-panel processes dimensioned in
+    Million GJ/Year with Capital Cost in 2020 USD/(GJ/Year), vs the power tree's
+    MW / Thousand USD/MW; and within the refinery, mixed physical bases
+    (Exogenous Capacity in Thousand GJ/Yr, Historical Production in Thousand
+    TOE, Capital Cost per GJ/Yr, Variable OM per TOE).
+20. **Passthrough `Process Efficiency = 100`** on POME, Cassava, Sugarcane,
+    Charcoal All Biomass — real loss pushed into the Land Use / crop-yield layer,
+    so 100% here does not mean lossless.
+21. **Blend energy-density literals** (`38.997/43.330` diesel, `26.744/44.8`
+    ethanol/gasoline) are bare constants in the share expression with only a
+    `? Energy contents taken from Fuels database` comment — no cited source; must
+    stay in sync with the Fuels DB.
+
+**Emissions tagging**
+
+22. **`Minimum Utilization` is not uniformly 0** on biofuel processes — 50 of
+    2,244 process-level rows carry `Interp(2023, X, 2030, 100)` must-run ramps
+    (FAME/Molasses/Sugarcane/CME/Cassava, in Set up/LCO/RE LTRM ×3, for
+    ID/MY/PH/TH) *(corrected)*.
+23. **Biogenic-CO2 tagging is inconsistent:** crop-feedstock combustion CO2 is
+    filed under fossil `Carbon Dioxide` (FAME Palm Oil 3.16, near-zero) while
+    auxiliary Biodiesel/Charcoal biomass carry a separate `Carbon Dioxide
+    Biogenic` leaf (5 leaves total vs 26 fossil-CO2 leaves).
+24. **Organic Carbon appears on only 2 leaves, both in Charcoal** — Hydrogen
+    Biomass Gasification carries 10 species (no Organic Carbon), not the full 11
+    *(corrected — only Charcoal is 11-species)*.
+
+**Attribution / hygiene**
+
+25. **PRM `25 ? AEO6 assumption` belongs to Cambodia, not Brunei** *(corrected)*;
+    Brunei's PRM is `Interp(2023, 21.00, …, 2027, 25.00) ? assumed value`.
+26. **The 13 scenario-diverging grid combos carry 2 or 3 distinct expressions,
+    not 1** *(corrected)*; `n_distinct_expr = 1` describes only the 248
+    scenario-flat Nodal Distribution combos.
+27. **`_x000D_` Excel carriage-return artefacts** inside comment strings (PRM
+    provenance, Process Efficiency notes) — the same hygiene defect catalogued
+    for the demand sectors (§14).
+28. **`__NEMOcc` custom-constraint vars** (ASEANRenewableCapacityTarget,
+    RenewableCapacityTarget — 120 rows each) are the only `__NEMOcc` presence in
+    the tree; real RE-capacity-target data to preserve, not a diagnostic angle
+    (§8-retired).
+
+---
+
+## 15. Data-hygiene ledger
 
 Defects and oddities that any consumer of this area should know about,
 ordered roughly by blast radius:
@@ -1196,7 +2045,10 @@ ordered roughly by blast radius:
 | 29 | Stale comment-only citations: `Key\Residential\AC\a`/`b` named in 232 residential rows but exist nowhere; the real `Key\Residential end use data_\AC\{a,b}` panels exist but are entirely uncited (§12.6) | Keys / Residential | 232 rows |
 | 30 | Case/spelling hazards in Key paths: `Incumbent Generator DIspatch Phaseout` (capital "DI"), colliding near-duplicates `Key\Cal\Industry` (27 br) vs `Key\Industry\Cal` (6 br), deactivated `!Reactance`/`!Construction Year` variables, `Fraction`/`fraction`/`Factor`/`factor` unit drift | Keys | — |
 | 31 | Perennial land cap unit-tagged `Cubic Meter` while Arable uses Thousand GJ (drift on the §2.4 1 GJ/ha anchor); both have Maximum Imports=Unlimited @ Import Cost 0 in optimization scenarios — free "land imports" if trade routes ever cover them | Resources | 2 branches |
-| 32 | `Key\Optimized Trade` master switch: all 495 routes ON only in RAS+CNZ, OFF in the other 9 scenarios — while RE LTRM / AMS Target carry biofuel blend targets with routes disabled (§A.12 watch; hypothesis, Transformation wiring not visible) | Keys | 5,940 rows/scenario |
+| 32 | `Key\Optimized Trade` master switch: all 495 routes ON only in RAS+CNZ, OFF in the other 9 scenarios — while RE LTRM / AMS Target carry biofuel blend targets with routes disabled (§A.12 watch) | Keys | 5,940 rows/scenario |
+| 33 | §11.2c must-run trap LIVE: 494 rows author bare `Minimum Utilization = Maximum Availability` on variable renewables (27 in RAS: Wind Onshore_MYPE/MYSB in 11 of 12 regions except Malaysia; full-12-region in RE-policy scenarios). Absent in CA/Baseline/AMS Target. Hedged pending capacity check (§14 §1.1) | Transformation (power) | 494 rows |
+| 34 | Blending pseudo-techs (Gasoline/Diesel Blending) carry `Exogenous Capacity = Unlimited` → §A.11 1e12 forced floor (the 2026-05-12 p9 shape); + all-`Unlimited` `Maximum Production` on many Transformation processes | Transformation (fossil) | see §14 |
+| 35 | Six power tech node-variants (Solar PV_MY*, Gas Turbine_MYPE, Large Hydro_MYPE, Wind Onshore_MYSR) show `Capital Cost = 0` + `Capacity Credit = 100` across regions — LEAP defaults on un-authored `_MY*` inheritance copies (§11.1 exported-view), real regional data not surfaced | Transformation (power) | — |
 
 ---
 
@@ -1210,8 +2062,9 @@ Machine-generated, one line per branch with its attached variables:
 - [trees/industry_tree.txt](trees/industry_tree.txt) — 5,859 branches
 - [trees/keys_tree.txt](trees/keys_tree.txt) — 1,064 branches (`Key\`)
 - [trees/resources_tree.txt](trees/resources_tree.txt) — 62 branches (`Resources\`)
+- [trees/transformation_tree.txt](trees/transformation_tree.txt) — 1,593 branches (`Transformation\`)
 
 These are the authoritative branch-path lists for authoring inject CSVs
-against the `Demand\`, `Key\`, and `Resources\` trees of
+against the `Demand\`, `Key\`, `Resources\`, and `Transformation\` trees of
 `aeo9_v0.67_w_results` (per CLAUDE.md §A.20, Demand/KA-tree injects are
 blind-mode mandatory).

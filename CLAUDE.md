@@ -873,13 +873,15 @@ drifted.
 
 ### 2.6 `LEAP structure/` is the canonical demand-tree structure — for ALL future LEAP versions
 
-The `LEAP structure/` folder at the repo root — the six
+The `LEAP structure/` folder at the repo root — the seven
 `aeo9_v0.67_w_results` "Export Expressions" workbooks (four `Demand\`
-sectors + `Key\` assumption tree + `Resources\` supply tree),
+sectors + `Key\` assumption tree + `Resources\` supply tree +
+`Transformation\` conversion tree [power generation, refining, biofuel/
+clean-fuel production, blending — exported 2026-07-04]),
 [LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md),
 and the full branch trees in [trees/](LEAP%20structure/trees/) — is the
-CANONICAL description of the LEAP demand, Key, and Resources trees. User
-directive
+CANONICAL description of the LEAP demand, Key, Resources, and
+Transformation trees. User directive
 2026-07-02: *"this leap structure we hold is canon ... this is the
 truth"*; *"all future leap structure will follow this, expression input
 might be different but structure will stay. thats the default."*
@@ -889,7 +891,7 @@ directive 2026-07-02: *"whatever we have on memory, and on everything
 else, that is contradict what we build from excel, should be replaced.
 as your excel tour hold the entire truth, top."* If any memory file,
 CLAUDE.md mapping table, doc, or prior probe finding contradicts what
-the six exports show, the OTHER source is wrong — correct or delete it
+the seven exports show, the OTHER source is wrong — correct or delete it
 in the same task (per §15.1 stale-memory cleanup), citing canon.
 Hierarchy: **canon exports > COM probes of a live area > repo
 canonicals/docs/memories > sector-team CSVs.** (A live-area COM probe
@@ -1551,7 +1553,8 @@ Worked example + stage-by-stage exit criteria in
 |---|---|
 | [docs/FLOWS.md](docs/FLOWS.md) | canonical step-by-step for inject / results harvest / infeasibility triage — quick reference for the three established flows |
 | [docs/inject_sop.md](docs/inject_sop.md) | **standard `CanonicalInjector` inject method (all sectors)** — blind-mode command, branch-structure decision matrix (KA/Demand REQUIRE blind), 3 framework guardrails, pitfalls catalogue. Generalised from the 2026-05-20 transport cycle |
-| [LEAP structure/LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md) | **CANONICAL tree anatomy (§2.6)** — Demand sectors + `Key\` assumption tree + `Resources\` supply tree: branch trees ([trees/](LEAP%20structure/trees/)), variable inventories, units, scenario/region rosters, expression idioms, §A.11 Unlimited audit, hygiene ledger. Structure = default for all future LEAP versions; expressions may vary |
+| [LEAP structure/LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md) | **CANONICAL tree anatomy (§2.6)** — all seven exports: Demand sectors + `Key\` + `Resources\` + `Transformation\` (§14 — power gen, refining, biofuel/clean-fuel production, blending): branch trees ([trees/](LEAP%20structure/trees/)), variable inventories, units, scenario/region rosters, expression idioms, §A.11 Unlimited audit, hygiene ledger (§15). Structure = default for all future LEAP versions; expressions may vary |
+| [LEAP structure/CANON_ANOMALY_AUDIT_20260704.md](LEAP%20structure/CANON_ANOMALY_AUDIT_20260704.md) | full-corpus anomaly audit (all 7 trees, 4-scenario scope): incorrect inputs by class + empty-but-important red/yellow/green with mechanisms; Part C = Transformation (§11.2c trap, blending 1e12 floor, free-build) |
 | [docs/leap_structure_canon_sop.md](docs/leap_structure_canon_sop.md) | **canon pipeline SOP** — how the canon is built and extended (export → digest → verified analysis → supremacy sweep → connection-audited team slices → handover packages), the package file-group roster, load-bearing lessons, next-cycle recipes. Scripts: `LEAP structure/tools/` |
 | [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md) | infeasibility pipeline + worked x435004 example + revised cN path (see §8) |
 | [docs/schema.md](docs/schema.md) | NEMO v11 column reference |

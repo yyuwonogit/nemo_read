@@ -49,12 +49,15 @@ Every team package ships the same seven groups:
 3. **Branch × variable × units CSV** — the validation reference.
 4. **Connected `Key\` slice** (tree + units) — mechanically derived, see §3.
 5. **Connected `Resources\` slice** where the sector wires into it.
-6. **Connected `Transformation\` slice** — pending that tree's export.
+6. **Connected `Transformation\` slice** (power/fossil/bioenergy) —
+   generated 2026-07-04 (`transformation_slice_*`); Transformation is the
+   7th canon export (anatomy §14).
 7. **Current model contents** — the 4-scenario extracts (group 9 above).
 
 Teams: bioenergy, transport, residential (shipped 2026-07-03 AM),
-commercial, keys (central assumptions team), fossil, power (shipped
-2026-07-03 PM; Transformation slices to follow).
+commercial, keys (central assumptions team), fossil, power, industry
+(shipped 2026-07-03 PM; power/fossil/bioenergy Transformation slices
+added 2026-07-04).
 
 ## 3. Load-bearing lessons (do not re-learn these)
 

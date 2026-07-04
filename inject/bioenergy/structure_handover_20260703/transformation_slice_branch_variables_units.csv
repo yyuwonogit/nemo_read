@@ -1,0 +1,1099 @@
+branch_path,variable,units,scale,per
+Transformation\Ammonia Production for Energy Use,Optimize,None,,
+Transformation\Ammonia Production for Energy Use,Use Addition Size,None,,
+Transformation\Ammonia Production for Energy Use\Output Fuels\Ammonia,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Ammonia Production for Energy Use\Output Fuels\Ammonia,Import Target,Tonnes of Oil Equivalent,,
+Transformation\Ammonia Production for Energy Use\Output Fuels\Ammonia,Output Share,Share,%,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen,Dispatch Rule,None,,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen,Lifetime,Years,,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen,Maximum Production,Gigajoule,,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen,Maximum_Share_of_Production,%,,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen,Minimum Production,Gigajoule,,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen,Minimum Share of Production,Percent,,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen,Optimized New Capacity,Megawatt,,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen,Process Efficiency,Percent,,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen,Process Share,Share,%,
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen\Auxiliary Fuels\Electricity,Auxiliary Fuel Use,Gigajoule,,Gigajoule
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen\Auxiliary Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen\Feedstock Fuels\Hydrogen,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Ammonia Production for Energy Use\Processes\Hydrogen\Feedstock Fuels\Hydrogen,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Biodiesel Production,Module Costs,2020 USD,,
+Transformation\Biodiesel Production,Optimize,None,,
+Transformation\Biodiesel Production,Peak Load Ratio,Percent,,
+Transformation\Biodiesel Production,Planning Reserve Margin,Percent,,
+Transformation\Biodiesel Production,Renewable Target,Percent,,
+Transformation\Biodiesel Production,Use Addition Size,None,,
+Transformation\Biodiesel Production\Output Fuels\Biodiesel,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Biodiesel Production\Output Fuels\Biodiesel,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Biodiesel Production\Output Fuels\Biodiesel,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Biodiesel Production\Output Fuels\Biodiesel,Output Share,Share,%,
+Transformation\Biodiesel Production\Output Fuels\Biodiesel,Shortfall Rule,None,,
+Transformation\Biodiesel Production\Output Fuels\Biodiesel,Surplus Rule,None,,
+Transformation\Biodiesel Production\Output Fuels\Biodiesel,Usage Rule,None,,
+Transformation\Biodiesel Production\Output Fuels\Biodiesel\Land Use,Avg Environmental Loading,Hectare,,Gigajoule
+Transformation\Biodiesel Production\Output Fuels\Biodiesel\Land Use,BioProdYield,litre/tonne,,
+Transformation\Biodiesel Production\Output Fuels\Biodiesel\Land Use,CropYield,tonne/ha,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Capacity Credit,Percent,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Capital Cost,2020 USD,,Gigajoules/Year
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Dispatch Rule,None,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Dispatchable,Yes/No,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Endogenous Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Exogenous Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,First Simulation Year,Years,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Fixed OM Cost,2020 USD,,Gigajoules/Year
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Interest Rate,Percent,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Lifetime,Years,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Maximum Availability,Percent,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Maximum Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Maximum Capacity Addition,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Maximum Production,Gigajoule,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Maximum_Share_of_Production,%,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Merit Order,Merit Order,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Minimum Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Minimum Capacity Addition,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Minimum Production,Gigajoule,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Minimum Share of Production,Percent,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Minimum Utilization,Percent,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Optimized New Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Process Efficiency,Percent,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Process Share,Share,%,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Renewable Qualified,Percent,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Salvage Value,2020 USD,,Gigajoules/Year
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Stranded Cost,2020 USD,,
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Variable OM Cost,2020 USD,,Gigajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Auxiliary Fuels\Electricity,Auxiliary Fuel Use,Megajoule,,Megajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Auxiliary Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Auxiliary Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Auxiliary Fuels\Methanol,Auxiliary Fuel Use,Liter,,Megajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Auxiliary Fuels\Methanol,Fuel Cost,2020 USD,,Metric Tonne
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Auxiliary Fuels\Methanol,Fuel Source,2020 USD,,Metric Tonne
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\CME Biodiesel\Feedstock Fuels\Coconut Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Capacity Credit,Percent,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Capital Cost,2020 USD,,Gigajoules/Year
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Dispatch Rule,None,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Dispatchable,Yes/No,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Endogenous Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Exogenous Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,First Simulation Year,Years,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Fixed OM Cost,2020 USD,,Gigajoules/Year
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Interest Rate,Percent,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Lifetime,Years,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Maximum Availability,Percent,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Maximum Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Maximum Capacity Addition,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Maximum Production,Gigajoule,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Maximum_Share_of_Production,%,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Merit Order,Merit Order,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Minimum Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Minimum Capacity Addition,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Minimum Production,Gigajoule,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Minimum Share of Production,Percent,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Minimum Utilization,Percent,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Optimized New Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Process Efficiency,Percent,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Process Share,Share,%,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Renewable Qualified,Percent,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Salvage Value,2020 USD,,Gigajoules/Year
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Stranded Cost,2020 USD,,
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Variable OM Cost,2020 USD,,Gigajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel,Auxiliary Fuel Use,British Thermal Unit,,British Thermal Unit
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel,Fuel Cost,2020 USD,,Liter
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel,Fuel Source,2020 USD,,Liter
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Biodiesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Electricity,Auxiliary Fuel Use,British Thermal Unit,,British Thermal Unit
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Natural Gas,Auxiliary Fuel Use,British Thermal Unit,,British Thermal Unit
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Million BTU
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Million BTU
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Auxiliary Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol,Feedstock Fuel Share,2020 USD,,Metric Tonne
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol,Fuel Cost,2020 USD,,Metric Tonne
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Methanol,Fuel Source,2020 USD,,Metric Tonne
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\FAME Biodiesel\Feedstock Fuels\Palm Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Capacity Credit,Percent,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Capital Cost,2020 USD,,Gigajoules/Year
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Dispatch Rule,None,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Dispatchable,Yes/No,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Endogenous Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Exogenous Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,First Simulation Year,Years,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Fixed OM Cost,2020 USD,,Gigajoules/Year
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Interest Rate,Percent,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Lifetime,Years,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Maximum Availability,Percent,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Maximum Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Maximum Capacity Addition,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Maximum Production,Gigajoule,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Maximum_Share_of_Production,%,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Merit Order,Merit Order,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Minimum Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Minimum Capacity Addition,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Minimum Production,Gigajoule,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Minimum Share of Production,Percent,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Minimum Utilization,Percent,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Optimized New Capacity,Gigajoules/Year,Million,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Process Efficiency,Percent,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Process Share,Share,%,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Renewable Qualified,Percent,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Salvage Value,2020 USD,,Gigajoules/Year
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Stranded Cost,2020 USD,,
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Variable OM Cost,2020 USD,,Gigajoule
+Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Biodiesel Production\Processes\POME Biodiesel\Feedstock Fuels\Palm Oil Mill Effluent,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production,Module Costs,2020 USD,,
+Transformation\Bioethanol Production,Optimize,None,,
+Transformation\Bioethanol Production,Peak Load Ratio,Percent,,
+Transformation\Bioethanol Production,Planning Reserve Margin,Percent,,
+Transformation\Bioethanol Production,Renewable Target,Percent,,
+Transformation\Bioethanol Production,Use Addition Size,None,,
+Transformation\Bioethanol Production\Output Fuels\Ethanol,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Bioethanol Production\Output Fuels\Ethanol,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Bioethanol Production\Output Fuels\Ethanol,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Bioethanol Production\Output Fuels\Ethanol,Output Share,Share,%,
+Transformation\Bioethanol Production\Output Fuels\Ethanol,Shortfall Rule,None,,
+Transformation\Bioethanol Production\Output Fuels\Ethanol,Surplus Rule,None,,
+Transformation\Bioethanol Production\Output Fuels\Ethanol,Usage Rule,None,,
+Transformation\Bioethanol Production\Output Fuels\Ethanol\Land Use,Avg Environmental Loading,Hectare,,Gigajoule
+Transformation\Bioethanol Production\Output Fuels\Ethanol\Land Use,BioProdYield,litre/tonne,,
+Transformation\Bioethanol Production\Output Fuels\Ethanol\Land Use,CropYield,tonne/ha,,
+Transformation\Bioethanol Production\Processes\Cassava,Capacity Credit,Percent,,
+Transformation\Bioethanol Production\Processes\Cassava,Capital Cost,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Cassava,Dispatch Rule,None,,
+Transformation\Bioethanol Production\Processes\Cassava,Dispatchable,Yes/No,,
+Transformation\Bioethanol Production\Processes\Cassava,Endogenous Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Cassava,Exogenous Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Cassava,First Simulation Year,Years,,
+Transformation\Bioethanol Production\Processes\Cassava,Fixed OM Cost,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Cassava,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Bioethanol Production\Processes\Cassava,Interest Rate,Percent,,
+Transformation\Bioethanol Production\Processes\Cassava,Lifetime,Years,,
+Transformation\Bioethanol Production\Processes\Cassava,Maximum Availability,Percent,,
+Transformation\Bioethanol Production\Processes\Cassava,Maximum Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Cassava,Maximum Capacity Addition,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Cassava,Maximum Production,Gigajoule,,
+Transformation\Bioethanol Production\Processes\Cassava,Maximum_Share_of_Production,%,,
+Transformation\Bioethanol Production\Processes\Cassava,Merit Order,Merit Order,,
+Transformation\Bioethanol Production\Processes\Cassava,Minimum Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Cassava,Minimum Capacity Addition,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Cassava,Minimum Production,Gigajoule,,
+Transformation\Bioethanol Production\Processes\Cassava,Minimum Share of Production,Percent,,
+Transformation\Bioethanol Production\Processes\Cassava,Minimum Utilization,Percent,,
+Transformation\Bioethanol Production\Processes\Cassava,Optimized New Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Cassava,Process Efficiency,Percent,,
+Transformation\Bioethanol Production\Processes\Cassava,Process Share,Share,%,
+Transformation\Bioethanol Production\Processes\Cassava,Renewable Qualified,Percent,,
+Transformation\Bioethanol Production\Processes\Cassava,Salvage Value,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Cassava,Stranded Cost,2020 USD,,
+Transformation\Bioethanol Production\Processes\Cassava,Variable OM Cost,2020 USD,,Gigajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Cassava\Feedstock Fuels\Cassava\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Capacity Credit,Percent,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Capital Cost,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Dispatch Rule,None,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Dispatchable,Yes/No,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Endogenous Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Exogenous Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,First Simulation Year,Years,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Fixed OM Cost,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Interest Rate,Percent,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Lifetime,Years,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Maximum Availability,Percent,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Maximum Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Maximum Capacity Addition,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Maximum Production,Gigajoule,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Maximum_Share_of_Production,%,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Merit Order,Merit Order,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Minimum Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Minimum Capacity Addition,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Minimum Production,Gigajoule,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Minimum Share of Production,Percent,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Minimum Utilization,Percent,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Optimized New Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Process Efficiency,Percent,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Process Share,Share,%,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Renewable Qualified,Percent,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Salvage Value,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Stranded Cost,2020 USD,,
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Variable OM Cost,2020 USD,,Gigajoule
+Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn,Feedstock Fuel Share,U.S. Dollar,,Tonnes of Coal Equivalent
+Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn,Fuel Cost,U.S. Dollar,,Tonnes of Coal Equivalent
+Transformation\Bioethanol Production\Processes\Corn Ethanol\Feedstock Fuels\Corn,Fuel Source,U.S. Dollar,,Tonnes of Coal Equivalent
+Transformation\Bioethanol Production\Processes\Molasses,Capacity Credit,Percent,,
+Transformation\Bioethanol Production\Processes\Molasses,Capital Cost,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Molasses,Dispatch Rule,None,,
+Transformation\Bioethanol Production\Processes\Molasses,Dispatchable,Yes/No,,
+Transformation\Bioethanol Production\Processes\Molasses,Endogenous Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Molasses,Exogenous Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Molasses,First Simulation Year,Years,,
+Transformation\Bioethanol Production\Processes\Molasses,Fixed OM Cost,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Molasses,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Bioethanol Production\Processes\Molasses,Interest Rate,Percent,,
+Transformation\Bioethanol Production\Processes\Molasses,Lifetime,Years,,
+Transformation\Bioethanol Production\Processes\Molasses,Maximum Availability,Percent,,
+Transformation\Bioethanol Production\Processes\Molasses,Maximum Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Molasses,Maximum Capacity Addition,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Molasses,Maximum Production,Gigajoule,,
+Transformation\Bioethanol Production\Processes\Molasses,Maximum_Share_of_Production,%,,
+Transformation\Bioethanol Production\Processes\Molasses,Merit Order,Merit Order,,
+Transformation\Bioethanol Production\Processes\Molasses,Minimum Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Molasses,Minimum Capacity Addition,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Molasses,Minimum Production,Gigajoule,,
+Transformation\Bioethanol Production\Processes\Molasses,Minimum Share of Production,Percent,,
+Transformation\Bioethanol Production\Processes\Molasses,Minimum Utilization,Percent,,
+Transformation\Bioethanol Production\Processes\Molasses,Optimized New Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Molasses,Process Efficiency,Percent,,
+Transformation\Bioethanol Production\Processes\Molasses,Process Share,Share,%,
+Transformation\Bioethanol Production\Processes\Molasses,Renewable Qualified,Percent,,
+Transformation\Bioethanol Production\Processes\Molasses,Salvage Value,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Molasses,Stranded Cost,2020 USD,,
+Transformation\Bioethanol Production\Processes\Molasses,Variable OM Cost,2020 USD,,Gigajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Molasses\Feedstock Fuels\Molasses\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Sugarcane,Capacity Credit,Percent,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Capital Cost,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Sugarcane,Dispatch Rule,None,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Dispatchable,Yes/No,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Endogenous Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Sugarcane,Exogenous Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Sugarcane,First Simulation Year,Years,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Fixed OM Cost,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Sugarcane,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Bioethanol Production\Processes\Sugarcane,Interest Rate,Percent,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Lifetime,Years,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Maximum Availability,Percent,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Maximum Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Sugarcane,Maximum Capacity Addition,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Sugarcane,Maximum Production,Gigajoule,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Maximum_Share_of_Production,%,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Merit Order,Merit Order,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Minimum Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Sugarcane,Minimum Capacity Addition,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Sugarcane,Minimum Production,Gigajoule,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Minimum Share of Production,Percent,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Minimum Utilization,Percent,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Optimized New Capacity,Tonne Coal Equiv/Year,Million,
+Transformation\Bioethanol Production\Processes\Sugarcane,Process Efficiency,Percent,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Process Share,Share,%,
+Transformation\Bioethanol Production\Processes\Sugarcane,Renewable Qualified,Percent,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Salvage Value,2020 USD,,Tonne Coal Equiv/Year
+Transformation\Bioethanol Production\Processes\Sugarcane,Stranded Cost,2020 USD,,
+Transformation\Bioethanol Production\Processes\Sugarcane,Variable OM Cost,2020 USD,,Gigajoule
+Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Bioethanol Production\Processes\Sugarcane\Feedstock Fuels\Sugarcane\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production,Module Costs,2020 USD,,
+Transformation\Biomethane Production,Optimize,None,,
+Transformation\Biomethane Production,Use Addition Size,None,,
+Transformation\Biomethane Production\Output Fuels\Biomethane,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Biomethane Production\Output Fuels\Biomethane,Import Target,Tonnes of Oil Equivalent,,
+Transformation\Biomethane Production\Output Fuels\Biomethane,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Biomethane Production\Output Fuels\Biomethane,Output Share,Share,%,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Dispatch Rule,None,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Lifetime,Years,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Maximum Production,Gigajoule,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Maximum_Share_of_Production,%,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Minimum Production,Gigajoule,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Minimum Share of Production,Percent,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Process Efficiency,Percent,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Process Share,Share,%,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation,Variable OM Cost,2020 USD,,Million BTU
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Auxiliary Fuels\Hydrogen,Auxiliary Fuel Use,Gigajoule,,Gigajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Auxiliary Fuels\Hydrogen,Fuel Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Auxiliary Fuels\Hydrogen,Fuel Source,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Feedstock Fuels\Biomass,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Feedstock Fuels\Biomass,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Feedstock Fuels\Biomass,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Feedstock Fuels\Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Feedstock Fuels\Biomass\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Feedstock Fuels\Biomass\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Feedstock Fuels\Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Feedstock Fuels\Biomass\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Methanation\Feedstock Fuels\Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Dispatch Rule,None,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Lifetime,Years,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Maximum Production,Gigajoule,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Maximum_Share_of_Production,%,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Minimum Production,Gigajoule,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Minimum Share of Production,Percent,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Process Efficiency,Percent,,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Process Share,Share,%,
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading,Variable OM Cost,2020 USD,,Million BTU
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Auxiliary Fuels\Electricity,Auxiliary Fuel Use,Kilowatt-Hour,,Megajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Auxiliary Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Auxiliary Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Feedstock Fuels\Biomass,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Feedstock Fuels\Biomass,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Feedstock Fuels\Biomass,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Feedstock Fuels\Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Feedstock Fuels\Biomass\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Feedstock Fuels\Biomass\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Feedstock Fuels\Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Feedstock Fuels\Biomass\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Biomethane Production\Processes\Anaerobic Digestion with Upgrading\Feedstock Fuels\Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Charcoal Production,Module Costs,2020 USD,,
+Transformation\Charcoal Production,Optimize,None,,
+Transformation\Charcoal Production,Use Addition Size,None,,
+Transformation\Charcoal Production\Output Fuels\Charcoal,Export Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Charcoal Production\Output Fuels\Charcoal,Import Target,Tonnes of Oil Equivalent,Thousand,
+Transformation\Charcoal Production\Output Fuels\Charcoal,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Charcoal Production\Output Fuels\Charcoal,Output Share,Share,%,
+Transformation\Charcoal Production\Processes\All Biomass,Dispatch Rule,None,,
+Transformation\Charcoal Production\Processes\All Biomass,Lifetime,Years,,
+Transformation\Charcoal Production\Processes\All Biomass,Maximum Production,Gigajoule,,
+Transformation\Charcoal Production\Processes\All Biomass,Maximum_Share_of_Production,%,,
+Transformation\Charcoal Production\Processes\All Biomass,Minimum Production,Gigajoule,,
+Transformation\Charcoal Production\Processes\All Biomass,Minimum Share of Production,Percent,,
+Transformation\Charcoal Production\Processes\All Biomass,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Charcoal Production\Processes\All Biomass,Process Efficiency,Percent,,
+Transformation\Charcoal Production\Processes\All Biomass,Process Share,Share,%,
+Transformation\Charcoal Production\Processes\All Biomass,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass,Feedstock Fuel Share,U.S. Dollar,,Cubic Meter
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass,Fuel Cost,U.S. Dollar,,Cubic Meter
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass,Fuel Source,U.S. Dollar,,Cubic Meter
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Transformation\Charcoal Production\Processes\All Biomass\Feedstock Fuels\Wood\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Transformation\Domestic Biogas Production,Module Costs,2020 USD,,
+Transformation\Domestic Biogas Production,Optimize,None,,
+Transformation\Domestic Biogas Production,Use Addition Size,None,,
+Transformation\Domestic Biogas Production\Output Fuels\Domestic Biogas,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Domestic Biogas Production\Output Fuels\Domestic Biogas,Import Target,Tonnes of Oil Equivalent,,
+Transformation\Domestic Biogas Production\Output Fuels\Domestic Biogas,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Domestic Biogas Production\Output Fuels\Domestic Biogas,Output Share,Share,%,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Dispatch Rule,None,,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Lifetime,Years,,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Maximum Production,Gigajoule,,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Maximum_Share_of_Production,%,,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Minimum Production,Gigajoule,,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Minimum Share of Production,Percent,,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Optimized New Capacity,Tonnes Oil Equiv/Year,Thousand,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Process Efficiency,Percent,,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Process Share,Share,%,
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion\Feedstock Fuels\Biomass,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion\Feedstock Fuels\Biomass,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion\Feedstock Fuels\Biomass,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion\Feedstock Fuels\Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion\Feedstock Fuels\Biomass\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion\Feedstock Fuels\Biomass\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion\Feedstock Fuels\Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion\Feedstock Fuels\Biomass\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Domestic Biogas Production\Processes\Anaerobic Digestion\Feedstock Fuels\Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Hydrogen Production for Energy Use,Module Costs,2020 USD,,
+Transformation\Hydrogen Production for Energy Use,Optimize,None,,
+Transformation\Hydrogen Production for Energy Use,Peak Load Ratio,Percent,,
+Transformation\Hydrogen Production for Energy Use,Planning Reserve Margin,Percent,,
+Transformation\Hydrogen Production for Energy Use,Renewable Target,Percent,,
+Transformation\Hydrogen Production for Energy Use,Use Addition Size,None,,
+Transformation\Hydrogen Production for Energy Use\Output Fuels\Hydrogen,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Output Fuels\Hydrogen,Import Target,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Output Fuels\Hydrogen,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Hydrogen Production for Energy Use\Output Fuels\Hydrogen,Output Share,Share,%,
+Transformation\Hydrogen Production for Energy Use\Output Fuels\Hydrogen,Shortfall Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Output Fuels\Hydrogen,Surplus Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Output Fuels\Hydrogen,Usage Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Annual Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Capacity Credit,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Capital Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Dispatch Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Dispatchable,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Endogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Exogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,First Simulation Year,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Fixed OM Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Full Load Hours,Hours,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Historical Production,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Hourly Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Interest Rate,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Lifetime,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Maximum Availability,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Maximum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Maximum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Maximum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Maximum_Share_of_Production,%,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Merit Order,Merit Order,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Minimum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Minimum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Minimum Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Minimum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Minimum Share of Production,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Minimum Utilization,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Optimized New Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Process Efficiency,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Process Share,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Renewable Qualified,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Salvage Value,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Seasonal Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Starting Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Stranded Cost,2020 USD,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Annual Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Capacity Credit,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Capital Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Dispatch Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Dispatchable,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Endogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Exogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,First Simulation Year,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Fixed OM Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Full Load Hours,Hours,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Historical Production,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Hourly Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Interest Rate,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Lifetime,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Maximum Availability,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Maximum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Maximum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Maximum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Maximum_Share_of_Production,%,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Merit Order,Merit Order,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Minimum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Minimum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Minimum Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Minimum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Minimum Share of Production,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Minimum Utilization,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Optimized New Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Process Efficiency,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Process Share,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Renewable Qualified,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Salvage Value,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Seasonal Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Starting Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Stranded Cost,2020 USD,,
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Black Carbon,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Nitrogen Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Nitrous Oxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Particulates PM10,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Particulates PM2pt5,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Sequestered Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Biomass\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Electricity,Feedstock Fuel Share,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Black Carbon,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Particulates PM10,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Sequestered Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification with CCS\Feedstock Fuels\Natural Gas\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Black Carbon,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Nitrogen Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Nitrous Oxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Particulates PM10,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Particulates PM2pt5,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Biomass\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Electricity,Feedstock Fuel Share,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Black Carbon,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Particulates PM10,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Biomass Gasification\Feedstock Fuels\Natural Gas\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Annual Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Capacity Credit,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Capital Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Dispatch Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Dispatchable,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Endogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Exogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,First Simulation Year,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Fixed OM Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Full Load Hours,Hours,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Historical Production,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Hourly Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Interest Rate,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Lifetime,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Maximum Availability,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Maximum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Maximum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Maximum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Maximum_Share_of_Production,%,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Merit Order,Merit Order,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Minimum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Minimum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Minimum Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Minimum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Minimum Share of Production,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Minimum Utilization,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Optimized New Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Process Efficiency,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Process Share,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Renewable Qualified,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Salvage Value,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Seasonal Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Starting Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Stranded Cost,2020 USD,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Annual Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Capacity Credit,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Capital Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Dispatch Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Dispatchable,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Endogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Exogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,First Simulation Year,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Fixed OM Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Full Load Hours,Hours,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Historical Production,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Hourly Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Interest Rate,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Lifetime,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Maximum Availability,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Maximum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Maximum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Maximum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Maximum_Share_of_Production,%,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Merit Order,Merit Order,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Minimum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Minimum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Minimum Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Minimum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Minimum Share of Production,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Minimum Utilization,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Optimized New Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Process Efficiency,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Process Share,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Renewable Qualified,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Salvage Value,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Seasonal Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Starting Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Stranded Cost,2020 USD,,
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous\Sequestered Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Bituminous\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite\Sequestered Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Lignite\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous\Sequestered Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Sub bituminous\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified\Sequestered Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Coal Unspecified\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Electricity,Feedstock Fuel Share,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification with CCS\Feedstock Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Bituminous,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Bituminous,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Bituminous,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Bituminous\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Bituminous\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Bituminous\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Bituminous\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Bituminous\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Lignite,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Lignite,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Lignite,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Lignite\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Lignite\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Lignite\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Lignite\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Lignite\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Sub bituminous,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Sub bituminous,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Sub bituminous,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Sub bituminous\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Sub bituminous\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Sub bituminous\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Sub bituminous\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Sub bituminous\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Unspecified,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Unspecified,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Unspecified,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Unspecified\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Unspecified\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Unspecified\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Unspecified\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Coal Unspecified\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Electricity,Feedstock Fuel Share,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Coal Gasification\Feedstock Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Annual Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Capacity Credit,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Capital Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Dispatch Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Dispatchable,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Endogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Exogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,First Simulation Year,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Fixed OM Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Full Load Hours,Hours,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Historical Production,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Hourly Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Interest Rate,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Lifetime,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Maximum Availability,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Maximum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Maximum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Maximum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Maximum_Share_of_Production,%,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Merit Order,Merit Order,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Minimum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Minimum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Minimum Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Minimum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Minimum Share of Production,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Minimum Utilization,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Optimized New Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Process Efficiency,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Process Share,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Renewable Qualified,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Salvage Value,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Seasonal Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Starting Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Stranded Cost,2020 USD,,
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis\Feedstock Fuels\Electricity,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis\Feedstock Fuels\Electricity,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\PEM Electrolysis\Feedstock Fuels\Electricity,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Annual Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Capacity Credit,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Capital Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Dispatch Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Dispatchable,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Endogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Exogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,First Simulation Year,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Fixed OM Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Full Load Hours,Hours,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Historical Production,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Hourly Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Interest Rate,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Lifetime,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Maximum Availability,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Maximum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Maximum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Maximum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Maximum_Share_of_Production,%,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Merit Order,Merit Order,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Minimum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Minimum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Minimum Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Minimum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Minimum Share of Production,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Minimum Utilization,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Optimized New Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Process Efficiency,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Process Share,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Renewable Qualified,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Salvage Value,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Seasonal Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Starting Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Stranded Cost,2020 USD,,
+Transformation\Hydrogen Production for Energy Use\Processes\Pressurized H2 Gas,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Annual Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Capacity Credit,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Capital Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Dispatch Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Dispatchable,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Endogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Exogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,First Simulation Year,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Fixed OM Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Full Load Hours,Hours,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Historical Production,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Hourly Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Interest Rate,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Lifetime,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Maximum Availability,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Maximum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Maximum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Maximum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Maximum_Share_of_Production,%,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Merit Order,Merit Order,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Minimum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Minimum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Minimum Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Minimum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Minimum Share of Production,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Minimum Utilization,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Optimized New Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Process Efficiency,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Process Share,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Renewable Qualified,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Salvage Value,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Seasonal Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Starting Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Stranded Cost,2020 USD,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Annual Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Capacity Credit,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Capital Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Dispatch Rule,None,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Dispatchable,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Endogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Exogenous Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,First Simulation Year,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Fixed OM Cost,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Full Load Hours,Hours,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Historical Production,Tonnes of Oil Equivalent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Hourly Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Interest Rate,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Lifetime,Years,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Maximum Availability,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Maximum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Maximum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Maximum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Maximum_Share_of_Production,%,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Merit Order,Merit Order,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Minimum Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Minimum Capacity Addition,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Minimum Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Minimum Production,Gigajoule,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Minimum Share of Production,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Minimum Utilization,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Optimized New Capacity,Megawatt,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Process Efficiency,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Process Share,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Renewable Qualified,Percent,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Salvage Value,2020 USD,,Megawatt
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Seasonal Storage Carryover,Yes/No,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Starting Charge,Share,%,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Stranded Cost,2020 USD,,
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS,Variable OM Cost,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Electricity,Feedstock Fuel Share,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Black Carbon,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Particulates PM10,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Sequestered Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR with CCS\Feedstock Fuels\Natural Gas\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Electricity,Feedstock Fuel Share,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Black Carbon,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Methane,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Particulates PM10,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Hydrogen Production for Energy Use\Processes\SMR\Feedstock Fuels\Natural Gas\Sulfur Oxides,Avg Environmental Loading,Gramme,,Million BTU
+Transformation\Methanol Production for Energy Use,Optimize,None,,
+Transformation\Methanol Production for Energy Use,Use Addition Size,None,,
+Transformation\Methanol Production for Energy Use\Output Fuels\Methanol,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Methanol Production for Energy Use\Output Fuels\Methanol,Import Target,Tonnes of Oil Equivalent,,
+Transformation\Methanol Production for Energy Use\Output Fuels\Methanol,Output Share,Share,%,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel,Dispatch Rule,None,,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel,Lifetime,Years,,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel,Maximum Production,Gigajoule,,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel,Maximum_Share_of_Production,%,,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel,Minimum Production,Gigajoule,,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel,Minimum Share of Production,Percent,,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel,Optimized New Capacity,Gigajoules/Year,,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel,Process Efficiency,Percent,,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel,Process Share,Share,%,
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Auxiliary Fuels\Electricity,Auxiliary Fuel Use,Megajoule,,Megajoule
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Auxiliary Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Feedstock Fuels\Blast Furnace Gas,Feedstock Fuel Share,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Feedstock Fuels\Blast Furnace Gas,Fuel Source,2020 USD,,Tonnes of Oil Equivalent
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Feedstock Fuels\Coke Oven Gas,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Feedstock Fuels\Coke Oven Gas,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Methanol Production for Energy Use\Processes\CO2 Utilization for Iron and Steel\Feedstock Fuels\Coke Oven Gas\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Gigajoule
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen,Dispatch Rule,None,,
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen,Lifetime,Years,,
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen,Maximum Production,Gigajoule,,
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen,Maximum_Share_of_Production,%,,
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen,Minimum Production,Gigajoule,,
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen,Minimum Share of Production,Percent,,
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen,Optimized New Capacity,Gigajoules/Year,,
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen,Process Efficiency,Percent,,
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen,Process Share,Share,%,
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen\Auxiliary Fuels\Electricity,Auxiliary Fuel Use,Kilowatt-Hour,,Kilowatt-Hour
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen\Auxiliary Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen\Feedstock Fuels\Hydrogen,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen\Feedstock Fuels\Hydrogen,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen\Feedstock Fuels\Hydrogen\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Gigajoule
+Transformation\Methanol Production for Energy Use\Processes\Production from Hydrogen\Feedstock Fuels\Hydrogen\Sequestered Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Gigajoule
+Transformation\Renewable Diesel Production,Module Costs,2020 USD,,
+Transformation\Renewable Diesel Production,Optimize,None,,
+Transformation\Renewable Diesel Production,Peak Load Ratio,Percent,,
+Transformation\Renewable Diesel Production,Planning Reserve Margin,Percent,,
+Transformation\Renewable Diesel Production,Renewable Target,Percent,,
+Transformation\Renewable Diesel Production,Use Addition Size,None,,
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel,Import Target,Tonnes of Oil Equivalent,,
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel,Output Share,Share,%,
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel,Shortfall Rule,None,,
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel,Surplus Rule,None,,
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel,Usage Rule,None,,
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel\Land Use,Avg Environmental Loading,Hectare,,Gigajoule
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel\Land Use,BioProdYield,litre/tonne,,
+Transformation\Renewable Diesel Production\Output Fuels\Renewable Diesel\Land Use,CropYield,tonne/ha,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Capacity Credit,Percent,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Capital Cost,2020 USD,,Gigajoules/Year
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Dispatch Rule,None,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Dispatchable,Yes/No,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Endogenous Capacity,Gigajoules/Year,Thousand,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Exogenous Capacity,Gigajoules/Year,Thousand,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,First Simulation Year,Years,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Fixed OM Cost,2020 USD,,Gigajoules/Year
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Interest Rate,Percent,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Lifetime,Years,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Maximum Availability,Percent,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Maximum Capacity,Gigajoules/Year,Thousand,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Maximum Capacity Addition,Gigajoules/Year,Thousand,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Maximum Production,Gigajoule,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Maximum_Share_of_Production,%,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Merit Order,Merit Order,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Minimum Capacity,Gigajoules/Year,Thousand,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Minimum Capacity Addition,Gigajoules/Year,Thousand,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Minimum Production,Gigajoule,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Minimum Share of Production,Percent,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Minimum Utilization,Percent,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Optimized New Capacity,Gigajoules/Year,Thousand,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Process Efficiency,Percent,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Process Share,Share,%,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Renewable Qualified,Percent,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Salvage Value,2020 USD,,Gigajoules/Year
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Stranded Cost,2020 USD,,
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel,Variable OM Cost,2020 USD,,Gigajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel,Auxiliary Fuel Use,British Thermal Unit,,British Thermal Unit
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel,Fuel Cost,2020 USD,,Liter
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel,Fuel Source,2020 USD,,Liter
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Electricity,Auxiliary Fuel Use,British Thermal Unit,,British Thermal Unit
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Hydrogen,Feedstock Fuel Share,2020 USD,,Metric Tonne
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Hydrogen,Fuel Cost,2020 USD,,Metric Tonne
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Hydrogen,Fuel Source,2020 USD,,Metric Tonne
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Renewable Diesel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production,Module Costs,2020 USD,,
+Transformation\Sustainable Aviation Fuel Production,Optimize,None,,
+Transformation\Sustainable Aviation Fuel Production,Peak Load Ratio,Percent,,
+Transformation\Sustainable Aviation Fuel Production,Planning Reserve Margin,Percent,,
+Transformation\Sustainable Aviation Fuel Production,Renewable Target,Percent,,
+Transformation\Sustainable Aviation Fuel Production,Use Addition Size,None,,
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel,Export Target,Tonnes of Oil Equivalent,,
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel,Import Target,Tonnes of Oil Equivalent,,
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel,Output Price,U.S. Dollar,,Kilowatt-Hour
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel,Output Share,Share,%,
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel,Shortfall Rule,None,,
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel,Surplus Rule,None,,
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel,Usage Rule,None,,
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel\Land Use,Avg Environmental Loading,Hectare,,Gigajoule
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel\Land Use,BioProdYield,litre/tonne,,
+Transformation\Sustainable Aviation Fuel Production\Output Fuels\Sustainable Aviation Fuel\Land Use,CropYield,tonne/ha,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Capacity Credit,Percent,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Capital Cost,2020 USD,,Gigajoules/Year
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Dispatch Rule,None,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Dispatchable,Yes/No,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Endogenous Capacity,Gigajoules/Year,Thousand,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Exogenous Capacity,Gigajoules/Year,Thousand,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,First Simulation Year,Years,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Fixed OM Cost,2020 USD,,Gigajoules/Year
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Historical Production,Tonnes of Oil Equivalent,Thousand,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Interest Rate,Percent,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Lifetime,Years,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Maximum Availability,Percent,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Maximum Capacity,Gigajoules/Year,Thousand,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Maximum Capacity Addition,Gigajoules/Year,Thousand,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Maximum Production,Gigajoule,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Maximum_Share_of_Production,%,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Merit Order,Merit Order,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Minimum Capacity,Gigajoules/Year,Thousand,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Minimum Capacity Addition,Gigajoules/Year,Thousand,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Minimum Production,Gigajoule,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Minimum Share of Production,Percent,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Minimum Utilization,Percent,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Optimized New Capacity,Gigajoules/Year,Thousand,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Process Efficiency,Percent,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Process Share,Share,%,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Renewable Qualified,Percent,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Salvage Value,2020 USD,,Gigajoules/Year
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Stranded Cost,2020 USD,,
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel,Variable OM Cost,2020 USD,,Gigajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel,Auxiliary Fuel Use,British Thermal Unit,,British Thermal Unit
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel,Fuel Cost,2020 USD,,Liter
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel,Fuel Source,2020 USD,,Liter
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Biodiesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Electricity,Auxiliary Fuel Use,British Thermal Unit,,British Thermal Unit
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Electricity,Fuel Cost,2020 USD,,Gigajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Auxiliary Fuels\Electricity,Fuel Source,2020 USD,,Gigajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Hydrogen,Feedstock Fuel Share,2020 USD,,Metric Tonne
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Hydrogen,Fuel Cost,2020 USD,,Metric Tonne
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Hydrogen,Fuel Source,2020 USD,,Metric Tonne
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil,Feedstock Fuel Share,U.S. Dollar,,Gigajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil,Fuel Cost,U.S. Dollar,,Gigajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil,Fuel Source,U.S. Dollar,,Gigajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Transformation\Sustainable Aviation Fuel Production\Processes\HVO Renewable Diesel\Feedstock Fuels\Palm Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule

@@ -1,0 +1,168 @@
+  Anthracite Coal Production   [Transformation\Anthracite Coal Production]  vars: Module Costs;Optimize;Use Addition Size
+      Coal Anthracite   [Transformation\Anthracite Coal Production\Output Fuels\Coal Anthracite]  vars: Export Target;Import Target;Output Price;Output Share
+      All Mines   [Transformation\Anthracite Coal Production\Processes\All Mines]  vars: Dispatch Rule;Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Process Share;Variable OM Cost
+          Coal Anthracite   [Transformation\Anthracite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Anthracite]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Methane   [Transformation\Anthracite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Anthracite\Methane]  vars: Avg Environmental Loading
+  Bituminous Coal Production   [Transformation\Bituminous Coal Production]  vars: Module Costs;Optimize;Use Addition Size
+      Coal Bituminous   [Transformation\Bituminous Coal Production\Output Fuels\Coal Bituminous]  vars: Export Target;Import Target;Output Price;Output Share
+      All Mines   [Transformation\Bituminous Coal Production\Processes\All Mines]  vars: Dispatch Rule;Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Process Share;Variable OM Cost
+          Coal Bituminous   [Transformation\Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Bituminous]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Methane   [Transformation\Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Bituminous\Methane]  vars: Avg Environmental Loading
+  Crude Oil Production   [Transformation\Crude Oil Production]  vars: Module Costs;Optimize;Use Addition Size
+      Crude Oil   [Transformation\Crude Oil Production\Output Fuels\Crude Oil]  vars: Export Target;Import Target;Output Price;Output Share
+      Crude Oil   [Transformation\Crude Oil Production\Processes\Crude Oil]  vars: Dispatch Rule;Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Process Share;Variable OM Cost
+          Crude Oil   [Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Carbon Dioxide   [Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Carbon Dioxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Methane]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Crude Oil Production\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+  Diesel Blending   [Transformation\Diesel Blending]  vars: Optimize;Peak Load Ratio;Planning Reserve Margin;Renewable Target;Use Addition Size
+      Blended Diesel   [Transformation\Diesel Blending\Output Fuels\Blended Diesel]  vars: Export Target;Import Target;Output Share;Shortfall Rule;Surplus Rule;Usage Rule
+      Biodiesel   [Transformation\Diesel Blending\Processes\Biodiesel]  vars: Capacity Credit;Dispatch Rule;Dispatchable;Endogenous Capacity;Exogenous Capacity;First Simulation Year;Interest Rate;Lifetime;Maximum Availability;Maximum Capacity;Maximum Capacity Addition;Maximum Production;Maximum_Share_of_Production;Merit Order;Minimum Capacity;Minimum Capacity Addition;Minimum Production;Minimum Share of Production;Minimum Utilization;Optimized New Capacity;Process Efficiency;Process Share;Renewable Qualified
+          Biodiesel   [Transformation\Diesel Blending\Processes\Biodiesel\Feedstock Fuels\Biodiesel]  vars: Feedstock Fuel Share;Fuel Source
+      Diesel   [Transformation\Diesel Blending\Processes\Diesel]  vars: Capacity Credit;Dispatch Rule;Dispatchable;Endogenous Capacity;Exogenous Capacity;First Simulation Year;Interest Rate;Lifetime;Maximum Availability;Maximum Capacity;Maximum Capacity Addition;Maximum Production;Maximum_Share_of_Production;Merit Order;Minimum Capacity;Minimum Capacity Addition;Minimum Production;Minimum Share of Production;Minimum Utilization;Optimized New Capacity;Process Efficiency;Process Share;Renewable Qualified
+          Diesel   [Transformation\Diesel Blending\Processes\Diesel\Feedstock Fuels\Diesel]  vars: Feedstock Fuel Share;Fuel Source
+  Energy Sector Own Use   [Transformation\Energy Sector Own Use]  vars: Module Costs
+      Crude Oil   [Transformation\Energy Sector Own Use\Processes\Crude Oil]  vars: Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Variable OM Cost
+          Crude Oil   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Ammonia   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Ammonia]  vars: Avg Environmental Loading
+            Black Carbon   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Black Carbon]  vars: Avg Environmental Loading
+            Carbon Dioxide   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Carbon Dioxide]  vars: Avg Environmental Loading
+            Carbon Monoxide   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Carbon Monoxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Methane]  vars: Avg Environmental Loading
+            Nitrogen Oxides   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Nitrogen Oxides]  vars: Avg Environmental Loading
+            Nitrous Oxide   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Nitrous Oxide]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+            Organic Carbon   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Organic Carbon]  vars: Avg Environmental Loading
+            Particulates PM10   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Particulates PM10]  vars: Avg Environmental Loading
+            Particulates PM2pt5   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Particulates PM2pt5]  vars: Avg Environmental Loading
+            Sulfur Dioxide   [Transformation\Energy Sector Own Use\Processes\Crude Oil\Feedstock Fuels\Crude Oil\Sulfur Dioxide]  vars: Avg Environmental Loading
+      Electricity   [Transformation\Energy Sector Own Use\Processes\Electricity]  vars: Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Variable OM Cost
+          Electricity   [Transformation\Energy Sector Own Use\Processes\Electricity\Feedstock Fuels\Electricity]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+      LNG   [Transformation\Energy Sector Own Use\Processes\LNG]  vars: Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Variable OM Cost
+          LNG   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Ammonia   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Ammonia]  vars: Avg Environmental Loading
+            Black Carbon   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Black Carbon]  vars: Avg Environmental Loading
+            Carbon Dioxide   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Carbon Dioxide]  vars: Avg Environmental Loading
+            Carbon Monoxide   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Carbon Monoxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Methane]  vars: Avg Environmental Loading
+            Nitrogen Oxides   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Nitrogen Oxides]  vars: Avg Environmental Loading
+            Nitrous Oxide   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Nitrous Oxide]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+            Organic Carbon   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Organic Carbon]  vars: Avg Environmental Loading
+            Particulates PM10   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Particulates PM10]  vars: Avg Environmental Loading
+            Particulates PM2pt5   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Particulates PM2pt5]  vars: Avg Environmental Loading
+            Sulfur Dioxide   [Transformation\Energy Sector Own Use\Processes\LNG\Feedstock Fuels\LNG\Sulfur Dioxide]  vars: Avg Environmental Loading
+      LPG   [Transformation\Energy Sector Own Use\Processes\LPG]  vars: Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Variable OM Cost
+          LPG   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Ammonia   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Ammonia]  vars: Avg Environmental Loading
+            Black Carbon   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Black Carbon]  vars: Avg Environmental Loading
+            Carbon Dioxide   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Carbon Dioxide]  vars: Avg Environmental Loading
+            Carbon Monoxide   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Carbon Monoxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Methane]  vars: Avg Environmental Loading
+            Nitrogen Oxides   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Nitrogen Oxides]  vars: Avg Environmental Loading
+            Nitrous Oxide   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Nitrous Oxide]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+            Organic Carbon   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Organic Carbon]  vars: Avg Environmental Loading
+            Particulates PM10   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Particulates PM10]  vars: Avg Environmental Loading
+            Particulates PM2pt5   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Particulates PM2pt5]  vars: Avg Environmental Loading
+            Sulfur Dioxide   [Transformation\Energy Sector Own Use\Processes\LPG\Feedstock Fuels\LPG\Sulfur Dioxide]  vars: Avg Environmental Loading
+      Natural Gas   [Transformation\Energy Sector Own Use\Processes\Natural Gas]  vars: Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Variable OM Cost
+          Natural Gas   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Ammonia   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Ammonia]  vars: Avg Environmental Loading
+            Black Carbon   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Black Carbon]  vars: Avg Environmental Loading
+            Carbon Dioxide   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Dioxide]  vars: Avg Environmental Loading
+            Carbon Monoxide   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Monoxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Methane]  vars: Avg Environmental Loading
+            Nitrogen Oxides   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Nitrogen Oxides]  vars: Avg Environmental Loading
+            Nitrous Oxide   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Nitrous Oxide]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+            Organic Carbon   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Organic Carbon]  vars: Avg Environmental Loading
+            Particulates PM10   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Particulates PM10]  vars: Avg Environmental Loading
+            Particulates PM2pt5   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Particulates PM2pt5]  vars: Avg Environmental Loading
+            Sulfur Dioxide   [Transformation\Energy Sector Own Use\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Sulfur Dioxide]  vars: Avg Environmental Loading
+  Gas Processing   [Transformation\Gas Processing]  vars: Module Costs;Optimize;Peak Load Ratio;Planning Reserve Margin;Renewable Target;Use Addition Size
+      Diesel   [Transformation\Gas Processing\Output Fuels\Diesel]  vars: Export Target;Import Target;Output Price;Output Share;Shortfall Rule;Surplus Rule;Usage Rule
+      Kerosene   [Transformation\Gas Processing\Output Fuels\Kerosene]  vars: Export Target;Import Target;Output Price;Output Share;Shortfall Rule;Surplus Rule;Usage Rule
+      LNG   [Transformation\Gas Processing\Output Fuels\LNG]  vars: Export Target;Import Target;Output Price;Output Share;Shortfall Rule;Surplus Rule;Usage Rule
+      LPG   [Transformation\Gas Processing\Output Fuels\LPG]  vars: Export Target;Import Target;Output Price;Output Share;Shortfall Rule;Surplus Rule;Usage Rule
+      Natural Gas Liquids   [Transformation\Gas Processing\Output Fuels\Natural Gas Liquids]  vars: Export Target;Import Target;Output Price;Output Share;Shortfall Rule;Surplus Rule;Usage Rule
+      Oil   [Transformation\Gas Processing\Output Fuels\Oil]  vars: Export Target;Import Target;Output Price;Output Share;Shortfall Rule;Surplus Rule;Usage Rule
+      Natural Gas   [Transformation\Gas Processing\Processes\Natural Gas]  vars: Capacity Credit;Capital Cost;Dispatch Rule;Dispatchable;Endogenous Capacity;Exogenous Capacity;First Simulation Year;Fixed OM Cost;Historical Production;Interest Rate;Lifetime;Maximum Availability;Maximum Capacity;Maximum Capacity Addition;Maximum Production;Maximum_Share_of_Production;Merit Order;Minimum Capacity;Minimum Capacity Addition;Minimum Production;Minimum Share of Production;Minimum Utilization;Optimized New Capacity;Process Efficiency;Process Share;Renewable Qualified;Salvage Value;Stranded Cost;Variable OM Cost
+          Natural Gas   [Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Carbon Dioxide   [Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Dioxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Methane]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Gas Processing\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+  Gasoline Blending   [Transformation\Gasoline Blending]  vars: Optimize;Peak Load Ratio;Planning Reserve Margin;Renewable Target;Use Addition Size
+      Blended Gasoline   [Transformation\Gasoline Blending\Output Fuels\Blended Gasoline]  vars: Export Target;Import Target;Output Share;Shortfall Rule;Surplus Rule;Usage Rule
+      Ethanol   [Transformation\Gasoline Blending\Processes\Ethanol]  vars: Capacity Credit;Dispatch Rule;Dispatchable;Endogenous Capacity;Exogenous Capacity;First Simulation Year;Interest Rate;Lifetime;Maximum Availability;Maximum Capacity;Maximum Capacity Addition;Maximum Production;Maximum_Share_of_Production;Merit Order;Minimum Capacity;Minimum Capacity Addition;Minimum Production;Minimum Share of Production;Minimum Utilization;Optimized New Capacity;Process Efficiency;Process Share;Renewable Qualified
+          Ethanol   [Transformation\Gasoline Blending\Processes\Ethanol\Feedstock Fuels\Ethanol]  vars: Feedstock Fuel Share;Fuel Source
+      Gasoline   [Transformation\Gasoline Blending\Processes\Gasoline]  vars: Capacity Credit;Dispatch Rule;Dispatchable;Endogenous Capacity;Exogenous Capacity;First Simulation Year;Interest Rate;Lifetime;Maximum Availability;Maximum Capacity;Maximum Capacity Addition;Maximum Production;Maximum_Share_of_Production;Merit Order;Minimum Capacity;Minimum Capacity Addition;Minimum Production;Minimum Share of Production;Minimum Utilization;Optimized New Capacity;Process Efficiency;Process Share;Renewable Qualified
+          Gasoline   [Transformation\Gasoline Blending\Processes\Gasoline\Feedstock Fuels\Gasoline]  vars: Feedstock Fuel Share;Fuel Source
+  Gasoline Distribution and Handling   [Transformation\Gasoline Distribution and Handling]  vars: Module Costs
+      Gasoline   [Transformation\Gasoline Distribution and Handling\Processes\Gasoline]  vars: Lifetime;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Process Efficiency;Variable OM Cost
+          Gasoline   [Transformation\Gasoline Distribution and Handling\Processes\Gasoline\Feedstock Fuels\Gasoline]  vars: Annual Avg Ambient Temp;Annual Avg Reid Vapour Pressure;Feedstock Fuel Share;Fuel Cost;Fuel Source;TVP
+            Non Methane Volatile Organic Compounds   [Transformation\Gasoline Distribution and Handling\Processes\Gasoline\Feedstock Fuels\Gasoline\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+  Lignite Coal Production   [Transformation\Lignite Coal Production]  vars: Module Costs;Optimize;Use Addition Size
+      Coal Lignite   [Transformation\Lignite Coal Production\Output Fuels\Coal Lignite]  vars: Export Target;Import Target;Output Price;Output Share
+      All Mines   [Transformation\Lignite Coal Production\Processes\All Mines]  vars: Dispatch Rule;Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Process Share;Variable OM Cost
+          Coal Lignite   [Transformation\Lignite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Lignite]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Methane   [Transformation\Lignite Coal Production\Processes\All Mines\Feedstock Fuels\Coal Lignite\Methane]  vars: Avg Environmental Loading
+  LNG Regasification   [Transformation\LNG Regasification]  vars: Module Costs;Optimize;Use Addition Size
+      Natural Gas   [Transformation\LNG Regasification\Output Fuels\Natural Gas]  vars: Export Target;Import Target;Output Price;Output Share
+      LNG   [Transformation\LNG Regasification\Processes\LNG]  vars: Dispatch Rule;Lifetime;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Process Efficiency;Process Share;Variable OM Cost
+          LNG   [Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Carbon Dioxide   [Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG\Carbon Dioxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG\Methane]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\LNG Regasification\Processes\LNG\Feedstock Fuels\LNG\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+  Natural Gas Production   [Transformation\Natural Gas Production]  vars: Module Costs;Optimize;Use Addition Size
+      Natural Gas   [Transformation\Natural Gas Production\Output Fuels\Natural Gas]  vars: Export Target;Import Target;Output Price;Output Share
+      Natural Gas   [Transformation\Natural Gas Production\Processes\Natural Gas]  vars: Dispatch Rule;Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Process Share;Variable OM Cost
+          Natural Gas   [Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Carbon Dioxide   [Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Dioxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Methane]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Natural Gas Production\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+  Natural Gas Transmission and Distribution   [Transformation\Natural Gas Transmission and Distribution]  vars: Module Costs
+      Natural Gas   [Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas]  vars: Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Variable OM Cost
+          Natural Gas   [Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Carbon Dioxide   [Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Carbon Dioxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Methane]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Natural Gas Transmission and Distribution\Processes\Natural Gas\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+  Oil Refining   [Transformation\Oil Refining]  vars: Module Costs;Optimize;Peak Load Ratio;Planning Reserve Margin;Renewable Target;Use Addition Size
+      Avgas   [Transformation\Oil Refining\Output Fuels\Avgas]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Bitumen   [Transformation\Oil Refining\Output Fuels\Bitumen]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Diesel   [Transformation\Oil Refining\Output Fuels\Diesel]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Gasoline   [Transformation\Oil Refining\Output Fuels\Gasoline]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Jet Kerosene   [Transformation\Oil Refining\Output Fuels\Jet Kerosene]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Kerosene   [Transformation\Oil Refining\Output Fuels\Kerosene]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      LPG   [Transformation\Oil Refining\Output Fuels\LPG]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Lubricants   [Transformation\Oil Refining\Output Fuels\Lubricants]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Naphtha   [Transformation\Oil Refining\Output Fuels\Naphtha]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Oil   [Transformation\Oil Refining\Output Fuels\Oil]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Petroleum Coke   [Transformation\Oil Refining\Output Fuels\Petroleum Coke]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Refinery Feedstocks   [Transformation\Oil Refining\Output Fuels\Refinery Feedstocks]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Refinery Gas   [Transformation\Oil Refining\Output Fuels\Refinery Gas]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      Residual Fuel Oil   [Transformation\Oil Refining\Output Fuels\Residual Fuel Oil]  vars: Export Target;Import Target;Output Price;Output Share;Priority Output;Shortfall Rule;Surplus Rule;Usage Rule
+      All Refineries   [Transformation\Oil Refining\Processes\All Refineries]  vars: Capacity Credit;Capital Cost;Dispatch Rule;Dispatchable;Endogenous Capacity;Exogenous Capacity;First Simulation Year;Fixed OM Cost;Historical Production;Interest Rate;Lifetime;Maximum Availability;Maximum Capacity;Maximum Capacity Addition;Maximum Production;Maximum_Share_of_Production;Merit Order;Minimum Capacity;Minimum Capacity Addition;Minimum Production;Minimum Share of Production;Minimum Utilization;Optimized New Capacity;Process Efficiency;Process Share;Renewable Qualified;Salvage Value;Stranded Cost;Variable OM Cost
+          Crude Oil   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Carbon Dioxide   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Carbon Dioxide]  vars: Avg Environmental Loading
+            Carbon Monoxide   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Carbon Monoxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Methane]  vars: Avg Environmental Loading
+            Nitrogen Oxides   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Nitrogen Oxides]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+            Sulfur Dioxide   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Crude Oil\Sulfur Dioxide]  vars: Avg Environmental Loading
+          Natural Gas   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Carbon Monoxide   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Carbon Monoxide]  vars: Avg Environmental Loading
+            Methane   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Methane]  vars: Avg Environmental Loading
+            Nitrogen Oxides   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Nitrogen Oxides]  vars: Avg Environmental Loading
+            Non Methane Volatile Organic Compounds   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Non Methane Volatile Organic Compounds]  vars: Avg Environmental Loading
+            Sulfur Dioxide   [Transformation\Oil Refining\Processes\All Refineries\Feedstock Fuels\Natural Gas\Sulfur Dioxide]  vars: Avg Environmental Loading
+  Sub Bituminous Coal Production   [Transformation\Sub Bituminous Coal Production]  vars: Module Costs;Optimize;Use Addition Size
+      Coal Sub bituminous   [Transformation\Sub Bituminous Coal Production\Output Fuels\Coal Sub bituminous]  vars: Export Target;Import Target;Output Price;Output Share
+      All Mines   [Transformation\Sub Bituminous Coal Production\Processes\All Mines]  vars: Dispatch Rule;Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Process Share;Variable OM Cost
+          Coal Sub bituminous   [Transformation\Sub Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Sub bituminous]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Methane   [Transformation\Sub Bituminous Coal Production\Processes\All Mines\Feedstock Fuels\Coal Sub bituminous\Methane]  vars: Avg Environmental Loading
+  Unspecified Coal Production   [Transformation\Unspecified Coal Production]  vars: Module Costs;Optimize;Use Addition Size
+      Coal Unspecified   [Transformation\Unspecified Coal Production\Output Fuels\Coal Unspecified]  vars: Export Target;Import Target;Output Price;Output Share
+      All Mines   [Transformation\Unspecified Coal Production\Processes\All Mines]  vars: Dispatch Rule;Lifetime;Losses;Maximum Production;Maximum_Share_of_Production;Minimum Production;Minimum Share of Production;Optimized New Capacity;Process Share;Variable OM Cost
+          Coal Unspecified   [Transformation\Unspecified Coal Production\Processes\All Mines\Feedstock Fuels\Coal Unspecified]  vars: Feedstock Fuel Share;Fuel Cost;Fuel Source
+            Methane   [Transformation\Unspecified Coal Production\Processes\All Mines\Feedstock Fuels\Coal Unspecified\Methane]  vars: Avg Environmental Loading

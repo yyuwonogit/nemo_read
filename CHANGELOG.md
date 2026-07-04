@@ -1,5 +1,35 @@
 # Changelog
 
+## [Unreleased] — Transformation canon (7th export) + all-tree integration (2026-07-04)
+
+- **`LEAP Input Transformation.xlsx` digested and folded into canon** — the
+  seventh and final Export-Expressions workbook (577,248 rows / 1,593
+  branches / 80 variables). Anatomy chapter §14 added to
+  [LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md)
+  (retitled "LEAP Structure Anatomy"; now 2,435,820 rows across 7 exports);
+  tree in [LEAP structure/trees/transformation_tree.txt]; raw xlsx gitignored.
+- **All 7 hypothesized/pending cross-tree edges CONFIRMED** by the connection
+  audit: fossil `Oil Refining\Processes\All Refineries` (id 2544, authored
+  blind — correct), power's Centralized+Distributed generation fleets, the 18
+  Unmet Load slack branches (priced 500/500 per §11.4), bioenergy biofuel
+  production processes, blending pseudo-techs, the Resources←Transformation
+  geothermal back-reference, and storage (Pumped Hydro/CAES/Li-Ion/VRB).
+  Demand sectors connect to Transformation via shared fuels, not expression
+  refs (only Resources references it).
+- **Supremacy sweep** — retired the "pending Transformation / probe-derived"
+  caveats now that it's canon: fossil guide §8 freeze lifted, power guide
+  boundary, CLAUDE.md §2.6 (seven exports), the canon SOP.
+- **Transformation anomaly hunt** (4-scenario) extended
+  [CANON_ANOMALY_AUDIT_20260704.md](LEAP%20structure/CANON_ANOMALY_AUDIT_20260704.md)
+  Part C: two 🔴 REDs — power `Capital Cost=0 + OM=0 + Maximum Capacity
+  Addition=Unlimited` on 6 Malaysia `_MY*` generators (free unlimited build)
+  and fossil blending `Exogenous Capacity=Unlimited` (§A.11 1e12 forced
+  floor). The §11.2c must-run trap is authored (28 rows RAS) but VERIFIED
+  INERT (zero-capacity branches bind nothing). Anatomy §15 ledger #33–#35.
+- **Transformation slices completed** the power/fossil/bioenergy handover
+  packages (1,100 / 168 / 325 branches; tree + units + 4-scenario
+  current-expressions + audit items). All 8 groups now complete.
+
 ## [Unreleased] — Blind-mode inject standard + scenario filter + decimal guard (2026-05-20)
 
 Generalised from the transport inject cycle — the first sector to write

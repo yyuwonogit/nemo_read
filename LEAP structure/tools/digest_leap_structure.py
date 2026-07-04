@@ -143,6 +143,7 @@ FILES = [
     ("LEAP Input Industry.xlsx", "industry"),
     ("LEAP Input Keys.xlsx", "keys"),
     ("LEAP Input Resources.xlsx", "resources"),
+    ("LEAP Input Transformation.xlsx", "transformation"),
 ]
 if len(sys.argv) > 1:
     FILES = [(f, s) for f, s in FILES if s in sys.argv[1:]]
