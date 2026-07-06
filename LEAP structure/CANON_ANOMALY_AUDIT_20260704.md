@@ -445,8 +445,14 @@
   efficiency. Also Nuclear SFR/SMR and Solar PV `Maximum Capacity Addition`. The
   stated **count 12 is a divergence-span descriptor (12 regions × 4 scenarios for
   the Large Hydro / Wind Onshore variables), not a defect-row tally.** Rooted in
-  the §11.1 Malaysia-decomposed export view (§14 §1.1). Canon ledger #35. *≈12
-  regions × 4 scen. Power.*
+  the §11.1 Malaysia-scoped export view (§14 §1.1). Canon ledger #35. *≈12
+  regions × 4 scen. Power.* **AUDITED 2026-07-04:** Indonesia's 51 `_IDJW/_IDSA/
+  _IDKA/_IDEast` process nodes (merged from `LEAP Input Transformation
+  Indonesia.xlsx`) were anomaly-audited — see **Part D** below. The predicted
+  zero-cost / free-build defects DID materialise (Geothermal Flash / Large Hydro
+  / Small Hydro Capital Cost=0). This audit also extended the Malaysia set:
+  the fully-uncapped + Capital Cost=0 nodes are **4**, not 2 — add **Solar
+  PV_MYSR** and **Wind Onshore_MYSR** to Gas Turbine_MYPE + Large Hydro_MYPE.
 - **NEW · VERIFIED (latent) — bioenergy HVO Renewable Diesel twin is free under one
   module, costed under the other.** The byte-identical process carries full
   `Capital Cost` under Sustainable Aviation Fuel Production but `Capital Cost=0`
@@ -769,3 +775,97 @@
 5. **Correct the Vietnam Oil Refining 101.91 % efficiency point** and re-author the
    two full-plant `Maximum Capacity=Unlimited` + `Fixed OM=0` rows (fossil INC-1 +
    EBI-3) — committed authoring errors with clear intended forms.
+
+---
+
+## Part D — Indonesia sub-national node audit (`_IDJW/_IDSA/_IDKA/_IDEast`)
+
+> Added 2026-07-04 after the Indonesia transmission detail was merged into canon
+> (51 `_ID*` process nodes across 13 families; see anatomy §1.1). Method:
+> mechanical detection over the Indonesia node panel (4 canonical scenarios) →
+> 6-class adversarial-verification workflow (13 agents) → source reconciliation.
+> One workflow verdict ("Maximum Production=Unlimited is a phantom") was **wrong**
+> — it read an incomplete pivot; the variable IS present (357 panel rows,
+> confirmed against source). Corrected below. Scope: Indonesia `_ID*` power nodes
+> (Malaysia items surfaced incidentally are flagged *[MY, out of scope]*).
+
+### D1. Confirmed DEFECTS (ranked)
+
+- **🔴 VERIFIED DEFECT · HIGH — Capital Cost = 0 on Geothermal Flash / Large
+  Hydro / Small Hydro `_ID*` (12 nodes × 4 scen = 48 cells).** Capital-intensive
+  firm renewables authored with `Capital Cost="0"` (explicit literal, all
+  scenarios) → the LP builds new capacity **free** up to the finite
+  `Maximum Capacity` headroom, crowding out priced options and understating
+  system cost. **Isolated to exactly these 3 families** — every other `_ID*`
+  family carries a real Danish-Energy `Interp(...)` capex (Solar PV
+  `Interp(2022,960,…)`, Coal `Interp(2022,1880,…)`, Gas CC `Interp(2022,1080,…)`),
+  which rules out an area-wide zero-cost convention and confirms an
+  inheritance-copy/authoring gap. Headroom is real (Large Hydro RAS
+  `Maximum Capacity` = 32980 / 4820+ExoCap / 21600 / 15600 MW; Small Hydro 2500 /
+  3050 / 8100 / 5730). **Exception:** `Geothermal Flash_IDKA` has
+  `Maximum Capacity = Exogenous Capacity[MW]` (no headroom) → inert, no free
+  build. **Fix:** author real regional Capital Cost on all 12 nodes (mirror
+  Malaysia `_MYSB` `Interp(2020,1500…)` or the Indonesia Technology
+  Roadmap/Danish Energy 2024 capex). If an exogenous-only fleet is intended,
+  set `Maximum Capacity Addition = 0` so the LP cannot free-build above the
+  existing fleet.
+- **🟡 VERIFIED DEFECT · MEDIUM — `Maximum Capacity Addition = "Unlimited"` on
+  Large Hydro + Small Hydro `_ID*` (8 nodes, RAS).** The only genuine
+  `Unlimited` in the Indonesia canon. `→ 1e12` per-year addition sentinel
+  (§A.11 upper-bound); total build is still bounded by the finite
+  `Maximum Capacity`, so this is mainly (a) the compounding half of the
+  Capital-Cost=0 free-build (all headroom can arrive in year 1 at zero cost)
+  and (b) CPLEX conditioning noise — **not** an independent unbounded-build
+  hole. **Fix:** replace with a finite lead-time-gated ramp (port Malaysia
+  `_MYSB` `Interp(BaseYear,0,2023,…,Key\Modeling Assumptions\Large Hydro Lead
+  Time:Activity Level,…)`) or a generous finite numeric; do in the same pass as
+  the capex fix.
+
+### D2. Checked and CLEARED — intended / false-positive (do NOT re-flag)
+
+- **`Maximum Production = "Unlimited"` (51 nodes) — INTENDED, benign §A.11
+  idiom, low.** Real (357 panel rows; the workflow's "phantom" verdict was a
+  pivot artifact and is rejected). Removes only the activity cap; the binding
+  constraint is `Maximum Capacity × Availability`, which is finite. 1e12 adds
+  conditioning noise only. Optional hygiene: swap for a generous finite numeric.
+- **`Variable OM Cost = 0` (60 flags: Geothermal / Large Hydro / Small Hydro /
+  Solar PV) — FALSE POSITIVE.** Physically correct for zero-fuel renewables;
+  VOM feeds per-MWh dispatch cost, not the build. Every one of the 60 lands on a
+  non-fuel tech; every fuel-burner (Coal, Gas, Diesel, Biomass, Biogas) carries a
+  real non-zero VOM. Detector should exempt non-fuel families.
+- **`Capacity Credit = 100` on Small Hydro `_ID*` (16) — FALSE POSITIVE for the
+  derate tripwire.** These nodes author `Maximum Availability = 100` flat (not a
+  YearlyShape), so CC=100 is internally consistent with a firm treatment — not
+  the "derate a variable renewable" defect. (The genuinely-variable Solar PV
+  `18.61` and Wind `20` are correctly derated.) Caveat: flat-100 availability +
+  Capital Cost=0 reads as an un-authored placeholder — already captured by the
+  D1 capex defect; decide run-of-river-vs-reservoir when authoring real data.
+- **§11.2c must-run trap — ABSENT (clean).** All variable renewables
+  (Solar PV / Wind Onshore / Small Hydro `_ID*`) author `Minimum Utilization = 0`
+  (fully curtailable). Incumbent thermals correctly use the sanctioned
+  `Min(…, Maximum Availability)` phaseout wrapper. `MU > AF` count = 0.
+- **Unmet Load `_ID*` — INTENDED, correct slack (§11.4c).** Priced
+  (`Capital Cost=100000`, `Variable OM Cost=500`), unbounded supply as intended →
+  unserved energy resolves as expensive slack, not INFEASIBLE.
+
+### D3. Canon-hygiene notes
+
+- **Biogas has only 3 nodes** (`_IDJW/_IDKA/_IDSA`, no `_IDEast`) — every other
+  family has all 4. Confirm with the Indonesia team: resource-driven omission
+  (biogas feedstock concentrated in western Indonesia) or an authoring gap.
+- **The Indonesia export carries a non-canonical scenario roster** — 11
+  scenarios including scratch/duplicate ones (`LCO backup`, `Regional Aspiration
+  Scenario test`, `Set up`, `Carbon Neutrality_ Net Zero Scenario`, 3×
+  `RE LTRM ASEAN …`) alongside the canonical 4. Confirmed against the source
+  panel. The Indonesia area state differs from the 11-scenario canon roster
+  (IDs 1–30) — reconcile before treating Indonesia expression VALUES as canon.
+
+### D4. Malaysia items surfaced incidentally *[MY, out of scope — confirm before touching]*
+
+- **Extends ledger #35:** the fully-uncapped (`Maximum Production` +
+  `Maximum Capacity` + `Maximum Capacity Addition` all `Unlimited`) **+ Capital
+  Cost=0** set is **4 nodes**, not 2 — **Gas Turbine_MYPE, Large Hydro_MYPE,
+  Solar PV_MYSR, Wind Onshore_MYSR** (the latter two match the trap catalogue's
+  named `_MY*` zero-cost list). These are the real free-unbounded-build risks on
+  the Malaysia side. The other 29 `_MY*` `Maximum Production=Unlimited` nodes are
+  low-severity (finite `Maximum Capacity` backstop → conditioning only).

@@ -154,7 +154,9 @@ from .scaffold import scaffold_package
 # Standardised LEAP COM frameworks (2026-05-17)
 from .inject_base import (
     CanonicalInjector, InjectorSealError,
+    NODE_REGION_LOCK, find_region_lock_violations,
 )
+from .variable_classifier import classify, classify_many, filter_input_names
 from .probe_base import (
     CanonicalProber, ProberSealError,
     DEFAULT_RESULT_VARS, DEFAULT_INPUT_VARS,
@@ -220,6 +222,8 @@ __all__ = [
     "scaffold_package",
     # Standardised LEAP COM frameworks (2026-05-17, §A.10 + §A.15 + §A.16)
     "CanonicalInjector", "InjectorSealError",
+    "NODE_REGION_LOCK", "find_region_lock_violations",
+    "classify", "classify_many", "filter_input_names",
     "CanonicalProber", "ProberSealError",
     "DEFAULT_RESULT_VARS", "DEFAULT_INPUT_VARS",
     "DEFAULT_RESULT_BRANCH_TYPES", "DEFAULT_UNIT_BRANCH_TYPES",

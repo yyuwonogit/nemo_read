@@ -44,3 +44,9 @@ where they exist.
   (160 GW built in RAS).
 - **Transformation (fossil):** blending pseudo-techs `Exogenous
   Capacity=Unlimited` → §A.11 1e12 forced floor.
+- **Transformation (power) — coverage gap:** the slice was exported from the
+  Malaysia + Indonesia contexts only, so the 8 copper-plate countries' base
+  generation nodes (Solar PV, Wind, Large/Small Hydro, Gas Combined Cycle,
+  Diesel, Coal Subcritical, Biomass Other, Unmet Load) are not yet materialised
+  in it — awaiting per-country confirmation / re-export from the power team
+  (power README §7.7). Absence from the export ≠ absence in the model.

@@ -71,10 +71,22 @@ class TestNoDirectExpressionSetSites:
     the sanctioned chokepoint (`nemo_read._leap_com.safe_set_expression`).
     A new occurrence means a sector author bypassed the chokepoint
     — caught in CI, not in production.
+
+    PORTABLE CHOKEPOINT COPIES: a script whose documented contract is
+    "runs with no nemo_read import" (handed to a team without the repo)
+    may carry ONE inline copy of the chokepoint. It is exempted from the
+    textual scan — but the companion test below pins its SHAPE by AST:
+    exactly one `.Expression =` assignment, inside a function named
+    `safe_set_expression`, guarded by normalize_interp +
+    assert_interp_canonical calls. Any drift fails CI.
     """
 
     EXPRESSION_SETTER_RE = re.compile(r"\.Expression\s*=")
     SCAN_ROOTS = ("inject", "mailbox", "result")
+    # rel-posix paths of documented portable chokepoint copies
+    PORTABLE_CHOKEPOINT_COPIES = {
+        "inject/residential/20260625/inject_fridge_leap.py",
+    }
 
     def test_no_direct_expression_writes(self):
         violators = []
@@ -83,6 +95,9 @@ class TestNoDirectExpressionSetSites:
             if not root_path.exists():
                 continue
             for py_file in root_path.rglob("*.py"):
+                rel_posix = py_file.relative_to(REPO_ROOT).as_posix()
+                if rel_posix in self.PORTABLE_CHOKEPOINT_COPIES:
+                    continue  # shape-pinned by the companion test below
                 try:
                     text = py_file.read_text(encoding="utf-8")
                 except UnicodeDecodeError:
@@ -104,6 +119,52 @@ class TestNoDirectExpressionSetSites:
             "Every inject must route through CanonicalInjector._set_expression. "
             f"Offenders:\n" + "\n".join(violators)
         )
+
+    @pytest.mark.parametrize("rel", sorted(PORTABLE_CHOKEPOINT_COPIES))
+    def test_portable_chokepoint_copy_holds_its_shape(self, rel):
+        """The exemption is pinned, not blind: the portable copy must hold
+        EXACTLY one `.Expression =` assignment, inside `safe_set_expression`,
+        with normalize_interp + assert_interp_canonical called in the same
+        function body. Anything else fails — retire or fix the exemption."""
+        import ast
+
+        p = REPO_ROOT / rel
+        assert p.exists(), f"portable copy gone — remove {rel} from the exemption set"
+        tree = ast.parse(p.read_text(encoding="utf-8"))
+
+        expr_assigns = []          # (inside_fn_name, lineno)
+        fn_stack: list[str] = []
+
+        class V(ast.NodeVisitor):
+            def visit_FunctionDef(self, node):
+                fn_stack.append(node.name)
+                self.generic_visit(node)
+                fn_stack.pop()
+
+            def visit_Assign(self, node):
+                for tgt in node.targets:
+                    if isinstance(tgt, ast.Attribute) and tgt.attr == "Expression":
+                        expr_assigns.append(
+                            (fn_stack[-1] if fn_stack else None, node.lineno))
+                self.generic_visit(node)
+
+        V().visit(tree)
+        assert len(expr_assigns) == 1, (
+            f"{rel}: expected exactly 1 `.Expression =` site, found "
+            f"{[(f, ln) for f, ln in expr_assigns]}")
+        fn_name, _ = expr_assigns[0]
+        assert fn_name == "safe_set_expression", (
+            f"{rel}: the write site must live inside safe_set_expression, "
+            f"found it in {fn_name!r}")
+
+        # the guarding calls must exist inside that same function
+        fn = next(n for n in ast.walk(tree)
+                  if isinstance(n, ast.FunctionDef) and n.name == "safe_set_expression")
+        called = {n.func.id for n in ast.walk(fn)
+                  if isinstance(n, ast.Call) and isinstance(n.func, ast.Name)}
+        assert {"normalize_interp", "assert_interp_canonical"} <= called, (
+            f"{rel}: safe_set_expression must call normalize_interp and "
+            f"assert_interp_canonical before writing (found calls: {sorted(called)})")
 
 
 # ---------------------------------------------------------------------------

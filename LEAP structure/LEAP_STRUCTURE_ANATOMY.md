@@ -1213,7 +1213,7 @@ land footprint hang on the module-level Output Fuels.
 
 | Owner | Groups (branches) | Σ br |
 |---|---|---|
-| **Power** (3 groups) | Centralized Electricity Generation 1,093; Distributed Electricity Generation 4; Electricity Transmission and Distribution 3 | 1,100 |
+| **Power** (3 groups) | Centralized Electricity Generation **2,175** (was 1,093 pre-Indonesia-merge); Distributed Electricity Generation 4; Electricity Transmission and Distribution 3 | **2,182** |
 | **Fossil** (15 groups) | Energy Sector Own Use 59; Oil Refining 29; Gas Processing 12; Crude Oil Production 7; Natural Gas Production 7; LNG Regasification 7; Natural Gas Transmission and Distribution 6; Diesel Blending 6; Gasoline Blending 6; Gasoline Distribution and Handling 4; five coal-production groups (Anthracite / Bituminous / Lignite / Sub Bituminous / Unspecified) × 5 = 25 | 168 |
 | **Bioenergy** (10 groups) | Hydrogen Production for Energy Use 138; Biodiesel Production 40; Bioethanol Production 31; Charcoal Production 27; Renewable Diesel Production 21; Sustainable Aviation Fuel Production 21; Biomethane Production 20; Methanol Production for Energy Use 12; Domestic Biogas Production 10; Ammonia Production for Energy Use 5 | 325 |
 
@@ -1225,18 +1225,38 @@ coal (Subcritical/Supercritical/Ultrasupercritical ± CCS, IGCC ± CCS), gas
 renewables (Solar PV/CSP/Floating, Wind On/Offshore, Tidal, Wave), bioenergy
 (Biomass Gasification, Bioenergy with CCS, Biogas, Waste), H2 Fuel Cell,
 Direct Air Capture, four storage techs, and the `Unmet Load_*` slack processes
-(§11.4). **Load-bearing structural caveat:** for the sub-nationally-decomposed
-families (Solar PV, Wind Onshore, Coal Subcritical, Gas Combined Cycle, Large
-Hydro, Nuclear LWR/SFR/SMR, Diesel, Biomass Other, Unmet Load) the exported
-tree materialises **only the Malaysia `_MYPE/_MYSB/_MYSR` node variants — there
-is no base branch** (verified: `…\Processes\Solar PV` ABSENT, `…\Solar
-PV_MYPE` present, in both the branch digest and `transformation_tree.txt`).
-Indonesia's `_IDxx` variants (e.g. `Geothermal Flash_IDJW`, referenced 22× by
-the Resources geothermal back-edge) are **referenced but not materialised as
-separate branches in this export view** — a region-scoped branch-visibility
-artefact (§11.1). So the 61-node Centralized roster is the *exported-view*
-count, not a globally-uniform per-region roster; treat it as such when
-authoring per-region injects.
+(§11.4). **Load-bearing structural caveat — sub-national node decomposition is
+real for BOTH Malaysia and Indonesia.** Several generation families are
+materialised only as sub-national node variants with **no base branch**:
+  - **Malaysia — 3 nodes** (`_MYPE` Peninsular / `_MYSB` Sabah / `_MYSR`
+    Sarawak): 33 process nodes across 11 families (Biomass Other, Coal
+    Subcritical, Diesel, Gas Combined Cycle, Gas Turbine, Large Hydro, Nuclear
+    LWR/SFR/SMR, Solar PV, Unmet Load, Wind Onshore).
+  - **Indonesia — 4 nodes** (`_IDJW` Jawa-Madura-Bali / `_IDSA` Sumatra /
+    `_IDKA` Kalimantan / `_IDEast` Eastern): 51 process nodes across 13
+    families (Biogas [3 — no Eastern], Biomass Other, Coal Subcritical, Diesel,
+    Gas Combined Cycle, Gas Engine, Gas Turbine, Geothermal Flash, Large Hydro,
+    Small Hydro, Solar PV, Unmet Load, Wind Onshore). Wired to 4 sub-national
+    grids + aggregate (`Transmission Nodes\{Indonesia, Indonesia Jamali,
+    Indonesia Sumatra, Indonesia Borneo, Indonesia East}`).
+
+> **CORRECTION 2026-07-04.** The original `LEAP Input Transformation.xlsx`
+> export was **region-scoped**: it surfaced only Malaysia's `_MY*` node
+> variants and Malaysia transmission nodes, so a prior version of this doc
+> wrongly stated Indonesia's `_IDxx` were "referenced but not materialised as
+> separate branches." **They ARE real branches** — verified as `col E`
+> branch_paths (`…\Processes\Solar PV_IDJW`, etc.), not expression references.
+> They live in Indonesia's region tree, which the Malaysia-context export did
+> not walk (the §11.1 region-scoped branch-visibility effect — real, not an
+> artefact to wave away). The canon transformation tree now **merges the
+> dedicated `LEAP Input Transformation Indonesia.xlsx` export** (2026 Indonesia
+> branches → 1082 new), bringing the merged Centralized process-node roster
+> from 61 to **115** (61 + 51 Indonesia `_ID*` + 3 base `Nuclear LWR/SFR/SMR`
+> that only the Indonesia export surfaced — Malaysia's export carried Nuclear
+> solely as `_MY*`). **Confirmed by user 2026-07-04:** only Indonesia (4) and
+> Malaysia (3) are node-decomposed; the other 8 ASEAN regions are single
+> copper-plate nodes — so the power tree is now complete for node structure.
+> (The region-scoped-export lesson still applies to future area versions.)
 
 The three sibling owner writeups (verified, verifier-corrected) fold in below.
 
@@ -1244,11 +1264,46 @@ The three sibling owner writeups (verified, verifier-corrected) fold in below.
 
 #### 1.1 Power owner — the Centralized Electricity Generation fleet
 
-`Transformation\Centralized Electricity Generation` is the single largest module in the Transformation export: **1,093 branches** (of 1,593 in the whole sector) and **396,228 expression rows**. It resolves to **61 process nodes** grouped into **39 tech families**, one shared output fuel (`Output Fuels\Electricity`), 9 international `Transmission Lines`, and 4 module-level `Transmission Nodes`. Branch reconciliation: 1 root + 1 `Transmission Lines` bucket + 75 depth-4 nodes (61 processes + Electricity + 9 lines + 4 nodes) + 351 depth-6 fuel/node sub-branches + 665 depth-7 emission leaves = 1,093.
+`Transformation\Centralized Electricity Generation` is the single largest
+module in the Transformation export. In the original Malaysia-scoped export it
+held **1,093 branches** with **61 process nodes**; after merging the Indonesia
+export (2026-07-04) it holds **2,175 branches** with **115 process nodes**
+(61 + 51 Indonesia `_ID*` + 3 base `Nuclear LWR/SFR/SMR`).
 
-> **§11.1 exported-view caveat.** This export is Malaysia-decomposed. Several tech families are materialized **only** as Malaysia sub-national node variants (`_MYPE` = Peninsular, `_MYSB` = Sabah, `_MYSR` = Sarawak) with **no un-suffixed base branch** — there is no `Processes\Solar PV`, `Processes\Wind Onshore`, `Processes\Large Hydro`, `Processes\Nuclear LWR`, `Processes\Diesel`, or `Processes\Gas Combined Cycle`; only the `_MY*` variants exist. Each `_MY*` node is nonetheless replicated across all 12 regions in the inheritance tree, so a "Solar PV_MYPE" row exists for Indonesia, Vietnam, etc. — but the fully-authored cost/availability data for those regions lives on their own regional branches, which this Malaysia view does not surface. **`Small Hydro` does not appear anywhere in the Centralized Electricity Generation export** (nor elsewhere in Transformation); if it is modelled it sits in `Distributed Electricity Generation`. Treat the 61-node roster as the exported-view count, not the full physical fleet.
+> **MERGED COUNTS (2026-07-04, authoritative — supersede any pre-merge figure
+> below).** Whole Transformation sector: **2,675 branches** (was 1,593).
+> Centralized Electricity Generation: **2,175 branches**, **115 process nodes**,
+> **439,176 expression rows** (was 1,093 / 61 / 396,228). Sub-branch rows:
+> `Feedstock Fuels` **144,121** (was 129,768); `Transmission Nodes` /
+> `Nodal Distribution` **23,597** (was 20,832); `Avg Environmental Loading`
+> **97,735** (was 87,780). Per-process-panel core variables no longer follow a
+> single clean `nodes × 11 × 12` product — the Indonesia `_ID*` nodes exist in
+> one region (Indonesia) under an 11-scenario roster that DIFFERS from the canon
+> 11 (it includes scratch scenarios `LCO backup`, `Regional Aspiration Scenario
+> test`, `Set up`, `Carbon Neutrality_ Net Zero`, 3× `RE LTRM …`). Representative
+> merged per-variable counts: `Capital Cost` 9,715, `Node` 8,910,
+> `Minimum Utilization` 8,910, `Maximum Availability` 8,910. **Any inline
+> `8,052` / `20,832` / `129,768` / `396,228` figure further down this section is
+> the pre-merge Malaysia-scoped-export baseline — read it as such.**
 
-**Generation tech-family roster (61 process nodes, 39 families):**
+> **§11.1 region-scoped-export caveat — READ THIS.** LEAP "Export Expressions"
+> is **region-scoped for region-specific branches.** Sub-national process-node
+> variants (`Solar PV_MYPE`, `Solar PV_IDJW`, …) live in a *specific region's*
+> tree, and an export only walks the variants visible in the context it was run
+> from. The original `LEAP Input Transformation.xlsx` was run in a
+> Malaysia/Base-Template context, so it materialised **only** Malaysia's
+> `_MYPE/_MYSB/_MYSR` variants and Malaysia transmission nodes — it did **not**
+> contain Indonesia's `_IDxx` variants (which is why an earlier version of this
+> doc wrongly called them "referenced but not materialised"). The dedicated
+> `LEAP Input Transformation Indonesia.xlsx` export surfaced them, and the canon
+> tree now merges both. For decomposed families there is **no un-suffixed base
+> branch** — only the node variants exist. **`Small Hydro`** is base-only in the
+> Malaysia export but **is `_ID*`-decomposed in Indonesia** (4 nodes).
+> **Confirmed by user 2026-07-04:** only Indonesia + Malaysia are
+> node-decomposed; the other 8 ASEAN regions are single copper-plate nodes. (The
+> region-scoped-export caveat still applies to future area versions.)
+
+**Malaysia roster — 33 process nodes across 11 families** (`_MYPE`/`_MYSB`/`_MYSR`; the original 61, 39 families):
 
 | Category | Families (materialized process nodes) |
 |---|---|
@@ -1261,7 +1316,26 @@ The three sibling owner writeups (verified, verifier-corrected) fold in below.
 | **Storage** | Lithium Ion Batteries, VRB Flow Batteries, Pumped Hydro, CAES |
 | **Other / slack / CDR** | H2 Fuel Cell, Direct Air Capture, Unmet Load (`_MYPE`/`_MYSB`/`_MYSR` slack) |
 
-The sub-national decomposition is **asymmetric**: some families are `_MY*`-only (Solar PV, Wind Onshore, Large Hydro, Nuclear ×3, Diesel, Gas Combined Cycle, Biomass Other, Unmet Load), Coal Subcritical is `_MYPE`+`_MYSR` (no `_MYSB`), Gas Turbine has **both** a base node and `_MYPE`, and the remaining families are base-only.
+Malaysia's decomposition is **asymmetric**: some families are `_MY*`-only (Solar PV, Wind Onshore, Large Hydro, Nuclear ×3, Diesel, Gas Combined Cycle, Biomass Other, Unmet Load), Coal Subcritical is `_MYPE`+`_MYSR` (no `_MYSB`), Gas Turbine has **both** a base node and `_MYPE`, and the remaining families are base-only.
+
+**Indonesia roster — 51 process nodes across 13 families** (`_IDJW` Jawa-Madura-Bali / `_IDSA` Sumatra / `_IDKA` Kalimantan / `_IDEast` Eastern; from `LEAP Input Transformation Indonesia.xlsx`, merged 2026-07-04):
+
+| Decomposed family | Indonesia nodes |
+|---|---|
+| Biogas | `_IDJW`/`_IDKA`/`_IDSA` (3 — **no `_IDEast`**) |
+| Biomass Other, Coal Subcritical, Diesel, Gas Combined Cycle, Gas Engine, Gas Turbine, Geothermal Flash, Large Hydro, Small Hydro, Solar PV, Unmet Load, Wind Onshore | each `_IDJW`/`_IDSA`/`_IDKA`/`_IDEast` (4) |
+
+Indonesia's decomposition set differs from Malaysia's: Indonesia decomposes **Biogas, Gas Engine, Geothermal Flash, Small Hydro** (Malaysia does not), and does **not** decompose Nuclear (Malaysia does ×3). Each Indonesia generator is nodally wired to `Transmission Nodes\{Indonesia, Indonesia Jamali (=IDJW), Indonesia Sumatra (=IDSA), Indonesia Borneo (=IDKA), Indonesia East (=IDEast)}` — 4 sub-national grids + aggregate, mirroring Malaysia's Peninsular/Sabah/Sarawak + aggregate. So nodal decomposition is **NOT Malaysia-only** (correcting the earlier claim below in §Nodal wiring); it is confirmed for Malaysia (3) and Indonesia (4), and the other 8 ASEAN are single copper-plate nodes (user-confirmed 2026-07-04).
+
+> **Region-lock (CANON, user 2026-07-05; CLAUDE.md §A.21).** A `_MY*` node
+> exists **only** in Malaysia; a `_ID*` node **only** in Indonesia. LEAP's
+> inheritance tree replicates the `_MY*` branches into every region's view, but
+> they are `Node=0` (unwired) outside Malaysia — so a value authored for e.g.
+> `Solar PV_MYPE` in Vietnam, or `Large Hydro_IDJW` in Thailand, is a **data
+> error**, not real data. Inject files must carry `_MY*` rows only for `ams =
+> Malaysia` and `_ID*` rows only for `ams = Indonesia`; base (un-suffixed) nodes
+> are region-general and legitimately appear everywhere. Enforced by
+> `nemo_read.find_region_lock_violations` + `tests/test_region_lock.py`.
 
 **Process variable panel.** Each generator node carries a full LEAP process panel — 41 distinct variables in the union, ~31 populated for a typical thermal node. Every core variable is present at **61 nodes × 11 scenarios × 12 regions = 8,052 rows**. Sub-branch anatomy is limited to **`Feedstock Fuels\<fuel>`** (129,768 rows; each fuel carries `Feedstock Fuel Share`, `Fuel Cost`, `Fuel Source`, plus emission-species children) and **`Transmission Nodes\<node>`** (20,496 rows, `Nodal Distribution`). There are **no per-process `Auxiliary Fuels` or `Output Fuels` buckets** — electricity output attaches once at module level, and combustion emission factors (`Avg Environmental Loading`, 87,780 rows across 665 emission leaves) hang off the `Feedstock Fuels` sub-branches.
 
@@ -1347,17 +1421,29 @@ Verbatim CA capacities: `P.Malaysia_Singapore_E` 1050, `P. Malaysia_Sumatra_F`
 `Sarawak_Brunei_C` 100 MW. The `_E`/`_F` suffix splits existing vs.
 future/planned corridors.
 
-##### Sub-national balancing — Malaysia only
+##### Sub-national balancing — Malaysia AND Indonesia (not Malaysia-only)
 
-**`Nodal Distribution`** (units `Percent`, 20,832 rows / 248 branches) splits
-a process's generation across sub-national nodes — but only for **Malaysia**.
-20,223 of 20,832 rows are `0`; every one of the 609 non-zero rows sits in the
-Malaysia region (Peninsular 322, Sabah 140, aggregate Malaysia 84, Sarawak
-63), splitting output across its three non-synchronous grids: `Malaysia
-Peninsular ≈ Interp(2020, 87.15, …, 2024, 80.75)`, `Malaysia Sabah ≈
+> **CORRECTED 2026-07-04.** The figures in this paragraph are from the
+> Malaysia-scoped main export and describe **Malaysia's** nodal balancing. They
+> are **not** the whole story: the Indonesia export (merged 2026-07-04) shows
+> Indonesia is **also** sub-nationally balanced across 4 grids (`Indonesia
+> Jamali`, `Indonesia Sumatra`, `Indonesia Borneo`, `Indonesia East`) +
+> aggregate, via its own `_ID*` process nodes and `Transmission Nodes\Indonesia*`
+> leaves. The `20,832 rows / 248 branches` / `609 non-zero` counts predate the
+> merge and cover Malaysia only — the merged `Nodal Distribution`/`Transmission
+> Nodes` total is **23,597** rows. **Confirmed by user 2026-07-04: only
+> Indonesia + Malaysia carry a nodal split; the other 8 ASEAN systems ARE single
+> copper-plate nodes.**
+
+**`Nodal Distribution`** (Malaysia-scoped export: `Percent`, 20,832 rows / 248
+branches) splits a process's generation across sub-national nodes. In the
+Malaysia export, 20,223 of 20,832 rows are `0`; every one of the 609 non-zero
+rows sits in the Malaysia region (Peninsular 322, Sabah 140, aggregate Malaysia
+84, Sarawak 63), splitting output across its three non-synchronous grids:
+`Malaysia Peninsular ≈ Interp(2020, 87.15, …, 2024, 80.75)`, `Malaysia Sabah ≈
 Interp(2020, 12.85, …, 2024, 19.25)` (complementary), with Sarawak and the
-aggregate carrying the remainder / `100`. No other country carries a nodal
-split — the other nine ASEAN systems are single copper-plate nodes.
+aggregate carrying the remainder / `100`. **Indonesia carries the analogous
+split across its 4 grids** (surfaced only by the dedicated Indonesia export).
 
 ##### Storage fleet
 
@@ -1830,17 +1916,24 @@ Leste with no `Key\Transmission\Nodes\Timor Leste` at all (consistent with TL
 disabled from calc). Regional variation is concentrated where physics demands
 it and template-uniform elsewhere:
 
-- **Sub-national nodal decomposition — Malaysia only.** 248 `Transmission
-  Nodes` sub-branches, all naming Malaysia's three non-synchronous grids
-  (Peninsular/Sabah/Sarawak) + an aggregate; 97% of `Nodal Distribution` rows
-  are 0, every non-zero row in Malaysia. The nine other ASEAN systems are
-  single copper-plate nodes.
-- **`_MYxx` / `_IDxx` process variants.** The decomposed technology families
-  are materialised as Malaysia `_MYPE/_MYSB/_MYSR` node variants (no base
-  branch); Indonesia's `_IDxx` variants (e.g. Geothermal Flash_IDJW) are
-  region-scoped and referenced but absent from the exported branch view (§1,
-  §3). CLAUDE.md §A.12's IDJW/IDSA/IDKA/IDEast and MYPE/MYSB/MYSR node sets are
-  the ground truth for these.
+- **Sub-national nodal decomposition — Malaysia (3) AND Indonesia (4).**
+  Malaysia: 248 `Transmission Nodes` sub-branches naming its three
+  non-synchronous grids (Peninsular/Sabah/Sarawak) + aggregate. Indonesia
+  (merged 2026-07-04): its own `Transmission Nodes\{Indonesia, Indonesia
+  Jamali, Indonesia Sumatra, Indonesia Borneo, Indonesia East}` across its
+  `_ID*` process nodes. **Confirmed by user 2026-07-04: only Indonesia + Malaysia
+  carry nodal decomposition; the other 8 ASEAN systems ARE single copper-plate
+  nodes.** (The Malaysia-scoped main export couldn't see other regions' variants,
+  so this was verified by the user rather than derived from the export.)
+- **`_MYxx` / `_IDxx` process variants — BOTH are real materialised branches.**
+  Malaysia `_MYPE/_MYSB/_MYSR` (33 nodes, 11 families) came from the main
+  export; Indonesia `_IDJW/_IDSA/_IDKA/_IDEast` (51 nodes, 13 families) came
+  from `LEAP Input Transformation Indonesia.xlsx` and are now merged into the
+  canon tree. Neither has an un-suffixed base branch for its decomposed
+  families. (Earlier text calling Indonesia's `_IDxx` "referenced but absent
+  from the exported branch view" was wrong — a region-scoped-export artefact,
+  now fixed.) CLAUDE.md §A.12's `IDJW/IDSA/IDKA/IDEast` + `MYPE/MYSB/MYSR` node
+  sets are correct and now backed by canon.
 - **Per-country physical layers:** PRM trajectories (national capacity plans —
   RUPTL, PEP, EMO, PDP, AEO6), Peak Load Ratios (from `<Country>_Hourly`
   shapes; Myanmar + Base Template + Timor Leste fall back to flat 100), ETD loss
@@ -1888,19 +1981,26 @@ Transformation is driven almost entirely from `Key\`, with a few local knobs:
 
 **Structural / region-scoping**
 
-1. **Sub-national decomposition is exported as `_MYxx` only.** The decomposed
-   families (Solar PV, Wind Onshore, Coal Subcritical, Gas Combined Cycle,
-   Large Hydro, Nuclear LWR/SFR/SMR, Diesel, Biomass Other, Unmet Load)
-   materialise **only** as Malaysia `_MYPE/_MYSB/_MYSR` node variants — no base
-   branch. Indonesia's `_IDxx` variants are referenced (Resources geothermal
-   back-edge) but absent from this export view — region-scoped branch-visibility
-   (§11.1). The 61-node Centralized roster is the exported-view count, not a
-   globally-uniform per-region roster.
-2. **Nodal decomposition is Malaysia-alone** (248 Transmission Nodes, 97%
-   zero); the Key node set has only 10 country nodes (no Peninsular/Sabah/
-   Sarawak node) yet Lines carry finer corridor names (P.Malaysia_Sumatra,
-   Sarawak_Kalimantan) whose endpoints both resolve to the single Malaysia node
-   — line geography is finer than the modelled node set.
+1. **Sub-national decomposition — `_MYxx` (Malaysia) AND `_IDxx` (Indonesia),
+   surfaced by SEPARATE region-scoped exports.** Malaysia decomposes 11 families
+   into `_MYPE/_MYSB/_MYSR` (33 nodes); Indonesia decomposes 13 families into
+   `_IDJW/_IDSA/_IDKA/_IDEast` (51 nodes). Neither has a base branch for its
+   decomposed families. **The main `LEAP Input Transformation.xlsx` export was
+   region-scoped and contained ONLY Malaysia's variants** — Indonesia's were
+   added by merging `LEAP Input Transformation Indonesia.xlsx` (2026-07-04).
+   Merged Centralized roster = **115 process nodes** (61 + 51 `_ID*` + 3 base
+   Nuclear the Indonesia export surfaced). **Confirmed by user 2026-07-04: only
+   Indonesia + Malaysia are node-decomposed; the other 8 ASEAN regions are
+   single copper-plate nodes.** **Methodology lesson (still applies to future
+   areas):** to capture a region's node decomposition you must export from that
+   region's context — a single export can't prove absence.
+2. **Nodal decomposition is Malaysia + Indonesia** (Malaysia: 248 Transmission
+   Nodes, 97% zero in the Malaysia export; Indonesia: its own `Transmission
+   Nodes\Indonesia*` set across 4 grids). The `Key\Transmission` node set has
+   10 country nodes (no sub-national node) yet Lines carry finer corridor names
+   (P.Malaysia_Sumatra, Sarawak_Kalimantan) — line geography is finer than the
+   Key-tree node set, but the generation tree IS sub-nationally decomposed for
+   Malaysia and Indonesia.
 3. **Timor Leste + Base Template are entirely unwired** (Node=0 across all 61
    processes); no `Key\Transmission\Nodes\Timor Leste` at all.
 4. **Distributed rooftop solar bypasses transmission** — no `Node`, no

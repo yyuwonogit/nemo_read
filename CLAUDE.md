@@ -306,6 +306,7 @@ How to apply:
       `tests/test_public_api_completeness.py` — §14 __all__ completeness
       `tests/test_claude_md_rules_enforced.py` — §10.2 version sync,
                                                 §A.11 Unlimited-on-LB
+      `tests/test_region_lock.py`            — §A.21 node region-lock
   - **When adding a NEW rule** to this §A list that's mechanically
     enforceable, either extend an existing tripwire file or add a
     new one. Don't merge the rule prose without the test.
@@ -529,6 +530,16 @@ through it**; do not invent a parallel path.
   framework as of 2026-05-17. **A new domain that writes a
   hand-rolled injector instead of subclassing — or that adds a
   `Variable.Expression =` write anywhere in `mailbox/` — fails CI.**
+  Sole exception class (2026-07-05): a **portable chokepoint copy** — a
+  script whose documented contract is "runs with no `nemo_read` import"
+  (handed to a team without the repo, e.g.
+  `inject/residential/20260625/inject_fridge_leap.py`) may carry ONE
+  inline copy of the chokepoint. It must be listed in
+  `TestNoDirectExpressionSetSites.PORTABLE_CHOKEPOINT_COPIES`, and a
+  companion AST test pins its shape (exactly one `.Expression =` site,
+  inside `safe_set_expression`, guarded by `normalize_interp` +
+  `assert_interp_canonical`) — any drift fails CI. Don't add entries
+  casually; subclassing the framework remains the default.
 
   **Layer 3 — Pre-flight CSV scan.** Every injector calls
   `validate_canonical_csv_expressions(csv_path)` at startup and
@@ -678,6 +689,64 @@ See also: `memory/reference_blind_inject_standard.md` for the full
 2026-05-20 transport burn record (KA no-op discovery sequence, decimal
 regional flip, scenario-filter validation, Remainder(100) data fix).
 
+**A.21 — Sub-national process-node variants are REGION-LOCKED. A `_MY*`
+node exists ONLY in Malaysia; a `_ID*` node ONLY in Indonesia. Any
+value authored for one in any other AMS is a data error — remove it
+and note the mistake.** Canon (user directive 2026-07-05): *"nodes
+should only stays in its country ie no MY* in any other AMS similarly
+to no ID* in any other. make that canon and if any inject file comes
+with a value on those wrongs then you remove it and make notes of that
+mistake."*
+
+Why it's an error, not just redundant: the power tree is sub-nationally
+decomposed for **only** Malaysia (3 nodes: `_MYPE/_MYSB/_MYSR`) and
+Indonesia (4 nodes: `_IDJW/_IDSA/_IDKA/_IDEast`) — confirmed 2026-07-04,
+the other 8 ASEAN are single copper-plate nodes (§2.6, §11.1). A
+`_MY*` branch is `Node=0` (unwired from the grid) in every region but
+Malaysia (anatomy §1.1), so a value on `Solar PV_MYPE` in Vietnam is
+inert at best and misleading noise at worst. LEAP's inheritance tree
+replicates the `_MY*` branches into every region's view, so raw exports
+and team CSVs routinely carry these phantom rows — they must be
+stripped before inject.
+
+How to apply — mechanically enforced (§A.17):
+  - **Checker:** `nemo_read.find_region_lock_violations(csv_path)`
+    returns `(row, node, region, home_region)` for every violating row;
+    handles all THREE CSV shapes (`ams`/`branch` long, `region`/`node`
+    wide, and export-style `region`/`branch_path` — incl. the BOM'd
+    `Branch Path` header raw team drops use). The third shape was added
+    2026-07-05 after the structural-uniformity sweep found export-style
+    files were skipped wholesale (nc=None → `[]`): 14,608 wrong-region
+    rows across 5 files passed the tripwire unseen. Rows whose region is
+    the dedup bucket `ALL (N regions)` are skipped (uniform inheritance
+    default, not a per-country authoring). Lock map:
+    `nemo_read.NODE_REGION_LOCK`.
+  - **Pre-flight (sealed):** `CanonicalInjector._preflight_csv` calls it
+    — a canonical inject CSV with any violation ABORTS the run. Keep
+    canonicals clean; don't push wrong-region variant rows. Incoming
+    team drops in export-style shape are now caught here too.
+  - **Tripwire:** [tests/test_region_lock.py](tests/test_region_lock.py)
+    scans every `inject/**/*.csv` and fails CI on any violation. Base
+    (un-suffixed) nodes are exempt — they legitimately live in all
+    regions; only `_MY*`/`_ID*` variants are locked. Documented
+    repo-scan exemptions (in the test file): `current_expressions_*`
+    reference dumps (faithful model-state snapshots — wrong-region rows
+    there document MODEL misfiling, tracked in CANON_ANOMALY_AUDIT, not
+    fixable repo-side) and the four raw 20260507 power drops (received
+    archive; the `*_canonical.csv` siblings are scanned and clean).
+    Explicit exemptions are self-cleaning: a companion test fails the
+    moment an exempted file goes clean, forcing exemption retirement.
+  - **On an incoming team drop with violations:** remove the wrong-AMS
+    variant rows, back up the original as `*.bak_pre_regionlock`, and
+    write a `REGION_LOCK_REMOVED_NOTES.md` beside it listing what was
+    dropped and why. First application 2026-07-05: the power team's
+    `inject/power/20260507/from PowerTeam/fix_exogenous_capacity.csv`
+    had 330 such rows (all 33 `_MY*` nodes replicated across the 10
+    non-Malaysia AMS) — removed, notes written.
+
+See also: `memory/reference_node_region_lock.md`; canon anatomy §1.1
+(region-exclusivity); [[reference_region_scoped_export]].
+
 ---
 
 ## §0. Starting cold? Read in this order
@@ -791,7 +860,7 @@ going to use."*)
 | `TotalAnnualMaxCapacity` | `Maximum Capacity` |
 | `InputActivityRatio` | `Process Efficiency` (input side) |
 | `OutputActivityRatio` | `Process Efficiency` (output side) |
-| `EmissionActivityRatio` | `<Pollutant> (process)` on `…\Processes\<Tech>\Auxiliary Fuels\<F>\<Pollutant>` (CO2, CH4, N2O, NOx, SO2, NH3, NMVOC, "CO2 biogenic") |
+| `EmissionActivityRatio` | **`Avg Environmental Loading`** on the pollutant leaf `…\Processes\<Tech>\<FuelBucket>\<Fuel>\<Pollutant>` (species: Carbon Dioxide, Carbon Dioxide Biogenic, Carbon Monoxide, Methane, Nitrous Oxide, Nitrogen Oxides, Sulfur Dioxide, Non Methane Volatile Organic Compounds, Ammonia). **`<FuelBucket>` is region-/sector-specific** — canon-verified 2026-07-05: **power (Centralized Electricity Generation) uses `Feedstock Fuels` and has NO `Auxiliary Fuels`** (`…\Processes\Coal Supercritical\Feedstock Fuels\Coal Bituminous\Carbon Dioxide:Avg Environmental Loading[Tonne/TJ]`); other transformation processes (e.g. bioenergy `FAME Biodiesel`) use `Auxiliary Fuels`. The earlier `<Pollutant> (process)` / Auxiliary-Fuels-only mapping was wrong for power — the variable is `Avg Environmental Loading` and the bucket is `Feedstock Fuels`. |
 | `ReserveMarginTagTechnology` | `Capacity Credit` |
 | (LEAP-internal building blocks that don't directly map but inform `Exogenous Capacity`): | `Existing Capacity`, `Capacity Additions`, `Capacity Retirement`, `Historical Production` |
 | (LEAP result variables — never read `.Expression` on these; §11.2): | `Energy Generation`, `Power Generation`, `Capacity Added`, `Curtailed Energy Production`, `Pollutant Loadings`, `Costs of Production`, `Inputs` |
@@ -877,7 +946,12 @@ The `LEAP structure/` folder at the repo root — the seven
 `aeo9_v0.67_w_results` "Export Expressions" workbooks (four `Demand\`
 sectors + `Key\` assumption tree + `Resources\` supply tree +
 `Transformation\` conversion tree [power generation, refining, biofuel/
-clean-fuel production, blending — exported 2026-07-04]),
+clean-fuel production, blending — exported 2026-07-04; **the power tree is
+region-merged**: the main export was Malaysia-scoped, so Indonesia's 4-node
+decomposition was merged in from `LEAP Input Transformation Indonesia.xlsx`
+2026-07-04 — user confirmed 2026-07-04 that **only Indonesia (4) + Malaysia (3)
+are node-decomposed; the other 8 ASEAN regions are single copper-plate nodes**;
+see §11.1 region-scoped-export rule + [[reference_region_scoped_export]]]),
 [LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md),
 and the full branch trees in [trees/](LEAP%20structure/trees/) — is the
 CANONICAL description of the LEAP demand, Key, Resources, and
@@ -1689,6 +1763,48 @@ results-harvest probe (§7):
   in `LeapTreeCache` is for `Branches.Count` micro-fluctuation; it
   does not catch the region-scope-dependent visibility delta. Don't
   treat cache count as a stable invariant of the area.
+- **LEAP "Export Expressions" (and any tree walk) is REGION-SCOPED for
+  region-specific branches. A single export does NOT contain every
+  region's sub-national node variants.** Burned 2026-07-04: the canon
+  `LEAP Input Transformation.xlsx` (§2.6) was exported in a Malaysia/
+  Base-Template context and materialised **only** Malaysia's
+  `Solar PV_MYPE`/`_MYSB`/`_MYSR` process-node variants (+ Malaysia
+  transmission nodes). Indonesia's `Solar PV_IDJW`/`_IDSA`/`_IDKA`/
+  `_IDEast` variants (4-node decomposition, 51 process nodes, 13
+  families) were **absent from that export** — they live in Indonesia's
+  region tree and only appeared when the user re-exported
+  `LEAP Input Transformation Indonesia.xlsx` from the Indonesia context.
+  Consequences and rules:
+    1. **A region-specific branch's ABSENCE from an export is NOT proof
+       it doesn't exist** — it may just be outside the export's region
+       scope. Don't write "region X has no node decomposition" from a
+       single export; that's the §A.14 cite-or-hedge trap. (I hit it:
+       claimed "Indonesia = 0 nodes / not materialised" from the
+       Malaysia-scoped export; the Indonesia export proved 4 nodes.)
+    2. **A string in `sharedStrings` / an expression is NOT a branch.**
+       `Solar PV_IDJW` appeared in 37 *expression cells* of the main
+       export while being 0 *branch_paths* — I misread that as "IDJW is
+       a materialised node" (wrong — it was only a reference there). To
+       decide "is X a branch", check column E (`branch_path`), never
+       just a substring hit.
+    3. **To canon a region's sub-national structure, export from THAT
+       region's context** and merge (identical branch_path convention
+       across exports → clean union). Reproducible tool:
+       [LEAP structure/tools/rebuild_transformation_tree.py](LEAP%20structure/tools/rebuild_transformation_tree.py)
+       — drop `LEAP Input Transformation <Region>.xlsx` next to the main
+       export and re-run; it auto-discovers and unions all region
+       supplements. **Confirmed by user 2026-07-04: only Malaysia (3
+       nodes) + Indonesia (4 nodes) are sub-nationally decomposed; the
+       other 8 ASEAN regions ARE single copper-plate nodes.** (The
+       methodology caveat still holds for any FUTURE tree/version — a
+       single export can't PROVE absence, so re-confirm per region on a
+       new area rather than assuming this stays true.)
+    4. The committed `trees/*.txt` **render leaf names only** (container
+       branches `Processes`/`Feedstock Fuels`/… never print), so
+       `grep "Processes" tree.txt` returning 0 does NOT mean the path
+       lacks that level — it's in the underlying `branch_path`. Verify
+       structure against the source xlsx col E, not the rendered tree.
+  See also: `memory/reference_region_scoped_export.md`.
 - **Spontaneous `ActiveArea=''` between Python invocations.** Even with
   `--no-scenario-switch` and only the target area open, COM state can
   spontaneously go bad between back-to-back inject calls — `ActiveArea`

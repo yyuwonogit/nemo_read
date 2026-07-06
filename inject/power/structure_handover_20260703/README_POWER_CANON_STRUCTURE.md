@@ -89,6 +89,41 @@ free-build finding in the companion `ANOMALY_AUDIT_POWER_20260704.md`
 (§"Transformation anomalies", item T1). Read that audit before treating
 any `_MY*` plant-level number as authored.
 
+> **UPDATE 2026-07-04 — Indonesia detail merged; slice re-issued.** The
+> original transformation export was **Malaysia-scoped** and did NOT contain
+> Indonesia's sub-national nodes. `transformation_slice_tree.txt` has been
+> **regenerated** to include them (now 2,182 branches, was 1,100), and a new
+> **`current_expressions_transformation_indonesia_nodes_4scenarios.csv`**
+> (9,039 rows) carries the Indonesia `_ID*` expressions. Structure now:
+> **Malaysia 3 nodes** (`_MYPE/_MYSB/_MYSR`, 33 process nodes) **+ Indonesia
+> 4 nodes** (`_IDJW` Jawa-Madura-Bali / `_IDSA` Sumatra / `_IDKA` Kalimantan /
+> `_IDEast` Eastern, 51 process nodes across 13 families) → merged Centralized
+> roster **115 process nodes**. **Confirmed: only Indonesia + Malaysia are
+> node-decomposed; the other 8 ASEAN are single copper-plate nodes.**
+>
+> **New anomaly findings on the Indonesia nodes** (full detail in canon
+> `CANON_ANOMALY_AUDIT_20260704.md` Part D — read before authoring):
+>   - 🔴 **Capital Cost = 0** on Geothermal Flash / Large Hydro / Small Hydro
+>     `_ID*` (12 nodes) → free-build; author real regional capex.
+>   - 🟡 **`Maximum Capacity Addition = Unlimited`** on Large/Small Hydro `_ID*`
+>     (8 nodes, RAS) → §A.11 1e12; replace with a finite lead-time ramp.
+>   - Cleared (do NOT re-flag): `Maximum Production=Unlimited` (benign idiom),
+>     zero VOM on renewables (correct), Small Hydro CC=100 (firm-consistent),
+>     must-run trap ABSENT, Unmet Load correctly priced.
+>
+> **New authoring guides + data (2026-07-05):**
+>   - **`POWER_ENV_LOADING_GUIDE.md`** + **`power_env_loading_4scenarios.csv`**
+>     (4,417 rows) — pollutant emission factors: `Processes\<Tech>\Feedstock
+>     Fuels\<Fuel>\<Pollutant>:Avg Environmental Loading`, 9 species, scenario-
+>     invariant, 54 combustion nodes. (Power has NO Auxiliary Fuels.)
+>   - **`POWER_FEEDSTOCK_FUEL_GUIDE.md`** + **`power_feedstock_fuel_4scenarios.csv`**
+>     (2,427 rows) — feedstock `Feedstock Fuel Share` (co-firing), `Fuel Cost`
+>     (usually a Resources-tree reference), `Fuel Source`.
+>   - Both datasets are **region-lock clean** (CLAUDE.md §A.21) and cover
+>     CA/BAS/ATS/RAS with the full inject `branch` path.
+>   - **`CORRECTION_TO_POWER_TEAM_20260705.md`** — the region-lock cleanup +
+>     my earlier mistakes (read this).
+
 **The Key slice (129 branches)** — the assumption tree your sector's
 levers live in:
 
@@ -286,6 +321,32 @@ Review requests, not blame — most of these predate everyone involved:
    note the `Unmet Load_*` processes are visible in
    `transformation_slice_tree.txt` under Centralized Electricity
    Generation.
+7. **This slice was exported from the Malaysia + Indonesia contexts —
+   the other 8 ASEAN countries' generation nodes are not materialised
+   in it, and we need your input to close that.** LEAP's "Export
+   Expressions" is region-scoped: a walk from one country's context
+   materialises only that country's process nodes. This slice unions
+   Malaysia (3 sub-national nodes) and Indonesia (4), so it holds every
+   `_MY*` / `_ID*` variant — but for **Brunei, Cambodia, Laos, Myanmar,
+   Philippines, Singapore, Thailand, Vietnam** the base generation set
+   (Solar PV, Wind Onshore, Large Hydro, Small Hydro, Gas Combined
+   Cycle, Diesel, Coal Subcritical, Biomass Other, and the Unmet Load
+   slack) does not appear as materialised branches here. **Absence from
+   this export is NOT proof they're absent in the model** — we simply
+   didn't walk those contexts. What we need back: for each of the 8
+   countries, confirm it carries the same generation fleet (or tell us
+   where it differs), OR re-export the Transformation tree from that
+   country's context so we can union it in. This is the single biggest
+   open item before your slice is complete for all 10 ASEAN.
+8. **Author against base node names, not `_MY*` / `_ID*` outside their
+   home country.** The reference dump (§6b) replicates Malaysia's `_MY*`
+   and Indonesia's `_ID*` node names into every country's view (LEAP
+   inheritance), so you will see e.g. `Solar PV_MYPE` listed under
+   Vietnam. Those are not authoring targets: only Malaysia has `_MY*`
+   nodes and only Indonesia has `_ID*` nodes; every other country uses
+   the base node (`Solar PV`, `Coal Subcritical`, …). Our inject tooling
+   now rejects any CSV that files a `_MY*` / `_ID*` node into another
+   country, so please send corrections against the base names.
 
 ## 8. What to send back, and in what shape
 
@@ -303,6 +364,10 @@ series), using the branch paths as they appear in
 4. **Lead times and multipliers** — country-specific values for any
    `ALL (12 regions)` template row you can improve.
 5. **Answers to the §7 questions**, referenced by branch path.
+6. **Per-country generation fleet** (§7.7) — for each of the 8
+   non-decomposed countries, the list of generation technologies it
+   operates, OR a Transformation re-export from that country's context
+   so we can union the missing nodes into the canon.
 
 Every row should carry a source/provenance column. Year ≤ 2024 is
 treated as historical (Current Accounts); projections should say which

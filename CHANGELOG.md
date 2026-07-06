@@ -1,5 +1,51 @@
 # Changelog
 
+## [Unreleased] — Indonesia node merge + region-lock canon (2026-07-05)
+
+- **Indonesia sub-national detail merged into the transformation canon.** The
+  main export was Malaysia-region-scoped and missed Indonesia's 4-node
+  decomposition; merged `LEAP Input Transformation Indonesia.xlsx` (51 `_ID*`
+  process nodes across 13 families + 3 base Nuclear) → canon tree 1,593→2,675
+  branches, Centralized roster 61→115 process nodes. Anatomy §1/§1.1/§Nodal/§7
+  corrected (the earlier "Malaysia-only / IDJW not materialised" claim was
+  wrong — a region-scoped-export artefact). New tool
+  `LEAP structure/tools/rebuild_transformation_tree.py` unions any
+  `LEAP Input Transformation <Region>.xlsx` supplements.
+- **Indonesia node anomaly audit** (adversarially verified) → `CANON_ANOMALY_AUDIT`
+  Part D: 🔴 Capital Cost=0 on Geothermal Flash / Large Hydro / Small Hydro
+  `_ID*` (free-build), 🟡 Max Capacity Addition=Unlimited on hydro; Max
+  Production=Unlimited / zero-VOM / must-run all cleared.
+- **Added — region-lock enforcement (CLAUDE.md §A.21).** `_MY*` nodes belong
+  only to Malaysia, `_ID*` only to Indonesia; a value elsewhere is a data
+  error. New `nemo_read.find_region_lock_violations` + `NODE_REGION_LOCK`,
+  wired into `CanonicalInjector._preflight_csv` (aborts on violation) and
+  `tests/test_region_lock.py` (scans all inject CSVs). Cleaned the power team's
+  `fix_exogenous_capacity.csv` (330 `_MY*`-in-wrong-AMS rows removed, notes
+  written) and home-region-filtered the process dataset.
+- **Fixed — `variable_classifier` public API** (`classify`, `classify_many`,
+  `filter_input_names` were missing from `__all__`; pre-existing §14 drift).
+- **Fixed — region-lock checker blind to export-style CSVs (§A.21).** The
+  structural-uniformity sweep found `find_region_lock_violations` only knew
+  `node`/`branch` columns: files with `branch_path`/`Branch Path` headers
+  (86 of 137 inject CSVs, incl. all team handover slices and raw drops) were
+  skipped wholesale — 14,608 wrong-region rows across 5 files passed the CI
+  tripwire and the inject pre-flight unseen. Now scans all three CSV shapes,
+  BOM-tolerant, with `ALL (N regions)` dedup rows documented-skipped. Team
+  drops landing in export shape are caught at `_preflight_csv` before any
+  COM write. Repo scan: 132/137 clean; the 5 known-dirty files carry
+  documented, self-cleaning exemptions in `tests/test_region_lock.py`
+  (reference dumps document MODEL misfiling — tracked in the audit; raw
+  drops' canonical siblings are clean). +3 regression tests.
+- **Fixed — §A.15 chokepoint tripwire violation in the portable fridge
+  injector.** `inject/residential/20260625/inject_fridge_leap.py` (documented
+  contract: runs with no `nemo_read` import) carried an inline chokepoint
+  copy that failed `TestNoDirectExpressionSetSites`. Resolved without
+  breaking portability: the file is a listed **portable chokepoint copy**
+  whose shape a new AST test pins (exactly one `.Expression =` site, inside
+  `safe_set_expression`, guarded by `normalize_interp` +
+  `assert_interp_canonical`) — drift fails CI. CLAUDE.md §A.15 documents the
+  exception class. Full suite: 367 passed.
+
 ## [Unreleased] — Transformation canon (7th export) + all-tree integration (2026-07-04)
 
 - **`LEAP Input Transformation.xlsx` digested and folded into canon** — the

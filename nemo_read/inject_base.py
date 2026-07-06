@@ -82,6 +82,67 @@ from nemo_read._leap_com import (
 
 _PLACEHOLDER_NOTE_PREFIX = "PLACEHOLDER (Stage 5"
 
+# Sub-national process-node variants are REGION-LOCKED (CLAUDE.md §A.21, canon
+# anatomy §1.1): a `_MY*` node exists only in Malaysia, a `_ID*` node only in
+# Indonesia. Authoring a value for one in any other AMS is a data error — the
+# branch is inert there (Node=0 everywhere but its home region).
+NODE_REGION_LOCK = {
+    re.compile(r"_MY(PE|SB|SR)$"): "Malaysia",
+    re.compile(r"_ID(JW|SA|KA|East)$"): "Indonesia",
+}
+_REGION_COLS = ("region", "ams", "Region", "AMS")
+# Third shape added 2026-07-05: export-style dumps and raw team drops carry the
+# full path in `branch_path` / `Branch Path`. Before that, such files were
+# silently SKIPPED (nc=None -> []) — 18,943 wrong-region rows across 5 files
+# passed the CI tripwire unseen (structural-uniformity sweep finding).
+_NODE_COLS = ("node", "branch", "branch_path", "Node", "Branch", "Branch Path")
+# Region-deduplicated reference dumps collapse region-uniform rows to
+# "ALL (12 regions)". Such a row is the un-overridden inheritance default, not
+# a per-country authoring — the misfiled-data signal is SPECIFIC wrong-region
+# rows. ALL-rows are therefore skipped, not flagged.
+_ALL_REGIONS_RE = re.compile(r"^ALL\s*\(")
+
+
+def find_region_lock_violations(csv_path) -> list[tuple[int, str, str, str]]:
+    """Rows authoring a region-locked node-variant in the wrong AMS.
+
+    Handles all three inject/handover CSV shapes: long (`ams`/`branch`), wide
+    (`region`/`node`), and export-style (`region`/`branch_path`, incl. the
+    `Branch Path` header raw team drops use; BOM-tolerant). Scans EVERY
+    component of the branch/node path — a `_MY*`/`_ID*` variant is
+    region-locked whether it is the leaf (process-node row) or an ancestor
+    (e.g. `…\\Processes\\Coal Subcritical_MYPE\\Feedstock Fuels\\Coal
+    Bituminous\\Carbon Dioxide`, a sub-branch row). Rows whose region is the
+    dedup bucket `ALL (N regions)` are skipped (uniform inheritance default,
+    not a per-country authoring). Returns (row_number, matched_variant,
+    region, home_region) for every violating row; empty list means the CSV is
+    region-lock clean.
+    """
+    bs = chr(92)
+    # utf-8-sig: raw team drops ship with a UTF-8 BOM that would otherwise
+    # mangle the first fieldname ("\\ufeffBranch Path") and skip the file.
+    with open(csv_path, encoding="utf-8-sig") as fh:
+        rdr = csv.DictReader(fh)
+        hdr = rdr.fieldnames or []
+        rc = next((c for c in _REGION_COLS if c in hdr), None)
+        nc = next((c for c in _NODE_COLS if c in hdr), None)
+        if not rc or not nc:
+            return []
+        out: list[tuple[int, str, str, str]] = []
+        for i, row in enumerate(rdr, start=2):  # header is row 1
+            region = (row.get(rc) or "").strip()
+            if _ALL_REGIONS_RE.match(region):
+                continue
+            for comp in (row.get(nc) or "").split(bs):
+                comp = comp.strip()
+                hit = next((home for pat, home in NODE_REGION_LOCK.items()
+                            if pat.search(comp)), None)
+                if hit is not None:
+                    if region != hit:
+                        out.append((i, comp, region, hit))
+                    break  # one variant component per path
+    return out
+
 
 class InjectorSealError(TypeError):
     """Raised at class definition when a subclass overrides a sealed method."""
@@ -165,6 +226,17 @@ class CanonicalInjector:
                 f"{len(violations)} row(s) contain Interp() with forbidden "
                 f"';' list-separator (CLAUDE.md §A.15). First: row "
                 f"{violations[0][0]}: {violations[0][1][:90]}..."
+            )
+
+        # §A.21 — region-locked node-variant in the wrong AMS
+        rl = find_region_lock_violations(csv_path)
+        if rl:
+            errors.append(
+                f"{len(rl)} row(s) author a region-locked node-variant in the "
+                f"wrong AMS (CLAUDE.md §A.21). First: row {rl[0][0]}: "
+                f"{rl[0][1]} in {rl[0][2]} (belongs only to {rl[0][3]}). "
+                f"Remove these rows from the canonical (see "
+                f"find_region_lock_violations)."
             )
 
         # Subclass-contributed validators
