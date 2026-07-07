@@ -2,6 +2,27 @@
 
 ## [Unreleased] — §A.23 base-branch authoring lock (2026-07-07, post-inject-failure)
 
+- **Shipped — `outbox/power_qa_answers_20260707.zip`** (answers to the power
+  team's 9 questions, all DB-verified). Key corrections: result energy unit
+  is PJ not GWh — the shipped unmet figures were 278x understated (IDEast
+  2060 = 658 TWh; outer-Indonesia unmet is a first-order problem); the
+  Biomass Gasification runaway is the Hydrogen-module twin branch (P14988,
+  400.6 GW) not the power branch (P2731, 7.1 GW); Stranded Cost is absent
+  from the NEMO export entirely; RAS must-run = MinimumUtilization (12,240
+  rows); VN Nuclear/GCC-CCS dead fleets = economics + dual H2+NG input
+  wiring, no missing rows; ghost Geothermal Flash_MYKA / Large Hydro_MYKA
+  branches confirmed (zero data). v2 results package (unit stamps, tech IDs,
+  module filter, explicit zeros) promised. Reconciliation round 2: Dispatch
+  Rule verified inert in RAS (MeritOrderDispatch lives in CA/BAS/ATS only,
+  no NEMO table — MU is the only RAS dispatch lever); the PH Wind Offshore
+  "rogue 2040 retirement" found as a −19,000 MW NEGATIVE ADDITION in the
+  v0.67 RAS Capacity Additions (corrupted double-expression cell) — already
+  purged by the sendback, solved DB confirms the clean 5.3→19.5 GW path;
+  xlsx tab-name swap confirmed (A1 titles correct: capacity=GW, outputs=
+  TWh, IDEast unmet 658.42 TWh = sqlite 2,370.3 PJ to the decimal); NEW —
+  xlsx unmet-CAPACITY axis: Unmet Load_IDJW = 287.6 GW in 2060 (Jamali is
+  a peak/reserve shortfall, not an energy one).
+
 - **Shipped — `outbox/power_results_ras_v069_20260707.zip`.** Full power-sector
   results of the SOLVED v0.69 RAS run for the power team: 5 result CSVs from
   `feas/NEMO_25 41.sqlite` (capacity/new-builds/generation/unmet/fixed-OM),

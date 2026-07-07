@@ -94,3 +94,27 @@ canonical as baseline, the LEAP-side xlsx result export, and
 `README_POWER_RESULTS_20260707.md` (findings: 5-node unmet load, biomass-
 gasification/H2 cost review ask, Max() reference-first authoring rule).
 Source dir: `inject/power/20260707/ship_results_20260707/`.
+
+## power_qa_answers_20260707.zip (2026-07-07)
+
+Answers to the power team's 9 advancing questions (`ANSWERS_POWER_TEAM_QA_
+20260707.md` + the two cleaning-notes attachments). Load-bearing corrections
+inside: result-CSV energy unit is PJ not GWh (Indonesia East 2060 unmet =
+2,370 PJ = 658 TWh — first-order node problem, not a footnote); the 400-GW
+Biomass Gasification runaway is the HYDROGEN-module branch (P14988), not the
+power branch; H2 Fuel Cell inherits 50%-eff/10-yr/falling-capex area
+defaults; Stranded Cost never reaches NEMO; must-run in RAS = Minimum
+Utilization (12,240 rows, cleanly reversible); VN dead fleets lack nothing —
+economics (Nuclear) + dual H2+NG input wiring (GCC-CCS); PH Wind Offshore
+ATS confirmed clean; ghost _MYKA branches confirmed (zero data, flagged for
+modeller deletion); v2 results package promised with IDs/unit-stamps/module
+filter.
+
+## power_results_ras_v069_20260707_r2.zip (2026-07-07, supersedes the non-r2)
+
+Same results package with the unit corrections from the QA round: energy
+columns stamped PJ (the original mislabeled unmet as GWh — 278x
+understatement), unmet CSV carries an explicit TWh column, fixed-OM stamped
+MUSD (verified: 38.3 GW x 51.14 MUSD/GW = 1,957), README finding 2
+corrected (658/388/362 TWh outer-Indonesia + Jamali 287.6 GW peak-slack
+axis, xlsx tab-swap warning). Send r2; the original stays for the record.

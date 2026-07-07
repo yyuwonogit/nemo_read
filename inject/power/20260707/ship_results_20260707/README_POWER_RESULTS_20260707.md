@@ -52,12 +52,17 @@ should converge in your next revision.
 
 1. **Your data behaved.** Fleet trajectories carried into results 1:1; the
    deactivation caps (cap=0 techs) held — the optimizer built nothing there.
-2. **Unmet load fires at five nodes** — Indonesia East (2,370 GWh by 2060),
-   Indonesia Sumatra (1,398), Indonesia Kalimantan (1,305), and Malaysia
-   Sarawak persistently from 2030 (77 → 249 GWh). Jamali is fine. This means
-   node-level supply or transmission is short there. This is the top
+2. **Unmet load fires at five nodes** — CORRECTED UNITS (r2): the values
+   are PJ, not GWh. Indonesia East **658 TWh** unmet by 2060, Indonesia
+   Sumatra **388 TWh**, Indonesia Kalimantan **362 TWh**, Malaysia Sarawak
+   persistently from 2030 (21 → 69 TWh). And on the CAPACITY axis, Jamali
+   is the worst: `Unmet Load_IDJW` = 287.6 GW of slack capacity in 2060
+   (peak/reserve shortfall despite small unmet energy). This is the top
    content item for your next revision: node capacity, additions, or
-   transmission limits for those five nodes.
+   transmission limits — energy for the outer islands, peak for Jamali.
+   (All energy columns in this package are PJ; the unmet CSV now carries an
+   explicit TWh column. The xlsx tab names are swapped — trust the A1
+   in-sheet titles.)
 3. **Biomass Gasification and H2 Fuel Cell look like runaway backstops** —
    the optimizer builds 346 GW of Biomass Gasification in Indonesia alone
    (416 GW ASEAN-wide by 2060) and 188 GW of H2 Fuel Cell in Indonesia.

@@ -1,4 +1,4 @@
-region,technology,fuel,year,production
+region,technology,fuel,year,production_PJ
 Brunei,Coal IGCC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.72
 Brunei,Coal IGCC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.01
 Brunei,Coal IGCC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.64
