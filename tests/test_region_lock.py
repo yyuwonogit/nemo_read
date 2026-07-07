@@ -44,11 +44,29 @@ _EXEMPT_RAW_DROPS = {
     "inject/power/20260507/ats_exo_formula.csv",
     "inject/power/20260507/bas_all_zero.csv",
 }
+#
+# (c) §A.23 base-branch-lock exemptions (2026-07-07). Reference datasets in
+#     structure_handover_20260703/ are faithful model-state slices — their
+#     Indonesia/Malaysia rows on base branches document the LIVE MODEL's
+#     inheritance phantoms (same class as (a); tracked in
+#     CANON_ANOMALY_AUDIT), so they cannot be "cleaned" repo-side. The
+#     bioenergy placeholder is a v0.42-era diagnostic archive: base-branch
+#     authoring for Indonesia/Malaysia was the live structure back then
+#     (pre node-decomposition visibility split) — historical record, kept
+#     verbatim.
+_EXEMPT_BASE_BRANCH = {
+    "inject/power/structure_handover_20260703/processes_full_dataset_4scenarios.csv",
+    "inject/power/structure_handover_20260703/power_env_loading_4scenarios.csv",
+    "inject/power/structure_handover_20260703/power_feedstock_fuel_4scenarios.csv",
+    "inject/bioenergy/placeholder_p4_v042_TL_costs_plus_varRE_MU_20260511.csv",
+}
 
 
 def _is_exempt(csv_path: Path) -> bool:
     rel = csv_path.relative_to(REPO).as_posix()
-    return csv_path.name.startswith(_EXEMPT_PREFIX) or rel in _EXEMPT_RAW_DROPS
+    return (csv_path.name.startswith(_EXEMPT_PREFIX)
+            or rel in _EXEMPT_RAW_DROPS
+            or rel in _EXEMPT_BASE_BRANCH)
 
 
 def _write(tmp_path, header, rows):
@@ -172,16 +190,94 @@ def test_committed_inject_csvs_are_region_lock_clean(csv_path):
     )
 
 
-@pytest.mark.parametrize("rel", sorted(_EXEMPT_RAW_DROPS))
+@pytest.mark.parametrize("rel", sorted(_EXEMPT_RAW_DROPS | _EXEMPT_BASE_BRANCH))
 def test_exempt_raw_drops_still_dirty_else_retire_exemption(rel):
     """Self-cleaning ledger: every explicit exemption must (a) still exist and
     (b) still contain violations. The moment a file is cleaned or removed,
     this fails — retire its exemption instead of letting it rot."""
     p = REPO / rel
-    assert p.exists(), f"exempt file gone — remove {rel} from _EXEMPT_RAW_DROPS"
+    assert p.exists(), f"exempt file gone — remove {rel} from its exemption set"
     assert find_region_lock_violations(p), (
-        f"{rel} is now region-lock clean — remove it from _EXEMPT_RAW_DROPS"
+        f"{rel} is now region-lock clean — remove it from its exemption set"
     )
+
+
+# --- CLAUDE.md §A.23 — base-branch authoring lock ----------------------------
+#
+# Structure truth is OURS (canon, from the raw LEAP extracts); teams hold
+# authority over CONTENT only. For a node-decomposed family, the un-suffixed
+# base branch is NOT an authoring slot in the decomposed home region — the
+# home fleet lives exclusively on the `_ID*`/`_MY*` nodes, and LEAP refuses
+# a base write under that region's view (live-confirmed 2026-07-07: "no
+# branch Biogas / Geothermal Flash in Indonesia", aeo9_v0.69 sendback).
+
+
+def test_base_branch_in_decomposed_home_region_is_flagged(tmp_path):
+    bs = chr(92)
+    ceg = f"Transformation{bs}Centralized Electricity Generation{bs}Processes"
+    p = _write(tmp_path, ["ams", "branch", "variable", "expression"], [
+        ["Indonesia", f"{ceg}{bs}Biogas", "Existing Capacity", "0"],          # violation
+        ["Indonesia", f"{ceg}{bs}Geothermal Flash", "Exogenous Capacity", "1"],  # violation
+        ["Brunei", f"{ceg}{bs}Biogas", "Existing Capacity", "0"],             # ok — copper-plate
+        ["Indonesia", f"{ceg}{bs}Biogas_IDJW", "Existing Capacity", "0"],     # ok — node slot
+        ["Indonesia", f"{ceg}{bs}Solar CSP", "Existing Capacity", "0"],       # ok — not decomposed
+        ["Malaysia", f"{ceg}{bs}Gas Turbine", "Existing Capacity", "0"],      # ok — MY keeps base GT
+        ["Malaysia", f"{ceg}{bs}Solar PV", "Existing Capacity", "0"],         # violation
+    ])
+    v = find_region_lock_violations(p)
+    assert {(x[1], x[2]) for x in v} == {("Biogas", "Indonesia"),
+                                         ("Geothermal Flash", "Indonesia"),
+                                         ("Solar PV", "Malaysia")}
+    assert all("nodes" in x[3] for x in v)
+
+
+def test_base_branch_lock_is_anchored_to_cegen_processes(tmp_path):
+    """Fuel/demand branches sharing a locked family's name must NOT be
+    flagged — `Resources\\Secondary\\Diesel` is a fuel, not the process."""
+    bs = chr(92)
+    p = _write(tmp_path, ["ams", "branch", "variable", "expression"], [
+        ["Indonesia", f"Resources{bs}Secondary{bs}Diesel", "Import Cost", "9"],
+        ["Indonesia", f"Demand{bs}Household{bs}Biogas", "Final Energy Intensity", "1"],
+        ["Malaysia", f"Transformation{bs}Distributed Electricity Generation{bs}Processes{bs}Solar PV Rooftop", "Capital Cost", "1"],
+    ])
+    assert find_region_lock_violations(p) == []
+
+
+def test_base_branch_lock_wide_shape_bare_node_names(tmp_path):
+    """Wide team drops carry bare process names in `node` — Centralized
+    context implied; bare-name membership applies."""
+    p = _write(tmp_path, ["node", "region", "variable", "CA"], [
+        ["Biogas", "Indonesia", "Exogenous Capacity", "0"],   # violation
+        ["Biogas", "Vietnam", "Exogenous Capacity", "0"],     # ok
+        ["Gas Turbine", "Malaysia", "Exogenous Capacity", "0"],  # ok — MY keeps base GT
+        ["Large Hydro", "Malaysia", "Exogenous Capacity", "0"],  # violation
+    ])
+    v = find_region_lock_violations(p)
+    assert {(x[1], x[2]) for x in v} == {("Biogas", "Indonesia"),
+                                         ("Large Hydro", "Malaysia")}
+
+
+def test_node_scoped_sub_branch_repeating_family_name_is_ok(tmp_path):
+    """`Small Hydro_IDJW\\Feedstock Fuels\\Small Hydro` repeats the family
+    name INSIDE a node-scoped path — legal, must not be flagged."""
+    bs = chr(92)
+    ceg = f"Transformation{bs}Centralized Electricity Generation{bs}Processes"
+    p = _write(tmp_path, ["ams", "branch", "variable", "expression"], [
+        ["Indonesia", f"{ceg}{bs}Small Hydro_IDJW{bs}Feedstock Fuels{bs}Small Hydro", "Feedstock Fuel Share", "100"],
+    ])
+    assert find_region_lock_violations(p) == []
+
+
+def test_base_branch_lock_map_matches_raw_walk_derivation():
+    """The lock sets are derived from the v0.67 raw Export-Expressions walks:
+    decomposed-family base branches absent from the home region's own walk.
+    Malaysia keeps base Gas Turbine (present in its walk) — pin that."""
+    from nemo_read import BASE_BRANCH_NODE_ONLY
+    assert "Gas Turbine" in BASE_BRANCH_NODE_ONLY["Indonesia"]
+    assert "Gas Turbine" not in BASE_BRANCH_NODE_ONLY["Malaysia"]
+    assert "Biogas" in BASE_BRANCH_NODE_ONLY["Indonesia"]
+    assert "Biogas" not in BASE_BRANCH_NODE_ONLY["Malaysia"]  # MY has no Biogas nodes
+    assert set(BASE_BRANCH_NODE_ONLY) == {"Indonesia", "Malaysia"}
 
 
 # --- CLAUDE.md §A.22 — branch structure is region-invariant ------------------

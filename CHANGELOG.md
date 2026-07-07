@@ -1,5 +1,88 @@
 # Changelog
 
+## [Unreleased] — §A.23 base-branch authoring lock (2026-07-07, post-inject-failure)
+
+- **Shipped — `outbox/power_results_ras_v069_20260707.zip`.** Full power-sector
+  results of the SOLVED v0.69 RAS run for the power team: 5 result CSVs from
+  `feas/NEMO_25 41.sqlite` (capacity/new-builds/generation/unmet/fixed-OM),
+  the 4-row MaxCap fix delta (their carry-forward + the delta template), the
+  final 9,337-row canonical baseline, the LEAP xlsx export, and a README with
+  findings (5-node unmet load: IDEast/IDSA/IDKA + MYSR/MYPE; biomass-
+  gasification 416 GW + H2 fuel-cell 188 GW cost-review ask; Max() reference-
+  first authoring rule; cap-vs-fleet reconciliation notes).
+- **Documented — delta-payload doctrine (CLAUDE.md §4).** User directive:
+  "from now on, we will only inject what we edit, not all." Canonical stays
+  as the repo baseline mirroring the area; every future cycle injects a
+  small delta CSV (exhaustive readback), and team drops are requested as
+  deltas. Memory: `feedback_delta_inject_only.md`.
+
+- **Fixed — 4 RAS MaxCap-vs-ExoCap violations (calc-blocking) via offline
+  accounting.** The v0.69 RAS calc failed on `Maximum capacity constraint is
+  less than exogenous capacity` (Cambodia Wind Onshore). Complete offline
+  accounting (all techs x 10 AMS, RAS-effective, layered v0.67 raw + our
+  20260507 injects + v0.68/69 edits + the sendback payload; three-state
+  evaluator — comment-stripped, Value()/cross-ref/%-arithmetic resolution,
+  never coercing parse failures to 0) found 4: Cambodia Wind Onshore
+  (cap 1,500 < additions-driven exo 3,349), Philippines Small Hydro
+  (1,874 < 5,052), Vietnam Wind Onshore (24,000 < 80,970 — our own
+  20260507 ATS additions inherited into RAS), Malaysia Large Hydro_MYPE
+  (3,100 IRENA < 3,495 fleet — vindicates the modeller's freeze-at-fleet).
+  Fixed with the area's own idiom `Max(Exogenous Capacity[MW], <cap>)`
+  (user applied in UI; payload CSVs synced). Discovered + documented the
+  §11.2e Max() numeric-first year-parse trap (`Max(1874, ref)` = pair-list,
+  "year 1874") — reference-first numeric-last is the calc-proven form.
+  Scripts: `inject/power/20260707/_probe_maxcap_accounting*.py` (basis for
+  the pending cross-inject consistency pre-flight gate).
+
+- **Fixed — power inject 21× speedup (region-major row ordering).** Branch-major
+  CSVs interleave regions row-by-row, so power's per-row ActiveRegion flip did a
+  REAL LEAP region switch (~4s) on more than half the rows: measured 12.6
+  rows/min (12h ETA for the 9,337-row v0.69 sendback). `group_by_region` now
+  stable-sorts each group's rows by `ams` (8 switches per group instead of 766)
+  and `before_push_row` reads `ActiveRegion.Name` first (read is cheap, set is
+  the expensive call; a blank §11.1 read falls through to the safe set).
+  Measured after: ~260 rows/min, ~35 min for the full 4-scenario payload.
+
+- **Fixed — power's 3-cache group label `'Other'` leaked to `leap.Regions()`.**
+  The §A.19 ActiveRegion re-set in `_execute_phase` passed the subclass's
+  group KEY verbatim; for power that meant `leap.Regions("Other")` every run —
+  a LEAP error dialog for a region that doesn't exist ('Other' is the
+  injector's copper-plate batch label, never a region; no CSV carries it —
+  all power inject CSVs scanned clean). The framework now resolves a group
+  label to a real member region (key itself when it matches a row's ams,
+  else the group's first row ams) before the COM call. Power's per-row
+  `before_push_row` ActiveRegion flip also now raises instead of silently
+  passing — a silent failure there would land the write under a stale
+  ActiveRegion (the §A.19 corruption). Regression:
+  `tests/test_inject_base.py::TestGroupLabelNeverReachesLeapRegions` (strict
+  stub raises on unknown region names, asserts 'Other' never reaches
+  Regions()). Suite: 378 passed.
+
+- **Added — §A.23 base-branch authoring lock (structure = ours, content = teams).**
+  The v0.69 sendback inject failed live: LEAP refused writes with "there is no
+  branch Biogas / Geothermal Flash in Indonesia". Root cause: 84 Indonesia rows
+  authored fleet data on the un-suffixed BASE branches of node-decomposed
+  families (`Biogas`/`Gas Engine`/`Gas Turbine`/`Geothermal Flash`) — the raw
+  Indonesia Export-Expressions walk has ZERO base rows for those families
+  (Indonesia's fleet lives only on `_ID*` nodes), and no pipeline gate
+  validated (region, branch) against the raw extracts. Our 20260707 cleaning
+  had passed them — region-lock only knew the §A.21 direction (node in wrong
+  region), not the inverse (base in decomposed home region). New
+  `nemo_read.BASE_BRANCH_NODE_ONLY` (13 Indonesia + 11 Malaysia families,
+  derived from the v0.67 raw walks; Malaysia keeps base Gas Turbine) + class-2
+  check in `find_region_lock_violations` (anchored to `Centralized Electricity
+  Generation\Processes\` so same-named fuel branches aren't flagged;
+  node-scoped rows exempt), wired into the sealed `_preflight_csv` and
+  `tests/test_region_lock.py` (5 new unit tests + repo scan + self-cleaning
+  exemptions for the 4 reference dumps / v0.42 placeholder archive). Cleaned in
+  the same change: both 20260707 sendback payloads 9,421 → 9,337 rows,
+  `20260705/exo_capacity_canonical.csv` −16, the 20260507 from-PowerTeam
+  archive −4 (second pass); backups `*.bak_pre_basebranch_20260707` + notes in
+  `inject/power/20260707/BASE_BRANCH_REMOVED_NOTES_20260707.md`. Three
+  variables existed ONLY on removed base rows (Capacity Retirement, Endogenous
+  Capacity, Maximum Capacity) — flagged to the power team to re-author per
+  node. Full suite: 377 passed.
+
 ## [Unreleased] — power sendback review + cleaned inject payload (2026-07-07)
 
 - **Re-cleaned from `mailbox/20260707/power_sendback_20260707.zip`** (9,534

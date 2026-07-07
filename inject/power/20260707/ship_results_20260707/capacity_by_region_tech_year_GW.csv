@@ -1,0 +1,830 @@
+region,technology,year,total_capacity_GW
+Brunei,Coal IGCC,2025,0.254
+Brunei,Coal IGCC,2030,0.254
+Brunei,Coal IGCC,2040,0.254
+Brunei,Coal IGCC,2050,0.254
+Brunei,Coal IGCC,2060,0.254
+Brunei,Diesel,2025,1000000000000.0
+Brunei,Diesel,2025,0.015
+Brunei,Diesel,2030,1000000000000.0
+Brunei,Diesel,2030,0.015
+Brunei,Diesel,2040,1000000000000.0
+Brunei,Diesel,2050,1000000000000.0
+Brunei,Diesel,2060,1000000000000.0
+Brunei,Gas Combined Cycle,2025,0.366
+Brunei,Gas Combined Cycle,2030,0.521
+Brunei,Gas Combined Cycle,2040,0.748
+Brunei,Gas Combined Cycle,2050,1.566
+Brunei,Gas Combined Cycle,2060,2.341
+Brunei,Gas Turbine,2025,0.669
+Brunei,Gas Turbine,2030,0.669
+Brunei,Gas Turbine,2040,0.669
+Brunei,Gas Turbine,2050,0.669
+Brunei,Gas Turbine,2060,0.669
+Brunei,Lithium Ion Batteries,2050,0.067
+Brunei,Lithium Ion Batteries,2060,0.047
+Brunei,Solar PV,2025,0.007
+Brunei,Solar PV,2030,0.447
+Brunei,Solar PV,2040,0.927
+Brunei,Solar PV,2050,1.007
+Brunei,Solar PV,2060,1.007
+Cambodia,Biomass Other,2025,0.049
+Cambodia,Biomass Other,2030,0.449
+Cambodia,Biomass Other,2040,0.449
+Cambodia,Biomass Other,2050,1.787
+Cambodia,Biomass Other,2060,1.787
+Cambodia,Coal Subcritical,2025,1.3
+Cambodia,Coal Subcritical,2030,1.3
+Cambodia,Coal Subcritical,2040,1.3
+Cambodia,Coal Subcritical,2050,1.3
+Cambodia,Coal Subcritical,2060,1.3
+Cambodia,Diesel,2025,1000000000000.0
+Cambodia,Diesel,2030,1000000000000.0
+Cambodia,Diesel,2040,1000000000000.0
+Cambodia,Diesel,2050,1000000000000.0
+Cambodia,Diesel,2060,1000000000000.0
+Cambodia,Fuel Oil,2025,0.4
+Cambodia,Fuel Oil,2030,0.4
+Cambodia,Gas Combined Cycle,2030,0.8
+Cambodia,Gas Combined Cycle,2040,2.151
+Cambodia,Gas Combined Cycle,2050,4.151
+Cambodia,Gas Combined Cycle,2060,5.582
+Cambodia,Gas Combined Cycle with CCS,2050,0.452
+Cambodia,Gas Combined Cycle with CCS,2060,0.452
+Cambodia,Large Hydro,2025,1.796
+Cambodia,Large Hydro,2030,2.679
+Cambodia,Large Hydro,2040,2.977
+Cambodia,Large Hydro,2050,2.977
+Cambodia,Large Hydro,2060,2.977
+Cambodia,Lithium Ion Batteries,2025,0.75
+Cambodia,Lithium Ion Batteries,2030,1.0
+Cambodia,Lithium Ion Batteries,2040,1.0
+Cambodia,Lithium Ion Batteries,2050,1.0
+Cambodia,Lithium Ion Batteries,2060,1.0
+Cambodia,Pumped Hydro,2030,1.0
+Cambodia,Pumped Hydro,2040,3.125
+Cambodia,Pumped Hydro,2050,3.125
+Cambodia,Pumped Hydro,2060,3.125
+Cambodia,Solar PV,2025,1.716
+Cambodia,Solar PV,2030,4.766
+Cambodia,Solar PV,2040,9.566
+Cambodia,Solar PV,2050,9.566
+Cambodia,Solar PV,2060,9.566
+Cambodia,Wind Onshore,2030,0.55
+Cambodia,Wind Onshore,2040,3.349
+Cambodia,Wind Onshore,2050,3.349
+Cambodia,Wind Onshore,2060,3.349
+Indonesia,Biogas_IDJW,2025,0.006
+Indonesia,Biogas_IDJW,2030,0.027
+Indonesia,Biogas_IDJW,2040,0.068
+Indonesia,Biogas_IDJW,2050,0.105
+Indonesia,Biogas_IDJW,2060,0.126
+Indonesia,Biogas_IDKA,2025,0.124
+Indonesia,Biogas_IDKA,2030,0.535
+Indonesia,Biogas_IDKA,2040,1.351
+Indonesia,Biogas_IDKA,2050,2.084
+Indonesia,Biogas_IDKA,2060,2.491
+Indonesia,Biogas_IDSA,2025,0.16
+Indonesia,Biogas_IDSA,2030,1.245
+Indonesia,Biogas_IDSA,2040,3.4
+Indonesia,Biogas_IDSA,2050,3.4
+Indonesia,Biogas_IDSA,2060,3.4
+Indonesia,Biomass Gasification,2030,0.116
+Indonesia,Biomass Gasification,2030,0.265
+Indonesia,Biomass Gasification,2040,3.552
+Indonesia,Biomass Gasification,2040,3.265
+Indonesia,Biomass Gasification,2050,189.899
+Indonesia,Biomass Gasification,2050,3.265
+Indonesia,Biomass Gasification,2060,342.514
+Indonesia,Biomass Gasification,2060,3.265
+Indonesia,Biomass Other_IDEast,2025,0.021
+Indonesia,Biomass Other_IDEast,2030,0.027
+Indonesia,Biomass Other_IDEast,2040,0.028
+Indonesia,Biomass Other_IDEast,2050,0.028
+Indonesia,Biomass Other_IDEast,2060,0.028
+Indonesia,Biomass Other_IDJW,2025,0.171
+Indonesia,Biomass Other_IDJW,2030,0.208
+Indonesia,Biomass Other_IDJW,2040,0.222
+Indonesia,Biomass Other_IDJW,2050,0.222
+Indonesia,Biomass Other_IDJW,2060,0.222
+Indonesia,Biomass Other_IDKA,2025,0.411
+Indonesia,Biomass Other_IDKA,2030,0.427
+Indonesia,Biomass Other_IDKA,2040,0.428
+Indonesia,Biomass Other_IDKA,2050,0.428
+Indonesia,Biomass Other_IDKA,2060,0.428
+Indonesia,Biomass Other_IDSA,2025,2.318
+Indonesia,Biomass Other_IDSA,2030,2.654
+Indonesia,Biomass Other_IDSA,2040,2.712
+Indonesia,Biomass Other_IDSA,2050,2.712
+Indonesia,Biomass Other_IDSA,2060,2.712
+Indonesia,CAES,2040,15.029
+Indonesia,CAES,2050,35.029
+Indonesia,CAES,2060,55.029
+Indonesia,Coal Subcritical_IDEast,2025,9.806
+Indonesia,Coal Subcritical_IDEast,2030,9.87
+Indonesia,Coal Subcritical_IDEast,2040,9.876
+Indonesia,Coal Subcritical_IDEast,2050,9.876
+Indonesia,Coal Subcritical_IDEast,2060,9.876
+Indonesia,Coal Subcritical_IDJW,2025,38.257
+Indonesia,Coal Subcritical_IDJW,2030,38.257
+Indonesia,Coal Subcritical_IDJW,2040,38.257
+Indonesia,Coal Subcritical_IDJW,2050,38.257
+Indonesia,Coal Subcritical_IDJW,2060,38.257
+Indonesia,Coal Subcritical_IDKA,2025,2.987
+Indonesia,Coal Subcritical_IDKA,2030,2.987
+Indonesia,Coal Subcritical_IDKA,2040,3.234
+Indonesia,Coal Subcritical_IDKA,2050,3.234
+Indonesia,Coal Subcritical_IDKA,2060,3.234
+Indonesia,Coal Subcritical_IDSA,2025,7.941
+Indonesia,Coal Subcritical_IDSA,2030,8.005
+Indonesia,Coal Subcritical_IDSA,2040,8.258
+Indonesia,Coal Subcritical_IDSA,2050,8.258
+Indonesia,Coal Subcritical_IDSA,2060,8.258
+Indonesia,Coal Supercritical,2025,6.635
+Indonesia,Coal Supercritical,2030,7.499
+Indonesia,Coal Supercritical,2040,9.752
+Indonesia,Coal Supercritical,2050,9.752
+Indonesia,Coal Supercritical,2060,9.752
+Indonesia,Diesel,2025,1000000000000.0
+Indonesia,Diesel,2030,1000000000000.0
+Indonesia,Diesel,2040,1000000000000.0
+Indonesia,Diesel,2050,1000000000000.0
+Indonesia,Diesel,2060,1000000000000.0
+Indonesia,Diesel_IDEast,2025,2.794
+Indonesia,Diesel_IDEast,2030,2.794
+Indonesia,Diesel_IDJW,2025,0.364
+Indonesia,Diesel_IDJW,2030,0.364
+Indonesia,Diesel_IDKA,2025,1.244
+Indonesia,Diesel_IDKA,2030,1.244
+Indonesia,Diesel_IDSA,2025,1.417
+Indonesia,Diesel_IDSA,2030,1.422
+Indonesia,Gas Combined Cycle with CCS,2025,1.5
+Indonesia,Gas Combined Cycle with CCS,2030,9.0
+Indonesia,Gas Combined Cycle with CCS,2040,24.0
+Indonesia,Gas Combined Cycle with CCS,2050,39.0
+Indonesia,Gas Combined Cycle with CCS,2060,45.0
+Indonesia,Gas Combined Cycle_IDEast,2025,0.914
+Indonesia,Gas Combined Cycle_IDEast,2030,1.071
+Indonesia,Gas Combined Cycle_IDEast,2040,1.071
+Indonesia,Gas Combined Cycle_IDEast,2050,1.071
+Indonesia,Gas Combined Cycle_IDEast,2060,1.071
+Indonesia,Gas Combined Cycle_IDJW,2025,15.486
+Indonesia,Gas Combined Cycle_IDJW,2030,20.469
+Indonesia,Gas Combined Cycle_IDJW,2040,20.469
+Indonesia,Gas Combined Cycle_IDJW,2050,20.469
+Indonesia,Gas Combined Cycle_IDJW,2060,20.469
+Indonesia,Gas Combined Cycle_IDKA,2025,0.179
+Indonesia,Gas Combined Cycle_IDKA,2030,0.209
+Indonesia,Gas Combined Cycle_IDKA,2040,0.209
+Indonesia,Gas Combined Cycle_IDKA,2050,0.209
+Indonesia,Gas Combined Cycle_IDKA,2060,0.209
+Indonesia,Gas Combined Cycle_IDSA,2025,2.219
+Indonesia,Gas Combined Cycle_IDSA,2030,2.96
+Indonesia,Gas Combined Cycle_IDSA,2040,2.96
+Indonesia,Gas Combined Cycle_IDSA,2050,2.96
+Indonesia,Gas Combined Cycle_IDSA,2060,2.96
+Indonesia,Gas Engine_IDEast,2025,0.853
+Indonesia,Gas Engine_IDEast,2030,1.038
+Indonesia,Gas Engine_IDEast,2040,1.076
+Indonesia,Gas Engine_IDEast,2050,1.076
+Indonesia,Gas Engine_IDEast,2060,1.076
+Indonesia,Gas Engine_IDJW,2025,0.276
+Indonesia,Gas Engine_IDJW,2030,0.489
+Indonesia,Gas Engine_IDJW,2040,0.532
+Indonesia,Gas Engine_IDJW,2050,0.532
+Indonesia,Gas Engine_IDJW,2060,0.532
+Indonesia,Gas Engine_IDKA,2025,0.609
+Indonesia,Gas Engine_IDKA,2030,1.006
+Indonesia,Gas Engine_IDKA,2040,1.086
+Indonesia,Gas Engine_IDKA,2050,1.086
+Indonesia,Gas Engine_IDKA,2060,1.086
+Indonesia,Gas Engine_IDSA,2025,1.521
+Indonesia,Gas Engine_IDSA,2030,2.813
+Indonesia,Gas Engine_IDSA,2040,3.074
+Indonesia,Gas Engine_IDSA,2050,3.074
+Indonesia,Gas Engine_IDSA,2060,3.074
+Indonesia,Gas Turbine_IDJW,2025,1.426
+Indonesia,Gas Turbine_IDJW,2030,1.47
+Indonesia,Gas Turbine_IDJW,2040,0.706
+Indonesia,Geothermal Flash_IDEast,2025,0.164
+Indonesia,Geothermal Flash_IDEast,2030,0.249
+Indonesia,Geothermal Flash_IDEast,2040,0.745
+Indonesia,Geothermal Flash_IDEast,2050,0.745
+Indonesia,Geothermal Flash_IDEast,2060,0.745
+Indonesia,Geothermal Flash_IDJW,2025,1.488
+Indonesia,Geothermal Flash_IDJW,2030,2.382
+Indonesia,Geothermal Flash_IDJW,2040,6.412
+Indonesia,Geothermal Flash_IDJW,2050,6.412
+Indonesia,Geothermal Flash_IDJW,2060,6.412
+Indonesia,Geothermal Flash_IDSA,2025,1.12
+Indonesia,Geothermal Flash_IDSA,2030,1.521
+Indonesia,Geothermal Flash_IDSA,2040,3.631
+Indonesia,Geothermal Flash_IDSA,2050,3.631
+Indonesia,Geothermal Flash_IDSA,2060,3.631
+Indonesia,Geothermal ORC,2040,0.317
+Indonesia,Geothermal ORC,2050,0.317
+Indonesia,Geothermal ORC,2060,0.317
+Indonesia,H2 Fuel Cell,2040,0.33
+Indonesia,H2 Fuel Cell,2050,66.363
+Indonesia,H2 Fuel Cell,2060,121.601
+Indonesia,Large Hydro_IDEast,2025,1.565
+Indonesia,Large Hydro_IDEast,2030,2.927
+Indonesia,Large Hydro_IDEast,2040,6.115
+Indonesia,Large Hydro_IDEast,2050,8.212
+Indonesia,Large Hydro_IDEast,2060,10.309
+Indonesia,Large Hydro_IDJW,2025,2.971
+Indonesia,Large Hydro_IDJW,2030,6.255
+Indonesia,Large Hydro_IDJW,2040,12.596
+Indonesia,Large Hydro_IDJW,2050,12.596
+Indonesia,Large Hydro_IDJW,2060,12.596
+Indonesia,Large Hydro_IDKA,2025,0.339
+Indonesia,Large Hydro_IDKA,2030,0.666
+Indonesia,Large Hydro_IDKA,2040,1.48
+Indonesia,Large Hydro_IDKA,2050,1.918
+Indonesia,Large Hydro_IDKA,2060,2.356
+Indonesia,Large Hydro_IDSA,2025,2.343
+Indonesia,Large Hydro_IDSA,2030,4.579
+Indonesia,Large Hydro_IDSA,2040,10.103
+Indonesia,Large Hydro_IDSA,2050,13.147
+Indonesia,Large Hydro_IDSA,2060,15.6
+Indonesia,Lithium Ion Batteries,2025,0.05
+Indonesia,Lithium Ion Batteries,2040,6.014
+Indonesia,Lithium Ion Batteries,2050,26.014
+Indonesia,Lithium Ion Batteries,2060,26.014
+Indonesia,Nuclear SMR,2040,0.5
+Indonesia,Nuclear SMR,2050,0.5
+Indonesia,Nuclear SMR,2060,0.5
+Indonesia,Pumped Hydro,2030,1.04
+Indonesia,Pumped Hydro,2040,4.243
+Indonesia,Pumped Hydro,2050,24.243
+Indonesia,Pumped Hydro,2060,44.243
+Indonesia,Small Hydro_IDEast,2025,0.405
+Indonesia,Small Hydro_IDEast,2030,1.12
+Indonesia,Small Hydro_IDEast,2040,1.962
+Indonesia,Small Hydro_IDEast,2050,2.5
+Indonesia,Small Hydro_IDEast,2060,2.5
+Indonesia,Small Hydro_IDJW,2025,0.434
+Indonesia,Small Hydro_IDJW,2030,1.244
+Indonesia,Small Hydro_IDJW,2040,2.131
+Indonesia,Small Hydro_IDJW,2050,3.01
+Indonesia,Small Hydro_IDJW,2060,3.05
+Indonesia,Small Hydro_IDKA,2025,0.016
+Indonesia,Small Hydro_IDKA,2030,0.041
+Indonesia,Small Hydro_IDKA,2040,0.075
+Indonesia,Small Hydro_IDKA,2050,0.108
+Indonesia,Small Hydro_IDKA,2060,0.141
+Indonesia,Small Hydro_IDSA,2025,0.593
+Indonesia,Small Hydro_IDSA,2030,1.568
+Indonesia,Small Hydro_IDSA,2040,2.828
+Indonesia,Small Hydro_IDSA,2050,4.08
+Indonesia,Small Hydro_IDSA,2060,5.332
+Indonesia,Solar Floating,2025,0.5
+Indonesia,Solar Floating,2030,3.0
+Indonesia,Solar Floating,2040,8.0
+Indonesia,Solar Floating,2050,10.0
+Indonesia,Solar Floating,2060,10.0
+Indonesia,Solar PV_IDEast,2025,0.949
+Indonesia,Solar PV_IDEast,2030,4.603
+Indonesia,Solar PV_IDEast,2040,10.434
+Indonesia,Solar PV_IDEast,2050,11.388
+Indonesia,Solar PV_IDEast,2060,11.388
+Indonesia,Solar PV_IDJW,2025,0.717
+Indonesia,Solar PV_IDJW,2030,2.823
+Indonesia,Solar PV_IDJW,2040,6.414
+Indonesia,Solar PV_IDJW,2050,7.269
+Indonesia,Solar PV_IDJW,2060,7.269
+Indonesia,Solar PV_IDKA,2025,0.195
+Indonesia,Solar PV_IDKA,2030,1.424
+Indonesia,Solar PV_IDKA,2040,3.217
+Indonesia,Solar PV_IDKA,2050,3.316
+Indonesia,Solar PV_IDKA,2060,3.316
+Indonesia,Solar PV_IDSA,2025,0.315
+Indonesia,Solar PV_IDSA,2030,2.612
+Indonesia,Solar PV_IDSA,2040,5.899
+Indonesia,Solar PV_IDSA,2050,5.993
+Indonesia,Solar PV_IDSA,2060,5.993
+Indonesia,Tidal,2025,0.2
+Indonesia,Tidal,2030,1.24
+Indonesia,Tidal,2040,3.24
+Indonesia,Tidal,2050,5.04
+Indonesia,Tidal,2060,6.04
+Indonesia,VRB Flow Batteries,2050,9.469
+Indonesia,VRB Flow Batteries,2060,21.728
+Indonesia,Waste,2025,0.036
+Indonesia,Waste,2030,0.47
+Indonesia,Waste,2040,0.509
+Indonesia,Waste,2050,0.509
+Indonesia,Waste,2060,0.509
+Indonesia,Wave,2025,0.2
+Indonesia,Wave,2030,1.2
+Indonesia,Wave,2040,3.2
+Indonesia,Wave,2050,5.0
+Indonesia,Wave,2060,6.0
+Indonesia,Wind Offshore,2025,1.0
+Indonesia,Wind Offshore,2030,6.0
+Indonesia,Wind Offshore,2040,16.0
+Indonesia,Wind Offshore,2050,26.0
+Indonesia,Wind Offshore,2060,30.0
+Indonesia,Wind Onshore_IDEast,2025,0.151
+Indonesia,Wind Onshore_IDEast,2030,2.889
+Indonesia,Wind Onshore_IDEast,2040,7.269
+Indonesia,Wind Onshore_IDEast,2050,7.269
+Indonesia,Wind Onshore_IDEast,2060,7.269
+Indonesia,Wind Onshore_IDJW,2025,0.001
+Indonesia,Wind Onshore_IDJW,2030,0.028
+Indonesia,Wind Onshore_IDJW,2040,0.071
+Indonesia,Wind Onshore_IDJW,2050,0.071
+Indonesia,Wind Onshore_IDJW,2060,0.071
+Laos,Biomass Other,2025,0.135
+Laos,Biomass Other,2030,0.158
+Laos,Biomass Other,2040,0.158
+Laos,Biomass Other,2050,0.158
+Laos,Biomass Other,2060,0.158
+Laos,Coal Subcritical,2025,1.878
+Laos,Coal Subcritical,2030,4.278
+Laos,Coal Subcritical,2040,4.278
+Laos,Coal Subcritical,2050,4.278
+Laos,Coal Subcritical,2060,4.278
+Laos,Diesel,2025,1000000000000.0
+Laos,Diesel,2030,1000000000000.0
+Laos,Diesel,2040,1000000000000.0
+Laos,Diesel,2050,1000000000000.0
+Laos,Diesel,2060,1000000000000.0
+Laos,Large Hydro,2025,11.064
+Laos,Large Hydro,2030,16.796
+Laos,Large Hydro,2040,16.796
+Laos,Large Hydro,2050,16.796
+Laos,Large Hydro,2060,16.796
+Laos,Pumped Hydro,2030,1.0
+Laos,Pumped Hydro,2040,1.0
+Laos,Pumped Hydro,2050,1.0
+Laos,Pumped Hydro,2060,1.0
+Laos,Solar Floating,2030,0.5
+Laos,Solar Floating,2040,0.872
+Laos,Solar Floating,2050,0.872
+Laos,Solar Floating,2060,0.872
+Laos,Solar PV,2025,0.083
+Laos,Solar PV,2030,0.584
+Laos,Solar PV,2040,1.116
+Laos,Solar PV,2050,1.116
+Laos,Solar PV,2060,1.116
+Laos,Wind Onshore,2030,1.0
+Laos,Wind Onshore,2040,1.6
+Laos,Wind Onshore,2050,1.6
+Laos,Wind Onshore,2060,1.6
+Malaysia,Biogas,2025,0.082
+Malaysia,Biogas,2030,0.129
+Malaysia,Biogas,2040,0.736
+Malaysia,Biogas,2050,0.736
+Malaysia,Biogas,2060,0.736
+Malaysia,Biomass Gasification,2025,0.1
+Malaysia,Biomass Gasification,2030,0.046
+Malaysia,Biomass Gasification,2030,0.6
+Malaysia,Biomass Gasification,2040,1.098
+Malaysia,Biomass Gasification,2040,1.6
+Malaysia,Biomass Gasification,2050,29.558
+Malaysia,Biomass Gasification,2050,2.6
+Malaysia,Biomass Gasification,2060,50.454
+Malaysia,Biomass Gasification,2060,3.0
+Malaysia,Biomass Other_MYPE,2025,0.723
+Malaysia,Biomass Other_MYPE,2030,1.167
+Malaysia,Biomass Other_MYPE,2040,1.979
+Malaysia,Biomass Other_MYPE,2050,2.3
+Malaysia,Biomass Other_MYPE,2060,2.3
+Malaysia,Biomass Other_MYSB,2025,0.205
+Malaysia,Biomass Other_MYSB,2030,0.339
+Malaysia,Biomass Other_MYSB,2040,0.575
+Malaysia,Biomass Other_MYSB,2050,0.774
+Malaysia,Biomass Other_MYSB,2060,0.884
+Malaysia,Biomass Other_MYSR,2030,0.007
+Malaysia,Biomass Other_MYSR,2040,0.011
+Malaysia,Biomass Other_MYSR,2050,0.011
+Malaysia,Biomass Other_MYSR,2060,0.011
+Malaysia,CAES,2025,1.0
+Malaysia,CAES,2030,6.0
+Malaysia,CAES,2040,16.0
+Malaysia,CAES,2050,26.0
+Malaysia,CAES,2060,36.0
+Malaysia,Coal Subcritical_MYPE,2025,9.703
+Malaysia,Coal Subcritical_MYPE,2030,8.019
+Malaysia,Coal Subcritical_MYSR,2025,1.054
+Malaysia,Coal Ultrasupercritical,2025,3.395
+Malaysia,Coal Ultrasupercritical,2030,3.395
+Malaysia,Coal Ultrasupercritical,2040,4.095
+Malaysia,Coal Ultrasupercritical,2050,4.095
+Malaysia,Coal Ultrasupercritical,2060,4.095
+Malaysia,Diesel,2025,1000000000000.0
+Malaysia,Diesel,2030,1000000000000.0
+Malaysia,Diesel,2040,1000000000000.0
+Malaysia,Diesel,2050,1000000000000.0
+Malaysia,Diesel,2060,1000000000000.0
+Malaysia,Diesel_MYPE,2025,0.105
+Malaysia,Diesel_MYPE,2030,0.105
+Malaysia,Diesel_MYPE,2040,0.105
+Malaysia,Diesel_MYPE,2050,0.105
+Malaysia,Diesel_MYPE,2060,0.105
+Malaysia,Diesel_MYSB,2025,0.214
+Malaysia,Diesel_MYSB,2030,0.151
+Malaysia,Diesel_MYSB,2040,0.151
+Malaysia,Diesel_MYSB,2050,0.151
+Malaysia,Diesel_MYSB,2060,0.151
+Malaysia,Diesel_MYSR,2025,0.064
+Malaysia,Gas Combined Cycle with CCS,2025,0.215
+Malaysia,Gas Combined Cycle with CCS,2030,1.562
+Malaysia,Gas Combined Cycle with CCS,2040,9.667
+Malaysia,Gas Combined Cycle with CCS,2050,23.667
+Malaysia,Gas Combined Cycle with CCS,2060,36.105
+Malaysia,Gas Combined Cycle_MYPE,2025,13.53
+Malaysia,Gas Combined Cycle_MYPE,2030,21.166
+Malaysia,Gas Combined Cycle_MYPE,2040,39.601
+Malaysia,Gas Combined Cycle_MYPE,2050,53.601
+Malaysia,Gas Combined Cycle_MYPE,2060,59.201
+Malaysia,Gas Combined Cycle_MYSB,2025,1.483
+Malaysia,Gas Combined Cycle_MYSB,2030,3.034
+Malaysia,Gas Combined Cycle_MYSB,2040,6.495
+Malaysia,Gas Combined Cycle_MYSB,2050,9.495
+Malaysia,Gas Combined Cycle_MYSB,2060,10.695
+Malaysia,Gas Combined Cycle_MYSR,2025,2.006
+Malaysia,Gas Combined Cycle_MYSR,2030,3.549
+Malaysia,Gas Combined Cycle_MYSR,2040,6.925
+Malaysia,Gas Combined Cycle_MYSR,2050,9.925
+Malaysia,Gas Combined Cycle_MYSR,2060,11.125
+Malaysia,Geothermal Flash,2030,0.03
+Malaysia,Geothermal Flash,2040,0.03
+Malaysia,Geothermal Flash,2050,0.03
+Malaysia,Geothermal Flash,2060,0.03
+Malaysia,H2 Fuel Cell,2030,0.009
+Malaysia,H2 Fuel Cell,2040,5.597
+Malaysia,H2 Fuel Cell,2050,17.303
+Malaysia,H2 Fuel Cell,2060,25.107
+Malaysia,Large Hydro_MYPE,2025,2.556
+Malaysia,Large Hydro_MYPE,2030,3.426
+Malaysia,Large Hydro_MYPE,2040,3.495
+Malaysia,Large Hydro_MYPE,2050,3.495
+Malaysia,Large Hydro_MYPE,2060,3.495
+Malaysia,Large Hydro_MYSB,2025,0.1
+Malaysia,Large Hydro_MYSB,2030,0.491
+Malaysia,Large Hydro_MYSB,2040,0.493
+Malaysia,Large Hydro_MYSB,2050,0.493
+Malaysia,Large Hydro_MYSB,2060,0.493
+Malaysia,Large Hydro_MYSR,2025,3.572
+Malaysia,Large Hydro_MYSR,2030,8.733
+Malaysia,Large Hydro_MYSR,2040,10.0
+Malaysia,Large Hydro_MYSR,2050,10.0
+Malaysia,Large Hydro_MYSR,2060,10.0
+Malaysia,Lithium Ion Batteries,2040,10.0
+Malaysia,Lithium Ion Batteries,2050,10.0
+Malaysia,Lithium Ion Batteries,2060,10.0
+Malaysia,Pumped Hydro,2040,3.495
+Malaysia,Pumped Hydro,2050,3.495
+Malaysia,Pumped Hydro,2060,3.495
+Malaysia,Solar Floating,2025,0.127
+Malaysia,Solar Floating,2030,1.213
+Malaysia,Solar Floating,2040,5.557
+Malaysia,Solar Floating,2050,8.688
+Malaysia,Solar Floating,2060,8.688
+Malaysia,Solar PV_MYPE,2025,9.344
+Malaysia,Solar PV_MYPE,2030,20.624
+Malaysia,Solar PV_MYPE,2040,58.912
+Malaysia,Solar PV_MYPE,2050,94.344
+Malaysia,Solar PV_MYPE,2060,94.344
+Malaysia,Solar PV_MYSB,2025,0.765
+Malaysia,Solar PV_MYSB,2030,1.885
+Malaysia,Solar PV_MYSB,2040,5.598
+Malaysia,Solar PV_MYSB,2050,8.966
+Malaysia,Solar PV_MYSB,2060,8.966
+Malaysia,Solar PV_MYSR,2025,0.2
+Malaysia,Solar PV_MYSR,2030,1.2
+Malaysia,Solar PV_MYSR,2040,3.2
+Malaysia,Solar PV_MYSR,2050,4.0
+Malaysia,Solar PV_MYSR,2060,4.0
+Malaysia,Tidal,2025,0.02
+Malaysia,Tidal,2030,0.12
+Malaysia,Tidal,2040,0.32
+Malaysia,Tidal,2050,0.5
+Malaysia,Tidal,2060,0.6
+Malaysia,VRB Flow Batteries,2040,6.721
+Malaysia,VRB Flow Batteries,2050,16.721
+Malaysia,VRB Flow Batteries,2060,10.0
+Malaysia,Waste,2040,0.516
+Malaysia,Waste,2050,0.516
+Malaysia,Waste,2060,0.516
+Malaysia,Wave,2025,0.02
+Malaysia,Wave,2030,0.12
+Malaysia,Wave,2040,0.32
+Malaysia,Wave,2050,0.5
+Malaysia,Wave,2060,0.6
+Malaysia,Wind Offshore,2025,0.3
+Malaysia,Wind Offshore,2030,1.8
+Malaysia,Wind Offshore,2040,4.8
+Malaysia,Wind Offshore,2050,7.8
+Malaysia,Wind Offshore,2060,9.0
+Myanmar,Biomass Other,2040,1.388
+Myanmar,Biomass Other,2050,2.776
+Myanmar,Biomass Other,2060,4.164
+Myanmar,Coal Subcritical,2025,0.19
+Myanmar,Coal Subcritical,2030,0.19
+Myanmar,Coal Subcritical,2040,0.19
+Myanmar,Coal Subcritical,2050,0.19
+Myanmar,Coal Subcritical,2060,0.19
+Myanmar,Diesel,2025,1000000000000.0
+Myanmar,Diesel,2025,0.181
+Myanmar,Diesel,2030,1000000000000.0
+Myanmar,Diesel,2030,0.181
+Myanmar,Diesel,2040,1000000000000.0
+Myanmar,Diesel,2040,0.181
+Myanmar,Diesel,2050,1000000000000.0
+Myanmar,Diesel,2050,0.181
+Myanmar,Diesel,2060,1000000000000.0
+Myanmar,Diesel,2060,0.181
+Myanmar,Gas Combined Cycle,2025,1.034
+Myanmar,Gas Combined Cycle,2030,1.426
+Myanmar,Gas Combined Cycle,2040,3.726
+Myanmar,Gas Combined Cycle,2050,6.026
+Myanmar,Gas Combined Cycle,2060,7.934
+Myanmar,Gas Engine,2025,0.882
+Myanmar,Gas Engine,2030,0.882
+Myanmar,Gas Engine,2040,5.844
+Myanmar,Gas Engine,2050,10.844
+Myanmar,Gas Engine,2060,11.155
+Myanmar,Gas Turbine,2025,1.125
+Myanmar,Gas Turbine,2030,1.125
+Myanmar,Gas Turbine,2040,1.125
+Myanmar,Gas Turbine,2050,1.125
+Myanmar,Gas Turbine,2060,1.125
+Myanmar,Large Hydro,2025,3.27
+Myanmar,Large Hydro,2030,4.043
+Myanmar,Large Hydro,2040,4.043
+Myanmar,Large Hydro,2050,4.043
+Myanmar,Large Hydro,2060,4.043
+Myanmar,Lithium Ion Batteries,2030,0.273
+Myanmar,Lithium Ion Batteries,2040,0.332
+Myanmar,Lithium Ion Batteries,2050,0.234
+Myanmar,Small Hydro,2025,0.037
+Myanmar,Small Hydro,2030,0.045
+Myanmar,Small Hydro,2040,0.045
+Myanmar,Small Hydro,2050,0.045
+Myanmar,Small Hydro,2060,0.045
+Myanmar,Solar PV,2025,0.22
+Myanmar,Solar PV,2030,0.22
+Myanmar,Solar PV,2040,0.22
+Myanmar,Solar PV,2050,0.22
+Myanmar,Solar PV,2060,0.22
+Philippines,Biomass Other,2025,0.595
+Philippines,Biomass Other,2030,0.595
+Philippines,Biomass Other,2040,0.595
+Philippines,Biomass Other,2050,0.595
+Philippines,Biomass Other,2060,0.595
+Philippines,Coal Subcritical,2025,11.22
+Philippines,Coal Subcritical,2030,11.12
+Philippines,Coal Subcritical,2040,10.978
+Philippines,Coal Subcritical,2050,10.978
+Philippines,Coal Subcritical,2060,10.978
+Philippines,Coal Supercritical,2030,0.27
+Philippines,Coal Supercritical,2040,0.27
+Philippines,Coal Supercritical,2050,0.27
+Philippines,Coal Supercritical,2060,0.27
+Philippines,Diesel,2025,1000000000000.0
+Philippines,Diesel,2025,3.26
+Philippines,Diesel,2030,1000000000000.0
+Philippines,Diesel,2030,3.358
+Philippines,Diesel,2040,1000000000000.0
+Philippines,Diesel,2050,1000000000000.0
+Philippines,Diesel,2060,1000000000000.0
+Philippines,Gas Combined Cycle,2025,3.732
+Philippines,Gas Combined Cycle,2030,8.247
+Philippines,Gas Combined Cycle,2040,26.943
+Philippines,Gas Combined Cycle,2050,47.087
+Philippines,Gas Combined Cycle,2060,68.672
+Philippines,Gas Combined Cycle with CCS,2060,4.242
+Philippines,Geothermal Flash,2025,2.072
+Philippines,Geothermal Flash,2030,2.299
+Philippines,Geothermal Flash,2040,2.709
+Philippines,Geothermal Flash,2050,2.839
+Philippines,Geothermal Flash,2060,2.839
+Philippines,Large Hydro,2025,3.836
+Philippines,Large Hydro,2030,3.836
+Philippines,Large Hydro,2040,3.836
+Philippines,Large Hydro,2050,3.836
+Philippines,Large Hydro,2060,3.836
+Philippines,Lithium Ion Batteries,2025,1.04
+Philippines,Lithium Ion Batteries,2030,1.04
+Philippines,Lithium Ion Batteries,2040,11.968
+Philippines,Lithium Ion Batteries,2050,40.598
+Philippines,Lithium Ion Batteries,2060,40.598
+Philippines,Nuclear LWR,2040,2.88
+Philippines,Nuclear LWR,2050,4.32
+Philippines,Nuclear LWR,2060,4.32
+Philippines,Nuclear SMR,2040,0.32
+Philippines,Nuclear SMR,2050,0.48
+Philippines,Nuclear SMR,2060,0.48
+Philippines,Pumped Hydro,2030,1.1
+Philippines,Pumped Hydro,2040,1.4
+Philippines,Pumped Hydro,2050,1.6
+Philippines,Pumped Hydro,2060,1.6
+Philippines,Small Hydro,2025,0.122
+Philippines,Small Hydro,2030,0.122
+Philippines,Small Hydro,2040,2.707
+Philippines,Small Hydro,2050,4.632
+Philippines,Small Hydro,2060,4.632
+Philippines,Solar Floating,2030,0.09
+Philippines,Solar Floating,2040,4.0
+Philippines,Solar Floating,2050,4.0
+Philippines,Solar Floating,2060,4.0
+Philippines,Solar PV,2025,4.957
+Philippines,Solar PV,2030,10.498
+Philippines,Solar PV,2040,17.739
+Philippines,Solar PV,2050,29.739
+Philippines,Solar PV,2060,29.739
+Philippines,Waste,2025,0.012
+Philippines,Waste,2030,0.046
+Philippines,Waste,2040,0.046
+Philippines,Waste,2050,0.046
+Philippines,Waste,2060,0.046
+Philippines,Wind Offshore,2040,5.3
+Philippines,Wind Offshore,2050,19.5
+Philippines,Wind Offshore,2060,19.5
+Philippines,Wind Onshore,2025,1.83
+Philippines,Wind Onshore,2030,6.548
+Philippines,Wind Onshore,2040,9.985
+Philippines,Wind Onshore,2050,14.935
+Philippines,Wind Onshore,2060,14.935
+Singapore,CAES,2040,0.15
+Singapore,CAES,2050,0.159
+Singapore,CAES,2060,0.159
+Singapore,Diesel,2025,1000000000000.0
+Singapore,Diesel,2030,1000000000000.0
+Singapore,Diesel,2040,1000000000000.0
+Singapore,Diesel,2050,1000000000000.0
+Singapore,Diesel,2060,1000000000000.0
+Singapore,Fuel Oil,2025,0.014
+Singapore,Fuel Oil,2030,0.014
+Singapore,Fuel Oil,2040,0.014
+Singapore,Fuel Oil,2050,0.014
+Singapore,Fuel Oil,2060,0.014
+Singapore,Gas Combined Cycle,2025,10.128
+Singapore,Gas Combined Cycle,2030,14.36
+Singapore,Gas Combined Cycle,2040,18.946
+Singapore,Gas Combined Cycle,2050,23.136
+Singapore,Gas Combined Cycle,2060,27.012
+Singapore,Gas Turbine,2025,0.26
+Singapore,Gas Turbine,2030,0.26
+Singapore,Gas Turbine,2040,0.26
+Singapore,Gas Turbine,2050,0.26
+Singapore,Gas Turbine,2060,0.26
+Singapore,Lithium Ion Batteries,2025,0.2
+Singapore,Lithium Ion Batteries,2030,0.2
+Singapore,Lithium Ion Batteries,2040,0.568
+Singapore,Lithium Ion Batteries,2050,0.798
+Singapore,Lithium Ion Batteries,2060,1.096
+Singapore,Solar PV,2025,1.211
+Singapore,Solar PV,2030,2.211
+Singapore,Solar PV,2040,2.211
+Singapore,Solar PV,2050,2.211
+Singapore,Solar PV,2060,2.211
+Singapore,Waste,2025,0.345
+Singapore,Waste,2030,0.346
+Singapore,Waste,2040,0.346
+Singapore,Waste,2050,0.346
+Singapore,Waste,2060,0.346
+Thailand,Biogas,2040,1.565
+Thailand,Biogas,2050,1.565
+Thailand,Biogas,2060,1.565
+Thailand,Biomass Gasification,2025,4.205
+Thailand,Biomass Gasification,2030,4.013
+Thailand,Biomass Gasification,2040,0.915
+Thailand,Biomass Gasification,2040,9.803
+Thailand,Biomass Gasification,2050,4.288
+Thailand,Biomass Gasification,2050,9.803
+Thailand,Biomass Gasification,2060,7.468
+Thailand,Biomass Gasification,2060,9.803
+Thailand,Biomass Other,2040,15.401
+Thailand,Biomass Other,2050,72.464
+Thailand,Biomass Other,2060,116.671
+Thailand,CAES,2040,6.98
+Thailand,CAES,2050,10.055
+Thailand,CAES,2060,10.055
+Thailand,Coal Subcritical,2025,6.14
+Thailand,Coal Subcritical,2030,6.14
+Thailand,Coal Subcritical,2040,6.14
+Thailand,Coal Subcritical,2050,6.14
+Thailand,Coal Subcritical,2060,6.14
+Thailand,Coal Supercritical,2030,0.06
+Thailand,Coal Supercritical,2040,0.06
+Thailand,Coal Supercritical,2050,0.06
+Thailand,Coal Supercritical,2060,0.06
+Thailand,Diesel,2025,1000000000000.0
+Thailand,Diesel,2025,0.065
+Thailand,Diesel,2030,1000000000000.0
+Thailand,Diesel,2030,0.065
+Thailand,Diesel,2040,1000000000000.0
+Thailand,Diesel,2050,1000000000000.0
+Thailand,Diesel,2060,1000000000000.0
+Thailand,Gas Combined Cycle,2025,38.06
+Thailand,Gas Combined Cycle,2030,60.867
+Thailand,Gas Combined Cycle,2040,102.237
+Thailand,Gas Combined Cycle,2050,143.606
+Thailand,Gas Combined Cycle,2060,164.29
+Thailand,Gas Combined Cycle with CCS,2050,4.995
+Thailand,Gas Combined Cycle with CCS,2060,4.995
+Thailand,H2 Fuel Cell,2040,0.032
+Thailand,H2 Fuel Cell,2050,0.044
+Thailand,H2 Fuel Cell,2060,0.059
+Thailand,Large Hydro,2025,3.136
+Thailand,Large Hydro,2030,4.983
+Thailand,Large Hydro,2040,7.793
+Thailand,Large Hydro,2050,7.793
+Thailand,Large Hydro,2060,7.793
+Thailand,Lithium Ion Batteries,2040,7.049
+Thailand,Lithium Ion Batteries,2050,12.581
+Thailand,Lithium Ion Batteries,2060,15.291
+Thailand,Small Hydro,2040,0.408
+Thailand,Small Hydro,2050,0.508
+Thailand,Small Hydro,2060,0.608
+Thailand,Solar Floating,2040,2.725
+Thailand,Solar Floating,2050,2.725
+Thailand,Solar Floating,2060,2.725
+Thailand,Solar PV,2025,3.38
+Thailand,Solar PV,2030,8.708
+Thailand,Solar PV,2040,19.847
+Thailand,Solar PV,2050,19.847
+Thailand,Solar PV,2060,19.847
+Thailand,Tidal,2050,0.1
+Thailand,Tidal,2060,0.2
+Thailand,Waste,2040,0.975
+Thailand,Waste,2050,0.975
+Thailand,Waste,2060,0.975
+Thailand,Wave,2050,0.1
+Thailand,Wave,2060,0.2
+Thailand,Wind Onshore,2025,1.54
+Thailand,Wind Onshore,2030,1.54
+Thailand,Wind Onshore,2040,4.529
+Thailand,Wind Onshore,2050,4.529
+Thailand,Wind Onshore,2060,4.529
+Vietnam,Biomass Other,2025,0.992
+Vietnam,Biomass Other,2030,2.288
+Vietnam,Biomass Other,2040,6.549
+Vietnam,Biomass Other,2050,6.549
+Vietnam,Biomass Other,2060,6.549
+Vietnam,Coal Subcritical,2025,28.419
+Vietnam,Coal Subcritical,2030,28.609
+Vietnam,Coal Subcritical,2040,28.609
+Vietnam,Coal Subcritical,2050,28.609
+Vietnam,Coal Subcritical,2060,28.609
+Vietnam,Coal Supercritical,2030,6.707
+Vietnam,Coal Supercritical,2040,14.074
+Vietnam,Coal Supercritical,2050,24.916
+Vietnam,Coal Supercritical,2060,24.916
+Vietnam,Diesel,2025,1000000000000.0
+Vietnam,Diesel,2025,1.503
+Vietnam,Diesel,2030,1000000000000.0
+Vietnam,Diesel,2030,0.631
+Vietnam,Diesel,2040,1000000000000.0
+Vietnam,Diesel,2040,0.178
+Vietnam,Diesel,2050,1000000000000.0
+Vietnam,Diesel,2050,0.178
+Vietnam,Diesel,2060,1000000000000.0
+Vietnam,Diesel,2060,0.178
+Vietnam,Gas Combined Cycle,2025,9.372
+Vietnam,Gas Combined Cycle,2030,36.926
+Vietnam,Gas Combined Cycle,2040,39.926
+Vietnam,Gas Combined Cycle,2050,59.072
+Vietnam,Gas Combined Cycle,2060,109.072
+Vietnam,Gas Combined Cycle with CCS,2060,10.0
+Vietnam,Large Hydro,2025,25.043
+Vietnam,Large Hydro,2030,25.679
+Vietnam,Large Hydro,2040,27.963
+Vietnam,Large Hydro,2050,27.963
+Vietnam,Large Hydro,2060,27.963
+Vietnam,Lithium Ion Batteries,2025,10.46
+Vietnam,Lithium Ion Batteries,2030,16.3
+Vietnam,Lithium Ion Batteries,2040,39.582
+Vietnam,Lithium Ion Batteries,2050,96.12
+Vietnam,Lithium Ion Batteries,2060,96.12
+Vietnam,Nuclear LWR,2030,4.0
+Vietnam,Nuclear LWR,2040,7.867
+Vietnam,Nuclear LWR,2050,11.2
+Vietnam,Nuclear LWR,2060,14.0
+Vietnam,Pumped Hydro,2025,4.37
+Vietnam,Pumped Hydro,2030,6.0
+Vietnam,Pumped Hydro,2040,11.312
+Vietnam,Pumped Hydro,2050,21.327
+Vietnam,Pumped Hydro,2060,21.327
+Vietnam,Small Hydro,2030,3.9
+Vietnam,Small Hydro,2040,6.761
+Vietnam,Small Hydro,2050,7.837
+Vietnam,Small Hydro,2060,7.837
+Vietnam,Solar PV,2025,17.263
+Vietnam,Solar PV,2030,20.541
+Vietnam,Solar PV,2040,42.881
+Vietnam,Solar PV,2050,74.357
+Vietnam,Solar PV,2060,129.651
+Vietnam,Wind Offshore,2030,6.0
+Vietnam,Wind Offshore,2040,69.168
+Vietnam,Wind Offshore,2050,139.097
+Vietnam,Wind Offshore,2060,139.097
+Vietnam,Wind Onshore,2025,13.416
+Vietnam,Wind Onshore,2030,25.88
+Vietnam,Wind Onshore,2040,46.1
+Vietnam,Wind Onshore,2050,77.05
+Vietnam,Wind Onshore,2060,77.05

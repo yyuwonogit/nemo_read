@@ -90,6 +90,35 @@ NODE_REGION_LOCK = {
     re.compile(r"_MY(PE|SB|SR)$"): "Malaysia",
     re.compile(r"_ID(JW|SA|KA|East)$"): "Indonesia",
 }
+
+# §A.23 — the complement of the node lock: for a node-decomposed family, the
+# UN-SUFFIXED base branch is NOT an authoring slot in the decomposed home
+# region. The base branch exists in the global tree (§A.22 — structure is
+# region-invariant) but the home region's fleet lives exclusively on its
+# node variants; LEAP refuses a base-branch write under that region's view
+# ("no branch X in <region>" — live-confirmed 2026-07-07 on Biogas +
+# Geothermal Flash in Indonesia, aeo9_v0.69 sendback inject).
+# Derivation (2026-07-07): family has `_ID*`/`_MY*` variants in its home
+# region's own Export-Expressions walk (LEAP Input Transformation
+# [Indonesia].xlsx, aeo9_v0.67) AND the base branch is absent from that same
+# walk. Malaysia keeps base `Gas Turbine` (present in its walk — only the
+# MYPE node splits out), hence it is NOT in the Malaysia set.
+_CEGEN_PROCESSES = (
+    "Centralized Electricity Generation" + chr(92) + "Processes" + chr(92)
+)
+BASE_BRANCH_NODE_ONLY = {
+    "Indonesia": frozenset({
+        "Biogas", "Biomass Other", "Coal Subcritical", "Diesel",
+        "Gas Combined Cycle", "Gas Engine", "Gas Turbine",
+        "Geothermal Flash", "Large Hydro", "Small Hydro", "Solar PV",
+        "Unmet Load", "Wind Onshore",
+    }),
+    "Malaysia": frozenset({
+        "Biomass Other", "Coal Subcritical", "Diesel", "Gas Combined Cycle",
+        "Large Hydro", "Nuclear LWR", "Nuclear SFR", "Nuclear SMR",
+        "Solar PV", "Unmet Load", "Wind Onshore",
+    }),
+}
 _REGION_COLS = ("region", "ams", "Region", "AMS")
 # Third shape added 2026-07-05: export-style dumps and raw team drops carry the
 # full path in `branch_path` / `Branch Path`. Before that, such files were
@@ -104,19 +133,30 @@ _ALL_REGIONS_RE = re.compile(r"^ALL\s*\(")
 
 
 def find_region_lock_violations(csv_path) -> list[tuple[int, str, str, str]]:
-    """Rows authoring a region-locked node-variant in the wrong AMS.
+    """Rows violating the §A.21 node lock OR the §A.23 base-branch lock.
+
+    Class 1 (§A.21): a region-locked node-variant authored in the wrong AMS.
+    Scans EVERY component of the branch/node path — a `_MY*`/`_ID*` variant
+    is region-locked whether it is the leaf (process-node row) or an
+    ancestor (e.g. `…\\Processes\\Coal Subcritical_MYPE\\Feedstock Fuels\\
+    Coal Bituminous\\Carbon Dioxide`, a sub-branch row).
+
+    Class 2 (§A.23): the UN-SUFFIXED base branch of a node-decomposed family
+    authored FOR the decomposed home region itself (e.g. an Indonesia row on
+    `…Centralized Electricity Generation\\Processes\\Biogas` — Indonesia's
+    fleet lives only on `Biogas_ID*`; LEAP refuses the base write). Anchored
+    to the Centralized-generation Processes path (path shapes) or the bare
+    node name (wide shape) so fuel branches sharing the name (`Resources\\
+    …\\Diesel`) are NOT flagged. Rows already scoped to a node variant are
+    exempt from class 2 (their sub-branches may legitimately repeat the
+    family name, e.g. `Small Hydro_IDJW\\Feedstock Fuels\\Small Hydro`).
 
     Handles all three inject/handover CSV shapes: long (`ams`/`branch`), wide
     (`region`/`node`), and export-style (`region`/`branch_path`, incl. the
-    `Branch Path` header raw team drops use; BOM-tolerant). Scans EVERY
-    component of the branch/node path — a `_MY*`/`_ID*` variant is
-    region-locked whether it is the leaf (process-node row) or an ancestor
-    (e.g. `…\\Processes\\Coal Subcritical_MYPE\\Feedstock Fuels\\Coal
-    Bituminous\\Carbon Dioxide`, a sub-branch row). Rows whose region is the
-    dedup bucket `ALL (N regions)` are skipped (uniform inheritance default,
-    not a per-country authoring). Returns (row_number, matched_variant,
-    region, home_region) for every violating row; empty list means the CSV is
-    region-lock clean.
+    `Branch Path` header raw team drops use; BOM-tolerant). Rows whose region
+    is the dedup bucket `ALL (N regions)` are skipped (uniform inheritance
+    default, not a per-country authoring). Returns (row_number, matched_name,
+    region, home_or_correct_target) per violating row; empty list = clean.
     """
     bs = chr(92)
     # utf-8-sig: raw team drops ship with a UTF-8 BOM that would otherwise
@@ -128,19 +168,38 @@ def find_region_lock_violations(csv_path) -> list[tuple[int, str, str, str]]:
         nc = next((c for c in _NODE_COLS if c in hdr), None)
         if not rc or not nc:
             return []
+        wide = nc in ("node", "Node")
         out: list[tuple[int, str, str, str]] = []
         for i, row in enumerate(rdr, start=2):  # header is row 1
             region = (row.get(rc) or "").strip()
             if _ALL_REGIONS_RE.match(region):
                 continue
-            for comp in (row.get(nc) or "").split(bs):
+            path = (row.get(nc) or "").strip()
+            variant_scoped = False
+            for comp in path.split(bs):
                 comp = comp.strip()
                 hit = next((home for pat, home in NODE_REGION_LOCK.items()
                             if pat.search(comp)), None)
                 if hit is not None:
+                    variant_scoped = True
                     if region != hit:
                         out.append((i, comp, region, hit))
                     break  # one variant component per path
+            if variant_scoped:
+                continue
+            locked = BASE_BRANCH_NODE_ONLY.get(region)
+            if not locked:
+                continue
+            if wide:
+                base = path
+            else:
+                k = path.find(_CEGEN_PROCESSES)
+                if k < 0:
+                    continue
+                base = path[k + len(_CEGEN_PROCESSES):].split(bs)[0].strip()
+            if base in locked:
+                suffix = "_ID*" if region == "Indonesia" else "_MY*"
+                out.append((i, base, region, f"{base}{suffix} nodes"))
     return out
 
 
@@ -228,14 +287,15 @@ class CanonicalInjector:
                 f"{violations[0][0]}: {violations[0][1][:90]}..."
             )
 
-        # §A.21 — region-locked node-variant in the wrong AMS
+        # §A.21 node lock + §A.23 base-branch lock
         rl = find_region_lock_violations(csv_path)
         if rl:
             errors.append(
-                f"{len(rl)} row(s) author a region-locked node-variant in the "
-                f"wrong AMS (CLAUDE.md §A.21). First: row {rl[0][0]}: "
-                f"{rl[0][1]} in {rl[0][2]} (belongs only to {rl[0][3]}). "
-                f"Remove these rows from the canonical (see "
+                f"{len(rl)} row(s) violate the region/node authoring locks "
+                f"(CLAUDE.md §A.21 node-variant-in-wrong-AMS or §A.23 "
+                f"base-branch-in-decomposed-home-region). First: row "
+                f"{rl[0][0]}: {rl[0][1]} in {rl[0][2]} (belongs only to "
+                f"{rl[0][3]}). Remove these rows from the canonical (see "
                 f"find_region_lock_violations)."
             )
 
@@ -845,11 +905,26 @@ class CanonicalInjector:
             # historically guarded this via a per-row `before_push_row`
             # override; making it default-on means every sector is
             # safe. See CLAUDE.md §A on "ActiveRegion drift in inject".
+            #
+            # A subclass's group key may be a GROUP LABEL, not a real
+            # LEAP region (power's 3-cache 'Other' = the copper-plate
+            # batch). Passing the label to `leap.Regions()` raises a
+            # LEAP-side error dialog every run. Resolve to a real
+            # region first: the key itself when it matches a row's ams
+            # (default per-AMS grouping), else the group's first row
+            # ams; per-row `before_push_row` hooks refine further.
             if region:
-                try:
-                    leap.ActiveRegion = leap.Regions(region)
-                except Exception as exc:
-                    print(f"    WARN: could not set ActiveRegion={region!r}: {exc}")
+                row_regions = {(r.get("ams") or "").strip()
+                               for r in group_rows}
+                row_regions.discard("")
+                target = (region if region in row_regions
+                          else next(iter(sorted(row_regions)), None))
+                if target:
+                    try:
+                        leap.ActiveRegion = leap.Regions(target)
+                    except Exception as exc:
+                        print(f"    WARN: could not set "
+                              f"ActiveRegion={target!r}: {exc}")
             self._maybe_tick(
                 stage=("dry_region" if dry_run else "real_region"),
                 region=region,

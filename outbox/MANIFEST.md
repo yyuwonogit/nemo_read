@@ -81,3 +81,16 @@ where they exist.
   (un-suffixed) generation branches exist everywhere with the full variable
   panel, holding each single-grid country's plant data. The canon tree and
   records now include them; see `power_v069_reconciliation_20260707.zip`.
+
+## power_results_ras_v069_20260707.zip (2026-07-07)
+
+For the power team: full power-sector results of the SOLVED `aeo9_v0.69` RAS
+run (their 9,337-row sendback injected + 4 Maximum Capacity corrections that
+unblocked the calc). Contents: 5 result CSVs from `feas/NEMO_25 41.sqlite`
+(capacity / new builds / generation / unmet-load dispatch / fixed O&M),
+`maxcap_fix_delta_4rows.csv` (the corrections to carry forward — also the
+TEMPLATE for the new delta-payload convention), the final 9,337-row
+canonical as baseline, the LEAP-side xlsx result export, and
+`README_POWER_RESULTS_20260707.md` (findings: 5-node unmet load, biomass-
+gasification/H2 cost review ask, Max() reference-first authoring rule).
+Source dir: `inject/power/20260707/ship_results_20260707/`.

@@ -1,0 +1,114 @@
+[HB-START op=inject_power progress=inject\power\20260707\_progress_inject_power_20260707_134340.json]
+[power] ActiveArea (locked): 'aeo9_v0.69'
+[power] WARN: could not verify LEAP decimal separator regional (no decimal-bearing Interp found in sample). Proceeding; if decimal-bearing rows produce readback FAIL with comma-decimal evidence, abort and flip LEAP regional to period.
+[power] Will process 4 scenario(s) in ONE COM session: ['Current Accounts', 'Baseline Simulation', 'AMS Target Scenario', 'Regional Aspiration Scenario']
+[HB t=13:43:53 stage=com_dispatched area=aeo9_v0.69 scenarios_total=4 elapsed=0m12s]
+
+[power] ╔═══ SCENARIO: 'Current Accounts' ═══
+  ActiveScenario: 'Current Accounts'
+  scenario-column filter: 9337 -> 2236 rows (kept untagged + scenario='Current Accounts')
+  2236 rows across 3 region group(s)
+  [power] --blind mode — no tree cache for group 'Other'
+  [power] --blind mode — no tree cache for group 'Indonesia'
+  [power] --blind mode — no tree cache for group 'Malaysia'
+
+[power] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[power] ── Phase 3: REAL INJECT ──
+  --- region 'Other' (1380 rows) ---
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Capital Cost' = Interp(2023, 4520.0, 2030, 3980.0, 2050, 3090.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Fixed OM Cost' = Interp(2023, 104.0, 2030, 94.3, 2050, 71.9)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Variable OM Cost' = Interp(2023, 6.5, 2030, 5.98, 2050, 5.12)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Process Efficiency' = Interp(2023, 23.0, 2030, 23.0, 2050, 23.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Capital Cost' = Interp(2023, 4520.0, 2030, 3980.0, 2050, 3090.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Fixed OM Cost' = Interp(2023, 104.0, 2030, 94.3, 2050, 71.9)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Variable OM Cost' = Interp(2023, 6.5, 2030, 5.98, 2050, 5.12)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Process Efficiency' = Interp(2023, 23.0, 2030, 23.0, 2050, 23.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Capital Cost' = Interp(2023, 4520.0, 2030, 3980.0, 2050, 3090.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Fixed OM Cost' = Interp(2023, 104.0, 2030, 94.3, 2050, 71.9)
+[HB t=13:44:44 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Other region_idx=1/3 rows_in_region=1380 rows_written=10 row_in_region=10/1380 elapsed=1m04s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Variable OM Cost' = Interp(2023, 6.5, 2030, 5.98, 2050, 5.12)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Process Efficiency' = Interp(2023, 23.0, 2030, 23.0, 2050, 23.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Capital Cost' = Interp(2023, 4520.0, 2030, 3980.0, 2050, 3090.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Fixed OM Cost' = Interp(2023, 104.0, 2030, 94.3, 2050, 71.9)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Variable OM Cost' = Interp(2023, 6.5, 2030, 5.98, 2050, 5.12)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Process Efficiency' = Interp(2023, 23.0, 2030, 23.0, 2050, 23.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Capital Cost' = Interp(2023, 4520.0, 2030, 3980.0, 2050, 3090.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Fixed OM Cost' = Interp(2023, 104.0, 2030, 94.3, 2050, 71.9)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Variable OM Cost' = Interp(2023, 6.5, 2030, 5.98, 2050, 5.12)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Process Efficiency' = Interp(2023, 23.0, 2030, 23.0, 2050, 23.0)
+[HB t=13:45:36 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Other region_idx=1/3 rows_in_region=1380 rows_written=20 row_in_region=20/1380 elapsed=1m55s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Capital Cost' = Interp(2023, 4520.0, 2030, 3980.0, 2050, 3090.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Fixed OM Cost' = Interp(2023, 104.0, 2030, 94.3, 2050, 71.9)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Variable OM Cost' = Interp(2023, 6.5, 2030, 5.98, 2050, 5.12)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Process Efficiency' = Interp(2023, 23.0, 2030, 23.0, 2050, 23.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Capital Cost' = Interp(2023, 4520.0, 2030, 3980.0, 2050, 3090.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Fixed OM Cost' = Interp(2023, 104.0, 2030, 94.3, 2050, 71.9)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Variable OM Cost' = Interp(2023, 6.5, 2030, 5.98, 2050, 5.12)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Process Efficiency' = Interp(2023, 23.0, 2030, 23.0, 2050, 23.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Capital Cost' = Interp(2023, 4520.0, 2030, 3980.0, 2050, 3090.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Fixed OM Cost' = Interp(2023, 104.0, 2030, 94.3, 2050, 71.9)
+[HB t=13:46:34 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Other region_idx=1/3 rows_in_region=1380 rows_written=30 row_in_region=30/1380 elapsed=2m54s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Variable OM Cost' = Interp(2023, 6.5, 2030, 5.98, 2050, 5.12)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Process Efficiency' = Interp(2023, 23.0, 2030, 23.0, 2050, 23.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Capital Cost' = Interp(2023, 2450.0, 2030, 2080.0, 2050, 1840.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Fixed OM Cost' = Interp(2023, 110.58, 2030, 101.7, 2050, 88.5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Variable OM Cost' = Interp(2023, 0.13, 2030, 0.12, 2050, 0.1)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Process Efficiency' = Interp(2023, 35.0, 2030, 35.0, 2050, 35.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Capital Cost' = Interp(2023, 2450.0, 2030, 2080.0, 2050, 1840.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Fixed OM Cost' = Interp(2023, 110.58, 2030, 101.7, 2050, 88.5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Variable OM Cost' = Interp(2023, 0.13, 2030, 0.12, 2050, 0.1)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Process Efficiency' = Interp(2023, 35.0, 2030, 35.0, 2050, 35.0)
+[HB t=13:47:25 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Other region_idx=1/3 rows_in_region=1380 rows_written=40 row_in_region=40/1380 elapsed=3m45s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Capital Cost' = Interp(2023, 2450.0, 2030, 2080.0, 2050, 1840.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Fixed OM Cost' = Interp(2023, 110.58, 2030, 101.7, 2050, 88.5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Variable OM Cost' = Interp(2023, 0.13, 2030, 0.12, 2050, 0.1)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Process Efficiency' = Interp(2023, 35.0, 2030, 35.0, 2050, 35.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Capital Cost' = Interp(2023, 2450.0, 2030, 2080.0, 2050, 1840.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Fixed OM Cost' = Interp(2023, 110.58, 2030, 101.7, 2050, 88.5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Variable OM Cost' = Interp(2023, 0.13, 2030, 0.12, 2050, 0.1)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Process Efficiency' = Interp(2023, 35.0, 2030, 35.0, 2050, 35.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Capital Cost' = Interp(2023, 2450.0, 2030, 2080.0, 2050, 1840.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Fixed OM Cost' = Interp(2023, 110.58, 2030, 101.7, 2050, 88.5)
+[HB t=13:48:12 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Other region_idx=1/3 rows_in_region=1380 rows_written=50 row_in_region=50/1380 elapsed=4m32s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Variable OM Cost' = Interp(2023, 0.13, 2030, 0.12, 2050, 0.1)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Process Efficiency' = Interp(2023, 35.0, 2030, 35.0, 2050, 35.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Capital Cost' = Interp(2023, 2450.0, 2030, 2080.0, 2050, 1840.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Fixed OM Cost' = Interp(2023, 110.58, 2030, 101.7, 2050, 88.5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Variable OM Cost' = Interp(2023, 0.13, 2030, 0.12, 2050, 0.1)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Process Efficiency' = Interp(2023, 35.0, 2030, 35.0, 2050, 35.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Capital Cost' = Interp(2023, 2450.0, 2030, 2080.0, 2050, 1840.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Fixed OM Cost' = Interp(2023, 110.58, 2030, 101.7, 2050, 88.5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Variable OM Cost' = Interp(2023, 0.13, 2030, 0.12, 2050, 0.1)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Process Efficiency' = Interp(2023, 35.0, 2030, 35.0, 2050, 35.0)
+[HB t=13:49:00 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Other region_idx=1/3 rows_in_region=1380 rows_written=60 row_in_region=60/1380 elapsed=5m19s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Capital Cost' = Interp(2023, 2450.0, 2030, 2080.0, 2050, 1840.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Fixed OM Cost' = Interp(2023, 110.58, 2030, 101.7, 2050, 88.5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Variable OM Cost' = Interp(2023, 0.13, 2030, 0.12, 2050, 0.1)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Process Efficiency' = Interp(2023, 35.0, 2030, 35.0, 2050, 35.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Capital Cost' = Interp(2023, 3242, 2030, 3000, 2050, 2800)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Fixed OM Cost' = Interp(2023, 130, 2030, 120, 2050, 112)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Variable OM Cost' = Interp(2023, 5, 2030, 5, 2050, 5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Process Efficiency' = Interp(2023, 32, 2030, 33, 2050, 34)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Capital Cost' = Interp(2023, 3242, 2030, 3000, 2050, 2800)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Fixed OM Cost' = Interp(2023, 130, 2030, 120, 2050, 112)
+[HB t=13:49:48 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Other region_idx=1/3 rows_in_region=1380 rows_written=70 row_in_region=70/1380 elapsed=6m07s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Variable OM Cost' = Interp(2023, 5, 2030, 5, 2050, 5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Process Efficiency' = Interp(2023, 32, 2030, 33, 2050, 34)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Capital Cost' = Interp(2023, 3242, 2030, 3000, 2050, 2800)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Fixed OM Cost' = Interp(2023, 130, 2030, 120, 2050, 112)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Variable OM Cost' = Interp(2023, 5, 2030, 5, 2050, 5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Process Efficiency' = Interp(2023, 32, 2030, 33, 2050, 34)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Capital Cost' = Interp(2023, 3242, 2030, 3000, 2050, 2800)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Fixed OM Cost' = Interp(2023, 130, 2030, 120, 2050, 112)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Variable OM Cost' = Interp(2023, 5, 2030, 5, 2050, 5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Process Efficiency' = Interp(2023, 32, 2030, 33, 2050, 34)
+[HB t=13:50:37 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Other region_idx=1/3 rows_in_region=1380 rows_written=80 row_in_region=80/1380 elapsed=6m56s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Capital Cost' = Interp(2023, 3242, 2030, 3000, 2050, 2800)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Fixed OM Cost' = Interp(2023, 130, 2030, 120, 2050, 112)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Variable OM Cost' = Interp(2023, 5, 2030, 5, 2050, 5)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Process Efficiency' = Interp(2023, 32, 2030, 33, 2050, 34)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Capital Cost' = Interp(2023, 3242, 2030, 3000, 2050, 2800)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Fixed OM Cost' = Interp(2023, 130, 2030, 120, 2050, 112)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Variable OM Cost' = Interp(2023, 5, 2030, 5, 2050, 5)

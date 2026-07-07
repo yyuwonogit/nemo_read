@@ -56,7 +56,15 @@ class PowerInjector(CanonicalInjector):
     # group-cache override below.
 
     def group_by_region(self, rows: list[dict]) -> dict[str, list[dict]]:
-        """Group by GROUPS dict (Indonesia / Malaysia / Other), not by AMS."""
+        """Group by GROUPS dict (Indonesia / Malaysia / Other), not by AMS.
+
+        Rows within each group are sorted region-major (stable): branch-major
+        CSVs interleave regions row-by-row, and the per-row ActiveRegion flip
+        in `before_push_row` costs ~4s per REAL region switch in LEAP.
+        Measured 2026-07-07 on the v0.69 sendback: 766 switches across the
+        1,379-row CA 'Other' group = 4.75 s/row = 12h ETA; sorted, the group
+        switches region only 8 times.
+        """
         grouped: dict[str, list[dict]] = defaultdict(list)
         unknown: list[dict] = []
         for r in rows:
@@ -69,7 +77,8 @@ class PowerInjector(CanonicalInjector):
             sample = [(r.get("ams"), r.get("branch")) for r in unknown[:3]]
             print(f"[power] {len(unknown)} row(s) with unknown region; "
                   f"first 3: {sample}")
-        return dict(grouped)
+        return {g: sorted(members, key=lambda r: r.get("ams", ""))
+                for g, members in grouped.items()}
 
     def cache_for_region(self, leap, region: str) -> LeapTreeCache | None:
         """For power, `region` is a group name ('Indonesia'/'Malaysia'/
@@ -94,10 +103,26 @@ class PowerInjector(CanonicalInjector):
         """
         ams = row.get("ams")
         if ams:
+            # The SET is the expensive call (~4s real region switch); the
+            # READ is cheap. Skip when LEAP is already on the row's region
+            # — and if the read comes back blank/garbage (§11.1), fall
+            # through to the set, which is always safe.
+            try:
+                if leap.ActiveRegion.Name == ams:
+                    return
+            except Exception:
+                pass
             try:
                 leap.ActiveRegion = leap.Regions(ams)
-            except Exception:
-                pass  # downstream branch.Variable() will fail loudly
+            except Exception as exc:
+                # A silent failure here means the write lands under a
+                # STALE ActiveRegion — the §A.19 wrong-region-write
+                # corruption. Abort loudly instead.
+                raise RuntimeError(
+                    f"[power] could not set ActiveRegion={ams!r} for "
+                    f"{row.get('branch','?')} . {row.get('variable','?')}"
+                    f": {exc}"
+                ) from exc
 
 
 if __name__ == "__main__":

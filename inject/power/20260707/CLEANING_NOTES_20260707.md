@@ -76,3 +76,37 @@ the next send so their register closes.
 - Interp separator pre-flight: 0 bad rows on the canonical.
 - pytest test_region_lock + test_interp_separator: pass (sole failure is the
   pre-existing, documented inject/power/20260608/patched_targets.csv item).
+
+---
+
+## Post-inject calc fixes — 2026-07-07 (MaxCap-vs-ExoCap accounting)
+
+The RAS calc failed on `Maximum capacity constraint is less than exogenous
+capacity`. Full offline accounting (all techs x 10 AMS, RAS-effective,
+layered over v0.67 raw + our 20260507 injects + v0.68/69 edits + this
+payload; scripts `_probe_maxcap_accounting*.py`) found **4 violations** —
+the payload's numeric caps colliding with additions/fleet the area already
+carried (3 from our own 20260507 ATS additions inherited into RAS; 1 where
+the existing fleet itself exceeds the cap):
+
+| Region | Branch | Cap | ExoCap peak | Fixed expression (applied in UI + this CSV) |
+|---|---|---|---|---|
+| Cambodia | Wind Onshore | 1,500 | 3,349 | `Max(Exogenous Capacity[MW], 1500.0) ? IES/ADB` |
+| Philippines | Small Hydro | 1,874 | 5,052 | `Max(Exogenous Capacity[MW], 1874.0) ? PH DOE` |
+| Vietnam | Wind Onshore | 24,000 | 80,970 | `Max(Exogenous Capacity[MW], 24000.0) ? World Bank` |
+| Malaysia | Large Hydro_MYPE | 3,100 | 3,495 | `Max(Exogenous Capacity[MW], 3100.0) ? IRENA` |
+
+User applied the 4 expressions manually in the LEAP UI (2026-07-07); this
+CSV (+ the cleaned sibling) updated to match — repo now mirrors the area.
+
+**Note for the power team:** Large Hydro_MYPE confirms the modeller's
+freeze-at-fleet instinct — the MYPE fleet trajectory (3,190 -> 3,495 MW)
+exceeds the IRENA 3,100 cap; the Max() wrapper reconciles both readings.
+Vietnam Wind Onshore's 24 GW cap vs the 81 GW additions trajectory in the
+area (our 20260507 ATS layer) deserves a content review — the wrapper
+unblocks the calc but the two numbers tell different build stories.
+
+**LEAP syntax trap (cost one calc cycle):** `Max(1874.0, Exogenous
+Capacity[MW])` FAILS — a numeric FIRST argument is parsed as a (year,
+value) pair list ("Invalid value parameter ... for year 1874"). Reference
+first, numeric second is the calc-proven form everywhere in this area.

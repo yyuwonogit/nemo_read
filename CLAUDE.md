@@ -306,7 +306,11 @@ How to apply:
       `tests/test_public_api_completeness.py` — §14 __all__ completeness
       `tests/test_claude_md_rules_enforced.py` — §10.2 version sync,
                                                 §A.11 Unlimited-on-LB
-      `tests/test_region_lock.py`            — §A.21 node region-lock
+      `tests/test_region_lock.py`            — §A.21 node region-lock,
+                                                §A.22 base-branch
+                                                region-invariance,
+                                                §A.23 base-branch
+                                                authoring lock
   - **When adding a NEW rule** to this §A list that's mechanically
     enforceable, either extend an existing tripwire file or add a
     new one. Don't merge the rule prose without the test.
@@ -794,6 +798,71 @@ How to apply:
 See also: `memory/project_20260607_drop_review.md` for the burn
 record and the pending correction list.
 
+**A.23 — Structure truth is OURS; teams own CONTENT only. For a
+node-decomposed family, the un-suffixed base branch is NOT an
+authoring slot in the decomposed home region — inject rows there are
+structure errors: remove them and note the mistake.**
+
+Canon principle (user directive 2026-07-07): *"we hold the principle
+of 'WE HOLD THE TRUTH OF THE LEAP STRUCTURE (this includes variables,
+units, etc)' and technical team only hold authority over content."*
+Every component of an incoming inject payload — branch paths, region
+pairing, variables, units — is validated against the raw
+Export-Expressions extracts (§2.6 canon); only the VALUES are the
+team's call. A payload row the raw extract can't back does not get
+negotiated, it gets removed.
+
+The complement of §A.21 (which locks `_ID*`/`_MY*` nodes OUT of
+foreign regions): this rule locks the BASE branch of a decomposed
+family OUT of its home region. The base branch exists in the global
+tree (§A.22 — structure is region-invariant) and copper-plate
+regions author on it, but Indonesia's/Malaysia's fleet for a
+decomposed family lives exclusively on the node variants — the base
+branch is not writable under that region's view.
+
+Burned 2026-07-07: the power sendback (aeo9_v0.69 cycle) carried 84
+Indonesia rows on base `Biogas`/`Gas Engine`/`Gas Turbine`/
+`Geothermal Flash` (fleet vars, all scenarios). Our 20260707 cleaning
+passed them — region-lock only knew the §A.21 direction — and LEAP
+failed the inject live: *"there is no branch Biogas / Geothermal
+Flash in Indonesia."* The raw Indonesia walk (58,033 branch cells)
+has ZERO base-branch rows for those families; the payload was never
+validated against it. Regions inject alphabetically, so earlier
+regions likely committed before the failure — re-run after cleaning
+is safe (writes are idempotent overwrites).
+
+How to apply — mechanically enforced (§A.17):
+  - **Lock map:** `nemo_read.BASE_BRANCH_NODE_ONLY` — 13 Indonesia +
+    11 Malaysia families, derived from the v0.67 raw walks (family
+    has node variants in its home walk AND base absent from that
+    walk). Malaysia keeps base `Gas Turbine` (only `_MYPE` splits
+    out) — it is NOT in the Malaysia set.
+  - **Checker:** `find_region_lock_violations` class 2 — flags a row
+    whose region is Indonesia/Malaysia on a locked base branch,
+    anchored to `Centralized Electricity Generation\Processes\` for
+    path shapes (so `Resources\…\Diesel` fuel rows are NOT flagged)
+    and bare-name for wide `node`-column drops. Node-scoped rows are
+    exempt (their sub-branches legitimately repeat the family name,
+    e.g. `Small Hydro_IDJW\Feedstock Fuels\Small Hydro`).
+  - **Pre-flight (sealed):** same `_preflight_csv` gate as §A.21 —
+    a violating canonical ABORTS the inject before any COM write.
+  - **Tripwire:** [tests/test_region_lock.py](tests/test_region_lock.py)
+    §A.23 block — unit tests + repo scan; reference dumps and the
+    v0.42-era placeholder archive carry documented, self-cleaning
+    exemptions.
+  - **First application 2026-07-07:** 84 rows out of both 20260707
+    sendback payloads (9,421 → 9,337), 16 out of
+    `20260705/exo_capacity_canonical.csv`, 4 out of the 20260507
+    from-PowerTeam archive. Three variables existed ONLY on the
+    removed base rows (`Capacity Retirement`, `Endogenous Capacity`,
+    `Maximum Capacity`) — flagged back to the power team to
+    re-author per node if real. See
+    [inject/power/20260707/BASE_BRANCH_REMOVED_NOTES_20260707.md](inject/power/20260707/BASE_BRANCH_REMOVED_NOTES_20260707.md).
+
+See also: `memory/reference_node_region_lock.md` (§A.21 + §A.23
+together); §11.1 region-scoped-export rule for why per-region
+visibility differs while the tree stays global.
+
 ---
 
 ## §0. Starting cold? Read in this order
@@ -1116,6 +1185,19 @@ trusted publishing. Sibling repos look the same; reuse the pattern.
 > **Canonical step-by-step:** [docs/FLOWS.md §1](docs/FLOWS.md).
 > This section retains the prose rationale; the doc has the numbered
 > sequence with cross-references.
+
+> **DELTA-PAYLOAD DOCTRINE (user directive 2026-07-07):** *"from now
+> on, we will only inject what we edit, not all."* Every inject cycle
+> pushes ONLY the rows that changed since the last verified push — not
+> the full canonical. The full canonical remains the BASELINE (kept
+> current in the repo, mirrors the area); each cycle authors a small
+> delta CSV against it (template:
+> `inject/power/20260707/ship_results_20260707/maxcap_fix_delta_4rows.csv`
+> — same columns as the canonical, edited rows only). Team drops are
+> requested as deltas too (power team informed 2026-07-07). Rationale:
+> the full 9,337-row re-push costs ~33 min of COM time and re-writes
+> 9,300 unchanged cells for a 4-cell fix; deltas also make readback
+> verification exhaustive instead of sampled.
 
 When the user asks you to "fix the bioenergy CSV" or "add a new fossil
 import-cost trajectory," this is the loop:
@@ -2011,6 +2093,24 @@ record. Operational signatures:
   - LP coefficient ratio ≥ 10⁹ breaches CPLEX's typical numerical
     tolerance — even when the constraint is non-binding, it floods
     the basis with precision noise.
+
+### 11.2e Max()/Min() numeric-first argument is parsed as a YEAR (pair-list trap)
+`Max(1874.0, Exogenous Capacity[MW])` FAILS at calc with
+`Invalid value parameter "_vr(...)" for year 1874` — a numeric FIRST
+argument to `Max()`/function calls on year-varying variables triggers
+LEAP's (year, value) pair-list parse: the numeric becomes a YEAR, the
+next argument its "value parameter". Burned 2026-07-07 (aeo9_v0.69,
+Philippines Small Hydro Maximum Capacity, cost one calc cycle).
+**Author reference-first, numeric-last** — the calc-proven forms across
+the area: `Max(Exogenous Capacity[MW], 1874.0)`,
+`Max(Existing Capacity[MW] + Capacity Additions[MW] - Capacity
+Retirement[MW], 0)`, `Max(Value(2022) - Capacity Retirement[MW], 0)`.
+(`Min(10.92, Maximum Availability)` in §11.2c survives because its
+context/magnitude doesn't look year-like — don't rely on that; keep
+numeric-last everywhere.) Also the standard resolution for LEAP's
+"Maximum capacity constraint is less than exogenous capacity" error is
+exactly this wrapper: `Max(Exogenous Capacity[MW], <numeric cap>)` —
+committed fleet always allowed, cap binds optimizer builds only.
 
 ### 11.4 Policy-constraint feasibility (blend mandates + Unmet Load + trade routes)
 A tied set — all three must be configured together for any model

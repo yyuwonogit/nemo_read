@@ -441,6 +441,67 @@ class TestReadbackVerify:
         assert inj.readback_verify(leap, committed, rows_per_region=1) is True
 
 
+class _RecordingStrictRegions:
+    """Emulates LEAP: raises on a region name that doesn't exist (a group
+    LABEL like power's 'Other' fires a LEAP error dialog), records calls."""
+
+    KNOWN = {
+        "Brunei", "Cambodia", "Indonesia", "Laos", "Malaysia", "Myanmar",
+        "Philippines", "Singapore", "Thailand", "Timor Leste", "Vietnam",
+        "Base Template",
+    }
+
+    def __init__(self):
+        self.calls: list[str] = []
+
+    def __call__(self, name):
+        self.calls.append(name)
+        if name not in self.KNOWN:
+            raise RuntimeError(f"LEAP error: no region named {name!r}")
+        return f"<region:{name}>"
+
+
+class TestGroupLabelNeverReachesLeapRegions:
+    """Regression (2026-07-07): power's 3-cache group key 'Other' was passed
+    verbatim to `leap.Regions()` at every group transition in
+    `_execute_phase`, firing a LEAP error dialog each run. The framework
+    must resolve a group label to a real member region before the COM call."""
+
+    def _run_phase(self, groups):
+        import argparse
+        from collections import Counter
+
+        class Probe(CanonicalInjector):
+            SECTOR_NAME = "probe"
+
+        leap = _StubLeap({"B1": _StubBranch({"V": "x"})})
+        leap.Regions = _RecordingStrictRegions()
+        args = argparse.Namespace(dry_run=True, fail_fast=False, blind=True)
+        inj = Probe()
+        counts, failures, committed = inj._execute_phase(
+            leap, groups, caches={}, args=args, dry_run=True)
+        return leap, counts
+
+    def test_group_label_resolved_to_member_region(self):
+        rows = [
+            {"ams": "Brunei", "branch": "B1", "variable": "V",
+             "expression": "x"},
+            {"ams": "Vietnam", "branch": "B1", "variable": "V",
+             "expression": "x"},
+        ]
+        leap, counts = self._run_phase({"Other": rows})
+        assert "Other" not in leap.Regions.calls
+        assert leap.Regions.calls[0] == "Brunei"  # first member, sorted
+        assert counts["dry_run"] == 2
+
+    def test_real_region_key_passed_through_unchanged(self):
+        rows = [{"ams": "Cambodia", "branch": "B1", "variable": "V",
+                 "expression": "x"}]
+        leap, counts = self._run_phase({"Cambodia": rows})
+        assert leap.Regions.calls[0] == "Cambodia"
+        assert counts["dry_run"] == 1
+
+
 # ---------------------------------------------------------------------------
 # 7. compare_expressions semantics
 # ---------------------------------------------------------------------------

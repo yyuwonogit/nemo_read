@@ -1,0 +1,705 @@
+region,technology,fuel,year,production
+Brunei,Coal IGCC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.72
+Brunei,Coal IGCC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.01
+Brunei,Coal IGCC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.64
+Brunei,Coal IGCC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.63
+Brunei,Coal IGCC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.45
+Brunei,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,4.23
+Brunei,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,6.38
+Brunei,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,10.26
+Brunei,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,23.62
+Brunei,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,37.92
+Brunei,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,7.61
+Brunei,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,6.7
+Brunei,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,5.85
+Brunei,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,6.91
+Brunei,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,6.13
+Brunei,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.18
+Brunei,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.12
+Brunei,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.23
+Brunei,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,1.4
+Brunei,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,5.72
+Brunei,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,5.72
+Cambodia,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.02
+Cambodia,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.26
+Cambodia,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,1.19
+Cambodia,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,7.23
+Cambodia,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,6.2
+Cambodia,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,17.59
+Cambodia,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,10.75
+Cambodia,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,11.26
+Cambodia,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,13.09
+Cambodia,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,11.79
+Cambodia,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2030,66.27
+Cambodia,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2040,61.77
+Cambodia,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2050,56.17
+Cambodia,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2060,49.15
+Cambodia,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,4.29
+Cambodia,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,12.42
+Cambodia,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,48.69
+Cambodia,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,75.81
+Cambodia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.17
+Cambodia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.17
+Cambodia,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,4.2
+Cambodia,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,17.45
+Cambodia,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,28.0
+Cambodia,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,36.29
+Cambodia,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,38.71
+Cambodia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.98
+Cambodia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,2.63
+Cambodia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,2.63
+Cambodia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,2.63
+Cambodia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,2.63
+Cambodia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,8.72
+Cambodia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,23.2
+Cambodia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,23.0
+Cambodia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,19.89
+Cambodia,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,23.1
+Cambodia,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,52.07
+Cambodia,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,59.43
+Cambodia,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,59.43
+Cambodia,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.92
+Cambodia,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,11.76
+Cambodia,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,11.76
+Cambodia,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,11.76
+Indonesia,Biogas_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.18
+Indonesia,Biogas_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.45
+Indonesia,Biogas_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.6
+Indonesia,Biogas_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,8.62
+Indonesia,Biogas_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,34.09
+Indonesia,Biogas_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,52.58
+Indonesia,Biogas_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,62.84
+Indonesia,Biogas_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,20.09
+Indonesia,Biogas_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,85.78
+Indonesia,Biogas_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,85.78
+Indonesia,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2030,3.28
+Indonesia,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,6.7
+Indonesia,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2040,92.54
+Indonesia,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,82.38
+Indonesia,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2050,4912.61
+Indonesia,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,82.38
+Indonesia,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2060,8788.87
+Indonesia,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,82.38
+Indonesia,Biomass Other_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.69
+Indonesia,Biomass Other_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.7
+Indonesia,Biomass Other_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.7
+Indonesia,Biomass Other_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.7
+Indonesia,Biomass Other_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,5.24
+Indonesia,Biomass Other_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,5.61
+Indonesia,Biomass Other_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,5.61
+Indonesia,Biomass Other_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,5.61
+Indonesia,Biomass Other_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,5.31
+Indonesia,Biomass Other_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,10.77
+Indonesia,Biomass Other_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,10.8
+Indonesia,Biomass Other_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,10.8
+Indonesia,Biomass Other_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,10.8
+Indonesia,Biomass Other_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,57.87
+Indonesia,Biomass Other_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,68.42
+Indonesia,Biomass Other_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,68.42
+Indonesia,Biomass Other_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,68.42
+Indonesia,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,70.16
+Indonesia,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,139.77
+Indonesia,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,130.3
+Indonesia,Coal Subcritical_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,21.6
+Indonesia,Coal Subcritical_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,112.44
+Indonesia,Coal Subcritical_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,192.47
+Indonesia,Coal Subcritical_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,199.33
+Indonesia,Coal Subcritical_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,199.33
+Indonesia,Coal Subcritical_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,183.99
+Indonesia,Coal Subcritical_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,119.21
+Indonesia,Coal Subcritical_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,412.43
+Indonesia,Coal Subcritical_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,772.13
+Indonesia,Coal Subcritical_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,772.13
+Indonesia,Coal Subcritical_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,11.09
+Indonesia,Coal Subcritical_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,60.29
+Indonesia,Coal Subcritical_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,65.27
+Indonesia,Coal Subcritical_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,65.27
+Indonesia,Coal Subcritical_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,65.27
+Indonesia,Coal Subcritical_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,38.86
+Indonesia,Coal Subcritical_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,40.07
+Indonesia,Coal Subcritical_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,97.06
+Indonesia,Coal Subcritical_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,166.67
+Indonesia,Coal Subcritical_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,166.67
+Indonesia,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,89.8
+Indonesia,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,151.35
+Indonesia,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,196.83
+Indonesia,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,196.83
+Indonesia,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,196.83
+Indonesia,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2030,378.7
+Indonesia,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2040,170.02
+Indonesia,Diesel_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,3.01
+Indonesia,Diesel_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,26.82
+Indonesia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,59.57
+Indonesia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,514.67
+Indonesia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,836.33
+Indonesia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,965.0
+Indonesia,Gas Combined Cycle_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,5.22
+Indonesia,Gas Combined Cycle_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,22.97
+Indonesia,Gas Combined Cycle_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,22.97
+Indonesia,Gas Combined Cycle_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,22.97
+Indonesia,Gas Combined Cycle_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,22.97
+Indonesia,Gas Combined Cycle_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,83.17
+Indonesia,Gas Combined Cycle_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,322.47
+Indonesia,Gas Combined Cycle_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,438.95
+Indonesia,Gas Combined Cycle_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,438.95
+Indonesia,Gas Combined Cycle_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,438.95
+Indonesia,Gas Combined Cycle_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.83
+Indonesia,Gas Combined Cycle_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,4.47
+Indonesia,Gas Combined Cycle_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,4.47
+Indonesia,Gas Combined Cycle_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,4.47
+Indonesia,Gas Combined Cycle_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,4.47
+Indonesia,Gas Combined Cycle_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,21.07
+Indonesia,Gas Combined Cycle_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,45.17
+Indonesia,Gas Combined Cycle_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,63.47
+Indonesia,Gas Combined Cycle_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,63.47
+Indonesia,Gas Combined Cycle_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,63.47
+Indonesia,Gas Engine_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,17.44
+Indonesia,Gas Engine_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,24.1
+Indonesia,Gas Engine_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,24.97
+Indonesia,Gas Engine_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,24.97
+Indonesia,Gas Engine_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,24.97
+Indonesia,Gas Engine_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.46
+Indonesia,Gas Engine_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.67
+Indonesia,Gas Engine_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,12.35
+Indonesia,Gas Engine_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,12.35
+Indonesia,Gas Engine_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,12.35
+Indonesia,Gas Engine_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,6.06
+Indonesia,Gas Engine_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,23.35
+Indonesia,Gas Engine_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,25.22
+Indonesia,Gas Engine_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,25.22
+Indonesia,Gas Engine_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,25.22
+Indonesia,Gas Engine_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,6.74
+Indonesia,Gas Engine_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,31.82
+Indonesia,Gas Engine_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,71.36
+Indonesia,Gas Engine_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,71.36
+Indonesia,Gas Engine_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,71.36
+Indonesia,Gas Turbine_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.01
+Indonesia,Gas Turbine_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,3.9
+Indonesia,Gas Turbine_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,7.06
+Indonesia,Geothermal Flash_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.25
+Indonesia,Geothermal Flash_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,6.34
+Indonesia,Geothermal Flash_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,18.95
+Indonesia,Geothermal Flash_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,18.95
+Indonesia,Geothermal Flash_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,18.95
+Indonesia,Geothermal Flash_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,60.6
+Indonesia,Geothermal Flash_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,163.09
+Indonesia,Geothermal Flash_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,163.09
+Indonesia,Geothermal Flash_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,163.09
+Indonesia,Geothermal Flash_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,9.36
+Indonesia,Geothermal Flash_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,38.69
+Indonesia,Geothermal Flash_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,92.36
+Indonesia,Geothermal Flash_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,92.36
+Indonesia,Geothermal Flash_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,92.36
+Indonesia,Geothermal ORC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,8.0
+Indonesia,Geothermal ORC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,8.0
+Indonesia,Geothermal ORC,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,8.0
+Indonesia,H2 Fuel Cell,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,2.59
+Indonesia,H2 Fuel Cell,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,1791.54
+Indonesia,H2 Fuel Cell,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,3323.51
+Indonesia,Large Hydro_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,92.31
+Indonesia,Large Hydro_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,192.58
+Indonesia,Large Hydro_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,258.97
+Indonesia,Large Hydro_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,301.62
+Indonesia,Large Hydro_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,197.26
+Indonesia,Large Hydro_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,329.74
+Indonesia,Large Hydro_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,75.82
+Indonesia,Large Hydro_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,16.31
+Indonesia,Large Hydro_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,10.03
+Indonesia,Large Hydro_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,21.0
+Indonesia,Large Hydro_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,46.68
+Indonesia,Large Hydro_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,60.5
+Indonesia,Large Hydro_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,144.4
+Indonesia,Large Hydro_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,240.89
+Indonesia,Large Hydro_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,414.61
+Indonesia,Large Hydro_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,491.96
+Indonesia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.48
+Indonesia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,7.94
+Indonesia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,32.21
+Indonesia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,30.68
+Indonesia,Nuclear SMR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,14.35
+Indonesia,Nuclear SMR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,14.35
+Indonesia,Nuclear SMR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,14.35
+Indonesia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.89
+Indonesia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,18.35
+Indonesia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,101.31
+Indonesia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,163.71
+Indonesia,Small Hydro_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,35.32
+Indonesia,Small Hydro_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,61.02
+Indonesia,Small Hydro_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,69.12
+Indonesia,Small Hydro_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,33.6
+Indonesia,Small Hydro_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,39.22
+Indonesia,Small Hydro_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,62.05
+Indonesia,Small Hydro_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,11.77
+Indonesia,Small Hydro_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,7.37
+Indonesia,Small Hydro_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.49
+Indonesia,Small Hydro_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.31
+Indonesia,Small Hydro_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,2.35
+Indonesia,Small Hydro_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.08
+Indonesia,Small Hydro_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.11
+Indonesia,Small Hydro_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,49.45
+Indonesia,Small Hydro_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,83.65
+Indonesia,Small Hydro_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,128.1
+Indonesia,Small Hydro_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,167.99
+Indonesia,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,16.75
+Indonesia,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,44.66
+Indonesia,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,55.83
+Indonesia,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,55.83
+Indonesia,Solar PV_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.02
+Indonesia,Solar PV_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,25.69
+Indonesia,Solar PV_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,58.25
+Indonesia,Solar PV_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,63.57
+Indonesia,Solar PV_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,63.57
+Indonesia,Solar PV_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,15.76
+Indonesia,Solar PV_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,35.81
+Indonesia,Solar PV_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,40.58
+Indonesia,Solar PV_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,40.58
+Indonesia,Solar PV_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.09
+Indonesia,Solar PV_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,7.95
+Indonesia,Solar PV_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,17.96
+Indonesia,Solar PV_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,18.51
+Indonesia,Solar PV_IDKA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,18.51
+Indonesia,Solar PV_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.51
+Indonesia,Solar PV_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,14.58
+Indonesia,Solar PV_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,32.93
+Indonesia,Solar PV_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,33.45
+Indonesia,Solar PV_IDSA,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,33.45
+Indonesia,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,37.54
+Indonesia,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,98.09
+Indonesia,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,152.58
+Indonesia,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,182.86
+Indonesia,VRB Flow Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,23.45
+Indonesia,VRB Flow Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,51.25
+Indonesia,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.58
+Indonesia,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,5.55
+Indonesia,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,5.55
+Indonesia,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,5.55
+Indonesia,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,35.95
+Indonesia,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,95.87
+Indonesia,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,149.8
+Indonesia,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,179.76
+Indonesia,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,83.26
+Indonesia,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,222.01
+Indonesia,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,323.68
+Indonesia,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,323.68
+Indonesia,Wind Onshore_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.9
+Indonesia,Wind Onshore_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,33.07
+Indonesia,Wind Onshore_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,83.19
+Indonesia,Wind Onshore_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,83.19
+Indonesia,Wind Onshore_IDEast,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,83.19
+Indonesia,Wind Onshore_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.02
+Indonesia,Wind Onshore_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.32
+Indonesia,Wind Onshore_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.81
+Indonesia,Wind Onshore_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.81
+Indonesia,Wind Onshore_IDJW,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.81
+Laos,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.03
+Laos,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.09
+Laos,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.06
+Laos,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.04
+Laos,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,25.33
+Laos,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,35.37
+Laos,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,29.08
+Laos,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,20.77
+Laos,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,12.46
+Laos,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2030,32.98
+Laos,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2040,32.8
+Laos,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2050,32.48
+Laos,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2060,32.09
+Laos,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,37.92
+Laos,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,51.8
+Laos,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,68.65
+Laos,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,116.98
+Laos,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,160.31
+Laos,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,6.09
+Laos,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,6.15
+Laos,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,2.13
+Laos,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,4.03
+Laos,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,5.49
+Laos,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,5.49
+Laos,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,3.68
+Laos,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,7.03
+Laos,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,7.03
+Laos,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,7.03
+Laos,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.63
+Laos,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,2.61
+Laos,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,2.61
+Laos,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,2.61
+Malaysia,Biogas,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.94
+Malaysia,Biogas,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,12.86
+Malaysia,Biogas,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,13.14
+Malaysia,Biogas,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,13.69
+Malaysia,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2030,1.3
+Malaysia,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.49
+Malaysia,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2040,29.87
+Malaysia,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,18.2
+Malaysia,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2050,720.53
+Malaysia,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,37.57
+Malaysia,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2060,1375.05
+Malaysia,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,44.47
+Malaysia,Biomass Other_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.57
+Malaysia,Biomass Other_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,2.92
+Malaysia,Biomass Other_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,23.45
+Malaysia,Biomass Other_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,34.09
+Malaysia,Biomass Other_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,34.09
+Malaysia,Biomass Other_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.25
+Malaysia,Biomass Other_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.37
+Malaysia,Biomass Other_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.48
+Malaysia,Biomass Other_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.47
+Malaysia,Biomass Other_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.32
+Malaysia,Biomass Other_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.11
+Malaysia,Biomass Other_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.17
+Malaysia,Biomass Other_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.17
+Malaysia,Biomass Other_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.17
+Malaysia,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,46.4
+Malaysia,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,153.11
+Malaysia,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,239.29
+Malaysia,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,253.15
+Malaysia,Coal Subcritical_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,148.57
+Malaysia,Coal Subcritical_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,130.6
+Malaysia,Coal Subcritical_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,17.0
+Malaysia,Coal Ultrasupercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,41.39
+Malaysia,Coal Ultrasupercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,61.53
+Malaysia,Coal Ultrasupercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,87.82
+Malaysia,Coal Ultrasupercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,87.82
+Malaysia,Coal Ultrasupercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,87.82
+Malaysia,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2030,147.49
+Malaysia,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2040,124.8
+Malaysia,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2050,64.44
+Malaysia,Diesel_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.1
+Malaysia,Diesel_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,1.44
+Malaysia,Diesel_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,1.85
+Malaysia,Diesel_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,1.85
+Malaysia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.31
+Malaysia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,136.16
+Malaysia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,346.77
+Malaysia,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,545.14
+Malaysia,Gas Combined Cycle_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,180.49
+Malaysia,Gas Combined Cycle_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,258.09
+Malaysia,Gas Combined Cycle_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,773.84
+Malaysia,Gas Combined Cycle_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,1098.21
+Malaysia,Gas Combined Cycle_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,1233.09
+Malaysia,Gas Combined Cycle_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,22.74
+Malaysia,Gas Combined Cycle_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,42.85
+Malaysia,Gas Combined Cycle_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,134.75
+Malaysia,Gas Combined Cycle_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,205.13
+Malaysia,Gas Combined Cycle_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,232.54
+Malaysia,Gas Combined Cycle_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,17.52
+Malaysia,Gas Combined Cycle_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,29.45
+Malaysia,Gas Combined Cycle_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,116.94
+Malaysia,Gas Combined Cycle_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,187.97
+Malaysia,Gas Combined Cycle_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,210.44
+Malaysia,Geothermal Flash,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.69
+Malaysia,Geothermal Flash,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.8
+Malaysia,Geothermal Flash,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.82
+Malaysia,Geothermal Flash,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.85
+Malaysia,H2 Fuel Cell,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,73.05
+Malaysia,H2 Fuel Cell,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,375.61
+Malaysia,H2 Fuel Cell,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,607.13
+Malaysia,Large Hydro_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,108.03
+Malaysia,Large Hydro_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,110.22
+Malaysia,Large Hydro_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,110.22
+Malaysia,Large Hydro_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,110.22
+Malaysia,Large Hydro_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.67
+Malaysia,Large Hydro_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,7.66
+Malaysia,Large Hydro_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,9.14
+Malaysia,Large Hydro_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,9.41
+Malaysia,Large Hydro_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,9.76
+Malaysia,Large Hydro_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,27.16
+Malaysia,Large Hydro_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,144.95
+Malaysia,Large Hydro_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,188.97
+Malaysia,Large Hydro_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,192.03
+Malaysia,Large Hydro_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,199.41
+Malaysia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,22.5
+Malaysia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,22.5
+Malaysia,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,22.5
+Malaysia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,31.46
+Malaysia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,31.46
+Malaysia,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,29.29
+Malaysia,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,7.17
+Malaysia,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,32.84
+Malaysia,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,51.35
+Malaysia,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,51.35
+Malaysia,Solar PV_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,121.89
+Malaysia,Solar PV_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,348.17
+Malaysia,Solar PV_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,557.57
+Malaysia,Solar PV_MYPE,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,557.57
+Malaysia,Solar PV_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.02
+Malaysia,Solar PV_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.04
+Malaysia,Solar PV_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,11.8
+Malaysia,Solar PV_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,42.96
+Malaysia,Solar PV_MYSB,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,52.99
+Malaysia,Solar PV_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.18
+Malaysia,Solar PV_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,7.09
+Malaysia,Solar PV_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,18.91
+Malaysia,Solar PV_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,23.64
+Malaysia,Solar PV_MYSR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,23.64
+Malaysia,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.19
+Malaysia,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,7.44
+Malaysia,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,13.31
+Malaysia,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,18.16
+Malaysia,VRB Flow Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,30.24
+Malaysia,VRB Flow Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,75.24
+Malaysia,VRB Flow Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,45.0
+Malaysia,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,5.28
+Malaysia,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,5.65
+Malaysia,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,7.65
+Malaysia,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.19
+Malaysia,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,7.36
+Malaysia,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,13.17
+Malaysia,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,17.98
+Malaysia,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,2.11
+Malaysia,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,9.72
+Malaysia,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,9.72
+Malaysia,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,9.72
+Myanmar,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,35.02
+Myanmar,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,70.04
+Myanmar,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,105.05
+Myanmar,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.01
+Myanmar,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,3.38
+Myanmar,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,3.38
+Myanmar,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,3.38
+Myanmar,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,3.38
+Myanmar,Diesel,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.27
+Myanmar,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2030,131.76
+Myanmar,Diesel,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,1.87
+Myanmar,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2040,128.86
+Myanmar,Diesel,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,1.87
+Myanmar,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2050,126.79
+Myanmar,Diesel,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,1.04
+Myanmar,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2060,123.05
+Myanmar,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,23.46
+Myanmar,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,61.29
+Myanmar,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,99.12
+Myanmar,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,130.5
+Myanmar,Gas Engine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,2.84
+Myanmar,Gas Engine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,61.78
+Myanmar,Gas Engine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,114.63
+Myanmar,Gas Engine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,110.43
+Myanmar,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.52
+Myanmar,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,9.77
+Myanmar,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,10.7
+Myanmar,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,10.7
+Myanmar,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,10.7
+Myanmar,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,6.79
+Myanmar,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,45.9
+Myanmar,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,45.9
+Myanmar,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,45.9
+Myanmar,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,45.9
+Myanmar,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.46
+Myanmar,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.75
+Myanmar,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.92
+Myanmar,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.15
+Myanmar,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.21
+Myanmar,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.21
+Myanmar,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.21
+Myanmar,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.21
+Myanmar,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.38
+Myanmar,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,1.39
+Myanmar,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,1.39
+Myanmar,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,1.39
+Myanmar,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,1.39
+Philippines,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.51
+Philippines,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,3.67
+Philippines,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,4.03
+Philippines,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,4.03
+Philippines,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,3.24
+Philippines,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,140.22
+Philippines,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,135.83
+Philippines,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,107.88
+Philippines,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,92.43
+Philippines,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,77.61
+Philippines,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,4.39
+Philippines,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,4.53
+Philippines,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,5.45
+Philippines,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,5.45
+Philippines,Diesel,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,15.18
+Philippines,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2030,294.4
+Philippines,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2040,258.56
+Philippines,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2050,214.41
+Philippines,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2060,153.32
+Philippines,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,41.73
+Philippines,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,125.45
+Philippines,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,405.63
+Philippines,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,796.58
+Philippines,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,1264.69
+Philippines,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,10.25
+Philippines,Geothermal Flash,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,14.8
+Philippines,Geothermal Flash,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,41.51
+Philippines,Geothermal Flash,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,52.07
+Philippines,Geothermal Flash,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,54.57
+Philippines,Geothermal Flash,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,54.57
+Philippines,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,5.09
+Philippines,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,36.63
+Philippines,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,42.65
+Philippines,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,43.55
+Philippines,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,43.55
+Philippines,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.79
+Philippines,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,2.73
+Philippines,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,31.45
+Philippines,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,65.98
+Philippines,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,73.55
+Philippines,Nuclear LWR,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.55
+Philippines,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,8.9
+Philippines,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,6.8
+Philippines,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,3.97
+Philippines,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,3.95
+Philippines,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,2.5
+Philippines,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,64.88
+Philippines,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,111.02
+Philippines,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,111.02
+Philippines,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.53
+Philippines,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,23.61
+Philippines,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,23.61
+Philippines,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,23.61
+Philippines,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.07
+Philippines,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,61.97
+Philippines,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,104.72
+Philippines,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,175.57
+Philippines,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,175.57
+Philippines,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,4.59
+Philippines,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,16.49
+Philippines,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,5.3
+Philippines,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,74.94
+Philippines,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,114.28
+Philippines,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,170.93
+Philippines,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,170.93
+Singapore,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.75
+Singapore,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.69
+Singapore,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.69
+Singapore,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,179.11
+Singapore,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,290.08
+Singapore,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,364.55
+Singapore,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,433.04
+Singapore,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.5
+Singapore,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,1.01
+Singapore,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.89
+Singapore,Gas Turbine,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.88
+Singapore,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.84
+Singapore,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.52
+Singapore,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,1.51
+Singapore,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,2.08
+Singapore,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,2.86
+Singapore,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.06
+Singapore,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,11.31
+Singapore,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,11.31
+Singapore,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,11.31
+Singapore,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,11.31
+Singapore,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,0.11
+Singapore,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,1.3
+Singapore,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,1.07
+Singapore,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,1.21
+Thailand,Biogas,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,9.19
+Thailand,Biogas,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,9.19
+Thailand,Biogas,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,9.19
+Thailand,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2040,25.97
+Thailand,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,82.25
+Thailand,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2050,121.71
+Thailand,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,92.73
+Thailand,Biomass Gasification,"Hydrogen input to ""Centralized Electricity Generation"" [LEAP ID:35]",2060,211.96
+Thailand,Biomass Gasification,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,98.25
+Thailand,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,142.37
+Thailand,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,929.36
+Thailand,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,1578.97
+Thailand,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,71.95
+Thailand,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,103.25
+Thailand,CAES,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,106.36
+Thailand,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,73.66
+Thailand,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,49.42
+Thailand,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,111.63
+Thailand,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,128.82
+Thailand,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,128.82
+Thailand,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.1
+Thailand,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.08
+Thailand,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.08
+Thailand,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2030,685.1
+Thailand,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2040,494.39
+Thailand,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2050,338.24
+Thailand,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2060,125.12
+Thailand,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,169.5
+Thailand,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,751.95
+Thailand,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,1599.05
+Thailand,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,2257.85
+Thailand,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,2583.06
+Thailand,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,7.17
+Thailand,Gas Combined Cycle with CCS,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,5.17
+Thailand,H2 Fuel Cell,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.07
+Thailand,H2 Fuel Cell,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.06
+Thailand,H2 Fuel Cell,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,0.03
+Thailand,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,3.97
+Thailand,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,65.12
+Thailand,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,101.84
+Thailand,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,101.84
+Thailand,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,101.84
+Thailand,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,18.52
+Thailand,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,33.06
+Thailand,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,40.19
+Thailand,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,9.78
+Thailand,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,12.18
+Thailand,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,14.57
+Thailand,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,17.7
+Thailand,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,17.7
+Thailand,Solar Floating,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,17.7
+Thailand,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,56.57
+Thailand,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,128.93
+Thailand,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,128.93
+Thailand,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,128.93
+Thailand,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.68
+Thailand,Tidal,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,2.83
+Thailand,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,2.23
+Thailand,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,5.77
+Thailand,Waste,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,1.68
+Thailand,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,0.68
+Thailand,Wave,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,2.8
+Thailand,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,7.36
+Thailand,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,21.66
+Thailand,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,21.66
+Thailand,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,21.66
+Vietnam,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,1.81
+Vietnam,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,3.76
+Vietnam,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,10.61
+Vietnam,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,20.3
+Vietnam,Biomass Other,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,39.57
+Vietnam,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,396.17
+Vietnam,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,258.41
+Vietnam,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,241.53
+Vietnam,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,319.26
+Vietnam,Coal Subcritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,384.09
+Vietnam,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,53.01
+Vietnam,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,414.9
+Vietnam,Coal Supercritical,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,522.11
+Vietnam,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2030,287.97
+Vietnam,Diesel,"Blended Diesel output from ""Diesel Blending"" [LEAP ID:82]",2040,149.4
+Vietnam,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,91.34
+Vietnam,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,349.54
+Vietnam,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,782.15
+Vietnam,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,1197.6
+Vietnam,Gas Combined Cycle,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,2327.37
+Vietnam,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,71.38
+Vietnam,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,143.27
+Vietnam,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,302.55
+Vietnam,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,345.97
+Vietnam,Large Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,360.81
+Vietnam,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,40.81
+Vietnam,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,104.02
+Vietnam,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,252.6
+Vietnam,Lithium Ion Batteries,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,252.6
+Vietnam,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,56.89
+Vietnam,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,108.41
+Vietnam,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,177.58
+Vietnam,Pumped Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,179.32
+Vietnam,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,30.04
+Vietnam,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,120.44
+Vietnam,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,156.01
+Vietnam,Small Hydro,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,174.64
+Vietnam,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,0.54
+Vietnam,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,10.31
+Vietnam,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,179.51
+Vietnam,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,358.19
+Vietnam,Solar PV,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,816.26
+Vietnam,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,0.53
+Vietnam,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,124.84
+Vietnam,Wind Offshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,237.02
+Vietnam,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2025,2.86
+Vietnam,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2030,226.81
+Vietnam,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2040,513.16
+Vietnam,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2050,881.85
+Vietnam,Wind Onshore,"Electricity output from ""Centralized Electricity Generation"" [LEAP ID:1]",2060,881.85
