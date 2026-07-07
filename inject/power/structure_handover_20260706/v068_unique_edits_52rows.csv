@@ -1,0 +1,53 @@
+branch_id,variable_id,scenario_id,region_id,branch_path,variable,scenario,region,scale,units,per,expression
+2720,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Existing Capacity,Current Accounts,Singapore,,MW,,0
+3012,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical,Existing Capacity,Current Accounts,Singapore,,MW,,0
+3067,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14273,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14329,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS,Existing Capacity,Current Accounts,Singapore,,MW,,0
+3122,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Coal IGCC,Existing Capacity,Current Accounts,Singapore,,MW,,0
+15247,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2776,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Diesel,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2792,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Capacity,Current Accounts,Singapore,,MW,,"Interp(2005, 4640, 2006, 4405, 2007, 4420, 2008, 4440, 2009, 3950, 2010, 3148, 2011, 3148, 2012, 2555, 2013, 2555, 2014, 2555, 2015, 2555, 2016, 2555, 2017, 2555, 2018, 2554.6, 2019, 1363.6, 2020, 763.6, 2021, 763.6, 2022, 763.6, 2023, 763.6, 2024, 13.60, FirstScenarioYear, 0)"
+2808,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing Capacity,Current Accounts,Singapore,,MW,,"Interp(2005, 287, 2006, 305, 2007, 315, 2008, 323, 2009, 408, 2010, 370, 2011, 285, 2012, 180, 2013, 180, 2014, 180, 2015, 180, 2016, 180, 2017, 180, 2018, 180, 2019, 180, 2020, 180, 2021, 180, 2022, 180, 2023, 180, 2024, 260, FirstScenarioYear, 0)"
+2858,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Gas Engine,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2924,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Gas Steam,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2831,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Existing Capacity,Current Accounts,Singapore,,MW,,"Interp(2005, 4534, 2006, 4534, 2007, 5024, 2008, 5035, 2009, 5414, 2010, 6154, 2011, 6223, 2012, 7818, 2013, 9430, 2014, 9892, 2015, 10356, 2016, 10356, 2017, 10508, 2018, 10501.3, 2019, 10501.3, 2020, 10501.3, 2021, 10501.3, 2022, 10501.3, 2023, 10516.7, 2024, 10114.71, FirstScenarioYear, 0)"
+15321,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14268,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14428,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Existing Capacity,Current Accounts,Singapore,,MW,,0
+15317,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2724,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Large Hydro,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2824,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Small Hydro,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2851,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Geothermal Flash,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14424,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2847,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Solar PV,Existing Capacity,Current Accounts,Singapore,,MW,,"Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0.3, 2009, 1.5, 2010, 2.9, 2011, 4.6, 2012, 7.7, 2013, 11.8, 2014, 25.3, 2015, 45.7, 2016, 95.69, 2017, 114.96, 2018, 161.54, 2019, 271.58, 2020, 332, 2021, 486.50, 2022, 633.13, 2023, 918.49, 2024, 1211.18, FirstScenarioYear, 0)"
+14446,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Solar CSP,Existing Capacity,Current Accounts,Singapore,,MW,,0
+4240,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Solar Floating,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14432,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Tidal,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14437,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Wave,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2713,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14442,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Wind Offshore,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2956,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Biomass Other,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2731,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Biomass Gasification,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14453,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2907,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Biogas,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2890,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capacity,Current Accounts,Singapore,,MW,,"Interp(2005, 305.8, 2006, 305.8, 2007, 305.8, 2008, 305.8, 2009, 256.8, 2010, 256.8, 2011, 256.8, 2012, 256.8, 2013, 256.8, 2014, 256.8, 2015, 256.8, 2016, 256.8, 2017, 256.8, 2018, 256.8, 2019, 256.8, 2020, 256.8, 2021, 256.8, 2022, 393, 2023, 393, 2024, 345.20, FirstScenarioYear, 0)"
+11937,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries,Existing Capacity,Current Accounts,Singapore,,MW,,0
+11942,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Pumped Hydro,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14450,1593,1,16,Transformation\Centralized Electricity Generation\Processes\CAES,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14451,1593,1,16,Transformation\Centralized Electricity Generation\Processes\VRB Flow Batteries,Existing Capacity,Current Accounts,Singapore,,MW,,0
+15771,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Direct Air Capture,Existing Capacity,Current Accounts,Singapore,,MW,,0
+16146,1593,1,16,Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell,Existing Capacity,Current Accounts,Singapore,,MW,,0
+14414,1593,1,16,Transformation\Centralized Electricity Generation\Processes\Unmet Load,Existing Capacity,Current Accounts,Singapore,,MW,,0
+2808,2239,11,17,Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Set up,Malaysia,,Megawatt,,Exogenous Capacity[MW]
+20955,2239,11,17,Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Set up,Malaysia,,Megawatt,,Exogenous Capacity[MW]
+6040,1036,11,1,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Set up,Indonesia,,U.S. Dollar,Metric Tonne,"Interp(2060, 10) ? Placeholder"
+15769,1036,11,1,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Set up,Indonesia,,2020 USD,Kilogramme,"Interp(2060, 10) ? Placeholder"
+20494,1591,11,17,Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Set up,Malaysia,,MW,,"Interp(2030,6400,2040,24688.26,2050,52119.66)"
+20885,1591,11,17,Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR,Capacity Additions,Set up,Malaysia,,MW,,0
+20516,1591,11,17,Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Set up,Malaysia,,MW,,"Interp(2030,599.34,2040,2311.74,2050,4880.34)"
+14424,2239,11,1,Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Set up,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 0.1*3170
+20318,2239,11,1,Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum Capacity,Set up,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 0.9*1855 ?Proven potential based on Indonesia Technology Roadmap
+20340,2239,11,1,Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum Capacity,Set up,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 0.9*1169 ?Proven potential based on Indonesia Technology Roadmap
+20362,2239,11,1,Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA,Maximum Capacity,Set up,Indonesia,,Megawatt,,Exogenous Capacity[MW] ?Proven potential based on Indonesia Technology Roadmap
+20384,2239,11,1,Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum Capacity,Set up,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 0.9*300 ?Proven potential based on Indonesia Technology Roadmap

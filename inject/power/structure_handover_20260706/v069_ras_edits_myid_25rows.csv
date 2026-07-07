@@ -1,0 +1,26 @@
+region,branch_path,variable,scenario,expression,units
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW],Megawatt
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW],Megawatt
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW],Megawatt
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW],Megawatt
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW] ? + 1965 * 1000 * 80%,Megawatt
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Regional Aspiration Scenario,"Interp(2030,6400,2040,24688.26,2050,52119.66)",MW
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW] ? + 1965 * 1000 * 80%,Megawatt
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Regional Aspiration Scenario,"Interp(2030,599.34,2040,2311.74,2050,4880.34)",MW
+Malaysia,Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW],Megawatt
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW] + 0.1*3170,Megawatt
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW] + 0.9*1855 ?Proven potential based on Indonesia Technology Roadmap,Megawatt
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW] + 0.9*1169 ?Proven potential based on Indonesia Technology Roadmap,Megawatt
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum Capacity,Regional Aspiration Scenario,Exogenous Capacity[MW] + 0.9*300 ?Proven potential based on Indonesia Technology Roadmap,Megawatt
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",U.S. Dollar
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",2020 USD
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",U.S. Dollar
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",2020 USD
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",U.S. Dollar
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",2020 USD
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",U.S. Dollar
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",2020 USD
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",U.S. Dollar
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",2020 USD
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",U.S. Dollar
+Indonesia,Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,"Interp(2060, 10) ? Placeholder",2020 USD

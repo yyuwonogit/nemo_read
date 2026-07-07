@@ -905,7 +905,9 @@ matrix over the 40,020 (branch, variable, region) cells:
 91.5% of combos (3,053/3,335) are region-invariant in every scenario.
 Genuinely per-region trees: Cal (65/76 combos vary), TransportDataStock
 (40/47), Residential (32/32), Transport vehicle data_ (23/28), Commercial
-(12/13), Demographic (7/8), Macroeconomic (10/17), Energy Access (2/2).
+(12/13), Demographic (6/8 — was 7/8 until `Households` went region-uniform
+`Population / Household Size` in v0.69_beta, 2026-07-06), Macroeconomic
+(10/17), Energy Access (2/2).
 Fully 12-way differentiated: Population, Urbanization Rate, Average Income,
 GDP sector fractions, commercial energy-per-area, vehicle sales/stock
 shares. The policy-lever and plumbing layers are template-uniform (Optimized
@@ -1226,8 +1228,11 @@ renewables (Solar PV/CSP/Floating, Wind On/Offshore, Tidal, Wave), bioenergy
 (Biomass Gasification, Bioenergy with CCS, Biogas, Waste), H2 Fuel Cell,
 Direct Air Capture, four storage techs, and the `Unmet Load_*` slack processes
 (§11.4). **Load-bearing structural caveat — sub-national node decomposition is
-real for BOTH Malaysia and Indonesia.** Several generation families are
-materialised only as sub-national node variants with **no base branch**:
+real for BOTH Malaysia and Indonesia.** Several generation families carry
+sub-national node variants **in addition to their un-suffixed base branch**
+(CORRECTION 2026-07-06 — an earlier version said "no base branch"; wrong.
+Base branches exist for every family and hold the copper-plate regions'
+fleets; see the §11.1 caveat below for the evidence):
   - **Malaysia — 3 nodes** (`_MYPE` Peninsular / `_MYSB` Sabah / `_MYSR`
     Sarawak): 33 process nodes across 11 families (Biomass Other, Coal
     Subcritical, Diesel, Gas Combined Cycle, Gas Turbine, Large Hydro, Nuclear
@@ -1267,8 +1272,12 @@ The three sibling owner writeups (verified, verifier-corrected) fold in below.
 `Transformation\Centralized Electricity Generation` is the single largest
 module in the Transformation export. In the original Malaysia-scoped export it
 held **1,093 branches** with **61 process nodes**; after merging the Indonesia
-export (2026-07-04) it holds **2,175 branches** with **115 process nodes**
-(61 + 51 Indonesia `_ID*` + 3 base `Nuclear LWR/SFR/SMR`).
+export (2026-07-04) it held **2,175 branches** with **115 process nodes**
+(61 + 51 Indonesia `_ID*` + 3 base `Nuclear LWR/SFR/SMR`); after the base-branch
+correction (2026-07-06, Singapore v0.68 evidence — §11.1 caveat) it holds
+**2,184 branches** with **124 process nodes** (+9 un-suffixed base branches:
+Coal Subcritical, Diesel, Gas Combined Cycle, Large/Small Hydro, Solar PV,
+Wind Onshore, Biomass Other, Unmet Load; whole sector 2,675 → **2,684**).
 
 > **MERGED COUNTS (2026-07-04, authoritative — supersede any pre-merge figure
 > below).** Whole Transformation sector: **2,675 branches** (was 1,593).
@@ -1296,9 +1305,25 @@ export (2026-07-04) it holds **2,175 branches** with **115 process nodes**
 > contain Indonesia's `_IDxx` variants (which is why an earlier version of this
 > doc wrongly called them "referenced but not materialised"). The dedicated
 > `LEAP Input Transformation Indonesia.xlsx` export surfaced them, and the canon
-> tree now merges both. For decomposed families there is **no un-suffixed base
-> branch** — only the node variants exist. **`Small Hydro`** is base-only in the
-> Malaysia export but **is `_ID*`-decomposed in Indonesia** (4 nodes).
+> tree now merges both.
+>
+> **CORRECTION 2026-07-06 — base branches EXIST for decomposed families.**
+> An earlier version of this caveat said "no un-suffixed base branch — only
+> the node variants exist". That was the same region-scoped-export artefact
+> striking a third time: the `mailbox/20260607/` Singapore v0.68 update
+> carries real BranchIDs with Singapore's actual fleet on the un-suffixed
+> base branches (`Gas Combined Cycle` 10,114.71 MW and `Solar PV` 1,211.18 MW
+> in 2024, plus zeros on the other ten). Branch structure is region-invariant
+> (user-established, CLAUDE.md §A.22): every branch exists in every region;
+> copper-plate regions hold their fleets on the base branches, Malaysia /
+> Indonesia hold theirs on the `_MY*` / `_ID*` variants. The 9 base branches
+> the exports had hidden (Coal Subcritical, Diesel, Gas Combined Cycle,
+> Large/Small Hydro, Solar PV, Wind Onshore, Biomass Other, Unmet Load) are
+> now in the canon tree with their observed variables; per-country slice
+> exports (in progress 2026-07-06) will fill their full rosters. Beware:
+> the region-values sitting on `_MY*`/`_ID*` paths for OTHER regions are
+> node-creation copy-residue, not the base-branch truth (`Solar PV_MYPE`
+> says Singapore = 0; the real base `Solar PV` Singapore is 1,211 MW).
 > **Confirmed by user 2026-07-04:** only Indonesia + Malaysia are
 > node-decomposed; the other 8 ASEAN regions are single copper-plate nodes. (The
 > region-scoped-export caveat still applies to future area versions.)
@@ -1929,11 +1954,13 @@ it and template-uniform elsewhere:
   Malaysia `_MYPE/_MYSB/_MYSR` (33 nodes, 11 families) came from the main
   export; Indonesia `_IDJW/_IDSA/_IDKA/_IDEast` (51 nodes, 13 families) came
   from `LEAP Input Transformation Indonesia.xlsx` and are now merged into the
-  canon tree. Neither has an un-suffixed base branch for its decomposed
-  families. (Earlier text calling Indonesia's `_IDxx` "referenced but absent
-  from the exported branch view" was wrong — a region-scoped-export artefact,
-  now fixed.) CLAUDE.md §A.12's `IDJW/IDSA/IDKA/IDEast` + `MYPE/MYSB/MYSR` node
-  sets are correct and now backed by canon.
+  canon tree. Every decomposed family ALSO has an un-suffixed base branch
+  holding the copper-plate regions' fleets (CORRECTION 2026-07-06 — earlier
+  "neither has a base branch" text was a region-scoped-export artefact; see
+  §11.1 caveat). (Earlier text calling Indonesia's `_IDxx` "referenced but
+  absent from the exported branch view" was wrong — the same artefact, fixed
+  2026-07-04.) CLAUDE.md §A.12's `IDJW/IDSA/IDKA/IDEast` + `MYPE/MYSB/MYSR`
+  node sets are correct and now backed by canon.
 - **Per-country physical layers:** PRM trajectories (national capacity plans —
   RUPTL, PEP, EMO, PDP, AEO6), Peak Load Ratios (from `<Country>_Hourly`
   shapes; Myanmar + Base Template + Timor Leste fall back to flat 100), ETD loss
@@ -1984,12 +2011,15 @@ Transformation is driven almost entirely from `Key\`, with a few local knobs:
 1. **Sub-national decomposition — `_MYxx` (Malaysia) AND `_IDxx` (Indonesia),
    surfaced by SEPARATE region-scoped exports.** Malaysia decomposes 11 families
    into `_MYPE/_MYSB/_MYSR` (33 nodes); Indonesia decomposes 13 families into
-   `_IDJW/_IDSA/_IDKA/_IDEast` (51 nodes). Neither has a base branch for its
-   decomposed families. **The main `LEAP Input Transformation.xlsx` export was
+   `_IDJW/_IDSA/_IDKA/_IDEast` (51 nodes). Every decomposed family also keeps
+   its un-suffixed base branch for the copper-plate regions (CORRECTION
+   2026-07-06, §11.1 caveat — earlier "no base branch" text was an export
+   artefact). **The main `LEAP Input Transformation.xlsx` export was
    region-scoped and contained ONLY Malaysia's variants** — Indonesia's were
    added by merging `LEAP Input Transformation Indonesia.xlsx` (2026-07-04).
-   Merged Centralized roster = **115 process nodes** (61 + 51 `_ID*` + 3 base
-   Nuclear the Indonesia export surfaced). **Confirmed by user 2026-07-04: only
+   Centralized roster = **124 process nodes** (61 + 51 `_ID*` + 3 base
+   Nuclear the Indonesia export surfaced + 9 base branches restored
+   2026-07-06). **Confirmed by user 2026-07-04: only
    Indonesia + Malaysia are node-decomposed; the other 8 ASEAN regions are
    single copper-plate nodes.** **Methodology lesson (still applies to future
    areas):** to capture a region's node decomposition you must export from that

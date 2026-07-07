@@ -182,3 +182,51 @@ def test_exempt_raw_drops_still_dirty_else_retire_exemption(rel):
     assert find_region_lock_violations(p), (
         f"{rel} is now region-lock clean — remove it from _EXEMPT_RAW_DROPS"
     )
+
+
+# --- CLAUDE.md §A.22 — branch structure is region-invariant ------------------
+#
+# Every `X_MY*` / `X_ID*` node-variant family in the canon transformation tree
+# must also carry its un-suffixed base branch `X` (the copper-plate regions'
+# fleets live there). A variant-without-base is the region-scoped-export
+# artefact that hid 9 base branches until the 2026-07-06 Singapore v0.68
+# evidence (anatomy §11.1 caveat CORRECTION).
+
+_TREE = REPO / "LEAP structure" / "trees" / "transformation_tree.txt"
+
+
+def _cegen_process_names():
+    """Leaf names of the depth-3 lines inside the Centralized Electricity
+    Generation block of the rendered canon tree (implicit `Processes` level)."""
+    lines = _TREE.read_text(encoding="utf-8").splitlines()
+
+    def depth(l):
+        return (len(l) - len(l.lstrip(" "))) // 2
+
+    def name(l):
+        return l.lstrip(" ").split("   [vars:")[0]
+
+    start = next(
+        i for i, l in enumerate(lines)
+        if depth(l) == 1 and name(l) == "Centralized Electricity Generation"
+    )
+    end = next(
+        (i for i in range(start + 1, len(lines)) if depth(lines[i]) == 1),
+        len(lines),
+    )
+    return {name(lines[i]) for i in range(start, end) if depth(lines[i]) == 3}
+
+
+def test_every_node_variant_family_has_a_base_branch():
+    import re
+
+    names = _cegen_process_names()
+    variants = {n for n in names if re.search(r"_(MY|ID)[A-Za-z]+$", n)}
+    assert variants, "no node variants found — tree parse broke, not a clean pass"
+    missing = sorted(
+        {re.sub(r"_(MY|ID)[A-Za-z]+$", "", v) for v in variants} - names
+    )
+    assert not missing, (
+        f"node-variant families missing their un-suffixed base branch "
+        f"(§A.22 region-invariance): {missing}"
+    )

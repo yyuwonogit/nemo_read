@@ -1,5 +1,188 @@
 # Changelog
 
+## [Unreleased] — power sendback review + cleaned inject payload (2026-07-07)
+
+- **Re-cleaned from `mailbox/20260707/power_sendback_20260707.zip`** (9,534
+  rows) — the power team's response to our v0.69 reconciliation package; the
+  20260706 zip below had reached us by miscommunication one revision stale.
+  Diff vs 20260706: +84 Singapore rows (v0.69 base-branch fleet — GCC
+  10,114.71 MW / Solar PV 1,211.18 MW in 2024 — plus the standard Exogenous
+  Capacity quartet on 9 formula-less branches), 11 expression changes (3
+  Singapore CA corrections, `~~~~~~~` artifact stripped, Gas Turbine RAS cap
+  + Solar PV_MYSR 20 GW matching our own decisions, 5 divergence keys switched
+  to modeller v0.69), 1,488 `Exogenous Capacity` unit labels `MW`→`Megawatt`
+  (canon — LEAP's unit string is per-variable: Existing/Additions/Retirement
+  = `MW`; Exogenous/Endogenous/Maximum Capacity (+ Addition) = `Megawatt`,
+  verified against canon slice + v0.68/v0.69 harvests), 27 source-label fixes.
+  Rebuilt `power_sendback_cleaned.csv` + `power_sendback_canonical.csv` at
+  **9,421 rows**: re-applied the 113 structural drops (team never saw our
+  first cleaning), **held the 3 IRENA resource-potential caps over the
+  modeller's freeze-at-fleet** (Solar PV_MYPE 324,482.9 / _MYSB 12,517.1 /
+  Large Hydro_MYPE 3,100 MW — the team's divergence register explicitly
+  awaits this arbitration; answer goes back in the next send). Region-lock 0,
+  separator pre-flight 0, tripwire tests pass. `CLEANING_NOTES_20260707.md`
+  rewritten for the new source.
+- **Added — `outbox/power_cleaning_audit_20260707.zip`** — ship-ready power-team
+  package closing the sendback loop: the cleaning notes (carrying the IRENA-caps
+  arbitration answer their divergence register asked for + the per-variable
+  `MW`/`Megawatt` unit canon), the endogenous-capacity decision note, and
+  `power_audit_results_observations_20260707.md` — the audit observations
+  updated with a status-after-inject table (T1 free-build `_MY*`, slide-18 GT
+  ceiling, SOLAR-MY free solar, storage BLD-RATE: solved; Capacity Credit,
+  wind availability, T2 `Bad Scenario [2]`, T6/T7/T8 + import cost: not) and
+  the 7-item anomaly pass (TH Large Hydro ±4,450 bookkeeping signature,
+  vanishing TH fleets, `Gas Turbine_ID*` ×4 identical retirements, MY onshore
+  wind zero-build confirm, VN 14.8 GW = authored PDP8). Statuses verified
+  against the rebuilt 9,421-row payload (0 Capacity Credit rows; availability
+  only on GT_MYPE/batteries/pumped hydro; GT_MYPE 1,400 MW/yr; TH 2,000 / VN
+  4,000 storage limits; solar 960→480). Original mailbox audit file left
+  untouched; ship copy in `inject/power/20260707/`.
+- **Reviewed `mailbox/20260707/power_sendback_20260706.zip`** (9,450 rows,
+  10 countries × 4 scenarios, per-row source citations; hygiene fully clean —
+  no `Unlimited`, no semicolons, no Base Template/Timor Leste rows, Unmet
+  Load untouched, region-lock 0). Cross-checked every row against the
+  canonical structure and the modeller's v0.68/v0.69 changes.
+- **Added — `inject/power/20260707/power_sendback_cleaned.csv`** (9,332 rows)
+  + `CLEANING_NOTES_20260707.md`. Dropped 118 rows: 78 on `Small Hydro_MY*`
+  branches that don't exist (Malaysia has no Small Hydro branch at all —
+  verified in its v0.69 export), 30 `Maximum Capacity`/`Maximum Capacity
+  Addition` rows in CA/Baseline/ATS where those variables have no slot (they
+  exist only in the 7 optimization scenarios), 5 `Endogenous Capacity` rows
+  in RAS (exists only in the 4 accounting scenarios), 5 stale v0.67 values
+  that would undo the modeller's Singapore/solar corrections. Modified 1:
+  Malaysia base Gas Turbine RAS cap `0` → `Exogenous Capacity[MW]` (user
+  decision; safe under the team's base-deactivation reading too). Kept the
+  IRENA resource-potential caps (user decision) incl. Solar PV_MYPE
+  324,482.9 MW / _MYSB 12,517.1 / Large Hydro_MYPE 3,100.
+- **Documented** (audit Part E): 3 promised-but-missing power items parked
+  as PENDING (Electricity Import Cost, Wind Offshore availability,
+  transmission capital); question back to the team on `Solar PV_MYSR`
+  cap=0 vs addition-limit=200 — RESOLVED same day by user decision: 20 GW.
+- **Added — `inject/power/20260707/power_sendback_canonical.csv`** (9,332
+  rows, framework schema with per-row `scenario` column, §A.15-normalized,
+  pre-flight validator clean) — the inject-ready payload. Cap-vs-fleet
+  re-checked with full Interp-series evaluation (user-mandated standard,
+  `memory/reference_interp_numeric_evaluation.md`): zero caps below a
+  real fleet.
+- **Added — `NOTE_TO_POWER_TEAM_ENDOGENOUS_20260707.md`**: Baseline/ATS
+  auto-build permissions (Endogenous Capacity) mapped from the live
+  model — subcritical coal (Cambodia 200 / Vietnam 200 / Philippines 200
+  / Indonesia 150×4 nodes / Myanmar 150 / Laos 100 / Malaysia 100×2 /
+  Thailand 100 MW blocks) and diesel/fuel-oil run with NO end year;
+  Maximum Capacity cannot cap them there (variable exists only in the 7
+  optimization scenarios) — the Endogenous Capacity expression is the
+  only lever; 14 rows still reference the deleted `Bad Scenario [2]`.
+  Values = power team's decision (keep / time-box / zero).
+- **Audit-observation mapping (3-agent adversarial verify)**: of the
+  power audit's input-side items — SOLVED by the payload on inject:
+  T1 free-build costs/efficiency/build-limits/caps (Capacity Credit
+  component excepted), SOLAR-MY free solar build, slide-18 GT ceiling,
+  BLD-RATE storage limits (TH 2,000 / VN 4,000 MW/yr). NOT touched:
+  T2 Bad-Scenario refs, CF-01 wind availability, T6 transmission,
+  T7 offshore availability 44, T8 IDN/SG T&D losses 0, flat import
+  cost, Resources-side items (nuclear fuel, Brunei biomass 8,773 TWh
+  unit slip). Anomaly pass findings (TH hydro ±4,450 bookkeeping
+  signature, fleets vanishing to 0, sibling-node retirement
+  copy-paste, VN 2025 storage spike = authored input) recorded in
+  audit Part E.
+
+## [Unreleased] — 20260607 drop review + canon value refresh (2026-07-06)
+
+- **Reviewed the `mailbox/20260607/` drop** (an independent update, to be
+  re-reviewed against the power team update later): Keys full re-export
+  (`aeo9_v0.69_beta`, 440,220 rows) + Transformation updated-expressions-only
+  file (`aeo9_v0.68_w_annual_results`, 52 rows: Singapore CA fleet refresh +
+  Malaysia/Indonesia Set-up edits). Findings adversarially verified by a
+  4-agent workflow. Sole Keys content change:
+  `Key\Demographic\Households:Activity Level` → `Population[Thousand persons]
+  / Household Size[people/HH]`, all 11 scenarios × 12 regions (hardcoded
+  per-region household histories removed). Every §12.4 canon fingerprint
+  reproduces exactly (0/86/273/11/12/1/0/661/7794/8057/303; 694/3,335
+  combos); tree/units/roster byte-stable; region-lock clean on both files.
+- **Changed — canon current-state extracts refreshed with the drop's
+  values** (user instruction 2026-07-06 "lets update the values"). Keys
+  extract: 48 per-region Households rows → 4 `ALL (12 regions)` formula
+  rows. Power transformation slice: 3 Singapore CA `Existing Capacity`
+  expressions updated (Fuel Oil / Gas Turbine / Waste — the 2023–24 zeros
+  replaced with real fleet values) + 12 Singapore CA rows added on base
+  process branches the Malaysia-scoped export had hidden (incl. Gas
+  Combined Cycle 2024=10,114.71 MW, Solar PV 2024=1,211.18 MW). The 12
+  Set-up-scenario rows are not representable in the 4-scenario extracts —
+  held for the power-team review (co-firing share is slated for universal
+  adoption in RAS, not Set up).
+- **Documented — CLAUDE.md §A.22**: LEAP branch structure is region-invariant
+  (user-established: all country branches are identical). The anatomy §14
+  claim that 12 process families are "_MY*-only, no base branch" is refuted
+  by the drop's Singapore base-branch rows (real BranchIDs).
+- **Changed — Singapore update recorded as fully canon** (user 2026-07-06):
+  9 un-suffixed base branches restored to
+  `LEAP structure/trees/transformation_tree.txt` (Coal Subcritical, Diesel,
+  Gas Combined Cycle, Large/Small Hydro, Solar PV, Wind Onshore, Biomass
+  Other, Unmet Load — base Nuclear ×3 were already present from the
+  Indonesia merge); Centralized roster 115 → **124** process nodes, CEGen
+  2,175 → 2,184 branches, sector 2,675 → 2,684. Anatomy corrected in five
+  places (§Nodal caveat, §1.1 counts, §11.1 caveat, ledger, §7 quirk #1) —
+  the "no un-suffixed base branch" claim retired with a dated CORRECTION;
+  noted that `_MY*`/`_ID*` values for OTHER regions are node-creation
+  copy-residue, not base-branch truth. §A.17 tripwire shipped:
+  `tests/test_region_lock.py::test_every_node_variant_family_has_a_base_branch`.
+- **Changed — Keys update recorded as canon**: residential keys-slice extract
+  got the same Households transform (48 per-region rows → 4 `ALL` rows);
+  anatomy §12.5 Demographic regional-variation count corrected 7/8 → 6/8.
+- **Documented — Set-up→RAS canon designation** (audit Part E): the v0.68
+  Set-up authorings (incl. the 10% Coal Supercritical Biomass/Ammonia
+  co-firing share) belong in RAS per the user; verify the move at the
+  power-team review before recording them in any current-state extract.
+- **Validated against `LEAP Input Transformation Brunei.xlsx` (v0.69)** —
+  first per-country slice of the base-branch harvest: one export carries
+  ONE region's rows (36,573 rows, `regions=1`), so every AMS needs its own
+  export. All 12 base branches present with the full 41-variable panel;
+  zero `_MY*`/`_ID*` phantoms; **zero authored edits vs v0.67 canon**
+  (10,774 comparable cells identical after CRLF/LF normalisation; the only
+  churn is LEAP `Optimized New Capacity` result stamps — v0.69 RAS
+  optimization not run). Confirms the copy-residue verdict: Brunei's
+  residue happened to match truth, Singapore's didn't — per-country
+  exports are the only reliable source.
+- **Validated against Cambodia + Indonesia v0.69 slices** (per-country
+  harvest, 2026-07-06). Cambodia: clean copper-plate view (12/12 base
+  branches, full 41-var panels, zero phantoms, zero authored edits).
+  Indonesia: only `_ID*` variants + 3 base Nuclear surface (its fleet lives
+  on the nodes — consistent with region-scoping), **16 real RAS edits found
+  and folded into canon extracts**: geothermal proven-potential derated
+  ×0.9 (ORC `1000000` → `ExoCap + 0.1*3170`) and the 10% co-firing
+  placeholder REPLACING the detailed RAS trajectories (Ammonia formerly
+  43.94% by 2060) on Coal Supercritical ± CCS + 4 Coal Subcritical_ID*
+  nodes — detailed curves survive only in AMS Target. **Set-up→RAS move
+  verified DONE in v0.69 for the Indonesia rows** (Set up + RAS + CNZ all
+  hold them); Malaysia rows pending its slice. Re-diff after fold: 0.
+- **Validated against the remaining 7 v0.69 slices** (Laos, Malaysia,
+  Myanmar, Philippines, Singapore, Thailand, Vietnam — 2026-07-06; Timor
+  Leste not exported). Six clean copper-plate slices (12/12 base branches,
+  full panels, 0 phantoms, 0 authored edits; the v0.69 Singapore slice
+  independently confirms the folded v0.68 values). **Malaysia: 9 authored
+  RAS edits found + folded** — Set-up→RAS move confirmed for the Malaysia
+  rows, plus 5 edits beyond the v0.68 list (Gas Turbine/Engine/Steam base
+  MaxCap → `ExoCap`; GT_MYPE + Large Hydro_MYPE `Unlimited` → `ExoCap`,
+  retiring §A.11 upper-bound sentinels and CLOSING 2 of the 4 audit
+  free-build REDs; Solar PV_MYSR + Wind Onshore_MYSR remain open). Two
+  ALL-row repartitions (Malaysia diverging from an `Unlimited` bucket).
+  Post-fold re-diff: all 10 harvested countries = 0. Complete
+  v0.69-vs-v0.67 authored delta = 52-row v0.68 file + 25 MY/ID RAS rows
+  (`inject/power/structure_handover_20260706/v069_ras_edits_myid_25rows.csv`).
+- **Added — `outbox/power_v069_reconciliation_20260707.zip`** — ship-ready
+  power-team package: `README_READ_FIRST.md` (plain-language orientation +
+  reading order) + the reconciliation instruction + the two changed-value
+  CSVs (52-row v0.68 edit file, 25-row Malaysia/Indonesia RAS list).
+  Registered in `outbox/MANIFEST.md`; the manifest's power coverage-gap
+  item marked RESOLVED (per-country v0.69 exports confirmed the plain
+  branches everywhere; Timor Leste the sole unchecked country).
+- **Added — power-team reconciliation instruction**
+  [inject/power/structure_handover_20260706/RECONCILE_V069_TO_POWER_TEAM_20260706.md](inject/power/structure_handover_20260706/RECONCILE_V069_TO_POWER_TEAM_20260706.md)
+  (+ machine-readable `v068_unique_edits_52rows.csv`): keep their update
+  intact; adopt exactly the v0.68/v0.69 unique edits (3 Singapore
+  corrections + 12 base-branch values + 12 Set-up→RAS rows), author
+  copper-plate AMS data on base branches, exogenous edits region-locked.
+
 ## [Unreleased] — Indonesia node merge + region-lock canon (2026-07-05)
 
 - **Indonesia sub-national detail merged into the transformation canon.** The

@@ -1,5 +1,37 @@
 # Outbox — team canon handover packages (2026-07-04)
 
+## power_cleaning_audit_20260707.zip (2026-07-07)
+
+For the power team, closing the loop on their `power_sendback_20260707.zip`:
+`CLEANING_NOTES_20260707.md` (the row-by-row cleaning record for the 9,421-row
+inject payload, including the arbitration answer their divergence register
+asked for — the LEAP team keeps the IRENA resource-potential caps on Solar
+PV_MYPE / _MYSB / Large Hydro_MYPE over the modeller's freeze-at-fleet, plus
+the per-variable `MW`/`Megawatt` unit canon), `NOTE_TO_POWER_TEAM_ENDOGENOUS_
+20260707.md` (the automatic-plant-additions decision request: coal/diesel
+standing permissions with no end year, the 14 broken `Bad Scenario [2]` rows,
+keep / time-box / zero menu), and `power_audit_results_observations_20260707.md`
+(the audit observations updated with the status-after-inject table — T1 /
+slide-18 / SOLAR-MY / storage BLD-RATE solved; Capacity Credit, wind
+availability, T2, T6/T7/T8 not — and the 7-item anomaly pass for their eyes).
+Source dir: `inject/power/20260707/`.
+
+## power_v069_reconciliation_20260707.zip (2026-07-07)
+
+For the power team, alongside their update-in-preparation: the complete,
+country-by-country-verified list of what changed in the LEAP area between
+v0.67 and v0.69, with the instruction for keeping their update intact while
+taking these changes on board. Contents: `README_READ_FIRST.md` (start
+here), the full reconciliation instruction
+(`RECONCILE_V069_TO_POWER_TEAM_20260706.md`), and two CSVs holding every
+changed value (the modeller's 52-row edit file + the 25 Malaysia/Indonesia
+RAS changes found in the v0.69 exports). Also states the two still-broken
+plants (`Solar PV_MYSR`, `Wind Onshore_MYSR`: no cap, zero cost) and that
+Timor Leste is the one unchecked country. Source dir:
+`inject/power/structure_handover_20260706/`.
+
+---
+
 Ship-ready zip per sector team, built from the canon of LEAP area
 `aeo9_v0.67_w_results` (7 exports: 4 Demand sectors + `Key\` + `Resources\` +
 `Transformation\`). Each zip is self-contained — a team can use it without
@@ -44,9 +76,8 @@ where they exist.
   (160 GW built in RAS).
 - **Transformation (fossil):** blending pseudo-techs `Exogenous
   Capacity=Unlimited` → §A.11 1e12 forced floor.
-- **Transformation (power) — coverage gap:** the slice was exported from the
-  Malaysia + Indonesia contexts only, so the 8 copper-plate countries' base
-  generation nodes (Solar PV, Wind, Large/Small Hydro, Gas Combined Cycle,
-  Diesel, Coal Subcritical, Biomass Other, Unmet Load) are not yet materialised
-  in it — awaiting per-country confirmation / re-export from the power team
-  (power README §7.7). Absence from the export ≠ absence in the model.
+- **Transformation (power) — coverage gap: RESOLVED 2026-07-06.** Per-country
+  v0.69 exports for all countries except Timor Leste confirmed the plain
+  (un-suffixed) generation branches exist everywhere with the full variable
+  panel, holding each single-grid country's plant data. The canon tree and
+  records now include them; see `power_v069_reconciliation_20260707.zip`.

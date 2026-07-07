@@ -1,4 +1,4 @@
-branch_path,variable,scenario,region,expression,units,scale,per
+﻿branch_path,variable,scenario,region,expression,units,scale,per
 Transformation\Centralized Electricity Generation,ASEANRenewableCapacityTarget__NEMOcc,AMS Target Scenario,ALL (12 regions),0 ? Must be same value in all regions,share of nameplate,,
 Transformation\Centralized Electricity Generation,ASEANRenewableCapacityTarget__NEMOcc,Baseline Simulation,ALL (12 regions),0 ? Must be same value in all regions,share of nameplate,,
 Transformation\Centralized Electricity Generation,ASEANRenewableCapacityTarget__NEMOcc,Regional Aspiration Scenario,ALL (12 regions),"InterpFSY(2025, 35, 2040, 63, 2050, 71) ? RAS assumption to try to increase RE capacity",share of nameplate,,
@@ -1663,6 +1663,7 @@ Transformation\Centralized Electricity Generation\Processes\Biomass Gasification
 Transformation\Centralized Electricity Generation\Processes\Biomass Gasification\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Biomass Gasification\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Biomass Gasification\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Biomass Other,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYPE,Capacity Additions,AMS Target Scenario,Base Template,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYPE,Capacity Additions,AMS Target Scenario,Brunei,0,MW,,
@@ -6022,6 +6023,7 @@ Transformation\Centralized Electricity Generation\Processes\Coal IGCC\Transmissi
 Transformation\Centralized Electricity Generation\Processes\Coal IGCC\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Coal IGCC\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Coal IGCC\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Capacity Additions,AMS Target Scenario,Base Template,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE,Capacity Additions,AMS Target Scenario,Brunei,0,MW,,
@@ -11060,10 +11062,7 @@ Transformation\Centralized Electricity Generation\Processes\Coal Supercritical C
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Base Template,0,2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Brunei,0,2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Cambodia,0,2020 USD,,Kilogramme
-Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,"Interp(2046, 0, 2047, 1.49, 2048, 1.52, 2049, 1.49, 2050, 3.03, 2051, 24.24, 2052, 26.87, 2053, 27.27, 2054, 27.27, 2055, 43.28, 2056, 43.28, 2057, 43.94, 2058, 43.94, 2059, 43.94, 2060, 43.94) ?  _x000D_
-_x000D_
-_x000D_
-Indonesia coal powerplant retirement-retrofit scenario",2020 USD,,Kilogramme
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,"Interp(2060, 10) ? Placeholder",2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Laos,0,2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Malaysia,0,2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Myanmar,0,2020 USD,,Kilogramme
@@ -11136,9 +11135,7 @@ Transformation\Centralized Electricity Generation\Processes\Coal Supercritical C
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Base Template,0,U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Brunei,0,U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Cambodia,0,U.S. Dollar,,Metric Tonne
-Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,"Interp(2029, 0, 2030, 1.52, 2031, 3.03, 2032, 3.03, 2033, 4.55, 2034, 6.06, 2035, 7.46, 2036, 8.96, 2037, 10.45, 2038, 11.94, 2039, 13.43, 2040, 13.43, 2041, 13.43, 2042, 17.91, 2043, 17.91, 2044, 19.7, 2045, 37.31, 2046, 43.94, 2047, 47.76, 2048, 48.48, 2049, 50.75, 2050, 53.03, 2051, 54.55, 2052, 53.73, 2053, 54.55, 2054, 54.55, 2055, 53.73, 2056, 53.73, 2057, 56.06, 2058, 56.06, 2059, 56.06, 2060, 56.06) ?_x000D_
-_x000D_
- Indonesia coal powerplant retirement-retrofit scenario",U.S. Dollar,,Metric Tonne
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,"Interp(2060, 10) ? Placeholder",U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Laos,0,U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Malaysia,0,U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Myanmar,0,U.S. Dollar,,Metric Tonne
@@ -11824,10 +11821,7 @@ Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\F
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Base Template,0,2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Brunei,0,2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Cambodia,0,2020 USD,,Kilogramme
-Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,"Interp(2046, 0, 2047, 1.49, 2048, 1.52, 2049, 1.49, 2050, 3.03, 2051, 24.24, 2052, 26.87, 2053, 27.27, 2054, 27.27, 2055, 43.28, 2056, 43.28, 2057, 43.94, 2058, 43.94, 2059, 43.94, 2060, 43.94) ?  _x000D_
-_x000D_
-_x000D_
-Indonesia coal powerplant retirement-retrofit scenario",2020 USD,,Kilogramme
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,"Interp(2060, 10) ? Placeholder",2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Laos,0,2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Malaysia,0,2020 USD,,Kilogramme
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Myanmar,0,2020 USD,,Kilogramme
@@ -11860,9 +11854,7 @@ Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\F
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Base Template,0,U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Brunei,0,U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Cambodia,0,U.S. Dollar,,Metric Tonne
-Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,"Interp(2029, 0, 2030, 1.52, 2031, 3.03, 2032, 3.03, 2033, 4.55, 2034, 6.06, 2035, 7.46, 2036, 8.96, 2037, 10.45, 2038, 11.94, 2039, 13.43, 2040, 13.43, 2041, 13.43, 2042, 17.91, 2043, 17.91, 2044, 19.7, 2045, 37.31, 2046, 43.94, 2047, 47.76, 2048, 48.48, 2049, 50.75, 2050, 53.03, 2051, 54.55, 2052, 53.73, 2053, 54.55, 2054, 54.55, 2055, 53.73, 2056, 53.73, 2057, 56.06, 2058, 56.06, 2059, 56.06, 2060, 56.06) ?_x000D_
-_x000D_
- Indonesia coal powerplant retirement-retrofit scenario",U.S. Dollar,,Metric Tonne
+Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,"Interp(2060, 10) ? Placeholder",U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Laos,0,U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Malaysia,0,U.S. Dollar,,Metric Tonne
 Transformation\Centralized Electricity Generation\Processes\Coal Supercritical\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Myanmar,0,U.S. Dollar,,Metric Tonne
@@ -14877,6 +14869,7 @@ Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercriti
 Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Diesel,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Diesel_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Diesel_MYPE,Capacity Additions,AMS Target Scenario,Base Template,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Diesel_MYPE,Capacity Additions,AMS Target Scenario,Brunei,0,MW,,
@@ -17064,7 +17057,7 @@ Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Ca
 Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Capacity,Current Accounts,Malaysia,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Capacity,Current Accounts,Myanmar,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Capacity,Current Accounts,Philippines,0,MW,,
-Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Capacity,Current Accounts,Singapore,"Interp(2005, 4640, 2006, 4405, 2007, 4420, 2008, 4440, 2009, 3950, 2010, 3148, 2011, 3148, 2012, 2555, 2013, 2555, 2014, 2555, 2015, 2555, 2016, 2555, 2017, 2555, 2018, 2554.6, 2019, 1363.6, 2020, 763.6, 2021, 763.6, 2022, 763.6, 2023, 0, 2024, 0, FirstScenarioYear, 0)",MW,,
+Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Capacity,Current Accounts,Singapore,"Interp(2005, 4640, 2006, 4405, 2007, 4420, 2008, 4440, 2009, 3950, 2010, 3148, 2011, 3148, 2012, 2555, 2013, 2555, 2014, 2555, 2015, 2555, 2016, 2555, 2017, 2555, 2018, 2554.6, 2019, 1363.6, 2020, 763.6, 2021, 763.6, 2022, 763.6, 2023, 763.6, 2024, 13.60, FirstScenarioYear, 0)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Capacity,Current Accounts,Thailand,"Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010, 0, 2011, 0, 2012, 0, 2013, 0, 2014, 0, 2015, 0, 2016, 0, 2017, 0, 2018, 0, 2019, 0, 2020, 315, 2021, 315, 2022, 315, 2023, 0, 2024, 0, FirstScenarioYear, 0)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Capacity,Current Accounts,Timor Leste,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Fuel Oil,Existing Capacity,Current Accounts,Vietnam,0,MW,,
@@ -17426,6 +17419,7 @@ Transformation\Centralized Electricity Generation\Processes\Fuel Oil\Transmissio
 Transformation\Centralized Electricity Generation\Processes\Fuel Oil\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Fuel Oil\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Fuel Oil\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle,Existing Capacity,Current Accounts,Singapore,"Interp(2005, 4534, 2006, 4534, 2007, 5024, 2008, 5035, 2009, 5414, 2010, 6154, 2011, 6223, 2012, 7818, 2013, 9430, 2014, 9892, 2015, 10356, 2016, 10356, 2017, 10508, 2018, 10501.3, 2019, 10501.3, 2020, 10501.3, 2021, 10501.3, 2022, 10501.3, 2023, 10516.7, 2024, 10114.71, FirstScenarioYear, 0)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Capacity Additions,AMS Target Scenario,ALL (12 regions),0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS,Capacity Additions,Baseline Simulation,ALL (12 regions),0,MW,,
@@ -21453,7 +21447,7 @@ Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum C
 Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum Capacity,Regional Aspiration Scenario,Cambodia,0,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum Capacity,Regional Aspiration Scenario,Indonesia,1000000,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum Capacity,Regional Aspiration Scenario,Laos,0,Megawatt,,
-Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum Capacity,Regional Aspiration Scenario,Malaysia,0,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum Capacity,Regional Aspiration Scenario,Malaysia,Exogenous Capacity[MW],Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum Capacity,Regional Aspiration Scenario,Myanmar,1000000,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum Capacity,Regional Aspiration Scenario,Philippines,0,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Engine,Maximum Capacity,Regional Aspiration Scenario,Singapore,0,Megawatt,,
@@ -21893,7 +21887,7 @@ Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Ca
 Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Capacity,Regional Aspiration Scenario,Cambodia,0,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Capacity,Regional Aspiration Scenario,Indonesia,0,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Capacity,Regional Aspiration Scenario,Laos,0,Megawatt,,
-Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Capacity,Regional Aspiration Scenario,Malaysia,0,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Capacity,Regional Aspiration Scenario,Malaysia,Exogenous Capacity[MW],Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Capacity,Regional Aspiration Scenario,Myanmar,0,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Capacity,Regional Aspiration Scenario,Philippines,0,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Steam,Maximum Capacity,Regional Aspiration Scenario,Singapore,0,Megawatt,,
@@ -22387,7 +22381,7 @@ Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing Capacity,Current Accounts,Malaysia,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing Capacity,Current Accounts,Myanmar,"Interp(2005, 285.3, 2006, 252.3, 2007, 253.3, 2008, 253.3, 2009, 244.3, 2010, 244.2, 2011, 244.2, 2012, 244.3, 2013, 385.27, 2014, 577.99, 2015, 785.44, 2016, 630.25, 2017, 884.65, 2018, 864.270719, 2019, 1045.062043, 2020, 2116.314, 2021, 2429.819, 2022, 2195.304, 2023, 1124.8, 2024, 1124.8, FirstScenarioYear, 0)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing Capacity,Current Accounts,Philippines,0,MW,,
-Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing Capacity,Current Accounts,Singapore,"Interp(2005, 287, 2006, 305, 2007, 315, 2008, 323, 2009, 408, 2010, 370, 2011, 285, 2012, 180, 2013, 180, 2014, 180, 2015, 180, 2016, 180, 2017, 180, 2018, 180, 2019, 180, 2020, 180, 2021, 180, 2022, 180, 2023, 0, 2024, 0, FirstScenarioYear, 0)",MW,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing Capacity,Current Accounts,Singapore,"Interp(2005, 287, 2006, 305, 2007, 315, 2008, 323, 2009, 408, 2010, 370, 2011, 285, 2012, 180, 2013, 180, 2014, 180, 2015, 180, 2016, 180, 2017, 180, 2018, 180, 2019, 180, 2020, 180, 2021, 180, 2022, 180, 2023, 180, 2024, 260, FirstScenarioYear, 0)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing Capacity,Current Accounts,Thailand,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing Capacity,Current Accounts,Timor Leste,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Existing Capacity,Current Accounts,Vietnam,0,MW,,
@@ -22548,7 +22542,7 @@ Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum 
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Regional Aspiration Scenario,Cambodia,0,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Regional Aspiration Scenario,Indonesia,1000000,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Regional Aspiration Scenario,Laos,0,Megawatt,,
-Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Regional Aspiration Scenario,Malaysia,1000000,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Regional Aspiration Scenario,Malaysia,Exogenous Capacity[MW],Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Regional Aspiration Scenario,Myanmar,1000000,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Regional Aspiration Scenario,Philippines,0,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine,Maximum Capacity,Regional Aspiration Scenario,Singapore,1000000,Megawatt,,
@@ -22928,7 +22922,18 @@ Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Max
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Availability,Baseline Simulation,ALL (12 regions),100,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Availability,Current Accounts,ALL (12 regions),100,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Availability,Regional Aspiration Scenario,ALL (12 regions),100,Percent,,
-Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,ALL (12 regions),Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Base Template,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Brunei,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Cambodia,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Indonesia,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Laos,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Malaysia,Exogenous Capacity[MW],Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Myanmar,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Philippines,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Singapore,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Thailand,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Timor Leste,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity,Regional Aspiration Scenario,Vietnam,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Capacity Addition,Regional Aspiration Scenario,ALL (12 regions),Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum Production,Regional Aspiration Scenario,ALL (12 regions),Unlimited,Gigajoule,,
 Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE,Maximum_Share_of_Production,AMS Target Scenario,ALL (12 regions),100,%,,
@@ -23844,7 +23849,7 @@ Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maxim
 Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Regional Aspiration Scenario,Base Template,1000000,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Regional Aspiration Scenario,Brunei,1000000,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Regional Aspiration Scenario,Cambodia,1000000,Megawatt,,
-Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Regional Aspiration Scenario,Indonesia,1000000,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Regional Aspiration Scenario,Indonesia,Exogenous Capacity[MW] + 0.1*3170,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Regional Aspiration Scenario,Laos,0,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Regional Aspiration Scenario,Malaysia,1000000,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Geothermal ORC,Maximum Capacity,Regional Aspiration Scenario,Myanmar,1000000,Megawatt,,
@@ -24210,6 +24215,7 @@ Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell\Transmi
 Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Capacity Additions,AMS Target Scenario,Base Template,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Capacity Additions,AMS Target Scenario,Brunei,0,MW,,
@@ -24416,7 +24422,18 @@ Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Max
 Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Availability,Baseline Simulation,ALL (12 regions),100,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Availability,Current Accounts,ALL (12 regions),100,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Availability,Regional Aspiration Scenario,ALL (12 regions),100,Percent,,
-Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,ALL (12 regions),Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Base Template,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Brunei,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Cambodia,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Indonesia,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Laos,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Malaysia,Exogenous Capacity[MW],Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Myanmar,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Philippines,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Singapore,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Thailand,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Timor Leste,Unlimited,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity,Regional Aspiration Scenario,Vietnam,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Capacity Addition,Regional Aspiration Scenario,ALL (12 regions),Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum Production,Regional Aspiration Scenario,ALL (12 regions),Unlimited,Gigajoule,,
 Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE,Maximum_Share_of_Production,AMS Target Scenario,ALL (12 regions),100,%,,
@@ -26201,6 +26218,7 @@ Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batterie
 Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Lithium Ion Batteries\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Nuclear LWR,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYPE,Capacity Additions,AMS Target Scenario,Base Template,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYPE,Capacity Additions,AMS Target Scenario,Brunei,0,MW,,
@@ -27545,6 +27563,7 @@ Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYSR\Tra
 Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYSR\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,Thailand,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYSR\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,Timor Leste,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYSR\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Nuclear SFR,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYPE,Capacity Additions,AMS Target Scenario,ALL (12 regions),0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYPE,Capacity Additions,Baseline Simulation,ALL (12 regions),0,MW,,
@@ -28424,6 +28443,7 @@ Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYSR\Tra
 Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYSR\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,Thailand,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYSR\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,Timor Leste,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYSR\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Nuclear SMR,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear SMR_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear SMR_MYPE,Capacity Additions,AMS Target Scenario,Base Template,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Nuclear SMR_MYPE,Capacity Additions,AMS Target Scenario,Brunei,0,MW,,
@@ -29763,6 +29783,7 @@ Transformation\Centralized Electricity Generation\Processes\Pumped Hydro\Transmi
 Transformation\Centralized Electricity Generation\Processes\Pumped Hydro\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Pumped Hydro\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Pumped Hydro\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Small Hydro,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar CSP,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Solar CSP,Capacity Additions,AMS Target Scenario,ALL (12 regions),0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar CSP,Capacity Additions,Baseline Simulation,ALL (12 regions),0,MW,,
@@ -30411,6 +30432,7 @@ Transformation\Centralized Electricity Generation\Processes\Solar Floating\Trans
 Transformation\Centralized Electricity Generation\Processes\Solar Floating\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Solar Floating\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Solar Floating\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Solar PV,Existing Capacity,Current Accounts,Singapore,"Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0.3, 2009, 1.5, 2010, 2.9, 2011, 4.6, 2012, 7.7, 2013, 11.8, 2014, 25.3, 2015, 45.7, 2016, 95.69, 2017, 114.96, 2018, 161.54, 2019, 271.58, 2020, 332, 2021, 486.50, 2022, 633.13, 2023, 918.49, 2024, 1211.18, FirstScenarioYear, 0)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,AMS Target Scenario,Base Template,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,AMS Target Scenario,Brunei,0,MW,,
@@ -30431,7 +30453,7 @@ Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capaci
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Regional Aspiration Scenario,Cambodia,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Regional Aspiration Scenario,Indonesia,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Regional Aspiration Scenario,Laos,0,MW,,
-Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Regional Aspiration Scenario,Malaysia,"Add(2031, 1828.76, 2032, 1828.76, 2033, 1828.76, 2034, 1828.76, 2035, 1828.76, 2036, 1828.76, 2037, 1828.76, 2038, 1828.76, 2039, 1828.76, 2040, 1828.76, 2041, 2743.15, 2042, 2743.15, 2043, 2743.15, 2044, 2743.15, 2045, 2743.15, 2046, 2743.15, 2047, 2743.15, 2048, 2743.15, 2049, 2743.15, 2050, 2743.15)",MW,,
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Regional Aspiration Scenario,Malaysia,"Interp(2030,6400,2040,24688.26,2050,52119.66)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Regional Aspiration Scenario,Myanmar,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Regional Aspiration Scenario,Philippines,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Capacity Additions,Regional Aspiration Scenario,Singapore,0,MW,,
@@ -30765,7 +30787,7 @@ Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximu
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximum Capacity,Regional Aspiration Scenario,Cambodia,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximum Capacity,Regional Aspiration Scenario,Indonesia,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximum Capacity,Regional Aspiration Scenario,Laos,Unlimited,Megawatt,,
-Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximum Capacity,Regional Aspiration Scenario,Malaysia,Exogenous Capacity[MW] + 1965*1000*80%,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximum Capacity,Regional Aspiration Scenario,Malaysia,Exogenous Capacity[MW] ? + 1965 * 1000 * 80%,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximum Capacity,Regional Aspiration Scenario,Myanmar,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximum Capacity,Regional Aspiration Scenario,Philippines,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYPE,Maximum Capacity,Regional Aspiration Scenario,Singapore,Unlimited,Megawatt,,
@@ -30988,7 +31010,7 @@ Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capaci
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Regional Aspiration Scenario,Cambodia,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Regional Aspiration Scenario,Indonesia,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Regional Aspiration Scenario,Laos,0,MW,,
-Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Regional Aspiration Scenario,Malaysia,"Add(2031, 171.24, 2032, 171.24, 2033, 171.24, 2034, 171.24, 2035, 171.24, 2036, 171.24, 2037, 171.24, 2038, 171.24, 2039, 171.24, 2040, 171.24, 2041, 256.85, 2042, 256.85, 2043, 256.85, 2044, 256.85, 2045, 256.85, 2046, 256.85, 2047, 256.85, 2048, 256.85, 2049, 256.85, 2050, 256.85)",MW,,
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Regional Aspiration Scenario,Malaysia,"Interp(2030,599.34,2040,2311.74,2050,4880.34)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Regional Aspiration Scenario,Myanmar,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Regional Aspiration Scenario,Philippines,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Capacity Additions,Regional Aspiration Scenario,Singapore,0,MW,,
@@ -31322,7 +31344,7 @@ Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximu
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximum Capacity,Regional Aspiration Scenario,Cambodia,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximum Capacity,Regional Aspiration Scenario,Indonesia,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximum Capacity,Regional Aspiration Scenario,Laos,Unlimited,Megawatt,,
-Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximum Capacity,Regional Aspiration Scenario,Malaysia,Exogenous Capacity[MW] + 1965*1000*80%,Megawatt,,
+Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximum Capacity,Regional Aspiration Scenario,Malaysia,Exogenous Capacity[MW] ? + 1965 * 1000 * 80%,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximum Capacity,Regional Aspiration Scenario,Myanmar,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximum Capacity,Regional Aspiration Scenario,Philippines,Unlimited,Megawatt,,
 Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB,Maximum Capacity,Regional Aspiration Scenario,Singapore,Unlimited,Megawatt,,
@@ -32156,6 +32178,7 @@ Transformation\Centralized Electricity Generation\Processes\Tidal\Transmission N
 Transformation\Centralized Electricity Generation\Processes\Tidal\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Tidal\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Tidal\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Unmet Load,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Capacity Additions,AMS Target Scenario,ALL (12 regions),0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Unmet Load_MYPE,Capacity Additions,Baseline Simulation,ALL (12 regions),0,MW,,
@@ -33091,7 +33114,7 @@ Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capac
 Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capacity,Current Accounts,Malaysia,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capacity,Current Accounts,Myanmar,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capacity,Current Accounts,Philippines,0,MW,,
-Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capacity,Current Accounts,Singapore,"Interp(2005, 305.8, 2006, 305.8, 2007, 305.8, 2008, 305.8, 2009, 256.8, 2010, 256.8, 2011, 256.8, 2012, 256.8, 2013, 256.8, 2014, 256.8, 2015, 256.8, 2016, 256.8, 2017, 256.8, 2018, 256.8, 2019, 256.8, 2020, 256.8, 2021, 256.8, 2022, 393, 2023, 0, 2024, 0, FirstScenarioYear, 0)",MW,,
+Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capacity,Current Accounts,Singapore,"Interp(2005, 305.8, 2006, 305.8, 2007, 305.8, 2008, 305.8, 2009, 256.8, 2010, 256.8, 2011, 256.8, 2012, 256.8, 2013, 256.8, 2014, 256.8, 2015, 256.8, 2016, 256.8, 2017, 256.8, 2018, 256.8, 2019, 256.8, 2020, 256.8, 2021, 256.8, 2022, 393, 2023, 393, 2024, 345.20, FirstScenarioYear, 0)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capacity,Current Accounts,Thailand,"Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010, 0, 2011, 0, 2012, 0, 2013, 0, 2014, 0, 2015, 0, 2016, 0, 2017, 0, 2018, 0, 2019, 0, 2020, 634.133456, 2021, 650.126298, 2022, 657.649571, 2023, 0, 2024, 0, FirstScenarioYear, 0)",MW,,
 Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capacity,Current Accounts,Timor Leste,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Waste,Existing Capacity,Current Accounts,Vietnam,0,MW,,
@@ -34214,6 +34237,7 @@ Transformation\Centralized Electricity Generation\Processes\Wind Offshore\Transm
 Transformation\Centralized Electricity Generation\Processes\Wind Offshore\Transmission Nodes\Malaysia Peninsular,Nodal Distribution,Regional Aspiration Scenario,Vietnam,0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Wind Offshore\Transmission Nodes\Malaysia Sabah,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
 Transformation\Centralized Electricity Generation\Processes\Wind Offshore\Transmission Nodes\Malaysia Sarawak,Nodal Distribution,Regional Aspiration Scenario,ALL (12 regions),0,Percent,,
+Transformation\Centralized Electricity Generation\Processes\Wind Onshore,Existing Capacity,Current Accounts,Singapore,0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Annual Storage Carryover,Current Accounts,ALL (12 regions),No,Yes/No,,
 Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Capacity Additions,AMS Target Scenario,ALL (12 regions),0,MW,,
 Transformation\Centralized Electricity Generation\Processes\Wind Onshore_MYPE,Capacity Additions,Baseline Simulation,ALL (12 regions),0,MW,,

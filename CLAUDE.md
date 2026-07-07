@@ -747,6 +747,53 @@ How to apply — mechanically enforced (§A.17):
 See also: `memory/reference_node_region_lock.md`; canon anatomy §1.1
 (region-exclusivity); [[reference_region_scoped_export]].
 
+**A.22 — LEAP branch structure is region-invariant. NEVER conclude a
+branch "does not exist" from a region-scoped export.**
+
+User-established fact (2026-07-06): **all country branches are
+identical** — a branch exists in every region or in none. Regions
+differ only in the VALUES attached (Node wiring, expressions);
+structure is one tree shared by all 12 regions. Corollary: any claim
+that a branch exists "for some regions only" is describing an export
+artifact or value scoping, never structure.
+
+Region-scoped Export-Expressions files violate this in two ways:
+  (a) **Omit branches wholesale** — the Malaysia-scoped Transformation
+      export missed all Indonesia `_ID*` nodes (caught 2026-07-04).
+  (b) **Omit base branches while surfacing every region's values under
+      sibling node-variant paths** — the same export emitted zero rows
+      for 12 base process families (Coal Subcritical, Diesel, Gas
+      Combined Cycle, Nuclear ×3, Large/Small Hydro, Solar PV, Wind
+      Onshore, Biomass Other, Unmet Load) yet carried e.g. Indonesia's
+      real coal fleet on `Coal Subcritical_MYPE`. Anatomy §14 then
+      codified "no un-suffixed base branch" for those families —
+      WRONG, refuted 2026-07-06 by the `mailbox/20260607/` Singapore
+      v0.68 update carrying real BranchIDs on all 12 base branches
+      (Singapore's actual fleet: GCC 10,114.71 MW, Solar PV 1,211.18
+      MW in 2024).
+
+Burned 2026-07-06: presented the 12 base branches to the user as a
+"canon blind spot discovery" when the user's standing fact plus data
+already in the committed slice (base Fuel Oil/Gas Turbine/Waste rows;
+Indonesia-merge base Nuclear) contradicted the anatomy claim. The
+user had to correct it: *"i told you all country branches are
+identical, and youve seen those branches before in other country."*
+
+How to apply:
+  - Before asserting a branch is absent: ask **"where would region
+    X's data live if this branch didn't exist?"** and check at least
+    one region outside the export's scope.
+  - Treat per-region branch rosters from any single export as
+    LOWER BOUNDS on the area's structure, never the full roster.
+  - Mechanical tripwire SHIPPED 2026-07-06 with the tree correction
+    (9 base branches restored, anatomy §14/§11.1-caveat corrected):
+    `tests/test_region_lock.py::test_every_node_variant_family_has_a_base_branch`
+    — every `X_MY*`/`X_ID*` variant family in the canon transformation
+    tree must also carry base branch `X`.
+
+See also: `memory/project_20260607_drop_review.md` for the burn
+record and the pending correction list.
+
 ---
 
 ## §0. Starting cold? Read in this order

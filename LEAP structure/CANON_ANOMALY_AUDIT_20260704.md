@@ -869,3 +869,99 @@
   named `_MY*` zero-cost list). These are the real free-unbounded-build risks on
   the Malaysia side. The other 29 `_MY*` `Maximum Production=Unlimited` nodes are
   low-severity (finite `Maximum Capacity` backstop → conditioning only).
+
+## Part E — 2026-07-06 addendum: v0.68 update file (`mailbox/20260607/`) + canon designations
+
+Source: `LEAP Input Transformation (Updated Expression Only).xlsx`
+(`aeo9_v0.68_w_annual_results`, 52 rows) — an independent modeller update,
+to be re-reviewed against the power team update. Verified findings:
+
+- **Singapore CA `Existing Capacity` refresh (40 rows, base branches).**
+  3 confirmed corrections vs canon (Fuel Oil / Gas Turbine / Waste — the
+  2023–24 zeros replaced with real fleet values: 763.6→13.60 / 180→260 /
+  393→345.20 MW); 25 rows byte-identical; 12 rows on base branches canon
+  had never captured (region-scoped-export blind spot — now restored to the
+  tree, anatomy §11.1-caveat CORRECTION 2026-07-06). Folded into
+  `inject/power/structure_handover_20260703/current_expressions_transformation_slice_4scenarios.csv`.
+- **12 `Set up` rows — technology-specific MY/ID edits, zero Singapore.**
+  Gas Turbine + Gas Turbine_MYPE `Maximum Capacity = Exogenous Capacity[MW]`
+  (bounds the ledger #35 Gas Turbine_MYPE free-build headroom — Capital
+  Cost=0 itself still open); Geothermal ORC + Flash_IDJW/_IDSA/_IDKA/_IDEast
+  `Maximum Capacity = ExoCap + 0.9×proven potential` (bounds Part D
+  free-build direction); Solar PV_MYPE/_MYSB `Capacity Additions`
+  trajectories (+ _MYSR = 0); Coal Supercritical co-firing
+  `Feedstock Fuel Share = Interp(2060, 10) ? Placeholder` on Biomass +
+  Ammonia (Indonesia).
+- **CANON DESIGNATION (user, 2026-07-06): these Set-up authorings belong in
+  RAS.** The 10% co-firing share is to be universally adopted **in RAS, not
+  Set up**. In v0.68 they sit in `Set up` — at the power-team review,
+  verify the move to RAS happened (or route it as an inject). Do NOT record
+  them in the 4-scenario current-state extracts until they are actually
+  authored in RAS.
+- **RAS-move VERIFIED for Indonesia (2026-07-06, v0.69 Indonesia slice):**
+  the geothermal caps (×0.9 derating; ORC `1000000` → `ExoCap + 0.1*3170`)
+  and the 10% co-firing placeholder are authored in **Set up + RAS + CNZ**
+  in v0.69. The placeholder REPLACED the detailed RAS co-firing
+  trajectories (Ammonia formerly ramped to 43.94% by 2060; Biomass ramped
+  from 2029) on Coal Supercritical ± CCS and all four Coal Subcritical_ID*
+  nodes — the detailed curves survive only in AMS Target. All 16 RAS
+  changes folded into the canon current-state extracts (per-country
+  harvest, user go-ahead). Malaysia-side rows (GT MaxCap, Solar PV_MY*
+  CapAdd) pending the Malaysia slice.
+- **RAS-move VERIFIED for Malaysia too (2026-07-06, v0.69 Malaysia
+  slice), + 5 extra RAS edits beyond the v0.68 list**: Gas Turbine base
+  `1000000`→`ExoCap`, Gas Engine/Gas Steam base `0`→`ExoCap`,
+  Gas Turbine_MYPE + Large Hydro_MYPE `Unlimited`→`ExoCap` (a §A.11
+  upper-bound sentinel retired), Solar PV_MYPE/_MYSB MaxCap headroom
+  `+1965*1000*80%` demoted to a comment. All 9 folded into the power
+  slice extract (2 required ALL-row repartition — Malaysia diverges).
+  **Ledger #35 / Part C free-build status: Gas Turbine_MYPE and
+  Large Hydro_MYPE CLOSED (MaxCap ceiling binds); Solar PV_MYSR and
+  Wind Onshore_MYSR STILL OPEN** (MaxCap + MaxCapAddition `Unlimited`,
+  Capital Cost 0).
+- **Full v0.69 harvest complete (2026-07-06) minus Timor Leste**: the 8
+  copper-plate slices (BN/KH/LA/MM/PH/SG/TH/VN) each diffed ZERO authored
+  edits vs v0.67; MY 9 + ID 16 as above. Complete v0.69-vs-v0.67 authored
+  delta = the 52-row v0.68 file + the 25 MY/ID RAS rows.
+- **Open item:** untracked `inject/power/20260608/patched_targets.csv`
+  carries 47 region-lock hits, all `_ID*`/`_MY*` rows in **Base Template**
+  (template-broadcast semantics vs §A.21 — decide at the power-team review).
+- **PENDING (user, 2026-07-07 — no agenda to author now):** three items the
+  power team promised but did not include in `power_sendback_20260706.zip`:
+  (1) Electricity Import Cost per region/scenario (the flat-100 placeholder
+  stands), (2) the Wind Offshore availability placeholder fix, (3) the
+  in-module transmission capital cost. Carry to the next power cycle.
+- **RESOLVED (user, 2026-07-07):** `Solar PV_MYSR` Maximum Capacity set to
+  20,000 MW (20 GW) in the cleaned sendback — supersedes the team's 0,
+  which conflicted with their own 200 MW/yr addition limit. With the
+  team's real costs + finite addition limit + this cap, the last two
+  free-build REDs (Solar PV_MYSR, Wind Onshore_MYSR) close on inject.
+- **Anomaly pass on the inject payload + live-model histories
+  (2026-07-07, every Interp series evaluated year-by-year).** Real-world
+  booms (Vietnam solar 2018–21, Indonesia coal ramps) check out.
+  SUSPICIOUS — for the power team:
+    1. **Thailand Large Hydro: +4,451 MW in 2019, −4,450 MW in 2023** —
+       symmetric appear/disappear, classic bookkeeping-error signature.
+    2. **Thailand fleets vanishing to 0 mid-history**: Biomass Other
+       −2,120 MW (2020), Pumped Hydro −1,000 MW (2023 — Lam Ta Khong
+       still operates in reality), Waste −658 MW (2023).
+    3. **Myanmar Gas Engine −822 MW → 0 (2020)**; `Biomass Other_MYPE`
+       852→32 MW (2010); `Biomass Other_IDSA` 1→1,531 MW (2018) — step
+       artifacts worth a source check.
+    4. **Identical retirement series copy-pasted across sibling nodes**:
+       all four `Gas Turbine_ID*` retire the same absolute series
+       (601→62 MW each — national total ×4?); `Coal Subcritical_MYPE` ≡
+       `_MYSR` (both 210→1,474 MW at 2030). If national totals were
+       duplicated per node instead of split, retirements double/quadruple
+       count.
+    5. **Result-spike mystery solved**: Vietnam's "14.8 GW storage in
+       2025" result = exactly the authored additions (LIB 10,460 +
+       Pumped Hydro 4,370 MW, PDP8 policy-year build) — input-driven,
+       not solver free-build.
+    6. **Wind Onshore_MY* locked at zero build in RAS** (team's Maximum
+       Capacity Addition = 0 on all 3 nodes + fleet 0): no Malaysian
+       onshore wind can ever be built. Plausibly intended (poor
+       resource) — confirm with the team.
+    7. **Capacity Credit = 100 is NOT reshipped** (sendback carries no
+       Capacity Credit rows) — the T1/CF-01 capacity-credit component
+       stays open.

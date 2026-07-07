@@ -1663,10 +1663,7 @@ _x000D_
 Indonesia coal powerplant retirement-retrofit scenario"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Baseline Simulation,Indonesia,,2020 USD,Kilogramme,0
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Current Accounts,Indonesia,,2020 USD,Kilogramme,0
-Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,2020 USD,Kilogramme,"Interp(2046, 0, 2047, 1.49, 2048, 1.52, 2049, 1.49, 2050, 3.03, 2051, 24.24, 2052, 26.87, 2053, 27.27, 2054, 27.27, 2055, 43.28, 2056, 43.28, 2057, 43.94, 2058, 43.94, 2059, 43.94, 2060, 43.94) ?  _x000D_
-_x000D_
-_x000D_
-Indonesia coal powerplant retirement-retrofit scenario"
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,2020 USD,Kilogramme,"Interp(2060, 10) ? Placeholder"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Ammonia,Fuel Cost,AMS Target Scenario,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Ammonia,Fuel Cost,Baseline Simulation,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Ammonia,Fuel Cost,Current Accounts,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
@@ -1677,9 +1674,7 @@ _x000D_
  Indonesia coal powerplant retirement-retrofit scenario"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Biomass,Feedstock Fuel Share,Baseline Simulation,Indonesia,,U.S. Dollar,Metric Tonne,0
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Biomass,Feedstock Fuel Share,Current Accounts,Indonesia,,U.S. Dollar,Metric Tonne,0
-Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,U.S. Dollar,Metric Tonne,"Interp(2029, 0, 2030, 1.52, 2031, 3.03, 2032, 3.03, 2033, 4.55, 2034, 6.06, 2035, 7.46, 2036, 8.96, 2037, 10.45, 2038, 11.94, 2039, 13.43, 2040, 13.43, 2041, 13.43, 2042, 17.91, 2043, 17.91, 2044, 19.7, 2045, 37.31, 2046, 43.94, 2047, 47.76, 2048, 48.48, 2049, 50.75, 2050, 53.03, 2051, 54.55, 2052, 53.73, 2053, 54.55, 2054, 54.55, 2055, 53.73, 2056, 53.73, 2057, 56.06, 2058, 56.06, 2059, 56.06, 2060, 56.06) ?_x000D_
-_x000D_
- Indonesia coal powerplant retirement-retrofit scenario"
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,U.S. Dollar,Metric Tonne,"Interp(2060, 10) ? Placeholder"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Biomass,Fuel Cost,AMS Target Scenario,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Biomass,Fuel Cost,Baseline Simulation,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast\Feedstock Fuels\Biomass,Fuel Cost,Current Accounts,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
@@ -2074,10 +2069,7 @@ _x000D_
 Indonesia coal powerplant retirement-retrofit scenario"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Baseline Simulation,Indonesia,,2020 USD,Kilogramme,0
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Current Accounts,Indonesia,,2020 USD,Kilogramme,0
-Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,2020 USD,Kilogramme,"Interp(2046, 0, 2047, 1.49, 2048, 1.52, 2049, 1.49, 2050, 3.03, 2051, 24.24, 2052, 26.87, 2053, 27.27, 2054, 27.27, 2055, 43.28, 2056, 43.28, 2057, 43.94, 2058, 43.94, 2059, 43.94, 2060, 43.94) ?  _x000D_
-_x000D_
-_x000D_
-Indonesia coal powerplant retirement-retrofit scenario"
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,2020 USD,Kilogramme,"Interp(2060, 10) ? Placeholder"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Ammonia,Fuel Cost,AMS Target Scenario,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Ammonia,Fuel Cost,Baseline Simulation,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Ammonia,Fuel Cost,Current Accounts,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
@@ -2088,9 +2080,7 @@ _x000D_
  Indonesia coal powerplant retirement-retrofit scenario"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Biomass,Feedstock Fuel Share,Baseline Simulation,Indonesia,,U.S. Dollar,Metric Tonne,0
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Biomass,Feedstock Fuel Share,Current Accounts,Indonesia,,U.S. Dollar,Metric Tonne,0
-Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,U.S. Dollar,Metric Tonne,"Interp(2029, 0, 2030, 1.52, 2031, 3.03, 2032, 3.03, 2033, 4.55, 2034, 6.06, 2035, 7.46, 2036, 8.96, 2037, 10.45, 2038, 11.94, 2039, 13.43, 2040, 13.43, 2041, 13.43, 2042, 17.91, 2043, 17.91, 2044, 19.7, 2045, 37.31, 2046, 43.94, 2047, 47.76, 2048, 48.48, 2049, 50.75, 2050, 53.03, 2051, 54.55, 2052, 53.73, 2053, 54.55, 2054, 54.55, 2055, 53.73, 2056, 53.73, 2057, 56.06, 2058, 56.06, 2059, 56.06, 2060, 56.06) ?_x000D_
-_x000D_
- Indonesia coal powerplant retirement-retrofit scenario"
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,U.S. Dollar,Metric Tonne,"Interp(2060, 10) ? Placeholder"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Biomass,Fuel Cost,AMS Target Scenario,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Biomass,Fuel Cost,Baseline Simulation,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW\Feedstock Fuels\Biomass,Fuel Cost,Current Accounts,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
@@ -2485,10 +2475,7 @@ _x000D_
 Indonesia coal powerplant retirement-retrofit scenario"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Baseline Simulation,Indonesia,,2020 USD,Kilogramme,0
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Current Accounts,Indonesia,,2020 USD,Kilogramme,0
-Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,2020 USD,Kilogramme,"Interp(2046, 0, 2047, 1.49, 2048, 1.52, 2049, 1.49, 2050, 3.03, 2051, 24.24, 2052, 26.87, 2053, 27.27, 2054, 27.27, 2055, 43.28, 2056, 43.28, 2057, 43.94, 2058, 43.94, 2059, 43.94, 2060, 43.94) ?  _x000D_
-_x000D_
-_x000D_
-Indonesia coal powerplant retirement-retrofit scenario"
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,2020 USD,Kilogramme,"Interp(2060, 10) ? Placeholder"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Ammonia,Fuel Cost,AMS Target Scenario,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Ammonia,Fuel Cost,Baseline Simulation,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Ammonia,Fuel Cost,Current Accounts,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
@@ -2499,9 +2486,7 @@ _x000D_
  Indonesia coal powerplant retirement-retrofit scenario"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Baseline Simulation,Indonesia,,U.S. Dollar,Metric Tonne,0
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Current Accounts,Indonesia,,U.S. Dollar,Metric Tonne,0
-Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,U.S. Dollar,Metric Tonne,"Interp(2029, 0, 2030, 1.52, 2031, 3.03, 2032, 3.03, 2033, 4.55, 2034, 6.06, 2035, 7.46, 2036, 8.96, 2037, 10.45, 2038, 11.94, 2039, 13.43, 2040, 13.43, 2041, 13.43, 2042, 17.91, 2043, 17.91, 2044, 19.7, 2045, 37.31, 2046, 43.94, 2047, 47.76, 2048, 48.48, 2049, 50.75, 2050, 53.03, 2051, 54.55, 2052, 53.73, 2053, 54.55, 2054, 54.55, 2055, 53.73, 2056, 53.73, 2057, 56.06, 2058, 56.06, 2059, 56.06, 2060, 56.06) ?_x000D_
-_x000D_
- Indonesia coal powerplant retirement-retrofit scenario"
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,U.S. Dollar,Metric Tonne,"Interp(2060, 10) ? Placeholder"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Biomass,Fuel Cost,AMS Target Scenario,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Biomass,Fuel Cost,Baseline Simulation,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA\Feedstock Fuels\Biomass,Fuel Cost,Current Accounts,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
@@ -2896,10 +2881,7 @@ _x000D_
 Indonesia coal powerplant retirement-retrofit scenario"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Baseline Simulation,Indonesia,,2020 USD,Kilogramme,0
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Current Accounts,Indonesia,,2020 USD,Kilogramme,0
-Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,2020 USD,Kilogramme,"Interp(2046, 0, 2047, 1.49, 2048, 1.52, 2049, 1.49, 2050, 3.03, 2051, 24.24, 2052, 26.87, 2053, 27.27, 2054, 27.27, 2055, 43.28, 2056, 43.28, 2057, 43.94, 2058, 43.94, 2059, 43.94, 2060, 43.94) ?  _x000D_
-_x000D_
-_x000D_
-Indonesia coal powerplant retirement-retrofit scenario"
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Ammonia,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,2020 USD,Kilogramme,"Interp(2060, 10) ? Placeholder"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Ammonia,Fuel Cost,AMS Target Scenario,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Ammonia,Fuel Cost,Baseline Simulation,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Ammonia,Fuel Cost,Current Accounts,Indonesia,,2020 USD,Kilogramme,Resources\Secondary\Ammonia:Production Cost[2020 USD/kg]
@@ -2910,9 +2892,7 @@ _x000D_
  Indonesia coal powerplant retirement-retrofit scenario"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Baseline Simulation,Indonesia,,U.S. Dollar,Metric Tonne,0
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Current Accounts,Indonesia,,U.S. Dollar,Metric Tonne,0
-Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,U.S. Dollar,Metric Tonne,"Interp(2029, 0, 2030, 1.52, 2031, 3.03, 2032, 3.03, 2033, 4.55, 2034, 6.06, 2035, 7.46, 2036, 8.96, 2037, 10.45, 2038, 11.94, 2039, 13.43, 2040, 13.43, 2041, 13.43, 2042, 17.91, 2043, 17.91, 2044, 19.7, 2045, 37.31, 2046, 43.94, 2047, 47.76, 2048, 48.48, 2049, 50.75, 2050, 53.03, 2051, 54.55, 2052, 53.73, 2053, 54.55, 2054, 54.55, 2055, 53.73, 2056, 53.73, 2057, 56.06, 2058, 56.06, 2059, 56.06, 2060, 56.06) ?_x000D_
-_x000D_
- Indonesia coal powerplant retirement-retrofit scenario"
+Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Biomass,Feedstock Fuel Share,Regional Aspiration Scenario,Indonesia,,U.S. Dollar,Metric Tonne,"Interp(2060, 10) ? Placeholder"
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Biomass,Fuel Cost,AMS Target Scenario,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Biomass,Fuel Cost,Baseline Simulation,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
 Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA\Feedstock Fuels\Biomass,Fuel Cost,Current Accounts,Indonesia,,U.S. Dollar,Metric Tonne,Resources\Primary\Bagasse:Production Cost[USD/Tonne]
@@ -6117,7 +6097,7 @@ Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDE
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum Availability,Baseline Simulation,Indonesia,,Percent,,"80.66 ? last historical Year value~~90 ? Handayani et al. (2022) based on RUPTL 2021-2030, IEA-NEA, Mongird et al (2019)"
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum Availability,Current Accounts,Indonesia,,Percent,,"80.66 ? last historical Year value~~90 ? Handayani et al. (2022) based on RUPTL 2021-2030, IEA-NEA, Mongird et al (2019)"
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum Availability,Regional Aspiration Scenario,Indonesia,,Percent,,"80.66 ? last historical Year value~~90 ? Handayani et al. (2022) based on RUPTL 2021-2030, IEA-NEA, Mongird et al (2019)"
-Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum Capacity,Regional Aspiration Scenario,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 300 ?Proven potential based on Indonesia Technology Roadmap
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum Capacity,Regional Aspiration Scenario,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 0.9*300 ?Proven potential based on Indonesia Technology Roadmap
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum Capacity Addition,Regional Aspiration Scenario,Indonesia,,Megawatt,,150
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum Production,Regional Aspiration Scenario,Indonesia,,Gigajoule,,Unlimited
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast,Maximum_Share_of_Production,AMS Target Scenario,Indonesia,,%,,100
@@ -6246,7 +6226,7 @@ Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJ
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum Availability,Baseline Simulation,Indonesia,,Percent,,"80.66 ? last historical Year value~~90 ? Handayani et al. (2022) based on RUPTL 2021-2030, IEA-NEA, Mongird et al (2019)"
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum Availability,Current Accounts,Indonesia,,Percent,,"80.66 ? last historical Year value~~90 ? Handayani et al. (2022) based on RUPTL 2021-2030, IEA-NEA, Mongird et al (2019)"
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum Availability,Regional Aspiration Scenario,Indonesia,,Percent,,"80.66 ? last historical Year value~~90 ? Handayani et al. (2022) based on RUPTL 2021-2030, IEA-NEA, Mongird et al (2019)"
-Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum Capacity,Regional Aspiration Scenario,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 1855 ?Proven potential based on Indonesia Technology Roadmap
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum Capacity,Regional Aspiration Scenario,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 0.9*1855 ?Proven potential based on Indonesia Technology Roadmap
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum Capacity Addition,Regional Aspiration Scenario,Indonesia,,Megawatt,,150
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum Production,Regional Aspiration Scenario,Indonesia,,Gigajoule,,Unlimited
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDJW,Maximum_Share_of_Production,AMS Target Scenario,Indonesia,,%,,100
@@ -6504,7 +6484,7 @@ Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDS
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum Availability,Baseline Simulation,Indonesia,,Percent,,"80.66 ? last historical Year value~~90 ? Handayani et al. (2022) based on RUPTL 2021-2030, IEA-NEA, Mongird et al (2019)"
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum Availability,Current Accounts,Indonesia,,Percent,,"80.66 ? last historical Year value~~90 ? Handayani et al. (2022) based on RUPTL 2021-2030, IEA-NEA, Mongird et al (2019)"
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum Availability,Regional Aspiration Scenario,Indonesia,,Percent,,"80.66 ? last historical Year value~~90 ? Handayani et al. (2022) based on RUPTL 2021-2030, IEA-NEA, Mongird et al (2019)"
-Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum Capacity,Regional Aspiration Scenario,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 1169 ?Proven potential based on Indonesia Technology Roadmap
+Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum Capacity,Regional Aspiration Scenario,Indonesia,,Megawatt,,Exogenous Capacity[MW] + 0.9*1169 ?Proven potential based on Indonesia Technology Roadmap
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum Capacity Addition,Regional Aspiration Scenario,Indonesia,,Megawatt,,150
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum Production,Regional Aspiration Scenario,Indonesia,,Gigajoule,,Unlimited
 Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA,Maximum_Share_of_Production,AMS Target Scenario,Indonesia,,%,,100
