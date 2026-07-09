@@ -1,0 +1,75 @@
+WP-F -- GAS SUPPLY CEILING PROPOSAL FOR THE FOSSIL TEAM
+Model: aeo9_v0.69 RAS   |   Batch-1, Phase 2   |   2026-07-08
+
+STATUS: PROPOSAL, not an injected batch-1 row. The Natural Gas Resource
+"Maximum Production" property lives in the Resources column, which the fossil
+team owns. Nothing here has been written to the power capacity send-back
+payload. The 10 rows in delta_WP-F_PROPOSAL.csv are for the fossil team to
+review, adjust, and place.
+
+MECHANISM (per user gate decision, revised -- NOT per-AMS-own-production):
+  1. ASEAN total gas = SUM of every AMS 2023 production.
+  2. +20% for imports  ->  regional envelope = 1.2 x ASEAN-total-production.
+  3. Split into a UNIFORM cap across the region: every AMS region node carries
+     the SAME cap value. This deliberately avoids choking the import-dependent
+     nations (e.g. Singapore produces ~0 but must still be able to run gas
+     plant on imported LNG, so it gets the same headroom as a producer).
+  4. Time shape: FLAT, 2023-anchored (held constant 2025->2060), not declining.
+  5. Scenario: RAS ONLY (Regional Aspiration Scenario). Do NOT inherit into
+     Current Accounts / Baseline / ATS.
+
+DATA -- 2023 natural gas production (EI Statistical Review of World Energy 2024,
+2023 data; Energy Institute; https://www.energyinst.org/statistical-review):
+  Brunei        9.9  bcm   (EIA/OPEC 9.86, ycharts 9.982; EI-2023 =10.6 for 2022)
+  Cambodia      0.0  bcm
+  Indonesia    64.6  bcm   (EI 2024)
+  Laos          0.0  bcm
+  Malaysia     73.9  bcm   (EI 2024)
+  Myanmar      14.5  bcm   (EI-2023 =16.9 for 2022, x0.86 for -14% in 2023)
+  Philippines   3.2  bcm   (Malampaya; EI groups PH under "Other Asia Pacific")
+  Singapore     0.0  bcm
+  Thailand     24.3  bcm   (EI 2024)
+  Vietnam       6.8  bcm   (EI 2024)
+  -------------------------------------------------------------
+  ASEAN TOTAL 197.2  bcm
+
+COMPUTATION (conversion 38.2 PJ/bcm, per work order):
+  197.2 bcm x 38.2 PJ/bcm            = 7,533.0 PJ  (ASEAN-total production)
+  x 1.2 (imports)                    = 9,039.6 PJ  (regional envelope)
+  / 10 AMS region nodes (uniform)    =   903.96 PJ per AMS per year
+
+PROPOSED LEAP ENTRY (either implementation is equivalent -- your call):
+  (a) Uniform per-AMS: set Resources\Primary\Natural Gas "Maximum Production"
+      = Interp(2025, 903.96, 2060, 903.96) Petajoule, for each of the 10 AMS
+      regions, RAS only. Sum of the 10 node caps = 9,039.6 PJ = the envelope.
+      This is what delta_WP-F_PROPOSAL.csv encodes (10 rows).
+  (b) Single regional resource: one shared node capped at 9,039.6 PJ total.
+  Current state: Natural Gas Maximum Production = "Unlimited" (Gigajoule) for
+  ALL (12 regions) in all four scenarios -- i.e. gas is presently uncapped.
+  Note: unit proposed as Petajoule to match the sibling fossil resource
+  (Crude Oil Maximum Production is already per-region in Petajoule); the Natural
+  Gas node is currently unit=Gigajoule, so flip its unit if you take option (a).
+
+DENOMINATOR NOTE: uniform split is over the 10 AMS region nodes (the power
+model's canonical region set). Timor Leste sits outside that set (currently
+Unlimited / Base Template); if you choose to give it an 11th node the per-node
+value becomes 9,039.6 / 11 = 821.8 PJ. Base Template stays Unlimited.
+
+COMPANION ITEMS (carry to fossil team, NON-BLOCKING -- flagged, not authored):
+  - Thailand (and other per-country import specifics): whether Thailand needs a
+    higher/binding import ceiling than the uniform cap is a fossil-team call.
+  - Reprice non-producer gas "Production Cost" off 0 (currently free supply from
+    a zero-production-cost resource undercuts the ceiling's intent).
+  - Commission a verified Hydrogen resource price (ties to WP-H containment).
+  - Indonesia + Malaysia "Maximum Production" flips from non-binding to binding
+    once nodal gas burn is fully counted against this envelope -- watch item.
+
+CONFIDENCE: medium. Four majors (ID, MY, TH, VN) are firm EI 2024 cells;
+Myanmar, Brunei and Philippines are EI-consistent but derived (2022 EI base +
+2023 decline / grouped-in-Other), so verify the exact EI 2024 cells before
+locking. The envelope is dominated by MY+ID+TH (~8,200 of 9,040 PJ), so the
+three softer values move the per-node cap by only a few PJ.
+
+VALIDATION: delta_WP-F_PROPOSAL.csv (and identical delta_WP-F.csv) pass
+build_delta_payload.py --check (exit 0, 10 rows, structural-create recognised;
+scenario/expression/region-lock all clean).

@@ -1,0 +1,965 @@
+[HB-START op=inject_power progress=inject\power\20260708\_progress_inject_power_20260708_172623.json]
+[power] ActiveArea (locked): 'aeo9_v0.69'
+[power] WARN: could not verify LEAP decimal separator regional (no decimal-bearing Interp found in sample). Proceeding; if decimal-bearing rows produce readback FAIL with comma-decimal evidence, abort and flip LEAP regional to period.
+[power] Will process 4 scenario(s) in ONE COM session: ['Current Accounts', 'Baseline Simulation', 'AMS Target Scenario', 'Regional Aspiration Scenario']
+[HB t=17:26:35 stage=com_dispatched area=aeo9_v0.69 scenarios_total=4 elapsed=0m11s]
+
+[power] ╔═══ SCENARIO: 'Current Accounts' ═══
+  ActiveScenario: 'Current Accounts'
+  scenario-column filter: 817 -> 19 rows (kept untagged + scenario='Current Accounts')
+  19 rows across 2 region group(s)
+  [power] --blind mode — no tree cache for group 'Other'
+  [power] --blind mode — no tree cache for group 'Indonesia'
+
+[power] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[power] ── Phase 3: REAL INJECT ──
+  --- region 'Other' (11 rows) ---
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Capital Cost' = Interp(2023, 1880.0, 2030, 1820.0, 2050, 1760.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Fixed OM Cost' = Interp(2023, 51.6, 2030, 50.0, 2050, 48.55)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Variable OM Cost' = Interp(2023, 1.5, 2030, 1.45, 2050, 1.4)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Capital Cost' = Interp(2023, 910.0, 2030, 910.0, 2050, 890.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Fixed OM Cost' = Interp(2023, 9.12, 2030, 9.12, 2050, 8.85)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Variable OM Cost' = Interp(2023, 7.3, 2030, 6.84, 2050, 6.61)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Process Efficiency' = Interp(2023, 46.0, 2030, 47.0, 2050, 48.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Capital Cost' = Interp(2023, 2200.0, 2030, 2110.0, 2050, 1960.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Fixed OM Cost' = Interp(2023, 43.0, 2030, 41.0, 2050, 38.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Variable OM Cost' = Interp(2023, 0.74, 2030, 0.71, 2050, 0.66)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Process Efficiency' = Interp(2023, 95.0, 2030, 95.0, 2050, 95.0)
+  --- region 'Indonesia' (8 rows) ---
+[HB t=17:26:46 stage=real_region area=aeo9_v0.69 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Indonesia region_idx=2/2 rows_in_region=8 rows_written=11 row_in_region=10/11 elapsed=0m22s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDEast . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDJW . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDKA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDSA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+  [real-inject] {'pushed': 19}
+
+[power] ── Phase 4: READBACK VERIFY ──
+  Verifying 2 representative row(s) (1 per region × 2 region(s))
+  [EXACT] Singapore|Capital Cost on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical
+  [EXACT] Indonesia|Maximum Availability on Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast
+  Readback summary: 2 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=17:26:57 stage=scenario_start area=aeo9_v0.69 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Indonesia region_idx=2/2 rows_in_region=8 rows_written=11 row_in_region=10/11 pushed=19 failed=0 elapsed=0m34s]
+
+[power] ╔═══ SCENARIO: 'Baseline Simulation' ═══
+  ActiveScenario: 'Baseline Simulation'
+  scenario-column filter: 817 -> 245 rows (kept untagged + scenario='Baseline Simulation')
+  245 rows across 3 region group(s)
+  [power] --blind mode — no tree cache for group 'Other'
+  [power] --blind mode — no tree cache for group 'Indonesia'
+  [power] --blind mode — no tree cache for group 'Malaysia'
+
+[power] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[power] ── Phase 3: REAL INJECT ──
+  --- region 'Other' (149 rows) ---
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+[HB t=17:27:11 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Other region_idx=1/3 rows_in_region=149 rows_written=20 row_in_region=20/149 pushed=19 failed=0 elapsed=0m47s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+[HB t=17:27:27 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Other region_idx=1/3 rows_in_region=149 rows_written=60 row_in_region=60/149 pushed=19 failed=0 elapsed=1m03s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Capital Cost' = Interp(2023, 1880.0, 2030, 1820.0, 2050, 1760.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Fixed OM Cost' = Interp(2023, 51.6, 2030, 50.0, 2050, 48.55)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Variable OM Cost' = Interp(2023, 1.5, 2030, 1.45, 2050, 1.4)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Capital Cost' = Interp(2023, 910.0, 2030, 910.0, 2050, 890.0)
+[HB t=17:27:40 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Other region_idx=1/3 rows_in_region=149 rows_written=90 row_in_region=90/149 pushed=19 failed=0 elapsed=1m17s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Fixed OM Cost' = Interp(2023, 9.12, 2030, 9.12, 2050, 8.85)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Variable OM Cost' = Interp(2023, 7.3, 2030, 6.84, 2050, 6.61)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Process Efficiency' = Interp(2023, 46.0, 2030, 47.0, 2050, 48.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Capital Cost' = Interp(2023, 2200.0, 2030, 2110.0, 2050, 1960.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Fixed OM Cost' = Interp(2023, 43.0, 2030, 41.0, 2050, 38.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Variable OM Cost' = Interp(2023, 0.74, 2030, 0.71, 2050, 0.66)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Process Efficiency' = Interp(2023, 95.0, 2030, 95.0, 2050, 95.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+[HB t=17:27:51 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Other region_idx=1/3 rows_in_region=149 rows_written=130 row_in_region=130/149 pushed=19 failed=0 elapsed=1m27s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Endogenous Capacity' = Step(2023, 200, 2046, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+  --- region 'Indonesia' (55 rows) ---
+[HB t=17:28:03 stage=real_region area=aeo9_v0.69 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Indonesia region_idx=2/3 rows_in_region=55 rows_written=149 row_in_region=140/149 pushed=19 failed=0 elapsed=1m39s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDEast . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDJW . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDKA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDSA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW . 'Endogenous Capacity' = Step(2023, 150, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA . 'Endogenous Capacity' = Step(2023, 150, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA . 'Endogenous Capacity' = Step(2023, 150, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast . 'Endogenous Capacity' = Step(2023, 150, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+  --- region 'Malaysia' (41 rows) ---
+[HB t=17:28:15 stage=real_region area=aeo9_v0.69 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Malaysia region_idx=3/3 rows_in_region=41 rows_written=204 row_in_region=50/55 pushed=19 failed=0 elapsed=1m52s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE . 'Endogenous Capacity' = Step(2023, 0, 2024, 100, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR . 'Endogenous Capacity' = Step(2023, 0, 2024, 100, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+  [real-inject] {'pushed': 245}
+
+[power] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Dispatch Rule on Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS
+  [EXACT] Cambodia|Dispatch Rule on Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS
+  [EXACT] Laos|Dispatch Rule on Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS
+  [EXACT] Myanmar|Dispatch Rule on Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS
+  [EXACT] Philippines|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical
+  [EXACT] Singapore|Capital Cost on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical
+  [EXACT] Thailand|Dispatch Rule on Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS
+  [EXACT] Vietnam|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical
+  [EXACT] Indonesia|Maximum Availability on Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast
+  [EXACT] Malaysia|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=17:29:10 stage=scenario_start area=aeo9_v0.69 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Malaysia region_idx=3/3 rows_in_region=41 rows_written=244 row_in_region=40/41 pushed=245 failed=0 elapsed=2m47s]
+
+[power] ╔═══ SCENARIO: 'AMS Target Scenario' ═══
+  ActiveScenario: 'AMS Target Scenario'
+  scenario-column filter: 817 -> 286 rows (kept untagged + scenario='AMS Target Scenario')
+  286 rows across 3 region group(s)
+  [power] --blind mode — no tree cache for group 'Other'
+  [power] --blind mode — no tree cache for group 'Indonesia'
+  [power] --blind mode — no tree cache for group 'Malaysia'
+
+[power] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[power] ── Phase 3: REAL INJECT ──
+  --- region 'Other' (174 rows) ---
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Endogenous Capacity' = Step(2023, 0, 2025, 200, 2041, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Endogenous Capacity' = 0
+[HB t=17:29:24 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Other region_idx=1/3 rows_in_region=174 rows_written=20 row_in_region=20/174 pushed=245 failed=0 elapsed=3m00s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Endogenous Capacity' = Step(2023, 100, 2032, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+[HB t=17:29:39 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Other region_idx=1/3 rows_in_region=174 rows_written=60 row_in_region=60/174 pushed=245 failed=0 elapsed=3m16s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Endogenous Capacity' = Step(2023, 0, 2028, 0.21 * Key\End_cap multip\Total_:Acti...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Endogenous Capacity' = Step(2023, 0, 2028, 0.19 * Key\End_cap multip\Total_:Acti...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Solar PV . 'Endogenous Capacity' = Step(2023, 0, 2028, 0.41 * Key\End_cap multip\Total_:Acti...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Wind Onshore . 'Endogenous Capacity' = Step(2023, 0, 2028, 0.16 * Key\End_cap multip\Total_:Acti...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other . 'Endogenous Capacity' = Step(2023, 0, 2028, 0.03 * Key\End_cap multip\Total_:Acti...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+[HB t=17:29:50 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Other region_idx=1/3 rows_in_region=174 rows_written=100 row_in_region=100/174 pushed=245 failed=0 elapsed=3m27s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Capital Cost' = Interp(2023, 1880.0, 2030, 1820.0, 2050, 1760.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Fixed OM Cost' = Interp(2023, 51.6, 2030, 50.0, 2050, 48.55)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Variable OM Cost' = Interp(2023, 1.5, 2030, 1.45, 2050, 1.4)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Capital Cost' = Interp(2023, 910.0, 2030, 910.0, 2050, 890.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Fixed OM Cost' = Interp(2023, 9.12, 2030, 9.12, 2050, 8.85)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Variable OM Cost' = Interp(2023, 7.3, 2030, 6.84, 2050, 6.61)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Process Efficiency' = Interp(2023, 46.0, 2030, 47.0, 2050, 48.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Capital Cost' = Interp(2023, 2200.0, 2030, 2110.0, 2050, 1960.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Fixed OM Cost' = Interp(2023, 43.0, 2030, 41.0, 2050, 38.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Variable OM Cost' = Interp(2023, 0.74, 2030, 0.71, 2050, 0.66)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Process Efficiency' = Interp(2023, 95.0, 2030, 95.0, 2050, 95.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Endogenous Capacity' = Step(2023, 7, 2025, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Endogenous Capacity' = Step(2023, 100, 2031, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+[HB t=17:30:06 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Other region_idx=1/3 rows_in_region=174 rows_written=140 row_in_region=140/174 pushed=245 failed=0 elapsed=3m43s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS\Feedstock Fuels\Natural Gas . 'Feedstock Fuel Share' = 100 ? WP-L feedstock fix (gate 2026-07-08): flat 100% nat...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS\Feedstock Fuels\Hydrogen . 'Feedstock Fuel Share' = 0 ? WP-L feedstock fix (gate 2026-07-08): zero hydrogen c...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Endogenous Capacity' = Step(2023, 200, 2046, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Solar PV . 'Endogenous Capacity' = Step(2023, 0, 2046, 0.5 * Key\End_cap multip\Total_:Activ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Wind Onshore . 'Endogenous Capacity' = Step(2023, 0, 2046, 0.2 * Key\End_cap multip\Total_:Activ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Endogenous Capacity' = Step(2023, 0, 2046, 0.26 * Key\End_cap multip\Total_:Acti...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other . 'Endogenous Capacity' = Step(2023, 0, 2046, 0.04 * Key\End_cap multip\Total_:Acti...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+  --- region 'Indonesia' (65 rows) ---
+[HB t=17:30:21 stage=real_region area=aeo9_v0.69 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Indonesia region_idx=2/3 rows_in_region=65 rows_written=174 row_in_region=170/174 pushed=245 failed=0 elapsed=3m58s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDEast . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDJW . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDKA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDSA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW . 'Endogenous Capacity' = Step(2023, 150, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA . 'Endogenous Capacity' = Step(2023, 150, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA . 'Endogenous Capacity' = Step(2023, 150, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast . 'Endogenous Capacity' = Step(2023, 150, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDJW . 'Endogenous Capacity' = Step(2023, 64, 2027, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDSA . 'Endogenous Capacity' = Step(2023, 64, 2027, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDKA . 'Endogenous Capacity' = Step(2023, 64, 2027, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDEast . 'Endogenous Capacity' = Step(2023, 64, 2027, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Endogenous Capacity' = Step(2023, 0, 2031, 0.2 * Key\End_cap multip\Total_:Activ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDEast . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDJW . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDKA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDSA . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDEast . 'Exogenous Capacity' = Max(Existing Capacity[MW] + Capacity Additions[MW] - Capa...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDJW . 'Exogenous Capacity' = Max(Existing Capacity[MW] + Capacity Additions[MW] - Capa...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDKA . 'Exogenous Capacity' = Max(Existing Capacity[MW] + Capacity Additions[MW] - Capa...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDSA . 'Exogenous Capacity' = Max(Existing Capacity[MW] + Capacity Additions[MW] - Capa...
+  --- region 'Malaysia' (47 rows) ---
+[HB t=17:30:36 stage=real_region area=aeo9_v0.69 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Malaysia region_idx=3/3 rows_in_region=47 rows_written=239 row_in_region=60/65 pushed=245 failed=0 elapsed=4m13s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE . 'Endogenous Capacity' = Step(2023, 0, 2024, 100, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR . 'Endogenous Capacity' = Step(2023, 0, 2024, 100, 2034, 0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYPE . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSB . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSR . 'Endogenous Capacity' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Bioenergy with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Gasification . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal IGCC with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal ORC . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR_MYPE . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR_MYSB . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR_MYSR . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Waste . 'Dispatch Rule' = FullCapacity
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE . 'Exogenous Capacity' = Max(Existing Capacity[MW] + Capacity Additions[MW] - Capa...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR . 'Exogenous Capacity' = Max(Existing Capacity[MW] + Capacity Additions[MW] - Capa...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Exogenous Capacity' = Max(Existing Capacity[MW] + Capacity Additions[MW] - Capa...
+  [real-inject] {'pushed': 286}
+
+[power] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Diesel
+  [EXACT] Cambodia|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical
+  [EXACT] Laos|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical
+  [EXACT] Myanmar|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical
+  [EXACT] Philippines|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Diesel
+  [EXACT] Singapore|Capital Cost on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical
+  [EXACT] Thailand|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Diesel
+  [EXACT] Vietnam|Feedstock Fuel Share on Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS\Feedstock Fuels\Natural Gas
+  [EXACT] Indonesia|Maximum Availability on Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast
+  [EXACT] Malaysia|Endogenous Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=17:31:29 stage=scenario_start area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Malaysia region_idx=3/3 rows_in_region=47 rows_written=279 row_in_region=40/47 pushed=286 failed=0 elapsed=5m05s]
+
+[power] ╔═══ SCENARIO: 'Regional Aspiration Scenario' ═══
+  ActiveScenario: 'Regional Aspiration Scenario'
+  scenario-column filter: 817 -> 267 rows (kept untagged + scenario='Regional Aspiration Scenario')
+  267 rows across 3 region group(s)
+  [power] --blind mode — no tree cache for group 'Other'
+  [power] --blind mode — no tree cache for group 'Indonesia'
+  [power] --blind mode — no tree cache for group 'Malaysia'
+
+[power] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[power] ── Phase 3: REAL INJECT ──
+  --- region 'Other' (134 rows) ---
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR . 'Maximum Capacity Addition' = 0 ? Brunei Energy White Paper 2014, no nuclear programme ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 50 ? H2-to-power build rate (GW/yr x1000); caps_research_...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 1800) ? 2024 fleet ~0 + 36yr ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+[HB t=17:31:41 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Other region_idx=1/3 rows_in_region=134 rows_written=20 row_in_region=20/134 pushed=286 failed=0 elapsed=5m18s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Capacity Retirement' = Add(2036, 24.0, 2037, 24.0, 2038, 24.0, 2039, 24.0, 2040,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 0 ? no H2-to-power roadmap 2024-2060; caps_research_verif...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 0) ? 2024 fleet ~0 + 36yr x 0...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Solar PV . 'Maximum Capacity' = 44000.0 ? IEEFA briefing note 'Cambodia rooftop solar bar...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR . 'Maximum Capacity Addition' = 0 ? Lao PDR PDP, no nuclear programme (IAEA PRIS)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 0 ? no H2-to-power roadmap 2024-2060; caps_research_verif...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 0) ? 2024 fleet ~0 + 36yr x 0...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+[HB t=17:31:53 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Other region_idx=1/3 rows_in_region=134 rows_written=40 row_in_region=40/134 pushed=286 failed=0 elapsed=5m30s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Capacity Retirement' = Add(2036, 10.9, 2037, 10.9, 2038, 10.9, 2039, 10.9, 2040,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 0 ? no H2-to-power roadmap 2024-2060; caps_research_verif...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 0) ? 2024 fleet ~0 + 36yr x 0...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Capacity Retirement' = Add(2036, 201.5, 2037, 201.5, 2038, 201.5, 2039, 201.5, 2...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 2333.33) ? PEP 2023-2050 DOE,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 2333.33) ? PEP 2023-2050 DOE,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 2333.33) ? PEP 2023-2050 DOE,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR . 'Maximum Capacity Addition' = 800.0 ? PEP 2023-2050 DOE (0.8 GW/yr, full build rate per...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR . 'Maximum Capacity Addition' = 800.0 ? PEP 2023-2050 DOE (0.8 GW/yr, full build rate per...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR . 'Maximum Capacity Addition' = 800.0 ? PEP 2023-2050 DOE (0.8 GW/yr, full build rate per...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 50 ? H2-to-power build rate (GW/yr x1000); caps_research_...
+[HB t=17:32:04 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Other region_idx=1/3 rows_in_region=134 rows_written=70 row_in_region=70/134 pushed=286 failed=0 elapsed=5m41s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 1800) ? 2024 fleet ~0 + 36yr ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle . 'Maximum Capacity Addition' = 700 ? Singapore Gas annual build rate 0.7 GW/yr (EMA 2nd ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Capital Cost' = Interp(2023, 1880.0, 2030, 1820.0, 2050, 1760.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Fixed OM Cost' = Interp(2023, 51.6, 2030, 50.0, 2050, 48.55)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical . 'Variable OM Cost' = Interp(2023, 1.5, 2030, 1.45, 2050, 1.4)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Capital Cost' = Interp(2023, 910.0, 2030, 910.0, 2050, 890.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Fixed OM Cost' = Interp(2023, 9.12, 2030, 9.12, 2050, 8.85)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Variable OM Cost' = Interp(2023, 7.3, 2030, 6.84, 2050, 6.61)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Process Efficiency' = Interp(2023, 46.0, 2030, 47.0, 2050, 48.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Capital Cost' = Interp(2023, 2200.0, 2030, 2110.0, 2050, 1960.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Fixed OM Cost' = Interp(2023, 43.0, 2030, 41.0, 2050, 38.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Variable OM Cost' = Interp(2023, 0.74, 2030, 0.71, 2050, 0.66)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Process Efficiency' = Interp(2023, 95.0, 2030, 95.0, 2050, 95.0)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 500 ? H2-to-power build rate (GW/yr x1000); caps_research...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 18000) ? 2024 fleet ~0 + 36yr...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity Addition' = 0
+[HB t=17:32:19 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Other region_idx=1/3 rows_in_region=134 rows_written=110 row_in_region=110/134 pushed=286 failed=0 elapsed=5m56s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 100 ? H2-to-power build rate (GW/yr x1000); caps_research...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 3600) ? 2024 fleet ~0 + 36yr ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel . 'Capacity Retirement' = Add(2036, 10.7, 2037, 10.7, 2038, 10.7, 2039, 10.7, 2040,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 6666.67) ? PDP VIII rev (Deci...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 6666.67) ? PDP VIII rev (Deci...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 6666.67) ? PDP VIII rev (Deci...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR . 'Maximum Capacity Addition' = 1500.0 ? PDP VIII rev (Decision 768/QD-TTg 2025) (1.5 GW/...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR . 'Maximum Capacity Addition' = 1500.0 ? PDP VIII rev (Decision 768/QD-TTg 2025) (1.5 GW/...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR . 'Maximum Capacity Addition' = 1500.0 ? PDP VIII rev (Decision 768/QD-TTg 2025) (1.5 GW/...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 100 ? H2-to-power build rate (GW/yr x1000); caps_research...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 3600) ? 2024 fleet ~0 + 36yr ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Wind Onshore . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 217000.0) ? Vietnam Energy Ma...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS\Feedstock Fuels\Natural Gas . 'Feedstock Fuel Share' = 100 ? WP-L feedstock fix (gate 2026-07-08): flat 100% nat...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS\Feedstock Fuels\Hydrogen . 'Feedstock Fuel Share' = 0 ? WP-L feedstock fix (gate 2026-07-08): zero hydrogen c...
+  --- region 'Indonesia' (98 rows) ---
+[HB t=17:32:33 stage=real_region area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Indonesia region_idx=2/3 rows_in_region=98 rows_written=134 row_in_region=130/134 pushed=286 failed=0 elapsed=6m10s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDEast . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDEast . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDJW . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDJW . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDKA . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDKA . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDSA . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDSA . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDEast . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDEast . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDJW . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDJW . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDKA . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDKA . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDSA . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDSA . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDEast . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDEast . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDJW . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDJW . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDKA . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDKA . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDSA . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDSA . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas_IDJW . 'Maximum Capacity Addition' = 214.5 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biogas_IDKA . 'Maximum Capacity Addition' = 214.5 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDEast . 'Maximum Capacity Addition' = 237.9 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDJW . 'Maximum Capacity Addition' = 237.9 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_IDKA . 'Maximum Capacity Addition' = 237.9 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast . 'Maximum Capacity Addition' = 318.7 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA . 'Maximum Capacity Addition' = 318.7 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA . 'Maximum Capacity Addition' = 318.7 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast . 'Maximum Capacity Addition' = 442.1 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA . 'Maximum Capacity Addition' = 442.1 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA . 'Maximum Capacity Addition' = 442.1 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDEast . 'Maximum Capacity Addition' = 125.2 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDJW . 'Maximum Capacity Addition' = 125.2 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDKA . 'Maximum Capacity Addition' = 125.2 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Solar PV_IDJW . 'Maximum Capacity Addition' = 238.4 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Solar PV_IDKA . 'Maximum Capacity Addition' = 238.4 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Solar PV_IDSA . 'Maximum Capacity Addition' = 238.4 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDJW . 'Maximum Capacity Addition' = 148.7 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDKA . 'Maximum Capacity Addition' = 148.7 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Wind Onshore_IDSA . 'Maximum Capacity Addition' = 148.7 ? WP-M harmonised: Indonesia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast . 'Capacity Retirement' = Add(2031, 444.43, 2032, 444.43, 2033, 444.43, 2034, 444.4...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW . 'Capacity Retirement' = Add(2031, 1721.54, 2032, 1721.54, 2033, 1721.54, 2034, 17...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA . 'Capacity Retirement' = Add(2031, 145.53, 2032, 145.53, 2033, 145.53, 2034, 145.5...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA . 'Capacity Retirement' = Add(2031, 371.61, 2032, 371.61, 2033, 371.61, 2034, 371.6...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDEast . 'Capacity Retirement' = Add(2036, 167.6, 2037, 167.6, 2038, 167.6, 2039, 167.6, 2...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDJW . 'Capacity Retirement' = Add(2036, 21.8, 2037, 21.8, 2038, 21.8, 2039, 21.8, 2040,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDKA . 'Capacity Retirement' = Add(2036, 74.6, 2037, 74.6, 2038, 74.6, 2039, 74.6, 2040,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_IDSA . 'Capacity Retirement' = Add(2036, 85.3, 2037, 85.3, 2038, 85.3, 2039, 85.3, 2040,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDEast . 'Capacity Retirement' = Add(2036, 64.6, 2037, 64.6, 2038, 64.6, 2039, 64.6, 2040,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDSA . 'Capacity Retirement' = Add(2036, 184.4, 2037, 184.4, 2038, 184.4, 2039, 184.4, 2...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDKA . 'Capacity Retirement' = Add(2036, 65.2, 2037, 65.2, 2038, 65.2, 2039, 65.2, 2040,...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear LWR . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 14666.67) ? RUKN 2025-2060, M...
+[HB t=17:32:44 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Indonesia region_idx=2/3 rows_in_region=98 rows_written=204 row_in_region=70/98 pushed=286 failed=0 elapsed=6m21s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SFR . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 14666.67) ? RUKN 2025-2060, M...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Nuclear SMR . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 14666.67) ? RUKN 2025-2060, M...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 150 ? H2-to-power build rate (GW/yr x1000); caps_research...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 5400) ? 2024 fleet ~0 + 36yr ...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast . 'Minimum Utilization' = Min(60, Maximum Availability) ? IEA (2022) Enhancing Indo...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDJW . 'Minimum Utilization' = Min(60, Maximum Availability) ? IEA (2022) Enhancing Indo...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDKA . 'Minimum Utilization' = Min(60, Maximum Availability) ? IEA (2022) Enhancing Indo...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDSA . 'Minimum Utilization' = Min(60, Maximum Availability) ? IEA (2022) Enhancing Indo...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDEast . 'Minimum Utilization' = Min(50, Maximum Availability) ? Judgement: gas CC mid-mer...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDJW . 'Minimum Utilization' = Min(50, Maximum Availability) ? Judgement: gas CC mid-mer...
+[HB t=17:33:26 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Indonesia region_idx=2/3 rows_in_region=98 rows_written=214 row_in_region=80/98 pushed=286 failed=0 elapsed=7m03s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDKA . 'Minimum Utilization' = Min(50, Maximum Availability) ? Judgement: gas CC mid-mer...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_IDSA . 'Minimum Utilization' = Min(50, Maximum Availability) ? Judgement: gas CC mid-mer...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDEast . 'Minimum Utilization' = Min(40, Maximum Availability) ? Judgement: gas reciprocat...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDJW . 'Minimum Utilization' = Min(40, Maximum Availability) ? Judgement: gas reciprocat...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDKA . 'Minimum Utilization' = Min(40, Maximum Availability) ? Judgement: gas reciprocat...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine_IDSA . 'Minimum Utilization' = Min(40, Maximum Availability) ? Judgement: gas reciprocat...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_IDJW . 'Minimum Utilization' = Min(25, Maximum Availability) ? Judgement: gas turbine pe...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDEast . 'Maximum Capacity' = 5460 ? Indonesia MEMR / DG EBTKE Geothermal Resources Sta...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDSA . 'Maximum Capacity' = 9370 ? Indonesia MEMR / DG EBTKE Geothermal Resources Sta...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Geothermal Flash_IDKA . 'Maximum Capacity' = 180 ? Indonesia MEMR / DG EBTKE Geothermal Resources Stat...
+[HB t=17:34:13 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Indonesia region_idx=2/3 rows_in_region=98 rows_written=224 row_in_region=90/98 pushed=286 failed=0 elapsed=7m50s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDEast . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDJW . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDKA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_IDSA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDEast . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDJW . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDKA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Small Hydro_IDSA . 'Maximum Availability' = 65 ? AEO-9 Power gate decision WP-K1 (2026-07-08): correc...
+  --- region 'Malaysia' (35 rows) ---
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Supercritical . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYPE . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYPE . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSB . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSB . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSR . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Diesel_MYSR . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Fuel Oil . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Engine . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Steam . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE . 'Maximum Capacity' = Exogenous Capacity[MW]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Turbine_MYPE . 'Maximum Capacity Addition' = 0
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYSB . 'Maximum Capacity Addition' = 77.9 ? WP-M harmonised: Malaysia per-tech uniform build r...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Biomass Other_MYSR . 'Maximum Capacity Addition' = 77.9 ? WP-M harmonised: Malaysia per-tech uniform build r...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYPE . 'Maximum Capacity Addition' = 1200.0 ? WP-M harmonised: Malaysia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYSB . 'Maximum Capacity Addition' = 1200.0 ? WP-M harmonised: Malaysia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSB . 'Maximum Capacity Addition' = 2000.0 ? WP-M harmonised: Malaysia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Solar PV_MYSR . 'Maximum Capacity Addition' = 2000.0 ? WP-M harmonised: Malaysia per-tech uniform build...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical . 'Capacity Retirement' = Add(2034, 233.33, 2035, 233.33, 2036, 233.33, 2060, 1000)...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity Addition' = 300 ? H2-to-power build rate (GW/yr x1000); caps_research...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\H2 Fuel Cell . 'Maximum Capacity' = Max(Exogenous Capacity[MW], 10800) ? 2024 fleet ~0 + 36yr...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE . 'Minimum Utilization' = Min(60, Maximum Availability) ? IEA (2022) Enhancing Indo...
+[HB t=17:34:30 stage=real_pushing area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Malaysia region_idx=3/3 rows_in_region=35 rows_written=262 row_in_region=30/35 pushed=286 failed=0 elapsed=8m06s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYSR . 'Minimum Utilization' = Min(60, Maximum Availability) ? IEA (2022) Enhancing Indo...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYPE . 'Minimum Utilization' = Min(50, Maximum Availability) ? Judgement: gas CC mid-mer...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYSB . 'Minimum Utilization' = Min(50, Maximum Availability) ? Judgement: gas CC mid-mer...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle_MYSR . 'Minimum Utilization' = Min(50, Maximum Availability) ? Judgement: gas CC mid-mer...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Large Hydro_MYSR . 'Maximum Capacity' = 20000.0 ? Sarawak Energy Berhad media release 'Greening T...
+[HB t=17:34:57 stage=real_inject_done area=aeo9_v0.69 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Malaysia region_idx=3/3 rows_in_region=35 rows_written=262 row_in_region=30/35 pushed=267 failed=0 elapsed=8m33s]
+  [real-inject] {'pushed': 267}
+
+[power] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Supercritical
+  [EXACT] Cambodia|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Supercritical
+  [EXACT] Laos|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Supercritical
+  [EXACT] Myanmar|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Supercritical
+  [EXACT] Philippines|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Supercritical
+  [EXACT] Singapore|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical
+  [EXACT] Thailand|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Supercritical
+  [EXACT] Vietnam|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Supercritical
+  [EXACT] Indonesia|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_IDEast
+  [EXACT] Malaysia|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Coal Subcritical_MYPE
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+
+[power] === ALL SCENARIOS DONE ===
+[HB-DONE op=inject_power elapsed=9m16s rows=279 progress=inject\power\20260708\_progress_inject_power_20260708_172623.json]
