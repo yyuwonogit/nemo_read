@@ -1,0 +1,1277 @@
+branch_path,variable,units,scale,per
+Demand\Residential,Activity Level,Household,Thousand,
+Demand\Residential,Demand Cost,U.S. Dollar,,
+Demand\Residential,RefHH,Ref/hh,,
+Demand\Residential\Historical,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical,Demand Cost,U.S. Dollar,,Household
+Demand\Residential\Historical,RefHH,Ref/hh,,
+Demand\Residential\Historical\Bagasse,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Bagasse,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Bagasse,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Bagasse,RefHH,Ref/hh,,
+Demand\Residential\Historical\Bagasse,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Bagasse\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Bagasse\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Bagasse\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Bagasse\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Bagasse\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Bagasse\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Bagasse\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Bagasse\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Bagasse\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Bagasse\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Bagasse\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Bagasse\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Biogas,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Biogas,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Biogas,RefHH,Ref/hh,,
+Demand\Residential\Historical\Biogas,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Biogas\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Biogas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\Charcoal,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Charcoal,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Charcoal,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Charcoal,RefHH,Ref/hh,,
+Demand\Residential\Historical\Charcoal,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Charcoal\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Charcoal\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Charcoal\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Charcoal\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Charcoal\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\Coal,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Coal,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Coal,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Coal,RefHH,Ref/hh,,
+Demand\Residential\Historical\Coal,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Coal\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Coal\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Coal\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Coal\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Coal\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Coal\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Coal\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Coal\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Coal\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Coal\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Coal\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Coal\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Coal\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\Diesel,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Diesel,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Diesel,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Diesel,RefHH,Ref/hh,,
+Demand\Residential\Historical\Diesel,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Diesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Diesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Diesel\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Diesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\Electricity,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Electricity,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Electricity,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Electricity,Load Shape,Percent,%,
+Demand\Residential\Historical\Electricity,RefHH,Ref/hh,,
+Demand\Residential\Historical\Electricity,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Gasoline,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Gasoline,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Gasoline,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Gasoline,RefHH,Ref/hh,,
+Demand\Residential\Historical\Gasoline,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Gasoline\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Gasoline\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Gasoline\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Gasoline\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\Kerosene,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Kerosene,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Kerosene,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Kerosene,RefHH,Ref/hh,,
+Demand\Residential\Historical\Kerosene,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Kerosene\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Kerosene\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Kerosene\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Kerosene\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\LPG,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\LPG,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\LPG,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\LPG,RefHH,Ref/hh,,
+Demand\Residential\Historical\LPG,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\LPG\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\LPG\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\LPG\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\Natural Gas,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Natural Gas,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Natural Gas,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Natural Gas,RefHH,Ref/hh,,
+Demand\Residential\Historical\Natural Gas,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Natural Gas\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Natural Gas\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Natural Gas\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Natural Gas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Natural Gas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Natural Gas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\Other Biomass,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Other Biomass,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Other Biomass,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Other Biomass,RefHH,Ref/hh,,
+Demand\Residential\Historical\Other Biomass,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Other Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Other Biomass\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Other Biomass\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Other Biomass\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Other Biomass\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Other Biomass\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Other Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Other Biomass\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Other Biomass\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Other Biomass\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Other Biomass\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Other Biomass\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Other Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\Residual Fuel Oil,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Residual Fuel Oil,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Residual Fuel Oil,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Residual Fuel Oil,RefHH,Ref/hh,,
+Demand\Residential\Historical\Residual Fuel Oil,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Residual Fuel Oil\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Residual Fuel Oil\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Historical\Solar Heating,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Solar Heating,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Solar Heating,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Solar Heating,RefHH,Ref/hh,,
+Demand\Residential\Historical\Solar Heating,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Wood,Activity Level,Saturation,%,of Household
+Demand\Residential\Historical\Wood,Demand Cost,2020 USD,,Household
+Demand\Residential\Historical\Wood,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Historical\Wood,RefHH,Ref/hh,,
+Demand\Residential\Historical\Wood,TotalEnergyRes,TOE,Thousand,
+Demand\Residential\Historical\Wood\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Wood\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Wood\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Wood\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Historical\Wood\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Wood\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Wood\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Wood\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Historical\Wood\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Wood\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Wood\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Wood\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Historical\Wood\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning,ACHH,AC/hh,,
+Demand\Residential\Projections\Air Conditioning,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Air Conditioning,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning,End Year Penetration,%,,
+Demand\Residential\Projections\Air Conditioning,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Air Conditioning,Load Shape,Percent,%,
+Demand\Residential\Projections\Air Conditioning,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning,Useful Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Air Conditioning\Best Practice,!EER,Btu/Wh,,
+Demand\Residential\Projections\Air Conditioning\Best Practice,ACHH,AC/hh,,
+Demand\Residential\Projections\Air Conditioning\Best Practice,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning\Best Practice,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning\Best Practice,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning\Best Practice,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning\Best Practice,Fuel Share,Share,%,
+Demand\Residential\Projections\Air Conditioning\Best Practice,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,!EER,Btu/Wh,,
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,ACHH,AC/hh,,
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,Fuel Share,Share,%,
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning\Current_Sales Average,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,!EER,Btu/Wh,,
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,ACHH,AC/hh,,
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,Fuel Share,Share,%,
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning\Current_Stock Average,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Air Conditioning\Efficient,!EER,Btu/Wh,,
+Demand\Residential\Projections\Air Conditioning\Efficient,ACHH,AC/hh,,
+Demand\Residential\Projections\Air Conditioning\Efficient,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning\Efficient,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning\Efficient,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning\Efficient,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning\Efficient,Fuel Share,Share,%,
+Demand\Residential\Projections\Air Conditioning\Efficient,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning\Efficient,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Air Conditioning_,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Air Conditioning_,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_,End Year Penetration,%,,
+Demand\Residential\Projections\Air Conditioning_,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Large,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Large,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Large,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Large,Load Shape,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Large,Optimize Devices,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Large,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Large,Useful Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Lifetime,Years,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Air Conditioning_\Large\High_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Lifetime,Years,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Air Conditioning_\Large\Low_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Lifetime,Years,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Air Conditioning_\Medium,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Medium,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Medium,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Medium,Load Shape,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Medium,Optimize Devices,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Medium,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Medium,Useful Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Lifetime,Years,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Air Conditioning_\Medium\High_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Lifetime,Years,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Lifetime,Years,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Air Conditioning_\Small,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Small,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Small,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Small,Load Shape,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Small,Optimize Devices,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Small,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Small,Useful Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Lifetime,Years,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Air Conditioning_\Small\High_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Lifetime,Years,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Air Conditioning_\Small\Low_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Lifetime,Years,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Clothes Dryer,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Clothes Dryer,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Clothes Dryer,End Year Penetration,%,,
+Demand\Residential\Projections\Clothes Dryer,RefHH,Ref/hh,,
+Demand\Residential\Projections\Clothes Dryer\Efficient,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Clothes Dryer\Efficient,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Clothes Dryer\Efficient,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Clothes Dryer\Efficient,Load Shape,Percent,%,
+Demand\Residential\Projections\Clothes Dryer\Efficient,RefHH,Ref/hh,,
+Demand\Residential\Projections\Clothes Dryer\Efficient,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Clothes Dryer\Existing,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Clothes Dryer\Existing,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Clothes Dryer\Existing,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Clothes Dryer\Existing,Load Shape,Percent,%,
+Demand\Residential\Projections\Clothes Dryer\Existing,RefHH,Ref/hh,,
+Demand\Residential\Projections\Clothes Dryer\Existing,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Computer and Laptop,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Computer and Laptop,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Computer and Laptop,End Year Penetration,%,,
+Demand\Residential\Projections\Computer and Laptop,RefHH,Ref/hh,,
+Demand\Residential\Projections\Computer and Laptop\Efficient,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Computer and Laptop\Efficient,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Computer and Laptop\Efficient,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Computer and Laptop\Efficient,Load Shape,Percent,%,
+Demand\Residential\Projections\Computer and Laptop\Efficient,RefHH,Ref/hh,,
+Demand\Residential\Projections\Computer and Laptop\Efficient,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Computer and Laptop\Existing,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Computer and Laptop\Existing,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Computer and Laptop\Existing,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Computer and Laptop\Existing,Load Shape,Percent,%,
+Demand\Residential\Projections\Computer and Laptop\Existing,RefHH,Ref/hh,,
+Demand\Residential\Projections\Computer and Laptop\Existing,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Cooking,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Cooking,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking,End Year Penetration,%,,
+Demand\Residential\Projections\Cooking,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Clean,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Clean,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Clean,Final Energy Intensity,Megajoule,,Household
+Demand\Residential\Projections\Cooking\Clean,Load Shape,Percent,%,
+Demand\Residential\Projections\Cooking\Clean,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Clean,Useful Energy Intensity,Megajoule,,Household
+Demand\Residential\Projections\Cooking\Clean\Biogas,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Clean\Biogas,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Clean\Biogas,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Clean\Biogas,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Clean\Biogas,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Clean\Biogas\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Biogas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Cooking\Clean\Conventional Electric,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Clean\Conventional Electric,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Clean\Conventional Electric,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Clean\Conventional Electric,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Clean\Conventional Electric,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Clean\Induction Electric,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Clean\Induction Electric,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Clean\Induction Electric,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Clean\Induction Electric,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Clean\Induction Electric,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Clean\LPG,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Clean\LPG,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Clean\LPG,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Clean\LPG,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Clean\LPG,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Clean\LPG\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\LPG\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Cooking\Clean\Natural Gas,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Clean\Natural Gas,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Clean\Natural Gas,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Clean\Natural Gas,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Clean\Natural Gas,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Ammonia,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Clean\Natural Gas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Cooking\Clean\Solar Heating,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Clean\Solar Heating,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Clean\Solar Heating,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Clean\Solar Heating,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Clean\Solar Heating,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Traditional,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Traditional,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Traditional,Final Energy Intensity,Gigajoule,,Household
+Demand\Residential\Projections\Cooking\Traditional,Load Shape,Percent,%,
+Demand\Residential\Projections\Cooking\Traditional,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Traditional,Useful Energy Intensity,Gigajoule,,Household
+Demand\Residential\Projections\Cooking\Traditional\Bagasse,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Traditional\Bagasse,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Traditional\Bagasse,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Traditional\Bagasse,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Traditional\Bagasse,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Bagasse\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Cooking\Traditional\Charcoal,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Traditional\Charcoal,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Traditional\Charcoal,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Traditional\Charcoal,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Traditional\Charcoal,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Charcoal\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Cooking\Traditional\Coal,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Traditional\Coal,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Traditional\Coal,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Traditional\Coal,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Traditional\Coal,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Traditional\Coal\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Coal\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Coal\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Coal\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Coal\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Coal\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Coal\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Coal\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Coal\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Coal\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Coal\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Coal\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Coal\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Efficient Wood\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Cooking\Traditional\Kerosene,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Traditional\Kerosene,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Traditional\Kerosene,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Traditional\Kerosene,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Traditional\Kerosene,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Kerosene\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Other Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Cooking\Traditional\Wood,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Cooking\Traditional\Wood,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Cooking\Traditional\Wood,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Cooking\Traditional\Wood,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Cooking\Traditional\Wood,RefHH,Ref/hh,,
+Demand\Residential\Projections\Cooking\Traditional\Wood\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Wood\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Wood\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Wood\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Wood\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Wood\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Wood\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Wood\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Cooking\Traditional\Wood\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Wood\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Wood\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Wood\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Cooking\Traditional\Wood\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Fan,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Fan,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Fan,End Year Penetration,%,,
+Demand\Residential\Projections\Fan,FanHH,fan/hh,,
+Demand\Residential\Projections\Fan,RefHH,Ref/hh,,
+Demand\Residential\Projections\Fan\Efficient,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Fan\Efficient,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Fan\Efficient,FanHH,fan/hh,,
+Demand\Residential\Projections\Fan\Efficient,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Fan\Efficient,Load Shape,Percent,%,
+Demand\Residential\Projections\Fan\Efficient,RefHH,Ref/hh,,
+Demand\Residential\Projections\Fan\Efficient,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Fan\Existing,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Fan\Existing,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Fan\Existing,FanHH,fan/hh,,
+Demand\Residential\Projections\Fan\Existing,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Fan\Existing,Load Shape,Percent,%,
+Demand\Residential\Projections\Fan\Existing,RefHH,Ref/hh,,
+Demand\Residential\Projections\Fan\Existing,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Iron,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Iron,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Iron,End Year Penetration,%,,
+Demand\Residential\Projections\Iron,RefHH,Ref/hh,,
+Demand\Residential\Projections\Iron\Efficient,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Iron\Efficient,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Iron\Efficient,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Iron\Efficient,Load Shape,Percent,%,
+Demand\Residential\Projections\Iron\Efficient,RefHH,Ref/hh,,
+Demand\Residential\Projections\Iron\Efficient,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Iron\Existing,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Iron\Existing,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Iron\Existing,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Iron\Existing,Load Shape,Percent,%,
+Demand\Residential\Projections\Iron\Existing,RefHH,Ref/hh,,
+Demand\Residential\Projections\Iron\Existing,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Lighting,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Lighting,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting,End Year Penetration,%,,
+Demand\Residential\Projections\Lighting,RefHH,Ref/hh,,
+Demand\Residential\Projections\Lighting\Electricity,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Lighting\Electricity,BulbsPerHH,Bulbs,,
+Demand\Residential\Projections\Lighting\Electricity,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting\Electricity,LightingHours,Hours,,
+Demand\Residential\Projections\Lighting\Electricity,RefHH,Ref/hh,,
+Demand\Residential\Projections\Lighting\Electricity\CFL,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Lighting\Electricity\CFL,Bulb Wattage,Watts,,
+Demand\Residential\Projections\Lighting\Electricity\CFL,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting\Electricity\CFL,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Lighting\Electricity\CFL,Load Shape,Percent,%,
+Demand\Residential\Projections\Lighting\Electricity\CFL,RefHH,Ref/hh,,
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,Bulb Wattage,Watts,,
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,Load Shape,Percent,%,
+Demand\Residential\Projections\Lighting\Electricity\Fluorescent,RefHH,Ref/hh,,
+Demand\Residential\Projections\Lighting\Electricity\Halogen,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Lighting\Electricity\Halogen,Bulb Wattage,Watts,,
+Demand\Residential\Projections\Lighting\Electricity\Halogen,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting\Electricity\Halogen,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Lighting\Electricity\Halogen,Load Shape,Percent,%,
+Demand\Residential\Projections\Lighting\Electricity\Halogen,RefHH,Ref/hh,,
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,Bulb Wattage,Watts,,
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,Load Shape,Percent,%,
+Demand\Residential\Projections\Lighting\Electricity\Incandescent,RefHH,Ref/hh,,
+Demand\Residential\Projections\Lighting\Electricity\LED,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Lighting\Electricity\LED,Bulb Wattage,Watts,,
+Demand\Residential\Projections\Lighting\Electricity\LED,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting\Electricity\LED,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Lighting\Electricity\LED,Load Shape,Percent,%,
+Demand\Residential\Projections\Lighting\Electricity\LED,RefHH,Ref/hh,,
+Demand\Residential\Projections\Lighting\Other,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Lighting\Other,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting\Other,RefHH,Ref/hh,,
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,Final Energy Intensity,Liter,,Household
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles,RefHH,Ref/hh,,
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Lighting\Other\Kerosene and Candles\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Lighting\Other\Solar Lighting,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Other,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other,End Year Penetration,%,,
+Demand\Residential\Projections\Other,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other,Residential Uncalibrated Energy Intensity,kwh,,
+Demand\Residential\Projections\Other\Bagasse,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Bagasse,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Bagasse,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Bagasse,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Bagasse\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Bagasse\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Bagasse\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Other\Biogas,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Biogas,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Biogas,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Biogas,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Biogas\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Biogas\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Biogas\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Biogas\Carbon Dioxide Biogenic,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Other\Biogas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Biogas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Biogas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Biogas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Biogas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Biogas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Biogas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Biogas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Biogas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Other\Charcoal,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Charcoal,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Charcoal,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Charcoal,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Charcoal\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Charcoal\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Charcoal\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Other\Diesel,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Diesel,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Diesel,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Diesel,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Diesel\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Diesel\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Diesel\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Other\Electricity,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Electricity,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Electricity,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Electricity,Load Shape,Percent,%,
+Demand\Residential\Projections\Other\Electricity,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Kerosene,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Kerosene,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Kerosene,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Kerosene,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Kerosene\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Kerosene\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Kerosene\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Other\LPG,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\LPG,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\LPG,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\LPG,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\LPG\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\LPG\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\LPG\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Other\LPG\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\LPG\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\LPG\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\LPG\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\LPG\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\LPG\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\LPG\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\LPG\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\LPG\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\LPG\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Other\Natural Gas,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Natural Gas,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Natural Gas,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Natural Gas,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Natural Gas\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Natural Gas\Black Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Carbon Dioxide,Avg Environmental Loading,Metric Tonne,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Methane,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Organic Carbon,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Particulates PM10,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Natural Gas\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Other\Other Biomass,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Other Biomass,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Other Biomass,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Other Biomass,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Other Biomass\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Other Biomass\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Other Biomass\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Other Biomass\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Other\Solar Heating,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Solar Heating,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Solar Heating,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Solar Heating,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Wood,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Other\Wood,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Other\Wood,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Other\Wood,RefHH,Ref/hh,,
+Demand\Residential\Projections\Other\Wood\Ammonia,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Black Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Carbon Dioxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Wood\Carbon Dioxide Biogenic,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Carbon Monoxide,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Methane,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Nitrogen Oxides,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Nitrous Oxide,Avg Environmental Loading,Kilogramme,,Terajoule
+Demand\Residential\Projections\Other\Wood\Non Methane Volatile Organic Compounds,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Organic Carbon,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Particulates PM10,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Particulates PM2pt5,Avg Environmental Loading,Kilogramme,,Metric Tonne
+Demand\Residential\Projections\Other\Wood\Sulfur Dioxide,Avg Environmental Loading,Kilogramme,,Kilogramme
+Demand\Residential\Projections\Refrigeration,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Refrigeration,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration,End Year Penetration,%,,
+Demand\Residential\Projections\Refrigeration,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration\High,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Refrigeration\High,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration\High,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Refrigeration\High,Load Shape,Percent,%,
+Demand\Residential\Projections\Refrigeration\High,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration\High,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Refrigeration\Low,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Refrigeration\Low,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration\Low,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Refrigeration\Low,Load Shape,Percent,%,
+Demand\Residential\Projections\Refrigeration\Low,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration\Low,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Refrigeration\Medium,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Refrigeration\Medium,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration\Medium,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Refrigeration\Medium,Load Shape,Percent,%,
+Demand\Residential\Projections\Refrigeration\Medium,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration\Medium,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Refrigeration_,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Refrigeration_,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_,End Year Penetration,%,,
+Demand\Residential\Projections\Refrigeration_,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Large,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Large,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Large,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Large,Load Shape,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Large,Optimize Devices,Percent,,
+Demand\Residential\Projections\Refrigeration_\Large,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Large,Useful Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Lifetime,Years,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Refrigeration_\Large\High_eff,Variable OM Cost,U.S. Dollar,,Kilowatt-Hour
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Lifetime,Years,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Refrigeration_\Large\Low_eff,Variable OM Cost,U.S. Dollar,,Kilowatt-Hour
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Lifetime,Years,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Refrigeration_\Large\Mid_eff,Variable OM Cost,U.S. Dollar,,Kilowatt-Hour
+Demand\Residential\Projections\Refrigeration_\Medium,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Medium,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Medium,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Medium,Load Shape,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Medium,Optimize Devices,Percent,,
+Demand\Residential\Projections\Refrigeration_\Medium,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Medium,Useful Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Lifetime,Years,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Refrigeration_\Medium\High_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Lifetime,Years,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Refrigeration_\Medium\Low_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Lifetime,Years,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Refrigeration_\Small,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Small,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Small,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Small,Load Shape,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Small,Optimize Devices,Percent,,
+Demand\Residential\Projections\Refrigeration_\Small,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Small,Useful Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Lifetime,Years,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Refrigeration_\Small\High_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Lifetime,Years,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Refrigeration_\Small\Low_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Capital Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Efficiency,Efficiency,%,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Exogenous Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Final Energy Intensity,Tonnes of Oil Equivalent,,Household
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Fixed OM Cost,U.S. Dollar,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Interest Rate,Percent,%,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Lifetime,Years,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Maximum Availability,Percent,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Maximum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Maximum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Minimum Device Additions,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Minimum Devices,Device,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Minimum Share,Share,%,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Minimum Utilization,Percent,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,RefHH,Ref/hh,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Unit Capacity,Kilowatt,,
+Demand\Residential\Projections\Refrigeration_\Small\Mid_eff,Variable OM Cost,U.S. Dollar,,Gigajoule
+Demand\Residential\Projections\Rice Cooker,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Rice Cooker,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Rice Cooker,End Year Penetration,%,,
+Demand\Residential\Projections\Rice Cooker,RefHH,Ref/hh,,
+Demand\Residential\Projections\Rice Cooker\Efficient,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Rice Cooker\Efficient,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Rice Cooker\Efficient,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Rice Cooker\Efficient,Load Shape,Percent,%,
+Demand\Residential\Projections\Rice Cooker\Efficient,RefHH,Ref/hh,,
+Demand\Residential\Projections\Rice Cooker\Efficient,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Rice Cooker\Existing,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Rice Cooker\Existing,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Rice Cooker\Existing,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Rice Cooker\Existing,Load Shape,Percent,%,
+Demand\Residential\Projections\Rice Cooker\Existing,RefHH,Ref/hh,,
+Demand\Residential\Projections\Rice Cooker\Existing,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\TV,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\TV,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\TV,End Year Penetration,%,,
+Demand\Residential\Projections\TV,RefHH,Ref/hh,,
+Demand\Residential\Projections\TV,TVHH,TV/hh,,
+Demand\Residential\Projections\TV\Efficient,Activity Level,Share,%,of Household
+Demand\Residential\Projections\TV\Efficient,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\TV\Efficient,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\TV\Efficient,Load Shape,Percent,%,
+Demand\Residential\Projections\TV\Efficient,RefHH,Ref/hh,,
+Demand\Residential\Projections\TV\Efficient,TVHH,TV/hh,,
+Demand\Residential\Projections\TV\Efficient,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\TV\Existing,Activity Level,Share,%,of Household
+Demand\Residential\Projections\TV\Existing,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\TV\Existing,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\TV\Existing,Load Shape,Percent,%,
+Demand\Residential\Projections\TV\Existing,RefHH,Ref/hh,,
+Demand\Residential\Projections\TV\Existing,TVHH,TV/hh,,
+Demand\Residential\Projections\TV\Existing,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Washing Machine,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Washing Machine,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Washing Machine,End Year Penetration,%,,
+Demand\Residential\Projections\Washing Machine,RefHH,Ref/hh,,
+Demand\Residential\Projections\Washing Machine\Efficient,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Washing Machine\Efficient,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Washing Machine\Efficient,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Washing Machine\Efficient,Load Shape,Percent,%,
+Demand\Residential\Projections\Washing Machine\Efficient,RefHH,Ref/hh,,
+Demand\Residential\Projections\Washing Machine\Efficient,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Washing Machine\Existing,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Washing Machine\Existing,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Washing Machine\Existing,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Washing Machine\Existing,Load Shape,Percent,%,
+Demand\Residential\Projections\Washing Machine\Existing,RefHH,Ref/hh,,
+Demand\Residential\Projections\Washing Machine\Existing,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Water Heating,Activity Level,Saturation,%,of Household
+Demand\Residential\Projections\Water Heating,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Water Heating,End Year Penetration,%,,
+Demand\Residential\Projections\Water Heating,RefHH,Ref/hh,,
+Demand\Residential\Projections\Water Heating\Existing,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Water Heating\Existing,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Water Heating\Existing,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Water Heating\Existing,Load Shape,Percent,%,
+Demand\Residential\Projections\Water Heating\Existing,RefHH,Ref/hh,,
+Demand\Residential\Projections\Water Heating\Existing,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Water Heating\Heat Pump,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Water Heating\Heat Pump,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Water Heating\Heat Pump,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Water Heating\Heat Pump,Load Shape,Percent,%,
+Demand\Residential\Projections\Water Heating\Heat Pump,RefHH,Ref/hh,,
+Demand\Residential\Projections\Water Heating\Heat Pump,Uncalibrated Final Intensity,kwh/hh,,
+Demand\Residential\Projections\Water Heating\Heat Pump Outside Air,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Water Heating\Heat Pump Outside Air,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Water Heating\Heat Pump Outside Air,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Water Heating\Heat Pump Outside Air,Load Shape,Percent,%,
+Demand\Residential\Projections\Water Heating\Heat Pump Outside Air,RefHH,Ref/hh,,
+Demand\Residential\Projections\Water Heating\Solar,Activity Level,Share,%,of Household
+Demand\Residential\Projections\Water Heating\Solar,Demand Cost,2020 USD,,Household
+Demand\Residential\Projections\Water Heating\Solar,Final Energy Intensity,Kilowatt-Hour,,Household
+Demand\Residential\Projections\Water Heating\Solar,RefHH,Ref/hh,,

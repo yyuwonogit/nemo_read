@@ -1,0 +1,137 @@
+        Cooling Energy Savings   [Key\Net Zero Measures\Residential\Building Orientation\Cooling Energy Savings]  vars: Activity Level
+        Energy Savings   [Key\Net Zero Measures\Residential\Gamification\Energy Savings]  vars: Activity Level
+        Energy Savings   [Key\Net Zero Measures\Residential\Programmable Thermostats\Energy Savings]  vars: Activity Level
+        Energy Savings   [Key\Net Zero Measures\Residential\Reflective Coatings Cool Roofs\Energy Savings]  vars: Activity Level
+        Large   [Key\Residential\Air Conditioning\Size_Share\Large]  vars: Activity Level
+        Large   [Key\Residential\Air Conditioning\Useful_EI\Large]  vars: Activity Level
+        Large   [Key\Residential\Refrigeration\Size_Share\Large]  vars: Activity Level
+        Large   [Key\Residential\Refrigeration\Useful_EI\Large]  vars: Activity Level
+        Large_High   [Key\Residential\Air Conditioning\Efficiency_Share\Large_High]  vars: Activity Level
+        Large_High   [Key\Residential\Refrigeration\Efficiency_Share\Large_High]  vars: Activity Level
+        Large_Low   [Key\Residential\Air Conditioning\Efficiency_Share\Large_Low]  vars: Activity Level
+        Large_Low   [Key\Residential\Refrigeration\Efficiency_Share\Large_Low]  vars: Activity Level
+        Large_Mid   [Key\Residential\Air Conditioning\Efficiency_Share\Large_Mid]  vars: Activity Level
+        Large_Mid   [Key\Residential\Refrigeration\Efficiency_Share\Large_Mid]  vars: Activity Level
+        Lighting Energy Savings   [Key\Net Zero Measures\Residential\Building Orientation\Lighting Energy Savings]  vars: Activity Level
+        Medium   [Key\Residential\Air Conditioning\Size_Share\Medium]  vars: Activity Level
+        Medium   [Key\Residential\Air Conditioning\Useful_EI\Medium]  vars: Activity Level
+        Medium   [Key\Residential\Refrigeration\Size_Share\Medium]  vars: Activity Level
+        Medium   [Key\Residential\Refrigeration\Useful_EI\Medium]  vars: Activity Level
+        Medium_High   [Key\Residential\Air Conditioning\Efficiency_Share\Medium_High]  vars: Activity Level
+        Medium_High   [Key\Residential\Refrigeration\Efficiency_Share\Medium_High]  vars: Activity Level
+        Medium_Low   [Key\Residential\Air Conditioning\Efficiency_Share\Medium_Low]  vars: Activity Level
+        Medium_Low   [Key\Residential\Refrigeration\Efficiency_Share\Medium_Low]  vars: Activity Level
+        Medium_Mid   [Key\Residential\Air Conditioning\Efficiency_Share\Medium_Mid]  vars: Activity Level
+        Medium_Mid   [Key\Residential\Refrigeration\Efficiency_Share\Medium_Mid]  vars: Activity Level
+        Share_Households   [Key\Net Zero Measures\Residential\Building Orientation\Share_Households]  vars: Activity Level
+        Share_Households   [Key\Net Zero Measures\Residential\Gamification\Share_Households]  vars: Activity Level
+        Share_Households   [Key\Net Zero Measures\Residential\Programmable Thermostats\Share_Households]  vars: Activity Level
+        Share_Households   [Key\Net Zero Measures\Residential\Reflective Coatings Cool Roofs\Share_Households]  vars: Activity Level
+        Small   [Key\Residential\Air Conditioning\Size_Share\Small]  vars: Activity Level
+        Small   [Key\Residential\Air Conditioning\Useful_EI\Small]  vars: Activity Level
+        Small   [Key\Residential\Refrigeration\Size_Share\Small]  vars: Activity Level
+        Small   [Key\Residential\Refrigeration\Useful_EI\Small]  vars: Activity Level
+        Small_High   [Key\Residential\Air Conditioning\Efficiency_Share\Small_High]  vars: Activity Level
+        Small_High   [Key\Residential\Refrigeration\Efficiency_Share\Small_High]  vars: Activity Level
+        Small_Low   [Key\Residential\Air Conditioning\Efficiency_Share\Small_Low]  vars: Activity Level
+        Small_Low   [Key\Residential\Refrigeration\Efficiency_Share\Small_Low]  vars: Activity Level
+        Small_Mid   [Key\Residential\Air Conditioning\Efficiency_Share\Small_Mid]  vars: Activity Level
+        Small_Mid   [Key\Residential\Refrigeration\Efficiency_Share\Small_Mid]  vars: Activity Level
+      a   [Key\Residential end use data_\AC\a]  vars: Activity Level
+      a   [Key\Residential end use data_\Computer\a]  vars: Activity Level
+      a   [Key\Residential end use data_\Fan\a]  vars: Activity Level
+      a   [Key\Residential end use data_\Iron\a]  vars: Activity Level
+      a   [Key\Residential end use data_\Refrigeration\a]  vars: Activity Level
+      a   [Key\Residential end use data_\Rice Cooker\a]  vars: Activity Level
+      a   [Key\Residential end use data_\Television\a]  vars: Activity Level
+      a   [Key\Residential end use data_\Washing Machine\a]  vars: Activity Level
+      a   [Key\Residential end use data_\Water Heating\a]  vars: Activity Level
+      b   [Key\Residential end use data_\AC\b]  vars: Activity Level
+      b   [Key\Residential end use data_\Computer\b]  vars: Activity Level
+      b   [Key\Residential end use data_\Fan\b]  vars: Activity Level
+      b   [Key\Residential end use data_\Iron\b]  vars: Activity Level
+      b   [Key\Residential end use data_\Refrigeration\b]  vars: Activity Level
+      b   [Key\Residential end use data_\Rice Cooker\b]  vars: Activity Level
+      b   [Key\Residential end use data_\Television\b]  vars: Activity Level
+      b   [Key\Residential end use data_\Washing Machine\b]  vars: Activity Level
+      b   [Key\Residential end use data_\Water Heating\b]  vars: Activity Level
+      Bagasse   [Key\Cal\Residential\Bagasse]  vars: Activity Level
+      Biogas   [Key\Cal\Residential\Biogas]  vars: Activity Level
+      Biomass   [Key\Cal\Residential\Biomass]  vars: Activity Level
+      c   [Key\Residential end use data_\AC\c]  vars: Activity Level
+      c   [Key\Residential end use data_\Computer\c]  vars: Activity Level
+      c   [Key\Residential end use data_\Fan\c]  vars: Activity Level
+      c   [Key\Residential end use data_\Iron\c]  vars: Activity Level
+      c   [Key\Residential end use data_\Refrigeration\c]  vars: Activity Level
+      c   [Key\Residential end use data_\Rice Cooker\c]  vars: Activity Level
+      c   [Key\Residential end use data_\Television\c]  vars: Activity Level
+      c   [Key\Residential end use data_\Washing Machine\c]  vars: Activity Level
+      c   [Key\Residential end use data_\Water Heating\c]  vars: Activity Level
+      Charcoal   [Key\Cal\Residential\Charcoal]  vars: Activity Level
+      Coal   [Key\Cal\Residential\Coal]  vars: Activity Level
+      Cook and Light Non Elec   [Key\Cal\Residential\Cook and Light Non Elec]  vars: Activity Level
+      Diesel   [Key\Cal\Residential\Diesel]  vars: Activity Level
+      Electricity   [Key\Cal\Residential\Electricity]  vars: Activity Level
+      Historical AC   [Key\Residential end use data_\AC\Historical AC]  vars: Activity Level
+      Historical Fan   [Key\Residential end use data_\Fan\Historical Fan]  vars: Activity Level
+      Historical Iron   [Key\Residential end use data_\Iron\Historical Iron]  vars: Activity Level
+      Historical PC   [Key\Residential end use data_\Computer\Historical PC]  vars: Activity Level
+      Historical RC   [Key\Residential end use data_\Rice Cooker\Historical RC]  vars: Activity Level
+      Historical Ref   [Key\Residential end use data_\Refrigeration\Historical Ref]  vars: Activity Level
+      Historical TV   [Key\Residential end use data_\Television\Historical TV]  vars: Activity Level
+      Historical WH   [Key\Residential end use data_\Water Heating\Historical WH]  vars: Activity Level
+      Historical WM   [Key\Residential end use data_\Washing Machine\Historical WM]  vars: Activity Level
+      Kerosene   [Key\Cal\Residential\Kerosene]  vars: Activity Level
+      LPG   [Key\Cal\Residential\LPG]  vars: Activity Level
+      Natural Gas   [Key\Cal\Residential\Natural Gas]  vars: Activity Level
+      number of appliances   [Key\Residential end use data_\AC\number of appliances]  vars: Activity Level
+      number of appliances   [Key\Residential end use data_\Computer\number of appliances]  vars: Activity Level
+      number of appliances   [Key\Residential end use data_\Fan\number of appliances]  vars: Activity Level
+      number of appliances   [Key\Residential end use data_\Iron\number of appliances]  vars: Activity Level
+      number of appliances   [Key\Residential end use data_\Refrigeration\number of appliances]  vars: Activity Level
+      number of appliances   [Key\Residential end use data_\Rice Cooker\number of appliances]  vars: Activity Level
+      number of appliances   [Key\Residential end use data_\Television\number of appliances]  vars: Activity Level
+      number of appliances   [Key\Residential end use data_\Washing Machine\number of appliances]  vars: Activity Level
+      number of appliances   [Key\Residential end use data_\Water Heating\number of appliances]  vars: Activity Level
+      Percent Ownership   [Key\Residential\Air Conditioning\Percent Ownership]  vars: Activity Level
+      Percent Ownership   [Key\Residential\Refrigeration\Percent Ownership]  vars: Activity Level
+      Solar   [Key\Cal\Residential\Solar]  vars: Activity Level
+      Wood   [Key\Cal\Residential\Wood]  vars: Activity Level
+      year_   [Key\Residential end use data_\AC\year_]  vars: Activity Level
+      year_   [Key\Residential end use data_\Computer\year_]  vars: Activity Level
+      year_   [Key\Residential end use data_\Fan\year_]  vars: Activity Level
+      year_   [Key\Residential end use data_\Iron\year_]  vars: Activity Level
+      year_   [Key\Residential end use data_\Refrigeration\year_]  vars: Activity Level
+      year_   [Key\Residential end use data_\Rice Cooker\year_]  vars: Activity Level
+      year_   [Key\Residential end use data_\Television\year_]  vars: Activity Level
+      year_   [Key\Residential end use data_\Washing Machine\year_]  vars: Activity Level
+      year_   [Key\Residential end use data_\Water Heating\year_]  vars: Activity Level
+    Agriculture Fraction in GDP   [Key\Macroeconomic\Agriculture Fraction in GDP]  vars: Activity Level
+    Average Income   [Key\Demographic\Average Income]  vars: Activity Level
+    Bulbs per household   [Key\Lighting_data\Bulbs per household]  vars: Activity Level
+    Clean Cooking Access   [Key\Energy Access\Clean Cooking Access]  vars: Activity Level
+    Construction Fraction in Industry   [Key\Macroeconomic\Construction Fraction in Industry]  vars: Activity Level
+    Elasticity   [Key\Macroeconomic\Elasticity]  vars: Activity Level
+    Electrification Rate   [Key\Energy Access\Electrification Rate]  vars: Activity Level
+    Employment Rate   [Key\Demographic\Employment Rate]  vars: Activity Level
+    Gross Fixed Capital Formation   [Key\Macroeconomic\Gross Fixed Capital Formation]  vars: Activity Level
+    Household Size   [Key\Demographic\Household Size]  vars: Activity Level
+    Households   [Key\Demographic\Households]  vars: Activity Level
+    Industry Fraction in GDP   [Key\Macroeconomic\Industry Fraction in GDP]  vars: Activity Level
+    Manufacturing Fraction in Industry   [Key\Macroeconomic\Manufacturing Fraction in Industry]  vars: Activity Level
+    Mining Fraction in Industry   [Key\Macroeconomic\Mining Fraction in Industry]  vars: Activity Level
+    Operating hours   [Key\Lighting_data\Operating hours]  vars: Activity Level
+    Population   [Key\Demographic\Population]  vars: Activity Level
+    Poverty Rate   [Key\Demographic\Poverty Rate]  vars: Activity Level
+    Real GDP Agriculture   [Key\Macroeconomic\Real GDP Agriculture]  vars: Activity Level
+    Real GDP Industry   [Key\Macroeconomic\Real GDP Industry]  vars: Activity Level
+    Real GDP Manufacturing   [Key\Macroeconomic\Real GDP Manufacturing]  vars: Activity Level
+    Real GDP Per Capita   [Key\Macroeconomic\Real GDP Per Capita]  vars: Activity Level
+    Real GDP Per Capita_Growth   [Key\Macroeconomic\Real GDP Per Capita_Growth]  vars: Activity Level
+    Real GDP PPP   [Key\Macroeconomic\Real GDP PPP]  vars: Activity Level
+    Real GDP Service   [Key\Macroeconomic\Real GDP Service]  vars: Activity Level
+    Real GDP Service Per Capita   [Key\Macroeconomic\Real GDP Service Per Capita]  vars: Activity Level
+    Services Fraction in GDP   [Key\Macroeconomic\Services Fraction in GDP]  vars: Activity Level
+    Urban population   [Key\Demographic\Urban population]  vars: Activity Level
+    Urbanization Rate   [Key\Demographic\Urbanization Rate]  vars: Activity Level
+    Utilities Fraction in Industry   [Key\Macroeconomic\Utilities Fraction in Industry]  vars: Activity Level
