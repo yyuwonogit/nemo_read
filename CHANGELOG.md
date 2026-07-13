@@ -1,5 +1,29 @@
 # Changelog
 
+## [Unreleased] — engine hard-edit capture + §11.2b tripwire (2026-07-13)
+
+- **Captured the 2026-07-09 engine hard edits as deltas** (they existed only in
+  the live area): (1) Malaysia CA `Existing Capacity` zero-points removed on
+  `Diesel_MYPE` (2021) + `Biomass Other_MYSR` (2023-24) — LEAP halts when HP is
+  non-zero against zero capacity; applied to both power baseline canonicals
+  (delta doctrine) and shipped to the power team with the carry-forward
+  instruction + the real-fix ask (author true capacity or zero the HP).
+  (2) `Resources\Primary\Biomass:Maximum Imports = Max(5000000, Maximum
+  Production[GJ])` at Base Template/RAS (Myanmar biomass infeasibility fix) —
+  recorded verbatim and routed to the bioenergy team with tasks: unit-basis
+  check (the edit changed [Tonne]/1000 -> [GJ]), reference-first authoring
+  rule, and THE SUPPLY-ADEQUACY SWEEP (all bio feedstocks x regions) to
+  replace the Base-Template blanket with regional caps.
+- **Added — §11.2b pre-flight tripwire.** `nemo_read.
+  find_zero_existing_capacity_conflicts` flags definite `Existing Capacity=0`
+  vs non-zero `Historical Production` conflicts (same CSV, same branch/
+  region/scenario, HP linearly interpolated); wired into the sealed
+  `_preflight_csv` (aborts before COM) + 6 regression tests pinning the exact
+  burn case. The checker retro-finds the same MYSR 2023/24 conflict latent in
+  the May-07 archive payloads. Ship-package result CSVs exempted from the
+  region-lock repo scan (complete-grid result exports are not authoring).
+  Suite: 403 passed.
+
 ## [Unreleased] — §A.23 base-branch authoring lock (2026-07-07, post-inject-failure)
 
 - **Shipped — `outbox/power_qa_answers_20260707.zip`** (answers to the power

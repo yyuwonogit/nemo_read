@@ -62,11 +62,21 @@ _EXEMPT_BASE_BRANCH = {
 }
 
 
+# (d) Team delivery packages (`*_ship/` folders, 2026-07-09+): they carry
+#     RESULT exports melted on a complete grid — LEAP emits a value cell for
+#     every region × tech, so zero-valued phantom rows exist for foreign-region
+#     node variants by construction. Results are read-only outputs, not
+#     authoring; the §A.21/§A.23 locks govern inject payloads. The actual
+#     inject files inside ship folders are copies of scanned originals.
+_EXEMPT_DIR_MARKERS = ("_ship/",)
+
+
 def _is_exempt(csv_path: Path) -> bool:
     rel = csv_path.relative_to(REPO).as_posix()
     return (csv_path.name.startswith(_EXEMPT_PREFIX)
             or rel in _EXEMPT_RAW_DROPS
-            or rel in _EXEMPT_BASE_BRANCH)
+            or rel in _EXEMPT_BASE_BRANCH
+            or any(m in rel for m in _EXEMPT_DIR_MARKERS))
 
 
 def _write(tmp_path, header, rows):

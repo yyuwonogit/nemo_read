@@ -837,3 +837,87 @@ class TestClassifyDecimalSeparator:
         assert classify_decimal_separator(
             "Interp(2025, -1.5, 2030, -2.7, 2035, 3.1)"
         ) == "period"
+
+
+class TestZeroExistingCapacityVsHistoricalProduction:
+    """§11.2b tripwire — Existing Capacity = 0 in a year where Historical
+    Production is non-zero halts the LEAP calc. Burn: 2026-07-09, Malaysia
+    Diesel_MYPE (2021) + Biomass Other_MYSR (2023/24); modeller hand-deleted
+    the zero points in the engine."""
+
+    def _write(self, tmp_path, rows):
+        import csv as _csv
+        p = tmp_path / "c.csv"
+        with open(p, "w", newline="", encoding="utf-8") as fh:
+            w = _csv.writer(fh)
+            w.writerow(["ams", "branch", "variable", "expression", "scenario"])
+            w.writerows(rows)
+        return p
+
+    def test_exact_burn_case_is_flagged(self, tmp_path):
+        from nemo_read import find_zero_existing_capacity_conflicts as f
+        bs = chr(92)
+        b = f"Transformation{bs}Centralized Electricity Generation{bs}Processes{bs}Diesel_MYPE"
+        p = self._write(tmp_path, [
+            ["Malaysia", b, "Existing Capacity",
+             "Interp(2020, 60.1, 2021, 0, 2022, 35.23, FirstScenarioYear, 0)",
+             "Current Accounts"],
+            ["Malaysia", b, "Historical Production",
+             "Interp(2020, 185.2, 2021, 155.8, 2022, 190.0)",
+             "Current Accounts"],
+        ])
+        v = f(p)
+        assert len(v) == 1
+        assert v[0][1] == "Malaysia" and v[0][2] == "Diesel_MYPE" and v[0][3] == 2021
+
+    def test_zero_hp_at_zero_year_is_clean(self, tmp_path):
+        from nemo_read import find_zero_existing_capacity_conflicts as f
+        p = self._write(tmp_path, [
+            ["Malaysia", "T\P\X", "Existing Capacity",
+             "Interp(2020, 60, 2021, 0)", "Current Accounts"],
+            ["Malaysia", "T\P\X", "Historical Production",
+             "Interp(2020, 100, 2021, 0)", "Current Accounts"],
+        ])
+        assert f(p) == []
+
+    def test_no_hp_row_is_unknown_not_conflict(self, tmp_path):
+        from nemo_read import find_zero_existing_capacity_conflicts as f
+        p = self._write(tmp_path, [
+            ["Malaysia", "T\P\X", "Existing Capacity",
+             "Interp(2020, 60, 2021, 0)", "Current Accounts"],
+        ])
+        assert f(p) == []
+
+    def test_firstscenarioyear_tail_not_flagged(self, tmp_path):
+        from nemo_read import find_zero_existing_capacity_conflicts as f
+        p = self._write(tmp_path, [
+            ["Malaysia", "T\P\X", "Existing Capacity",
+             "Interp(2020, 60, 2024, 50, FirstScenarioYear, 0)", "Current Accounts"],
+            ["Malaysia", "T\P\X", "Historical Production",
+             "Interp(2020, 100, 2024, 90)", "Current Accounts"],
+        ])
+        assert f(p) == []
+
+    def test_hp_interpolated_between_points_is_caught(self, tmp_path):
+        from nemo_read import find_zero_existing_capacity_conflicts as f
+        p = self._write(tmp_path, [
+            ["Malaysia", "T\P\X", "Existing Capacity",
+             "Interp(2020, 60, 2023, 0)", "Current Accounts"],
+            ["Malaysia", "T\P\X", "Historical Production",
+             "Interp(2020, 100, 2024, 60)", "Current Accounts"],  # 2023 ~ 70 by interp
+        ])
+        v = f(p)
+        assert len(v) == 1 and v[0][3] == 2023
+
+    def test_preflight_reports_conflict(self, tmp_path):
+        from nemo_read.inject_base import CanonicalInjector
+        class Probe(CanonicalInjector):
+            SECTOR_NAME = "probe"
+        p = self._write(tmp_path, [
+            ["Malaysia", "T\P\X", "Existing Capacity",
+             "Interp(2020, 60, 2021, 0)", "Current Accounts"],
+            ["Malaysia", "T\P\X", "Historical Production",
+             "Interp(2020, 100, 2022, 100)", "Current Accounts"],
+        ])
+        errs = Probe()._preflight_csv(p)
+        assert any("11.2b" in e for e in errs)

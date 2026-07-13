@@ -155,6 +155,7 @@ from .scaffold import scaffold_package
 from .inject_base import (
     CanonicalInjector, InjectorSealError,
     NODE_REGION_LOCK, BASE_BRANCH_NODE_ONLY, find_region_lock_violations,
+    find_zero_existing_capacity_conflicts,
 )
 from .variable_classifier import classify, classify_many, filter_input_names
 from .probe_base import (
@@ -223,6 +224,7 @@ __all__ = [
     # Standardised LEAP COM frameworks (2026-05-17, §A.10 + §A.15 + §A.16)
     "CanonicalInjector", "InjectorSealError",
     "NODE_REGION_LOCK", "BASE_BRANCH_NODE_ONLY", "find_region_lock_violations",
+    "find_zero_existing_capacity_conflicts",
     "classify", "classify_many", "filter_input_names",
     "CanonicalProber", "ProberSealError",
     "DEFAULT_RESULT_VARS", "DEFAULT_INPUT_VARS",

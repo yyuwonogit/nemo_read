@@ -2006,6 +2006,15 @@ is available."*
 
 Confirmed 2026-05-05 — Thailand Wind Onshore in BAS hit this on a
 Round 1.5 patch cycle. Resolution was `First Simulation Year = 2025`.
+Re-burned 2026-07-09 in the variant form: `Existing Capacity` carrying
+explicit `year, 0` points while the same branch's `Historical
+Production` is non-zero at that year (Malaysia `Diesel_MYPE` 2021,
+`Biomass Other_MYSR` 2023–24; modeller hand-deleted the zero points in
+the engine; captured as delta 2026-07-13). **Now mechanically enforced
+(§A.17):** `nemo_read.find_zero_existing_capacity_conflicts` runs in
+the sealed `_preflight_csv` — a payload carrying a definite EC-zero vs
+HP-non-zero conflict ABORTS before any COM write. Tests:
+`tests/test_inject_base.py::TestZeroExistingCapacityVsHistoricalProduction`.
 
 ### 11.2c Variable-renewable `Min Utilization = Maximum Availability` trap
 For variable-renewable tech (Solar PV, Solar PV Rooftop, Solar Floating,

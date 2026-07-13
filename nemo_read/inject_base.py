@@ -203,6 +203,76 @@ def find_region_lock_violations(csv_path) -> list[tuple[int, str, str, str]]:
     return out
 
 
+_YEARVAL_RE = re.compile(r"\b(19\d\d|20\d\d)\s*,\s*(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)")
+
+
+def _year_pairs(expr: str) -> list[tuple[int, float]]:
+    """Explicit (year, value) pairs in an expression's comment-stripped body.
+    Symbolic anchors (`FirstScenarioYear, 0`) are naturally excluded."""
+    return [(int(y), float(v))
+            for y, v in _YEARVAL_RE.findall(expr.split("?", 1)[0])]
+
+
+def find_zero_existing_capacity_conflicts(csv_path) -> list[tuple[int, str, str, int, float]]:
+    """§11.2b tripwire: `Existing Capacity = 0` in a year where the same
+    branch's `Historical Production` is non-zero.
+
+    LEAP halts the calc on this combination ("Output in timeslice N is
+    non-zero but zero capacity is available") — burned 2026-05-05 (Thailand
+    Wind Onshore) and again 2026-07-09 (Malaysia Diesel_MYPE 2021, Biomass
+    Other_MYSR 2023-24; modeller had to hand-delete the zero points in the
+    engine). Flags DEFINITE conflicts only: both variables present in the
+    same CSV for the same (region, branch, scenario), EC has an explicit
+    year→0 point, and HP linearly interpolated at that year exceeds 1e-6.
+    EC-zero years with no HP row in the payload are NOT flagged (unknown is
+    not a conflict). Returns (ec_row_number, region, branch_leaf, year,
+    hp_value_at_year); empty list = clean.
+    """
+    bs = chr(92)
+    with open(csv_path, encoding="utf-8-sig") as fh:
+        rdr = csv.DictReader(fh)
+        hdr = rdr.fieldnames or []
+        rc = next((c for c in _REGION_COLS if c in hdr), None)
+        nc = next((c for c in _NODE_COLS if c in hdr), None)
+        vc = next((c for c in ("variable", "Variable") if c in hdr), None)
+        ec_col = next((c for c in ("expression", "Expression") if c in hdr), None)
+        sc = next((c for c in ("scenario", "Scenario") if c in hdr), None)
+        if not (rc and nc and vc and ec_col):
+            return []
+        ec, hp = {}, {}
+        for i, row in enumerate(rdr, start=2):
+            var = (row.get(vc) or "").strip()
+            if var not in ("Existing Capacity", "Historical Production"):
+                continue
+            lf = (row.get(nc) or "").rstrip(bs).split(bs)[-1].strip()
+            key = ((row.get(rc) or "").strip(), lf,
+                   (row.get(sc) or "").strip() if sc else "")
+            pairs = _year_pairs(row.get(ec_col) or "")
+            if not pairs:
+                continue
+            (ec if var == "Existing Capacity" else hp)[key] = (i, pairs)
+    def hp_at(pairs, y):
+        if y <= pairs[0][0]:
+            return pairs[0][1] if y == pairs[0][0] else None
+        if y >= pairs[-1][0]:
+            return pairs[-1][1]
+        for (y1, v1), (y2, v2) in zip(pairs, pairs[1:]):
+            if y1 <= y <= y2:
+                return v1 + (v2 - v1) * (y - y1) / (y2 - y1)
+        return None
+    out = []
+    for key, (row_no, pairs) in ec.items():
+        if key not in hp:
+            continue
+        _, hpp = hp[key]
+        for y, v in pairs:
+            if v == 0:
+                h = hp_at(sorted(hpp), y)
+                if h is not None and h > 1e-6:
+                    out.append((row_no, key[0], key[1], y, round(h, 3)))
+    return out
+
+
 class InjectorSealError(TypeError):
     """Raised at class definition when a subclass overrides a sealed method."""
 
@@ -285,6 +355,17 @@ class CanonicalInjector:
                 f"{len(violations)} row(s) contain Interp() with forbidden "
                 f"';' list-separator (CLAUDE.md §A.15). First: row "
                 f"{violations[0][0]}: {violations[0][1][:90]}..."
+            )
+
+        # §11.2b — Existing Capacity zero-year vs non-zero Historical Production
+        zc = find_zero_existing_capacity_conflicts(csv_path)
+        if zc:
+            errors.append(
+                f"{len(zc)} Existing-Capacity zero-year(s) conflict with "
+                f"non-zero Historical Production (§11.2b — LEAP halts the "
+                f"calc on this). First: row {zc[0][0]}: {zc[0][2]} in "
+                f"{zc[0][1]}, year {zc[0][3]} (HP={zc[0][4]}). Remove the "
+                f"zero point or author real capacity/zero the HP."
             )
 
         # §A.21 node lock + §A.23 base-branch lock
