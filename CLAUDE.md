@@ -2176,6 +2176,26 @@ See also: `memory/project_aeo9_v042_RAS_resolved.md` for the full
 sequence and `inject/bioenergy/HANDOVER_v042_r2a_RAS_infeas_to_dev_team_20260512.md`
 for the dev-team handover.
 
+### 11.2f `Percent Ownership` / `% of Household` saturation is a LITERAL percent — >100% = multi-unit; NEVER rescale
+Residential device-stock ownership drivers
+(`Key\Residential\<Appliance>\Percent Ownership`, and any
+`Activity Level [Saturation (% of Household)]`) store a **literal
+percent**: `100` = 100% = 1 unit/household, and **`282` = 282% = 2.82
+units/household** — multi-unit appliances like AC legitimately exceed
+100%. LEAP divides by 100 internally. **Do NOT rescale an author's value
+into a 0–1 "multiplier."** Dividing `282` by 100 collapses it to 2.82%
+(~3 homes per 100 owning the appliance — near-zero). Burned 2026-07-16
+on the residential Phase-2 inject: I ÷100'd the author's AC ownership
+(`282`→`2.82`) to "match" the live model — which itself held the broken
+`2.82` (a pre-existing 100× error). The fridge (`100` = 100% = 1
+fridge/HH) is the tell that the field is a percent, not a fraction, and
+multi-unit AC needs >100%. **The author's raw percent is correct —
+inject as-is.** Corollary: a live-area VALUE is expression content
+(§2.6), not canon — it can be wrong; don't propagate a suspicious value
+just because it's "what's in the area." (Structure — branch/variable/
+unit — is still canon; only the numeric value was wrong here.)
+See also: `memory/reference_percent_ownership_saturation.md`.
+
 ### 11.3 Cosmetic-but-visible
 - **Modal popups are cosmetic, not failures.** "variable not visible
   for region X" / various other dialogs fire even when the underlying

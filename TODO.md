@@ -5,53 +5,68 @@
 > across sessions. Update or empty it whenever a major piece of work
 > completes.
 
-## Status as of 2026-07-07 (power v0.69 RAS cycle — SOLVED + shipped)
+## Status as of 2026-07-14 (power v0.71 batch1b — INJECTED, results audit pending)
 
-**The power sector's RAS run solves and results are shipped to the team.**
-Latest commit `629ae2f`; repo in sync with origin/main.
+**Power batch1b delta injected clean into `aeo9_v0.71` on 2026-07-14.**
+263 rows (262 delta + 1 stranded probe): RAS 202 / ATS 30 / BAS 30, all
+pushed, 0 failed, every readback EXACT. Log:
+`inject/power/20260713/_inject_log_20260714_batch1b.txt`.
+**Results audit: scheduled 2026-07-15 — do NOT re-inject. Run
+`calculatescenario`, then harvest + audit.**
 
-**Done this cycle (2026-07-04 → 07-07):**
-- Power team's v0.69 sendback cleaned (9,534 → 9,337) and injected into
-  `aeo9_v0.69`, all 4 scenarios, readback 40 EXACT / 0 FAIL.
-- **§A.23 base-branch authoring lock** shipped — `BASE_BRANCH_NODE_ONLY`
-  + class-2 check in `find_region_lock_violations`, sealed pre-flight +
-  CI tripwires. Caught/removed 84 Indonesia base-branch rows (Biogas /
-  Gas Engine / Gas Turbine / Geothermal Flash — Indonesia authors on
-  `_ID*` nodes only) that had triggered the live "no branch … in
-  Indonesia" inject error.
-- Framework fixes: group-label `'Other'` no longer leaks to
-  `leap.Regions()`; region-major row sort + ActiveRegion read-before-set
-  = 21× inject speedup (~260 rows/min).
-- **4 RAS MaxCap-vs-ExoCap violations** found via offline accounting
-  (`inject/power/20260707/_probe_maxcap_accounting*.py`) and fixed with
-  `Max(Exogenous Capacity[MW], <cap>)` — Cambodia Wind Onshore, PH Small
-  Hydro, Vietnam Wind Onshore, Malaysia Large Hydro_MYPE. RAS now solves
-  (`feas/NEMO_25 41.sqlite`). §11.2e documents the Max() numeric-first
-  year-parse trap.
-- **Delta-payload doctrine** adopted (CLAUDE.md §4): from now on inject
-  ONLY edited rows; canonical stays as the baseline mirror.
-- Power team Q&A (9 questions) answered + shipped.
+**What batch1b did** (RAS unless noted):
+- Coal flip: retire all remaining subcritical to ~0 by 2060 + kill the
+  supercritical pipeline (ATS/PDP untouched).
+- USC + USC-CCS reactivated (`MaxCap` → `Max(Exogenous, 20000)`).
+- Nuclear → ~100 GW ASEAN across the 6 willing AMS (LWR/SFR/SMR).
+- Biomass biophysical caps: RAS `Maximum Capacity`; ATS/BAS
+  `Endogenous Capacity = 0`.
+- VOLL 20,000 USD/MWh on `Unmet Load : Variable OM Cost`, flat, all 10
+  AMS + all 3 scenarios (8 copper-plate on base `Unmet Load`, IDN on its
+  4 `_ID*` nodes, MY on its 3 `_MY*` nodes — no other region has nodes;
+  `Fixed OM` stays 500).
+- RE/storage `Maximum Capacity Addition` × `Interp(2025 1×, 2040 3×, 2060 8×)`.
+- Stranded-cost probe (`Coal Subcritical_IDJW : Stranded Cost`) — inert.
 
-**SHIP-READY in `outbox/` (send to power team — user's channel, not auto):**
-- `power_qa_answers_20260707.zip` — the 9 answers + `dispatch_rule_
-  fullcapacity_delta.csv` + cleaning/base-branch notes.
-- `power_results_ras_v069_20260707_r2.zip` — result CSVs (unit-verified
-  PJ/GW/MUSD), the 4-row MaxCap fix delta, the 9,337-row canonical
-  baseline, LEAP xlsx. (The non-r2 zip is superseded — do NOT send it.)
+Review bundle for the power team: `outbox/20260714/
+power_batch1b_review_20260714.zip` (validated delta + realigned stranded +
+review note). Team digested, no reship. The two "structural-create" asks
+(Thai Nuclear SMR, copper-plate Unmet Load) were **refused** — canon §A.22
+proved both branches already exist; the inject landed on them EXACT, live-
+confirming it. Open: copper-plate Unmet Load / Thai Nuclear SMR hidden-flag
+is settled by the calc (no verified COM helper for branch-visibility).
 
 ## What's pending — pick up in this order
 
-### 1. Joint power inject — NEXT cycle, waiting on the team's edits
-The **FullCapacity dispatch delta is authored but NOT injected**:
+### 1. Residential Phase-2 inject — INJECTED into aeo9_v0.73 (2026-07-16) ✓
+**Landed clean: 5,371 writes across CA/BAS/ATS/RAS, 0 failed, 10 EXACT/0/0
+per scenario. AC ownership corrected 2.82→282 (verified EXACT). Do NOT
+re-inject.** Log: `inject/residential/20260716/_inject_log_20260716.txt`.
+Next: `calculatescenario` on v0.73 → results audit. Details below (build +
+rulings retained for reference):
+Drop `mailbox/20260716/residential_leap_inject_20260715.zip` (AC/Fridge/
+Lighting/Cooking/9-appliances) validated against canon + converted to a
+clean canonical: **`inject/residential/20260716/residential_canonical_20260716.csv`**
+(3,721 rows). Canon-clean: region-lock 0, interp 0, 0 branches/pairs
+outside canon, 0 dup keys. Builder: `build_residential_canonical.py`.
+Author corrections shipped: `outbox/20260716/MD1_ANSWERS…md` + `MD2_FIXLIST…md`.
+Key rulings: AC=`Air Conditioning_` (underscore, exists — no create);
+ownership/shares/UEI → `Key\Residential\<Appliance>\…`; ownership injected
+AS-IS as a percent incl. AC >100% (see [[reference_percent_ownership_saturation]]
+— corrects the live model's 2.82 bug); RAS-only device panel; FEI never
+pasted (LEAP-derived); frozen AC variant; `lighting_kwh_hh` excluded.
+**To inject:** §A.9-confirm `aeo9_v0.73` open + idle, then
+`ResidentialInjector` (blind default — writes Demand + Key branches, blind
+MANDATORY; `--fail-fast --exclude-timor-leste --expect-area aeo9_v0.73 -y`)
+→ per-scenario readback EXACT. Two author confirms outstanding (fridge
+frozen-vs-drift, lighting_kwh_hh/Other deferrals) — non-blocking.
+
+### 1b. Power FullCapacity dispatch delta — STILL HELD (not in batch1b)
 `inject/power/20260707/dispatch_rule_fullcapacity_delta.csv` (448 rows,
-ATS+BAS, MeritOrderDispatch → FullCapacity; lock-clean). Per user: it
-goes in ONE batch alongside the power team's next round of edits — do
-not inject it alone. When the team drops their deltas (they were told
-to send deltas, not full files):
-- Merge their delta + our dispatch delta into one canonical.
-- §A.9 confirm `aeo9_v0.69` open + idle, then inject (blind, fail-fast).
-- Recalc RAS (+ ATS/BAS if they want the dispatch experiment measured),
-  re-harvest, verify.
+ATS+BAS, MeritOrderDispatch → FullCapacity; lock-clean) was NOT part of
+batch1b. WP-J run-2 (dispatch reversal) is **ON HOLD** per the batch1b
+work order — keep run-1 must-run floors; the team signals after digesting
+the batch1b results. Do not inject the dispatch delta alone.
 
 ### 2. Power team's own content follow-ups (in the shipped README/answers)
 These are THEIR authoring calls — we consult, don't author unprompted:
