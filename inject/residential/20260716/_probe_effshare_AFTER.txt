@@ -1,0 +1,45 @@
+[HB-START op=probe_ac_effshare progress=D:\Users\YudiandraYuwono\Documents\GitHub\nemo_read\inject\residential\20260716\_progress_probe_ac_effshare_20260716_093109.json]
+[probe] ActiveArea = 'aeo9_v0.74' (expect 'aeo9_v0.74')
+[probe] original ActiveScenario = 'Regional Aspiration Scenario'
+[HB t=09:31:12 scenario=Current Accounts region=Brunei elapsed=0m02s]
+
+=== scenario='Current Accounts'  region=Brunei ===
+  leaf High_eff   [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_High[%]'
+  leaf Mid_eff    [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_Mid[%]'
+  leaf Low_eff    [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_Low[%]'
+  key Large_High  [ok              ] @2025=35.98335067637877  expr='Interp(2014, 12.991311543235415, 2015, 14.025651634257343, 2016, 15.255...'
+  key Large_Mid   [ok              ] @2025=37.6690946930281  expr='Interp(2014, 46.21431526685974, 2015, 45.86263963591229, 2016, 45.37152...'
+  key Large_Low   [ok              ] @2025=26.347554630593134  expr='Interp(2014, 40.79437318990484, 2015, 40.11170872983036, 2016, 39.37318...'
+  --> KEY shares @2025 sum = 100.000000   (LEAP needs 100)
+
+=== scenario='Baseline Simulation'  region=Brunei ===
+  leaf High_eff   [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_High[%]'
+  leaf Mid_eff    [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_Mid[%]'
+  leaf Low_eff    [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_Low[%]'
+  key Large_High  [ok              ] @2025=35.98335067637877  expr='Interp(2014, 12.991311543235415, 2015, 14.025651634257343, 2016, 15.255...'
+  key Large_Mid   [ok              ] @2025=37.6690946930281  expr='Interp(2014, 46.21431526685974, 2015, 45.86263963591229, 2016, 45.37152...'
+  key Large_Low   [ok              ] @2025=26.347554630593134  expr='Interp(2014, 40.79437318990484, 2015, 40.11170872983036, 2016, 39.37318...'
+  --> KEY shares @2025 sum = 100.000000   (LEAP needs 100)
+
+=== scenario='AMS Target Scenario'  region=Brunei ===
+  leaf High_eff   [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_High[%]'
+  leaf Mid_eff    [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_Mid[%]'
+  leaf Low_eff    [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_Low[%]'
+  key Large_High  [ok              ] @2025=36.21227887617066  expr='Interp(2014, 12.991311543235415, 2015, 14.025651634257343, 2016, 15.255...'
+  key Large_Mid   [ok              ] @2025=37.606659729448495  expr='Interp(2014, 46.21431526685974, 2015, 45.86263963591229, 2016, 45.37152...'
+  key Large_Low   [ok              ] @2025=26.181061394380855  expr='Interp(2014, 40.79437318990484, 2015, 40.11170872983036, 2016, 39.37318...'
+  --> KEY shares @2025 sum = 100.000000   (LEAP needs 100)
+
+=== scenario='Regional Aspiration Scenario'  region=Brunei ===
+  leaf High_eff   [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_High[%]'
+  leaf Mid_eff    [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_Mid[%]'
+  leaf Low_eff    [ok              ] @2025=None  expr='Key\\Residential\\Air Conditioning\\Efficiency_Share\\Large_Low[%]'
+  key Large_High  [ok              ] @2025=35.98335067637877  expr='Interp(2014, 12.991311543235415, 2015, 14.025651634257343, 2016, 15.255...'
+  key Large_Mid   [ok              ] @2025=37.6690946930281  expr='Interp(2014, 46.21431526685974, 2015, 45.86263963591229, 2016, 45.37152...'
+  key Large_Low   [ok              ] @2025=26.347554630593134  expr='Interp(2014, 40.79437318990484, 2015, 40.11170872983036, 2016, 39.37318...'
+  --> KEY shares @2025 sum = 100.000000   (LEAP needs 100)
+
+[probe] restored ActiveScenario -> 'Regional Aspiration Scenario'
+[HB-DONE op=probe_ac_effshare elapsed=0m13s rows=0 progress=D:\Users\YudiandraYuwono\Documents\GitHub\nemo_read\inject\residential\20260716\_progress_probe_ac_effshare_20260716_093109.json]
+
+[probe] done.
