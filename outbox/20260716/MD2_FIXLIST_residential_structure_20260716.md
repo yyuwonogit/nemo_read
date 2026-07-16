@@ -87,6 +87,49 @@ Specific structure errors we corrected:
 
 ---
 
+## ⚠ CALC-BLOCKING (found + fixed after the inject) — mix shares must total 100 in EVERY scenario, Current Accounts included
+
+The Phase-2 drop injected clean, but the calc then halted:
+
+> Error: Activity shares under branch "Large" sum to 0.0%
+> `Air Conditioning_\Large\High_eff` · Activity Level · Baseline Simulation · 2025 · Brunei
+
+**Why.** Every Size split and every Efficiency split (and every cooking-fuel and
+lighting-tech split) is a **% Share** group — the immediate siblings must total
+100 in every scenario. The model guarantees that by leaving exactly **one member
+as `Remainder(100)`** — an auto-fill that evaluates to "100 − the others." On the
+AC/Fridge efficiency leaves that member was `Low_eff`.
+
+Wiring each efficiency leaf to its `Efficiency_Share` key (so the mix is driven
+from the Keys) removed that auto-fill. That is safe **only where the key carries a
+real mix** — but the **AC `Efficiency_Share` keys were `0` in Current Accounts**
+(you authored BAS / ATS / RAS, never Current Accounts). LEAP reads every
+scenario's base year (2025) **from Current Accounts**, so all three tiers read 0
+→ sum 0 → halt. It surfaces under "Baseline" because Baseline's base year is read
+from Current Accounts. **Fridge was spared** — its Current-Accounts efficiency
+keys already held real per-region values that total 100.
+
+**Fixed in aeo9_v0.74** (`residential_sharefix_patch_20260716.csv`, 94 rows):
+- **90 rows** — AC `Efficiency_Share` keys authored in **Current Accounts** = the
+  Baseline reference mix (10 regions × 3 sizes × 3 tiers). Probe-confirmed:
+  Current Accounts went **0 → 100** in every scenario. Fridge left untouched.
+- **4 rows** — restored `Remainder(100)` on the three cooking cells that totalled
+  **100.1** with no auto-fill member (Cambodia Clean → LPG, Vietnam Traditional →
+  Wood, Malaysia Traditional → Kerosene).
+
+**Standing rules for your next drop:**
+1. **Current Accounts is a scenario.** Author the base-year mix there too — not
+   only BAS / ATS / RAS. A mix left at 0 in Current Accounts halts the calc; `0`
+   is not "unset / default", it is a hard stop.
+2. **Keep exactly one `Remainder(100)` member per mix group.** It is the model's
+   auto-balance. If instead you author every member explicitly, they must total
+   **exactly 100 to the decimal** in every scenario — a 100.1 from rounding will
+   halt LEAP. Prefer the Remainder.
+3. Applies to every split: Size, Efficiency, cooking fuel (Clean + Traditional),
+   lighting tech.
+
+---
+
 The re-mistakes here — asking us to build a tree we already gave you,
 guessing the AC parent name, misplacing `Useful Energy Intensity`, mapping a
 variable that only lives on the old tree — are all resolvable from the

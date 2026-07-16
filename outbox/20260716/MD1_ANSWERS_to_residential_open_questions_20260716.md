@@ -2,6 +2,8 @@
 
 **From:** LEAP inject team (canon authority) · **To:** Residential subsector author
 **Re:** `residential_leap_inject_20260715` · **Target area:** aeo9_v0.73
+(Phase-2 injected; a post-inject share-sum correction landed in **aeo9_v0.74** —
+see the last Q below and MD2.)
 
 We hold the truth of the LEAP structure — branch paths, variables, units,
 scenarios. We handed you that structure on **2026-07-04**
@@ -66,6 +68,18 @@ lives on `Key\Cal\Residential\<fuel>` (per-fuel factors: Electricity, LPG,
 Wood, Charcoal, …) and stays exactly as-is; your pure-physics stove
 `Efficiency` sits on top of it. **Do not author a new base-year Cal scheme.**
 Keep the prior appliances' convention.
+
+**Q. (post-inject) "Do we author the base-year Size/Efficiency mix in Current Accounts, or only in the scenarios?"**
+**Current Accounts too.** LEAP reads every scenario's base year (2025) from
+Current Accounts, and each Size / Efficiency / cooking-fuel / lighting-tech split
+is a **% Share** that must total 100 there. Your drop authored the AC efficiency
+mix only in BAS / ATS / RAS and left Current Accounts at `0` → LEAP halted the
+calc (*"Activity shares under Large sum to 0.0%"*). We corrected it in
+**aeo9_v0.74** (Current-Accounts AC mix = Baseline reference, Σ=100); fridge was
+already correct because its Current-Accounts keys carried a real mix. **Next
+drop:** give every mix a Current-Accounts base-year value, and keep one
+`Remainder(100)` member per group so it can't drift off 100. Full write-up +
+the standing rules are in **MD2** (the ⚠ CALC-BLOCKING section).
 
 ---
 
