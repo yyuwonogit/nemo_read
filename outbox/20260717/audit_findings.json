@@ -1,0 +1,223 @@
+[
+  {
+    "id": "F1",
+    "title": "§11.2c VRE must-run: Minimum Utilization = bare \"Maximum Availability\" on variable-renewable techs",
+    "severity": "warning",
+    "verdict": "CONFIRMED",
+    "count": 1412,
+    "evidence": "Independent recount = 1,412 rows (matches preliminary ~1,412 exactly). Of 11,088 total 'Minimum Utilization' rows, 1,427 have Expression (trimmed+lowercased) == 'maximum availability'; 1,412 of those are on a variable-renewable tech (Solar PV/Rooftop/Floating/CSP, Wind Onshore/Offshore, Tidal, Wave, Small Hydro + _ID*/_MY* variants). ALL 1,412 are in the 7 optimization scenarios; ZERO in the 4 non-optimization scenarios. Per-scenario: RE LTRM ASEAN Policy Aligned=228, LCO backup=228, Set up=228, RE LTRM ASEAN RE Coupling=228, RE LTRM ASEAN Shared Energy Resources=228, Regional Aspiration Scenario (RAS)=136, Carbon Neutrality_ Net Zero Scenario=136. RAS=136 matches the finding. Example rows: (1) ['Transformation\\Centralized Electricity Generation\\Processes\\Small Hydro','Minimum Utilization','RE LTRM ASEAN Policy Aligned','Base Template','Percent','Maximum Availability']; (2) ['...\\Processes\\Small Hydro','Minimum Utilization','RE LTRM ASEAN Policy Aligned','Brunei','Percent','Maximum Availability']; (3) ['...\\Processes\\Solar PV_IDJW','Minimum Utilization','Regional Aspiration Scenario','Indonesia','Percent','Maximum Availability'] (Solar PV_IDJW = 82 rows among the tally). Family breakdown includes Solar PV(66), Solar PV Rooftop(84), Solar CSP(62), Solar Floating(62), Wind Onshore(66), Wind Offshore(62), Tidal(62), Wave(62), Small Hydro(66), plus Solar PV_ID* and Wind Onshore_ID*/_MY* node variants (82 each). Note: 15 ADDITIONAL MU=='Maximum Availability' rows sit on non-VRE baseload techs (Large Hydro/Biogas/Waste, 5 each) — correctly excluded from the 1,412 VRE count but also §11.2c-relevant must-run candidates worth review.",
+    "recommendation": "Per §11.2c, set Minimum Utilization=0 for these fully-curtailable variable renewables, or wrap as Min(<floor>, Maximum Availability). Bare 'Maximum Availability' forces must-run at the AF profile and risks per-timeslice primal infeasibility (esp. floating-point AF leaks). Concentrated in the 7 optimization scenarios that actually solve."
+  },
+  {
+    "id": "F2",
+    "title": "§A.11 'Unlimited' on upper-bound caps (LP-conditioning 1e12 risk); NONE on lower-bound vars",
+    "severity": "warning",
+    "verdict": "CONFIRMED",
+    "count": 10412,
+    "evidence": "Independent recount by variable: Maximum Production = 7,056 exact 'Unlimited' (matches ~7,056); Maximum Capacity Addition = 1,698 exact 'Unlimited' (matches ~1,698); Maximum Capacity = 1,658 total = 1,653 exact 'Unlimited' + 5 rows 'Unlimited ? Exogenous Capacity[MW] + 1278*1000*30%' (matches ~1,658). The 5 non-exact rows are Laos 'Solar PV' Maximum Capacity across 5 optimization scenarios (RE LTRM Policy Aligned, LCO backup, Set up, RE LTRM RE Coupling, RE LTRM Shared Energy Resources); the '?' introduces an inline comment per the parser caveat, so the effective value IS 'Unlimited'. LOWER-BOUND VARS CONFIRMED CLEAN: Exogenous Capacity=0, Minimum Capacity=0, Minimum Production=0, Minimum Utilization=0, Minimum Capacity Addition=0 Unlimited rows — so the §A.11 forced-1e12-floor landmine is absent; all Unlimited usage is on upper-bound caps (conditioning risk only, not a hard infeasibility floor). Example rows: (1) ['...\\Processes\\Coal Subcritical','Maximum Production','RE LTRM ASEAN Policy Aligned','Brunei','Gigajoule','Unlimited']; (2) ['...\\Processes\\Geothermal Flash_IDJW','Maximum Capacity Addition','RE LTRM ASEAN Policy Aligned','Base Template','Megawatt','Unlimited']; (3) ['...\\Processes\\Solar PV','Maximum Capacity','LCO backup','Laos','Megawatt','Unlimited ? Exogenous Capacity[MW] + 1278*1000*30%'].",
+    "recommendation": "Per §A.11, prefer a generous finite numeric (e.g. 10,000/100,000) over the literal 'Unlimited' on upper-bound caps — it exports to NEMO as 1e12 and pollutes LP conditioning (CPLEX tol ~1e9) even when non-binding. Lower-bound vars are clean, so no forced-floor remediation is needed."
+  },
+  {
+    "id": "F3",
+    "title": "CCS cost variables (CCS Capital/FOM/VOM) present on only 2 of 6 CCS techs; other 4 carry CCS cost as flat elevated standard cost — method inconsistency, not a missing-cost gap",
+    "severity": "possible-gap",
+    "verdict": "CONFIRMED",
+    "count": 3168,
+    "evidence": "Dedicated vars CCS Capital, CCS FOM, CCS VOM = 1,584 rows EACH, on exactly 2 techs: Coal Supercritical CCS and Coal Ultrasupercritical CCS (= 2 techs x 12 regions x 11 scenarios x 6 Feedstock-Fuel leaves {Biomass, Coal Anthracite/Bituminous/Lignite/Sub bituminous/Unspecified}). They are user-defined variables that FEED the parent cost lines: 'Coal Supercritical CCS' & 'Coal Ultrasupercritical CCS' Capital Cost/Fixed OM Cost/Variable OM Cost expressions each reference the matching CCS var (22 rows per var per tech), e.g. Capital Cost = 'Interp(2020,3844,...) ? ... Coal Supercritical:Capital Cost[Thousand USD/MW] + (... :CCS Capital ...)'. CCS-cost-var count per tech: Bioenergy with CCS=[]; Coal IGCC with CCS=[]; Coal Supercritical CCS=[CCS Capital,CCS FOM,CCS VOM]; Coal Ultrasupercritical CCS=[same]; Direct Air Capture=[]; Gas Combined Cycle with CCS=[]. The 4 techs WITHOUT dedicated vars still carry CCS cost, baked into an elevated flat Capital Cost: Coal IGCC with CCS = Interp(2023,4770,2030,4290,2050,3430) vs base Coal IGCC = Interp(2023,2730,2030,2510,2050,2320); Gas Combined Cycle with CCS = Interp(2023,2390,...) vs base Gas Combined Cycle = Interp(2022,1080,...). All 6 CCS techs share the identical 46-var base panel; the 2 coal super/ultra techs add the 3 CCS vars (49 vars). No CCS cost is actually absent.",
+    "recommendation": "F3 raw claim is exactly correct (dedicated CCS vars only on the 2 coal super/ultra CCS techs). Reframe the 'gap': it is a modeling-METHOD inconsistency, not missing cost. The 2 coal techs derive CCS cost bottom-up from Danish Energy Agency figures (CO2-loading x capture% per fuel leaf) via referenced user variables; the other 4 (Bioenergy/IGCC/GCC-CCS/DAC) use a single top-down flat elevated Capital/FOM/VOM. If parametric transparency / consistent CCS cost sourcing matters, flag to the power team; no infeasibility or missing-value risk."
+  },
+  {
+    "id": "F4",
+    "title": "_MYKA is a real 4th Malaysia node suffix (not MYPE/MYSB/MYSR) on Geothermal Flash + Large Hydro; Malaysia node decomposition is inconsistent per tech family, contradicting the documented 3-node canon",
+    "severity": "warning",
+    "verdict": "CONFIRMED",
+    "count": 8,
+    "evidence": "8 distinct node suffixes across the 84 techs: Indonesia {IDEast, IDJW, IDKA, IDSA} and Malaysia {MYPE, MYSB, MYSR, MYKA} — Malaysia has 4, not the CLAUDE.md-documented 3. Per-suffix tech membership: _MYKA -> [Geothermal Flash_MYKA, Large Hydro_MYKA] (2 techs, 10,128 rows); _MYPE -> 7 techs; _MYSB -> 5; _MYSR -> 5; each _ID* -> the same 6 families. _MYKA carries REAL data, region-locked to Malaysia: 'Large Hydro_MYKA' Exogenous Capacity (Malaysia) = 'Historical Production[GWh]/(Capacity Credit)'; outside-Malaysia fleet rows on _MYKA with non-trivial expression = 0 (region-lock clean). Per-family node coverage is INCONSISTENT: Geothermal Flash & Large Hydro use {MYKA, MYPE} (2 MY nodes); Gas Engine, Gas Turbine, Solar PV, Unmet Load, Wind Onshore use {MYPE, MYSB, MYSR} (3 MY nodes); Small Hydro has NO Malaysia decomposition (ID-only). Indonesia is consistent (all 4 ID nodes on all 6 decomposed families; Gas Engine/Gas Turbine have no ID nodes). All 8 decomposed families have their un-suffixed base branch present.",
+    "recommendation": "Flag _MYKA to the power team. Standard Malaysia grid regions are Peninsular(PE)/Sabah(SB)/Sarawak(SR); 'MYKA' fits none and appears only on the two resource-sited techs (geothermal, large hydro) where East-Malaysia siting would normally map to MYSB/MYSR — most likely a mislabel of Sabah/Sarawak, but it carries real Malaysia data so cannot be dropped blindly. Cannot prove typo vs intentional 4th node from the CSV alone (hedged). Update CLAUDE.md canon (Malaysia = 3 nodes) either way: the actual Malaysia suffix set in v0.75 is {MYPE, MYSB, MYSR, MYKA}, with no single family using all four."
+  },
+  {
+    "id": "F5",
+    "title": "Exactly 4 Max(numeric-first) rows in the file (§11.2e antipattern) — all Solar PV_MYSR Historical Production = Max(0, Smooth(all-zeros)); structurally the antipattern but inert",
+    "severity": "minor",
+    "verdict": "CONFIRMED",
+    "count": 4,
+    "evidence": "Of 2,425 rows containing 'Max(', exactly 4 have a numeric first argument, all identical shape: tech=Solar PV_MYSR, Variable=Historical Production, firstarg=0, Expression='Max(0,Smooth(2005,0,2006,0,2007,0,2020,0,2021,0,2022,0,2023,0,2024,0)) ? Single Buyer', across the 4 non-optimization scenarios (Current Accounts, Baseline Simulation, AMS Target Scenario, Regional Aspiration Scenario test), Region=Malaysia. The other 2,421 Max( rows use the §11.2e-safe numeric-LAST form: 1,158x 'Max(Existing Capacity[MW] + Capacity Additions[MW] - ... , 0)', 104x 'Max(Exogenous Capacity[MW], ...)', 7x 'Max(Large Hydro:Maximum Capacity[MW], ...)'.",
+    "recommendation": "Real §11.2e instance (numeric 0 as first arg risks being parsed as year 0), but impact is nil: the inner Smooth() series is all zeros so the row evaluates to 0 regardless, and it is Historical Production (not a forward cost/capacity bound). Cleanest fix for consistency: rewrite as 'Max(Smooth(...), 0)'. Low priority."
+  },
+  {
+    "id": "waste-co2-kilogramme",
+    "title": "Waste tech emission factors declared in Kilogramme while all 9 other emitting techs use Metric Tonne for the identical value (1000x unit error)",
+    "severity": "warning",
+    "verdict": "NEW",
+    "count": 264,
+    "evidence": "For 'Avg Environmental Loading', Waste is the ONLY tech whose Carbon Dioxide and Carbon Dioxide Biogenic leaves carry Units='Kilogramme'; every other emitting tech carries 'Metric Tonne'. The values are IDENTICAL numerically, so the unit difference is a 1000x discrepancy. Carbon Dioxide Biogenic value=91.7 for ALL of: Biogas, Biomass Gasification, Biomass Other, Coal Subcritical/Supercritical/Ultrasupercritical (+CCS), Bioenergy with CCS -> all 'Metric Tonne'; Waste -> value 91.7 but 'Kilogramme' (132 rows). Carbon Dioxide (fossil): Waste=0 'Kilogramme' (132 rows) while Coal Subcritical=96.1, Gas CC=56.1, Diesel=74.1 all 'Metric Tonne'. Example rows: 'Processes\\Waste\\Feedstock Fuels\\...\\Carbon Dioxide Biogenic' | any region | 91.7 | Kilogramme  vs  'Processes\\Biomass Other\\...\\Carbon Dioxide Biogenic' | 91.7 | Metric Tonne. If LEAP honors the declared unit, Waste biogenic CO2 is under-counted 1000x. (Waste fossil CO2=0 makes the fossil half numerically inert, but note incineration normally emits fossil CO2 from plastics.)",
+    "recommendation": "Set Waste CO2 / CO2 Biogenic Avg Environmental Loading unit to Metric Tonne to match the other 9 techs (or divide the 91.7 by 1000 if Kilogramme was intended); reconcile the value basis. Re-examine Waste fossil CO2=0."
+  },
+  {
+    "id": "truck-pollutant-leaf",
+    "title": "Environmental-loading leaf literally named 'Truck' under Coal Ultrasupercritical CCS emissions (non-pollutant / mislabeled branch)",
+    "severity": "warning",
+    "verdict": "NEW",
+    "count": 132,
+    "evidence": "'Truck' is the only non-standard pollutant leaf name in the entire Avg Environmental Loading set (the 14 legitimate species are Ammonia, Black/Organic Carbon, CO2, CO2 Biogenic, CO, Methane, NOx, N2O, NMVOC, PM10, PM2pt5, Sequestered CO2, SO2). It appears on exactly one branch: 'Transformation\\Centralized Electricity Generation\\Processes\\Coal Ultrasupercritical CCS\\Feedstock Fuels\\Coal Anthracite\\Truck', 132 rows (12 regions x 11 scenarios). Expression: '7.2 * ConvFuelUnits(kg, TJ, coal anthracite) ? EMEP/EEA Guidebook 2019 Table 6-1'. A leaf called 'Truck' under a power plant's coal-feedstock emissions is a mislabeled/misplaced effect branch — it should be a named pollutant species, not 'Truck'.",
+    "recommendation": "Confirm the intended pollutant species behind the 7.2 EMEP/EEA factor and rename/re-home the leaf; verify no downstream emissions aggregation silently drops or double-counts it."
+  },
+  {
+    "id": "regionlock-mys-gas-in-indonesia",
+    "title": "Malaysia gas-node fleet (Existing Capacity up to 5348 MW) authored on _MY* node techs inside Indonesia (§A.21 region-lock leak)",
+    "severity": "warning",
+    "verdict": "CONFIRMED",
+    "count": 14,
+    "evidence": "14 rows where a _MY* node variant carries an EVALUATED-nonzero Existing Capacity outside its home region (Malaysia), all landing in Indonesia. Gas Engine_MYPE/MYSB/MYSR Existing Capacity = 'Interp(2005, 3, 2006, 21, 2007, 33, 2008, 66.84, ...)' peaking 3218.87 MW in Indonesia; Gas Turbine_MYSB/MYSR peaking 5348.44 MW in Indonesia. Per §A.21 these Malaysia sub-national nodes should be zero/absent outside Malaysia. (Cost-variable inheritance across regions is not counted here — only real fleet numbers.) Capacity Additions leaks: 0.",
+    "recommendation": "Strip the Indonesia-region Existing Capacity values from the _MY* gas nodes (they belong only to Malaysia); run find_region_lock_violations on the payload."
+  },
+  {
+    "id": "mu-equals-max-availability",
+    "title": "Minimum Utilization = bare 'Maximum Availability' (must-run/primal-infeasibility trap) on variable renewables (§11.2c)",
+    "severity": "warning",
+    "verdict": "CONFIRMED",
+    "count": 1427,
+    "evidence": "1427 Minimum Utilization rows have expression exactly 'Maximum Availability' (no Min() cap), forcing must-run on the full AF profile. Concentrated on VRE: Solar PV Rooftop (84), Wind Onshore_ID*/MY* (~82 each), Solar PV_ID* (~82 each), base Solar PV/Wind Onshore/Small Hydro (66 each), Wave/Solar Floating/Solar CSP/Tidal/Wind Offshore (62 each), plus incidental Large Hydro/Biogas/Waste (5 each). §11.2c requires MU=0 for curtailable renewables or Min(...,Maximum Availability) for soft must-run.",
+    "recommendation": "For pure VRE set Minimum Utilization=0; for incumbent-dispatch techs wrap in Min(...,Maximum Availability). Re-scan Centralized + Distributed trees."
+  },
+  {
+    "id": "wind-mysr-unpopulated-stub",
+    "title": "Wind Onshore_MYSR (Malaysia/Sarawak) is an unpopulated defaults-stub: Node=0, MaxCapAdd=0, Maximum Availability=100, Capacity Credit=100 — siblings MYPE/MYSB fully populated",
+    "severity": "possible-gap",
+    "verdict": "NEW",
+    "count": 132,
+    "evidence": "In its home region Malaysia, Wind Onshore_MYSR carries LEAP defaults instead of wind parameters: Node=0 (unwired), Maximum Capacity Addition=0.0, Maximum Availability=100 (not a ~30-40% wind CF), Capacity Credit=100. Contrast sibling Wind Onshore_MYSB in Malaysia: Node=BranchID(Key\\Transmission\\Nodes\\Malaysia:...), Capacity Credit=36.8; Wind Onshore_MYPE=37. So one of Malaysia's three onshore-wind nodes (Sarawak) was never parameterized. Capacity Credit=100 appears in all 12 regions for this tech (132 rows). It is inert (Node=0 + MaxCapAdd=0 => cannot build or dispatch), so this is a latent completeness gap, likely an intentionally-disabled node left at non-physical defaults rather than an active bug.",
+    "recommendation": "Decide if Sarawak onshore wind should be modeled; if disabled, set Capacity Credit / Maximum Availability to 0 (not the 100 default) to avoid confusion and latent risk if the node is later wired."
+  },
+  {
+    "id": "feedstock-share-source-usd-unit",
+    "title": "Feedstock Fuel Share (a %) and Fuel Source (a source-selector) are labeled with USD units",
+    "severity": "minor",
+    "verdict": "NEW",
+    "count": 25883,
+    "evidence": "Feedstock Fuel Share values are clearly shares/percents — top values: '0' (8008), '100' (5958), 'Remainder(100)' (1438), '50', '29.62', 'Interp(2015, 0, 2019, 70)' — yet its Units column is 'U.S. Dollar' (10164), '2020 USD' (5526), '2020 U.S. Dollar' (132). Fuel Source holds selectors like 'SourceBelow' but is labeled 'U.S. Dollar'/'2020 USD' (10061 rows). This is a variable/unit mismatch (most likely the export inheriting the Feedstock-Fuels branch's cost unit onto every child variable), harmless if downstream ignores the unit on share/source vars but a landmine for any exact-unit-string logic.",
+    "recommendation": "Treat the Units column as unreliable for Feedstock Fuel Share and Fuel Source; do not feed their declared unit into unit-conversion logic."
+  },
+  {
+    "id": "usd-unit-spelling-inconsistency",
+    "title": "Three inconsistent USD unit spellings for the same cost variables ('U.S. Dollar' vs '2020 USD' vs '2020 U.S. Dollar')",
+    "severity": "minor",
+    "verdict": "NEW",
+    "count": 11268,
+    "evidence": "Fuel Cost uses all three spellings: 'U.S. Dollar' (10164), '2020 USD' (5526), '2020 U.S. Dollar' (132, all Nuclear SFR Feedstock rows, e.g. 'Resources\\Primary\\Nuclear:Import Cost[2020 USD/MWh]'). Fuel Source likewise: 'U.S. Dollar' (6468) / '2020 USD' (3509) / '2020 U.S. Dollar' (84). Same real unit, three literal strings — exact-string unit matching downstream would treat them as three different units.",
+    "recommendation": "Normalize the unit label to a single canonical spelling across Fuel Cost / Fuel Source / Feedstock Fuel Share."
+  },
+  {
+    "id": "timor-leste-solar-capcredit-default",
+    "title": "Timor Leste base Solar PV capacity credit left at default 100% (firm) vs 16-21% in the 10 real ASEAN countries",
+    "severity": "possible-gap",
+    "verdict": "NEW",
+    "count": 11,
+    "evidence": "Base 'Solar PV' Capacity Credit is properly overridden in every real ASEAN region (Singapore 16.2, Indonesia 18.6, Brunei 18.1, Malaysia 18.9, Philippines 19.0, Vietnam 19.9, Thailand 20.8, Cambodia 21.0, Laos 21.5, Myanmar 21.2) but is 100 in Timor Leste across all 11 scenarios (and 100 in the Base Template placeholder). Timor Leste Solar PV also has Node=0 (unwired) though Maximum Capacity Addition=20000 and Maximum Availability=17.7 are set — so it is a partially-authored tech whose capacity credit kept the LEAP default. Consistent with §A.18 (Timor Leste often left at defaults); inert while Node=0, but a genuine authoring gap.",
+    "recommendation": "Set Timor Leste Solar PV capacity credit to a realistic ~18-21% (or 0 if solar is not modeled there); confirm Node=0 is intended."
+  },
+  {
+    "id": "dead-node-stubs-unlimited-zero-capex",
+    "title": "Dead geothermal/hydro node stubs (non-canonical _MYKA suffix + Malaysia _MYPE) carry Maximum Capacity Addition='Unlimited' with Capital Cost=0 (latent free-build, inert only via Node=0)",
+    "severity": "minor",
+    "verdict": "NEW",
+    "count": 264,
+    "evidence": "Geothermal Flash_MYKA and Large Hydro_MYKA use a '_MYKA' node suffix that does NOT match Malaysia's canonical 3-node decomposition (MYPE/MYSB/MYSR per §2.6). Both are entirely unpopulated: Node=0 in ALL 12 regions, zero Existing Capacity, zero Capital Cost everywhere. Yet in Malaysia their Maximum Capacity Addition='Unlimited' with Capital Cost=0 (same for canonical Geothermal Flash_MYPE in Malaysia). Unlimited (=1e12 to NEMO, §A.11) upper-bound + zero capex = a free-unlimited-build combination that is only safe because Node=0 keeps the branch inert; wiring the node would expose it.",
+    "recommendation": "Remove the non-canonical _MYKA branches or confirm their status; replace 'Unlimited' MaxCapAdd with a finite cap and give a real Capital Cost on any node intended to be wired."
+  },
+  {
+    "id": "unlimited-upper-bound-systemic",
+    "title": "'Unlimited' used on upper-bound variables in 10,412 rows (all Maximum Production, plus Maximum Capacity Addition / Maximum Capacity) — LP-conditioning risk (§A.11)",
+    "severity": "info",
+    "verdict": "CONFIRMED",
+    "count": 10412,
+    "evidence": "'Unlimited' appears on Maximum Production (7056 rows = every process x region x scenario for that var), Maximum Capacity Addition (1698), Maximum Capacity (1658). All are upper-bound vars, so this is the milder §A.11 case (1e12 sentinel pollutes CPLEX conditioning) rather than the catastrophic lower-bound case. Crucially, the dangerous lower-bound class is CLEAN: zero 'Unlimited' on Exogenous Capacity / Existing Capacity / Minimum Capacity, and zero literal >=1e11 numbers anywhere.",
+    "recommendation": "Prefer a generous finite numeric (e.g. 100000) over 'Unlimited' on upper-bound caps to keep the LP well-conditioned; lower-bound vars are already clean."
+  },
+  {
+    "id": "max-numeric-first-hp",
+    "title": "Max() with numeric first argument on Solar PV_MYSR Historical Production (§11.2e year-misparse pattern)",
+    "severity": "minor",
+    "verdict": "CONFIRMED",
+    "count": 4,
+    "evidence": "4 rows (all scenarios of Solar PV_MYSR, Malaysia, Historical Production): 'Max(0,Smooth(2005, 0, 2006, 0, ... 2024, 0))'. Numeric-first Max() is the §11.2e pattern LEAP can misparse (first arg read as a year). Impact here is negligible because the Smooth series is all zeros, but the authoring form is the flagged one. The 50 Min(numeric,...) hits are the §11.2c-approved 'Min(10.92, Maximum Availability)' pattern and are fine.",
+    "recommendation": "Rewrite as reference-first / numeric-last (e.g. Max(Smooth(...), 0)) to conform to §11.2e; low priority given zero values."
+  },
+  {
+    "id": "clean-classes-checked",
+    "title": "Classes checked and found CLEAN",
+    "severity": "clean",
+    "verdict": "NA",
+    "evidence": "No anomalies in: Process Efficiency (11088 rows: 0 blank, 0 zero, 0 out-of-range; thermal effs plausible — Coal Sub 33-36, Gas CC 40-60, Nuclear 34-42, Waste 28-33); Maximum Availability (0 out-of-[0,100]); Lifetime (only expected 1yr on DAC + Unmet Load slack); Interest Rate (uniform 'DiscountRate'); Capital/FOM/VOM negatives (0); duplicate (branch,var,scenario,region) keys (0); semicolons inside Interp bodies (0 — the 8086 hits were all in '?' comments); Nodal Distribution group sums (100 for present techs, 0 for absent — correct); base-tech core-variable coverage (all 132 cells); literal 1e12/9999 sentinels (0); Node variable (all BranchID(...) or 0=unwired, as expected). DAC zero capex/FOM is intentional (comment 'All costs expressed as VOM' + negative VOM reference).",
+    "recommendation": "No action."
+  },
+  {
+    "id": "GT_MYSR_EMISSIONS",
+    "title": "Gas Turbine_MYSR carries ZERO emissions loading and ZERO nodal wiring while its 3 sibling gas-turbine nodes each carry 1584 + 1512 such rows",
+    "severity": "error",
+    "verdict": "NEW",
+    "count": 3096,
+    "evidence": "Of 84 process techs, Gas Turbine_MYSR (Sarawak node) is the ONLY combustion tech missing 'Avg Environmental Loading', and the ONLY tech (1 of 84) missing 'Nodal Distribution' entirely. Counts: Gas Turbine=7308 rows (AvgEnvLoad=1584, NodalDist=1512); Gas Turbine_MYPE=7308 (1584,1512); Gas Turbine_MYSB=7308 (1584,1512); Gas Turbine_MYSR=4157 (AvgEnvLoad=0, NodalDist=0). Its 3 siblings each author 12 pollutant-species leaves (Carbon Dioxide, Carbon Monoxide, Methane, NMVOC, Nitrogen Oxides, Nitrous Oxide, Sulfur Dioxide, Particulates PM10/PM2.5, Black Carbon, Organic Carbon, Ammonia) under Feedstock Fuels\\Natural Gas; MYSR authors none. Impact: natural gas burned at this fleet node produces no CO2/pollutant loading in any scenario, and the node is not attached to a transmission node in the 7 optimization scenarios. Var-set diff (Malaysia): 'in MYPE not MYSR: [Avg Environmental Loading, Nodal Distribution]'.",
+    "recommendation": "Author Avg Environmental Loading (all 12 species) and Nodal Distribution for Gas Turbine_MYSR to match Gas Turbine_MYPE/_MYSB, or confirm the Sarawak node is intentionally emission-exempt/copper-plate."
+  },
+  {
+    "id": "GT_MYSR_FUEL_PATCHY",
+    "title": "Gas Turbine_MYSR natural-gas fuel wiring missing across the two under-filled RE LTRM optimization scenarios (root cause of the 2 short scenario row counts)",
+    "severity": "warning",
+    "verdict": "NEW",
+    "count": 55,
+    "evidence": "The 5 optimization scenarios have 59,532 rows each, but 'RE LTRM ASEAN RE Coupling'=59,513 (-19) and 'RE LTRM ASEAN Shared Energy Resources'=59,496 (-36). Every missing row is Gas Turbine_MYSR\\Feedstock Fuels\\Natural Gas: in Shared Energy Resources, Feedstock Fuel Share + Fuel Cost + Fuel Source are absent in ALL 12 regions (12x3=36); in RE Coupling they are absent in 6-7 of 12 regions (19 rows: Fuel Source x7, Feedstock Fuel Share x6, Fuel Cost x6). Example missing key: (Processes\\Gas Turbine_MYSR\\Feedstock Fuels\\Natural Gas, 'Feedstock Fuel Share', 'Base Template', Shared Energy Resources). Same node is the single most under-authored process node overall (44 vars vs 46 for siblings; lowest row count).",
+    "recommendation": "Backfill Feedstock Fuel Share / Fuel Cost / Fuel Source on Gas Turbine_MYSR's Natural Gas feedstock for RE Coupling and Shared Energy Resources so its fuel wiring matches the other 5 optimization scenarios."
+  },
+  {
+    "id": "MY_NODE_FLEET_QUINTET",
+    "title": "Four Malaysia node variants lack the entire historical-fleet accounting quintet that their family siblings all carry",
+    "severity": "warning",
+    "verdict": "NEW",
+    "count": 4,
+    "evidence": "Existing Capacity, Capacity Additions, Capacity Retirement, Real Investment Cost, Historical Capacity Factor each cover 80 of 84 techs (10,560 rows = 80x12x11). The identical 4 missing all five are: Geothermal Flash_MYKA, Geothermal Flash_MYPE, Large Hydro_MYKA, Unmet Load_MYSR (each 40 vars / 422 rows-per-region vs 477 for siblings). Internally inconsistent within family: all 4 Geothermal Flash_ID* nodes + base HAVE the quintet but the 2 Geothermal Flash_MY* nodes do NOT; Large Hydro_MYPE + all Large Hydro_ID* + base HAVE it but Large Hydro_MYKA does not; Unmet Load_MYPE/_MYSB + all _ID* + base HAVE it but Unmet Load_MYSR does not.",
+    "recommendation": "Confirm these 4 Malaysia sub-nodes genuinely have no historical fleet (new-build-only); if any is a real existing site the missing Existing Capacity/Historical Capacity Factor would drop its fleet from accounting."
+  },
+  {
+    "id": "SHARE_NAMING_ASYMMETRY",
+    "title": "Matched max/min pair uses two different naming conventions AND different scenario coverage: Maximum_Share_of_Production (underscores) vs Minimum Share of Production (spaces)",
+    "severity": "minor",
+    "verdict": "NEW",
+    "count": 2,
+    "evidence": "Verbatim variable names: 'Maximum_Share_of_Production' (underscores, expr default '100', 10,080 rows, present in 10 scenarios - all except Current Accounts) vs 'Minimum Share of Production' (spaces, expr default '0', 7,056 rows, present in 7 optimization scenarios only). No spaced 'Maximum Share of Production' and no underscored 'Minimum_Share_of_Production' exist. So (a) the pair is inconsistently named, and (b) coverage is asymmetric - Max-share appears in the 3 extra non-opt scenarios (Baseline Simulation, AMS Target Scenario, RAS test) where Min-share does not. The underscore name is a grep trap (same class as the DIspatch capitalization trap): an injector filtering on 'Maximum Share of Production' would miss it.",
+    "recommendation": "Flag the underscore naming to the power team; ensure any injector/probe references the exact literal 'Maximum_Share_of_Production'. Confirm the max/min scenario-coverage asymmetry is intentional."
+  },
+  {
+    "id": "STORAGE_VARS_CA_ONLY",
+    "title": "Storage-operation variables materialize only in Current Accounts while Minimum Charge materializes in all 11 scenarios",
+    "severity": "possible-gap",
+    "verdict": "NEW",
+    "count": 5,
+    "evidence": "Starting Charge, Annual Storage Carryover, Hourly Storage Carryover, Seasonal Storage Carryover, and Dispatchable each appear in only 1 of 11 scenarios ('Current Accounts', 1008 rows = 84x12x1). By contrast 'Minimum Charge' appears in all 11 scenarios (11,088 rows). The 4 real storage techs (CAES, Lithium Ion Batteries, Pumped Hydro, VRB Flow Batteries) actually dispatch in the 7 optimization scenarios, yet these storage-behavior variables never export there. Likely benign LEAP inheritance from the base year, but the split vs Minimum Charge is a real export-level inconsistency worth confirming.",
+    "recommendation": "Verify the 4 storage techs inherit Dispatchable/Starting Charge/carryover values into the optimization scenarios (not silently defaulted) before relying on storage dispatch results."
+  },
+  {
+    "id": "NONOPT_SPLIT_LEGIT",
+    "title": "Part (d): the optimization-only vs simulation-only variable split is legitimate; Baseline/AMS Target/RAS test are variable-set-identical",
+    "severity": "clean",
+    "verdict": "NA",
+    "evidence": "The 4 non-opt scenarios legitimately omit 11 optimizer bound/target variables (Nodal Distribution, Fuel Source, Maximum Capacity, Maximum Capacity Addition, Maximum Production, Minimum Capacity, Minimum Capacity Addition, Minimum Production, Minimum Share of Production, Optimized New Capacity, Renewable Qualified). Symmetrically, the 7 optimization scenarios omit 6 simulation-mode variables (Dispatch Rule, Endogenous Capacity, First Simulation Year, Historical Production, Merit Order, Process Share). This is the expected LEAP optimize-vs-simulate split. Var-set sizes: 7 opt scenarios = 38 vars each (0 patchy vars across them); Baseline Simulation / AMS Target Scenario / Regional Aspiration Scenario test = 33 vars each and identical to one another; Current Accounts = 37 (adds the 5 storage vars, drops Maximum_Share_of_Production). No non-opt scenario is missing a variable it should carry, aside from the SHARE_NAMING_ASYMMETRY and STORAGE_VARS_CA_ONLY items above.",
+    "recommendation": "No action; confirms the scenario/variable split is structurally sound."
+  },
+  {
+    "id": "TOPLEVEL_OUTPUTFUELS_CLEAN",
+    "title": "Part (c): Output Fuels and top-level (non-Processes) branch coverage is uniform across all 12 regions - clean",
+    "severity": "clean",
+    "verdict": "NA",
+    "evidence": "Output Fuels: single branch 'Transformation\\Centralized Electricity Generation\\Output Fuels\\Electricity', 456 rows, uniform 38 rows/region across all 12 regions (Output Price 132, Output Share 84, Shortfall/Usage/Surplus Rule 48 each, Export/Import Target 48 each). Root branch 'Transformation\\Centralized Electricity Generation': 972 rows, uniform 81 rows/region across all 12 regions (Planning Reserve Margin, Peak Load Ratio, Module Costs, PRM for Simulated Scenarios 132 each; the custom-constraint targets ASEANRenewableCapacityTarget__NEMOcc + RenewableCapacityTarget__NEMOcc 120 each; Renewable Target + Use Addition Size 84 each; Optimize 36). No region is short-covered on either branch.",
+    "recommendation": "No action; top-level and Output Fuels coverage is complete and symmetric."
+  },
+  {
+    "id": "TECH_REGION_PRESENCE_CLEAN",
+    "title": "Part (b): no process tech is missing entirely from any region; node-variant inheritance replication is expected, not a coverage gap",
+    "severity": "info",
+    "verdict": "NA",
+    "evidence": "Tech x region presence check: 0 missing (tech,region) cells across 84 techs x 12 regions. All 24 _ID* and 19 _MY* node-variant techs appear in every region with equal row skeletons (e.g. each Geothermal Flash_ID* = 477 rows in home Indonesia AND in each of the 10 foreign regions AND Base Template; each Gas Engine_MY* = 609 uniformly). This is LEAP's inheritance-tree replication in a raw structural export (per repo rule A.21) - the presence of foreign-region rows is expected here; whether those foreign rows carry real (non-default) VALUES is a value-side question outside this structure/coverage scope. Region row totals (47,446-47,449) differ by <=3, fully explained by the Gas Turbine_MYSR fuel-wiring gaps in the two RE LTRM scenarios.",
+    "recommendation": "No structural action; if a value-side critic runs, check whether _ID*/_MY* nodes carry authored values in foreign regions (A.21/A.23)."
+  }
+]
