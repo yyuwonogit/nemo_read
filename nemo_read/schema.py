@@ -243,6 +243,9 @@ PARAMETERS: Dict[str, Parameter] = {
     "MinShareProduction":
         Parameter("MinShareProduction", ("r", "t", "f", "y"),
                   description="Minimum share of production of fuel f that must come from technology t."),
+    "MaxShareProduction":
+        Parameter("MaxShareProduction", ("r", "t", "f", "y"),
+                  description="Maximum share of production of fuel f that may come from technology t."),
     "MinimumUtilization":
         Parameter("MinimumUtilization", ("r", "t", "l", "y"),
                   description="Minimum utilisation fraction of installed capacity per time slice."),
@@ -551,6 +554,11 @@ LEAP_SOURCE_MAP: Dict[str, LeapSource] = {
     "TotalTechnologyAnnualActivityLowerLimit":
                               LeapSource("Minimum Production",               _PROCESS, _PROCESS_NAME, "t", "confirmed"),
     "MinShareProduction":     LeapSource("Minimum Share of Production",      _PROCESS, _PROCESS_NAME, "t", "confirmed"),
+    # Ceiling twin of the row above. The LEAP variable name carries TWO
+    # UNDERSCORES and no spaces — unlike its floor sibling — and its unit is
+    # '%' where the floor's is 'Percent'. Canon-verified 2026-07-22 on the
+    # Blending processes; any name normalisation here yields branch_not_found.
+    "MaxShareProduction":     LeapSource("Maximum_Share_of_Production",      _PROCESS, _PROCESS_NAME, "t", "confirmed"),
     "RETagTechnology":        LeapSource("Renewable Qualified",              _PROCESS, _PROCESS_NAME, "t", "confirmed"),
     "ReserveMarginTagTechnology":
                               LeapSource("Capacity Credit",                  _PROCESS, _PROCESS_NAME, "t", "confirmed"),

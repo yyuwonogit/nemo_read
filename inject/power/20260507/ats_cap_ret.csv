@@ -1200,18 +1200,18 @@ Transformation\Centralized Electricity Generation\Processes\Solar PV,Capacity Re
 Transformation\Centralized Electricity Generation\Processes\Solar PV,Capacity Retirement,AMS Target Scenario,Thailand,,MW,,0
 Transformation\Centralized Electricity Generation\Processes\Solar PV,Capacity Retirement,AMS Target Scenario,Timor Leste,,MW,,0
 Transformation\Centralized Electricity Generation\Processes\Solar PV,Capacity Retirement,AMS Target Scenario,Vietnam,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Base Template,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Brunei,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Cambodia,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Indonesia,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Laos,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Malaysia,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Myanmar,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Philippines,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Singapore,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Thailand,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Timor Leste,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Vietnam,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Base Template,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Brunei,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Cambodia,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Indonesia,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Laos,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Malaysia,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Myanmar,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Philippines,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Singapore,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Thailand,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Timor Leste,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Retirement,AMS Target Scenario,Vietnam,,MW,,0
 Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Capacity Retirement,AMS Target Scenario,Base Template,,MW,,0
 Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Capacity Retirement,AMS Target Scenario,Brunei,,MW,,0
 Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Capacity Retirement,AMS Target Scenario,Cambodia,,MW,,0

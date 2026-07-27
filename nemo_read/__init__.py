@@ -173,6 +173,8 @@ from ._leap_com import (
     validate_canonical_csv_expressions,
     classify_decimal_separator, verify_leap_decimal_is_period,
     assert_leap_decimal_is_period,
+    LeapAccessLocked, find_leap_lock, assert_leap_access_allowed,
+    LEAP_LOCK_FILENAME, LEAP_LOCK_ENV,
 )
 
 __all__ = [
@@ -237,6 +239,8 @@ __all__ = [
     "validate_canonical_csv_expressions",
     "classify_decimal_separator", "verify_leap_decimal_is_period",
     "assert_leap_decimal_is_period",
+    "LeapAccessLocked", "find_leap_lock", "assert_leap_access_allowed",
+    "LEAP_LOCK_FILENAME", "LEAP_LOCK_ENV",
 ]
 
 __version__ = "0.7.0"

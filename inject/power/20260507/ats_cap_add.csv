@@ -1200,18 +1200,18 @@ Transformation\Centralized Electricity Generation\Processes\Solar PV,Capacity Ad
 Transformation\Centralized Electricity Generation\Processes\Solar PV,Capacity Additions,AMS Target Scenario,Thailand,,MW,,"Add(2026, 298, 2027, 50, 2028, 850, 2029, 1930, 2030, 1200, 2031, 1700, 2032, 1700, 2033, 1700, 2034, 1700, 2035, 1700, 2036, 1700, 2037, 1939)"
 Transformation\Centralized Electricity Generation\Processes\Solar PV,Capacity Additions,AMS Target Scenario,Timor Leste,,MW,,0
 Transformation\Centralized Electricity Generation\Processes\Solar PV,Capacity Additions,AMS Target Scenario,Vietnam,,MW,,"Add(2025, 15842, 2026, 1045.85, 2027, 1069.62, 2028, 950.775, 2031, 1026.62, 2032, 1026.62, 2033, 1026.62, 2034, 1026.62, 2035, 1026.62, 2036, 3956.65, 2037, 3956.65, 2038, 3956.65, 2039, 3956.65, 2040, 3956.65, 2041, 4264.64, 2042, 4264.64, 2043, 4264.64, 2044, 4264.64, 2045, 4264.64, 2046, 5567.42, 2047, 5567.42, 2048, 5567.42, 2049, 5567.42, 2050, 5567.42)"
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Base Template,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Brunei,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Cambodia,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Indonesia,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Laos,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Malaysia,,MW,,"Add(2025, 1.8333, 2026, 1.8333, 2027, 65.4, 2028, 73.9, 2029, 78.8, 2030, 83.6, 2031, 85.5, 2032, 84.2, 2033, 86.5, 2034, 88.4, 2035, 60, 2036, 80, 2037, 77, 2038, 76, 2039, 77, 2040, 76)"
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Myanmar,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Philippines,,MW,,"Add(2025, 8.24, 2031, 130, 2033, 80, 2034, 29.9, 2036, 38.2, 2037, 80, 2038, 85.3, 2039, 30, 2043, 30, 2044, 30, 2046, 30, 2047, 66.5, 2049, 30)"
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Singapore,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Thailand,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Timor Leste,,MW,,0
-Transformation\Centralized Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Vietnam,,MW,,"Add(2025, 880, 2026, 586.67, 2027, 600, 2028, 533.33, 2031, 4836.64, 2032, 4836.64, 2033, 4836.64, 2034, 4836.64, 2035, 4836.64, 2036, 5066.67, 2037, 5066.67, 2038, 5066.67, 2039, 5066.67, 2040, 5066.67, 2041, 5461.07, 2042, 5461.07, 2043, 5461.07, 2044, 5461.07, 2045, 5461.07, 2046, 7129.33, 2047, 7129.33, 2048, 7129.33, 2049, 7129.33, 2050, 7129.33)"
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Base Template,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Brunei,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Cambodia,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Indonesia,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Laos,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Malaysia,,MW,,"Add(2025, 1.8333, 2026, 1.8333, 2027, 65.4, 2028, 73.9, 2029, 78.8, 2030, 83.6, 2031, 85.5, 2032, 84.2, 2033, 86.5, 2034, 88.4, 2035, 60, 2036, 80, 2037, 77, 2038, 76, 2039, 77, 2040, 76)"
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Myanmar,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Philippines,,MW,,"Add(2025, 8.24, 2031, 130, 2033, 80, 2034, 29.9, 2036, 38.2, 2037, 80, 2038, 85.3, 2039, 30, 2043, 30, 2044, 30, 2046, 30, 2047, 66.5, 2049, 30)"
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Singapore,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Thailand,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Timor Leste,,MW,,0
+Transformation\Distributed Electricity Generation\Processes\Solar PV Rooftop,Capacity Additions,AMS Target Scenario,Vietnam,,MW,,"Add(2025, 880, 2026, 586.67, 2027, 600, 2028, 533.33, 2031, 4836.64, 2032, 4836.64, 2033, 4836.64, 2034, 4836.64, 2035, 4836.64, 2036, 5066.67, 2037, 5066.67, 2038, 5066.67, 2039, 5066.67, 2040, 5066.67, 2041, 5461.07, 2042, 5461.07, 2043, 5461.07, 2044, 5461.07, 2045, 5461.07, 2046, 7129.33, 2047, 7129.33, 2048, 7129.33, 2049, 7129.33, 2050, 7129.33)"
 Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Capacity Additions,AMS Target Scenario,Base Template,,MW,,0
 Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Capacity Additions,AMS Target Scenario,Brunei,,MW,,0
 Transformation\Centralized Electricity Generation\Processes\Solar PV_IDEast,Capacity Additions,AMS Target Scenario,Cambodia,,MW,,0

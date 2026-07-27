@@ -311,12 +311,58 @@ How to apply:
                                                 region-invariance,
                                                 §A.23 base-branch
                                                 authoring lock
+      `tests/test_leap_lock.py`             — §A.24 LEAP access interlock
+                                                (guard behaviour + repo-wide
+                                                scan for unguarded COM
+                                                dispatch sites)
   - **When adding a NEW rule** to this §A list that's mechanically
     enforceable, either extend an existing tripwire file or add a
     new one. Don't merge the rule prose without the test.
 
 See also: `tests/test_claude_md_rules_enforced.py` docstring for the
 audit of which §A rules have CI vs which are judgment-only.
+
+**A.24 — The user works in the LEAP UI. A `.leap_lock` file means NOTHING
+in this repo may attach to LEAP COM — and only the user may release it.**
+
+The user is frequently inside LEAP while agent sessions run offline analysis
+in this repo. A stray COM dispatch attaches to the **same** LEAP instance and
+can disrupt or corrupt their live session. Established 2026-07-23 mid-task,
+when the user was working in LEAP: *"do not the fuck touch LEAP at all i am
+currently in it!!!"* → *"prevent any of your workflow, or any small code, to
+touch leap at all."*
+
+The interlock is a lock file `.leap_lock` at the repo root (or
+`$NEMO_READ_LEAP_LOCK=1`). While it exists, **every** COM entry point in this
+repo refuses to start:
+  - `nemo_read.dispatch_leap()` raises `LeapAccessLocked` before touching
+    `win32com` — which covers `CanonicalInjector`, `CanonicalProber`,
+    `nemo_read-leap-export`, and every probe built on them.
+  - `CanonicalInjector.run()` / `CanonicalProber.run()` catch it and return
+    **exit 12** with a clear message (a locked LEAP is an expected operating
+    state, not a crash). The check sits **after** the offline gates, so
+    §A.18's exit 8 and the other pre-flight codes keep their meaning.
+  - The three scripts that dispatch COM directly (the portable fridge
+    injector + the two 202060630 AC probes) each carry an inlined copy of the
+    same check.
+
+How to apply:
+  - **Never delete `.leap_lock` to unblock your own task.** It is released
+    only on the user's explicit say-so — ask, every time, even if a task
+    "needs" LEAP. Removing it to make a command run is the exact failure this
+    rule exists to prevent.
+  - **Offline work is always fine and needs no lock check** — reading
+    exports, digesting, diffing, validating payload CSVs, editing docs. Only
+    COM attachment is gated.
+  - **Assume the lock should be ON by default** when the user mentions being
+    in LEAP, and re-create it if it is missing in that situation.
+  - Adding a new script that dispatches `LEAP.LEAPApplication`? Route it
+    through `nemo_read.dispatch_leap()`. If it must stay portable, inline the
+    check — [tests/test_leap_lock.py](tests/test_leap_lock.py) scans the repo
+    and fails CI on any unguarded dispatch site, and AST-pins the guard as
+    the first statement of `dispatch_leap()`.
+  - This is a *mechanical* complement to §A.9, not a replacement: even with
+    the lock released you still confirm area + scenario before probing.
 
 **A.11 — `Unlimited` string in LEAP authoring is a landmine. LEAP→NEMO
 export translates the literal `"Unlimited"` to `1.0e+12` regardless of
@@ -1058,8 +1104,41 @@ drifted.
 
 ### 2.6 `LEAP structure/` is the canonical demand-tree structure — for ALL future LEAP versions
 
-The `LEAP structure/` folder at the repo root — the seven
-`aeo9_v0.67_w_results` "Export Expressions" workbooks (four `Demand\`
+> **✅ CANON IS FULLY `aeo9_v0.80` as of 2026-07-23, and is now TEN trees.**
+> All re-exported, verified complete and promoted — Commercial, Transport,
+> Residential, Industry, `Key\`, `Resources\`, `Transformation\`, plus three
+> **new** trees added the same day: **Agriculture and Others** (§16),
+> **International Transport** (§17) and **`Effects\`** (§18). The three new
+> ones were surfaced by the inject-vs-structure audit — canon had never
+> described them. `Transformation\` required a **3-export merge** (whole tree
+> from one context + `Centralized Electricity Generation` from Indonesia and
+> Malaysia) and always will — see anatomy §14.0 and §11.1. **Read the version-status table at the top of
+> [LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md)
+> before quoting any count, roster or variable panel.** Two area-wide v0.80
+> changes: the **scenario roster is 6, not 11** (deleted: LCO backup, RE LTRM
+> ×3, RAS test; survivors keep IDs 1/11/12/18/20/25; working set CA/BAS/ATS/
+> RAS), and **`ACHH`** is a new Demand-tree variable pairing with `RefHH`
+> (not in `Key\`). The `Key\` tree is **structurally identical to v0.67** —
+> regenerating its tree file from the v0.80 export was byte-identical.
+>
+> **Gasoline naming is split ON PURPOSE — do not harmonise.** `Key\` uses
+> bare **`Gasoline`** (all 10 nodes, incl. `Key\Cal\Transport\Gasoline`);
+> `Demand\Transport\Road\<Veh>\` uses **`Blended Gasoline`**. Transport
+> `Sales`/`Stock` expressions cite `Key\…\Gasoline` and resolve — the area
+> calculates fine in v0.80. An inject row targeting
+> `Key\…\Blended Gasoline` is a **defect** (blind mode hangs on it).
+> Burned 2026-07-23: canon was patched from a verbal description of a rename
+> before the export arrived, which cleared 160 broken payload rows as valid.
+> **Never patch canon from a verbal note about structure — wait for the
+> export.** Freshness rule: **a file the user hands over is canon and
+> supersedes this folder** — when a payload disagrees with canon, suspect the
+> canon's age first, but confirm against an export, not a description
+> (see [[leap-structure-canon]], [[project_v080_canon_state]]).
+
+The `LEAP structure/` folder at the repo root — the canon workbooks
+(**ten trees** as of 2026-07-23; the description below is the original seven
+`aeo9_v0.67_w_results` set — see the version block above for the current
+roster) (four `Demand\`
 sectors + `Key\` assumption tree + `Resources\` supply tree +
 `Transformation\` conversion tree [power generation, refining, biofuel/
 clean-fuel production, blending — exported 2026-07-04; **the power tree is
@@ -1756,7 +1835,7 @@ Worked example + stage-by-stage exit criteria in
 |---|---|
 | [docs/FLOWS.md](docs/FLOWS.md) | canonical step-by-step for inject / results harvest / infeasibility triage — quick reference for the three established flows |
 | [docs/inject_sop.md](docs/inject_sop.md) | **standard `CanonicalInjector` inject method (all sectors)** — blind-mode command, branch-structure decision matrix (KA/Demand REQUIRE blind), 3 framework guardrails, pitfalls catalogue. Generalised from the 2026-05-20 transport cycle |
-| [LEAP structure/LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md) | **CANONICAL tree anatomy (§2.6)** — all seven exports: Demand sectors + `Key\` + `Resources\` + `Transformation\` (§14 — power gen, refining, biofuel/clean-fuel production, blending): branch trees ([trees/](LEAP%20structure/trees/)), variable inventories, units, scenario/region rosters, expression idioms, §A.11 Unlimited audit, hygiene ledger (§15). Structure = default for all future LEAP versions; expressions may vary |
+| [LEAP structure/LEAP_STRUCTURE_ANATOMY.md](LEAP%20structure/LEAP_STRUCTURE_ANATOMY.md) | **CANONICAL tree anatomy (§2.6)** — all ten trees (Demand ×6 incl. Agriculture and Others §16 + International Transport §17, `Effects\` §18): Demand sectors + `Key\` + `Resources\` + `Transformation\` (§14 — power gen, refining, biofuel/clean-fuel production, blending): branch trees ([trees/](LEAP%20structure/trees/)), variable inventories, units, scenario/region rosters, expression idioms, §A.11 Unlimited audit, hygiene ledger (§15). Structure = default for all future LEAP versions; expressions may vary |
 | [LEAP structure/CANON_ANOMALY_AUDIT_20260704.md](LEAP%20structure/CANON_ANOMALY_AUDIT_20260704.md) | full-corpus anomaly audit (all 7 trees, 4-scenario scope): incorrect inputs by class + empty-but-important red/yellow/green with mechanisms; Part C = Transformation (§11.2c trap, blending 1e12 floor, free-build) |
 | [docs/leap_structure_canon_sop.md](docs/leap_structure_canon_sop.md) | **canon pipeline SOP** — how the canon is built and extended (export → digest → verified analysis → supremacy sweep → connection-audited team slices → handover packages), the package file-group roster, load-bearing lessons, next-cycle recipes. Scripts: `LEAP structure/tools/` |
 | [docs/infeasibility_methodology.md](docs/infeasibility_methodology.md) | infeasibility pipeline + worked x435004 example + revised cN path (see §8) |
@@ -2195,6 +2274,32 @@ inject as-is.** Corollary: a live-area VALUE is expression content
 just because it's "what's in the area." (Structure — branch/variable/
 unit — is still canon; only the numeric value was wrong here.)
 See also: `memory/reference_percent_ownership_saturation.md`.
+
+### 11.2g Transport fleets retire via STOCK-OVERFLOW, not the `Scrappage` variable — and an inject only "removes" what it WRITES
+LEAP transport (aeo9 areas) retires vehicles by **stock-overflow
+reconciliation**: the road branches carry a specified `Stock` trajectory
+(real `Data(2005,…)` series + `Interp(…,2024, Key\…\Vehicle_Stock…)`
+refs), and LEAP scraps whatever accumulated `Sales` would push the fleet
+above that `Stock` path. The explicit `Scrappage` variable is `0` and
+`Max Scrappage Fraction` is `100` everywhere — that is **"no *additional*
+forced scrappage on top of the overflow," NOT "no retirement."** The road
+panel (`Demand\Transport\Road\<Veh>\<Fuel>`) has **no survival / vintage /
+lifetime / age variable**, so a per-age Weibull `surviving_fraction` curve
+has no canon paste target — flag such a file and stop, don't invent a
+translation.
+Burned 2026-07-21 (transport 20260720 drop): the team shipped a survival
+curve and claimed "Scrappage panel boilerplate → fleets never retire"; I
+amplified it into "dropping the curve removes retirement / don't stop
+pasting stock." Both wrong — `Stock` is populated so overflow retirement
+runs, and our inject writes `BaseYear_StockData`/`Vehicle_Sales`/
+`Vehicles_Sales_Share`/`Mileage`, touching **neither `Stock` nor
+`Scrappage`**, so it removes nothing. **Two rules:** (1) before asserting
+any LEAP internal mechanism (retirement, turnover, derivation), query the
+live `Stock`/`Scrappage`/`Sales` expressions and cite them (§A.14) — don't
+infer from one variable or a team's prose; (2) an inject "removes X" only
+if it WRITES the branches that drive X — read that off the row set, not a
+mechanism guess.
+See also: `memory/reference_transport_stock_overflow_retirement.md`.
 
 ### 11.3 Cosmetic-but-visible
 - **Modal popups are cosmetic, not failures.** "variable not visible

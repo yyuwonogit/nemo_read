@@ -256,8 +256,30 @@ Dropped 2026-05-19: `Motorcyle × Natural Gas`, `PassengerCar × Hydrogen`.
 > v0.46-era `"Gasoline"` — update it before the next Demand-tree
 > Sales/Mileage push, or blind-mode writes to
 > `Road\<Vehicle>\Gasoline\…` will target a FullName that no longer
-> exists. The `Key\TransportDataStock` share trees DO still use plain
-> `Gasoline` — the rename applies to the Demand tree only.
+> exists. **RETRACTED 2026-07-23 (v0.80 Keys export).** An earlier edit today
+> claimed the rename applied to **both** trees. It does not. The v0.80 Keys
+> export (`LEAP structure/LEAP Input Keys.xlsx`, 2026-07-23) shows all 10 Key
+> gasoline nodes are bare `Gasoline` —
+> `Key\TransportDataStock\{Vehicle_Stock_Share,Vehicles_Sales_Share}\{Bus,
+> Motorcycle,PassengerCar,Truck}\Gasoline` plus `Key\Cal\{Transport,Industry}\
+> Gasoline` — and **zero** `Blended Gasoline` nodes exist anywhere under `Key\`.
+> The v0.80 Transport `Sales`/`Stock` expressions cite `Key\…\Gasoline` and the
+> area calculates fine, which is the proof the split is intentional. **The
+> matrix at §0 is correct: Demand = `Blended Gasoline`, Key = `Gasoline`; do not
+> harmonise them.** An inject row targeting `Key\…\Blended Gasoline` is a defect
+> — blind mode HANGS on it rather than erroring (§11.1, §A.20).
+>
+> Root cause of the bad edit: canon was patched from a *verbal description* of a
+> rename before the export existed, which made 160 broken payload rows validate
+> (see [20260723/GASOLINE_BRANCH_FIX_NOTES_20260723.md](20260723/GASOLINE_BRANCH_FIX_NOTES_20260723.md)).
+> The "a file the user hands over is canon" freshness rule applies to **files**,
+> not to descriptions of files.
+>
+> Adapter status 2026-07-23: [build_canonical.py](build_canonical.py) now
+> encodes the split as `FUEL_TYPE_MAP_KA` (bare `Gasoline`, consumed by the
+> Key-side sales-share family) and `FUEL_TYPE_MAP_DEMAND` (`Blended Gasoline`),
+> with `KA_SALES_SHARE_FUELS_PER_VEHICLE` switched to bare `Gasoline` to match.
+> `DEMAND_AVAILABLE_FUELS_PER_VEHICLE` keeps `Blended Gasoline` — correct as-is.
 
 **When LEAP adds a new tech** (e.g. Motorcyle gets a Hydrogen child
 in a future area version): re-check the canon trees (or request a

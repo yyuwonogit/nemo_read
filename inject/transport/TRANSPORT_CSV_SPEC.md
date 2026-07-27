@@ -220,9 +220,17 @@ LEAP branches in `aeo9_v0.46`. The canonical map:
 > revisions of this table does not exist in the exported Demand tree.
 > The `Key\TransportDataStock` share trees still use plain `Gasoline`
 > (the two trees disagree on this name, same as the
-> `Motorcyle`/`Motorcycle` spelling split). The adapter's
-> `LEAP_AVAILABLE_FUELS_PER_VEHICLE` map still says `Gasoline` and
-> must be updated before the next Demand-tree push.
+> `Motorcyle`/`Motorcycle` spelling split).
+>
+> **Re-confirmed 2026-07-23 against v0.80** (`LEAP structure/LEAP Input
+> Keys.xlsx`): all 10 `Key\` gasoline nodes are bare `Gasoline`, zero
+> `Blended Gasoline` under `Key\`. The split is intentional — do not
+> harmonise. The adapter now encodes it explicitly as
+> `FUEL_TYPE_MAP_KA` (bare `Gasoline`, drives the Key-side sales-share
+> family) and `DEMAND_AVAILABLE_FUELS_PER_VEHICLE` / `FUEL_TYPE_MAP_DEMAND`
+> (`Blended Gasoline`) — see
+> [build_canonical.py](build_canonical.py). The dict this note used to
+> name, `LEAP_AVAILABLE_FUELS_PER_VEHICLE`, no longer exists.
 
 Rows dropped 2026-05-19: `Motorcyle × Natural Gas`,
 `PassengerCar × Hydrogen`. If your source data needs these

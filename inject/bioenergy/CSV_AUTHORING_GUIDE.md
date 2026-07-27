@@ -734,11 +734,24 @@ acronym/same-leaf detections:
 > rows and the path mappings are deterministic — no fuzzy matching
 > required at injection time.
 
-### 11.2 Mismatch families and the conversions now applied
+### 11.2 Mismatch families and the conversion factors on record
+
+> **CORRECTED 2026-07-22 — this section previously read "the conversions
+> now applied", implying the pipeline applies them for you. It does not.**
+> The table below is a **reference record of the factors**, not a
+> description of runtime behaviour. `build_canonical.py` is a
+> **pass-through**: it never touches the `expression` value on unit
+> grounds, and `nemo_read/inject_base.py` never reads the `unit` column at
+> all (`grep -rn unit_conversions --include=*.py inject/ nemo_read/inject_base.py`
+> → zero hits, 2026-07-22). **Author values in the canon-native unit.**
+> An authored value in a non-canon unit injects verbatim into whatever
+> unit LEAP holds — silently, with no error. See §12.2 for the one
+> pipeline path that does convert, and what it costs to use it.
 
 The 25 mismatches collapse to **15 distinct unit-pair families**, each
-covered by an entry in `nemo_read.unit_conversions._REGISTRY` (added in
-this audit cycle).
+with a factor recorded in `nemo_read.unit_conversions._REGISTRY` (added
+in this audit cycle). That registry is **reference-only** — nothing on
+the inject path consults it.
 
 | Variable           | Author unit            | LEAP unit                                  | Factor    | ★ | Why                                                |
 |--------------------|------------------------|--------------------------------------------|-----------|---|----------------------------------------------------|
@@ -993,13 +1006,37 @@ up-to-the-minute snapshot; this section is the human-facing summary.
 that don't have a registered conversion factor list themselves here for
 the next author-action cycle.
 
-### 12.2 Auto-handled mismatches (29 distinct, ~290 rows after AMS expansion)
+### 12.2 Mismatches with a factor on record (29 distinct, ~290 rows after AMS expansion)
 
-These mismatches **don't need author action** — the audit pipeline
-applies the conversion factor automatically at inject time via
-[nemo_read/unit_conversions.py](../../nemo_read/unit_conversions.py)
-`_REGISTRY`. But if you want a `match`-only canonical (zero conversions
-applied), update the source to use LEAP-native units directly.
+> **CORRECTED 2026-07-22.** This section previously said these mismatches
+> "don't need author action — the audit pipeline applies the conversion
+> factor automatically at inject time." **That was false and it cost the
+> bioenergy team a re-authoring cycle.** Nothing converts at inject time.
+
+**What is actually true:**
+
+- **The adapter is a pass-through.** `build_canonical.py` copies
+  `expression` and `unit` through unchanged. It applies no factor.
+- **The injector ignores the `unit` column entirely.** `inject_base.py`
+  writes the expression string into whatever unit LEAP already holds on
+  that (branch, variable). A wrong unit therefore fails **silently** —
+  no error, no warning, wrong magnitude in the model.
+- **Exactly one path converts, and it is not automatic.**
+  [run_workflow.py](run_workflow.py) step 3 (`audit_canonical_units`) +
+  step 4 (`apply_audit_conversions`, `leap_area.py:885`) read the
+  registry and write a **separate file**,
+  [canonical_leap_native.csv](canonical_leap_native.csv). That path
+  requires a **live LEAP units probe** (step 2) against the current area
+  to produce `branch_variable_units.csv` first; run it without a fresh
+  probe and the factors are keyed off stale units.
+  [inject_to_leap.py:29-37](inject_to_leap.py) then refuses
+  `canonical_leap_inputs.csv` whenever the native file exists, so
+  whichever file is newer is what actually ships.
+
+**Author rule: supply values in the canon-native unit.** Do not rely on
+a downstream factor. The table below records the factors so a reviewer
+can check an authored conversion — it does not describe anything that
+runs on your behalf.
 
 Reference table (full list in §11.2; key entries reproduced here):
 

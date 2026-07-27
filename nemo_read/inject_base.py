@@ -69,8 +69,10 @@ from typing import Any
 
 from nemo_read._heartbeat import HeartbeatLogger
 from nemo_read._leap_com import (
+    LeapAccessLocked,
     LeapTreeCache,
     LeapRegionalDecimalError,
+    assert_leap_access_allowed,
     assert_leap_decimal_is_period,
     compare_expressions,
     dispatch_leap,
@@ -788,7 +790,16 @@ class CanonicalInjector:
         )
 
         # ---- COM dispatch ONCE (warm session across all phases) ----
-        leap = dispatch_leap()
+        # LEAP access interlock (CLAUDE.md §A.24): dispatch_leap() refuses
+        # while the user holds the lock. Report it as a clean exit code
+        # rather than a traceback — a locked LEAP is an expected operating
+        # state. Placed here, after every offline gate, so §A.18's exit 8
+        # and the other pre-flight codes keep their meaning.
+        try:
+            leap = dispatch_leap()
+        except LeapAccessLocked as exc:
+            print(f"[{self.SECTOR_NAME}] {exc}", file=sys.stderr)
+            return 12
         self._assert_area_lock(leap, args.expect_area)
         initial_area = leap.ActiveArea.Name
         print(f"[{self.SECTOR_NAME}] ActiveArea (locked): {initial_area!r}")

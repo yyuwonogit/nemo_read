@@ -14,9 +14,54 @@ them as deep dives:
 | [202060630/ac/ac_leap_input_mapping.md](202060630/ac/ac_leap_input_mapping.md) + [202060630/fridge/fridge_leap_input_mapping.md](202060630/fridge/fridge_leap_input_mapping.md) | Column-by-column source mapping for the 2026-06-30 full inject |
 | [structure_handover_20260703/README_RESIDENTIAL_CANON_STRUCTURE.md](structure_handover_20260703/README_RESIDENTIAL_CANON_STRUCTURE.md) | The team-facing canon package (what we sent the residential team) |
 
+> ## ⚠ v0.80 DELTA — 2026-07-23. Read before using anything below.
+>
+> Canon was promoted to `aeo9_v0.80`. Two changes invalidate several
+> statements in this guide; the guide body is otherwise still v0.67-era
+> prose. Take counts from here, not from the sections below.
+>
+> **1. Nine legacy residential branches were DELETED.**
+> `Projections\Air Conditioning\{Best Practice, Current_Sales Average,
+> Current_Stock Average, Efficient}` and `Projections\Refrigeration\{High,
+> Low, Medium}` — and their two bare parents `Air Conditioning` and
+> `Refrigeration`. Only the underscore trees `Air Conditioning_` /
+> `Refrigeration_` survive (v0.80 `LEAP structure/trees/residential_tree.txt`).
+> Consequences:
+> - The "paired trees run in **parallel**" framing below is **over**. There
+>   is nothing left to run in parallel with.
+> - **§6.3 is RESOLVED BY DELETION** — the double-count question is closed,
+>   there is nothing to author into and nothing to zero out, and the canon
+>   README §7 item 1 review request should NOT be re-raised with the team.
+> - `Projections` is now **521 branches / 13 end uses**, not 360 / 15.
+> - Hygiene items #1 and #4 below are anchored on the deleted
+>   `old Air Conditioning:Activity Level` Lookup — historical, retire them.
+>   **Hygiene #5 (Lifetime spread on the `_eff` tiers) is still live** — do
+>   not sweep it away with the others.
+> - The `Key\Macroeconomic` GDP `Lookup` curves no longer drive the old
+>   `Air Conditioning` / `Refrigeration` saturations (deleted); the other
+>   three appliance consumers are unaffected.
+> - The `Useful Energy Intensity` table's "old `Air Conditioning`:
+>   `Kilowatt-Hour`" row cites a unit on a branch that no longer exists.
+>
+> **2. `!EER` LEFT residential.** It now lives on the **commercial** AC
+> tiers (`Demand\Commercial\Other Commercial\End Use Projection\Air
+> Conditioning\<tier>:!EER[Btu/Wh]`), and commercial's `Final Energy
+> Intensity` was re-pointed at that local sibling. No cross-sector borrow
+> from residential remains.
+>
+> **3. Scenario roster 11 → 6.** The device-stock panel now hosts in **3**
+> scenarios (`Set up`, `Carbon Neutrality_ Net Zero Scenario`,
+> `Regional Aspiration Scenario`), not 7; the scenario table below still
+> lists five deleted scenarios (`RAS test`, `LCO backup`, `RE LTRM ×3`).
+> The guide's operative conclusion is **unchanged**: of the working set
+> (CA/BAS/ATS/RAS), RAS is the only scenario that hosts the panel.
+>
+> Everything else in this guide is unverified against v0.80.
+
 **Truth hierarchy** (CLAUDE.md §2.6 canon supremacy): the
-`LEAP structure/` canon exports from `aeo9_v0.67_w_results`
-(2026-07-02) outrank every document above for branch paths, variable
+`LEAP structure/` canon exports — **now `aeo9_v0.80` (2026-07-23);
+the prose below predates it, see the delta block above** — outrank
+every document above for branch paths, variable
 names, units, and scenario/region rosters. Where a per-appliance doc
 and canon disagree, canon wins — the known disagreements are flagged
 inline in §3 and §7 below. Expression *values* are not canon — only
@@ -391,11 +436,12 @@ author `Unlimited` on any lower-bound-flavoured variable (Minimum
 Devices/Additions) at all — use 0 or a justified finite floor.
 
 6.3 **The OLD share-based `Air Conditioning` and `Refrigeration`
-trees** — off-limits pending the double-count question (§7.6). They
-still carry non-zero intensities in every projection scenario while
-the underscore trees run in parallel in 7 scenarios. Do not author
-into them, and do not zero them out either, until the residential
-team answers the canon README §7 item 1 review request.
+trees — CLOSED 2026-07-23 by deletion in v0.80.** They were off-limits
+pending the double-count question (§7.6); v0.80 deleted the branches
+outright (both bare parents + their 7 named children), so the
+double-count risk is gone and there is nothing left to author into or
+zero out. Historical note only — do **not** re-raise the canon README
+§7 item 1 review request with the residential team.
 
 6.4 **LEAP-side formulas we must not overwrite:** lighting leaf
 `Final Energy Intensity` (bottom-up formula, §1); Demand-tier
