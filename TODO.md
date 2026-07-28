@@ -5,6 +5,33 @@
 > across sessions. Update or empty it whenever a major piece of work
 > completes.
 
+## Status as of 2026-07-28 — aeo9_v0.82: post mega-inject + patch fix, awaiting full v0.82 input + yearly result
+
+**Mega-inject COMPLETE.** All 6 payloads (1,387 rows) injected into `aeo9_v0.81`
+and readback EXACT (0 FAIL): transport hist 160 / audit 164 / delta 291 /
+commercial 626 / bioenergy 114 / power 32. Canon promoted v0.67→v0.80→v0.81.
+Area now at **v0.82** post-inject + the one manual patch fix.
+
+**Patch fix (manual, applied in LEAP):** Indonesia
+`Water Heating\Solar Heating : Activity Level` 30.71→29 — bug-7 share overshot
+the family `Remainder(100)` (`Existing`→−0.71 at 2060), halting the calc. Watch
+Thailand `Solar Heating`=3.39 (same class, marginal) if a re-calc trips there.
+
+**Tooling shipped:** `inject/run_megainject.py` (single-session driver — one COM
+dispatch for all payloads, fixes the §A.10 ActiveArea='' blank between separate
+injector invocations); `leap_lock.py` (on/off toggle for the `.leap_lock` COM
+interlock). Delta payloads + logs + progress trail committed (branch
+`v080-canon-and-staged-injects`, commits 505899a + 88ce72a).
+
+**NOW AWAITING (Phase A/C):** the **full v0.82 input export** (complete
+input/expression set) **and the yearly results** (solved calc output). On arrival:
+evaluate input landed correctly vs the refreshed canon, and the result — Indonesia
+unmet load, fleet stock-overflow retirement, blend under the drifting ceiling,
+commercial AC ownership, coal/nuclear/RE/CCS movement — against the pre-inject
+baseline.
+
+---
+
 ## Status as of 2026-07-14 (power v0.71 batch1b — INJECTED, results audit pending)
 
 **Power batch1b delta injected clean into `aeo9_v0.71` on 2026-07-14.**
