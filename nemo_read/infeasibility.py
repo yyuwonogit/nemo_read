@@ -12,6 +12,7 @@ Checks implemented:
     * Bound inversions on capacity, investment, and activity limits.
     * Exogenous emissions that already exceed their limit.
     * MinShareProduction fractions that sum to more than 1.0 per (r, f, y).
+    * MinShareProduction that exceeds MaxShareProduction per (r, t, f, y).
     * MinimumUtilization that exceeds AvailabilityFactor per (r, t, l, y).
     * MinStorageCharge that exceeds StorageLevelStart per (r, s, y).
     * Demanded fuels that no technology produces (no OAR path).
@@ -72,6 +73,7 @@ def find_infeasibilities(
     _check_bound_inversions(db, all_tables, report, sample_rows)
     _check_emission_limits_vs_exogenous(db, all_tables, report, sample_rows)
     _check_min_share_production_sum(db, all_tables, report, sample_rows)
+    _check_min_vs_max_share_production(db, all_tables, report, sample_rows)
     _check_min_utilization_vs_availability(db, all_tables, report, sample_rows)
     _check_min_storage_vs_start(db, all_tables, report, sample_rows)
     _check_demand_without_supply(db, all_tables, report, sample_rows)
@@ -214,6 +216,50 @@ def _check_min_share_production_sum(
                 f"{len(bad)} (r,f,y) combos where minimum production "
                 f"shares sum to more than 1.0; no feasible production "
                 f"mix exists."
+            ),
+            sample=bad.head(sample_rows),
+        ))
+
+
+def _check_min_vs_max_share_production(
+    db: NemoDB, all_tables: set,
+    report: ValidationReport, sample_rows: int,
+) -> None:
+    """MinShareProduction is the floor and MaxShareProduction the ceiling on
+    one technology's fraction of (r, f, y) production. If the floor exceeds
+    the ceiling for any (r, t, f, y), that technology has no admissible
+    share and the production block is infeasible.
+
+    This is the share-side analogue of :data:`_BOUND_PAIRS`, which cannot
+    cover it: those pairs join on (r, t, y) or (r, s, y), while the share
+    parameters carry a fuel dimension too. Added 2026-07-22 after a
+    bioenergy blend-ceiling payload authored a ``Maximum_Share_of_Production``
+    below the live ``Minimum Share of Production`` on the same Blending
+    process and Stage 1 returned clean.
+    """
+    if not {"MinShareProduction", "MaxShareProduction"} <= all_tables:
+        return
+    if db.row_count("MinShareProduction") == 0:
+        return
+    if db.row_count("MaxShareProduction") == 0:
+        return
+    sql = (
+        "SELECT mn.r, mn.t, mn.f, mn.y, mn.val AS min_share, "
+        "       mx.val AS max_share "
+        "FROM MinShareProduction mn "
+        "JOIN MaxShareProduction mx "
+        "  ON mx.r = mn.r AND mx.t = mn.t AND mx.f = mn.f AND mx.y = mn.y "
+        "WHERE mn.val > mx.val"
+    )
+    bad = db.query(sql)
+    if len(bad) > 0:
+        report.issues.append(ValidationIssue(
+            severity="error", category="share_constraints",
+            table="MinShareProduction",
+            message=(
+                f"{len(bad)} (r,t,f,y) combos where the minimum production "
+                f"share exceeds the maximum production share; the technology "
+                f"has no feasible share."
             ),
             sample=bad.head(sample_rows),
         ))

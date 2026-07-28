@@ -11,9 +11,32 @@ Confirms whether AC mirrors the fridge structure BEFORE we build/inject:
 Safe: reads FullName + Variable.Name only — never .Expression/.DataUnitText
 (result-var modal trap). Area-locked; aborts on drift/blank. ONE COM session.
 """
+import os
+from pathlib import Path
+
 import win32com.client
 
+
+def _assert_leap_unlocked():
+    """Refuse to attach to LEAP while the user holds the .leap_lock interlock."""
+    env = os.environ.get("NEMO_READ_LEAP_LOCK", "").strip()
+    if env:
+        if env.lower() in {"1", "true", "yes", "on"}:
+            raise SystemExit("LEAP COM BLOCKED — $NEMO_READ_LEAP_LOCK is set.")
+        if Path(env).exists():
+            raise SystemExit(f"LEAP COM BLOCKED — lock file {env}")
+    here = Path(__file__).resolve()
+    for d in (here.parent, *here.parents):
+        lock = d / ".leap_lock"
+        if lock.exists():
+            raise SystemExit(
+                f"LEAP COM BLOCKED — lock file {lock}\n"
+                "The user is working in LEAP. Delete the lock only on their explicit say-so."
+            )
+
+
 EXPECT = "aeo9_v0.64"
+_assert_leap_unlocked()
 leap = win32com.client.Dispatch("LEAP.LEAPApplication")
 area = leap.ActiveArea.Name
 print("ActiveArea:", repr(area), "| ActiveScenario:", repr(leap.ActiveScenario.Name))

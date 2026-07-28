@@ -1,0 +1,34 @@
+branch,variable,unit,scenario,region,bound_direction,disposition
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Maximum Capacity,Million Gigajoules/Year,Regional Aspiration Scenario,Base Template,UPPER,"-> GROUP 4 Max(Exogenous Capacity, Interp(...))"
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Maximum Capacity Addition,Million Gigajoules/Year,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> GROUP 5 build-rate Interp / finite MW
+Transformation\Biodiesel Production\Processes\CME Biodiesel,Maximum Production,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Maximum Capacity,Million Gigajoules/Year,Regional Aspiration Scenario,Base Template,UPPER,"-> GROUP 4 Max(Exogenous Capacity, Interp(...))"
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Maximum Capacity Addition,Million Gigajoules/Year,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> GROUP 5 build-rate Interp / finite MW
+Transformation\Biodiesel Production\Processes\FAME Biodiesel,Maximum Production,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Maximum Capacity,Million Gigajoules/Year,Regional Aspiration Scenario,Base Template,UPPER,"-> GROUP 4 Max(Exogenous Capacity, Interp(...))"
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Maximum Capacity Addition,Million Gigajoules/Year,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> GROUP 5 build-rate Interp / finite MW
+Transformation\Biodiesel Production\Processes\POME Biodiesel,Maximum Production,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ
+Transformation\Bioethanol Production\Processes\Cassava,Maximum Capacity Addition,Million Tonne Coal Equiv/Year,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> GROUP 5 build-rate Interp / finite MW
+Transformation\Bioethanol Production\Processes\Cassava,Maximum Production,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Maximum Capacity,Million Tonne Coal Equiv/Year,Regional Aspiration Scenario,Base Template,UPPER,"-> GROUP 4 Max(Exogenous Capacity, Interp(...))"
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Maximum Capacity Addition,Million Tonne Coal Equiv/Year,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> GROUP 5 build-rate Interp / finite MW
+Transformation\Bioethanol Production\Processes\Corn Ethanol,Maximum Production,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ
+Transformation\Bioethanol Production\Processes\Molasses,Maximum Capacity Addition,Million Tonne Coal Equiv/Year,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> GROUP 5 build-rate Interp / finite MW
+Transformation\Bioethanol Production\Processes\Molasses,Maximum Production,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ
+Transformation\Bioethanol Production\Processes\Sugarcane,Maximum Capacity Addition,Million Tonne Coal Equiv/Year,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> GROUP 5 build-rate Interp / finite MW
+Transformation\Bioethanol Production\Processes\Sugarcane,Maximum Production,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ
+Resources\Primary\\Corn,Maximum Imports,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ (10 AMS)
+Resources\Primary\\Corn,Maximum Production,Metric Tonne,AMS Target Scenario,ALL (12 regions),UPPER,-> copy the region's own RAS expression (canon-sourced)
+Resources\Primary\\Corn,Maximum Production,Metric Tonne,Baseline Simulation,ALL (12 regions),UPPER,-> copy the region's own RAS expression (canon-sourced)
+Resources\Primary\\Corn,Maximum Production,Metric Tonne,Current Accounts,ALL (12 regions),UPPER,-> copy the region's own RAS expression (canon-sourced)
+Resources\Primary\\Corn,Maximum Production,Metric Tonne,Regional Aspiration Scenario,"Base Template, Timor Leste",UPPER,"OUT OF SCOPE - only Base Template (not a real region, S11.1) and Timor Leste (disabled in calc, --exclude-timor-leste). NOT authored."
+Resources\Primary\\Molasses,Maximum Imports,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ (10 AMS)
+Resources\Primary\\Molasses,Maximum Production,Metric Tonne,AMS Target Scenario,"Base Template, Timor Leste",UPPER,-> copy the region's own RAS expression (canon-sourced)
+Resources\Primary\\Molasses,Maximum Production,Metric Tonne,Baseline Simulation,"Base Template, Timor Leste",UPPER,-> copy the region's own RAS expression (canon-sourced)
+Resources\Primary\\Molasses,Maximum Production,Metric Tonne,Current Accounts,"Base Template, Timor Leste",UPPER,-> copy the region's own RAS expression (canon-sourced)
+Resources\Primary\\Molasses,Maximum Production,Metric Tonne,Regional Aspiration Scenario,"Base Template, Timor Leste",UPPER,"OUT OF SCOPE - only Base Template (not a real region, S11.1) and Timor Leste (disabled in calc, --exclude-timor-leste). NOT authored."
+Resources\Primary\\Palm Oil Mill Effluent,Maximum Imports,Gigajoule,Regional Aspiration Scenario,ALL (12 regions),UPPER,-> 10^10 GJ (10 AMS)
+Resources\Primary\\Palm Oil Mill Effluent,Maximum Production,Metric Tonne,AMS Target Scenario,"Base Template, Timor Leste",UPPER,-> copy the region's own RAS expression (canon-sourced)
+Resources\Primary\\Palm Oil Mill Effluent,Maximum Production,Metric Tonne,Baseline Simulation,"Base Template, Timor Leste",UPPER,-> copy the region's own RAS expression (canon-sourced)
+Resources\Primary\\Palm Oil Mill Effluent,Maximum Production,Metric Tonne,Current Accounts,"Base Template, Timor Leste",UPPER,-> copy the region's own RAS expression (canon-sourced)
+Resources\Primary\\Palm Oil Mill Effluent,Maximum Production,Metric Tonne,Regional Aspiration Scenario,"Base Template, Timor Leste",UPPER,"OUT OF SCOPE - only Base Template (not a real region, S11.1) and Timor Leste (disabled in calc, --exclude-timor-leste). NOT authored."

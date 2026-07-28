@@ -1,5 +1,356 @@
 # Changelog
 
+## [Unreleased] — LEAP structure canon promoted to aeo9 v0.80 (partial) (2026-07-23)
+
+### Added
+
+- **LEAP access interlock (CLAUDE.md §A.24)** — a `.leap_lock` file at the repo
+  root (or `NEMO_READ_LEAP_LOCK=1`) makes every COM entry point in the repo
+  refuse to start, so agent scripts cannot attach to a LEAP instance the user
+  is working in. `nemo_read.dispatch_leap()` raises the new `LeapAccessLocked`
+  **before** touching `win32com`, which covers `CanonicalInjector`,
+  `CanonicalProber`, `nemo_read-leap-export` and every probe built on them;
+  both frameworks catch it and return **exit 12** with a clear message rather
+  than a traceback. The check sits after the offline gates so §A.18's exit 8
+  and the other pre-flight codes keep their meaning. New public API:
+  `LeapAccessLocked`, `find_leap_lock`, `assert_leap_access_allowed`,
+  `LEAP_LOCK_FILENAME`, `LEAP_LOCK_ENV`. The three scripts that dispatch COM
+  directly (portable fridge injector + two `202060630` AC probes) carry an
+  inlined copy of the same check. Tripwire
+  [tests/test_leap_lock.py](tests/test_leap_lock.py) pins guard behaviour,
+  AST-pins the guard as the first statement of `dispatch_leap()`, and **scans
+  the whole repo for unguarded `LEAP.LEAPApplication` dispatch sites** so a new
+  script cannot silently bypass it. Prompted by the user working in LEAP while
+  a session ran: *"prevent any of your workflow, or any small code, to touch
+  leap at all."* **Release the lock only on the user's explicit say-so.**
+
+### Added — canon
+
+- **Three NEW trees added to canon: Agriculture and Others, International
+  Transport, and `Effects\`.** Canon is now **ten trees**, not seven. All three
+  were surfaced by the 2026-07-23 inject-vs-structure audit — result and
+  payload rows referenced branches canon had never described. All verified
+  complete (0 gaps, 0 blanks, 0 bad refs, rectangular per region, row counts
+  reconcile exactly) and promoted with `trees/*.txt` generated:
+  - **Agriculture and Others** (§16) — 15,336 rows / 153 branches / 10 vars /
+    depth 4. Flat fuel layer under one root, 13 fuels; activity driver is a
+    single value-added `Activity Level` (2020 USD, Million). Carries
+    **`Briquette`**, which no other demand sector has.
+  - **International Transport** (§17) — 13,152 rows / 110 branches / 13 vars /
+    depth 5. Two modes (International Aviation with Jet Kerosene + **SAF**;
+    International Marine with Diesel + Residual Fuel Oil). Variable panel
+    mirrors domestic Transport (`TotalEnergyTran`, `TotShare_AltFuels`,
+    `Share_FossilFuels`), not the other demand sectors.
+  - **`Effects\`** (§18) — 2,760 rows / 11 branches / **4 vars** / depth 2.
+    Flat: root + 10 pollutants. Hosts `Externality Cost` (the §2.3
+    `EmissionsPenalty` mapping, incl. `Effects\Sequestered Carbon Dioxide`),
+    `Annual Emission Constraint`, and the only `__NEMOcc` custom-constraint
+    tables outside Transformation (`AllRegionsGHGLimit`,
+    `SingleRegionGHGLimit`). **Those constraint variables are not materialised
+    under Current Accounts** (CA 240 rows vs 504 per projection scenario) — a
+    GHG-limit inject aimed at CA is a silent no-op.
+- **`ACHH` scope pinned:** present in every **Demand** tree (all six), absent
+  from `Key\`, `Resources\`, `Transformation\` and `Effects\` — verified, not
+  inferred.
+
+### Changed — canon
+
+- **`Transformation\` promoted to `aeo9_v0.80` — merged from THREE exports.**
+  Whole-tree Brunei-context export (1,162 branches) unioned with
+  `Centralized Electricity Generation`-only exports from Indonesia (1,613) and
+  Malaysia (1,096) → **2,933 branches**, up from the merged v0.67 canon's
+  2,675. **0 canon branches missing**; all node counts met (`_MYPE` 194,
+  `_MYSB` 112, `_MYSR` 176, `_IDJW`/`_IDKA` 238, `_IDEast` 218, `_IDSA`
+  238→324); all 10 Transmission Node targets present. Variables 80 → 83, none
+  removed. Genuinely new: **76 Indonesia Sumatra CCS processes** (`Coal
+  Ultrasupercritical CCS_IDSA` 60, `Gas Combined Cycle with CCS_IDSA` 16) and
+  **3 `_F` transmission-line variants** (13 → 16 lines). The other 179 of the
+  +258 are the §A.22 base families and per-region Transmission-Node children
+  that the committed canon tree already carried.
+  `trees/transformation_tree.txt` 2,684 → 2,933 lines.
+- **`Resources\` promoted to `aeo9_v0.80` — structurally identical to v0.67.**
+  62 branches and 20 variables both sides, 0 unit drift, 0 panel changes;
+  `trees/resources_tree.txt` regenerated **byte-identical**. Per-scenario rows
+  unchanged (10,440 CA / 10,332 others), so the whole drop is the roster. New
+  anatomy §13.0. **Operationally important:** the §13.5
+  accounting/optimization split now lands as **CA/Baseline/AMS Target =
+  accounting** (`Imports`, `Cost of Unmet Requirements`) vs **Set up/CNZ/RAS =
+  optimization** (`Minimum Imports`, `Maximum Imports`). Of the CA/BAS/ATS/RAS
+  working set, **RAS is the only scenario carrying `Maximum Imports`** — a cap
+  inject on `Resources\Secondary\<Fuel>` reaches RAS alone, and targeting the
+  wrong group is a silent no-op. Affects `inject/bioenergy` and
+  `inject/fossil`.
+- **`Key\` promoted to `aeo9_v0.80` — structurally identical to v0.67.** 1,064
+  branches both sides (0 added, 0 removed), 26 variables, 0 unit drift, 0
+  variable-panel changes; regenerating `trees/keys_tree.txt` from the v0.80
+  export was **byte-identical**. Per-scenario rows are 40,020 in both versions
+  (440,220 = 11 × 40,020; 240,120 = 6 × 40,020), so the whole row-count drop
+  is the scenario roster. No `ACHH` — that variable is Demand-tree only. New
+  anatomy §12.0.
+- **Commercial promoted to `aeo9_v0.80` — structure identical.** 426 branches
+  both sides (set-identical), 0 unit drift, depth 8. Two variables added:
+  `ACHH` (67 branches) and **`!EER`** (4 branches — the commercial AC
+  efficiency tiers, `Btu/Wh`). Per-scenario rows 8,160 → 9,012 reconciles
+  exactly (804 + 48). New anatomy §8.0. **`!EER` relocated rather than
+  disappeared**: v0.80 removes it from Residential (it lived only on the 4
+  deleted legacy AC children) and adds it to Commercial's own 4 AC tiers —
+  visible only when the two sector diffs are read together.
+- **`LEAP structure/` promoted to `aeo9_v0.80` for Transport, Industry, and
+  Residential.** The canon is now **mixed-version**: those three trees plus
+  Commercial and `Key\` are v0.80; `Resources\` and `Transformation\` remain
+  v0.67 pending re-export. `LEAP_STRUCTURE_ANATOMY.md` gained a version-status block
+  at the top (per-tree version table) — **check a tree's version before quoting
+  any count from its chapter** — plus new §9.0 / §10.0 / §11.0 delta sections
+  and v0.80 blocks in §2 (roster) and §2.1 (scenario-scoped fingerprints).
+  `trees/{transport,industry,residential}_tree.txt` regenerated from the v0.80
+  digests; v0.67 kept as `*.bak_pre_v080_20260723`. Superseded workbooks kept
+  as `LEAP Input <Tree> v0.67.xlsx` (all `.xlsx` here are gitignored).
+- **Scenario roster 11 → 6, area-wide.** Deleted: `LCO backup`, `RE LTRM ASEAN
+  Policy Aligned` / `RE Coupling` / `Shared Energy Resources`, `Regional
+  Aspiration Scenario test`. Survivors keep original IDs (1, 11, 12, 18, 20,
+  25). Working set is CA/BAS/ATS/RAS (user directive). Every §2 bloc-structure
+  claim about the deleted five is now historical.
+- **`ACHH` (`AC/hh`) is new area-wide in v0.80**, pairing with existing `RefHH`
+  on the same branches — present in all three re-exported trees.
+
+### Validated against aeo9 v0.80
+
+- **Transport — purely additive.** 165 → 292 branches (0 removed), depth 6 → 7,
+  24 → 26 variables, 0 unit drift. +127 pollutant leaves under
+  `Road\<Veh>\<Fuel>\<Fuel>\<Pollutant>`; new `New Device Environmental
+  Loading` on exactly those; blend-aware CO₂ via 6 new refs into
+  `Transformation\{Gasoline,Diesel} Blending` (`Process Share` /
+  `Minimum Share of Production`), splitting fossil vs biogenic by live blend
+  share. Per-scenario row delta reconciles exactly (3,720).
+- **Industry — structure identical.** 5,859 branches both sides, set-identical,
+  0 unit drift; sole change `+ACHH` on 600 branches. Row delta reconciles
+  exactly (7,200/scenario; 593,172 total).
+- **Residential — legacy cleanup.** 9 branches removed, 0 added: the duplicate
+  non-underscore `Air Conditioning` + `Refrigeration` families, completing the
+  migration to `Air Conditioning_`/`Refrigeration_`. Removed variables `!EER`
+  and `Fuel Share` lived only on those deleted branches. `+Maximum Share` on
+  the same 18 device-efficiency leaves that already carried `Minimum Share`.
+  **Device-stock economics panel now hosts in 3 scenarios (Set up, CNZ, RAS),
+  not 7 — of CA/BAS/ATS/RAS only RAS hosts it.**
+- **Three transport inject payloads pre-flighted clean** (615 rows:
+  `20260723/transport_delta_20260723.csv`,
+  `20260721/transport_audit_corrections_20260721.csv`,
+  `20260721/historical_stock_patch_20260721.csv`) — every branch path,
+  variable-on-branch and unit validated against v0.80 Transport + the Keys
+  reference; §A.15, §A.21/§A.23, §11.2b, §11.2e all pass; **zero cross-payload
+  collisions**. Not yet injected.
+
+### Fixed
+
+- **A region-scoped Transformation export was caught before it reached canon.**
+  The v0.80 Transformation drop is a perfectly valid file (0 gaps, 0 blanks,
+  0 bad refs) but was walked from a **Brunei** context: `Transmission Nodes`
+  holds only Brunei, and it materialises **zero** `_MY*` and **zero** `_ID*`
+  branches — 1,162 branches against the merged v0.67 canon's 2,675. Promoting
+  it would have deleted **1,682 branches** (1,670 node/transmission + 12
+  inter-region transmission lines). Rejected per §11.1; needs Malaysia +
+  Indonesia region exports merged via `tools/rebuild_transformation_tree.py`.
+  §11.1 trap 2 also reproduced: `_MYPE` appears in 12 *expression* cells while
+  being 0 branches. Recorded in anatomy §14.0.
+- **v0.80 independently confirms the §A.22 base-branch restoration.** Of the
+  169 branches unique to the Brunei export, 128 are base process families
+  (`Coal Subcritical`, `Biomass Other`, `Gas Combined Cycle`, `Diesel`,
+  `Large/Small Hydro`, `Solar PV`, `Unmet Load`, `Wind Onshore`) — absent from
+  *both* raw v0.67 exports but restored to canon 2026-07-06 from indirect
+  evidence. A copper-plate region's export materialises them directly, proving
+  that correction right. Zero genuinely-new structure among the 169.
+- **A truncated LEAP export was caught before it reached canon.** The first
+  v0.80 industry drop was a structurally valid `.xlsx` holding only 42% of the
+  data (2,350 of 5,859 branches; all of `Electricity Appliances` and six End Use
+  subsectors absent). Rejected, re-exported, re-verified. Detection method
+  recorded in `memory/reference_truncated_leap_export_detection.md`: branch list
+  is an exact prefix of canon, last branch stops mid scenario×region loop, and
+  rows-per-branch is not a clean multiple. **Row count alone cannot distinguish
+  truncation from a scenario streamline** — both shrink the file ~45%.
+
+### Documented
+
+- **Gasoline naming is split between the trees ON PURPOSE — do not harmonise.**
+  `Key\` uses bare **`Gasoline`** (all 10 nodes, incl. `Key\Cal\Transport\
+  Gasoline`); `Demand\Transport\Road\<Veh>\` uses **`Blended Gasoline`**.
+  Transport `Sales`/`Stock` expressions cite `Key\…\Gasoline` and resolve — the
+  area calculates fine in v0.80, which is the proof. `Blended Diesel` is
+  spelled the same on both sides. An inject row targeting
+  `Key\…\Blended Gasoline` is a defect, and blind mode **hangs** on it rather
+  than erroring.
+- **Never patch canon from a verbal description of a structural change.**
+  Canon was amended from a spoken note that `Key\` had been renamed to
+  `Blended Gasoline`, before the Keys export existed. That amendment cleared
+  160 genuinely-broken payload rows as valid; the real export contradicted it.
+  The freshness rule ("a file the user hands over is canon") applies to
+  **files**, not to descriptions of files. Recorded in CLAUDE.md §2.6, the
+  anatomy version block, and
+  [inject/transport/20260723/GASOLINE_BRANCH_FIX_NOTES_20260723.md](inject/transport/20260723/GASOLINE_BRANCH_FIX_NOTES_20260723.md).
+- **`!EER` moved from Residential to Commercial in v0.80 — the cross-sector
+  borrow is fixed in-model, and the two long-standing commercial open questions
+  are closed offline.** v0.80 deleted the four residential
+  `Projections\Air Conditioning\<tier>` branches (part of 9 deleted residential
+  legacy branches) and added `!EER[Btu/Wh]` on commercial's own four AC tiers,
+  rewriting `Final Energy Intensity` on the three non-anchor tiers to the
+  sibling-local `Current Stock_Average:!EER[Btu/Wh] / !EER[Btu/Wh] * Current
+  Stock_Average:Final Energy Intensity[kWh]`. Note the tier's own EER is a
+  **bare self-reference** with no branch prefix — reconstructing the expression
+  from the natural shape yields the wrong string. `INJECT_READINESS` "Live read
+  #1" and `BUILD_NOTES` §5.3 both closed; no live-area read owed.
+- **Stale-claim sweep for the v0.80 promotion.** Corrected the transport
+  authoring guide (retracting the 2026-07-23 "rename applies to both trees"
+  edit), `TRANSPORT_CSV_SPEC.md` (named a dict that no longer exists),
+  `TODO.md` (two closed asterisks; erratum owed to the transport team, whose
+  2026-07-21 handover told them to write `Blended Gasoline` on both trees), and
+  the residential authoring guide (v0.80 delta block: 9 deleted legacy branches,
+  the "parallel trees" era over, `Projections` 360→521 branches / 15→13 end
+  uses, device-stock panel hosting in 3 scenarios not 7, §6.3's double-count
+  question **resolved by deletion** — do not re-raise it with the team; hygiene
+  #5 is still live).
+
+### Fixed — payload
+
+- **`transport_delta_20260723.csv`: 160 of 291 rows corrected**
+  `Key\TransportDataStock\Vehicles_Sales_Share\{Bus,Motorcycle,PassengerCar,
+  Truck}\Blended Gasoline` → `…\Gasoline` (40 per vehicle class). Original
+  kept as `*.bak_pre_gasoline_fix_20260723`; rationale in
+  `GASOLINE_BRANCH_FIX_NOTES_20260723.md`. Demand-side `Blended Gasoline`
+  rows deliberately untouched. All three transport payloads now pre-flight
+  clean against v0.80 Transport + real v0.80 Keys.
+- **Transport now carries two emission mechanisms.** On the 127 new leaves
+  `Avg Environmental Loading` is 0 while `New Device Environmental Loading`
+  holds the factors; pre-existing fuel branches still emit via `Avg`. Which one
+  the calc consumes is not determinable offline — flagged in §9.0.
+- **`inject/transport/build_canonical.py`: the gasoline-split defect fixed at
+  the source, not just in the payload.** The adapter still emitted
+  `Blended Gasoline` on the Key side, so re-running it would have regenerated
+  160 broken `Key\…\Blended Gasoline` rows (blind mode HANGS on a non-existent
+  FullName, §11.1/§A.20). `FUEL_TYPE_MAP` → `FUEL_TYPE_MAP_KA` (bare
+  `Gasoline`) plus a derived `FUEL_TYPE_MAP_DEMAND` (`Blended Gasoline`) for
+  future Demand-side families; `KA_SALES_SHARE_FUELS_PER_VEHICLE` switched to
+  bare `Gasoline` to match. **Both edits are atomic** — the map alone would make
+  the availability filter drop all 160 gasoline sales-share rows with a WARN and
+  write a silently short canonical. `DEMAND_AVAILABLE_FUELS_PER_VEHICLE`
+  deliberately untouched. Adapter **not re-run** (delta doctrine, §4); staged
+  payloads are hand-verified correct.
+- **`commercial_canonical_20260722.csv`: 756 → 626 rows.** Removed the 120
+  `route_C_numeric_ratio` rows (`0.55/0.70/0.90 * Current Stock_Average:Final
+  Energy Intensity[kWh]` on the AC tiers `Best Practice` / `Efficient` /
+  `Current Sales_Average`) — **v0.80 has already re-pointed `Final Energy
+  Intensity` at commercial's own sibling `!EER`**, so pushing them would have
+  overwritten correct canon with a materially wrong static approximation:
+  canon-implied ratios are `Current Sales_Average` exactly **0.70** everywhere
+  (algebraic inverse of `Stock !EER = 0.7 × Sales !EER`) vs staged 0.90 (+29%),
+  `Efficient` 0.43–0.65 vs 0.70, `Best Practice` 0.24–0.43 vs 0.55 (+50–130%,
+  erasing roughly half the best-practice efficiency gain) — and the statics were
+  region-flat, discarding real per-country EER spread. Also removed the 10
+  `Carbon Neutrality_ Net Zero Scenario` rows (Water Heating\Solar Heating
+  Activity Level), each verified byte-identical to its Regional Aspiration twin,
+  under the BAS/ATS/RAS scope ruling. Backup
+  `*.bak_pre_v080_eer_relink_and_cnz_drop`.
+
+## [Unreleased] — aeo9 v0.72 demand harvest (2026-07-23)
+
+### Validated against aeo9 v0.72
+
+- **v0.72 demand results tidied** into `result/20260724/` from
+  `mailbox/20260724/v_0.72 Demand Result.xlsx` — supersedes v0.71 as the latest
+  demand harvest. 3 scenarios × 10 AMS × **every year 2005–2060** (v0.71 carried
+  milestone years only), native unit **Billion Gigajoules** (v0.71: Million
+  Gigajoules). Leaf sums reconcile exactly (< 1e-6 EJ) against each sheet's own
+  `Total` row for all 3 scenarios × 4 sampled years; every leaf classifies to a
+  carrier confidently. Pipeline `result/20260724/_tidy_results_v072.py` exits
+  non-zero on any reconciliation failure or unclassified leaf.
+
+### Documented
+
+- **LEAP result exports can arrive in two shapes in the same workbook, and the
+  flat shape truncates branch paths at 100 characters.** In the v0.72 drop,
+  `Demand BAS`/`Demand ATS` were exported as flat full paths while `Demand RAS`
+  was an indented tree — and the flat sheets clipped 12 deep Industry leaf
+  labels each (`...Liquid FF\Residual Fue`). Values are unaffected; the defect
+  is in the label, so it silently corrupts any join or `groupby` on branch path.
+  Repaired by re-truncating the RAS roster to build the lookup key, which also
+  catches the 99-char case where char 100 was a space. Recorded in
+  `result/20260724/README_v0.72_results.md` + `memory/reference_leap_export_
+  shape_and_truncation.md`. **Not yet hoisted into CLAUDE.md §11** — that edit
+  needs the user's go-ahead per §A.8.
+- **Reporting depth can differ per scenario sheet, leaving fuel unattributed.**
+  Three Industry routes (`BOF\BF`, `EAF\DRI`, `Cement Kiln Conventional\Heat`)
+  are single leaves in BAS/ATS but fuel-split in RAS, so 31% of BAS and 30% of
+  ATS 2060 Industry demand carries no fuel — `by_fuel` is not like-for-like
+  across scenarios inside Industry. Surfaced in the data as `carrier='mixed'` /
+  `fuel_resolved=False` rather than guessed at. Cause is a hypothesis (collapsed
+  export tree), not verified — the README records the re-export that would
+  settle it.
+
+## [Unreleased] — bioenergy blend-ceiling adjudication: our-side corrections (2026-07-22)
+
+### Added
+
+- **`MaxShareProduction` is now a first-class NEMO parameter**
+  (`nemo_read/schema.py`) with dims `(r, t, f, y)` mirroring
+  `MinShareProduction`, plus its `LEAP_SOURCE_MAP` entry. It was absent, so
+  every path that keys off `PARAMETERS` — validation, inspection, the static
+  detectors — was blind to the blend **ceiling** while seeing the blend
+  **floor**. The LEAP-side name is recorded as `Maximum_Share_of_Production`
+  (two underscores, no spaces, unit `%`), deliberately unlike its floor
+  sibling `Minimum Share of Production` (spaces, unit `Percent`); a
+  well-meaning name normalisation between the two is a `branch_not_found`.
+- **Static detector for share-bound inversion**
+  (`_check_min_vs_max_share_production` in `nemo_read/infeasibility.py`).
+  Flags every `(r, t, f, y)` where `MinShareProduction > MaxShareProduction` —
+  a technology with no admissible share, i.e. an infeasible production block.
+  The pre-existing `_BOUND_PAIRS` machinery structurally could not cover this:
+  those pairs join on `(r, t, y)` or `(r, s, y)`, and the share parameters
+  carry a fuel dimension as well. **Why now:** the 2026-07-21 bioenergy
+  blend-ceiling payload authored a ceiling *below* the live canon mandate
+  floor on the same Blending process, and Stage 1 returned CLEAN — the whole
+  failure class was invisible. Per §A.17, the rule now has a tripwire rather
+  than prose. Regression tests in `tests/test_infeasibility.py` fail without
+  the detector and pass with it (plus a negative control so the check cannot
+  degenerate into flagging every co-authored share pair, and a schema test
+  pinning the two-underscore LEAP name).
+
+### Fixed
+
+- **`inject/bioenergy/CSV_AUTHORING_GUIDE.md` §11.2 and §12.2 stated a
+  falsehood that was actively misleading the sector team.** Both sections
+  told authors that unit mismatches "don't need author action — the audit
+  pipeline applies the conversion factor automatically at inject time via
+  `nemo_read.unit_conversions._REGISTRY`". Nothing on the inject path
+  consults that registry: `grep -rn unit_conversions --include=*.py inject/
+  nemo_read/inject_base.py` returns zero hits. The adapter is a pass-through
+  and the injector never reads the `unit` column at all — so a value authored
+  in a non-canon unit commits **silently**, at the wrong magnitude, with no
+  error. **This note is what caused the bioenergy team to re-author 15 unit
+  rows on a false premise.** Both sections now state the pass-through
+  behaviour plainly and put the author rule first (supply canon-native
+  units). They also document the one path that *does* convert
+  (`run_workflow.py` steps 3-4 → `canonical_leap_native.csv`) together with
+  what it actually costs: it is opt-in, it needs a fresh live-LEAP units
+  probe to be keyed off current units, and it writes a *different* file that
+  `inject_to_leap.py` then prefers — so which file ships depends on which is
+  newer.
+
+### Documented
+
+- **Erratum appended to `outbox/20260721/bioenergy_ruling/RULINGS_20260721.md`
+  correcting our own §6 structural-create instruction.** We told the modelling
+  lead to create `Resources\Primary\Rice Straw` and `\Used Cooking Oil` as
+  mirrors of `Bagasse`. Canon shows `Bagasse:Maximum Production` carries unit
+  `Terawatt-hour`, while the team's values for both branches are raw tonnes
+  (Myanmar Rice Straw `Interp(2025, 3.78759e+07, …)`) — the clone would have
+  landed 3.79e7 in a TWh field, silently, because the `unit` column is never
+  read at inject time. Corrected template is
+  `Resources\Primary\Palm Oil Mill Effluent`: byte-identical 15-variable panel
+  to `Bagasse` (so the shape the ruling asked for is preserved exactly) but
+  `Maximum Production` in `Metric Tonne`. The 5 crop branches are explicitly
+  *not* the template despite sharing that unit — they additionally carry
+  `Area Harvested` + `Crop Yield` and canon derives their cap from those, which
+  a residue/by-product branch has no author for. Written as a dated erratum
+  rather than a silent rewrite, so the record of what was issued survives.
+
 ## [Unreleased] — engine hard-edit capture + §11.2b tripwire (2026-07-13)
 
 - **Captured the 2026-07-09 engine hard edits as deltas** (they existed only in

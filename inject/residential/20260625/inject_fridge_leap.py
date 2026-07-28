@@ -112,7 +112,32 @@ def compare_expressions(actual, expected):
     return "NORMALISED" if _strip(a) == _strip(e) else "FAIL"
 
 
+def _assert_leap_unlocked():
+    """Refuse to attach to LEAP while the user holds the .leap_lock interlock.
+
+    Inlined (no nemo_read import) to keep this script portable — same contract
+    as nemo_read.assert_leap_access_allowed.
+    """
+    import os
+    from pathlib import Path
+    env = os.environ.get("NEMO_READ_LEAP_LOCK", "").strip()
+    if env:
+        if env.lower() in {"1", "true", "yes", "on"}:
+            raise SystemExit("LEAP COM BLOCKED — $NEMO_READ_LEAP_LOCK is set.")
+        if Path(env).exists():
+            raise SystemExit(f"LEAP COM BLOCKED — lock file {env}")
+    here = Path(__file__).resolve()
+    for d in (here.parent, *here.parents):
+        lock = d / ".leap_lock"
+        if lock.exists():
+            raise SystemExit(
+                f"LEAP COM BLOCKED — lock file {lock}\n"
+                "The user is working in LEAP. Delete the lock only on their explicit say-so."
+            )
+
+
 def dispatch_leap():
+    _assert_leap_unlocked()
     if win32com is None:
         raise RuntimeError("pywin32 not installed. `pip install pywin32` and run "
                            "on the Windows machine with LEAP open.")

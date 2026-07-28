@@ -1,0 +1,43 @@
+==============================================================================
+bioenergy delta 20260722b -- build
+==============================================================================
+
+[B2] canon refinery `Maximum Capacity` rows in Add() form : 154
+[B2] negative Add() arguments found                       : 0
+[B2] PASS -- cap-below-fleet is structurally unreachable; no Max(Exogenous Capacity, N) guard is needed or authored.
+
+[G1] blend FLOOR  `Minimum Share of Production`  rows: 20  (200 cells -> 20 Interp series)
+
+[G2] ceiling vs floor across 200 cells: > 162  ==38  <0
+[G2] blend CEILING `Maximum_Share_of_Production` rows: 19  (162 authored cells; 38 pinned cells NOT authored)
+[G2]   series fully pinned, nothing authored: Indonesia / Biodiesel (10/10 anchors pinned)
+
+[G3] refinery `Maximum Capacity` rows: 0
+[G3] The team shipped 80 `Maximum Capacity` rows in `bioenergy_leap_input.csv`, ALL in `Interp(2025, X, ...)` LEVEL form (zero `Add(`).
+[G3] REFUSED under B1. Canon authors this variable as `Add()` = cumulative additions layered on top of `Exogenous Capacity`. Injecting a level would scrap the standing fleet.
+[G3] Add()-preservation proof -- canon Indonesia FAME (RAS), untouched by this delta:
+[G3]   canon : Add(2025, 16, 2030, 7.5, 2035, 7.5, 2040, 7.5, 2045, 7.5, 2050, 7.5, 2055, 7.5, 2060, 4)
+[G3]   sum of Add() args = 65 Million GJ/Yr of ADDITIONS, on top of ~636.5 already standing.
+[G3]   team  : Interp(2025, 623.952, 2030, 916.4295, 2035, 1208.907, 2040, 1501.3845, 2045, 1793.862, 2050, 2086.3395, 2055, ...  <- LEVEL, refused
+
+[G4] build rate `Maximum Capacity Addition` rows: 70
+[G4] canon units confirmed byte-exact per process: ['Million Gigajoules/Year', 'Million Tonne Coal Equiv/Year']
+
+[G5] Philippines FAME `Exogenous Capacity` rows: 3 (one per in-scope scenario: RAS / ATS / BAS)
+[G5] canon carries the defective bare form in ALL 11 scenarios (incl. Current Accounts) -- CA is OUTSIDE this cycle's declared scenario set and is NOT touched. Flagged.
+[G5] sibling quoted (Thailand, RAS): Interp(2015, 2060, 2016, 2060, 2017, 2310, 2018, 2445, 2019, 2580, 2020, 2580, 2021, 2910, 2022,...
+
+[G6] additional canon-backed in-scope rows authored: 0  (see BUILD_NOTES S6 for the full inventory of what was deliberately left out and why)
+
+------------------------------------------------------------------------------
+[gate-local] no Unlimited / no semicolon / no comma-decimal / no numeric-first Max|Min / no CNZ / no non-canon branch / no Maximum Capacity  -- PASS
+
+==============================================================================
+TOTAL ROWS: 112   ->  C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\bioenergy\20260722b\bioenergy_delta_20260722b.csv
+  G1 floor              20
+  G2 ceiling            19
+  G3 refinery MaxCap     0   (refused, B1)
+  G4 build rate         70
+  G5 PH FAME ExoCap      3
+  G6 other               0
+==============================================================================

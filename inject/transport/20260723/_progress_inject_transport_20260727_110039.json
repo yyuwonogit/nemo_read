@@ -1,0 +1,28 @@
+{
+  "op": "inject_transport",
+  "started": "2026-07-27T11:00:39",
+  "progress_file": "C:\\Users\\ThinkPad\\Desktop\\Py YY\\NEMO_read\\inject\\transport\\20260723\\_progress_inject_transport_20260727_110039.json",
+  "current": {
+    "stage": "real_inject_done",
+    "area": "aeo9_v0.81",
+    "scenarios_total": 4,
+    "scenario": "Regional Aspiration Scenario",
+    "scenario_idx": "4/4",
+    "region": "Vietnam",
+    "region_idx": "10/10",
+    "rows_in_region": 4,
+    "rows_written": 48,
+    "row_in_region": "10/12",
+    "pushed": 52,
+    "failed": 0
+  },
+  "rows_total": 133,
+  "last_heartbeat": "11:12:11",
+  "finished": "2026-07-27T11:13:10",
+  "elapsed_seconds": 750.9,
+  "elapsed_human": "12m30s",
+  "summary": {
+    "any_failed": false,
+    "scenarios_processed": 4
+  }
+}

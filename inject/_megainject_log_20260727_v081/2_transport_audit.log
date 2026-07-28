@@ -1,0 +1,335 @@
+[HB-START op=inject_transport progress=inject\transport\20260721\_progress_inject_transport_20260727_102624.json]
+[transport] ActiveArea (locked): 'aeo9_v0.81'
+[transport] WARN: could not verify LEAP decimal separator regional (no decimal-bearing Interp found in sample). Proceeding; if decimal-bearing rows produce readback FAIL with comma-decimal evidence, abort and flip LEAP regional to period.
+[transport] Will process 4 scenario(s) in ONE COM session: ['Current Accounts', 'Baseline Simulation', 'AMS Target Scenario', 'Regional Aspiration Scenario']
+[HB t=10:26:37 stage=com_dispatched area=aeo9_v0.81 scenarios_total=4 elapsed=0m13s]
+
+[transport] ╔═══ SCENARIO: 'Current Accounts' ═══
+  ActiveScenario: 'Current Accounts'
+  scenario-column filter: 164 -> 71 rows (kept untagged + scenario='Current Accounts')
+  71 rows across 10 region group(s)
+
+[transport] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[transport] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (8 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel . 'Mileage Correction Factor' = 1
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Cambodia' (7 rows) ---
+[HB t=10:26:50 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Cambodia region_idx=2/10 rows_in_region=7 rows_written=8 elapsed=0m25s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Indonesia' (7 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Laos' (7 rows) ---
+[HB t=10:27:03 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Laos region_idx=4/10 rows_in_region=7 rows_written=22 elapsed=0m39s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Malaysia' (7 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Myanmar' (7 rows) ---
+[HB t=10:27:17 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Myanmar region_idx=6/10 rows_in_region=7 rows_written=36 elapsed=0m52s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Philippines' (7 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Singapore' (7 rows) ---
+[HB t=10:27:30 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Singapore region_idx=8/10 rows_in_region=7 rows_written=50 elapsed=1m06s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Thailand' (7 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Vietnam' (7 rows) ---
+[HB t=10:27:43 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Vietnam region_idx=10/10 rows_in_region=7 rows_written=64 elapsed=1m18s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Gasoline . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Electricity . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas . 'First Sales Year' = BaseYear
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  [real-inject] {'pushed': 71}
+
+[transport] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Cambodia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Indonesia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Laos|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Malaysia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Myanmar|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Philippines|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Singapore|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Thailand|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Vietnam|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=10:28:39 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Vietnam region_idx=10/10 rows_in_region=7 rows_written=64 pushed=71 failed=0 elapsed=2m15s]
+
+[transport] ╔═══ SCENARIO: 'Baseline Simulation' ═══
+  ActiveScenario: 'Baseline Simulation'
+  scenario-column filter: 164 -> 31 rows (kept untagged + scenario='Baseline Simulation')
+  31 rows across 10 region group(s)
+
+[transport] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[transport] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (4 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel . 'Mileage Correction Factor' = 1
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Cambodia' (3 rows) ---
+[HB t=10:28:51 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Cambodia region_idx=2/10 rows_in_region=3 rows_written=4 pushed=71 failed=0 elapsed=2m27s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Indonesia' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Laos' (3 rows) ---
+[HB t=10:29:04 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Laos region_idx=4/10 rows_in_region=3 rows_written=10 pushed=71 failed=0 elapsed=2m39s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Malaysia' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Myanmar' (3 rows) ---
+[HB t=10:29:16 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Myanmar region_idx=6/10 rows_in_region=3 rows_written=16 pushed=71 failed=0 elapsed=2m51s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Philippines' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Singapore' (3 rows) ---
+[HB t=10:29:27 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Singapore region_idx=8/10 rows_in_region=3 rows_written=22 pushed=71 failed=0 elapsed=3m03s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Thailand' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Vietnam' (3 rows) ---
+[HB t=10:29:39 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Vietnam region_idx=10/10 rows_in_region=3 rows_written=28 pushed=71 failed=0 elapsed=3m15s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  [real-inject] {'pushed': 31}
+
+[transport] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Cambodia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Indonesia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Laos|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Malaysia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Myanmar|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Philippines|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Singapore|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Thailand|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Vietnam|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=10:30:34 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Vietnam region_idx=10/10 rows_in_region=3 rows_written=28 pushed=31 failed=0 elapsed=4m10s]
+
+[transport] ╔═══ SCENARIO: 'AMS Target Scenario' ═══
+  ActiveScenario: 'AMS Target Scenario'
+  scenario-column filter: 164 -> 31 rows (kept untagged + scenario='AMS Target Scenario')
+  31 rows across 10 region group(s)
+
+[transport] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[transport] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (4 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel . 'Mileage Correction Factor' = 1
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Cambodia' (3 rows) ---
+[HB t=10:30:46 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Cambodia region_idx=2/10 rows_in_region=3 rows_written=4 pushed=31 failed=0 elapsed=4m22s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Indonesia' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Laos' (3 rows) ---
+[HB t=10:30:59 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Laos region_idx=4/10 rows_in_region=3 rows_written=10 pushed=31 failed=0 elapsed=4m34s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Malaysia' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Myanmar' (3 rows) ---
+[HB t=10:31:11 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Myanmar region_idx=6/10 rows_in_region=3 rows_written=16 pushed=31 failed=0 elapsed=4m47s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Philippines' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Singapore' (3 rows) ---
+[HB t=10:31:23 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Singapore region_idx=8/10 rows_in_region=3 rows_written=22 pushed=31 failed=0 elapsed=4m58s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Thailand' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Vietnam' (3 rows) ---
+[HB t=10:31:35 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Vietnam region_idx=10/10 rows_in_region=3 rows_written=28 pushed=31 failed=0 elapsed=5m11s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  [real-inject] {'pushed': 31}
+
+[transport] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Cambodia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Indonesia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Laos|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Malaysia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Myanmar|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Philippines|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Singapore|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Thailand|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Vietnam|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=10:32:34 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Vietnam region_idx=10/10 rows_in_region=3 rows_written=28 pushed=31 failed=0 elapsed=6m10s]
+
+[transport] ╔═══ SCENARIO: 'Regional Aspiration Scenario' ═══
+  ActiveScenario: 'Regional Aspiration Scenario'
+  scenario-column filter: 164 -> 31 rows (kept untagged + scenario='Regional Aspiration Scenario')
+  31 rows across 10 region group(s)
+
+[transport] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[transport] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (4 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\PassengerCar\Blended Diesel\Blended Diesel . 'Mileage Correction Factor' = 1
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Cambodia' (3 rows) ---
+[HB t=10:32:47 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Cambodia region_idx=2/10 rows_in_region=3 rows_written=4 pushed=31 failed=0 elapsed=6m23s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Indonesia' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Laos' (3 rows) ---
+[HB t=10:33:04 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Laos region_idx=4/10 rows_in_region=3 rows_written=10 pushed=31 failed=0 elapsed=6m40s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Malaysia' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Myanmar' (3 rows) ---
+[HB t=10:33:18 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Myanmar region_idx=6/10 rows_in_region=3 rows_written=16 pushed=31 failed=0 elapsed=6m53s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Philippines' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Singapore' (3 rows) ---
+[HB t=10:33:30 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Singapore region_idx=8/10 rows_in_region=3 rows_written=22 pushed=31 failed=0 elapsed=7m06s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Thailand' (3 rows) ---
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  --- region 'Vietnam' (3 rows) ---
+[HB t=10:33:43 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Vietnam region_idx=10/10 rows_in_region=3 rows_written=28 pushed=31 failed=0 elapsed=7m18s]
+     [OK]  Demand\Transport\Road\Truck\Natural Gas\Natural Gas . 'Fuel Economy' = 5
+     [OK]  Demand\Transport\Road\PassengerCar\Natural Gas\Natural Gas . 'Fuel Economy' = 26
+     [OK]  Demand\Transport\Road\Truck\Natural Gas . 'Sales' = Key\TransportDataStock\Vehicles_Sales_Share\Truck\Natural...
+  [real-inject] {'pushed': 31}
+
+[transport] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Cambodia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Indonesia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Laos|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Malaysia|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Myanmar|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Philippines|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Singapore|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Thailand|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  [EXACT] Vietnam|Fuel Economy on Demand\Transport\Road\Truck\Natural Gas\Natural Gas
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+
+[transport] === ALL SCENARIOS DONE ===
+[HB-DONE op=inject_transport elapsed=8m18s rows=64 progress=inject\transport\20260721\_progress_inject_transport_20260727_102624.json]

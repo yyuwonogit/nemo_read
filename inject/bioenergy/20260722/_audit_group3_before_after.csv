@@ -1,0 +1,61 @@
+ams,fuel,scenario,anchor_2025,provenance,before,after,action
+Brunei,Biodiesel,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Brunei,Biodiesel,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Brunei,Biodiesel,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Cambodia,Biodiesel,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Cambodia,Biodiesel,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Cambodia,Biodiesel,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Indonesia,Biodiesel,Baseline Simulation,34.1,"observed achieved 34.1% (2025, High confidence)",0,"InterpFSY(2025, 34.1)",AUTHORED
+Indonesia,Biodiesel,AMS Target Scenario,34.1,"observed achieved 34.1% (2025, High confidence)","InterpFSY(2023, 35, 2025, 40, 2050, 50)","InterpFSY(2023, 35, 2025, 34.1, 2050, 50)",AUTHORED
+Indonesia,Biodiesel,Regional Aspiration Scenario,34.1,"observed achieved 34.1% (2025, High confidence)","InterpFSY(2023, 35, 2025, 40, 2050, 50)","InterpFSY(2023, 35, 2025, 34.1, 2050, 50)",AUTHORED
+Laos,Biodiesel,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Laos,Biodiesel,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,"InterpFSY(2030, 10)","InterpFSY(2025, 0, 2030, 10)",AUTHORED
+Laos,Biodiesel,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,"InterpFSY(2030, 10)","InterpFSY(2025, 0, 2030, 10)",AUTHORED
+Malaysia,Biodiesel,Baseline Simulation,12,"observed achieved 12.0% (2026, Low confidence)",0,"InterpFSY(2025, 12)",AUTHORED
+Malaysia,Biodiesel,AMS Target Scenario,12,"observed achieved 12.0% (2026, Low confidence)","InterpFSY(2030, 30)","InterpFSY(2025, 12, 2030, 30)",AUTHORED
+Malaysia,Biodiesel,Regional Aspiration Scenario,12,"observed achieved 12.0% (2026, Low confidence)","InterpFSY(2030, 30)","InterpFSY(2025, 12, 2030, 30)",AUTHORED
+Myanmar,Biodiesel,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Myanmar,Biodiesel,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Myanmar,Biodiesel,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Philippines,Biodiesel,Baseline Simulation,3.3,"observed achieved 3.3% (2025, High confidence)","InterpFSY(2025, 2.5%)","InterpFSY(2025, 3.3)",AUTHORED
+Philippines,Biodiesel,AMS Target Scenario,3.3,"observed achieved 3.3% (2025, High confidence)","InterpFSY(2024, 3, 2025, 4, 2026, 5)","InterpFSY(2024, 3, 2025, 3.3, 2026, 5)",AUTHORED
+Philippines,Biodiesel,Regional Aspiration Scenario,3.3,"observed achieved 3.3% (2025, High confidence)","InterpFSY(2024, 3, 2025, 4, 2026, 5)","InterpFSY(2024, 3, 2025, 3.3, 2026, 5)",AUTHORED
+Singapore,Biodiesel,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Singapore,Biodiesel,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Singapore,Biodiesel,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Thailand,Biodiesel,Baseline Simulation,8.2,"observed achieved 6.8% (2024, Medium-High confidence)",0,"InterpFSY(2025, 8.2)",AUTHORED
+Thailand,Biodiesel,AMS Target Scenario,8.2,"observed achieved 6.8% (2024, Medium-High confidence)","InterpFSY(2037, 25)","InterpFSY(2025, 8.2, 2037, 25)",AUTHORED
+Thailand,Biodiesel,Regional Aspiration Scenario,8.2,"observed achieved 6.8% (2024, Medium-High confidence)","InterpFSY(2037, 25)","InterpFSY(2025, 8.2, 2037, 25)",AUTHORED
+Vietnam,Biodiesel,Baseline Simulation,0,"observed achieved 0.0% (2024, High confidence)",0,0,NO-OP (skipped)
+Vietnam,Biodiesel,AMS Target Scenario,0,"observed achieved 0.0% (2024, High confidence)","Interp(2023,0, 2050, 20)","Interp(2023, 0, 2025, 0, 2050, 20)",AUTHORED
+Vietnam,Biodiesel,Regional Aspiration Scenario,0,"observed achieved 0.0% (2024, High confidence)","Interp(2023,0, 2050, 20)","Interp(2023, 0, 2025, 0, 2050, 20)",AUTHORED
+Brunei,Bioethanol,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Brunei,Bioethanol,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Brunei,Bioethanol,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Cambodia,Bioethanol,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Cambodia,Bioethanol,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Cambodia,Bioethanol,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Indonesia,Bioethanol,Baseline Simulation,0,"observed achieved 0.0% (2025, High confidence)",0,0,NO-OP (skipped)
+Indonesia,Bioethanol,AMS Target Scenario,0,"observed achieved 0.0% (2025, High confidence)","InterpFSY(2025, 20, 2050, 50)",(owned by GROUP 2),DEFERRED-TO-G2
+Indonesia,Bioethanol,Regional Aspiration Scenario,0,"observed achieved 0.0% (2025, High confidence)","InterpFSY(2025, 20, 2050, 50)",(owned by GROUP 2),DEFERRED-TO-G2
+Laos,Bioethanol,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Laos,Bioethanol,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,"InterpFSY(2030, 10)","InterpFSY(2025, 0, 2030, 10)",AUTHORED
+Laos,Bioethanol,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,"InterpFSY(2030, 10)","InterpFSY(2025, 0, 2030, 10)",AUTHORED
+Malaysia,Bioethanol,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Malaysia,Bioethanol,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Malaysia,Bioethanol,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Myanmar,Bioethanol,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Myanmar,Bioethanol,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Myanmar,Bioethanol,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Philippines,Bioethanol,Baseline Simulation,10.1,"observed achieved 10.1% (2025, Medium-High confidence)",0,"InterpFSY(2025, 10.1)",AUTHORED
+Philippines,Bioethanol,AMS Target Scenario,10.1,"observed achieved 10.1% (2025, Medium-High confidence)","InterpFSY(2026, 10)","InterpFSY(2025, 10.1, 2026, 10)",AUTHORED
+Philippines,Bioethanol,Regional Aspiration Scenario,10.1,"observed achieved 10.1% (2025, Medium-High confidence)","InterpFSY(2026, 10)","InterpFSY(2025, 10.1, 2026, 10)",AUTHORED
+Singapore,Bioethanol,Baseline Simulation,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Singapore,Bioethanol,AMS Target Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Singapore,Bioethanol,Regional Aspiration Scenario,0,NO observation in blend_observed_panel.csv -> 0.0,0,0,NO-OP (skipped)
+Thailand,Bioethanol,Baseline Simulation,13.7,"observed achieved 11.3% (2024, Medium confidence)",0,"InterpFSY(2025, 13.7)",AUTHORED
+Thailand,Bioethanol,AMS Target Scenario,13.7,"observed achieved 11.3% (2024, Medium confidence)","InterpFSY(2050, 20)","InterpFSY(2025, 13.7, 2050, 20)",AUTHORED
+Thailand,Bioethanol,Regional Aspiration Scenario,13.7,"observed achieved 11.3% (2024, Medium confidence)","InterpFSY(2050, 20)","InterpFSY(2025, 13.7, 2050, 20)",AUTHORED
+Vietnam,Bioethanol,Baseline Simulation,1.5,"observed achieved 1.5% (2024, Low-Medium confidence)",0,"InterpFSY(2025, 1.5)",AUTHORED
+Vietnam,Bioethanol,AMS Target Scenario,1.5,"observed achieved 1.5% (2024, Low-Medium confidence)","Interp(2023,0, 2050, 20)","Interp(2023, 0, 2025, 1.5, 2050, 20)",AUTHORED
+Vietnam,Bioethanol,Regional Aspiration Scenario,1.5,"observed achieved 1.5% (2024, Low-Medium confidence)","Interp(2023,0, 2050, 20)","Interp(2023, 0, 2025, 1.5, 2050, 20)",AUTHORED

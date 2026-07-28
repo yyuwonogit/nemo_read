@@ -1,18 +1,83 @@
-# LEAP Structure Anatomy — `aeo9_v0.67_w_results`
+# LEAP Structure Anatomy — `aeo9_v0.80`
 
-> **What this is.** A structural digest of the seven export workbooks in this
-> folder — `LEAP Input {Commercial, Transport, Residential, Industry}.xlsx`
-> (the `Demand\` subtrees), `LEAP Input Keys.xlsx` (the `Key\` assumption
-> tree), `LEAP Input Resources.xlsx` (the `Resources\` supply tree), and
-> `LEAP Input Transformation.xlsx` (the `Transformation\` conversion tree —
-> power generation, refining, biofuel/clean-fuel production, blending) — all
-> exported from LEAP area **`aeo9_v0.67_w_results`**. Generated 2026-07-02/04
-> by converting all 2,435,820 export rows to flat CSVs offline and analysing
-> them (no LEAP COM was touched). Every quantitative claim was produced by a
-> query against the export data and independently re-verified by a second
-> pass; claims that could not be verified are marked as inference. Full
-> branch trees (one indented line per branch, with the variables attached to
-> it) are in [trees/](trees/).
+> ## ✅ Version status (updated 2026-07-23) — all seven trees are v0.80
+>
+> Migration to `aeo9_v0.80` is **complete**: every tree was re-exported,
+> verified complete, and promoted on 2026-07-23. Each chapter carries an
+> `X.0 v0.80 delta` section stating what changed from the v0.67 baseline;
+> the prose below each delta is the **v0.67 baseline text**, retained because
+> it remains accurate wherever the delta says "structure unchanged". **When
+> quoting a count, take it from the delta section or the table below, not
+> from the baseline prose.**
+>
+> | Tree | Version | Chapter | Status |
+> |---|---|---|---|
+> | Transport | **v0.80** | §9 | promoted 2026-07-23 — see §9.0 delta |
+> | Residential | **v0.80** | §10 | promoted 2026-07-23 — see §10.0 delta |
+> | Industry | **v0.80** | §11 | promoted 2026-07-23 — see §11.0 delta |
+> | **Commercial** | **v0.80** | §8 | promoted 2026-07-23 — see §8.0 delta |
+> | **`Key\`** | **v0.80** | §12 | promoted 2026-07-23 — **structure unchanged**, see §12.0 |
+> | **`Resources\`** | **v0.80** | §13 | promoted 2026-07-23 — **structure unchanged**, see §13.0 |
+> | **`Transformation\`** | **v0.80** | §14 | promoted 2026-07-23 from a **3-export merge**, see §14.0 |
+> | **Agriculture and Others** | **v0.80** | §16 | added to canon 2026-07-23 — new tree |
+> | **International Transport** | **v0.80** | §17 | added to canon 2026-07-23 — new tree |
+> | **`Effects\`** | **v0.80** | §18 | added to canon 2026-07-23 — new tree |
+>
+> **Area-wide in v0.80, applies to every tree once re-exported:**
+> 1. **Scenario roster 11 → 6.** Dropped: `LCO backup`, `RE LTRM ASEAN Policy
+>    Aligned`, `RE LTRM ASEAN RE Coupling`, `RE LTRM ASEAN Shared Energy
+>    Resources`, `Regional Aspiration Scenario test`. The surviving six keep
+>    their original IDs (1, 11, 12, 18, 20, 25). User directive 2026-07-23:
+>    *"what matters for us still CA BAS ATS RAS."* Every §2 bloc-structure
+>    claim about the dropped five is now historical.
+> 2. **`ACHH` added** (units `AC/hh`), pairing with the existing `RefHH`
+>    (`Ref/hh`) on the same branches. Present in every **Demand** tree —
+>    Commercial, Transport, Residential, Industry, Agriculture and Others,
+>    International Transport. **Not** in `Key\`, `Resources\`,
+>    `Transformation\` or `Effects\`: it is a Demand-tree variable only.
+>
+> **`Key\` uses `Gasoline`; the Demand tree uses `Blended Gasoline`. Both are
+> correct — do not "harmonise" them.** Verified against the real v0.80 Keys
+> export (2026-07-23): all 10 gasoline nodes in the Key tree are bare
+> `Gasoline` —
+> `Key\TransportDataStock\{Vehicle_Stock_Share,Vehicles_Sales_Share}\{Bus,
+> Motorcycle,PassengerCar,Truck}\Gasoline`, plus `Key\Cal\Transport\Gasoline`
+> and `Key\Cal\Industry\Gasoline`. Meanwhile `Demand\Transport\Road\<Veh>\`
+> carries **`Blended Gasoline`**. The transport `Sales`/`Stock` expressions
+> reference `Key\…\Gasoline` and resolve correctly — **the area calculates
+> fine in v0.80** (user, 2026-07-23), which is the proof the split naming is
+> intentional and coherent. `Blended Diesel` is spelled the same on both
+> sides; only gasoline diverges.
+>
+> **Burn note.** An earlier draft of this block asserted the Key tree had been
+> renamed to `Blended Gasoline`. That was wrong — it came from a verbal note
+> rather than an export, and it caused a real inject payload
+> (`transport_delta_20260723.csv`, 160 rows) to be cleared as valid when its
+> `Key\…\Blended Gasoline` targets do not exist. Corrected once the real Keys
+> export landed. **Never patch canon from a verbal description of a rename;
+> wait for the export.**
+
+> **What this is.** A structural digest of the ten export workbooks in this
+> folder — `LEAP Input {Commercial, Transport, Residential, Industry,
+> Agri and Others, Intl Transport}.xlsx` (the `Demand\` subtrees),
+> `LEAP Input Keys.xlsx` (the `Key\` assumption tree),
+> `LEAP Input Resources.xlsx` (the `Resources\` supply tree),
+> `LEAP Input Effects.xlsx` (the `Effects\` pollutant/constraint tree), and
+> `LEAP Input Transformation{, Indonesia, Malaysia}.xlsx` (the
+> `Transformation\` conversion tree — power generation, refining,
+> biofuel/clean-fuel production, blending; **three exports, merged**).
+> The v0.67 baseline was generated 2026-07-02/04 by converting all 2,435,820
+> export rows to flat CSVs offline and analysing them (no LEAP COM was
+> touched); every quantitative claim was produced by a query against the
+> export data and independently re-verified by a second pass, and claims that
+> could not be verified are marked as inference. The 2026-07-23 v0.80
+> promotion used the same offline pipeline
+> ([tools/digest_leap_structure.py](tools/digest_leap_structure.py)), with
+> each tree's completeness verified before promotion (see
+> `reference_truncated_leap_export_detection` — a cut-short export is still a
+> valid `.xlsx`). Superseded v0.67 workbooks are kept alongside as
+> `LEAP Input <Tree> v0.67.xlsx`. Full branch trees (one indented line per
+> branch, with the variables attached to it) are in [trees/](trees/).
 >
 > **Why it matters for this repo.** These are the same `Demand\` (and, via
 > expression references, `Key\`) branches that CanonicalInjector targets —
@@ -27,24 +92,42 @@
 > version and scenario. A future export whose *structure* deviates is an
 > anomaly to flag, not a silent re-derivation.
 
-Sector sizes at a glance:
+Sector sizes at a glance (**bold = v0.80**, verified complete 2026-07-23;
+plain = v0.67, awaiting re-export):
 
-| Export | Rows | Branches | Max depth | Variables | Scenarios | Regions |
-|---|---|---|---|---|---|---|
-| Commercial | 89,940 | 426 | 8 | 13 | 11 | 12 |
-| Transport | 60,096 | 165 | 6 | 24 | 11 | 12 |
-| Residential | 146,544 | 530 | 7 | 35 | 11 | 12 |
-| Industry | 1,008,012 | 5,859 | 10 | 10 | 11 | 12 |
-| Keys (`Key\`) | 440,220 | 1,064 | 8 | 26 | 11 | 12 |
-| Resources | 113,760 | 62 | 3 | 20 | 11 | 12 |
-| Transformation | 577,248 | 1,593 | 7 | 80 | 11 | 12 |
+| Export | Ver | Rows | Branches | Max depth | Variables | Scenarios | Regions |
+|---|---|---|---|---|---|---|---|
+| **Commercial** | **0.80** | **54,252** | **426** | **8** | **15** | **6** | **12** |
+| **Transport** | **0.80** | **55,296** | **292** | **7** | **26** | **6** | **12** |
+| **Residential** | **0.80** | **82,212** | **521** | **7** | **34** | **6** | **12** |
+| **Industry** | **0.80** | **593,172** | **5,859** | **10** | **11** | **6** | **12** |
+| **Keys (`Key\`)** | **0.80** | **240,120** | **1,064** | **8** | **26** | **6** | **12** |
+| **Resources** | **0.80** | **62,100** | **62** | **3** | **20** | **6** | **12** |
+| **Transformation** | **0.80** | **—** | **2,933** | **7** | **83** | **6** | **12** |
+| **Agriculture and Others** | **0.80** | **15,336** | **153** | **4** | **10** | **6** | **12** |
+| **International Transport** | **0.80** | **13,152** | **110** | **5** | **13** | **6** | **12** |
+| **Effects (`Effects\`)** | **0.80** | **2,760** | **11** | **2** | **4** | **6** | **12** |
+
+Transformation has no single row count — it is a 3-export merge (Brunei-context
+whole tree 239,988 rows + Indonesia CEG 24,216 + Malaysia CEG 17,980); the
+**2,933** figure is the merged branch roster (§14.0).
+
+v0.67 figures for the six promoted trees, for diffing: Commercial 89,940
+rows / 426 branches / depth 8 / 13 vars; Transport 60,096 / 165 / 6 / 24;
+Residential 146,544 / 530 / 7 / 35; Industry 1,008,012 / 5,859 / 10 / 10;
+Keys 440,220 / 1,064 / 8 / 26; Resources 113,760 / 62 / 3 / 20 — all at 11
+scenarios.
 
 One row = one (branch, variable, scenario, region). The row space is sparse —
 each branch carries only its own variable set (commercial has 695
 (branch, variable) combos, not 426×13) — but every existing combo is
-materialised for all 11 scenarios × 12 regions, so most rows are 11
-near-duplicates: LEAP lists inherited (not re-authored) expressions under
-every scenario.
+materialised for all scenarios × 12 regions, so most rows are near-duplicates:
+LEAP lists inherited (not re-authored) expressions under every scenario. Note
+the multiplier changed with the roster: a v0.67 row block is 11 deep, a v0.80
+block is 6. **Row-count drops between v0.67 and v0.80 are therefore expected
+and are NOT evidence of missing data** — verify completeness per branch
+(every branch's row count must equal `scenarios × regions × its variables`),
+never by comparing totals.
 
 ---
 
@@ -72,6 +155,19 @@ four files:
 ---
 
 ## 2. Scenario roster and bloc structure
+
+> **v0.80 (2026-07-23): the roster is now 6, not 11.** Surviving, with
+> original IDs: `1 Current Accounts`, `11 Set up`,
+> `12 Carbon Neutrality_ Net Zero Scenario`, `18 Baseline Simulation`,
+> `20 AMS Target Scenario`, `25 Regional Aspiration Scenario`. **Deleted:**
+> `26 LCO backup`, `27/28/29 RE LTRM ASEAN Policy Aligned / RE Coupling /
+> Shared Energy Resources`, `30 Regional Aspiration Scenario test`.
+> Verified identical in the Transport, Residential and Industry v0.80
+> exports. The table and bloc analysis below describe **v0.67** and are kept
+> as the historical record — every claim about the five deleted scenarios
+> (the RE-LTRM triplet collapse, the LCO-backup 273-cell Key divergence, the
+> `RAS test` frozen-snapshot behaviour) now applies only to v0.67 archives.
+> Live v0.80 work is scoped to **CA / BAS / ATS / RAS** (user, 2026-07-23).
 
 Identical IDs and names in all four sectors (verified by ID→name map
 comparison):
@@ -110,8 +206,27 @@ depending on sector it has 4–7.
 
 ### 2.1 Scenario-scoped rows (row-count fingerprints)
 
+> **v0.80 fingerprints** for the three promoted trees (the mechanism is
+> unchanged — CA still carries the calibration extras; only the multiplier
+> and roster moved):
+>
+> | Sector | CA rows | Other scenarios | Note |
+> |---|---|---|---|
+> | Transport | 9,576 | 9,144 | CA extra = 432 (`Stock` 16 + `First Sales Year` 16 + `Share_FossilFuels` 4 combos × 12 regions) — same combos as v0.67 |
+> | Industry | 99,132 | 98,808 | CA extra = 324 (`UnscaledFuelShare`) — unchanged from v0.67 |
+> | Residential | 12,720 | 12,084 **or** 15,108 | still a three-way split; the device-stock panel now hosts in **3** scenarios (Set up, CNZ, RAS), not 7 — the other four hosts were deleted with the roster |
+>
+> **Residential device-stock inject scope changed.** In v0.67 the
+> `Air Conditioning_`/`Refrigeration_` economics panel (`Capital Cost`,
+> `Lifetime`, `Exogenous/Minimum/Maximum Devices`, `Minimum Share`, …) existed
+> in 7 scenarios; in v0.80 it exists in **3** — `Set up`, `Carbon Neutrality`,
+> `Regional Aspiration Scenario`. It still does **not** exist under CA,
+> Baseline Simulation, or AMS Target. An inject targeting those variables
+> lands only in the 3 hosting scenarios; **of the CA/BAS/ATS/RAS working set,
+> only RAS hosts them.**
+
 CA carries extra rows in every sector, and they are exactly the
-calibration/base-year variables:
+calibration/base-year variables (v0.67 figures):
 
 | Sector | CA rows | Other scenarios | CA-only content |
 |---|---|---|---|
@@ -369,8 +484,38 @@ any emissions accounting that uses this export.
 
 ## 8. Commercial
 
-89,940 rows across 426 branches / 13 variables (695 (branch,variable)
-combos). Activity driver: gross floor area.
+### 8.0 v0.80 delta (promoted 2026-07-23) — STRUCTURE IDENTICAL
+
+**v0.80: 54,252 rows / 426 branches / 15 variables / depth 8 / 6 scenarios.**
+The branch roster is **set-identical to v0.67** — 426 both sides, 0 added,
+0 removed — with **zero unit drift** on all 13 common variables and unchanged
+max depth. Everything in §8.1+ stands as written.
+
+**Two variables added, no removals:**
+1. **`ACHH`** on 67 branches (area-wide v0.80 variable, pairs with `RefHH`).
+2. **`!EER`** on 4 branches — the commercial AC efficiency tiers
+   `Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\
+   {Best Practice, Current Sales_Average, Current Stock_Average, Efficient}`,
+   units `Btu/Wh`. Expressions are real efficiency data, incl. a cross-tier
+   reference (`0.7*Current Sales_Average:!EER[Btu/Wh]`) and a cited ENERGY
+   STAR 2023 figure.
+
+> **`!EER` moved sectors, it did not disappear.** v0.80 *removes* `!EER` from
+> Residential (it lived only on the 4 deleted legacy `Air Conditioning`
+> children, §10.0) and *adds* it to Commercial on that sector's own 4 AC
+> tiers. Reading either sector's diff alone suggests a variable was dropped
+> or invented; across the pair it is a relocation. Note the commercial tier
+> names use spaces (`Current Sales_Average`) where the retired residential
+> ones used underscores (`Current_Sales Average`) — they are different
+> branches, not a rename.
+
+**Row reconciliation** (per-scenario 8,160 → 9,012, i.e. +852):
+`ACHH 67 branches × 12 regions = 804` plus `!EER 4 × 12 = 48`. Exact.
+
+---
+
+**v0.67 baseline (below):** 89,940 rows across 426 branches / 13 variables
+(695 (branch,variable) combos). Activity driver: gross floor area.
 
 ### 8.1 Tree shape
 
@@ -478,8 +623,61 @@ Uncalibrated Energy Intensity` has real sourced values only for Brunei
 
 ## 9. Transport
 
-60,096 rows across 165 branches / 24 variables (488 combos). The sector is
-methodologically split in two.
+### 9.0 v0.80 delta (promoted 2026-07-23) — PURELY ADDITIVE
+
+**v0.80: 55,296 rows / 292 branches / 26 variables / depth 7 / 6 scenarios.**
+Zero branches removed, zero variables removed, **zero unit drift** on all 24
+common variables. The v0.67 description in §9.1+ remains accurate for
+everything it covers; the additions are:
+
+1. **+127 pollutant leaves at the new depth 7**, under
+   `Road\<Veh>\<Fuel>\<Fuel>\<Pollutant>` — the combos that previously had
+   none: Blended Diesel × {Bus, PassengerCar, Truck} (13 pollutants each),
+   Blended Gasoline × {Bus, Motorcyle, PassengerCar, Truck} (13 each),
+   Natural Gas × {Bus, PassengerCar, Truck} (12 each — no
+   `Carbon Dioxide Biogenic`, correct for NG). 39 + 52 + 36 = 127.
+2. **+`New Device Environmental Loading`**, on exactly those 127 leaves.
+3. **+`ACHH`** on the 56 branches that already carried `RefHH` (area-wide,
+   see version-status block).
+
+**Blend-aware emissions (user: *"yes i fixed emission"*).** Six new cross-tree
+references, all into the Transformation blending tree — no references dropped:
+
+```
+Transformation\Gasoline Blending\Processes\{Ethanol,Gasoline}:{Minimum Share of Production, Process Share}
+Transformation\Diesel Blending\Processes\{Biodiesel,Diesel}:{Minimum Share of Production, Process Share}
+```
+
+They split fossil vs biogenic CO₂ by live blend share, e.g.
+`Carbon Dioxide = 74.1 * Transformation\Diesel Blending\Processes\Diesel:Process Share[%]…`
+against `Carbon Dioxide Biogenic = 74.1 * …\Biodiesel:Process Share…`.
+
+**Two emission mechanisms now coexist — unresolved.** On the 127 new leaves
+`Avg Environmental Loading` is `0` in all 9,144 rows while
+`New Device Environmental Loading` carries the factors; on the pre-existing
+fuel branches emissions still come *via* `Avg Environmental Loading` (49
+distinct values). Whether the calc consumes the new-device variable and
+derives the stock average, or silently reads the zeroed `Avg`, is **not
+determinable offline** — confirm before relying on transport emissions
+output.
+
+**Row reconciliation** (per-scenario 5,424 → 9,144): `127 × 2 emission vars
+× 12 regions + ACHH × 56 branches × 12 regions = 3,720`. Exact.
+
+**`Gasoline` → `Blended Gasoline`.** Demand-side fuel branches read
+`Blended Gasoline` in v0.80. The Key-side references inside this export still
+cite bare `…\Gasoline` (300 rows: `Vehicles_Sales_Share` 288 +
+`Vehicle_Stock_Share` 12) — that export predates the user's manual Key
+rename. Confirm LEAP propagated the references.
+
+§11.2g (stock-overflow retirement) is **unchanged and re-verified in v0.80**:
+`Stock` populated (58 distinct expressions, `Data(2005,…)` + Key refs),
+`Scrappage` = 0 on all 1,152 rows, `Max Scrappage Fraction` = 100.
+
+---
+
+**v0.67 baseline (below):** 60,096 rows across 165 branches / 24 variables
+(488 combos). The sector is methodologically split in two.
 
 ### 9.1 Tree shape
 
@@ -574,8 +772,48 @@ Template and Timor Leste consistently hold template defaults (Mileage
 
 ## 10. Residential
 
-146,544 rows across 530 branches / 35 variables (1,275 combos) — the most
-variable-rich sector. Activity driver: households.
+### 10.0 v0.80 delta (promoted 2026-07-23) — LEGACY APPLIANCE CLEANUP
+
+**v0.80: 82,212 rows / 521 branches / 34 variables / depth 7 / 6 scenarios.**
+Zero branches added, **9 removed**, zero unit drift on all 33 common
+variables.
+
+**The 9 removals are the duplicate non-underscore appliance families being
+deleted.** v0.67 carried the legacy and underscore variants side by side;
+v0.80 keeps only the underscore ones — completing the migration the v0.73
+residential Phase-2 inject already targeted:
+
+```
+REMOVED  Projections\Air Conditioning  → Best Practice, Current_Sales Average,
+                                          Current_Stock Average, Efficient
+kept     Projections\Air Conditioning_ → {Large, Medium, Small} × {High_eff, Mid_eff, Low_eff}
+REMOVED  Projections\Refrigeration     → High, Low, Medium
+kept     Projections\Refrigeration_    → {Large, Medium, Small} × {High_eff, Mid_eff, Low_eff}
+```
+
+**The two "removed" variables are a consequence, not a loss.** `!EER` and
+`Fuel Share` each existed on exactly 4 branches in v0.67 — all 4 among the
+deleted legacy AC children. No surviving branch lost a variable. (`!EER` also
+*reappears* in v0.80 Commercial on that sector's own 4 AC tiers — see §8.0;
+across the two sectors it is a relocation, not a deletion.)
+
+**+`Maximum Share`** on exactly 18 branches:
+`{Air Conditioning_, Refrigeration_} × {Large, Medium, Small} × {High_eff,
+Mid_eff, Low_eff}` — precisely the 18 that already carried `Minimum Share` in
+v0.67. A cap added beside the existing floor on the device-efficiency leaves.
+
+**+`ACHH`** on 107 branches (89 alone, 18 alongside `Maximum Share`).
+
+**Device-stock panel now hosts in 3 scenarios, not 7** — `Set up`,
+`Carbon Neutrality`, `Regional Aspiration Scenario` (verified per-variable).
+See the §2.1 v0.80 block: **of the CA/BAS/ATS/RAS working set only RAS hosts
+it.** §11.2f still applies — `Percent Ownership` / `% of Household` is a
+LITERAL percent; never ÷100.
+
+---
+
+**v0.67 baseline (below):** 146,544 rows across 530 branches / 35 variables
+(1,275 combos) — the most variable-rich sector. Activity driver: households.
 
 ### 10.1 Tree shape
 
@@ -677,8 +915,35 @@ residential totals.
 
 ## 11. Industry
 
-1,008,012 rows across 5,859 branches — the deepest (10 levels) and widest
-tree, but only 10 variables: a huge, homogeneous structure.
+### 11.0 v0.80 delta (promoted 2026-07-23) — STRUCTURE IDENTICAL
+
+**v0.80: 593,172 rows / 5,859 branches / 11 variables / depth 10 / 6
+scenarios.** The branch roster is **set-identical to v0.67** — 5,859 both
+sides, 0 added, 0 removed — with **zero unit drift** on all 10 common
+variables and unchanged max depth. Everything in §11.1+ stands as written.
+
+**Sole structural change: `+ACHH` on 600 branches.** The entire row delta is
+that plus the roster: per-scenario 91,608 → 98,808, and
+`600 branches × 12 regions = 7,200` exactly accounts for it;
+`5 × 98,808 + 99,132 (CA) = 593,172`. Exact.
+
+`Total Energy` **and** `TotalEnergy` both already existed in v0.67 — a
+pre-existing duplicate panel, not a v0.80 artifact. Left as found.
+
+> **Provenance note.** The first v0.80 industry export received
+> (2026-07-23, `mailbox/20260724/industry input v0.80 test.xlsx`) was
+> **truncated at 42%** — a structurally valid `.xlsx` holding only 2,350 of
+> 5,859 branches, missing Iron and Steel, Cement, Textile and Leather,
+> Mining, Construction, Other Industry and all of
+> `Projection\Electricity Appliances`. It was NOT promoted. The re-export
+> used here passes every completeness check. Detection method:
+> `reference_truncated_leap_export_detection`.
+
+---
+
+**v0.67 baseline (below):** 1,008,012 rows across 5,859 branches — the
+deepest (10 levels) and widest tree, but only 10 variables: a huge,
+homogeneous structure.
 
 ### 11.1 Tree shape
 
@@ -791,7 +1056,37 @@ physical activity, and load shapes.
 
 ## 12. The `Key\` assumption tree
 
-`LEAP Input Keys.xlsx` — 440,220 rows, 1,064 branches, 26 variables, max
+### 12.0 v0.80 delta (promoted 2026-07-23) — NO STRUCTURAL CHANGE AT ALL
+
+**v0.80: 240,120 rows / 1,064 branches / 26 variables / depth 8 / 6
+scenarios.** The Key tree is **set-identical to v0.67**: 0 branches added,
+0 removed, 0 variables added or removed, 0 unit drift, 0 variable-panel
+changes on any branch. Regenerating
+[trees/keys_tree.txt](trees/keys_tree.txt) from the v0.80 export produced a
+**byte-identical file**.
+
+The entire row-count change is the scenario roster: per-scenario rows are
+**40,020 in both versions** (440,220 = 11 × 40,020; 240,120 = 6 × 40,020).
+The tree stays perfectly rectangular — still zero scenario-scoped rows.
+
+**No `ACHH` here.** The area-wide v0.80 variable appears in the Demand trees
+only; the Key panel is untouched at 26 variables.
+
+Gasoline naming: see the version-status block at the top — `Key\` uses bare
+**`Gasoline`**, the Demand tree uses **`Blended Gasoline`**, and both are
+correct. Do not harmonise them.
+
+> **Export quirk (not a defect).** In this export `Level 1` renders as the
+> display name **`Key Assumptions`** while `Branch Path` uses `Key\`, so
+> joining the Level columns never reconstructs the path. Parse `Branch Path`
+> (col E) — which is the standing rule anyway (SOP §3). All other
+> completeness checks pass: 0 row gaps, 0 blank rows, 0 out-of-range shared
+> strings, 0 blank expressions.
+
+---
+
+**v0.67 baseline (below):** `LEAP Input Keys.xlsx` — 440,220 rows, 1,064
+branches, 26 variables, max
 depth 8. Same 11-scenario / 12-region roster. Unlike every demand sector the
 export is **perfectly rectangular**: 3,335 (branch, variable) combos × 12
 regions × 11 scenarios, zero scenario-scoped rows — no CA-extra calibration
@@ -966,6 +1261,41 @@ per-scenario filter-routing matters.
 
 ## 13. The `Resources\` supply tree
 
+### 13.0 v0.80 delta (promoted 2026-07-23) — NO STRUCTURAL CHANGE AT ALL
+
+**v0.80: 62,100 rows / 62 branches / 20 variables / depth 3 / 6 scenarios.**
+Set-identical to v0.67: 0 branches added or removed, 0 variables added or
+removed, 0 unit drift, 0 variable-panel changes. Regenerating
+[trees/resources_tree.txt](trees/resources_tree.txt) from the v0.80 export was
+**byte-identical**. Per-scenario rows are unchanged too — 10,440 (CA) /
+10,332 (others) in both versions — so the entire row-count drop is the
+scenario roster (113,760 = 10,440 + 10×10,332; 62,100 = 10,440 + 5×10,332).
+Everything in §13.1+ stands as written.
+
+**BUT the §13.5 accounting/optimization split now lands differently on the
+working scenario set — this changes which scenarios an import inject reaches.**
+The mechanism is unchanged; the roster cull removed 1 accounting and 4
+optimization scenarios:
+
+| variable group | v0.67 hosts | **v0.80 hosts** |
+|---|---|---|
+| `Imports`, `Cost of Unmet Requirements` (accounting) | 4: CA, Baseline, AMS Target, RAS test | **3: CA, Baseline, AMS Target** |
+| `Minimum Imports`, `Maximum Imports` (optimization) | 7: Set up, CNZ, RAS, LCO backup, RE LTRM ×3 | **3: Set up, CNZ, RAS** |
+| `Base Year Reserves` | 1: CA | 1: CA |
+
+> **Operational consequence for the CA/BAS/ATS/RAS working set:**
+> **CA, Baseline and AMS Target are ACCOUNTING** — they carry `Imports` /
+> `Cost of Unmet Requirements` and have **no `Maximum Imports` row at all**.
+> **RAS is the only OPTIMIZATION scenario in the working set** — it alone
+> carries `Minimum Imports` / `Maximum Imports`.
+> So a `Maximum Imports` inject (the §2.3 cap on
+> `Resources\Secondary\<Fuel>`) lands **only in RAS**, and an `Imports` inject
+> lands only in CA/BAS/ATS. Targeting the wrong pair is a silent no-op, not an
+> error. Directly relevant to `inject/bioenergy` and `inject/fossil`.
+
+---
+
+**v0.67 baseline (below):**
 `LEAP Input Resources.xlsx` — 113,760 rows, 62 branches, 20 variables. This
 is the tree the repo's `inject/bioenergy` and `inject/fossil` domains author
 into, and where the §A.11 `Unlimited → 1e12` landmines live.
@@ -1165,6 +1495,58 @@ layers.
 
 ## 14. The `Transformation\` conversion tree
 
+### 14.0 v0.80 delta (promoted 2026-07-23) — MERGED FROM THREE EXPORTS
+
+**v0.80 merged: 2,933 branches / 83 variables / 6 scenarios.** Built by
+unioning three exports (this is the only tree that needs more than one):
+
+| export | scope | branches |
+|---|---|---|
+| `LEAP Input Transformation.xlsx` | Brunei context, whole tree | 1,162 |
+| `LEAP Input Transformation Indonesia.xlsx` | Indonesia, `Centralized Electricity Generation` only | 1,613 |
+| `LEAP Input Transformation Malaysia.xlsx` | Malaysia, `Centralized Electricity Generation` only | 1,096 |
+| **merged** | | **2,933** |
+
+**Coverage is complete: 0 branches from the merged v0.67 canon are missing.**
+Node counts all met — `_MYPE` 194, `_MYSB` 112, `_MYSR` 176, `_IDJW` 238,
+`_IDKA` 238, `_IDEast` 218, and `_IDSA` **238 → 324**. All 10 Transmission
+Node targets present (Brunei 41; Indonesia +4 sub-nodes at 81 each; Malaysia
++3 at 62 each). Variables 80 → 83, **none removed**: `Maximum Share of
+Production`, `Maximum Transmission Capacity Addition`, `Minimum Transmission
+Capacity Addition`.
+
+**+258 branches vs the raw v0.67 exports, in three groups:**
+
+1. **76 genuinely-new Indonesia Sumatra CCS processes** — `Coal
+   Ultrasupercritical CCS_IDSA` (60) and `Gas Combined Cycle with CCS_IDSA`
+   (16). Absent from the committed canon tree; this is real new capacity
+   structure, and the reason `_IDSA` alone grew.
+2. **3 new inter-region transmission lines**, all `_F` variants of existing
+   corridors: `P. Malaysia_Singapore_1_F`, `Sarawak_to_Borneo_6_F`,
+   `Thailand_to_Peninsular Malaysia_2_F` (13 → 16 lines).
+3. **128 base process families + 51 Transmission-Node sub-branches** that are
+   NOT new — they were already restored to the committed canon tree by the
+   §A.22 correction (`Coal Subcritical` 60, `Biomass Other` 29, `Gas Combined
+   Cycle` 15, `Diesel` 14, `Large/Small Hydro`, `Solar PV`, `Unmet Load`,
+   `Wind Onshore`). They are absent from *both raw v0.67 exports* because the
+   Malaysia-scoped walk omitted them — the original §A.22 burn. **A
+   copper-plate region's export materialises them directly, so v0.80
+   independently confirms that restoration was correct.**
+
+> **This tree REQUIRES a multi-region export and always will.** §11.1: a
+> single Export Expressions run is region-scoped for region-named branches.
+> The first v0.80 attempt was a Brunei-context walk and carried **zero** `_MY*`
+> and **zero** `_ID*` branches (1,162 vs 2,675) — promoting it would have
+> deleted 1,682 branches. §11.1 trap 2 also reproduced: `_MYPE` appeared in 12
+> *expression* cells while being 0 branches. **Decide "is X a branch" from
+> `branch_path` (col E) only.** The minimal supplement scope is
+> `Transformation\Centralized Electricity Generation` and everything below it
+> — verified 2026-07-23 that all 1,682 gap branches live under it, so the
+> other 24 Transformation modules need only the single whole-tree export.
+
+---
+
+**v0.67 baseline (below):**
 `LEAP Input Transformation.xlsx` — **577,248 rows, 1,593 branches, 80
 variables, max depth 7.** Same 11-scenario / 12-region roster as the other
 exports. This is the **hub tree** of the whole area: `Resources →
@@ -2181,6 +2563,119 @@ ordered roughly by blast radius:
 | 35 | Six power tech node-variants (Solar PV_MY*, Gas Turbine_MYPE, Large Hydro_MYPE, Wind Onshore_MYSR) show `Capital Cost = 0` + `Capacity Credit = 100` across regions — LEAP defaults on un-authored `_MY*` inheritance copies (§11.1 exported-view), real regional data not surfaced | Transformation (power) | — |
 
 ---
+
+---
+
+## 16. Agriculture and Others (`Demand\Agriculture and Others`)
+
+**Added to canon 2026-07-23** (`LEAP Input Agri and Others.xlsx`, v0.80). Not
+part of the original seven-export canon — surfaced by the 2026-07-23
+inject-vs-structure audit, which found result rows referencing branches canon
+had never described.
+
+**15,336 rows / 153 branches / 10 variables / max depth 4 / 6 scenarios /
+12 regions.** Perfectly rectangular per region (1,278 rows each). CA carries
+2,676 rows vs 2,532 for the other five — the usual CA-only calibration extra,
+here `UnscaledFuelShare` (144 rows = 12 fuels x 12 regions).
+
+**Tree shape.** A single depth-2 root with a flat fuel layer beneath it — no
+end-use or device decomposition. 13 fuels:
+
+```
+Demand\Agriculture and Others\
+   Biodiesel · Briquette · Coal Unspecified · Diesel · Electricity · Ethanol
+   Gasoline · Kerosene · LPG · Natural Gas · Residual Fuel Oil
+   Solar Heating · Wood
+```
+
+The remaining 139 branches are the pollutant leaves under those fuels
+(`Avg Environmental Loading`, 10,008 rows — 65% of the sector).
+
+**Variable panel.** Activity driver is a single `Activity Level` on the root
+(`2020 USD`, Million scale) — a value-added spine, not a physical driver.
+`Final Energy Intensity` is `TOE(Thousand)/2020 USD`. `Fuel Share` on 13
+branches, `Demand Cost` / `ACHH` / `RefHH` on 14, `TotalEnergy` and
+`Load Shape` on the root only.
+
+**Note.** `Briquette` appears here and is **not** in the Industry or
+Residential fuel rosters — worth remembering when reconciling fuel totals
+across demand sectors.
+
+---
+
+## 17. International Transport (`Demand\International Transport`)
+
+**Added to canon 2026-07-23** (`LEAP Input Intl Transport.xlsx`, v0.80). Same
+provenance as §16 — absent from the original canon, surfaced by the audit.
+
+**13,152 rows / 110 branches / 13 variables / max depth 5 / 6 scenarios /
+12 regions.** Rectangular per region (1,096 rows each); CA 2,232 vs 2,184.
+
+**Tree shape.** Two modes under the root:
+
+```
+Demand\International Transport\
+   International Aviation
+   International Marine Transport
+```
+
+Aviation carries Jet Kerosene and **SAF** (Sustainable Aviation Fuel); Marine
+carries Diesel and Residual Fuel Oil. 95 of the 110 branches are pollutant
+leaves (`Avg Environmental Loading`, 6,840 rows).
+
+**Variable panel mirrors domestic Transport, not the demand sectors** —
+`TotalEnergyTran` (720 rows, 10 branches), `TotShare_AltFuels`,
+`Share_FossilFuels` all appear here exactly as in §9. `Activity Level` sits on
+3 branches (`U.S. Dollar` Million on two, `No data` on one).
+
+**Why it matters.** International bunkers are conventionally excluded from
+national energy balances but *are* modelled here, and SAF is one of only two
+aviation fuels — any alternative-fuel or bunker-emissions question routes
+through this tree, not through §9.
+
+---
+
+## 18. The `Effects\` tree
+
+**Added to canon 2026-07-23** (`LEAP Input Effects.xlsx`, v0.80). The smallest
+canon tree and the one CLAUDE.md §2.3 already referenced
+(`EmissionsPenalty` -> `Externality Cost` on `Effects\Sequestered Carbon
+Dioxide`) without canon ever describing it.
+
+**2,760 rows / 11 branches / 4 variables / max depth 2 / 6 scenarios /
+12 regions.** Rectangular per region (230 rows each). Row split is
+`root 120 + 10 pollutants x 264`.
+
+**Tree shape.** Flat — a root plus 10 pollutant branches:
+
+```
+Effects\
+   Ammonia · Black Carbon · Carbon Dioxide · Carbon Monoxide · Methane
+   Nitrogen Oxides · Nitrous Oxide · Organic Carbon
+   Sequestered Carbon Dioxide · Sulfur Dioxide
+```
+
+**Variable panel — only 4, and two are custom-constraint tables:**
+
+| variable | rows | branches | units |
+|---|---|---|---|
+| `Annual Emission Constraint` | 720 | 10 | Kilogramme / Metric Tonne |
+| `Externality Cost` | 720 | 10 | 2020 USD per Kilogramme / Metric Tonne |
+| `AllRegionsGHGLimit__NEMOcc` | 660 | 11 | metric tonnes |
+| `SingleRegionGHGLimit__NEMOcc` | 660 | 11 | metric tonnes |
+
+The two `__NEMOcc` variables are the **only** custom-constraint host outside
+the Transformation tree's RE-capacity targets. Per §8-retired they are real
+data to preserve, not a diagnostic starting point — but this is where a GHG
+cap actually lives if one is active.
+
+**`Sequestered Carbon Dioxide` is the negative-cost branch.** CLAUDE.md §2.3
+maps NEMO `EmissionsPenalty` (negative on sequestered emissions) to
+`Externality Cost` here. Any CCS/BECCS credit question resolves on this branch.
+
+**CA scoping.** Current Accounts carries 240 rows against 504 for every
+projection scenario — the `__NEMOcc` constraint variables are **not**
+materialised under CA. A GHG-limit inject targeting CA is a silent no-op.
 
 ## Appendix — full branch trees
 

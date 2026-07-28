@@ -1,0 +1,28 @@
+{
+  "op": "inject_bioenergy",
+  "started": "2026-07-27T11:28:42",
+  "progress_file": "C:\\Users\\ThinkPad\\Desktop\\Py YY\\NEMO_read\\inject\\bioenergy\\20260722b\\_progress_inject_bioenergy_20260727_112842.json",
+  "current": {
+    "stage": "real_inject_done",
+    "area": "aeo9_v0.81",
+    "scenarios_total": 4,
+    "scenario": "Regional Aspiration Scenario",
+    "scenario_idx": "4/4",
+    "region": "Vietnam",
+    "region_idx": "10/10",
+    "rows_in_region": 11,
+    "rows_written": 110,
+    "pushed": 111,
+    "failed": 0,
+    "row_in_region": "10/11"
+  },
+  "rows_total": 110,
+  "last_heartbeat": "11:30:43",
+  "finished": "2026-07-27T11:31:41",
+  "elapsed_seconds": 178.9,
+  "elapsed_human": "2m58s",
+  "summary": {
+    "any_failed": false,
+    "scenarios_processed": 4
+  }
+}

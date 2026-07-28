@@ -44,6 +44,9 @@ def _validate_leap_native(csv_path: Path) -> list[str]:
 
 class BioenergyInjector(CanonicalInjector):
     SECTOR_NAME = "bioenergy"
+    # Without this, _assert_area_lock returns immediately when target is None and the
+    # push lands in whatever area LEAP happens to have active (incl. the S11.1 blank state).
+    REQUIRE_EXPECT_AREA = True
     DEFAULT_CSV = DEFAULT_CSV
 
     def extra_cli_args(self, parser: argparse.ArgumentParser) -> None:

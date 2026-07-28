@@ -225,6 +225,71 @@ def test_find_infeasibilities_min_share_sum():
         assert "share_constraints" in categories
 
 
+def _share_db(path, min_val, max_val):
+    """Synthetic scenario carrying one MinShareProduction row and one
+    MaxShareProduction row on the same (r, t, f, y)."""
+    _full_db(path)
+    con = sqlite3.connect(path)
+    for table in ("MinShareProduction", "MaxShareProduction"):
+        con.execute(
+            f"CREATE TABLE IF NOT EXISTS {table} "
+            "(id INTEGER PRIMARY KEY, r TEXT, t TEXT, f TEXT, y TEXT, val REAL)"
+        )
+    con.execute(
+        "INSERT INTO MinShareProduction (id, r, t, f, y, val) "
+        "VALUES (1, 'IDN', 'BLNDBIODSL', 'BLNDDSL', '2030', ?)", (min_val,)
+    )
+    con.execute(
+        "INSERT INTO MaxShareProduction (id, r, t, f, y, val) "
+        "VALUES (1, 'IDN', 'BLNDBIODSL', 'BLNDDSL', '2030', ?)", (max_val,)
+    )
+    con.commit()
+    con.close()
+    return NemoDB(path)
+
+
+def test_find_infeasibilities_min_share_above_max_share():
+    """A blend floor authored above the blend ceiling on the same
+    (r, t, f, y) leaves the technology no admissible share. Regression for
+    the 2026-07-22 bioenergy blend-ceiling payload, which Stage 1 passed
+    clean because MaxShareProduction had no schema entry and no detector."""
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "scenario.sqlite"
+        db = _share_db(path, min_val=0.30, max_val=0.18)
+        rep = find_infeasibilities(db)
+        bad = [i for i in rep.errors()
+               if i.category == "share_constraints"
+               and "exceeds the maximum production share" in i.message]
+        assert len(bad) == 1
+        assert bad[0].sample.iloc[0]["min_share"] == 0.30
+        assert bad[0].sample.iloc[0]["max_share"] == 0.18
+
+
+def test_find_infeasibilities_min_share_below_max_share_is_clean():
+    """The same shape with floor under ceiling must not fire — guards the
+    detector against flagging every co-authored share pair."""
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "scenario.sqlite"
+        db = _share_db(path, min_val=0.18, max_val=0.30)
+        rep = find_infeasibilities(db)
+        bad = [i for i in rep.errors()
+               if "exceeds the maximum production share" in i.message]
+        assert bad == []
+
+
+def test_max_share_production_in_schema():
+    """MaxShareProduction must be a first-class parameter: the detector
+    above and any decode/inspect path key off PARAMETERS."""
+    from nemo_read.schema import PARAMETERS, LEAP_SOURCE_MAP
+    assert "MaxShareProduction" in PARAMETERS
+    assert PARAMETERS["MaxShareProduction"].dims == ("r", "t", "f", "y")
+    assert PARAMETERS["MaxShareProduction"].dims == \
+        PARAMETERS["MinShareProduction"].dims
+    # Two underscores, no spaces — unlike the floor sibling.
+    assert LEAP_SOURCE_MAP["MaxShareProduction"].variable == \
+        "Maximum_Share_of_Production"
+
+
 def test_check_scenario_dedup():
     """check_scenario merges validate + find_infeasibilities and dedupes
     overlapping findings (e.g. both include the MinStorageCharge check)."""

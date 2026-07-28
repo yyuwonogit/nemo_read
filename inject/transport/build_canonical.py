@@ -37,6 +37,13 @@ The adapter encodes both via VEHICLE_TYPE_MAP_KA and
 VEHICLE_TYPE_MAP_DEMAND so the rule is auditable, not in operator
 memory.
 
+Same shape for the gasoline fuel name (verified against the v0.80
+`LEAP structure/LEAP Input Keys.xlsx`, 2026-07-23):
+  - Key Assumptions tree uses bare `Gasoline`
+  - Demand\Transport\Road uses `Blended Gasoline`
+The split is intentional and the area calculates fine — do NOT
+harmonise. Encoded via FUEL_TYPE_MAP_KA / FUEL_TYPE_MAP_DEMAND.
+
 Vehicle_Stock_Share + Effective Operational_Stock are deliberately
 NOT authored — those branches are owned outside this pipeline (user
 decision 2026-05-19).
@@ -79,7 +86,16 @@ VEHICLE_TYPE_MAP_KA = {
     "Truck": "Truck",
 }
 
-FUEL_TYPE_MAP = {
+# KEY-SIDE fuel names (`Key\TransportDataStock\...`). The Key tree uses BARE
+# `Gasoline`; the Demand tree uses `Blended Gasoline`. The split is
+# INTENTIONAL and the area calculates fine — do NOT harmonise (CLAUDE.md
+# §2.6, anatomy v0.80 version block, verified against
+# `LEAP structure/LEAP Input Keys.xlsx` 2026-07-23: all 10 Key gasoline
+# nodes are bare `Gasoline`, zero `Blended Gasoline` anywhere under `Key\`).
+# The 2026-07-20 "renamed on BOTH trees" note was wrong — it came from a
+# verbal description, not an export. A `Key\...\Blended Gasoline` row HANGS
+# blind mode rather than erroring (§11.1, §A.20).
+FUEL_TYPE_MAP_KA = {
     "Electric": "Electricity",
     "Gasoline": "Gasoline",
     "NaturalGas": "Natural Gas",
@@ -89,6 +105,12 @@ FUEL_TYPE_MAP = {
     "Diesel": "Blended Diesel",
     "HybridDiesel": "Blended Diesel",
 }
+
+# DEMAND-SIDE fuel names (`Demand\Transport\Road\...`): identical except
+# gasoline. Not consumed today — Mileage rows take fuels straight from
+# DEMAND_AVAILABLE_FUELS_PER_VEHICLE — present so a future Demand-side
+# family cannot pick up the Key-side spelling by accident.
+FUEL_TYPE_MAP_DEMAND = {**FUEL_TYPE_MAP_KA, "Gasoline": "Blended Gasoline"}
 
 # Source-CSV Country -> LEAP region name
 COUNTRY_MAP = {
@@ -121,18 +143,22 @@ PROJECTION_YEAR_START = 2025
 # `Demand\Transport\Road\<Vehicle>\<Fuel>\<Fuel>` (the Mileage leaves).
 # Note PassengerCar has NO Hydrogen child on this tree.
 DEMAND_AVAILABLE_FUELS_PER_VEHICLE = {
-    "Bus":          {"Blended Diesel", "Electricity", "Gasoline",
+    "Bus":          {"Blended Diesel", "Electricity", "Blended Gasoline",
                      "Hydrogen", "Natural Gas"},
-    "Motorcyle":    {"Electricity", "Gasoline"},   # NO NG/Hydrogen/Diesel
-    "PassengerCar": {"Blended Diesel", "Electricity", "Gasoline",
+    "Motorcyle":    {"Electricity", "Blended Gasoline"},  # NO NG/Hydrogen/Diesel
+    "PassengerCar": {"Blended Diesel", "Electricity", "Blended Gasoline",
                      "Natural Gas"},                # NO Hydrogen
-    "Truck":        {"Blended Diesel", "Electricity", "Gasoline",
+    "Truck":        {"Blended Diesel", "Electricity", "Blended Gasoline",
                      "Hydrogen", "Natural Gas"},
 }
 
 # Key Assumptions\TransportDataStock\Vehicles_Sales_Share availability.
 # PassengerCar DOES carry Hydrogen here (unlike Demand\Transport\Road).
 # Motorcycle (correct spelling) on KA tree.
+# Key-side gasoline is BARE `Gasoline` (see FUEL_TYPE_MAP_KA). This set and
+# FUEL_TYPE_MAP_KA must agree — if one says `Gasoline` and the other says
+# `Blended Gasoline`, the availability filter below silently drops all 160
+# gasoline sales-share rows with a WARN instead of failing.
 KA_SALES_SHARE_FUELS_PER_VEHICLE = {
     "Bus":          {"Blended Diesel", "Electricity", "Gasoline",
                      "Hydrogen", "Natural Gas"},
@@ -145,7 +171,7 @@ KA_SALES_SHARE_FUELS_PER_VEHICLE = {
 
 
 HERE = Path(__file__).parent
-INPUT_DIR = HERE / "20260521"
+INPUT_DIR = HERE / "20260720"
 OUTPUT_CSV = HERE / "canonical_leap_inputs.csv"
 
 
@@ -176,10 +202,10 @@ def _load_sales_mix(path: Path) -> pd.DataFrame:
     if unknown:
         print(f"  WARN sales_mix: unknown vehicle_type(s): {unknown} - dropped")
         df = df[df["vehicle_type"].isin(VEHICLE_TYPE_MAP_KA)]
-    unknown = set(df["fuel_type"].unique()) - set(FUEL_TYPE_MAP)
+    unknown = set(df["fuel_type"].unique()) - set(FUEL_TYPE_MAP_KA)
     if unknown:
         print(f"  WARN sales_mix: unknown fuel_type(s): {unknown} - dropped")
-        df = df[df["fuel_type"].isin(FUEL_TYPE_MAP)]
+        df = df[df["fuel_type"].isin(FUEL_TYPE_MAP_KA)]
     unknown = set(df["Country"].unique()) - set(COUNTRY_MAP)
     if unknown:
         print(f"  WARN sales_mix: unknown Country(s): {unknown} - dropped")
@@ -192,7 +218,7 @@ def _load_sales_mix(path: Path) -> pd.DataFrame:
     df = df.copy()
     df["ams"] = df["Country"].map(COUNTRY_MAP)
     df["leap_vehicle_ka"] = df["vehicle_type"].map(VEHICLE_TYPE_MAP_KA)
-    df["leap_fuel"] = df["fuel_type"].map(FUEL_TYPE_MAP)
+    df["leap_fuel"] = df["fuel_type"].map(FUEL_TYPE_MAP_KA)
     df["leap_scenario"] = df["scenario"].map(SCENARIO_MAP)
     return df
 
@@ -209,15 +235,23 @@ def _load_sales_magnitude(path: Path) -> pd.DataFrame:
 
 
 def _load_starting_year_sales(path: Path) -> pd.DataFrame:
-    """2024 base-year anchor (by Country x vehicle x fuel). We aggregate
-    across fuels to per-vehicle totals for BaseYear_StockData."""
+    """2024 base-year anchor (by Country x vehicle x fuel).
+
+    Carries `sales_count` (per-fuel sales) and, from the 2026-07-20 drop
+    onward, `stock_count` — the 2024 FLEET STOCK per (Country, vehicle),
+    repeated across that vehicle's fuel rows. Take stock ONCE per
+    (ams, vehicle); never sum it across fuels.
+    """
     df = pd.read_csv(path)
     df = df[df["Country"].isin(COUNTRY_MAP)]
     df = df[df["vehicle_type"].isin(VEHICLE_TYPE_MAP_KA)]
     df = df.copy()
     df["ams"] = df["Country"].map(COUNTRY_MAP)
     df["leap_vehicle_ka"] = df["vehicle_type"].map(VEHICLE_TYPE_MAP_KA)
-    return df[["ams", "leap_vehicle_ka", "Year", "sales_count"]]
+    cols = ["ams", "leap_vehicle_ka", "Year", "sales_count"]
+    if "stock_count" in df.columns:
+        cols.append("stock_count")
+    return df[cols]
 
 
 def _load_mileage(path: Path) -> pd.DataFrame:
@@ -275,29 +309,38 @@ def _build_baseyear_stock_rows(start_year: pd.DataFrame) -> list[dict]:
     since the BaseYear_StockData branch has no fuel sub-tree.
     Single-year anchor (typically 2024) becomes a flat Interp(year, val).
 
-    DATA-SHAPE FIX NEEDED (confirmed 2026-05-19 via post-inject
-    readback on aeo9_v0.46):
+    DATA-SHAPE FIX — RESOLVED 2026-07-20.
       BaseYear_StockData wants the FLEET STOCK at the year before the
       first modelling year (2024 vehicles on the road), NOT the sum of
-      2024 sales counts. Our current implementation sums
-      starting_year_sales.csv `sales_count` -> per-vehicle annual sales,
-      which is 30-100x smaller than the actual fleet stock.
+      2024 sales counts. The old implementation summed `sales_count`,
+      giving a per-vehicle ANNUAL SALES figure 30-100x smaller than the
+      fleet (LEAP held Brunei Bus 2300; we authored 61).
 
-      Example: LEAP had Brunei Bus stock = 2300, we authored 61 (sales).
-      Vietnam happened to match because of separate reasons.
-
-      Awaiting a new data drop from transport team with proper
-      base-year STOCK figures. Until that arrives, this function
-      produces structurally-correct-but-numerically-too-small rows
-      that committed cleanly but are semantically wrong.
+      The 2026-07-20 transport drop ships `stock_count` — the real 2024
+      fleet stock per (Country, vehicle), REPEATED across that vehicle's
+      fuel rows. We therefore take it ONCE per (ams, vehicle, Year) and
+      never sum it. Sanity anchors from the drop README: BRN Bus 2,188 /
+      CAM Bus 65,996 / IDN Bus 298,260.
     """
     rows = []
-    agg = (start_year.groupby(["ams", "leap_vehicle_ka", "Year"])
-           ["sales_count"].sum().reset_index())
+    if "stock_count" not in start_year.columns:
+        raise ValueError(
+            "starting_year_sales.csv has no `stock_count` column. Refusing "
+            "to fall back to the sales-sum, which is 30-100x too small for "
+            "BaseYear_StockData (see docstring). Supply the 2026-07-20 drop "
+            "or pass --skip-families BaseYear_StockData."
+        )
+    g = start_year.groupby(["ams", "leap_vehicle_ka", "Year"])["stock_count"]
+    spread = (g.max() - g.min()).abs()
+    if (spread > 1e-6).any():
+        bad = spread[spread > 1e-6].index.tolist()[:3]
+        print(f"  [WARN] stock_count differs across fuel rows for {bad} — "
+              f"expected one repeated per-vehicle value; taking max.")
+    agg = g.max().reset_index()
     grouped = agg.groupby(["ams", "leap_vehicle_ka"])
     for (ams, vt), sub in grouped:
         pairs = list(zip(sub["Year"].astype(int),
-                         sub["sales_count"].astype(float)))
+                         sub["stock_count"].astype(float)))
         expr = _interp_from_pairs(pairs)
         if not expr:
             continue

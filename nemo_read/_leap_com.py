@@ -16,6 +16,7 @@ Blocker 2 (modal popup): ``variable.Expression`` on certain result variables
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Iterator
 
@@ -34,9 +35,72 @@ _NOT_WINDOWS_ERROR = (
     "Install with: pip install 'nemo_read[leap]'"
 )
 
+LEAP_LOCK_FILENAME = ".leap_lock"
+LEAP_LOCK_ENV = "NEMO_READ_LEAP_LOCK"
+
+
+class LeapAccessLocked(RuntimeError):
+    """Raised when a LEAP lock is in place and something tried to dispatch COM.
+
+    The lock exists so the user can work in the LEAP UI without any agent
+    script, probe, inject, or workflow attaching to the same COM server.
+    """
+
+
+def find_leap_lock(start: str | Path | None = None) -> Path | None:
+    """Return the active LEAP lock file, or None.
+
+    Looks at ``$NEMO_READ_LEAP_LOCK`` first (a path, or ``1``/``true`` meaning
+    "locked, no file"), then walks up from ``start`` (default: CWD) and from
+    this package's repo root looking for ``.leap_lock``.
+    """
+    env = os.environ.get(LEAP_LOCK_ENV, "").strip()
+    if env:
+        if env.lower() in {"1", "true", "yes", "on"}:
+            return Path(LEAP_LOCK_ENV)
+        p = Path(env)
+        if p.exists():
+            return p
+    roots = [Path(start) if start else Path.cwd(), Path(__file__).resolve().parent.parent]
+    for root in roots:
+        root = root.resolve()
+        for d in (root, *root.parents):
+            cand = d / LEAP_LOCK_FILENAME
+            if cand.exists():
+                return cand
+    return None
+
+
+def assert_leap_access_allowed(operation: str = "LEAP COM access") -> None:
+    """Raise :class:`LeapAccessLocked` if a LEAP lock is in place.
+
+    Called by :func:`dispatch_leap` before any COM dispatch, so every inject,
+    probe, and export in this package is covered by one interlock.
+    """
+    lock = find_leap_lock()
+    if lock is None:
+        return
+    detail = ""
+    try:
+        if lock.name == LEAP_LOCK_FILENAME:
+            detail = lock.read_text(encoding="utf-8").strip()
+    except OSError:
+        pass
+    raise LeapAccessLocked(
+        f"{operation} BLOCKED — LEAP is locked by {lock}.\n"
+        + (f"Lock note: {detail}\n" if detail else "")
+        + "The user is working in LEAP. Do not attach to the COM server.\n"
+        f"To release (only on the user's explicit say-so): delete {lock}"
+        + (f" or unset ${LEAP_LOCK_ENV}." if lock.name == LEAP_LOCK_ENV else ".")
+    )
+
 
 def dispatch_leap():
-    """Return a LEAP COM dispatch; raise a clear error if pywin32 missing."""
+    """Return a LEAP COM dispatch; raise a clear error if pywin32 missing.
+
+    Refuses outright while a LEAP lock is in place (:func:`find_leap_lock`).
+    """
+    assert_leap_access_allowed("dispatch_leap()")
     if not _HAS_PYWIN32:
         raise RuntimeError(_NOT_WINDOWS_ERROR)
     return win32com.client.Dispatch("LEAP.LEAPApplication")

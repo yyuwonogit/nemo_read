@@ -1,0 +1,28 @@
+{
+  "op": "inject_transport",
+  "started": "2026-07-27T09:57:13",
+  "progress_file": "inject\\transport\\20260721\\_progress_inject_transport_20260727_095713.json",
+  "current": {
+    "stage": "real_inject_done",
+    "area": "aeo9_v0.80",
+    "scenarios_total": 1,
+    "scenario": "Current Accounts",
+    "scenario_idx": "1/1",
+    "region": "Vietnam",
+    "region_idx": "10/10",
+    "rows_in_region": 16,
+    "rows_written": 154,
+    "row_in_region": "10/16",
+    "pushed": 160,
+    "failed": 0
+  },
+  "rows_total": 154,
+  "last_heartbeat": "10:00:20",
+  "finished": "2026-07-27T10:01:28",
+  "elapsed_seconds": 254.5,
+  "elapsed_human": "4m14s",
+  "summary": {
+    "any_failed": true,
+    "scenarios_processed": 1
+  }
+}

@@ -59,8 +59,10 @@ from pathlib import Path
 
 from nemo_read._heartbeat import HeartbeatLogger
 from nemo_read._leap_com import (
+    LeapAccessLocked,
     LeapTreeCache,
     LeapRegionalDecimalError,
+    assert_leap_access_allowed,
     assert_leap_decimal_is_period,
     dispatch_leap,
     iterate_variables_safe,
@@ -388,7 +390,13 @@ class CanonicalProber:
         hb: HeartbeatLogger,
     ) -> int:
         # ---- COM dispatch ONCE (warm across all phases + scenarios) ----
-        leap = dispatch_leap()
+        # LEAP access interlock (CLAUDE.md §A.24): dispatch_leap() refuses
+        # while the user holds the lock. Clean exit code, not a traceback.
+        try:
+            leap = dispatch_leap()
+        except LeapAccessLocked as exc:
+            print(f"[{self.PROBE_NAME}] {exc}", file=sys.stderr)
+            return 12
         self._assert_area_lock(leap, args.expect_area)
         initial_area = leap.ActiveArea.Name
         print(f"[{self.PROBE_NAME}] ActiveArea (locked): {initial_area!r}")

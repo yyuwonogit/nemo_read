@@ -27,7 +27,10 @@ DEFAULT_CSV = Path(__file__).parent / "canonical_leap_inputs.csv"
 class TransportInjector(CanonicalInjector):
     SECTOR_NAME = "transport"
     DEFAULT_CSV = DEFAULT_CSV
-    EXPECT_AREA = "aeo9_v0.46"
+    # No class-level area pin: it went stale (was "aeo9_v0.46") and silently became the
+    # --expect-area DEFAULT, aborting every run against a newer area. Pass --expect-area
+    # explicitly; REQUIRE_EXPECT_AREA makes that mandatory rather than optional.
+    REQUIRE_EXPECT_AREA = True
 
     # Per project_timor_leste_disabled.md — TL excluded from LEAP calc
     # until further notice; the supplement CSV is a stub for now.
