@@ -1,0 +1,21 @@
+{
+  "op": "inject_transport",
+  "started": "2026-07-27T10:20:26",
+  "progress_file": "inject\\transport\\20260721\\_progress_inject_transport_20260727_102026.json",
+  "current": {
+    "stage": "scenario_start",
+    "area": "",
+    "scenarios_total": 1,
+    "scenario": "Current Accounts",
+    "scenario_idx": "1/1"
+  },
+  "rows_total": 0,
+  "last_heartbeat": "10:20:34",
+  "finished": "2026-07-27T10:20:34",
+  "elapsed_seconds": 7.8,
+  "elapsed_human": "0m07s",
+  "summary": {
+    "any_failed": true,
+    "scenarios_processed": 1
+  }
+}

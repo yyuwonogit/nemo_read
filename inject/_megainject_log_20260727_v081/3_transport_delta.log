@@ -1,0 +1,2 @@
+[HB-START op=inject_transport progress=inject\transport\20260723\_progress_inject_transport_20260727_103629.json]
+[transport] ActiveArea is '', expected 'aeo9_v0.81'. Aborting (§11.1 area-drift trap). Confirm the right area is open in LEAP and re-run.

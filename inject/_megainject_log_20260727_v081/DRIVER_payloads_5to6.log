@@ -1,0 +1,294 @@
+[mega] dispatching LEAP once (shared session) for area 'aeo9_v0.81'
+[mega] area bound: 'aeo9_v0.81' � holding this ONE session for all payloads
+
+[mega] PAYLOAD 3/6 � TransportInjector: SKIPPED (--from 5, already committed)
+[mega] PAYLOAD 4/6 � CommercialInjector: SKIPPED (--from 5, already committed)
+
+======================================================================
+[mega] PAYLOAD 5/6 � BioenergyInjector  (bioenergy_delta_20260722b.csv)
+======================================================================
+[HB-START op=inject_bioenergy progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\bioenergy\20260722b\_progress_inject_bioenergy_20260727_112842.json]
+[bioenergy] ActiveArea (locked): 'aeo9_v0.81'
+[bioenergy] WARN: could not verify LEAP decimal separator regional (no decimal-bearing Interp found in sample). Proceeding; if decimal-bearing rows produce readback FAIL with comma-decimal evidence, abort and flip LEAP regional to period.
+[bioenergy] Will process 4 scenario(s) in ONE COM session: ['Current Accounts', 'Baseline Simulation', 'AMS Target Scenario', 'Regional Aspiration Scenario']
+[HB t=11:28:53 stage=com_dispatched area=aeo9_v0.81 scenarios_total=4 elapsed=0m11s]
+
+[bioenergy] ╔═══ SCENARIO: 'Current Accounts' ═══
+  ActiveScenario: 'Current Accounts'
+  scenario-column filter: 114 -> 1 rows (kept untagged + scenario='Current Accounts')
+  1 rows across 1 region group(s)
+
+[bioenergy] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[bioenergy] ── Phase 3: REAL INJECT ──
+  --- region 'Philippines' (1 rows) ---
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Exogenous Capacity' = Interp(2015, 204, 2016, 227, 2017, 220, 2018, 220, 2019, ...
+  [real-inject] {'pushed': 1}
+
+[bioenergy] ── Phase 4: READBACK VERIFY ──
+  Verifying 1 representative row(s) (1 per region × 1 region(s))
+  [EXACT] Philippines|Exogenous Capacity on Transformation\Biodiesel Production\Processes\FAME Biodiesel
+  Readback summary: 1 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:29:06 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Philippines region_idx=1/1 rows_in_region=1 rows_written=0 pushed=1 failed=0 elapsed=0m23s]
+
+[bioenergy] ╔═══ SCENARIO: 'Baseline Simulation' ═══
+  ActiveScenario: 'Baseline Simulation'
+  scenario-column filter: 114 -> 1 rows (kept untagged + scenario='Baseline Simulation')
+  1 rows across 1 region group(s)
+
+[bioenergy] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[bioenergy] ── Phase 3: REAL INJECT ──
+  --- region 'Philippines' (1 rows) ---
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Exogenous Capacity' = Interp(2015, 204, 2016, 227, 2017, 220, 2018, 220, 2019, ...
+  [real-inject] {'pushed': 1}
+
+[bioenergy] ── Phase 4: READBACK VERIFY ──
+  Verifying 1 representative row(s) (1 per region × 1 region(s))
+  [EXACT] Philippines|Exogenous Capacity on Transformation\Biodiesel Production\Processes\FAME Biodiesel
+  Readback summary: 1 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:29:19 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Philippines region_idx=1/1 rows_in_region=1 rows_written=0 pushed=1 failed=0 elapsed=0m36s]
+
+[bioenergy] ╔═══ SCENARIO: 'AMS Target Scenario' ═══
+  ActiveScenario: 'AMS Target Scenario'
+  scenario-column filter: 114 -> 1 rows (kept untagged + scenario='AMS Target Scenario')
+  1 rows across 1 region group(s)
+
+[bioenergy] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[bioenergy] ── Phase 3: REAL INJECT ──
+  --- region 'Philippines' (1 rows) ---
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Exogenous Capacity' = Interp(2015, 204, 2016, 227, 2017, 220, 2018, 220, 2019, ...
+  [real-inject] {'pushed': 1}
+
+[bioenergy] ── Phase 4: READBACK VERIFY ──
+  Verifying 1 representative row(s) (1 per region × 1 region(s))
+  [EXACT] Philippines|Exogenous Capacity on Transformation\Biodiesel Production\Processes\FAME Biodiesel
+  Readback summary: 1 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:29:31 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Philippines region_idx=1/1 rows_in_region=1 rows_written=0 pushed=1 failed=0 elapsed=0m49s]
+
+[bioenergy] ╔═══ SCENARIO: 'Regional Aspiration Scenario' ═══
+  ActiveScenario: 'Regional Aspiration Scenario'
+  scenario-column filter: 114 -> 111 rows (kept untagged + scenario='Regional Aspiration Scenario')
+  111 rows across 10 region group(s)
+
+[bioenergy] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[bioenergy] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (11 rows) ---
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 2....
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 1....
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+  --- region 'Cambodia' (11 rows) ---
+[HB t=11:29:46 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Cambodia region_idx=2/10 rows_in_region=11 rows_written=11 pushed=1 failed=0 row_in_region=10/11 elapsed=1m03s]
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 2....
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 1....
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+  --- region 'Indonesia' (11 rows) ---
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 37.5, 2026, 47.368421, 2027, 47.368421, 2030...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0.479116, 2027, 0.961342, 2030, 2.4...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 37.5, 2026,...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 1....
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 127.3037, 2060, 127.3037)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+  --- region 'Laos' (11 rows) ---
+[HB t=11:30:01 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Laos region_idx=4/10 rows_in_region=11 rows_written=33 pushed=1 failed=0 row_in_region=10/11 elapsed=1m18s]
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 1.505514, 2026, 3.007013, 2027, 4.522613, 20...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 1.003686, 2026, 2.014934, 2027, 3.046208, 20...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 1.532605, 2...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 1.021841, 2...
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+  --- region 'Malaysia' (11 rows) ---
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 4.522613, 2026, 13.705584, 2027, 13.705584, ...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 6.344411, 2...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 1....
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 10.8443, 2060, 10.8443)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+  --- region 'Myanmar' (11 rows) ---
+[HB t=11:30:15 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Myanmar region_idx=6/10 rows_in_region=11 rows_written=55 pushed=1 failed=0 row_in_region=10/11 elapsed=1m32s]
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 2....
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 1....
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+  --- region 'Philippines' (12 rows) ---
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 3.614458, 2026, 4.522613, 2027, 4.522613, 20...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 6.220345, 2026, 6.220345, 2027, 6.220345, 20...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 3.614458, 2...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 6.220345, 2...
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Exogenous Capacity' = Interp(2015, 204, 2016, 227, 2017, 220, 2018, 220, 2019, ...
+  --- region 'Singapore' (11 rows) ---
+[HB t=11:30:29 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Singapore region_idx=8/10 rows_in_region=11 rows_written=78 pushed=1 failed=0 row_in_region=10/12 elapsed=1m46s]
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 2....
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 0, 2026, 1....
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+  --- region 'Thailand' (11 rows) ---
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 6.344411, 2026, 6.344411, 2027, 6.344411, 20...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 0.461093, 2026, 0.925067, 2027, 12.986054, 2...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 7.441016, 2...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 8.65638, 20...
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 19.9727, 2060, 19.9727)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 0.2227, 2060, 0.2227)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2026, 0.1369, 2060, 0.1369)
+  --- region 'Vietnam' (11 rows) ---
+[HB t=11:30:43 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Vietnam region_idx=10/10 rows_in_region=11 rows_written=100 pushed=1 failed=0 row_in_region=10/11 elapsed=2m00s]
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 1.333974, 2026, 2.002445, 2027, 2.671909, 20...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 0.888809, 2026, 6.220345, 2027, 6.871236, 20...
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 1.352028, 2...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Maximum Share of Production' = Max(Minimum Share of Production, Interp(2025, 6.026142, 2...
+     [OK]  Transformation\Biodiesel Production\Processes\CME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Cassava . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Bioethanol Production\Processes\Corn Ethanol . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Molasses . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+     [OK]  Transformation\Biodiesel Production\Processes\POME Biodiesel . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 5.8495, 2060, 5.8495)
+     [OK]  Transformation\Bioethanol Production\Processes\Sugarcane . 'Maximum Capacity Addition' = Interp(2025, 0, 2027, 0, 2028, 0.1369, 2060, 0.1369)
+  [real-inject] {'pushed': 111}
+
+[bioenergy] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  [EXACT] Cambodia|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  [EXACT] Indonesia|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  [EXACT] Laos|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  [EXACT] Malaysia|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  [EXACT] Myanmar|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  [EXACT] Philippines|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  [EXACT] Singapore|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  [EXACT] Thailand|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  [EXACT] Vietnam|Minimum Share of Production on Transformation\Diesel Blending\Processes\Biodiesel
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+
+[bioenergy] === ALL SCENARIOS DONE ===
+[HB-DONE op=inject_bioenergy elapsed=2m58s rows=110 progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\bioenergy\20260722b\_progress_inject_bioenergy_20260727_112842.json]
+
+======================================================================
+[mega] PAYLOAD 6/6 — PowerInjector  (batch2_ccs_retarget_20260722.csv)
+======================================================================
+[HB-START op=inject_power progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\power\20260722\_progress_inject_power_20260727_113141.json]
+[power] ActiveArea (locked): 'aeo9_v0.81'
+[power] WARN: could not verify LEAP decimal separator regional (no decimal-bearing Interp found in sample). Proceeding; if decimal-bearing rows produce readback FAIL with comma-decimal evidence, abort and flip LEAP regional to period.
+[power] Will process 1 scenario(s) in ONE COM session: ['Regional Aspiration Scenario']
+[HB t=11:31:55 stage=com_dispatched area=aeo9_v0.81 scenarios_total=1 elapsed=0m13s]
+
+[power] ╔═══ SCENARIO: 'Regional Aspiration Scenario' ═══
+  ActiveScenario: 'Regional Aspiration Scenario'
+  32 rows across 1 region group(s)
+  [power] --blind mode — no tree cache for group 'Indonesia'
+
+[power] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[power] ── Phase 3: REAL INJECT ──
+  --- region 'Indonesia' (32 rows) ---
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS_IDSA . 'Maximum Capacity' = 24220 ? batch-2 P4: node CCS at IDSA, 50/50 of the P1 gas...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS_IDSA . 'Maximum Capacity Addition' = 1500 ? batch-2 P4: build rate for Gas Combined Cycle with...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS_IDSA . 'Process Efficiency' = Interp(2022, 55, 2050, 58) ? batch-2 P4 template param (c...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS_IDSA . 'Maximum Availability' = 85 ? batch-2 P4 template param (national template)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS_IDSA . 'Capacity Credit' = 85 ? batch-2 P4 template param (national template)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS_IDSA . 'Capital Cost' = Interp(2022, 2390, 2030, 2150, 2050, 1720) ? batch-2 P4 t...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS_IDSA . 'Fixed OM Cost' = Interp(2022, 59, 2030, 50.2, 2050, 37.8) ? batch-2 P4 tem...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS_IDSA . 'Variable OM Cost' = Interp(2022, 4.96, 2030, 4.36, 2050, 3.62) ? batch-2 P4 t...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS_IDSA . 'Maximum Capacity' = 24220 ? batch-2 P4: node CCS at IDSA, 50/50 of the P1 gas...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS_IDSA . 'Maximum Capacity Addition' = 1500 ? batch-2 P4: build rate for Coal Ultrasupercritical...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS_IDSA . 'Process Efficiency' = Interp(2022, 29.7, 2023, 30.4) ? batch-2 P4 template para...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS_IDSA . 'Maximum Availability' = 85 ? batch-2 P4 template param (firm baseload)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS_IDSA . 'Capacity Credit' = 85 ? batch-2 P4 template param (national template)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS_IDSA . 'Capital Cost' = Interp(2022, 4100, 2030, 3950, 2050, 3800) ? batch-2 P4 t...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS_IDSA . 'Fixed OM Cost' = Interp(2022, 95, 2030, 92, 2050, 89) ? batch-2 P4 templat...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS_IDSA . 'Variable OM Cost' = Interp(2022, 8.5, 2030, 8.2, 2050, 7.9) ? batch-2 P4 temp...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Maximum Capacity' = 13170 ? batch-2 P4: node CCS at IDJW, 50/50 of the P1 gas...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Maximum Capacity Addition' = 1000 ? batch-2 P4: build rate for Gas Combined Cycle with...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Process Efficiency' = Interp(2022, 55, 2050, 58) ? batch-2 P4 template param (c...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Maximum Availability' = 85 ? batch-2 P4 template param (national template)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Capacity Credit' = 85 ? batch-2 P4 template param (national template)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Capital Cost' = Interp(2022, 2390, 2030, 2150, 2050, 1720) ? batch-2 P4 t...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Fixed OM Cost' = Interp(2022, 59, 2030, 50.2, 2050, 37.8) ? batch-2 P4 tem...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS . 'Variable OM Cost' = Interp(2022, 4.96, 2030, 4.36, 2050, 3.62) ? batch-2 P4 t...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Maximum Capacity' = 13170 ? batch-2 P4: node CCS at IDJW, 50/50 of the P1 gas...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Maximum Capacity Addition' = 1000 ? batch-2 P4: build rate for Coal Ultrasupercritical...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Process Efficiency' = Interp(2022, 29.7, 2023, 30.4) ? batch-2 P4 template para...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Maximum Availability' = 85 ? batch-2 P4 template param (firm baseload)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Capacity Credit' = 85 ? batch-2 P4 template param (national template)
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Capital Cost' = Interp(2022, 4100, 2030, 3950, 2050, 3800) ? batch-2 P4 t...
+[HB t=11:32:05 stage=real_pushing area=aeo9_v0.81 scenarios_total=1 scenario=Regional Aspiration Scenario scenario_idx=1/1 region=Indonesia region_idx=1/1 rows_in_region=32 rows_written=30 row_in_region=30/32 elapsed=0m24s]
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Fixed OM Cost' = Interp(2022, 95, 2030, 92, 2050, 89) ? batch-2 P4 templat...
+     [OK]  Transformation\Centralized Electricity Generation\Processes\Coal Ultrasupercritical CCS . 'Variable OM Cost' = Interp(2022, 8.5, 2030, 8.2, 2050, 7.9) ? batch-2 P4 temp...
+  [real-inject] {'pushed': 32}
+
+[power] ── Phase 4: READBACK VERIFY ──
+  Verifying 1 representative row(s) (1 per region × 1 region(s))
+  [EXACT] Indonesia|Maximum Capacity on Transformation\Centralized Electricity Generation\Processes\Gas Combined Cycle with CCS_IDSA
+  Readback summary: 1 EXACT, 0 NORMALISED, 0 FAIL
+
+[power] === ALL SCENARIOS DONE ===
+[HB-DONE op=inject_power elapsed=0m30s rows=30 progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\power\20260722\_progress_inject_power_20260727_113141.json]
+
+======================================================================
+[mega] SEQUENCE SUMMARY
+======================================================================
+  payload 5  BioenergyInjector    rc=0  OK
+  payload 6  PowerInjector        rc=0  OK
+[mega] 2/2 attempted payloads clean this run (payloads before --from 5 already committed earlier).

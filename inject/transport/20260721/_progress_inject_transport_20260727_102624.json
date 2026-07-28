@@ -1,0 +1,27 @@
+{
+  "op": "inject_transport",
+  "started": "2026-07-27T10:26:24",
+  "progress_file": "inject\\transport\\20260721\\_progress_inject_transport_20260727_102624.json",
+  "current": {
+    "stage": "real_inject_done",
+    "area": "aeo9_v0.81",
+    "scenarios_total": 4,
+    "scenario": "Regional Aspiration Scenario",
+    "scenario_idx": "4/4",
+    "region": "Vietnam",
+    "region_idx": "10/10",
+    "rows_in_region": 3,
+    "rows_written": 28,
+    "pushed": 31,
+    "failed": 0
+  },
+  "rows_total": 64,
+  "last_heartbeat": "10:33:43",
+  "finished": "2026-07-27T10:34:42",
+  "elapsed_seconds": 498.5,
+  "elapsed_human": "8m18s",
+  "summary": {
+    "any_failed": false,
+    "scenarios_processed": 4
+  }
+}

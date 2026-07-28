@@ -1,0 +1,12 @@
+[HB-START op=inject_transport progress=inject\transport\20260721\_progress_inject_transport_20260727_102026.json]
+[transport] ActiveArea (locked): ''
+[transport] WARN: could not verify LEAP decimal separator regional (no decimal-bearing Interp found in sample). Proceeding; if decimal-bearing rows produce readback FAIL with comma-decimal evidence, abort and flip LEAP regional to period.
+[transport] Will process 1 scenario(s) in ONE COM session: ['Current Accounts']
+[HB t=10:20:34 stage=com_dispatched area= scenarios_total=1 elapsed=0m07s]
+
+[transport] ╔═══ SCENARIO: 'Current Accounts' ═══
+  ERROR: could not switch to scenario 'Current Accounts': (-2147352567, 'Exception occurred.', (0, 'Leap.LEAPScenarios', "Access violation at address 00000000010E0AD4 in module 'leap.exe' (offset 2A0AD4). Read of address 0000000000000018", None, 0, -2147418113), None)
+[transport] --fail-fast: aborting remaining scenarios.
+
+[transport] === ALL SCENARIOS DONE ===
+[HB-DONE op=inject_transport elapsed=0m07s rows=0 progress=inject\transport\20260721\_progress_inject_transport_20260727_102026.json]

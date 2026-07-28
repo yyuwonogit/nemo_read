@@ -1,0 +1,28 @@
+{
+  "op": "inject_commercial",
+  "started": "2026-07-27T11:13:10",
+  "progress_file": "C:\\Users\\ThinkPad\\Desktop\\Py YY\\NEMO_read\\inject\\commercial\\20260722\\_progress_inject_commercial_20260727_111310.json",
+  "current": {
+    "stage": "real_inject_done",
+    "area": "aeo9_v0.81",
+    "scenarios_total": 4,
+    "scenario": "Regional Aspiration Scenario",
+    "scenario_idx": "4/4",
+    "region": "Vietnam",
+    "region_idx": "10/10",
+    "rows_in_region": 17,
+    "rows_written": 167,
+    "row_in_region": "10/17",
+    "pushed": 174,
+    "failed": 0
+  },
+  "rows_total": 167,
+  "last_heartbeat": "11:21:16",
+  "finished": "2026-07-27T11:22:14",
+  "elapsed_seconds": 543.6,
+  "elapsed_human": "9m03s",
+  "summary": {
+    "any_failed": false,
+    "scenarios_processed": 4
+  }
+}

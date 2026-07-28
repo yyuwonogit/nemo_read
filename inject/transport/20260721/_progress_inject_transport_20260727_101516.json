@@ -1,0 +1,9 @@
+{
+  "op": "inject_transport",
+  "started": "2026-07-27T10:15:16",
+  "progress_file": "inject\\transport\\20260721\\_progress_inject_transport_20260727_101516.json",
+  "current": {},
+  "rows_total": 0,
+  "last_heartbeat": null,
+  "finished": null
+}

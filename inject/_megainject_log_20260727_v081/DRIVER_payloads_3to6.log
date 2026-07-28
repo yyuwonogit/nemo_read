@@ -1,0 +1,1353 @@
+[mega] dispatching LEAP once (shared session) for area 'aeo9_v0.81'
+[mega] area bound: 'aeo9_v0.81' � holding this ONE session for all payloads
+
+
+======================================================================
+[mega] PAYLOAD 3/6 � TransportInjector  (transport_delta_20260723.csv)
+======================================================================
+[HB-START op=inject_transport progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\transport\20260723\_progress_inject_transport_20260727_110039.json]
+[transport] ActiveArea (locked): 'aeo9_v0.81'
+[transport] WARN: could not verify LEAP decimal separator regional (no decimal-bearing Interp found in sample). Proceeding; if decimal-bearing rows produce readback FAIL with comma-decimal evidence, abort and flip LEAP regional to period.
+[transport] Will process 4 scenario(s) in ONE COM session: ['Current Accounts', 'Baseline Simulation', 'AMS Target Scenario', 'Regional Aspiration Scenario']
+[HB t=11:00:41 stage=com_dispatched area=aeo9_v0.81 scenarios_total=4 elapsed=0m01s]
+
+[transport] ╔═══ SCENARIO: 'Current Accounts' ═══
+  ActiveScenario: 'Current Accounts'
+  scenario-column filter: 291 -> 135 rows (kept untagged + scenario='Current Accounts')
+  135 rows across 10 region group(s)
+
+[transport] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+[HB t=11:04:55 stage=dry_run_skipped area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 elapsed=4m15s]
+  [dry-run] {}
+
+[transport] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (14 rows) ---
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 2188)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 3248)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 279440)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 9517)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 131.056, 2006, 131.786, 2007, 133.344, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 157.165, 2006, 164.895, 2007, 182.571, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 10945.4, 2006, 11177.2, 2007, 11284.4, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 525.531, 2006, 539.377, 2007, 520.34, 2008, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2005, 2.28227, 2006, 2.28227, 2007, 2.23032, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 100, 2006, 100, 2007, 100, 2008, 100, 2009, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 97.7177, 2006, 97.7177, 2007, 97.7697, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+  --- region 'Cambodia' (16 rows) ---
+[HB t=11:05:08 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Cambodia region_idx=2/10 rows_in_region=16 rows_written=14 row_in_region=10/14 elapsed=4m29s]
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 65996)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 4.02659e+06)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 697112)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 93474)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 2893.27, 2006, 2955.94, 2007, 3034.75, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 85423.8, 2006, 93958.5, 2007, 104351, 2008, ...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 7278.74, 2006, 8237.54, 2007, 9438.2, 2008, ...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 1974.79, 2006, 1986.65, 2007, 2112.78, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2005, 29.7941, 2006, 29.7941, 2007, 29.7892, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Natural Gas . 'Activity Level' = Interp(2005, 11.1593, 2006, 11.1593, 2007, 11.2741, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 4.86533, 2006, 4.86533, 2007, 4.88432, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 100, 2006, 100, 2007, 100, 2008, 100, 2009, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 59.0466, 2006, 59.0466, 2007, 58.9368, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+  --- region 'Indonesia' (12 rows) ---
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 298260)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 1.3652e+08)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 1.9232e+07)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 6.34108e+06)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 13248, 2006, 13642.7, 2007, 14043, 2008, 144...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 2.97673e+06, 2006, 3.1824e+06, 2007, 3.4057e...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 263237, 2006, 271510, 2007, 281808, 2008, 29...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 246806, 2006, 250029, 2007, 258381, 2008, 27...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 100, 2006, 100, 2007, 100, 2008, 100, 2009, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 93.0916, 2006, 93.0916, 2007, 93.0916, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+  --- region 'Laos' (12 rows) ---
+[HB t=11:05:23 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Laos region_idx=4/10 rows_in_region=12 rows_written=42 row_in_region=10/12 elapsed=4m43s]
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 58982)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 1.81696e+06)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 182951)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 81122)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 2377.18, 2006, 2458.89, 2007, 2546.3, 2008, ...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 33942.1, 2006, 36454.5, 2007, 39373.6, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 1604.61, 2006, 1810.13, 2007, 2064.81, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 2387.34, 2006, 2602.27, 2007, 3009.83, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 100, 2006, 100, 2007, 100, 2008, 100, 2009, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 72.9957, 2006, 72.9957, 2007, 72.9931, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+  --- region 'Malaysia' (15 rows) ---
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 95044)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 1.37942e+07)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 1.71265e+07)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 1.56409e+06)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 4377.7, 2006, 4505.84, 2007, 4631.73, 2008, ...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 379903, 2006, 387022, 2007, 396651, 2008, 40...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 520559, 2006, 532607, 2007, 548604, 2008, 56...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 56610.7, 2006, 56589.4, 2007, 57804.9, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2005, 5.4152, 2006, 6.03978, 2007, 5.93982, 2008, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Natural Gas . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 0.86731, 2006, 0.86731, 2007, 0.843273, 2008...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 99.0001, 2006, 99.0001, 2007, 99.0001, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 94.5848, 2006, 93.9602, 2007, 94.0602, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 17.7145, 2006, 17.7145, 2007, 17.667, 2008, ...
+  --- region 'Myanmar' (12 rows) ---
+[HB t=11:05:37 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Myanmar region_idx=6/10 rows_in_region=12 rows_written=69 row_in_region=10/15 elapsed=4m57s]
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 31973)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 4.93698e+06)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 578778)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 368381)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 1736.2, 2006, 1793.33, 2007, 1827.91, 2008, ...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 115710, 2006, 132228, 2007, 149046, 2008, 16...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 12858.1, 2006, 13647.8, 2007, 14321.4, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 7545.8, 2006, 8568.29, 2007, 10082.4, 2008, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 100, 2006, 100, 2007, 100, 2008, 100, 2009, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 40.06, 2006, 40.06, 2007, 40.06, 2008, 40.06...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 9.99731, 2006, 9.99731, 2007, 9.99679, 2008,...
+  --- region 'Philippines' (15 rows) ---
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 44865)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 8.61337e+06)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 4.44488e+06)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 677333)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 2011.29, 2006, 2033.02, 2007, 2071.17, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 531433, 2006, 547038, 2007, 567066, 2008, 59...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 247966, 2006, 250599, 2007, 253835, 2008, 25...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 18427.5, 2006, 18550.9, 2007, 19359.5, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2005, 40.1353, 2006, 40.1353, 2007, 40.1353, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 0.068051, 2006, 0.068051, 2007, 0.0660702, 2...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 100, 2006, 100, 2007, 100, 2008, 100, 2009, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 59.8647, 2006, 59.8647, 2007, 59.8647, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 1.20697, 2006, 1.20697, 2007, 1.20216, 2008,...
+  --- region 'Singapore' (15 rows) ---
+[HB t=11:05:51 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Singapore region_idx=8/10 rows_in_region=15 rows_written=96 row_in_region=10/15 elapsed=5m11s]
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 21631)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 140319)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 660821)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 165159)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 1222.25, 2006, 1242.74, 2007, 1260.17, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 13643.9, 2006, 13548, 2007, 13363.5, 2008, 1...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 50285, 2006, 51576.8, 2007, 51598.6, 2008, 5...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 9968.34, 2006, 10058.8, 2007, 10524.7, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2005, 70.5779, 2006, 70.5779, 2007, 70.5779, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 1.11699, 2006, 1.11699, 2007, 1.15011, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 100, 2006, 100, 2007, 100, 2008, 100, 2009, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 29.4221, 2006, 29.4221, 2007, 29.4221, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 5, 2006, 5, 2007, 5, 2008, 5, 2009, 5, 2010,...
+  --- region 'Thailand' (12 rows) ---
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 216727)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 1.93351e+07)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 9.54048e+06)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 1.26359e+06)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 11435, 2006, 11787.3, 2007, 12046.8, 2008, 1...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 1.3976e+06, 2006, 1.42698e+06, 2007, 1.45643...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 342121, 2006, 363357, 2007, 387660, 2008, 41...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 51364.3, 2006, 51345, 2007, 51292.9, 2008, 5...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 5.24675, 2006, 5.24675, 2007, 5.10173, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 99.9925, 2006, 99.9925, 2007, 99.9925, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 55.0641, 2006, 55.0641, 2007, 55.0641, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 0.714504, 2006, 0.714504, 2007, 0.714504, 20...
+  --- region 'Vietnam' (12 rows) ---
+[HB t=11:06:05 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Vietnam region_idx=10/10 rows_in_region=12 rows_written=123 row_in_region=10/12 elapsed=5m25s]
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Bus . 'Activity Level' = Interp(2024, 211071)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Motorcycle . 'Activity Level' = Interp(2024, 6.78747e+07)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\PassengerCar . 'Activity Level' = Interp(2024, 6.01896e+06)
+     [OK]  Key\TransportDataStock\BaseYear_StockData\Truck . 'Activity Level' = Interp(2024, 1.66845e+06)
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Bus . 'Activity Level' = Interp(2005, 8345.38, 2006, 8571.75, 2007, 8808.54, 2008,...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Motorcycle . 'Activity Level' = Interp(2005, 1.15955e+06, 2006, 1.23627e+06, 2007, 1.3141...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\PassengerCar . 'Activity Level' = Interp(2005, 47086, 2006, 50334.5, 2007, 53975, 2008, 580...
+     [OK]  Key\TransportDataStock\Vehicle_Sales\Truck . 'Activity Level' = Interp(2005, 52942.5, 2006, 58101.4, 2007, 59221.8, 2008,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2005, 100, 2006, 100, 2007, 100, 2008, 100, 2009, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2005, 91.011, 2006, 91.011, 2007, 91.011, 2008, 91...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2005, 0, 2006, 0, 2007, 0, 2008, 0, 2009, 0, 2010,...
+  [real-inject] {'pushed': 135}
+
+[transport] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  [EXACT] Cambodia|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  [EXACT] Indonesia|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  [EXACT] Laos|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  [EXACT] Malaysia|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  [EXACT] Myanmar|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  [EXACT] Philippines|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  [EXACT] Singapore|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  [EXACT] Thailand|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  [EXACT] Vietnam|Activity Level on Key\TransportDataStock\BaseYear_StockData\Bus
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:07:04 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Vietnam region_idx=10/10 rows_in_region=12 rows_written=133 row_in_region=10/12 pushed=135 failed=0 elapsed=6m24s]
+
+[transport] ╔═══ SCENARIO: 'Baseline Simulation' ═══
+  ActiveScenario: 'Baseline Simulation'
+  scenario-column filter: 291 -> 52 rows (kept untagged + scenario='Baseline Simulation')
+  52 rows across 10 region group(s)
+
+[transport] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[transport] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (6 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 2.88, 2026, 2.85724, 2027, 2.83288, 2028, 2....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 0.32, 2026, 0.348454, 2027, 0.378902, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 96.1326, 2026, 95.2766, 2027, 94.3605, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 96.8, 2026, 96.7943, 2027, 96.7882, 2028, 96...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Cambodia' (8 rows) ---
+[HB t=11:07:16 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Cambodia region_idx=2/10 rows_in_region=8 rows_written=6 row_in_region=10/12 pushed=135 failed=0 elapsed=6m36s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2025, 0.509045, 2026, 0.791599, 2027, 1.09396, 202...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 7.31368, 2026, 7.26166, 2027, 7.20599, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 0.731368, 2026, 0.796401, 2027, 0.865992, 20...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Natural Gas . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 4.9896, 2026, 4.9896, 2027, 4.9896, 2028, 4....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.491, 2026, 99.2084, 2027, 98.906, 2028, 9...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 91.9549, 2026, 91.9419, 2027, 91.928, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Philippines' (7 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2025, 0.202082, 2026, 0.314251, 2027, 0.434281, 20...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 40, 2026, 39.976, 2027, 39.9504, 2028, 39.92...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 0.337079, 2026, 0.367051, 2027, 0.399124, 20...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.7979, 2026, 99.6857, 2027, 99.5657, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 59.6629, 2026, 59.6569, 2027, 59.6505, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 1.20121, 2026, 1.20121, 2027, 1.20121, 2028,...
+  --- region 'Singapore' (7 rows) ---
+[HB t=11:07:30 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Singapore region_idx=4/10 rows_in_region=7 rows_written=21 row_in_region=10/12 pushed=135 failed=0 elapsed=6m50s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2025, 0.483053, 2026, 0.751178, 2027, 1.0381, 2028...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 46.8605, 2026, 46.7655, 2027, 46.6639, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 33.6047, 2026, 33.7233, 2027, 33.8503, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0.3517, 2026, 0.3517, 2027, 0.3517, 2028, 0....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.5169, 2026, 99.2488, 2027, 98.9619, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 19.5349, 2026, 19.5111, 2027, 19.4858, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 5, 2026, 5, 2027, 5, 2028, 5, 2029, 5, 2030,...
+  --- region 'Indonesia' (4 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 98.7657, 2026, 98.0806, 2027, 97.3475, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 94.2249, 2026, 94.179, 2027, 94.1298, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Laos' (4 rows) ---
+[HB t=11:07:43 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Laos region_idx=6/10 rows_in_region=4 rows_written=32 row_in_region=10/12 pushed=135 failed=0 elapsed=7m03s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.9934, 2026, 99.9897, 2027, 99.9857, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 72.9685, 2026, 72.9674, 2027, 72.9663, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Malaysia' (4 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0.905433, 2026, 0.905433, 2027, 0.905433, 20...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 96, 2026, 95.1464, 2027, 94.233, 2028, 93.25...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 90.9833, 2026, 90.9381, 2027, 90.8897, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 17.1505, 2026, 17.1505, 2027, 17.1505, 2028,...
+  --- region 'Myanmar' (4 rows) ---
+[HB t=11:07:55 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Myanmar region_idx=8/10 rows_in_region=4 rows_written=40 row_in_region=10/12 pushed=135 failed=0 elapsed=7m15s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 100, 2026, 100, 2027, 100, 2028, 100, 2029, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 40.0469, 2026, 40.0463, 2027, 40.0457, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 10.0054, 2026, 10.0054, 2027, 10.0054, 2028,...
+  --- region 'Thailand' (4 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 2.53105, 2026, 2.53105, 2027, 2.53105, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 98.5107, 2026, 97.6841, 2027, 96.7995, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 36.3005, 2026, 36.1955, 2027, 36.0831, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0.714504, 2026, 0.714504, 2027, 0.714504, 20...
+  --- region 'Vietnam' (4 rows) ---
+[HB t=11:08:07 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Vietnam region_idx=10/10 rows_in_region=4 rows_written=48 row_in_region=10/12 pushed=135 failed=0 elapsed=7m27s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 92.0862, 2026, 91.3053, 2027, 90.4696, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 68.5294, 2026, 68.4759, 2027, 68.4187, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  [real-inject] {'pushed': 52}
+
+[transport] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel
+  [EXACT] Cambodia|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity
+  [EXACT] Philippines|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity
+  [EXACT] Singapore|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity
+  [EXACT] Indonesia|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Laos|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Malaysia|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Myanmar|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Thailand|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Vietnam|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:09:06 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Vietnam region_idx=10/10 rows_in_region=4 rows_written=48 row_in_region=10/12 pushed=52 failed=0 elapsed=8m26s]
+
+[transport] ╔═══ SCENARIO: 'AMS Target Scenario' ═══
+  ActiveScenario: 'AMS Target Scenario'
+  scenario-column filter: 291 -> 52 rows (kept untagged + scenario='AMS Target Scenario')
+  52 rows across 10 region group(s)
+
+[transport] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[transport] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (6 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 2.88, 2026, 2.15559, 2027, 1.39888, 2028, 0....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 0.32, 2026, 1.22551, 2027, 2.1714, 2028, 3.1...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 96.1326, 2026, 95.0912, 2027, 94.0034, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 96.8, 2026, 96.6189, 2027, 96.4297, 2028, 96...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Cambodia' (8 rows) ---
+[HB t=11:09:18 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Cambodia region_idx=2/10 rows_in_region=8 rows_written=6 row_in_region=10/12 pushed=52 failed=0 elapsed=8m38s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2025, 0.509045, 2026, 1.8646, 2027, 3.28059, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 7.31368, 2026, 6.62006, 2027, 5.89551, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 0.731368, 2026, 1.5984, 2027, 2.50409, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Natural Gas . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 4.9896, 2026, 4.9896, 2027, 4.9896, 2028, 4....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.491, 2026, 98.1354, 2027, 96.7194, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 91.9549, 2026, 91.7815, 2027, 91.6004, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Philippines' (7 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2025, 0.202082, 2026, 1.58635, 2027, 3.03233, 2028...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 40, 2026, 39.2687, 2027, 38.5153, 2028, 37.7...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 0.337079, 2026, 1.25125, 2027, 2.19297, 2028...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.7979, 2026, 98.4137, 2027, 96.9677, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 59.6629, 2026, 59.4801, 2027, 59.2917, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 1.20121, 2026, 1.20121, 2027, 1.20121, 2028,...
+  --- region 'Singapore' (7 rows) ---
+[HB t=11:09:31 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Singapore region_idx=4/10 rows_in_region=7 rows_written=21 row_in_region=10/12 pushed=52 failed=0 elapsed=8m51s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2025, 0.483053, 2026, 15.8995, 2027, 32.0433, 2028...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 46.8605, 2026, 36.5625, 2027, 25.7786, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 33.6047, 2026, 46.4771, 2027, 59.957, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0.3517, 2026, 0.3517, 2027, 0.3517, 2028, 0....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.5169, 2026, 84.1005, 2027, 67.9567, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 19.5349, 2026, 16.9604, 2027, 14.2644, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 5, 2026, 5, 2027, 5, 2028, 5, 2029, 5, 2030,...
+  --- region 'Indonesia' (4 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 98.7657, 2026, 97.0603, 2027, 95.2458, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 94.2249, 2026, 93.0216, 2027, 88.4945, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Laos' (4 rows) ---
+[HB t=11:09:43 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Laos region_idx=6/10 rows_in_region=4 rows_written=32 row_in_region=10/12 pushed=52 failed=0 elapsed=9m04s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.9934, 2026, 98.5908, 2027, 97.1257, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 72.9685, 2026, 72.7825, 2027, 72.5882, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Malaysia' (4 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0.905433, 2026, 0.905433, 2027, 0.905433, 20...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 96, 2026, 94.971, 2027, 93.8961, 2028, 92.78...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 90.9833, 2026, 90.495, 2027, 89.9919, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 17.1505, 2026, 17.1505, 2027, 17.1505, 2028,...
+  --- region 'Myanmar' (4 rows) ---
+[HB t=11:09:56 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Myanmar region_idx=8/10 rows_in_region=4 rows_written=40 row_in_region=10/12 pushed=52 failed=0 elapsed=9m16s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 100, 2026, 98.5968, 2027, 97.1311, 2028, 95....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 40.0469, 2026, 39.8604, 2027, 39.6656, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 10.0054, 2026, 10.0054, 2027, 10.0054, 2028,...
+  --- region 'Thailand' (4 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 2.53105, 2026, 2.53105, 2027, 2.53105, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 98.5107, 2026, 96.374, 2027, 94.1007, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 36.3005, 2026, 35.5909, 2027, 34.8478, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0.714504, 2026, 0.714504, 2027, 0.714504, 20...
+  --- region 'Vietnam' (4 rows) ---
+[HB t=11:10:08 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Vietnam region_idx=10/10 rows_in_region=4 rows_written=48 row_in_region=10/12 pushed=52 failed=0 elapsed=9m28s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 92.0862, 2026, 90.079, 2027, 87.9434, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 68.5294, 2026, 68.4079, 2027, 68.2731, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  [real-inject] {'pushed': 52}
+
+[transport] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel
+  [EXACT] Cambodia|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity
+  [EXACT] Philippines|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity
+  [EXACT] Singapore|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity
+  [EXACT] Indonesia|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Laos|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Malaysia|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Myanmar|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Thailand|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Vietnam|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:11:08 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Vietnam region_idx=10/10 rows_in_region=4 rows_written=48 row_in_region=10/12 pushed=52 failed=0 elapsed=10m28s]
+
+[transport] ╔═══ SCENARIO: 'Regional Aspiration Scenario' ═══
+  ActiveScenario: 'Regional Aspiration Scenario'
+  scenario-column filter: 291 -> 52 rows (kept untagged + scenario='Regional Aspiration Scenario')
+  52 rows across 10 region group(s)
+
+[transport] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[transport] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (6 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 2.88, 2026, 0.00241173, 2027, 0, 2028, 0, 20...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 0.32, 2026, 3.91699, 2027, 8.41946, 2028, 13...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 96.1326, 2026, 91.4526, 2027, 85.722, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 96.8, 2026, 96.0806, 2027, 91.5805, 2028, 86...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Cambodia' (8 rows) ---
+[HB t=11:11:20 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Cambodia region_idx=2/10 rows_in_region=8 rows_written=6 row_in_region=10/12 pushed=52 failed=0 elapsed=10m40s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2025, 0.509045, 2026, 4.78541, 2027, 9.84036, 2028...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 7.31368, 2026, 4.66117, 2027, 1.47574, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 0.731368, 2026, 4.04701, 2027, 8.0288, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Natural Gas . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 4.9896, 2026, 4.9896, 2027, 4.9896, 2028, 4....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.491, 2026, 95.2146, 2027, 90.1596, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 91.9549, 2026, 91.2918, 2027, 90.4955, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Philippines' (7 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2025, 0.202082, 2026, 5.06052, 2027, 11.0096, 2028...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 40, 2026, 37.1229, 2027, 33.5215, 2028, 29.1...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 0.337079, 2026, 3.93345, 2027, 8.43516, 2028...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.7979, 2026, 94.9395, 2027, 88.9904, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 59.6629, 2026, 58.9436, 2027, 58.0433, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 1.20121, 2026, 1.20121, 2027, 1.20121, 2028,...
+  --- region 'Singapore' (7 rows) ---
+[HB t=11:11:33 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Singapore region_idx=4/10 rows_in_region=7 rows_written=21 row_in_region=10/12 pushed=52 failed=0 elapsed=10m53s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity . 'Activity Level' = Interp(2025, 0.483053, 2026, 15.8995, 2027, 32.0433, 2028...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel . 'Activity Level' = Interp(2025, 46.8605, 2026, 36.5625, 2027, 25.7786, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Electricity . 'Activity Level' = Interp(2025, 33.6047, 2026, 46.4771, 2027, 59.957, 2028, ...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0.3517, 2026, 0.3517, 2027, 0.3517, 2028, 0....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.5169, 2026, 84.1005, 2027, 67.9567, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 19.5349, 2026, 16.9604, 2027, 14.2644, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 5, 2026, 5, 2027, 5, 2028, 5, 2029, 5, 2030,...
+  --- region 'Indonesia' (4 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 98.7657, 2026, 91.7826, 2027, 83.1662, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 94.2249, 2026, 92.6739, 2027, 86.8668, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Laos' (4 rows) ---
+[HB t=11:11:46 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Laos region_idx=6/10 rows_in_region=4 rows_written=32 row_in_region=10/12 pushed=52 failed=0 elapsed=11m06s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 99.9934, 2026, 95.6954, 2027, 90.6149, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 72.9685, 2026, 72.3008, 2027, 71.4991, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  --- region 'Malaysia' (4 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0.905433, 2026, 0.905433, 2027, 0.905433, 20...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 96, 2026, 86.2456, 2027, 74.7156, 2028, 61.7...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 90.9833, 2026, 89.6052, 2027, 82.0629, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 17.1505, 2026, 17.1505, 2027, 17.1505, 2028,...
+  --- region 'Myanmar' (4 rows) ---
+[HB t=11:11:59 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Myanmar region_idx=8/10 rows_in_region=4 rows_written=40 row_in_region=10/12 pushed=52 failed=0 elapsed=11m19s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 100, 2026, 95.7018, 2027, 90.6209, 2028, 84....
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 40.0469, 2026, 39.3791, 2027, 38.5771, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 10.0054, 2026, 10.0054, 2027, 10.0054, 2028,...
+  --- region 'Thailand' (4 rows) ---
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 2.53105, 2026, 2.53105, 2027, 2.53105, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 98.5107, 2026, 88.5012, 2027, 76.6696, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 36.3005, 2026, 35.0519, 2027, 33.5112, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0.714504, 2026, 0.714504, 2027, 0.714504, 20...
+  --- region 'Vietnam' (4 rows) ---
+[HB t=11:12:11 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Vietnam region_idx=10/10 rows_in_region=4 rows_written=48 row_in_region=10/12 pushed=52 failed=0 elapsed=11m31s]
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Gasoline . 'Activity Level' = Interp(2025, 92.0862, 2026, 85.5754, 2027, 77.5417, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Gasoline . 'Activity Level' = Interp(2025, 68.5294, 2026, 67.8049, 2027, 66.3534, 2028,...
+     [OK]  Key\TransportDataStock\Vehicles_Sales_Share\Truck\Gasoline . 'Activity Level' = Interp(2025, 0, 2026, 0, 2027, 0, 2028, 0, 2029, 0, 2030,...
+  [real-inject] {'pushed': 52}
+
+[transport] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\PassengerCar\Blended Diesel
+  [EXACT] Cambodia|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity
+  [EXACT] Philippines|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity
+  [EXACT] Singapore|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Motorcycle\Electricity
+  [EXACT] Indonesia|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Laos|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Malaysia|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Myanmar|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Thailand|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  [EXACT] Vietnam|Activity Level on Key\TransportDataStock\Vehicles_Sales_Share\Bus\Gasoline
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+
+[transport] === ALL SCENARIOS DONE ===
+[HB-DONE op=inject_transport elapsed=12m30s rows=133 progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\transport\20260723\_progress_inject_transport_20260727_110039.json]
+
+======================================================================
+[mega] PAYLOAD 4/6 — CommercialInjector  (commercial_canonical_20260722.csv)
+======================================================================
+[HB-START op=inject_commercial progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\commercial\20260722\_progress_inject_commercial_20260727_111310.json]
+[commercial] ActiveArea (locked): 'aeo9_v0.81'
+[commercial] WARN: could not verify LEAP decimal separator regional (no decimal-bearing Interp found in sample). Proceeding; if decimal-bearing rows produce readback FAIL with comma-decimal evidence, abort and flip LEAP regional to period.
+[commercial] Will process 4 scenario(s) in ONE COM session: ['Current Accounts', 'Baseline Simulation', 'AMS Target Scenario', 'Regional Aspiration Scenario']
+[HB t=11:13:24 stage=com_dispatched area=aeo9_v0.81 scenarios_total=4 elapsed=0m13s]
+
+[commercial] ╔═══ SCENARIO: 'Current Accounts' ═══
+  ActiveScenario: 'Current Accounts'
+  scenario-column filter: 626 -> 124 rows (kept untagged + scenario='Current Accounts')
+  124 rows across 10 region group(s)
+
+[commercial] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[commercial] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (12 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 66.33
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 12.33
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 222.22
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 32.71
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 39.58
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 28.79
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 14.21
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10.31
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 33.61
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Cambodia' (12 rows) ---
+[HB t=11:13:37 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Cambodia region_idx=2/10 rows_in_region=12 rows_written=12 row_in_region=10/12 elapsed=0m26s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 233.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 21.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 560.22
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 129.12
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 514.59
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 12.36
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Indonesia' (12 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 186.99
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 20.76
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 242.24
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 208.84
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 473.54
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 20
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Laos' (12 rows) ---
+[HB t=11:13:51 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Laos region_idx=4/10 rows_in_region=12 rows_written=36 row_in_region=10/12 elapsed=0m40s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 51.92
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 1142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 275.16
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 1142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 50.84
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 40
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 57.98
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 9
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 11.18
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 3.87
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Malaysia' (12 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 95.18
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 11.3
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 131.78
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 113.62
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 257.62
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 85.5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 20
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Myanmar' (12 rows) ---
+[HB t=11:14:05 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Myanmar region_idx=6/10 rows_in_region=12 rows_written=60 row_in_region=10/12 elapsed=0m54s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 1008.19
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 94.59
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 2127.66
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 558.63
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 2127.66
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 60
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 14.08
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5.23
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Philippines' (12 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 467.98
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 51.96
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 242.5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 522.68
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 1176.47
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Singapore' (15 rows) ---
+[HB t=11:14:19 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Singapore region_idx=8/10 rows_in_region=15 rows_written=84 row_in_region=10/12 elapsed=1m08s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 236.27
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 17.23
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 512.82
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 189.03
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 423.75
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 12.46
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Key\Commercial\Energy consumption per area\Office . 'Activity Level' = 218
+     [OK]  Key\Commercial\Energy consumption per area\Hotel . 'Activity Level' = 292
+     [OK]  Key\Commercial\Energy consumption per area\Retailer . 'Activity Level' = 405
+  --- region 'Thailand' (13 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 392.32
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 32.69
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 971.7
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 328.83
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 745.61
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 60.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 7.85
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Key\Commercial\Energy consumption per area\Retailer . 'Activity Level' = 350
+  --- region 'Vietnam' (12 rows) ---
+[HB t=11:14:33 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Current Accounts scenario_idx=1/4 region=Vietnam region_idx=10/10 rows_in_region=12 rows_written=112 row_in_region=10/13 elapsed=1m22s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 207.99
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 19.51
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 616.81
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 115.25
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 459.29
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 10.02
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  [real-inject] {'pushed': 124}
+
+[commercial] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Cambodia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Indonesia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Laos|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Malaysia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Myanmar|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Philippines|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Singapore|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Thailand|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Vietnam|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:15:33 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Vietnam region_idx=10/10 rows_in_region=12 rows_written=122 row_in_region=10/12 pushed=124 failed=0 elapsed=2m22s]
+
+[commercial] ╔═══ SCENARIO: 'Baseline Simulation' ═══
+  ActiveScenario: 'Baseline Simulation'
+  scenario-column filter: 626 -> 164 rows (kept untagged + scenario='Baseline Simulation')
+  164 rows across 10 region group(s)
+
+[commercial] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[commercial] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (16 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 66.33
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 12.33
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 222.22
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 32.71
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 39.58
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 28.79
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 14.21
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10.31
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 33.61
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Cambodia' (16 rows) ---
+[HB t=11:15:45 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Cambodia region_idx=2/10 rows_in_region=16 rows_written=16 row_in_region=10/16 pushed=124 failed=0 elapsed=2m35s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 233.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 21.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 560.22
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 129.12
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 514.59
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 12.36
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Indonesia' (16 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 186.99
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 20.76
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 242.24
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 208.84
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 473.54
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 20
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Laos' (16 rows) ---
+[HB t=11:16:00 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Laos region_idx=4/10 rows_in_region=16 rows_written=48 row_in_region=10/16 pushed=124 failed=0 elapsed=2m50s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 51.92
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 1142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 275.16
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 1142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 50.84
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 40
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 57.98
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 9
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 11.18
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 3.87
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Malaysia' (16 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 95.18
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 11.3
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 131.78
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 113.62
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 257.62
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 85.5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 20
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Myanmar' (16 rows) ---
+[HB t=11:16:15 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Myanmar region_idx=6/10 rows_in_region=16 rows_written=80 row_in_region=10/16 pushed=124 failed=0 elapsed=3m04s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 1008.19
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 94.59
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 2127.66
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 558.63
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 2127.66
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 60
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 14.08
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5.23
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Philippines' (16 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 467.98
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 51.96
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 242.5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 522.68
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 1176.47
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Singapore' (19 rows) ---
+[HB t=11:16:29 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Singapore region_idx=8/10 rows_in_region=19 rows_written=112 row_in_region=10/16 pushed=124 failed=0 elapsed=3m19s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 236.27
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 17.23
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 512.82
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 189.03
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 423.75
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 12.46
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Key\Commercial\Energy consumption per area\Office . 'Activity Level' = 218
+     [OK]  Key\Commercial\Energy consumption per area\Hotel . 'Activity Level' = 292
+     [OK]  Key\Commercial\Energy consumption per area\Retailer . 'Activity Level' = 405
+  --- region 'Thailand' (17 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 392.32
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 32.69
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 971.7
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 328.83
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 745.61
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 60.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 7.85
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Key\Commercial\Energy consumption per area\Retailer . 'Activity Level' = 350
+  --- region 'Vietnam' (16 rows) ---
+[HB t=11:16:44 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Vietnam region_idx=10/10 rows_in_region=16 rows_written=148 row_in_region=10/17 pushed=124 failed=0 elapsed=3m33s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 207.99
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 19.51
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 616.81
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 115.25
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 459.29
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 10.02
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = 0
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  [real-inject] {'pushed': 164}
+
+[commercial] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Cambodia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Indonesia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Laos|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Malaysia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Myanmar|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Philippines|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Singapore|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Thailand|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Vietnam|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:17:49 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Vietnam region_idx=10/10 rows_in_region=16 rows_written=158 row_in_region=10/16 pushed=164 failed=0 elapsed=4m38s]
+
+[commercial] ╔═══ SCENARIO: 'AMS Target Scenario' ═══
+  ActiveScenario: 'AMS Target Scenario'
+  scenario-column filter: 626 -> 164 rows (kept untagged + scenario='AMS Target Scenario')
+  164 rows across 10 region group(s)
+
+[commercial] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[commercial] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (16 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 66.33
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 12.33
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 222.22
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 32.71
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 39.58
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 28.79
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 14.21
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10.31
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 33.61
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.2144, 2025, 0.4877, 2026, 0.8296,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.7133, 2025, 97.0741, 2026, 95....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.6433, 2025, 1.463, 2026, 2.4889, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.8578, 2025, 1.9506, 2026, 3.3185,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Cambodia' (16 rows) ---
+[HB t=11:18:05 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Cambodia region_idx=2/10 rows_in_region=16 rows_written=16 row_in_region=10/16 pushed=164 failed=0 elapsed=4m54s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 233.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 21.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 560.22
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 129.12
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 514.59
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 12.36
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.1876, 2025, 0.4267, 2026, 0.7259,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.8742, 2025, 97.4398, 2026, 95....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.5629, 2025, 1.2801, 2026, 2.1778,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.7506, 2025, 1.7068, 2026, 2.9037,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Indonesia' (16 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 186.99
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 20.76
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 242.24
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 208.84
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 473.54
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 20
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.2413, 2025, 0.5486, 2026, 0.9333,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.5525, 2025, 96.7083, 2026, 94....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.7238, 2025, 1.6458, 2026, 2.8, 20...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.965, 2025, 2.1944, 2026, 3.7334, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Laos' (16 rows) ---
+[HB t=11:18:21 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Laos region_idx=4/10 rows_in_region=16 rows_written=48 row_in_region=10/16 pushed=164 failed=0 elapsed=5m10s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 51.92
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 1142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 275.16
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 1142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 50.84
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 40
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 57.98
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 9
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 11.18
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 3.87
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.1876, 2025, 0.4267, 2026, 0.7259,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.8742, 2025, 97.4398, 2026, 95....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.5629, 2025, 1.2801, 2026, 2.1778,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.7506, 2025, 1.7068, 2026, 2.9037,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Malaysia' (16 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 95.18
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 11.3
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 131.78
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 113.62
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 257.62
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 85.5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 20
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.2144, 2025, 0.4877, 2026, 0.8296,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.7133, 2025, 97.0741, 2026, 95....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.6433, 2025, 1.463, 2026, 2.4889, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.8578, 2025, 1.9506, 2026, 3.3185,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Myanmar' (16 rows) ---
+[HB t=11:18:36 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Myanmar region_idx=6/10 rows_in_region=16 rows_written=80 row_in_region=10/16 pushed=164 failed=0 elapsed=5m25s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 1008.19
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 94.59
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 2127.66
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 558.63
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 2127.66
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 60
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 14.08
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5.23
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.1876, 2025, 0.4267, 2026, 0.7259,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.8742, 2025, 97.4398, 2026, 95....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.5629, 2025, 1.2801, 2026, 2.1778,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.7506, 2025, 1.7068, 2026, 2.9037,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Philippines' (16 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 467.98
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 51.96
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 242.5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 522.68
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 1176.47
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.2144, 2025, 0.4877, 2026, 0.8296,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.7133, 2025, 97.0741, 2026, 95....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.6433, 2025, 1.463, 2026, 2.4889, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.8578, 2025, 1.9506, 2026, 3.3185,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  --- region 'Singapore' (19 rows) ---
+[HB t=11:18:50 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Singapore region_idx=8/10 rows_in_region=19 rows_written=112 row_in_region=10/16 pushed=164 failed=0 elapsed=5m39s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 236.27
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 17.23
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 512.82
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 189.03
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 423.75
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 12.46
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.2413, 2025, 0.5486, 2026, 0.9333,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.5525, 2025, 96.7083, 2026, 94....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.7238, 2025, 1.6458, 2026, 2.8, 20...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.965, 2025, 2.1944, 2026, 3.7334, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Key\Commercial\Energy consumption per area\Office . 'Activity Level' = 218
+     [OK]  Key\Commercial\Energy consumption per area\Hotel . 'Activity Level' = 292
+     [OK]  Key\Commercial\Energy consumption per area\Retailer . 'Activity Level' = 405
+  --- region 'Thailand' (17 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 392.32
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 32.69
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 971.7
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 328.83
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 745.61
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 60.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 7.85
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.2681, 2025, 0.6096, 2026, 1.037, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.3916, 2025, 96.3426, 2026, 93....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.8042, 2025, 1.8287, 2026, 3.1111,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 1.0722, 2025, 2.4383, 2026, 4.1482,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Key\Commercial\Energy consumption per area\Retailer . 'Activity Level' = 350
+  --- region 'Vietnam' (16 rows) ---
+[HB t=11:19:05 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Vietnam region_idx=10/10 rows_in_region=16 rows_written=148 row_in_region=10/17 pushed=164 failed=0 elapsed=5m54s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 207.99
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 19.51
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 616.81
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 115.25
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 459.29
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 10.02
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.2681, 2025, 0.6096, 2026, 1.037, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 98.3916, 2025, 96.3426, 2026, 93....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 0.8042, 2025, 1.8287, 2026, 3.1111,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 1.0722, 2025, 2.4383, 2026, 4.1482,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+  [real-inject] {'pushed': 164}
+
+[commercial] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Cambodia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Indonesia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Laos|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Malaysia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Myanmar|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Philippines|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Singapore|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Thailand|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Vietnam|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:20:03 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Vietnam region_idx=10/10 rows_in_region=16 rows_written=158 row_in_region=10/16 pushed=164 failed=0 elapsed=6m52s]
+
+[commercial] ╔═══ SCENARIO: 'Regional Aspiration Scenario' ═══
+  ActiveScenario: 'Regional Aspiration Scenario'
+  scenario-column filter: 626 -> 174 rows (kept untagged + scenario='Regional Aspiration Scenario')
+  174 rows across 10 region group(s)
+
+[commercial] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[commercial] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (17 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 66.33
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 12.33
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 222.22
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 32.71
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 39.58
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 28.79
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 14.21
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10.31
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 33.61
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.889, 2025, 2.1658, 2026, 3.9237, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.2963, 2025, 0.7219, 2026, 1.3079,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.6294, 2025, 94.2244, 2026, 89....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 2.0743, 2025, 5.0536, 2026, 9.1553,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 0
+  --- region 'Cambodia' (17 rows) ---
+[HB t=11:20:16 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Cambodia region_idx=2/10 rows_in_region=17 rows_written=17 row_in_region=10/17 pushed=164 failed=0 elapsed=7m06s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 233.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 21.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 560.22
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 129.12
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 514.59
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 12.36
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.7779, 2025, 1.8951, 2026, 3.4332,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.2593, 2025, 0.6317, 2026, 1.1444,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.9257, 2025, 94.9464, 2026, 90....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 1.815, 2025, 4.4219, 2026, 8.0109, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 0
+  --- region 'Indonesia' (17 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 186.99
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 20.76
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 242.24
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 208.84
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 473.54
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 20
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 1.0001, 2025, 2.4366, 2026, 4.4142,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.3334, 2025, 0.8122, 2026, 1.4714,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.333, 2025, 93.5025, 2026, 88.2...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 2.3336, 2025, 5.6853, 2026, 10.2997...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 30.71
+  --- region 'Laos' (17 rows) ---
+[HB t=11:20:32 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Laos region_idx=4/10 rows_in_region=17 rows_written=51 row_in_region=10/17 pushed=164 failed=0 elapsed=7m21s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 51.92
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 1142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 275.16
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 1142.86
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 50.84
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 40
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 57.98
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 9
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 11.18
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 3.87
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.7779, 2025, 1.8951, 2026, 3.4332,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.2593, 2025, 0.6317, 2026, 1.1444,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.9257, 2025, 94.9464, 2026, 90....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 1.815, 2025, 4.4219, 2026, 8.0109, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 0
+  --- region 'Malaysia' (17 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 95.18
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 11.3
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 131.78
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 113.62
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 257.62
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 85.5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 20
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.889, 2025, 2.1658, 2026, 3.9237, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.2963, 2025, 0.7219, 2026, 1.3079,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.6294, 2025, 94.2244, 2026, 89....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 2.0743, 2025, 5.0536, 2026, 9.1553,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 0
+  --- region 'Myanmar' (17 rows) ---
+[HB t=11:20:47 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Myanmar region_idx=6/10 rows_in_region=17 rows_written=85 row_in_region=10/17 pushed=164 failed=0 elapsed=7m36s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 1008.19
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 94.59
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 2127.66
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 558.63
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 2127.66
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 60
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 14.08
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5.23
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.7779, 2025, 1.8951, 2026, 3.4332,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.2593, 2025, 0.6317, 2026, 1.1444,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.9257, 2025, 94.9464, 2026, 90....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 1.815, 2025, 4.4219, 2026, 8.0109, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 0
+  --- region 'Philippines' (17 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 467.98
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 51.96
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 242.5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 522.68
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 1176.47
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 0.889, 2025, 2.1658, 2026, 3.9237, ...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.2963, 2025, 0.7219, 2026, 1.3079,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.6294, 2025, 94.2244, 2026, 89....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 2.0743, 2025, 5.0536, 2026, 9.1553,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 0
+  --- region 'Singapore' (20 rows) ---
+[HB t=11:21:02 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Singapore region_idx=8/10 rows_in_region=20 rows_written=119 row_in_region=10/17 pushed=164 failed=0 elapsed=7m51s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 236.27
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 17.23
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 512.82
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 189.03
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 423.75
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 12.46
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 1.0001, 2025, 2.4366, 2026, 4.4142,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.3334, 2025, 0.8122, 2026, 1.4714,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.333, 2025, 93.5025, 2026, 88.2...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 2.3336, 2025, 5.6853, 2026, 10.2997...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Key\Commercial\Energy consumption per area\Office . 'Activity Level' = 218
+     [OK]  Key\Commercial\Energy consumption per area\Hotel . 'Activity Level' = 292
+     [OK]  Key\Commercial\Energy consumption per area\Retailer . 'Activity Level' = 405
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 0
+  --- region 'Thailand' (18 rows) ---
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 392.32
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 32.69
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 971.7
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 328.83
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 745.61
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 60.04
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 7.85
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 1.1112, 2025, 2.7073, 2026, 4.9046,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.3704, 2025, 0.9024, 2026, 1.6349,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.0367, 2025, 92.7805, 2026, 86....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 2.5929, 2025, 6.3171, 2026, 11.4441...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Key\Commercial\Energy consumption per area\Retailer . 'Activity Level' = 350
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 3.39
+  --- region 'Vietnam' (17 rows) ---
+[HB t=11:21:16 stage=real_region area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Vietnam region_idx=10/10 rows_in_region=17 rows_written=157 row_in_region=10/18 pushed=164 failed=0 elapsed=8m05s]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Commercial Uncalibrated Energy Intensity' = 207.99
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Commercial Uncalibrated Energy Intensity' = 19.51
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Commercial Uncalibrated Energy Intensity' = 616.81
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Commercial Uncalibrated Energy Intensity' = 115.25
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Commercial Uncalibrated Energy Intensity' = 459.29
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning . 'Activity Level' = 80
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Cooking and Food Processing . 'Activity Level' = 50
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Lighting . 'Activity Level' = 90
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Other . 'Activity Level' = 10.02
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration . 'Activity Level' = 10
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating . 'Activity Level' = 5
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Best Practice . 'Activity Level' = Interp(2023, 0, 2024, 1.1112, 2025, 2.7073, 2026, 4.9046,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Sales_Average . 'Activity Level' = Interp(2023, 0, 2024, 0.3704, 2025, 0.9024, 2026, 1.6349,...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning\Current Stock_Average . 'Activity Level' = Interp(2023, 100, 2024, 97.0367, 2025, 92.7805, 2026, 86....
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Activity Level' = Interp(2023, 0, 2024, 2.5929, 2025, 6.3171, 2026, 11.4441...
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Refrigeration\Efficient . 'Final Energy Intensity' = 0.604 * Existing:Final Energy Intensity[kWh]
+     [OK]  Demand\Commercial\Other Commercial\End Use Projection\Water Heating\Solar Heating . 'Activity Level' = 0
+  [real-inject] {'pushed': 174}
+
+[commercial] ── Phase 4: READBACK VERIFY ──
+  Verifying 10 representative row(s) (1 per region × 10 region(s))
+  [EXACT] Brunei|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Cambodia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Indonesia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Laos|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Malaysia|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Myanmar|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Philippines|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Singapore|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Thailand|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  [EXACT] Vietnam|Commercial Uncalibrated Energy Intensity on Demand\Commercial\Other Commercial\End Use Projection\Air Conditioning
+  Readback summary: 10 EXACT, 0 NORMALISED, 0 FAIL
+
+[commercial] === ALL SCENARIOS DONE ===
+[HB-DONE op=inject_commercial elapsed=9m03s rows=167 progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\commercial\20260722\_progress_inject_commercial_20260727_111310.json]
+
+======================================================================
+[mega] PAYLOAD 5/6 — BioenergyInjector  (bioenergy_delta_20260722b.csv)
+======================================================================
+[HB-START op=inject_bioenergy progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\bioenergy\20260722b\_progress_inject_bioenergy_20260727_112214.json]
+[bioenergy] ActiveArea (locked): 'aeo9_v0.81'
+[bioenergy] WARN: could not verify LEAP decimal separator regional (no decimal-bearing Interp found in sample). Proceeding; if decimal-bearing rows produce readback FAIL with comma-decimal evidence, abort and flip LEAP regional to period.
+[bioenergy] Will process 4 scenario(s) in ONE COM session: ['Current Accounts', 'Baseline Simulation', 'AMS Target Scenario', 'Regional Aspiration Scenario']
+[HB t=11:22:27 stage=com_dispatched area=aeo9_v0.81 scenarios_total=4 elapsed=0m13s]
+
+[bioenergy] ╔═══ SCENARIO: 'Current Accounts' ═══
+  ActiveScenario: 'Current Accounts'
+  scenario-column filter: 114 -> 1 rows (kept untagged + scenario='Current Accounts')
+  1 rows across 1 region group(s)
+
+[bioenergy] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[bioenergy] ── Phase 3: REAL INJECT ──
+  --- region 'Philippines' (1 rows) ---
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Exogenous Capacity' = Interp(2015, 204, 2016, 227, 2017, 220, 2018, 220, 2019, ...
+  [real-inject] {'pushed': 1}
+
+[bioenergy] ── Phase 4: READBACK VERIFY ──
+  Verifying 1 representative row(s) (1 per region × 1 region(s))
+  [EXACT] Philippines|Exogenous Capacity on Transformation\Biodiesel Production\Processes\FAME Biodiesel
+  Readback summary: 1 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:22:39 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Baseline Simulation scenario_idx=2/4 region=Philippines region_idx=1/1 rows_in_region=1 rows_written=0 pushed=1 failed=0 elapsed=0m25s]
+
+[bioenergy] ╔═══ SCENARIO: 'Baseline Simulation' ═══
+  ActiveScenario: 'Baseline Simulation'
+  scenario-column filter: 114 -> 1 rows (kept untagged + scenario='Baseline Simulation')
+  1 rows across 1 region group(s)
+
+[bioenergy] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[bioenergy] ── Phase 3: REAL INJECT ──
+  --- region 'Philippines' (1 rows) ---
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Exogenous Capacity' = Interp(2015, 204, 2016, 227, 2017, 220, 2018, 220, 2019, ...
+  [real-inject] {'pushed': 1}
+
+[bioenergy] ── Phase 4: READBACK VERIFY ──
+  Verifying 1 representative row(s) (1 per region × 1 region(s))
+  [EXACT] Philippines|Exogenous Capacity on Transformation\Biodiesel Production\Processes\FAME Biodiesel
+  Readback summary: 1 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:22:51 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=AMS Target Scenario scenario_idx=3/4 region=Philippines region_idx=1/1 rows_in_region=1 rows_written=0 pushed=1 failed=0 elapsed=0m36s]
+
+[bioenergy] ╔═══ SCENARIO: 'AMS Target Scenario' ═══
+  ActiveScenario: 'AMS Target Scenario'
+  scenario-column filter: 114 -> 1 rows (kept untagged + scenario='AMS Target Scenario')
+  1 rows across 1 region group(s)
+
+[bioenergy] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[bioenergy] ── Phase 3: REAL INJECT ──
+  --- region 'Philippines' (1 rows) ---
+     [OK]  Transformation\Biodiesel Production\Processes\FAME Biodiesel . 'Exogenous Capacity' = Interp(2015, 204, 2016, 227, 2017, 220, 2018, 220, 2019, ...
+  [real-inject] {'pushed': 1}
+
+[bioenergy] ── Phase 4: READBACK VERIFY ──
+  Verifying 1 representative row(s) (1 per region × 1 region(s))
+  [EXACT] Philippines|Exogenous Capacity on Transformation\Biodiesel Production\Processes\FAME Biodiesel
+  Readback summary: 1 EXACT, 0 NORMALISED, 0 FAIL
+[HB t=11:23:02 stage=scenario_start area=aeo9_v0.81 scenarios_total=4 scenario=Regional Aspiration Scenario scenario_idx=4/4 region=Philippines region_idx=1/1 rows_in_region=1 rows_written=0 pushed=1 failed=0 elapsed=0m48s]
+
+[bioenergy] ╔═══ SCENARIO: 'Regional Aspiration Scenario' ═══
+  ActiveScenario: 'Regional Aspiration Scenario'
+  scenario-column filter: 114 -> 111 rows (kept untagged + scenario='Regional Aspiration Scenario')
+  111 rows across 10 region group(s)
+
+[bioenergy] ── Phase 1: DRY RUN — SKIPPED (per --skip-dry-run) ──
+  [dry-run] {}
+
+[bioenergy] ── Phase 3: REAL INJECT ──
+  --- region 'Brunei' (11 rows) ---
+     [OK]  Transformation\Diesel Blending\Processes\Biodiesel . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [OK]  Transformation\Gasoline Blending\Processes\Ethanol . 'Minimum Share of Production' = Interp(2025, 0, 2026, 0, 2027, 0, 2030, 0, 2035, 0, 2040,...
+     [SKIP] Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum_Share_of_Production' = None
+[HB-DONE op=inject_bioenergy elapsed=0m54s rows=0 progress=C:\Users\ThinkPad\Desktop\Py YY\NEMO_read\inject\bioenergy\20260722b\_progress_inject_bioenergy_20260727_112214.json]
+[bioenergy] FAIL-FAST: var_not_found: Transformation\Diesel Blending\Processes\Biodiesel . 'Maximum_Share_of_Production'

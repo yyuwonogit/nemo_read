@@ -1,0 +1,28 @@
+{
+  "op": "inject_power",
+  "started": "2026-07-27T11:31:41",
+  "progress_file": "C:\\Users\\ThinkPad\\Desktop\\Py YY\\NEMO_read\\inject\\power\\20260722\\_progress_inject_power_20260727_113141.json",
+  "current": {
+    "stage": "real_inject_done",
+    "area": "aeo9_v0.81",
+    "scenarios_total": 1,
+    "scenario": "Regional Aspiration Scenario",
+    "scenario_idx": "1/1",
+    "region": "Indonesia",
+    "region_idx": "1/1",
+    "rows_in_region": 32,
+    "rows_written": 30,
+    "row_in_region": "30/32",
+    "pushed": 32,
+    "failed": 0
+  },
+  "rows_total": 30,
+  "last_heartbeat": "11:32:05",
+  "finished": "2026-07-27T11:32:12",
+  "elapsed_seconds": 30.9,
+  "elapsed_human": "0m30s",
+  "summary": {
+    "any_failed": false,
+    "scenarios_processed": 1
+  }
+}
