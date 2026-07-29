@@ -5,7 +5,29 @@
 > across sessions. Update or empty it whenever a major piece of work
 > completes.
 
-## Status as of 2026-07-28 — aeo9_v0.82: post mega-inject + patch fix, awaiting full v0.82 input + yearly result
+## Status as of 2026-07-29 — aeo9_v0.82: RAS RESULT SOLVED + FULLY DIGESTED; still awaiting full v0.82 *input* export
+
+> **▶ START A DISCUSSION OF THIS RESULT HERE (works on any machine after push):**
+> Read **[result/20260729/NEMO_25_48_RAS_full_digest.md](result/20260729/NEMO_25_48_RAS_full_digest.md)**
+> — the complete decoded digest of the solved RAS run. 11 sections: headline,
+> electricity supply, storage/transmission/trade, demand, fuels & bioenergy blend,
+> emissions, costs, APAEC targets, anomaly sweep, what-the-inject-achieved, and a
+> **§11 Q&A springboard** (source DB path, 126-table roster, decode recipes,
+> honest-answer caveats). Every figure carries its source table inline; critic
+> corrections C1–C6 baked in. **The digest alone answers most questions.** For
+> deeper slices, the source DB is `mailbox/20260729 Final/NEMO_25 48.sqlite`
+> (271 MB, **NOT in git** — re-point if pruned/on another machine); §11.3 has the
+> `NemoDB`/SQL decode recipes.
+
+**Yearly RESULT half of Phase A/C — DONE.** The solved RAS calc (`NEMO_25 48.sqlite`)
+was received 2026-07-29 and fully digested. Headline: **FEASIBLE, unmet load = 0
+everywhere**; coal flips Subcritical→USC; ~107 GW nuclear + ~189 GW CCS build in the
+2040s; biodiesel rides its ceiling to B54; RE clears 45% capacity by 2030
+(rooftop-corrected); energy CO₂ 1.40→2.56 Gt after 199 Mt/yr CCS. Residual items for
+next cycle: 37 GW stranded IDN Coal-USC-CCS (A1), Unmet-Load phantom capex (A2),
+ethanol-blend late collapse, FAME 31.5× unit phantom in 6 small regions, road-vehicle
+fleet layer absent from results. **Still pending: the full v0.82 INPUT export** (the
+other half of Phase A — needed to confirm every injected expression landed vs canon).
 
 **Mega-inject COMPLETE.** All 6 payloads (1,387 rows) injected into `aeo9_v0.81`
 and readback EXACT (0 FAIL): transport hist 160 / audit 164 / delta 291 /
@@ -23,12 +45,12 @@ injector invocations); `leap_lock.py` (on/off toggle for the `.leap_lock` COM
 interlock). Delta payloads + logs + progress trail committed (branch
 `v080-canon-and-staged-injects`, commits 505899a + 88ce72a).
 
-**NOW AWAITING (Phase A/C):** the **full v0.82 input export** (complete
-input/expression set) **and the yearly results** (solved calc output). On arrival:
-evaluate input landed correctly vs the refreshed canon, and the result — Indonesia
-unmet load, fleet stock-overflow retirement, blend under the drifting ceiling,
-commercial AC ownership, coal/nuclear/RE/CCS movement — against the pre-inject
-baseline.
+**NOW AWAITING (Phase A/C):** only the **full v0.82 input export** remains — the
+**yearly result is IN and digested** (see the pointer at the top of this block).
+On the input export's arrival: confirm every injected expression landed correctly
+vs the refreshed canon (the result-side evaluation — unmet load falls, fleets retire
+via stock-overflow, blend under the drifting ceiling, AC ownership reads 282,
+coal/nuclear/RE/CCS movement — is already covered by the digest §10).
 
 ---
 
