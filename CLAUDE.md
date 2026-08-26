@@ -364,6 +364,22 @@ How to apply:
   - This is a *mechanical* complement to §A.9, not a replacement: even with
     the lock released you still confirm area + scenario before probing.
 
+**A.25 — NEVER rule on a stored unit/convention from a truncated
+expression preview. Read the FULL expression string before declaring
+"the area stores X as plain kW / per-unit / etc."** Burned 2026-08-14→18:
+ruled that v0.92 stores `Unit Capacity` as plain kW after printing the
+expression truncated at 50 chars — the trailing `* 10^6` (the area's
+LEAP-device basis, 1 LEAP device = 10^6 actual, defined in a comment on
+the Base Template row) sat beyond the cutoff. Stripped the author team's
+correct `* 10^6`, injected capacity 10^6× off-basis against Capital Cost
+(`* 10^6`) and Exogenous Devices (`/ 10^6`), and the next ACT calc bought
+the wrong device tiers everywhere (High_eff won 0/60 cells); the author
+team caught it (rev 5). Unit/basis rulings must scan the whole
+expression (e.g. substring search for `10^`, `/`, `*` over ALL rows of
+the variable), never `expr[:50]` previews — and when a team's drop
+disagrees with our reading of the export, re-verify at full length
+before "correcting" them (§A.14 applies to our own reads too).
+
 **A.11 — `Unlimited` string in LEAP authoring is a landmine. LEAP→NEMO
 export translates the literal `"Unlimited"` to `1.0e+12` regardless of
 which variable.** Two failure modes, BOTH catastrophic:

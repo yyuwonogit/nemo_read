@@ -1,0 +1,222 @@
+apply_higheff_kwh_drift.py — method sidecar (2026-08-13)
+=========================================================
+
+WHY
+---
+User direction 2026-08-13: the canonical inject economics should show High_eff
+drifting toward the cheapest total cost (annualized capex + electricity opex)
+in every size class by end of horizon, achieved by lowering High_eff kWh/yr
+from 2025 on — WITHOUT crossing the thermodynamic (ultimate-frontier) limit.
+Pre-patch state (frozen kWh): AC High_eff already TCO-cheapest in 27/30
+Country x Size cells at 2060 (BAS) but Fridge in 0/30 (Mid_eff dominated).
+
+WHAT
+----
+In-place patch of the two canonical injects (post-2026-07-15-fix versions):
+  Residential/LEAP Input/ac_leap_inject.csv
+  Residential/LEAP Input/fridge_leap_inject.csv
+High_eff rows only, all three scenarios (technology characteristic — the
+scenario delta stays purely compositional):
+  kwh_unit(High, y) = kwh_2024(High) * (1 - rate)^max(0, y - 2025),
+  floored at kwh_2024(High) * DF_ULT (ultimate frontier, never crossed).
+Low_eff / Mid_eff kWh stay frozen (unchanged).
+
+RATES (the key assumption)
+--------------------------
+Chosen as the MINIMUM rate reaching the frontier-feasible MAXIMUM of
+"High_eff TCO-cheapest by 2060" cells (rate scan 0.5-3.0%/yr, 2026-08-13):
+  AC     0.5%/yr  -> factor 0.839 by 2060; 28/30 cells flip. Equals the
+                     documented autonomous-technology rate in
+                     ac_leap_drift_method.md. Faster rates flip nothing more.
+  Fridge 2.0%/yr  -> factor 0.493 by 2060 = EXACTLY the documented ultimate
+                     frontier DF_ULT = (1-0.02)^35 in fridge_leap_drift_method.md
+                     (the "RAS best at 2060" frontier). The frontier cap binds:
+                     faster rates are floored and flip nothing more. 22/30 cells.
+
+HOLDOUTS (thermodynamically/economically unreachable within the limit)
+----------------------------------------------------------------------
+Cells where High_eff is still not TCO-cheapest at 2060 — all in low-tariff
+markets where opex is too small for any kWh cut to offset the capex premium:
+  AC (2):     Brunei Medium, Brunei Small (tariff 0.0072 USD/kWh)
+  Fridge (8): Brunei Large/Medium/Small, Lao PDR Medium, Malaysia Large/Medium,
+              Myanmar Medium, Viet Nam Medium
+
+ENCODING (mirrors the drift-variant useful-energy anchor)
+---------------------------------------------------------
+  Useful EI (per Country x Size, all years/scenarios)
+      = kwh_2024(High) * factor_2060 / 11630   [TOE]
+  Efficiency(cell, y) = Useful_EI * 11630 / kwh_unit(cell, y) * 100
+      -> High_eff ramps (AC 83.9% -> 100% at 2060; Fridge 49.3% -> 100%),
+         Low/Mid constant below; never exceeds 100%.
+  LEAP identity Final = Useful / Efficiency validated to 1e-6 in the script.
+  om_electricity_usd = kwh_unit * tariff (recomputed).
+  Demand Cost: RAS rows = capital + drifted O&M (recomputed); BAS/ATS rows
+  stay capital-only per the rowwise method — unchanged.
+UNCHANGED: all Activity/share columns, prices, annualized capital, CRF,
+tariffs, unit_capacity_kw (service capacity does not drift), exo devices,
+fridge_sales_projection.csv (upstream analytic keeps frozen kWh).
+
+RESULT (2060, BAS and ATS identical counts)
+-------------------------------------------
+  AC:     High_eff TCO-cheapest 28/30 cells (was 27 BAS / 28 ATS)
+  Fridge: High_eff TCO-cheapest 22/30 cells (was 0 BAS / 3 ATS-2060)
+
+RELATION TO THE PARALLEL DRIFT VARIANTS
+---------------------------------------
+ac/fridge_leap_inject_drift.csv (all-tier, per-scenario drift, pre-fix,
+2026-06-30) are untouched and remain superseded pending rebuild. This patch is
+narrower: High_eff-only, scenario-uniform, applied ON TOP of the fixed frozen
+canonicals — the composition lever (eff shares) is untouched, so no double
+count (same argument as fridge_leap_drift_method.md §"Two levers").
+
+RERUN
+-----
+python Residential/apply_higheff_kwh_drift.py
+Idempotency note: NOT idempotent on already-patched files for years >= 2025
+IF the 2024 anchor were drifted too — it is not (drift starts 2025), so the
+2024 anchor row is stable and re-running reproduces the same output exactly.
+
+ADDENDUM 2026-08-13 (same day, after user ruling on O&M)
+--------------------------------------------------------
+Electricity is NOT fully priced on the supply side for RAS device choice, so
+the canonical paste (higheff_patch_canonical.csv) now ALSO ships Variable OM
+Cost, RAS-only, as a per-energy rate: the electricity tariff converted to each
+branch's canon unit (USD/GJ on the 9 AC tiers + fridge Medium/Small; USD/kWh
+on fridge Large). LEAP applies the rate to device consumption, so this drift's
+falling High_eff kWh lowers its running cost automatically. These rows replace
+the stale 2014-anchored per-device-USD values found in those per-energy slots
+(units mismatch in the live model). Fixed OM Cost stays 0 (no maintenance
+data).
+
+ADDENDUM 2 2026-08-13 (infeasibility post-mortem + fix A)
+---------------------------------------------------------
+The rev-1 paste made the NEMO solve INFEASIBLE on area v0.92. Diagnosis (from
+the team's pre-inject exports, Residential/Raw/input_*_v092.csv): v0.92 runs
+every device at exactly 100% utilization by construction (per-device useful =
+old High_eff anchor = Unit Capacity x hours, with the team's "1 LEAP device =
+10^6 actual devices" coef), and pins Minimum Utilization = 100 on AC_ Small +
+Refrigeration_ Large (all tiers). The Useful_EI re-anchor lowered per-device
+useful to 83.9% (AC) / 49.3% (fridge) of capacity x hours in every year ->
+below the floor, fleet forced in by exo devices -> infeasible from the first
+optimized year. Ruled out with data: exo values identical to v0.92 (x1000
+lineage), Variable OM objective-only, Cal-factor coupling energy-consistent.
+FIX A (shipped in the rev-2 paste): 180 Unit Capacity rows (ACT) = v0.92 base
+x the same end-factors (AC x0.839089, fridge x0.493075), x10^6 coef kept ->
+utilization exactly 100% again every year; Minimum Utilization untouched.
+ALSO: v0.92 renamed Regional Aspiration Scenario to ASEAN Coordinated
+Transition (ACT) — every former RAS-tagged paste row now targets ACT, and the
+scenario set is CA / BAS / ATS / ACT.
+
+ADDENDUM 3 2026-08-14 (inject-team units review of the rev-2 paste)
+-------------------------------------------------------------------
+Verdict (Inject/md_author_guidance_higheff_patch_20260814.md): the Unit
+Capacity fix and every value were EXACTLY RIGHT; two UNIT conventions were
+wrong and are corrected in the rev-3 paste. (1) Unit Capacity is stored as
+plain kW per device — the "* 10^6" scaler seen in the v0.92 export is not
+part of storage; as sent each AC would have been a 469,638 kW machine.
+(2) Variable OM Cost is stored USD/GJ on EVERY tier since v0.92 — the v0.67
+canon's per-kWh entry for fridge Large is obsolete; those 30 rows are now
+x277.778 (Cambodia 0.15 -> 41.666667). Standing rules distilled to
+Inject/README_RESIDENTIAL_AUTHOR_FIXES.md: the expression is the only thing
+that lands (the CSV unit column is documentation); no arithmetic idioms or
+scalers in expressions — author the final number in the stored unit; and the
+PAIRING LAW is canon: scale Useful_EI by k -> scale Unit Capacity by the same
+k in the same drop (per appliance x size; per country for AC).
+
+ADDENDUM 4 2026-08-14 (rev-4: ACT tier-flip fix)
+------------------------------------------------
+Rev 3's flat per-GJ Variable OM rate was WRONG in basis: LEAP charges it on
+device OUTPUT (useful energy), which this encoding makes identical across
+tiers — so tier O&M equalized, only capex differed, and ACT's optimizer bought
+Low/Mid (ACFRIDGE.xlsx: ACT 2060 fridge demand 148 M GJ vs BAS 103 / ATS 89).
+Rev 4: rate(tier, y) = tariff / (Efficiency(tier, y)/100) x (1000/3.6) USD/GJ
+-> per device-year equals tariff x final_kWh(tier, y) exactly (validated:
+IDN fridge Large High 50.37->24.84 with drift, Mid 61.11, Low 76.77 USD/yr;
+Low pays 3.09x High per unit of service at 2060). Low/Mid constants, High_eff
+declining Interp. LESSON (canon): per-energy device-panel costs are charged on
+OUTPUT — tier-differentiate them by dividing by tier Efficiency; a flat rate
+deletes the efficiency signal.
+
+ADDENDUM 5 2026-08-15 (rev-5: ACT MEPS-2030 step)
+-------------------------------------------------
+User design: ACT is the only optimized scenario; BAS/ATS stay comparative with
+the gradual series. ACT High_eff Efficiency is now a STEP (4-point Interp, LP-
+clean, no yearly ramps): holds today's value to 2029, steps to 100% (frontier
+kWh) at 2030, flat after — "by 2030 High_eff is the definitive unit to
+purchase" (harmonised MEPS). ACT High VOM steps with it (tariff/e0 -> plain
+tariff); ACT Low/Mid Efficiency and VOM are plain constants. Capital Cost NOT
+touched (no invented premium policy — explicit user ruling). Useful_EI / Unit
+Capacity / exo unchanged; pairing law intact.
+Honest simulation (capex unchanged, r=9%, from 2030): High_eff strictly
+cheapest in 26/30 AC and 18/30 fridge cells. Holdouts are all low-tariff
+markets where O&M cannot repay the market capex premium: Brunei (all), plus
+fridge Medium/Small in Laos/Malaysia/Myanmar/Viet Nam and AC Small in
+Laos/Malaysia (margins $0.3-10/yr except Brunei $20-30/yr). Any further push
+must come from capex-side assumptions the user has not authorized.
+
+ADDENDUM 6 2026-08-15 (rev-5 final prep: the 240-row delta)
+-----------------------------------------------------------
+The inject artifact is now the DELTA vs the injected rev-3 state
+(higheff_patch_delta_r3_to_r5.csv, 240 rows): 60 ACT High_eff Efficiency
+steps (hold e0 to 2029, 100% from 2030) + 180 ACT Variable OM rows
+(tier-differentiated tariff/efficiency USD/GJ; High stepped). Everything
+else verified value-identical to the model (1,260 no-op rows: CA/BAS/ATS
+Efficiency, ACT Low/Mid Efficiency constants, Useful_EI, exo, Unit
+Capacity) — not re-pasted. UNITS/COEF AUDIT vs all post-pre-patch rulings:
+the delta ships only scale-free variables (% and USD-per-GJ), immune to the
+10^6 LEAP-device conditioning coef (which DOES exist in the panel: Capital
+Cost and Unit Capacity are stored per LEAP-device = 10^6 actual); per-energy
+rates and ratios are invariant to the device-unit convention, and the VOM x
+output identity reproduces tariff x final kWh under either convention. No
+scalers/idioms in any expression; all values in stored units per the
+2026-08-14 guidance.
+
+CORRECTION to ADDENDUM 5/6 (2026-08-15, final verification pass)
+----------------------------------------------------------------
+The addendum-5 simulation used the BAS capital-cost track by mistake. With
+the model-true ACT Capital Cost (verified equal to inject RAS price_usd),
+the 2030 step flips MORE cells than stated: High_eff strictly cheapest in
+27/30 AC + 22/30 fridge cells at 2030 (28 + 24 by 2060). Corrected holdout
+lists: AC = Brunei Medium/Small + Malaysia Small; fridge = Brunei x3,
+Lao PDR Medium/Small, Malaysia Large/Medium/Small. Myanmar and Viet Nam
+Medium/Small DO flip (contrary to addendum 5); Lao AC Small flips too.
+OPEN QUESTION shipped to the team: the v0.92 ACT Capital Cost rows carry
+"* 10^6" (per-LEAP-device) while Unit Capacity is now plain per-actual kW
+and exo devices are raw actual counts — the team must confirm the whole
+device panel sits on ONE device convention, else the cost comparison is
+scale-mixed and no O&M authoring can flip it (pre-patch High=100% writebacks
+suggest NEMO is internally consistent, but it is not provable read-only).
+
+ADDENDUM 7 2026-08-15 (rev-3-vs-v0.92 audit: SECOND rev-3 bug found; delta now 420 rows)
+----------------------------------------------------------------------------------------
+Audit of the injected rev-3 file against the v0.92 export (the user-ruled
+guiding principle for all units/coefs) found the v0.92 ACT panel uniformly on
+the LEAP-device basis (1 LEAP device = 10^6 actual): Exogenous Devices
+"(actual counts) / 10^6", Unit Capacity "(kW) * 10^6", Capital Cost
+"(USD) * 10^6" — 180/180 real-country rows each. The 2026-08-14 team
+correction that stripped "* 10^6" from our rev-2 Unit Capacity therefore put
+capacity 10^6x OFF-BASIS against Capital Cost and exo — a mixed device basis
+under which capex swamps O&M ~10^6:1 and the optimizer always buys the
+min-sticker tier. This is a SECOND independent cause of the ACT tier-flip
+(alongside the flat VOM); both entered at rev 3. Our rev-2 "* 10^6" form was
+correct per the export; deferring to the MD over the export was the error.
+FIX: Unit Capacity restored to the v0.92 form "(re-anchored kW) * 10^6"
+(values unchanged). The rev-5 delta is now 420 rows: 60 Efficiency steps +
+180 tier-true VOM + 180 Unit Capacity basis restorations. Exo stays out of
+the delta (values unchanged; must remain in its v0.92 "/ 10^6" form).
+
+ADDENDUM 8 2026-08-15 (exo basis re-assertion; delta final at 600 rows)
+-----------------------------------------------------------------------
+User catch: the rev-3 paste's Exogenous Devices rows were RAW actual counts
+without the v0.92 "/ 10^6" divisor. Under the team's own expression-only-lands
+rule those may have landed verbatim -> exo 10^6x off the LEAP-device basis
+(mutually consistent with rev-3's plain capacity, which is why the run still
+solved — but inconsistent with rev 5's restored *10^6 capacity). Fix: the
+delta now ALSO carries all 180 exo rows authored VERBATIM in the v0.92 form
+"Interp(actual counts) / 10^6" — actual counts unchanged (verified 180/180 ==
+device_thousand x 1000, and v0.92's own stored counts match these exactly).
+Correct regardless of whether the team pasted or skipped rev-3's exo rows.
+FINAL DELTA: 600 rows = 60 Efficiency steps + 180 tier-true VOM + 180 Unit
+Capacity (*10^6 restored) + 180 Exogenous Devices (/10^6 asserted). All four
+per-device panel variables our injects ever touched now sit verbatim on the
+v0.92 stored forms; Capital Cost untouched in its *10^6 form.

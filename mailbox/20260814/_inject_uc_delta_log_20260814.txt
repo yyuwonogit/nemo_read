@@ -1,0 +1,428 @@
+[higheff_patch] ActiveArea (locked): 'aeo9_v0.92'
+[higheff_patch] 180 rows; scenarios: ['ASEAN Coordinated Transition']
+[higheff_patch] building branch index once (the slow step, ~1-3 min on a large area)...
+[higheff_patch] indexed 10419 branches
+
+[higheff_patch] === SCENARIO: 'ASEAN Coordinated Transition' ===
+  ActiveScenario: 'ASEAN Coordinated Transition'
+  rows for this scenario: 180 (untagged + scenario='ASEAN Coordinated Transition')
+  180 rows across 10 region(s)
+  -- Phase 1: DRY RUN --
+    --- region 'Brunei' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.436577804
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.436577804
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.436577804
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2661589072
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2661589072
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2661589072
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1832569525
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1832569525
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1832569525
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Cambodia' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.361059829
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.361059829
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.361059829
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2200929425
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2200929425
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2200929425
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.151539403
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.151539403
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.151539403
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Indonesia' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.4696378952
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.4696378952
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.4696378952
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.286213125
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.286213125
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.286213125
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1971019146
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1971019146
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1971019146
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Laos' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.4225650242
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.4225650242
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.4225650242
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2576002034
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2576002034
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2576002034
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1773833322
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1773833322
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1773833322
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Malaysia' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.3931969228
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.3931969228
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.3931969228
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.239727616
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.239727616
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.239727616
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1650487297
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1650487297
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1650487297
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Myanmar' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.4276834647
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.4276834647
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.4276834647
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2607048312
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2607048312
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2607048312
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1794810538
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1794810538
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1794810538
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Philippines' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.348389591
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.348389591
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.348389591
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2123733273
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2123733273
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2123733273
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1462531448
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1462531448
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1462531448
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Singapore' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.3620667354
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.3620667354
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.3620667354
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2206803045
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2206803045
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2206803045
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1519589473
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1519589473
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1519589473
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Thailand' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.3394113429
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.3394113429
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.3394113429
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2068353425
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2068353425
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2068353425
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1423933372
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1423933372
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1423933372
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Vietnam' (18 rows) ---
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.4231523862
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.4231523862
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.4231523862
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2579358388
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2579358388
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2579358388
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1776350588
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1776350588
+      [DRY] Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1776350588
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [DRY] Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+  [dry-run] {'dry_run': 180}
+  -- Phase 3: REAL INJECT --
+    --- region 'Brunei' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.436577804
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.436577804
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.436577804
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2661589072
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2661589072
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2661589072
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1832569525
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1832569525
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1832569525
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Cambodia' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.361059829
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.361059829
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.361059829
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2200929425
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2200929425
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2200929425
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.151539403
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.151539403
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.151539403
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Indonesia' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.4696378952
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.4696378952
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.4696378952
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.286213125
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.286213125
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.286213125
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1971019146
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1971019146
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1971019146
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Laos' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.4225650242
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.4225650242
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.4225650242
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2576002034
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2576002034
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2576002034
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1773833322
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1773833322
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1773833322
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Malaysia' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.3931969228
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.3931969228
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.3931969228
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.239727616
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.239727616
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.239727616
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1650487297
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1650487297
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1650487297
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Myanmar' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.4276834647
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.4276834647
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.4276834647
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2607048312
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2607048312
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2607048312
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1794810538
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1794810538
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1794810538
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Philippines' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.348389591
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.348389591
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.348389591
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2123733273
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2123733273
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2123733273
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1462531448
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1462531448
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1462531448
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Singapore' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.3620667354
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.3620667354
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.3620667354
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2206803045
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2206803045
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2206803045
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1519589473
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1519589473
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1519589473
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Thailand' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.3394113429
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.3394113429
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.3394113429
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2068353425
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2068353425
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2068353425
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1423933372
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1423933372
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1423933372
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+    --- region 'Vietnam' (18 rows) ---
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\High_eff . 'Unit Capacity' = 0.4231523862
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff . 'Unit Capacity' = 0.4231523862
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Large\Low_eff . 'Unit Capacity' = 0.4231523862
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\High_eff . 'Unit Capacity' = 0.2579358388
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Mid_eff . 'Unit Capacity' = 0.2579358388
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Medium\Low_eff . 'Unit Capacity' = 0.2579358388
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\High_eff . 'Unit Capacity' = 0.1776350588
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Mid_eff . 'Unit Capacity' = 0.1776350588
+      [OK]  Demand\Residential\Projections\Air Conditioning_\Small\Low_eff . 'Unit Capacity' = 0.1776350588
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\High_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Mid_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Large\Low_eff . 'Unit Capacity' = 0.0280703554
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\High_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Mid_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Medium\Low_eff . 'Unit Capacity' = 0.0256049823
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\High_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Mid_eff . 'Unit Capacity' = 0.01717880984
+      [OK]  Demand\Residential\Projections\Refrigeration_\Small\Low_eff . 'Unit Capacity' = 0.01717880984
+  [real-inject] {'pushed': 180}
+  -- Phase 4: READBACK VERIFY --
+    verifying 30 row(s) (3/region x 10 region(s))
+    [EXACT] Brunei|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Brunei|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Brunei|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    [EXACT] Cambodia|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Cambodia|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Cambodia|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    [EXACT] Indonesia|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Indonesia|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Indonesia|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    [EXACT] Laos|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Laos|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Laos|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    [EXACT] Malaysia|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Malaysia|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Malaysia|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    [EXACT] Myanmar|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Myanmar|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Myanmar|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    [EXACT] Philippines|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Philippines|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Philippines|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    [EXACT] Singapore|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Singapore|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Singapore|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    [EXACT] Thailand|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Thailand|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Thailand|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    [EXACT] Vietnam|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\High_eff
+    [EXACT] Vietnam|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Mid_eff
+    [EXACT] Vietnam|Unit Capacity on Demand\Residential\Projections\Air Conditioning_\Large\Low_eff
+    Readback: 30 EXACT, 0 NORMALISED, 0 FAIL
+
+[higheff_patch] === DONE === (clean)

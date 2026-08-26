@@ -86,6 +86,7 @@ class TestNoDirectExpressionSetSites:
     # rel-posix paths of documented portable chokepoint copies
     PORTABLE_CHOKEPOINT_COPIES = {
         "inject/residential/20260625/inject_fridge_leap.py",
+        "mailbox/20260813/inject_higheff_patch.py",
     }
 
     def test_no_direct_expression_writes(self):
